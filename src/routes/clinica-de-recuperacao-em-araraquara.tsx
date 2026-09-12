@@ -192,6 +192,10 @@ function AraraquaraPage() {
               <FacebookIcon className="size-4" />
               <span className="sr-only">Página no Facebook</span>
             </FacebookLink>
+            <InstagramLink className="grid size-9 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:border-secondary hover:text-secondary">
+              <InstagramIcon className="size-4" />
+              <span className="sr-only">Perfil no Instagram</span>
+            </InstagramLink>
             <span className="flex items-center gap-1.5 rounded-full border border-border px-3 py-1 text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground">
               <MapPin className="size-3" aria-hidden="true" /> SP
             </span>
