@@ -3,10 +3,11 @@ import { ArrowDown, ArrowRight, Check, MapPin, MessageCircle, ShieldCheck } from
 import type { ReactNode } from "react";
 import acolhimentoImage from "@/assets/acolhimento-araraquara.jpg";
 
+const whatsappNumber = "5516997654579";
 const whatsappMessage = encodeURIComponent(
   "Olá, gostaria de receber orientações sobre acolhimento em Araraquara.",
 );
-const whatsappHref = `https://wa.me/?text=${whatsappMessage}`;
+const whatsappHref = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
 const steps = [
   "Contato com a família",
