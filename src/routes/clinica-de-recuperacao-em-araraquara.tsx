@@ -3,6 +3,7 @@ import { ArrowDown, ArrowRight, Check, MapPin, MessageCircle, ShieldCheck } from
 import type { ReactNode } from "react";
 
 const facebookHref = "https://www.facebook.com/centrodereabilitacaomoradadosol";
+const instagramHref = "https://www.instagram.com/luizfernandosoares.soares.1?stkn=MXJuczZldHJseXk5ZA==";
 import acolhimentoImage from "@/assets/acolhimento-araraquara.jpg";
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 
