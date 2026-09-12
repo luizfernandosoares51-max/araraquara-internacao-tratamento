@@ -346,12 +346,17 @@ function AraraquaraPage() {
               <p className="font-display font-semibold">Central de Acolhimento e Reabilitação</p>
               <p className="mt-1 text-xs text-muted-foreground">Araraquara e região · São Paulo</p>
             </div>
-            <nav aria-label="Navegação complementar" className="flex flex-wrap gap-x-5 gap-y-3 text-xs text-muted-foreground">
-              <a href="#acolhimento" className="hover:text-foreground">Acolhimento</a>
-              <a href="#tratamento" className="hover:text-foreground">Tratamento</a>
-              <a href="#internacao" className="hover:text-foreground">Internação</a>
-              <a href="#perguntas" className="hover:text-foreground">Dúvidas</a>
-            </nav>
+            <div className="flex flex-col gap-4 sm:items-end">
+              <nav aria-label="Navegação complementar" className="flex flex-wrap gap-x-5 gap-y-3 text-xs text-muted-foreground">
+                <a href="#acolhimento" className="hover:text-foreground">Acolhimento</a>
+                <a href="#tratamento" className="hover:text-foreground">Tratamento</a>
+                <a href="#internacao" className="hover:text-foreground">Internação</a>
+                <a href="#perguntas" className="hover:text-foreground">Dúvidas</a>
+              </nav>
+              <FacebookLink className="inline-flex items-center gap-2 text-xs font-medium text-muted-foreground transition-colors hover:text-secondary">
+                <FacebookIcon className="size-4" /> Siga no Facebook
+              </FacebookLink>
+            </div>
           </div>
           <p className="mt-7 max-w-3xl text-[11px] leading-relaxed text-muted-foreground/70">As informações desta página têm caráter orientativo. A indicação de qualquer modalidade de cuidado depende de avaliação individual e profissional.</p>
         </footer>
