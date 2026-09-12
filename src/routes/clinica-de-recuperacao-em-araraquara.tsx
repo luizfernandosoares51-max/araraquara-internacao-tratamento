@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowDown, ArrowRight, Check, MapPin, MessageCircle, ShieldCheck } from "lucide-react";
+import type { ReactNode } from "react";
 import acolhimentoImage from "@/assets/acolhimento-araraquara.jpg";
 
 const whatsappMessage = encodeURIComponent(
@@ -62,13 +63,13 @@ const faqs = [
 export const Route = createFileRoute("/clinica-de-recuperacao-em-araraquara")({
   head: () => ({
     meta: [
-      { title: "Clínica de Recuperação em Araraquara | Central" },
+      { title: "Clínica de Recuperação em Araraquara | Central de Acolhimento e Reabilitação" },
       {
         name: "description",
         content:
-          "Clínica de recuperação em Araraquara para dependência química e alcoolismo. Acolhimento e acompanhamento terapêutico, psicológico e psiquiátrico.",
+          "Clínica de recuperação em Araraquara para dependência química e alcoolismo. Conheça o acolhimento, acompanhamento terapêutico, psicológico e psiquiátrico.",
       },
-      { property: "og:title", content: "Clínica de Recuperação em Araraquara | Central" },
+      { property: "og:title", content: "Clínica de Recuperação em Araraquara | Central de Acolhimento e Reabilitação" },
       {
         property: "og:description",
         content:
@@ -108,7 +109,7 @@ export const Route = createFileRoute("/clinica-de-recuperacao-em-araraquara")({
   component: AraraquaraPage,
 });
 
-function WhatsAppLink({ children, className }: { children: React.ReactNode; className: string }) {
+function WhatsAppLink({ children, className }: { children: ReactNode; className: string }) {
   return (
     <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className={className}>
       {children}
@@ -116,7 +117,7 @@ function WhatsAppLink({ children, className }: { children: React.ReactNode; clas
   );
 }
 
-function SectionLabel({ children }: { children: React.ReactNode }) {
+function SectionLabel({ children }: { children: ReactNode }) {
   return (
     <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">
       {children}

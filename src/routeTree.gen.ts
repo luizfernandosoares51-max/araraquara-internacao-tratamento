@@ -10,33 +10,44 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ClinicaDeRecuperacaoEmAraraquaraRouteImport } from './routes/clinica-de-recuperacao-em-araraquara'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ClinicaDeRecuperacaoEmAraraquaraRoute =
+  ClinicaDeRecuperacaoEmAraraquaraRouteImport.update({
+    id: '/clinica-de-recuperacao-em-araraquara',
+    path: '/clinica-de-recuperacao-em-araraquara',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/clinica-de-recuperacao-em-araraquara'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/clinica-de-recuperacao-em-araraquara'
+  id: '__root__' | '/' | '/clinica-de-recuperacao-em-araraquara'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ClinicaDeRecuperacaoEmAraraquaraRoute: typeof ClinicaDeRecuperacaoEmAraraquaraRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +59,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/clinica-de-recuperacao-em-araraquara': {
+      id: '/clinica-de-recuperacao-em-araraquara'
+      path: '/clinica-de-recuperacao-em-araraquara'
+      fullPath: '/clinica-de-recuperacao-em-araraquara'
+      preLoaderRoute: typeof ClinicaDeRecuperacaoEmAraraquaraRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ClinicaDeRecuperacaoEmAraraquaraRoute: ClinicaDeRecuperacaoEmAraraquaraRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
