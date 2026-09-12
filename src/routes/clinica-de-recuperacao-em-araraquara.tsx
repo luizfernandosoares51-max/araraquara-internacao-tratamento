@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowDown, ArrowRight, Check, MapPin, MessageCircle, ShieldCheck } from "lucide-react";
 import type { ReactNode } from "react";
 import acolhimentoImage from "@/assets/acolhimento-araraquara.jpg";
+import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 
 const whatsappNumber = "5516997654579";
 const whatsappMessage = encodeURIComponent(
@@ -137,8 +138,15 @@ function AraraquaraPage() {
 
       <div className="relative z-10 mx-auto max-w-6xl px-5 pb-32 pt-6 sm:px-8 lg:px-12">
         <header className="flex items-center justify-between gap-4">
-          <a href="#inicio" className="flex items-center gap-2" aria-label="Central de Acolhimento e Reabilitação">
-            <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-brand font-display text-sm font-bold text-primary-foreground">CA</span>
+          <a href="#inicio" className="flex items-center gap-3" aria-label="Central de Acolhimento e Reabilitação">
+            <img
+              src={logoAsset.url}
+              alt="Logo da Central de Acolhimento e Reabilitação"
+              width={44}
+              height={44}
+              className="size-11 shrink-0 rounded-xl object-contain"
+              loading="eager"
+            />
             <span className="leading-tight">
               <span className="block font-display text-[13px] font-semibold sm:text-sm">Central de Acolhimento</span>
               <span className="block text-[11px] text-muted-foreground">e Reabilitação · Araraquara</span>
