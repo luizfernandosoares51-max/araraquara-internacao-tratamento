@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowDown, ArrowRight, Check, MapPin, MessageCircle, ShieldCheck } from "lucide-react";
 import type { ReactNode } from "react";
+
+const facebookHref = "https://www.facebook.com/centrodereabilitacaomoradadosol";
 import acolhimentoImage from "@/assets/acolhimento-araraquara.jpg";
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 
@@ -119,6 +121,22 @@ function WhatsAppLink({ children, className }: { children: ReactNode; className:
   );
 }
 
+function FacebookLink({ children, className }: { children: ReactNode; className: string }) {
+  return (
+    <a href={facebookHref} target="_blank" rel="noopener noreferrer" className={className}>
+      {children}
+    </a>
+  );
+}
+
+function FacebookIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+    </svg>
+  );
+}
+
 function SectionLabel({ children }: { children: ReactNode }) {
   return (
     <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">
@@ -152,9 +170,15 @@ function AraraquaraPage() {
               <span className="block text-[11px] text-muted-foreground">e Reabilitação · Araraquara</span>
             </span>
           </a>
-          <span className="flex items-center gap-1.5 rounded-full border border-border px-3 py-1 text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground">
-            <MapPin className="size-3" aria-hidden="true" /> SP
-          </span>
+          <div className="flex items-center gap-2">
+            <FacebookLink className="grid size-9 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:border-secondary hover:text-secondary">
+              <FacebookIcon className="size-4" />
+              <span className="sr-only">Página no Facebook</span>
+            </FacebookLink>
+            <span className="flex items-center gap-1.5 rounded-full border border-border px-3 py-1 text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground">
+              <MapPin className="size-3" aria-hidden="true" /> SP
+            </span>
+          </div>
         </header>
 
         <main id="inicio">
@@ -322,12 +346,17 @@ function AraraquaraPage() {
               <p className="font-display font-semibold">Central de Acolhimento e Reabilitação</p>
               <p className="mt-1 text-xs text-muted-foreground">Araraquara e região · São Paulo</p>
             </div>
-            <nav aria-label="Navegação complementar" className="flex flex-wrap gap-x-5 gap-y-3 text-xs text-muted-foreground">
-              <a href="#acolhimento" className="hover:text-foreground">Acolhimento</a>
-              <a href="#tratamento" className="hover:text-foreground">Tratamento</a>
-              <a href="#internacao" className="hover:text-foreground">Internação</a>
-              <a href="#perguntas" className="hover:text-foreground">Dúvidas</a>
-            </nav>
+            <div className="flex flex-col gap-4 sm:items-end">
+              <nav aria-label="Navegação complementar" className="flex flex-wrap gap-x-5 gap-y-3 text-xs text-muted-foreground">
+                <a href="#acolhimento" className="hover:text-foreground">Acolhimento</a>
+                <a href="#tratamento" className="hover:text-foreground">Tratamento</a>
+                <a href="#internacao" className="hover:text-foreground">Internação</a>
+                <a href="#perguntas" className="hover:text-foreground">Dúvidas</a>
+              </nav>
+              <FacebookLink className="inline-flex items-center gap-2 text-xs font-medium text-muted-foreground transition-colors hover:text-secondary">
+                <FacebookIcon className="size-4" /> Siga no Facebook
+              </FacebookLink>
+            </div>
           </div>
           <p className="mt-7 max-w-3xl text-[11px] leading-relaxed text-muted-foreground/70">As informações desta página têm caráter orientativo. A indicação de qualquer modalidade de cuidado depende de avaliação individual e profissional.</p>
         </footer>
