@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { ArrowDown, ArrowRight, Check, MapPin, MessageCircle, ShieldCheck } from "lucide-react";
 import type { ReactNode } from "react";
 import acolhimentoImage from "@/assets/acolhimento-araraquara.jpg";
+import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 
 const whatsappNumber = "5516997654579";
 const whatsappMessage = encodeURIComponent(
