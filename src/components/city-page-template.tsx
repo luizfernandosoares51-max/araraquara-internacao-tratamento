@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, Check, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
+import type { ReactNode } from "react";
 
 import acolhimentoImage from "@/assets/acolhimento-araraquara.jpg";
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
@@ -36,12 +37,14 @@ function SocialIcon({ network }: { network: "facebook" | "instagram" }) {
   );
 }
 
-function SectionLabel({ children }: { children: string }) {
+function SectionLabel({ children }: { children: ReactNode }) {
   return <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">{children}</p>;
 }
 
 export function CityPageTemplate({ city }: { city: CityPageData }) {
-  const relatedCities = city.relatedSlugs.map((slug) => cityPageBySlug[slug]).filter(Boolean);
+  const relatedCities = city.relatedSlugs
+    .map((slug) => cityPageBySlug[slug])
+    .filter((related): related is CityPageData => related !== undefined);
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-deep font-body text-foreground">
@@ -182,7 +185,7 @@ export function CityPageTemplate({ city }: { city: CityPageData }) {
             <div className="mt-4 flex flex-wrap gap-3 text-sm">
               <Link to="/clinica-de-recuperacao-em-araraquara" className="glass-panel inline-flex items-center gap-2 rounded-xl px-4 py-3 font-medium">Unidade em Araraquara <ArrowRight className="size-4" aria-hidden="true" /></Link>
               <Link to="/cidades" className="glass-panel inline-flex items-center gap-2 rounded-xl px-4 py-3 font-medium">Todas as cidades <ArrowRight className="size-4" aria-hidden="true" /></Link>
-              {relatedCities.map((related) => <Link key={related.slug} to="/clinica-de-recuperacao-em-{$citySlug}" params={{ citySlug: related.slug }} className="glass-panel inline-flex items-center gap-2 rounded-xl px-4 py-3 font-medium">{related.name} <ArrowRight className="size-4" aria-hidden="true" /></Link>)}
+              {relatedCities.map((related) => <Link key={related.slug} to="/$citySlug" params={{ citySlug: `clinica-de-recuperacao-em-${related.slug}` }} className="glass-panel inline-flex items-center gap-2 rounded-xl px-4 py-3 font-medium">{related.name} <ArrowRight className="size-4" aria-hidden="true" /></Link>)}
             </div>
           </section>
 

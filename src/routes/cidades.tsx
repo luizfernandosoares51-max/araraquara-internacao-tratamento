@@ -57,8 +57,8 @@ function CidadesPage() {
           {cityPages.map((city) => (
             <li key={city.slug}>
               <Link
-                to="/clinica-de-recuperacao-em-{$citySlug}"
-                params={{ citySlug: city.slug }}
+                to="/$citySlug"
+                params={{ citySlug: `clinica-de-recuperacao-em-${city.slug}` }}
                 className="glass-panel flex items-center justify-between rounded-2xl px-5 py-4 font-medium transition-colors hover:bg-glass-strong"
               >
                 {city.name} / SP

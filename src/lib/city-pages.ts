@@ -370,7 +370,7 @@ export const cityPages: CityPageData[] = [
     preposition: "de",
     intro: "Quem está em Franca e considera uma alternativa de acolhimento fora da cidade precisa de informações objetivas. A Central explica como funciona sua unidade de Araraquara antes de qualquer planejamento.",
     localHeading: "Orientação para famílias de Franca",
-    localContext: "A Central de Acolhimento e Reabilitação não possui unidade em Franca. A estrutura física está em Araraquara e pode analisar contatos de outras localidades conforme avaliação, disponibilidade e condições.",
+    localContext: "A Central de Acolhimento e Reabilitação não possui estrutura física em Franca. A unidade está em Araraquara e pode analisar contatos de outras localidades conforme avaliação, disponibilidade e condições.",
     welcomeHeading: "Avaliar com antecedência uma unidade em outra cidade",
     welcomeText: "A conversa inicial permite conhecer o processo sem deslocamento. A família apresenta suas dúvidas e recebe informações para decidir se faz sentido continuar a avaliação.",
     dependencyHeading: "Dependência química: cuidado além da interrupção do uso",
