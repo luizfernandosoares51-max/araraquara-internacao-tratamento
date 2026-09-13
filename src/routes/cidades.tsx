@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { MessageCircle, Phone } from "lucide-react";
 
+import { cityPages } from "@/lib/city-pages";
 import { phoneDisplay, phoneHref, siteUrl, whatsappHref } from "@/lib/site";
 
 export const Route = createFileRoute("/cidades")({
@@ -20,6 +21,7 @@ export const Route = createFileRoute("/cidades")({
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: `${siteUrl}/cidades` },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: `${siteUrl}/cidades` }],
   }),
@@ -42,7 +44,7 @@ function CidadesPage() {
           contato.
         </p>
 
-        <h2 className="mt-10 font-display text-xl font-semibold">Página disponível</h2>
+        <h2 className="mt-10 font-display text-xl font-semibold">Páginas disponíveis</h2>
         <ul className="mt-4 space-y-3 text-sm">
           <li>
             <Link
@@ -53,11 +55,19 @@ function CidadesPage() {
               <span className="text-xs text-muted-foreground">Ver página</span>
             </Link>
           </li>
+          {cityPages.map((city) => (
+            <li key={city.slug}>
+              <Link
+                to="/$citySlug"
+                params={{ citySlug: `clinica-de-recuperacao-em-${city.slug}` }}
+                className="glass-panel flex items-center justify-between rounded-2xl px-5 py-4 font-medium transition-colors hover:bg-glass-strong"
+              >
+                {city.name} / SP
+                <span className="text-xs text-muted-foreground">Ver página</span>
+              </Link>
+            </li>
+          ))}
         </ul>
-        <p className="mt-6 text-xs leading-relaxed text-muted-foreground/80">
-          Novas páginas de cidades serão publicadas aqui à medida que o conteúdo específico de cada
-          região for produzido.
-        </p>
 
         <div className="mt-10 flex flex-col gap-3 sm:flex-row">
           <a
