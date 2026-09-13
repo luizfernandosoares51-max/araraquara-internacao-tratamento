@@ -284,7 +284,7 @@ function AraraquaraPage() {
             </div>
 
             <div className="overflow-hidden rounded-3xl border border-border shadow-2xl shadow-background/30">
-              <img src={acolhimentoImage} width={1024} height={640} alt="Ambiente claro e acolhedor para atendimento terapêutico" className="aspect-[16/10] w-full object-cover" />
+              <img src={acolhimentoImage} width={1024} height={640} decoding="async" alt="Ambiente claro e acolhedor para atendimento terapêutico" className="aspect-[16/10] w-full object-cover" />
               <div className="glass-panel-strong flex items-center justify-between gap-4 border-x-0 border-b-0 px-5 py-4">
                 <p className="text-sm leading-snug text-muted-foreground">Um ambiente pensado para acolher com calma e dignidade.</p>
                 <span className="shrink-0 rounded-full bg-accent/15 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-accent">Escuta humana</span>
@@ -352,7 +352,7 @@ function AraraquaraPage() {
             </div>
           </section>
 
-          <section className="border-t border-border py-14 lg:py-20">
+          <section id="familia" className="border-t border-border py-14 lg:py-20">
             <div className="glass-panel-strong rounded-3xl p-6 sm:p-9 lg:grid lg:grid-cols-[1.2fr_.8fr] lg:gap-12">
               <div>
                 <SectionLabel>Para quem procura ajuda em Araraquara</SectionLabel>
@@ -407,9 +407,14 @@ function AraraquaraPage() {
                 <SectionLabel>Estamos aqui para orientar</SectionLabel>
                 <h2 className="mt-3 font-display text-3xl font-bold leading-tight sm:text-5xl">Não sabe qual é o próximo passo?</h2>
                 <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-primary-foreground/75 sm:text-base">Converse com nossa equipe. Podemos esclarecer suas dúvidas e explicar como funciona o processo de acolhimento.</p>
-                <WhatsAppLink className="mt-7 inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-2xl bg-whatsapp px-5 py-4 text-center text-sm font-semibold text-whatsapp-foreground shadow-lg shadow-background/20 transition-transform hover:-translate-y-0.5 sm:w-auto">
-                  <MessageCircle className="size-5" aria-hidden="true" /> Falar com nossa equipe pelo WhatsApp
-                </WhatsAppLink>
+                <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                  <WhatsAppLink className="inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-whatsapp px-5 py-4 text-center text-sm font-semibold text-whatsapp-foreground shadow-lg shadow-background/20 transition-transform hover:-translate-y-0.5">
+                    <MessageCircle className="size-5" aria-hidden="true" /> Falar com nossa equipe pelo WhatsApp
+                  </WhatsAppLink>
+                  <a href={phoneHref} className="inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl border border-primary-foreground/30 px-5 py-4 text-center text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10">
+                    <Phone className="size-4" aria-hidden="true" /> Ligar agora · {phoneDisplay}
+                  </a>
+                </div>
               </div>
             </div>
           </section>
@@ -420,13 +425,19 @@ function AraraquaraPage() {
             <div>
               <p className="font-display font-semibold">Central de Acolhimento e Reabilitação</p>
               <p className="mt-1 text-xs text-muted-foreground">Araraquara e região · São Paulo</p>
+              <a href={phoneHref} className="mt-3 inline-flex items-center gap-2 text-xs font-semibold text-secondary hover:underline">
+                <Phone className="size-3.5" aria-hidden="true" /> Ligar agora · {phoneDisplay}
+              </a>
             </div>
             <div className="flex flex-col gap-4 sm:items-end">
               <nav aria-label="Navegação complementar" className="flex flex-wrap gap-x-5 gap-y-3 text-xs text-muted-foreground">
                 <a href="#acolhimento" className="hover:text-foreground">Acolhimento</a>
                 <a href="#tratamento" className="hover:text-foreground">Tratamento</a>
                 <a href="#internacao" className="hover:text-foreground">Internação</a>
+                <a href="#familia" className="hover:text-foreground">Família</a>
                 <a href="#perguntas" className="hover:text-foreground">Dúvidas</a>
+                <Link to="/cidades" className="hover:text-foreground">Cidades</Link>
+                <Link to="/blog" className="hover:text-foreground">Blog</Link>
               </nav>
               <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
                 <FacebookLink className="inline-flex items-center gap-2 text-xs font-medium text-muted-foreground transition-colors hover:text-secondary">
