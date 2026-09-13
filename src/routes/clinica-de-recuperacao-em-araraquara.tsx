@@ -1,17 +1,20 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { ArrowDown, ArrowRight, Check, MapPin, MessageCircle, ShieldCheck } from "lucide-react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowDown, ArrowRight, Check, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
 import type { ReactNode } from "react";
 
-const facebookHref = "https://www.facebook.com/centrodereabilitacaomoradadosol";
-const instagramHref = "https://www.instagram.com/luizfernandosoares.soares.1?stkn=MXJuczZldHJseXk5ZA==";
 import acolhimentoImage from "@/assets/acolhimento-araraquara.jpg";
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
+import {
+  facebookHref,
+  instagramHref,
+  mainNav,
+  phoneDisplay,
+  phoneHref,
+  siteUrl,
+  whatsappHref,
+} from "@/lib/site";
 
-const whatsappNumber = "5516997654579";
-const whatsappMessage = encodeURIComponent(
-  "Olá, gostaria de receber orientações sobre acolhimento em Araraquara.",
-);
-const whatsappHref = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+const pageUrl = `${siteUrl}/clinica-de-recuperacao-em-araraquara`;
 
 const steps = [
   "Contato com a família",
@@ -68,23 +71,23 @@ const faqs = [
 export const Route = createFileRoute("/clinica-de-recuperacao-em-araraquara")({
   head: () => ({
     meta: [
-      { title: "Clínica de Recuperação em Araraquara | Central de Acolhimento e Reabilitação" },
+      { title: "Clínica de Recuperação em Araraquara | Central de Acolhimento" },
       {
         name: "description",
         content:
-          "Clínica de recuperação em Araraquara para dependência química e alcoolismo. Conheça o acolhimento, acompanhamento terapêutico, psicológico e psiquiátrico.",
+          "Clínica de recuperação em Araraquara para dependência química e alcoolismo. Conheça o acolhimento, o acompanhamento terapêutico, psicológico e psiquiátrico e fale com nossa equipe.",
       },
-      { property: "og:title", content: "Clínica de Recuperação em Araraquara | Central de Acolhimento e Reabilitação" },
+      { property: "og:title", content: "Clínica de Recuperação em Araraquara | Central de Acolhimento" },
       {
         property: "og:description",
         content:
           "Acolhimento e orientação para dependência química e alcoolismo em Araraquara, com acompanhamento especializado.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/clinica-de-recuperacao-em-araraquara" },
+      { property: "og:url", content: pageUrl },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/clinica-de-recuperacao-em-araraquara" }],
+    links: [{ rel: "canonical", href: pageUrl }],
     scripts: [
       {
         type: "application/ld+json",
@@ -94,9 +97,25 @@ export const Route = createFileRoute("/clinica-de-recuperacao-em-araraquara")({
             {
               "@type": "Organization",
               name: "Central de Acolhimento e Reabilitação",
+              url: pageUrl,
+              telephone: "+5516997654579",
               areaServed: { "@type": "City", name: "Araraquara" },
+              sameAs: [facebookHref, instagramHref],
               description:
                 "Acolhimento e acompanhamento para pessoas que enfrentam dependência química, alcoolismo e uso problemático de outras drogas.",
+            },
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Início", item: siteUrl },
+                { "@type": "ListItem", position: 2, name: "Cidades", item: `${siteUrl}/cidades` },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "Clínica de Recuperação em Araraquara",
+                  item: pageUrl,
+                },
+              ],
             },
             {
               "@type": "FAQPage",
@@ -172,34 +191,66 @@ function AraraquaraPage() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl px-5 pb-32 pt-6 sm:px-8 lg:px-12">
-        <header className="flex items-center justify-between gap-4">
-          <a href="#inicio" className="flex items-center gap-3" aria-label="Central de Acolhimento e Reabilitação">
-            <img
-              src={logoAsset.url}
-              alt="Logo da Central de Acolhimento e Reabilitação"
-              width={44}
-              height={44}
-              className="size-11 shrink-0 rounded-xl object-contain"
-              loading="eager"
-            />
-            <span className="leading-tight">
-              <span className="block font-display text-[13px] font-semibold sm:text-sm">Central de Acolhimento</span>
-              <span className="block text-[11px] text-muted-foreground">e Reabilitação · Araraquara</span>
-            </span>
-          </a>
-          <div className="flex items-center gap-2">
-            <FacebookLink className="grid size-9 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:border-secondary hover:text-secondary">
-              <FacebookIcon className="size-4" />
-              <span className="sr-only">Página no Facebook</span>
-            </FacebookLink>
-            <InstagramLink className="grid size-9 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:border-secondary hover:text-secondary">
-              <InstagramIcon className="size-4" />
-              <span className="sr-only">Perfil no Instagram</span>
-            </InstagramLink>
-            <span className="flex items-center gap-1.5 rounded-full border border-border px-3 py-1 text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground">
-              <MapPin className="size-3" aria-hidden="true" /> SP
-            </span>
+        <header>
+          <div className="flex items-center justify-between gap-4">
+            <a href="#inicio" className="flex items-center gap-3" aria-label="Central de Acolhimento e Reabilitação">
+              <img
+                src={logoAsset.url}
+                alt="Logo da Central de Acolhimento e Reabilitação"
+                width={44}
+                height={44}
+                className="size-11 shrink-0 rounded-xl object-contain"
+                loading="eager"
+              />
+              <span className="leading-tight">
+                <span className="block font-display text-[13px] font-semibold sm:text-sm">Central de Acolhimento</span>
+                <span className="block text-[11px] text-muted-foreground">e Reabilitação · Araraquara</span>
+              </span>
+            </a>
+            <div className="flex items-center gap-2">
+              <FacebookLink className="grid size-9 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:border-secondary hover:text-secondary">
+                <FacebookIcon className="size-4" />
+                <span className="sr-only">Página no Facebook</span>
+              </FacebookLink>
+              <InstagramLink className="grid size-9 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:border-secondary hover:text-secondary">
+                <InstagramIcon className="size-4" />
+                <span className="sr-only">Perfil no Instagram</span>
+              </InstagramLink>
+              <span className="hidden items-center gap-1.5 rounded-full border border-border px-3 py-1 text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground sm:flex">
+                <MapPin className="size-3" aria-hidden="true" /> SP
+              </span>
+            </div>
           </div>
+
+          <nav
+            aria-label="Menu principal"
+            className="mt-4 -mx-5 overflow-x-auto px-5 sm:mx-0 sm:px-0"
+          >
+            <ul className="flex min-w-max items-center gap-x-5 gap-y-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground sm:flex-wrap">
+              {mainNav.map((item) =>
+                item.href.startsWith("#") || item.href.includes("#") ? (
+                  <li key={item.label}>
+                    <a
+                      href={item.href.slice(item.href.indexOf("#"))}
+                      className="transition-colors hover:text-secondary"
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                ) : (
+                  <li key={item.label}>
+                    <Link
+                      to={item.href as "/cidades" | "/blog"}
+                      className="transition-colors hover:text-secondary"
+                      activeProps={{ className: "text-secondary" }}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ),
+              )}
+            </ul>
+          </nav>
         </header>
 
         <main id="inicio">
@@ -210,7 +261,7 @@ function AraraquaraPage() {
               </div>
               <h1 className="mt-5 max-w-3xl font-display text-[2.15rem] font-bold leading-[1.04] sm:text-5xl lg:text-[3.75rem]">
                 Clínica de Recuperação em <span className="text-secondary">Araraquara</span>
-                <span className="mt-2 block text-[0.48em] font-medium leading-tight text-muted-foreground">Central de Acolhimento e Reabilitação</span>
+                <span className="mt-2 block text-[0.48em] font-medium leading-tight text-muted-foreground">– Central de Acolhimento e Reabilitação</span>
               </h1>
               <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-muted-foreground sm:text-lg">
                 Acolhimento, acompanhamento terapêutico e suporte especializado para pessoas que enfrentam a dependência química e problemas relacionados ao uso de álcool e outras drogas.
@@ -219,6 +270,9 @@ function AraraquaraPage() {
                 <WhatsAppLink className="flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-whatsapp px-5 py-4 text-center text-sm font-semibold text-whatsapp-foreground shadow-lg shadow-accent/20 transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
                   <MessageCircle className="size-5" aria-hidden="true" /> Falar com nossa equipe
                 </WhatsAppLink>
+                <a href={phoneHref} className="glass-panel flex min-h-14 items-center justify-center gap-2 rounded-2xl px-5 py-4 text-center text-sm font-semibold transition-colors hover:bg-glass-strong focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
+                  <Phone className="size-4" aria-hidden="true" /> Ligar agora
+                </a>
                 <a href="#como-funciona" className="glass-panel flex min-h-14 items-center justify-center gap-2 rounded-2xl px-5 py-4 text-center text-sm font-semibold transition-colors hover:bg-glass-strong focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
                   Como funciona o acolhimento <ArrowDown className="size-4" aria-hidden="true" />
                 </a>
@@ -230,7 +284,7 @@ function AraraquaraPage() {
             </div>
 
             <div className="overflow-hidden rounded-3xl border border-border shadow-2xl shadow-background/30">
-              <img src={acolhimentoImage} width={1024} height={640} alt="Ambiente claro e acolhedor para atendimento terapêutico" className="aspect-[16/10] w-full object-cover" />
+              <img src={acolhimentoImage} width={1024} height={640} decoding="async" alt="Ambiente claro e acolhedor para atendimento terapêutico" className="aspect-[16/10] w-full object-cover" />
               <div className="glass-panel-strong flex items-center justify-between gap-4 border-x-0 border-b-0 px-5 py-4">
                 <p className="text-sm leading-snug text-muted-foreground">Um ambiente pensado para acolher com calma e dignidade.</p>
                 <span className="shrink-0 rounded-full bg-accent/15 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-accent">Escuta humana</span>
@@ -298,7 +352,7 @@ function AraraquaraPage() {
             </div>
           </section>
 
-          <section className="border-t border-border py-14 lg:py-20">
+          <section id="familia" className="border-t border-border py-14 lg:py-20">
             <div className="glass-panel-strong rounded-3xl p-6 sm:p-9 lg:grid lg:grid-cols-[1.2fr_.8fr] lg:gap-12">
               <div>
                 <SectionLabel>Para quem procura ajuda em Araraquara</SectionLabel>
@@ -353,9 +407,14 @@ function AraraquaraPage() {
                 <SectionLabel>Estamos aqui para orientar</SectionLabel>
                 <h2 className="mt-3 font-display text-3xl font-bold leading-tight sm:text-5xl">Não sabe qual é o próximo passo?</h2>
                 <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-primary-foreground/75 sm:text-base">Converse com nossa equipe. Podemos esclarecer suas dúvidas e explicar como funciona o processo de acolhimento.</p>
-                <WhatsAppLink className="mt-7 inline-flex min-h-14 w-full items-center justify-center gap-2 rounded-2xl bg-whatsapp px-5 py-4 text-center text-sm font-semibold text-whatsapp-foreground shadow-lg shadow-background/20 transition-transform hover:-translate-y-0.5 sm:w-auto">
-                  <MessageCircle className="size-5" aria-hidden="true" /> Falar com nossa equipe pelo WhatsApp
-                </WhatsAppLink>
+                <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                  <WhatsAppLink className="inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-whatsapp px-5 py-4 text-center text-sm font-semibold text-whatsapp-foreground shadow-lg shadow-background/20 transition-transform hover:-translate-y-0.5">
+                    <MessageCircle className="size-5" aria-hidden="true" /> Falar com nossa equipe pelo WhatsApp
+                  </WhatsAppLink>
+                  <a href={phoneHref} className="inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl border border-primary-foreground/30 px-5 py-4 text-center text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10">
+                    <Phone className="size-4" aria-hidden="true" /> Ligar agora · {phoneDisplay}
+                  </a>
+                </div>
               </div>
             </div>
           </section>
@@ -366,13 +425,19 @@ function AraraquaraPage() {
             <div>
               <p className="font-display font-semibold">Central de Acolhimento e Reabilitação</p>
               <p className="mt-1 text-xs text-muted-foreground">Araraquara e região · São Paulo</p>
+              <a href={phoneHref} className="mt-3 inline-flex items-center gap-2 text-xs font-semibold text-secondary hover:underline">
+                <Phone className="size-3.5" aria-hidden="true" /> Ligar agora · {phoneDisplay}
+              </a>
             </div>
             <div className="flex flex-col gap-4 sm:items-end">
               <nav aria-label="Navegação complementar" className="flex flex-wrap gap-x-5 gap-y-3 text-xs text-muted-foreground">
                 <a href="#acolhimento" className="hover:text-foreground">Acolhimento</a>
                 <a href="#tratamento" className="hover:text-foreground">Tratamento</a>
                 <a href="#internacao" className="hover:text-foreground">Internação</a>
+                <a href="#familia" className="hover:text-foreground">Família</a>
                 <a href="#perguntas" className="hover:text-foreground">Dúvidas</a>
+                <Link to="/cidades" className="hover:text-foreground">Cidades</Link>
+                <Link to="/blog" className="hover:text-foreground">Blog</Link>
               </nav>
               <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
                 <FacebookLink className="inline-flex items-center gap-2 text-xs font-medium text-muted-foreground transition-colors hover:text-secondary">
