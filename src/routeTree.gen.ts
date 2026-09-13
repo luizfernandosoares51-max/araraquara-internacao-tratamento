@@ -10,14 +10,23 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AcolhimentoRouteImport } from './routes/acolhimento'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as CidadesRouteImport } from './routes/cidades'
 import { Route as ClinicaDeRecuperacaoEmAraraquaraRouteImport } from './routes/clinica-de-recuperacao-em-araraquara'
 import { Route as ClinicaDeRecuperacaoEmChar123citySlugChar125RouteImport } from './routes/clinica-de-recuperacao-em-{$citySlug}'
+import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as FamiliaRouteImport } from './routes/familia'
+import { Route as TratamentoRouteImport } from './routes/tratamento'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AcolhimentoRoute = AcolhimentoRouteImport.update({
+  id: '/acolhimento',
+  path: '/acolhimento',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogRoute = BlogRouteImport.update({
@@ -42,59 +51,102 @@ const ClinicaDeRecuperacaoEmChar123citySlugChar125Route =
     path: '/clinica-de-recuperacao-em-{$citySlug}',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FamiliaRoute = FamiliaRouteImport.update({
+  id: '/familia',
+  path: '/familia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TratamentoRoute = TratamentoRouteImport.update({
+  id: '/tratamento',
+  path: '/tratamento',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/acolhimento': typeof AcolhimentoRoute
   '/blog': typeof BlogRoute
   '/cidades': typeof CidadesRoute
   '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
   '/clinica-de-recuperacao-em-{$citySlug}': typeof ClinicaDeRecuperacaoEmChar123citySlugChar125Route
+  '/contato': typeof ContatoRoute
+  '/familia': typeof FamiliaRoute
+  '/tratamento': typeof TratamentoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/acolhimento': typeof AcolhimentoRoute
   '/blog': typeof BlogRoute
   '/cidades': typeof CidadesRoute
   '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
   '/clinica-de-recuperacao-em-{$citySlug}': typeof ClinicaDeRecuperacaoEmChar123citySlugChar125Route
+  '/contato': typeof ContatoRoute
+  '/familia': typeof FamiliaRoute
+  '/tratamento': typeof TratamentoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/acolhimento': typeof AcolhimentoRoute
   '/blog': typeof BlogRoute
   '/cidades': typeof CidadesRoute
   '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
   '/clinica-de-recuperacao-em-{$citySlug}': typeof ClinicaDeRecuperacaoEmChar123citySlugChar125Route
+  '/contato': typeof ContatoRoute
+  '/familia': typeof FamiliaRoute
+  '/tratamento': typeof TratamentoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/acolhimento'
     | '/blog'
     | '/cidades'
     | '/clinica-de-recuperacao-em-araraquara'
     | '/clinica-de-recuperacao-em-{$citySlug}'
+    | '/contato'
+    | '/familia'
+    | '/tratamento'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/acolhimento'
     | '/blog'
     | '/cidades'
     | '/clinica-de-recuperacao-em-araraquara'
     | '/clinica-de-recuperacao-em-{$citySlug}'
+    | '/contato'
+    | '/familia'
+    | '/tratamento'
   id:
     | '__root__'
     | '/'
+    | '/acolhimento'
     | '/blog'
     | '/cidades'
     | '/clinica-de-recuperacao-em-araraquara'
     | '/clinica-de-recuperacao-em-{$citySlug}'
+    | '/contato'
+    | '/familia'
+    | '/tratamento'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AcolhimentoRoute: typeof AcolhimentoRoute
   BlogRoute: typeof BlogRoute
   CidadesRoute: typeof CidadesRoute
   ClinicaDeRecuperacaoEmAraraquaraRoute: typeof ClinicaDeRecuperacaoEmAraraquaraRoute
   ClinicaDeRecuperacaoEmChar123citySlugChar125Route: typeof ClinicaDeRecuperacaoEmChar123citySlugChar125Route
+  ContatoRoute: typeof ContatoRoute
+  FamiliaRoute: typeof FamiliaRoute
+  TratamentoRoute: typeof TratamentoRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -104,6 +156,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/acolhimento': {
+      id: '/acolhimento'
+      path: '/acolhimento'
+      fullPath: '/acolhimento'
+      preLoaderRoute: typeof AcolhimentoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog': {
@@ -134,16 +193,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ClinicaDeRecuperacaoEmChar123citySlugChar125RouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/familia': {
+      id: '/familia'
+      path: '/familia'
+      fullPath: '/familia'
+      preLoaderRoute: typeof FamiliaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tratamento': {
+      id: '/tratamento'
+      path: '/tratamento'
+      fullPath: '/tratamento'
+      preLoaderRoute: typeof TratamentoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AcolhimentoRoute: AcolhimentoRoute,
   BlogRoute: BlogRoute,
   CidadesRoute: CidadesRoute,
   ClinicaDeRecuperacaoEmAraraquaraRoute: ClinicaDeRecuperacaoEmAraraquaraRoute,
   ClinicaDeRecuperacaoEmChar123citySlugChar125Route:
     ClinicaDeRecuperacaoEmChar123citySlugChar125Route,
+  ContatoRoute: ContatoRoute,
+  FamiliaRoute: FamiliaRoute,
+  TratamentoRoute: TratamentoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
