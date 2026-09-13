@@ -21,6 +21,7 @@ export const Route = createFileRoute("/cidades")({
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: `${siteUrl}/cidades` },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: `${siteUrl}/cidades` }],
   }),
