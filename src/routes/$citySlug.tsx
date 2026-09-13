@@ -6,7 +6,9 @@ import { facebookHref, instagramHref, siteUrl } from "@/lib/site";
 
 export const Route = createFileRoute("/$citySlug")({
   loader: ({ params }) => {
-    const city = cityPageBySlug[params.citySlug];
+    const prefix = "clinica-de-recuperacao-em-";
+    if (!params.citySlug.startsWith(prefix)) throw notFound();
+    const city = cityPageBySlug[params.citySlug.slice(prefix.length)];
     if (!city) throw notFound();
     return city;
   },
@@ -21,7 +23,7 @@ export const Route = createFileRoute("/$citySlug")({
     }
 
     const pageUrl = `${siteUrl}/clinica-de-recuperacao-em-${loaderData.slug}`;
-    const title = `Clínica de Recuperação em ${loaderData.name} | Central de Acolhimento`;
+    const title = `Clínica de Recuperação em ${loaderData.name} | Central`;
 
     return {
       meta: [
