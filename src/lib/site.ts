@@ -1,4 +1,4 @@
-export const siteUrl = "https://araraquara-hope-hub.lovable.app";
+export const siteUrl = "https://araraquara-internacao-tratamento.lovable.app";
 
 export const phoneDisplay = "(16) 99765-4579";
 export const phoneHref = "tel:+5516997654579";
