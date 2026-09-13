@@ -261,7 +261,7 @@ function AraraquaraPage() {
               </div>
               <h1 className="mt-5 max-w-3xl font-display text-[2.15rem] font-bold leading-[1.04] sm:text-5xl lg:text-[3.75rem]">
                 Clínica de Recuperação em <span className="text-secondary">Araraquara</span>
-                <span className="mt-2 block text-[0.48em] font-medium leading-tight text-muted-foreground">Central de Acolhimento e Reabilitação</span>
+                <span className="mt-2 block text-[0.48em] font-medium leading-tight text-muted-foreground">– Central de Acolhimento e Reabilitação</span>
               </h1>
               <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-muted-foreground sm:text-lg">
                 Acolhimento, acompanhamento terapêutico e suporte especializado para pessoas que enfrentam a dependência química e problemas relacionados ao uso de álcool e outras drogas.
@@ -270,6 +270,9 @@ function AraraquaraPage() {
                 <WhatsAppLink className="flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-whatsapp px-5 py-4 text-center text-sm font-semibold text-whatsapp-foreground shadow-lg shadow-accent/20 transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
                   <MessageCircle className="size-5" aria-hidden="true" /> Falar com nossa equipe
                 </WhatsAppLink>
+                <a href={phoneHref} className="glass-panel flex min-h-14 items-center justify-center gap-2 rounded-2xl px-5 py-4 text-center text-sm font-semibold transition-colors hover:bg-glass-strong focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
+                  <Phone className="size-4" aria-hidden="true" /> Ligar agora
+                </a>
                 <a href="#como-funciona" className="glass-panel flex min-h-14 items-center justify-center gap-2 rounded-2xl px-5 py-4 text-center text-sm font-semibold transition-colors hover:bg-glass-strong focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
                   Como funciona o acolhimento <ArrowDown className="size-4" aria-hidden="true" />
                 </a>
