@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as CidadesRouteImport } from './routes/cidades'
 import { Route as ClinicaDeRecuperacaoEmAraraquaraRouteImport } from './routes/clinica-de-recuperacao-em-araraquara'
+import { Route as ClinicaDeRecuperacaoEmChar123citySlugChar125RouteImport } from './routes/clinica-de-recuperacao-em-{$citySlug}'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -35,18 +36,26 @@ const ClinicaDeRecuperacaoEmAraraquaraRoute =
     path: '/clinica-de-recuperacao-em-araraquara',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ClinicaDeRecuperacaoEmChar123citySlugChar125Route =
+  ClinicaDeRecuperacaoEmChar123citySlugChar125RouteImport.update({
+    id: '/clinica-de-recuperacao-em-{$citySlug}',
+    path: '/clinica-de-recuperacao-em-{$citySlug}',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
   '/cidades': typeof CidadesRoute
   '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
+  '/clinica-de-recuperacao-em-{$citySlug}': typeof ClinicaDeRecuperacaoEmChar123citySlugChar125Route
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/blog': typeof BlogRoute
   '/cidades': typeof CidadesRoute
   '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
+  '/clinica-de-recuperacao-em-{$citySlug}': typeof ClinicaDeRecuperacaoEmChar123citySlugChar125Route
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -54,19 +63,30 @@ export interface FileRoutesById {
   '/blog': typeof BlogRoute
   '/cidades': typeof CidadesRoute
   '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
+  '/clinica-de-recuperacao-em-{$citySlug}': typeof ClinicaDeRecuperacaoEmChar123citySlugChar125Route
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/blog' | '/cidades' | '/clinica-de-recuperacao-em-araraquara'
+    | '/'
+    | '/blog'
+    | '/cidades'
+    | '/clinica-de-recuperacao-em-araraquara'
+    | '/clinica-de-recuperacao-em-{$citySlug}'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/blog' | '/cidades' | '/clinica-de-recuperacao-em-araraquara'
+  to:
+    | '/'
+    | '/blog'
+    | '/cidades'
+    | '/clinica-de-recuperacao-em-araraquara'
+    | '/clinica-de-recuperacao-em-{$citySlug}'
   id:
     | '__root__'
     | '/'
     | '/blog'
     | '/cidades'
     | '/clinica-de-recuperacao-em-araraquara'
+    | '/clinica-de-recuperacao-em-{$citySlug}'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -74,6 +94,7 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRoute
   CidadesRoute: typeof CidadesRoute
   ClinicaDeRecuperacaoEmAraraquaraRoute: typeof ClinicaDeRecuperacaoEmAraraquaraRoute
+  ClinicaDeRecuperacaoEmChar123citySlugChar125Route: typeof ClinicaDeRecuperacaoEmChar123citySlugChar125Route
 }
 
 declare module '@tanstack/react-router' {
@@ -106,6 +127,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ClinicaDeRecuperacaoEmAraraquaraRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/clinica-de-recuperacao-em-{$citySlug}': {
+      id: '/clinica-de-recuperacao-em-{$citySlug}'
+      path: '/clinica-de-recuperacao-em-{$citySlug}'
+      fullPath: '/clinica-de-recuperacao-em-{$citySlug}'
+      preLoaderRoute: typeof ClinicaDeRecuperacaoEmChar123citySlugChar125RouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -114,6 +142,8 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRoute,
   CidadesRoute: CidadesRoute,
   ClinicaDeRecuperacaoEmAraraquaraRoute: ClinicaDeRecuperacaoEmAraraquaraRoute,
+  ClinicaDeRecuperacaoEmChar123citySlugChar125Route:
+    ClinicaDeRecuperacaoEmChar123citySlugChar125Route,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
