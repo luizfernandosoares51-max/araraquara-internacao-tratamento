@@ -1,17 +1,20 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { ArrowDown, ArrowRight, Check, MapPin, MessageCircle, ShieldCheck } from "lucide-react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowDown, ArrowRight, Check, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
 import type { ReactNode } from "react";
 
-const facebookHref = "https://www.facebook.com/centrodereabilitacaomoradadosol";
-const instagramHref = "https://www.instagram.com/luizfernandosoares.soares.1?stkn=MXJuczZldHJseXk5ZA==";
 import acolhimentoImage from "@/assets/acolhimento-araraquara.jpg";
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
+import {
+  facebookHref,
+  instagramHref,
+  mainNav,
+  phoneDisplay,
+  phoneHref,
+  siteUrl,
+  whatsappHref,
+} from "@/lib/site";
 
-const whatsappNumber = "5516997654579";
-const whatsappMessage = encodeURIComponent(
-  "Olá, gostaria de receber orientações sobre acolhimento em Araraquara.",
-);
-const whatsappHref = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+const pageUrl = `${siteUrl}/clinica-de-recuperacao-em-araraquara`;
 
 const steps = [
   "Contato com a família",
