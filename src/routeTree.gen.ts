@@ -10,11 +10,11 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CitySlugRouteImport } from './routes/$citySlug'
 import { Route as AcolhimentoRouteImport } from './routes/acolhimento'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as CidadesRouteImport } from './routes/cidades'
 import { Route as ClinicaDeRecuperacaoEmAraraquaraRouteImport } from './routes/clinica-de-recuperacao-em-araraquara'
-import { Route as ClinicaDeRecuperacaoEmChar123citySlugChar125RouteImport } from './routes/clinica-de-recuperacao-em-{$citySlug}'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as FamiliaRouteImport } from './routes/familia'
 import { Route as TratamentoRouteImport } from './routes/tratamento'
@@ -22,6 +22,11 @@ import { Route as TratamentoRouteImport } from './routes/tratamento'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CitySlugRoute = CitySlugRouteImport.update({
+  id: '/$citySlug',
+  path: '/$citySlug',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AcolhimentoRoute = AcolhimentoRouteImport.update({
@@ -45,12 +50,6 @@ const ClinicaDeRecuperacaoEmAraraquaraRoute =
     path: '/clinica-de-recuperacao-em-araraquara',
     getParentRoute: () => rootRouteImport,
   } as any)
-const ClinicaDeRecuperacaoEmChar123citySlugChar125Route =
-  ClinicaDeRecuperacaoEmChar123citySlugChar125RouteImport.update({
-    id: '/clinica-de-recuperacao-em-{$citySlug}',
-    path: '/clinica-de-recuperacao-em-{$citySlug}',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 const ContatoRoute = ContatoRouteImport.update({
   id: '/contato',
   path: '/contato',
@@ -69,22 +68,22 @@ const TratamentoRoute = TratamentoRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/$citySlug': typeof CitySlugRoute
   '/acolhimento': typeof AcolhimentoRoute
   '/blog': typeof BlogRoute
   '/cidades': typeof CidadesRoute
   '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
-  '/clinica-de-recuperacao-em-{$citySlug}': typeof ClinicaDeRecuperacaoEmChar123citySlugChar125Route
   '/contato': typeof ContatoRoute
   '/familia': typeof FamiliaRoute
   '/tratamento': typeof TratamentoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/$citySlug': typeof CitySlugRoute
   '/acolhimento': typeof AcolhimentoRoute
   '/blog': typeof BlogRoute
   '/cidades': typeof CidadesRoute
   '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
-  '/clinica-de-recuperacao-em-{$citySlug}': typeof ClinicaDeRecuperacaoEmChar123citySlugChar125Route
   '/contato': typeof ContatoRoute
   '/familia': typeof FamiliaRoute
   '/tratamento': typeof TratamentoRoute
@@ -92,11 +91,11 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/$citySlug': typeof CitySlugRoute
   '/acolhimento': typeof AcolhimentoRoute
   '/blog': typeof BlogRoute
   '/cidades': typeof CidadesRoute
   '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
-  '/clinica-de-recuperacao-em-{$citySlug}': typeof ClinicaDeRecuperacaoEmChar123citySlugChar125Route
   '/contato': typeof ContatoRoute
   '/familia': typeof FamiliaRoute
   '/tratamento': typeof TratamentoRoute
@@ -105,33 +104,33 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/$citySlug'
     | '/acolhimento'
     | '/blog'
     | '/cidades'
     | '/clinica-de-recuperacao-em-araraquara'
-    | '/clinica-de-recuperacao-em-{$citySlug}'
     | '/contato'
     | '/familia'
     | '/tratamento'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/$citySlug'
     | '/acolhimento'
     | '/blog'
     | '/cidades'
     | '/clinica-de-recuperacao-em-araraquara'
-    | '/clinica-de-recuperacao-em-{$citySlug}'
     | '/contato'
     | '/familia'
     | '/tratamento'
   id:
     | '__root__'
     | '/'
+    | '/$citySlug'
     | '/acolhimento'
     | '/blog'
     | '/cidades'
     | '/clinica-de-recuperacao-em-araraquara'
-    | '/clinica-de-recuperacao-em-{$citySlug}'
     | '/contato'
     | '/familia'
     | '/tratamento'
@@ -139,11 +138,11 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CitySlugRoute: typeof CitySlugRoute
   AcolhimentoRoute: typeof AcolhimentoRoute
   BlogRoute: typeof BlogRoute
   CidadesRoute: typeof CidadesRoute
   ClinicaDeRecuperacaoEmAraraquaraRoute: typeof ClinicaDeRecuperacaoEmAraraquaraRoute
-  ClinicaDeRecuperacaoEmChar123citySlugChar125Route: typeof ClinicaDeRecuperacaoEmChar123citySlugChar125Route
   ContatoRoute: typeof ContatoRoute
   FamiliaRoute: typeof FamiliaRoute
   TratamentoRoute: typeof TratamentoRoute
@@ -156,6 +155,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$citySlug': {
+      id: '/$citySlug'
+      path: '/$citySlug'
+      fullPath: '/$citySlug'
+      preLoaderRoute: typeof CitySlugRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/acolhimento': {
@@ -186,13 +192,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ClinicaDeRecuperacaoEmAraraquaraRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/clinica-de-recuperacao-em-{$citySlug}': {
-      id: '/clinica-de-recuperacao-em-{$citySlug}'
-      path: '/clinica-de-recuperacao-em-{$citySlug}'
-      fullPath: '/clinica-de-recuperacao-em-{$citySlug}'
-      preLoaderRoute: typeof ClinicaDeRecuperacaoEmChar123citySlugChar125RouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/contato': {
       id: '/contato'
       path: '/contato'
@@ -219,12 +218,11 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CitySlugRoute: CitySlugRoute,
   AcolhimentoRoute: AcolhimentoRoute,
   BlogRoute: BlogRoute,
   CidadesRoute: CidadesRoute,
   ClinicaDeRecuperacaoEmAraraquaraRoute: ClinicaDeRecuperacaoEmAraraquaraRoute,
-  ClinicaDeRecuperacaoEmChar123citySlugChar125Route:
-    ClinicaDeRecuperacaoEmChar123citySlugChar125Route,
   ContatoRoute: ContatoRoute,
   FamiliaRoute: FamiliaRoute,
   TratamentoRoute: TratamentoRoute,

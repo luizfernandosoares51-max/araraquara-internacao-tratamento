@@ -4,7 +4,7 @@ import { CityPageTemplate } from "@/components/city-page-template";
 import { cityPageBySlug } from "@/lib/city-pages";
 import { facebookHref, instagramHref, siteUrl } from "@/lib/site";
 
-export const Route = createFileRoute("/clinica-de-recuperacao-em-{$citySlug}")({
+export const Route = createFileRoute("/$citySlug")({
   loader: ({ params }) => {
     const city = cityPageBySlug[params.citySlug];
     if (!city) throw notFound();
