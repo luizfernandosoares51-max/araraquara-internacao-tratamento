@@ -100,9 +100,6 @@ export function CityPageTemplate({ city }: { city: CityPageData }) {
                 Clínica de recuperação para famílias {city.preposition} <span className="text-secondary">{city.name}</span>
               </h1>
               <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-muted-foreground sm:text-lg">{city.intro}</p>
-              <p className="mt-4 flex max-w-2xl items-start gap-2 text-sm leading-relaxed text-foreground/85">
-                <MapPin className="mt-0.5 size-4 shrink-0 text-secondary" aria-hidden="true" /> A unidade física da Central está localizada em Araraquara/SP.
-              </p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                 <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-whatsapp px-5 py-4 text-center text-sm font-semibold text-whatsapp-foreground shadow-lg shadow-accent/20 transition-transform hover:-translate-y-0.5">
                   <MessageCircle className="size-5" aria-hidden="true" /> Falar pelo WhatsApp
@@ -122,8 +119,7 @@ export function CityPageTemplate({ city }: { city: CityPageData }) {
           </section>
 
           <section className="border-y border-border py-9">
-            <div className="grid gap-4 text-sm sm:grid-cols-3">
-              <p><span className="font-semibold text-foreground">Unidade física</span><br /><span className="text-muted-foreground">Somente em Araraquara/SP</span></p>
+            <div className="grid gap-4 text-sm sm:grid-cols-2">
               <p><span className="font-semibold text-foreground">Primeiro contato</span><br /><span className="text-muted-foreground">Orientação por telefone ou WhatsApp</span></p>
               <p><span className="font-semibold text-foreground">Acolhimento</span><br /><span className="text-muted-foreground">Sujeito a avaliação e disponibilidade</span></p>
             </div>
@@ -151,9 +147,8 @@ export function CityPageTemplate({ city }: { city: CityPageData }) {
           </section>
 
           <section id="familia" className="border-b border-border py-14 lg:py-20">
-            <div className="glass-panel-strong rounded-3xl p-6 sm:p-9 lg:grid lg:grid-cols-[1.15fr_.85fr] lg:gap-12">
+            <div className="glass-panel-strong rounded-3xl p-6 sm:p-9">
               <div><SectionLabel>Orientação familiar</SectionLabel><h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-3xl">{city.familyHeading}</h2><p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">{city.familyText}</p></div>
-              <div className="mt-7 border-t border-border pt-6 lg:mt-0 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0"><SectionLabel>Transparência</SectionLabel><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Não há unidade ou filial da Central em {city.name}. O possível acolhimento acontece na unidade física de Araraquara.</p></div>
             </div>
           </section>
 
