@@ -71,23 +71,23 @@ const faqs = [
 export const Route = createFileRoute("/clinica-de-recuperacao-em-araraquara")({
   head: () => ({
     meta: [
-      { title: "Clínica de Recuperação em Araraquara | Central de Acolhimento e Reabilitação" },
+      { title: "Clínica de Recuperação em Araraquara | Central de Acolhimento" },
       {
         name: "description",
         content:
-          "Clínica de recuperação em Araraquara para dependência química e alcoolismo. Conheça o acolhimento, acompanhamento terapêutico, psicológico e psiquiátrico.",
+          "Clínica de recuperação em Araraquara para dependência química e alcoolismo. Conheça o acolhimento, o acompanhamento terapêutico, psicológico e psiquiátrico e fale com nossa equipe.",
       },
-      { property: "og:title", content: "Clínica de Recuperação em Araraquara | Central de Acolhimento e Reabilitação" },
+      { property: "og:title", content: "Clínica de Recuperação em Araraquara | Central de Acolhimento" },
       {
         property: "og:description",
         content:
           "Acolhimento e orientação para dependência química e alcoolismo em Araraquara, com acompanhamento especializado.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/clinica-de-recuperacao-em-araraquara" },
+      { property: "og:url", content: pageUrl },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/clinica-de-recuperacao-em-araraquara" }],
+    links: [{ rel: "canonical", href: pageUrl }],
     scripts: [
       {
         type: "application/ld+json",
@@ -97,9 +97,25 @@ export const Route = createFileRoute("/clinica-de-recuperacao-em-araraquara")({
             {
               "@type": "Organization",
               name: "Central de Acolhimento e Reabilitação",
+              url: pageUrl,
+              telephone: "+5516997654579",
               areaServed: { "@type": "City", name: "Araraquara" },
+              sameAs: [facebookHref, instagramHref],
               description:
                 "Acolhimento e acompanhamento para pessoas que enfrentam dependência química, alcoolismo e uso problemático de outras drogas.",
+            },
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Início", item: siteUrl },
+                { "@type": "ListItem", position: 2, name: "Cidades", item: `${siteUrl}/cidades` },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "Clínica de Recuperação em Araraquara",
+                  item: pageUrl,
+                },
+              ],
             },
             {
               "@type": "FAQPage",
