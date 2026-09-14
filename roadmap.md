@@ -7,3 +7,6 @@
 - [x] Atualizar a página simples de cidades
 - [x] Garantir caminhos internos de tratamento, acolhimento, família e contato
 - [x] Validar desktop, celular e contatos
+- [ ] Reorganizar as 14 páginas locais para captação e clínicas parceiras
+- [ ] Atualizar a listagem das 15 cidades sem mudar URLs
+- [ ] Validar SEO, links, contatos e responsividade das 15 páginas
