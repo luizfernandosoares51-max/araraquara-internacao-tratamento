@@ -24,6 +24,7 @@ const steps = [
 ];
 
 const sectionLinkClass = "transition-colors hover:text-secondary";
+const saoCarlosFacebookHref = "https://www.facebook.com/share/19LjvZp41r/";
 
 function SocialIcon({ network }: { network: "facebook" | "instagram" }) {
   return network === "facebook" ? (
@@ -45,6 +46,7 @@ export function CityPageTemplate({ city }: { city: CityPageData }) {
   const relatedCities = city.relatedSlugs
     .map((slug) => cityPageBySlug[slug])
     .filter((related): related is CityPageData => related !== undefined);
+  const cityFacebookHref = city.slug === "sao-carlos-sp" ? saoCarlosFacebookHref : facebookHref;
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-deep font-body text-foreground">
@@ -192,7 +194,7 @@ export function CityPageTemplate({ city }: { city: CityPageData }) {
         </main>
 
         <footer className="border-t border-border py-8">
-          <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between"><div><p className="font-display font-semibold">Central de Acolhimento e Reabilitação</p><p className="mt-1 text-xs text-muted-foreground">Unidade física em Araraquara/SP</p><a href={phoneHref} className="mt-3 inline-flex items-center gap-2 text-xs font-semibold text-secondary"><Phone className="size-3.5" aria-hidden="true" /> Ligar agora · {phoneDisplay}</a></div><div className="flex flex-wrap gap-5 text-xs text-muted-foreground"><Link to="/cidades" className="hover:text-foreground">Cidades</Link><Link to="/blog" className="hover:text-foreground">Blog</Link><a href={facebookHref} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-secondary"><SocialIcon network="facebook" /> Facebook</a><a href={instagramHref} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-secondary"><SocialIcon network="instagram" /> Instagram</a></div></div>
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between"><div><p className="font-display font-semibold">Central de Acolhimento e Reabilitação</p><p className="mt-1 text-xs text-muted-foreground">Unidade física em Araraquara/SP</p><a href={phoneHref} className="mt-3 inline-flex items-center gap-2 text-xs font-semibold text-secondary"><Phone className="size-3.5" aria-hidden="true" /> Ligar agora · {phoneDisplay}</a></div><div className="flex flex-wrap gap-5 text-xs text-muted-foreground"><Link to="/cidades" className="hover:text-foreground">Cidades</Link><Link to="/blog" className="hover:text-foreground">Blog</Link><a href={cityFacebookHref} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-secondary"><SocialIcon network="facebook" /> Facebook</a><a href={instagramHref} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-secondary"><SocialIcon network="instagram" /> Instagram</a></div></div>
           <p className="mt-7 max-w-3xl text-[11px] leading-relaxed text-muted-foreground/70">As informações são orientativas. Qualquer modalidade de cuidado depende de avaliação individual e profissional, sem promessa de resultado.</p>
         </footer>
       </div>
