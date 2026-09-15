@@ -5,7 +5,6 @@ import type { ReactNode } from "react";
 import acolhimentoImage from "@/assets/acolhimento-araraquara.jpg";
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import {
-  facebookHref,
   instagramHref,
   mainNav,
   phoneDisplay,
