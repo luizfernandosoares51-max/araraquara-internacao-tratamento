@@ -18,6 +18,7 @@ import { Route as ClinicaDeRecuperacaoEmAraraquaraRouteImport } from './routes/c
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as FamiliaRouteImport } from './routes/familia'
 import { Route as TratamentoRouteImport } from './routes/tratamento'
+import { Route as BlogDependenciaQuimicaSinaisTratamentoRouteImport } from './routes/blog.dependencia-quimica-sinais-tratamento'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -65,40 +66,49 @@ const TratamentoRoute = TratamentoRouteImport.update({
   path: '/tratamento',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogDependenciaQuimicaSinaisTratamentoRoute =
+  BlogDependenciaQuimicaSinaisTratamentoRouteImport.update({
+    id: '/dependencia-quimica-sinais-tratamento',
+    path: '/dependencia-quimica-sinais-tratamento',
+    getParentRoute: () => BlogRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$citySlug': typeof CitySlugRoute
   '/acolhimento': typeof AcolhimentoRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/cidades': typeof CidadesRoute
   '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
   '/contato': typeof ContatoRoute
   '/familia': typeof FamiliaRoute
   '/tratamento': typeof TratamentoRoute
+  '/blog/dependencia-quimica-sinais-tratamento': typeof BlogDependenciaQuimicaSinaisTratamentoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$citySlug': typeof CitySlugRoute
   '/acolhimento': typeof AcolhimentoRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/cidades': typeof CidadesRoute
   '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
   '/contato': typeof ContatoRoute
   '/familia': typeof FamiliaRoute
   '/tratamento': typeof TratamentoRoute
+  '/blog/dependencia-quimica-sinais-tratamento': typeof BlogDependenciaQuimicaSinaisTratamentoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/$citySlug': typeof CitySlugRoute
   '/acolhimento': typeof AcolhimentoRoute
-  '/blog': typeof BlogRoute
+  '/blog': typeof BlogRouteWithChildren
   '/cidades': typeof CidadesRoute
   '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
   '/contato': typeof ContatoRoute
   '/familia': typeof FamiliaRoute
   '/tratamento': typeof TratamentoRoute
+  '/blog/dependencia-quimica-sinais-tratamento': typeof BlogDependenciaQuimicaSinaisTratamentoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -112,6 +122,7 @@ export interface FileRouteTypes {
     | '/contato'
     | '/familia'
     | '/tratamento'
+    | '/blog/dependencia-quimica-sinais-tratamento'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -123,6 +134,7 @@ export interface FileRouteTypes {
     | '/contato'
     | '/familia'
     | '/tratamento'
+    | '/blog/dependencia-quimica-sinais-tratamento'
   id:
     | '__root__'
     | '/'
@@ -134,13 +146,14 @@ export interface FileRouteTypes {
     | '/contato'
     | '/familia'
     | '/tratamento'
+    | '/blog/dependencia-quimica-sinais-tratamento'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CitySlugRoute: typeof CitySlugRoute
   AcolhimentoRoute: typeof AcolhimentoRoute
-  BlogRoute: typeof BlogRoute
+  BlogRoute: typeof BlogRouteWithChildren
   CidadesRoute: typeof CidadesRoute
   ClinicaDeRecuperacaoEmAraraquaraRoute: typeof ClinicaDeRecuperacaoEmAraraquaraRoute
   ContatoRoute: typeof ContatoRoute
@@ -213,14 +226,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TratamentoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/dependencia-quimica-sinais-tratamento': {
+      id: '/blog/dependencia-quimica-sinais-tratamento'
+      path: '/dependencia-quimica-sinais-tratamento'
+      fullPath: '/blog/dependencia-quimica-sinais-tratamento'
+      preLoaderRoute: typeof BlogDependenciaQuimicaSinaisTratamentoRouteImport
+      parentRoute: typeof BlogRoute
+    }
   }
 }
+
+interface BlogRouteChildren {
+  BlogDependenciaQuimicaSinaisTratamentoRoute: typeof BlogDependenciaQuimicaSinaisTratamentoRoute
+}
+
+const BlogRouteChildren: BlogRouteChildren = {
+  BlogDependenciaQuimicaSinaisTratamentoRoute:
+    BlogDependenciaQuimicaSinaisTratamentoRoute,
+}
+
+const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CitySlugRoute: CitySlugRoute,
   AcolhimentoRoute: AcolhimentoRoute,
-  BlogRoute: BlogRoute,
+  BlogRoute: BlogRouteWithChildren,
   CidadesRoute: CidadesRoute,
   ClinicaDeRecuperacaoEmAraraquaraRoute: ClinicaDeRecuperacaoEmAraraquaraRoute,
   ContatoRoute: ContatoRoute,
