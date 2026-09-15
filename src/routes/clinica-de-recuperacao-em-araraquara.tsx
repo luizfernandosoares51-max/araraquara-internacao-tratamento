@@ -5,7 +5,6 @@ import type { ReactNode } from "react";
 import acolhimentoImage from "@/assets/acolhimento-araraquara.jpg";
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import {
-  facebookHref,
   instagramHref,
   mainNav,
   phoneDisplay,
@@ -15,6 +14,7 @@ import {
 } from "@/lib/site";
 
 const pageUrl = `${siteUrl}/clinica-de-recuperacao-em-araraquara`;
+const araraquaraFacebookHref = "https://www.facebook.com/share/1drREi2gvi/";
 
 const steps = [
   "Contato com a família",
@@ -100,7 +100,7 @@ export const Route = createFileRoute("/clinica-de-recuperacao-em-araraquara")({
               url: pageUrl,
               telephone: "+5516997654579",
               areaServed: { "@type": "City", name: "Araraquara" },
-              sameAs: [facebookHref, instagramHref],
+              sameAs: [araraquaraFacebookHref, instagramHref],
               description:
                 "Acolhimento e acompanhamento para pessoas que enfrentam dependência química, alcoolismo e uso problemático de outras drogas.",
             },
@@ -143,7 +143,7 @@ function WhatsAppLink({ children, className }: { children: ReactNode; className:
 
 function FacebookLink({ children, className }: { children: ReactNode; className: string }) {
   return (
-    <a href={facebookHref} target="_blank" rel="noopener noreferrer" className={className}>
+    <a href={araraquaraFacebookHref} target="_blank" rel="noopener noreferrer" className={className}>
       {children}
     </a>
   );
