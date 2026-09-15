@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { MessageCircle } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 
 import { siteUrl, whatsappHref } from "@/lib/site";
 
@@ -38,10 +38,27 @@ function BlogPage() {
           Conteúdos de orientação para famílias
         </h1>
         <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground">
-          Estamos preparando textos com orientações sobre dependência química, alcoolismo,
-          modalidades de acolhimento e como a família pode ajudar. Os primeiros artigos serão
-          publicados aqui em breve.
+          Informações sobre dependência química, acolhimento, tratamento e apoio às famílias.
         </p>
+
+        <article className="glass-panel mt-8 rounded-2xl p-5 sm:p-7">
+          <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">
+            Dependência química
+          </p>
+          <h2 className="mt-3 font-display text-xl font-bold leading-snug sm:text-2xl">
+            Dependência Química: Entenda os Sinais e a Importância do Tratamento
+          </h2>
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+            Entenda os principais sinais da dependência química e saiba quando buscar orientação,
+            acolhimento e tratamento especializado.
+          </p>
+          <Link
+            to="/blog/dependencia-quimica-sinais-tratamento"
+            className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-secondary transition-colors hover:text-foreground"
+          >
+            Ler artigo <ArrowRight className="size-4" aria-hidden="true" />
+          </Link>
+        </article>
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <a
