@@ -154,12 +154,17 @@ function ArticlePage() {
             atividades terapêuticas, orientação familiar e outras formas de suporte.
           </p>
           <p>
+            O tratamento para dependência química deve ser definido a partir de uma avaliação
+            cuidadosa. Nos casos relacionados ao alcoolismo, a frequência do consumo, as condições
+            de saúde e os impactos na rotina também precisam ser considerados.
+          </p>
+          <p>
             Em determinadas situações, o acolhimento em uma instituição especializada pode fazer
             parte do processo de tratamento.
           </p>
 
           <h2 className="pt-4 font-display text-2xl font-bold leading-tight text-foreground">
-            A família também precisa de orientação
+            A importância da família
           </h2>
           <p>
             A dependência química não afeta somente a pessoa que utiliza a substância. A família
@@ -171,15 +176,17 @@ function ArticlePage() {
           </p>
 
           <h2 className="pt-4 font-display text-2xl font-bold leading-tight text-foreground">
-            É possível buscar recuperação
+            Acolhimento e orientação
           </h2>
           <p>
-            A recuperação é um processo que pode exigir tempo, acompanhamento e participação da
-            família.
+            O acolhimento começa com uma conversa responsável para entender o momento vivido pela
+            pessoa e por seus familiares. Essa orientação para famílias pode esclarecer dúvidas e
+            ajudar na avaliação dos próximos passos, sempre respeitando as necessidades de cada caso.
           </p>
           <p>
-            Cada pessoa possui necessidades diferentes, por isso o tratamento deve ser individualizado
-            e acompanhado por profissionais capacitados.
+            A recuperação é um processo que pode exigir tempo, acompanhamento e participação da
+            família. Cada pessoa possui necessidades diferentes, por isso o tratamento deve ser
+            individualizado e acompanhado por profissionais capacitados.
           </p>
           <p>Buscar ajuda é um passo importante para começar uma mudança.</p>
 
