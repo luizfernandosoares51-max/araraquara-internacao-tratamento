@@ -24,5 +24,6 @@ export const mainNav = [
   { label: "Família", href: "/clinica-de-recuperacao-em-araraquara#familia" },
   { label: "Cidades", href: "/cidades" },
   { label: "Blog", href: "/blog" },
+  { label: "Vídeos", href: "/videos" },
   { label: "Contato", href: "/clinica-de-recuperacao-em-araraquara#contato" },
 ] as const;

@@ -240,7 +240,7 @@ function AraraquaraPage() {
                 ) : (
                   <li key={item.label}>
                     <Link
-                      to={item.href as "/cidades" | "/blog"}
+                      to={item.href as "/cidades" | "/blog" | "/videos"}
                       className="transition-colors hover:text-secondary"
                       activeProps={{ className: "text-secondary" }}
                     >

@@ -77,6 +77,7 @@ export function CityPageTemplate({ city }: { city: CityPageData }) {
               <li><Link to="/familia" className={sectionLinkClass}>Família</Link></li>
               <li><Link to="/cidades" className={sectionLinkClass}>Cidades</Link></li>
               <li><Link to="/blog" className={sectionLinkClass}>Blog</Link></li>
+               <li><Link to="/videos" className={sectionLinkClass}>Vídeos</Link></li>
               <li><Link to="/contato" className={sectionLinkClass}>Contato</Link></li>
             </ul>
           </nav>

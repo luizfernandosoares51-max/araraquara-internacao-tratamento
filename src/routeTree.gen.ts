@@ -18,6 +18,7 @@ import { Route as ClinicaDeRecuperacaoEmAraraquaraRouteImport } from './routes/c
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as FamiliaRouteImport } from './routes/familia'
 import { Route as TratamentoRouteImport } from './routes/tratamento'
+import { Route as VideosRouteImport } from './routes/videos'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogDependenciaQuimicaSinaisTratamentoRouteImport } from './routes/blog.dependencia-quimica-sinais-tratamento'
 
@@ -67,6 +68,11 @@ const TratamentoRoute = TratamentoRouteImport.update({
   path: '/tratamento',
   getParentRoute: () => rootRouteImport,
 } as any)
+const VideosRoute = VideosRouteImport.update({
+  id: '/videos',
+  path: '/videos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -89,6 +95,7 @@ export interface FileRoutesByFullPath {
   '/contato': typeof ContatoRoute
   '/familia': typeof FamiliaRoute
   '/tratamento': typeof TratamentoRoute
+  '/videos': typeof VideosRoute
   '/blog/dependencia-quimica-sinais-tratamento': typeof BlogDependenciaQuimicaSinaisTratamentoRoute
   '/blog/': typeof BlogIndexRoute
 }
@@ -101,6 +108,7 @@ export interface FileRoutesByTo {
   '/contato': typeof ContatoRoute
   '/familia': typeof FamiliaRoute
   '/tratamento': typeof TratamentoRoute
+  '/videos': typeof VideosRoute
   '/blog/dependencia-quimica-sinais-tratamento': typeof BlogDependenciaQuimicaSinaisTratamentoRoute
   '/blog': typeof BlogIndexRoute
 }
@@ -115,6 +123,7 @@ export interface FileRoutesById {
   '/contato': typeof ContatoRoute
   '/familia': typeof FamiliaRoute
   '/tratamento': typeof TratamentoRoute
+  '/videos': typeof VideosRoute
   '/blog/dependencia-quimica-sinais-tratamento': typeof BlogDependenciaQuimicaSinaisTratamentoRoute
   '/blog/': typeof BlogIndexRoute
 }
@@ -130,6 +139,7 @@ export interface FileRouteTypes {
     | '/contato'
     | '/familia'
     | '/tratamento'
+    | '/videos'
     | '/blog/dependencia-quimica-sinais-tratamento'
     | '/blog/'
   fileRoutesByTo: FileRoutesByTo
@@ -142,6 +152,7 @@ export interface FileRouteTypes {
     | '/contato'
     | '/familia'
     | '/tratamento'
+    | '/videos'
     | '/blog/dependencia-quimica-sinais-tratamento'
     | '/blog'
   id:
@@ -155,6 +166,7 @@ export interface FileRouteTypes {
     | '/contato'
     | '/familia'
     | '/tratamento'
+    | '/videos'
     | '/blog/dependencia-quimica-sinais-tratamento'
     | '/blog/'
   fileRoutesById: FileRoutesById
@@ -169,6 +181,7 @@ export interface RootRouteChildren {
   ContatoRoute: typeof ContatoRoute
   FamiliaRoute: typeof FamiliaRoute
   TratamentoRoute: typeof TratamentoRoute
+  VideosRoute: typeof VideosRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -236,6 +249,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TratamentoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/videos': {
+      id: '/videos'
+      path: '/videos'
+      fullPath: '/videos'
+      preLoaderRoute: typeof VideosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/': {
       id: '/blog/'
       path: '/'
@@ -276,6 +296,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContatoRoute: ContatoRoute,
   FamiliaRoute: FamiliaRoute,
   TratamentoRoute: TratamentoRoute,
+  VideosRoute: VideosRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
