@@ -9,7 +9,7 @@ export const whatsappMessage =
 export const whatsappHref = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
 export const instagramHref =
-  "https://www.instagram.com/luizfernandosoares.soares.1?stkn=MXJuczZldHJseXk5ZA==";
+  "https://www.instagram.com/centralacolhimento_sp?stkn=MTdjb3c0YWtsdWwzZg==";
 export const facebookHref = "https://www.facebook.com/share/1EqxvF95Qn/";
 
 /**
