@@ -18,7 +18,7 @@ export const facebookHref = "https://www.facebook.com/share/1EqxvF95Qn/";
  * sem mudar o restante do site.
  */
 export const mainNav = [
-  { label: "Início", href: "/clinica-de-recuperacao-em-araraquara#inicio" },
+  { label: "Início", href: "/" },
   { label: "Tratamento", href: "/clinica-de-recuperacao-em-araraquara#tratamento" },
   { label: "Acolhimento", href: "/clinica-de-recuperacao-em-araraquara#acolhimento" },
   { label: "Família", href: "/clinica-de-recuperacao-em-araraquara#familia" },
