@@ -71,7 +71,7 @@ export function CityPageTemplate({ city }: { city: CityPageData }) {
           </div>
           <nav aria-label="Menu principal" className="mt-4 -mx-5 overflow-x-auto px-5 sm:mx-0 sm:px-0">
             <ul className="flex min-w-max items-center gap-x-5 text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
-              <li><Link to="/clinica-de-recuperacao-em-araraquara" className={sectionLinkClass}>Início</Link></li>
+              <li><Link to="/" className={sectionLinkClass}>Início</Link></li>
               <li><Link to="/tratamento" className={sectionLinkClass}>Tratamento</Link></li>
               <li><Link to="/acolhimento" className={sectionLinkClass}>Acolhimento</Link></li>
               <li><Link to="/familia" className={sectionLinkClass}>Família</Link></li>
