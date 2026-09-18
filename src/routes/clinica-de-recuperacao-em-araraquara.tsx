@@ -75,13 +75,13 @@ export const Route = createFileRoute("/clinica-de-recuperacao-em-araraquara")({
       {
         name: "description",
         content:
-          "Clínica de recuperação em Araraquara para dependência química e alcoolismo. Conheça o acolhimento, o acompanhamento terapêutico, psicológico e psiquiátrico e fale com nossa equipe.",
+          "Clínica de recuperação em Araraquara com acolhimento e orientação para dependência química, alcoolismo e uso problemático de álcool e outras drogas. Fale com a Central.",
       },
       { property: "og:title", content: "Clínica de Recuperação em Araraquara | Central de Acolhimento" },
       {
         property: "og:description",
         content:
-          "Acolhimento e orientação para dependência química e alcoolismo em Araraquara, com acompanhamento especializado.",
+          "Acolhimento, orientação e informações sobre tratamento para dependência química e alcoolismo em Araraquara e região.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: pageUrl },
@@ -264,11 +264,11 @@ function AraraquaraPage() {
                 <span className="mt-2 block text-[0.48em] font-medium leading-tight text-muted-foreground">– Central de Acolhimento e Reabilitação</span>
               </h1>
               <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-muted-foreground sm:text-lg">
-                Acolhimento, acompanhamento terapêutico e suporte especializado para pessoas que enfrentam a dependência química e problemas relacionados ao uso de álcool e outras drogas.
+                A Central oferece acolhimento, orientação e informações sobre possibilidades de tratamento para pessoas e famílias que buscam ajuda com dependência química, alcoolismo e uso problemático de álcool e outras drogas em Araraquara e região. Saiba mais sobre clínica de reabilitação em Araraquara, tratamento para dependência química em Araraquara e tratamento para alcoolismo em Araraquara.
               </p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                 <WhatsAppLink className="flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-whatsapp px-5 py-4 text-center text-sm font-semibold text-whatsapp-foreground shadow-lg shadow-accent/20 transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
-                  <MessageCircle className="size-5" aria-hidden="true" /> Falar com nossa equipe
+                  <MessageCircle className="size-5" aria-hidden="true" /> Falar agora pelo WhatsApp
                 </WhatsAppLink>
                 <a href={phoneHref} className="glass-panel flex min-h-14 items-center justify-center gap-2 rounded-2xl px-5 py-4 text-center text-sm font-semibold transition-colors hover:bg-glass-strong focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
                   <Phone className="size-4" aria-hidden="true" /> Ligar agora
