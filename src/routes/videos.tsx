@@ -3,13 +3,14 @@ import { Play } from "lucide-react";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
+import progressaoVideo from "@/assets/progressao-do-colapso.mp4.asset.json";
 import { siteUrl } from "@/lib/site";
 
 const pageTitle = "Vídeos – Central de Acolhimento e Reabilitação";
 const pageDescription =
   "Vídeo sobre a progressão de comportamentos ligados à dependência química, prevenção, compulsão, tratamento e acolhimento.";
 
-const videoSource: string | undefined = undefined;
+const videoSource = progressaoVideo.url;
 
 const stages = [
   {
