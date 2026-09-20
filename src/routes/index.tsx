@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowDown, ArrowRight, Check, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
+import { ArrowDown, ArrowRight, Camera, Check, ChevronDown, Images, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
 import type { ReactNode } from "react";
 
 import acolhimentoImage from "@/assets/acolhimento-araraquara.jpg";
@@ -24,6 +24,15 @@ const steps = [
   "Definição dos próximos passos",
   "Acolhimento",
 ];
+
+const photoGalleryCities = [
+  { name: "Araraquara", units: ["Unidade 1", "Unidade 2", "Unidade 3"] },
+  { name: "São Carlos", units: ["Unidade 1", "Unidade 2", "Unidade 3"] },
+  { name: "Rio Claro", units: ["Unidade 1", "Unidade 2"] },
+  { name: "Bauru", units: ["Unidade 1", "Unidade 2"] },
+  { name: "Ribeirão Preto", units: ["Unidade 1", "Unidade 2"] },
+  { name: "Matão", units: ["Unidade 1", "Unidade 2"] },
+] as const;
 
 const faqs = [
   {
@@ -276,6 +285,54 @@ function HomePage() {
                 <span className="shrink-0 rounded-full bg-accent/15 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-accent">Escuta humana</span>
               </div>
             </div>
+          </section>
+
+          <section aria-labelledby="galeria-titulo" className="border-t border-border py-14 lg:py-20">
+            <details className="group/gallery">
+              <summary className="glass-panel flex min-h-16 cursor-pointer list-none items-center justify-between gap-4 rounded-2xl px-5 py-4 marker:content-none sm:px-6">
+                <span className="flex items-center gap-3 font-display text-sm font-semibold uppercase tracking-[0.14em] text-secondary sm:text-base">
+                  <Camera className="size-5 shrink-0" aria-hidden="true" />
+                  Galeria de Fotos
+                </span>
+                <ChevronDown className="size-5 shrink-0 text-muted-foreground transition-transform group-open/gallery:rotate-180" aria-hidden="true" />
+              </summary>
+
+              <div className="pt-8">
+                <SectionLabel>Galeria de fotos</SectionLabel>
+                <h2 id="galeria-titulo" className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">
+                  Fotos organizadas por cidade e unidade
+                </h2>
+
+                <div className="mt-8 grid gap-4 lg:grid-cols-2">
+                  {photoGalleryCities.map((city) => (
+                    <details key={city.name} className="group/city glass-panel rounded-2xl">
+                      <summary className="flex min-h-16 cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 marker:content-none">
+                        <span className="font-display text-base font-semibold uppercase text-foreground">{city.name}</span>
+                        <ChevronDown className="size-5 shrink-0 text-secondary transition-transform group-open/city:rotate-180" aria-hidden="true" />
+                      </summary>
+                      <div className="space-y-3 border-t border-border p-4 sm:p-5">
+                        {city.units.map((unit) => (
+                          <details key={unit} className="group/unit overflow-hidden rounded-xl border border-border bg-glass">
+                            <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 px-4 py-3 marker:content-none">
+                              <span className="text-sm font-semibold">{unit}</span>
+                              <ChevronDown className="size-4 shrink-0 text-muted-foreground transition-transform group-open/unit:rotate-180" aria-hidden="true" />
+                            </summary>
+                            <div className="border-t border-border p-4">
+                              <div className="grid min-h-32 place-items-center rounded-lg border border-dashed border-border bg-background/20 px-4 py-8 text-center">
+                                <div>
+                                  <Images className="mx-auto size-6 text-secondary" aria-hidden="true" />
+                                  <p className="mt-3 text-sm font-medium">Nenhuma foto cadastrada</p>
+                                </div>
+                              </div>
+                            </div>
+                          </details>
+                        ))}
+                      </div>
+                    </details>
+                  ))}
+                </div>
+              </div>
+            </details>
           </section>
 
           <section id="acolhimento" className="border-t border-border py-14 lg:py-20">
