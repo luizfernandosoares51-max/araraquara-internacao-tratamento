@@ -2,8 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowDown, ArrowRight, Camera, Check, ChevronDown, Images, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
 import type { ReactNode } from "react";
 
-import acolhimentoImage from "@/assets/acolhimento-araraquara.jpg";
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
+import redeApoioImage from "@/assets/rede-de-apoio-sao-paulo.png.asset.json";
 import {
   facebookHref,
   instagramHref,
@@ -279,7 +279,7 @@ function HomePage() {
             </div>
 
             <div className="overflow-hidden rounded-3xl border border-border shadow-2xl shadow-background/30">
-              <img src={acolhimentoImage} width={1024} height={640} decoding="async" alt="Ambiente claro e acolhedor para atendimento terapêutico" className="aspect-[16/10] w-full object-cover" />
+              <img src={redeApoioImage.url} width={768} height={768} decoding="async" alt="Nossa rede de apoio em todo o estado de São Paulo" className="aspect-square w-full object-cover" />
               <div className="glass-panel-strong flex items-center justify-between gap-4 border-x-0 border-b-0 px-5 py-4">
                 <p className="text-sm leading-snug text-muted-foreground">Um ambiente pensado para acolher com calma e dignidade.</p>
                 <span className="shrink-0 rounded-full bg-accent/15 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-accent">Escuta humana</span>
