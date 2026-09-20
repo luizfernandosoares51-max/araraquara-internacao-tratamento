@@ -288,6 +288,16 @@ function HomePage() {
           </section>
 
           <section aria-labelledby="galeria-titulo" className="border-t border-border py-14 lg:py-20">
+            <Link
+              to="/cidades"
+              className="glass-panel mb-4 flex min-h-16 items-center justify-between gap-4 rounded-2xl px-5 py-4 transition-colors hover:bg-glass-strong sm:px-6"
+            >
+              <span className="flex items-center gap-3 font-display text-sm font-semibold uppercase tracking-[0.14em] text-secondary sm:text-base">
+                <MapPin className="size-5 shrink-0" aria-hidden="true" />
+                Cidades
+              </span>
+              <ArrowRight className="size-5 shrink-0 text-muted-foreground" aria-hidden="true" />
+            </Link>
             <details className="group/gallery">
               <summary className="glass-panel flex min-h-16 cursor-pointer list-none items-center justify-between gap-4 rounded-2xl px-5 py-4 marker:content-none sm:px-6">
                 <span className="flex items-center gap-3 font-display text-sm font-semibold uppercase tracking-[0.14em] text-secondary sm:text-base">
