@@ -7,8 +7,6 @@ const articleTitle = "Dependência Química em São Carlos | Acolhimento e Trata
 const articleDescription =
   "Informações sobre dependência química em São Carlos, acolhimento, tratamento, alcoolismo, serviços públicos e caminhos para buscar ajuda.";
 const articleUrl = `${siteUrl}/blog/dependencia-quimica-sao-carlos`;
-const saoCarlosUrl =
-  "https://araraquara-internacao-tratamento.lovable.app/clinica-de-recuperacao-em-sao-carlos-sp";
 
 export const Route = createFileRoute("/blog/dependencia-quimica-sao-carlos")({
   head: () => ({
@@ -176,7 +174,7 @@ function ArticlePage() {
           </p>
           <p>
             Para conhecer opções de acolhimento e tratamento disponíveis para quem procura uma
-            {" "}<a href={saoCarlosUrl} className="font-semibold text-secondary hover:underline">clínica de recuperação em São Carlos</a>, consulte a página específica. A disponibilidade e a adequação de qualquer serviço precisam ser verificadas para cada caso.
+            {" "}<Link to="/$citySlug" params={{ citySlug: "clinica-de-recuperacao-em-sao-carlos-sp" }} className="font-semibold text-secondary hover:underline">clínica de recuperação em São Carlos</Link>, consulte a página específica. A disponibilidade e a adequação de qualquer serviço precisam ser verificadas para cada caso.
           </p>
 
           <h2 className="pt-4 font-display text-2xl font-bold leading-tight text-foreground">
