@@ -60,6 +60,25 @@ function BlogPage() {
           </Link>
         </article>
 
+        <article className="glass-panel mt-5 rounded-2xl p-5 sm:p-7">
+          <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">
+            São Carlos · Dependência química
+          </p>
+          <h2 className="mt-3 font-display text-xl font-bold leading-snug sm:text-2xl">
+            Dependência Química em São Carlos: acolhimento, tratamento e onde buscar ajuda
+          </h2>
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+            Informações sobre sinais de atenção, atendimento público, acolhimento e caminhos de
+            tratamento para pessoas e famílias em São Carlos.
+          </p>
+          <Link
+            to="/blog/dependencia-quimica-sao-carlos"
+            className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-secondary transition-colors hover:text-foreground"
+          >
+            Ler artigo <ArrowRight className="size-4" aria-hidden="true" />
+          </Link>
+        </article>
+
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <a
             href={whatsappHref}
@@ -70,10 +89,10 @@ function BlogPage() {
             <MessageCircle className="size-5" aria-hidden="true" /> Tirar dúvidas agora
           </a>
           <Link
-            to="/clinica-de-recuperacao-em-araraquara"
+            to="/"
             className="glass-panel flex min-h-14 items-center justify-center rounded-2xl px-5 py-4 text-sm font-semibold"
           >
-            Voltar para a página de Araraquara
+            Voltar para a página inicial
           </Link>
         </div>
       </div>
