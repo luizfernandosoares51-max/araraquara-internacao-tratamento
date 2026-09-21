@@ -20,6 +20,7 @@ import { Route as FamiliaRouteImport } from './routes/familia'
 import { Route as TratamentoRouteImport } from './routes/tratamento'
 import { Route as VideosRouteImport } from './routes/videos'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogDependenciaQuimicaSaoCarlosRouteImport } from './routes/blog.dependencia-quimica-sao-carlos'
 import { Route as BlogDependenciaQuimicaSinaisTratamentoRouteImport } from './routes/blog.dependencia-quimica-sinais-tratamento'
 
 const IndexRoute = IndexRouteImport.update({
@@ -78,6 +79,12 @@ const BlogIndexRoute = BlogIndexRouteImport.update({
   path: '/',
   getParentRoute: () => BlogRoute,
 } as any)
+const BlogDependenciaQuimicaSaoCarlosRoute =
+  BlogDependenciaQuimicaSaoCarlosRouteImport.update({
+    id: '/dependencia-quimica-sao-carlos',
+    path: '/dependencia-quimica-sao-carlos',
+    getParentRoute: () => BlogRoute,
+  } as any)
 const BlogDependenciaQuimicaSinaisTratamentoRoute =
   BlogDependenciaQuimicaSinaisTratamentoRouteImport.update({
     id: '/dependencia-quimica-sinais-tratamento',
@@ -96,6 +103,7 @@ export interface FileRoutesByFullPath {
   '/familia': typeof FamiliaRoute
   '/tratamento': typeof TratamentoRoute
   '/videos': typeof VideosRoute
+  '/blog/dependencia-quimica-sao-carlos': typeof BlogDependenciaQuimicaSaoCarlosRoute
   '/blog/dependencia-quimica-sinais-tratamento': typeof BlogDependenciaQuimicaSinaisTratamentoRoute
   '/blog/': typeof BlogIndexRoute
 }
@@ -109,6 +117,7 @@ export interface FileRoutesByTo {
   '/familia': typeof FamiliaRoute
   '/tratamento': typeof TratamentoRoute
   '/videos': typeof VideosRoute
+  '/blog/dependencia-quimica-sao-carlos': typeof BlogDependenciaQuimicaSaoCarlosRoute
   '/blog/dependencia-quimica-sinais-tratamento': typeof BlogDependenciaQuimicaSinaisTratamentoRoute
   '/blog': typeof BlogIndexRoute
 }
@@ -124,6 +133,7 @@ export interface FileRoutesById {
   '/familia': typeof FamiliaRoute
   '/tratamento': typeof TratamentoRoute
   '/videos': typeof VideosRoute
+  '/blog/dependencia-quimica-sao-carlos': typeof BlogDependenciaQuimicaSaoCarlosRoute
   '/blog/dependencia-quimica-sinais-tratamento': typeof BlogDependenciaQuimicaSinaisTratamentoRoute
   '/blog/': typeof BlogIndexRoute
 }
@@ -140,6 +150,7 @@ export interface FileRouteTypes {
     | '/familia'
     | '/tratamento'
     | '/videos'
+    | '/blog/dependencia-quimica-sao-carlos'
     | '/blog/dependencia-quimica-sinais-tratamento'
     | '/blog/'
   fileRoutesByTo: FileRoutesByTo
@@ -153,6 +164,7 @@ export interface FileRouteTypes {
     | '/familia'
     | '/tratamento'
     | '/videos'
+    | '/blog/dependencia-quimica-sao-carlos'
     | '/blog/dependencia-quimica-sinais-tratamento'
     | '/blog'
   id:
@@ -167,6 +179,7 @@ export interface FileRouteTypes {
     | '/familia'
     | '/tratamento'
     | '/videos'
+    | '/blog/dependencia-quimica-sao-carlos'
     | '/blog/dependencia-quimica-sinais-tratamento'
     | '/blog/'
   fileRoutesById: FileRoutesById
@@ -263,6 +276,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof BlogRoute
     }
+    '/blog/dependencia-quimica-sao-carlos': {
+      id: '/blog/dependencia-quimica-sao-carlos'
+      path: '/dependencia-quimica-sao-carlos'
+      fullPath: '/blog/dependencia-quimica-sao-carlos'
+      preLoaderRoute: typeof BlogDependenciaQuimicaSaoCarlosRouteImport
+      parentRoute: typeof BlogRoute
+    }
     '/blog/dependencia-quimica-sinais-tratamento': {
       id: '/blog/dependencia-quimica-sinais-tratamento'
       path: '/dependencia-quimica-sinais-tratamento'
@@ -274,11 +294,13 @@ declare module '@tanstack/react-router' {
 }
 
 interface BlogRouteChildren {
+  BlogDependenciaQuimicaSaoCarlosRoute: typeof BlogDependenciaQuimicaSaoCarlosRoute
   BlogDependenciaQuimicaSinaisTratamentoRoute: typeof BlogDependenciaQuimicaSinaisTratamentoRoute
   BlogIndexRoute: typeof BlogIndexRoute
 }
 
 const BlogRouteChildren: BlogRouteChildren = {
+  BlogDependenciaQuimicaSaoCarlosRoute: BlogDependenciaQuimicaSaoCarlosRoute,
   BlogDependenciaQuimicaSinaisTratamentoRoute:
     BlogDependenciaQuimicaSinaisTratamentoRoute,
   BlogIndexRoute: BlogIndexRoute,
