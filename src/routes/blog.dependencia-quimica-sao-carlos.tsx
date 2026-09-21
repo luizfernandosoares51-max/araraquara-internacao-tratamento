@@ -3,12 +3,10 @@ import { ArrowLeft, ArrowRight, Camera, MessageCircle, Phone } from "lucide-reac
 
 import { phoneDisplay, phoneHref, siteUrl, whatsappHref } from "@/lib/site";
 
-const articleTitle = "Dependência Química em São Carlos | Acolhimento";
+const articleTitle = "Dependência Química em São Carlos | Acolhimento e Tratamento";
 const articleDescription =
-  "Informação, acolhimento e caminhos para o tratamento da dependência química em São Carlos e região, com orientação para pessoas e famílias.";
+  "Informações sobre dependência química em São Carlos, acolhimento, tratamento, alcoolismo, serviços públicos e caminhos para buscar ajuda.";
 const articleUrl = `${siteUrl}/blog/dependencia-quimica-sao-carlos`;
-const saoCarlosUrl =
-  "https://araraquara-internacao-tratamento.lovable.app/clinica-de-recuperacao-em-sao-carlos-sp";
 
 export const Route = createFileRoute("/blog/dependencia-quimica-sao-carlos")({
   head: () => ({
@@ -31,8 +29,8 @@ export const Route = createFileRoute("/blog/dependencia-quimica-sao-carlos")({
           "@context": "https://schema.org",
           "@graph": [
             {
-              "@type": "Article",
-              headline: "Dependência Química em São Carlos: informação, acolhimento e caminhos para o tratamento",
+              "@type": ["Article", "BlogPosting"],
+              headline: "Dependência Química em São Carlos: acolhimento, tratamento e onde buscar ajuda",
               description: articleDescription,
               mainEntityOfPage: articleUrl,
               author: {
@@ -76,47 +74,33 @@ function ArticlePage() {
             São Carlos · Dependência química
           </p>
           <h1 className="mt-3 font-display text-3xl font-bold leading-tight sm:text-5xl">
-            Dependência Química em São Carlos: informação, acolhimento e caminhos para o tratamento
+            Dependência Química em São Carlos: acolhimento, tratamento e onde buscar ajuda
           </h1>
         </header>
 
         <div className="mt-9 space-y-6 text-[16px] leading-8 text-muted-foreground">
           <p>
-            A dependência química pode afetar a saúde, a rotina, os relacionamentos e os projetos de
-            uma pessoa. Seus efeitos também podem alcançar toda a família, que muitas vezes enfrenta
-            dúvidas, preocupação e dificuldade para saber como agir.
+            A dependência química pode afetar a saúde, as relações sociais, o trabalho, os estudos e a
+            rotina de uma pessoa. Seus efeitos também alcançam a família, que muitas vezes enfrenta
+            dúvidas, conflitos e dificuldade para saber como agir.
           </p>
           <p>
-            Buscar informação confiável e orientação profissional pode ser um passo importante para
-            compreender a situação e avaliar caminhos de cuidado com respeito, responsabilidade e
-            acolhimento.
-          </p>
-
-          <h2 className="pt-4 font-display text-2xl font-bold leading-tight text-foreground">
-            Dependência química em São Carlos: uma realidade que precisa de informação
-          </h2>
-          <p>
-            A dependência química está relacionada a um padrão de uso de álcool ou outras drogas que
-            pode se tornar difícil de controlar e trazer consequências para diferentes áreas da vida.
-            Não existe uma única história ou uma solução igual para todas as pessoas.
-          </p>
-          <p>
-            Em São Carlos e região, pessoas e famílias podem precisar de ajuda para entender o que
-            está acontecendo, conversar sobre as possibilidades de tratamento e identificar os
-            próximos passos. Informação responsável evita julgamentos e ajuda a procurar o suporte
-            mais adequado para cada realidade.
-          </p>
-          <p>
-            Este artigo não substitui avaliação médica, psicológica ou de outros profissionais. Também
-            não apresenta estatísticas locais: cada situação deve ser analisada individualmente.
+            Para quem enfrenta a dependência química em São Carlos, reconhecer o problema e procurar
+            orientação pode ser um primeiro passo importante. O tratamento para dependência química
+            em São Carlos deve considerar cada história, incluindo situações de alcoolismo e de uso
+            problemático de álcool e outras drogas, sempre com acolhimento e avaliação responsável.
           </p>
 
           <h2 className="pt-4 font-display text-2xl font-bold leading-tight text-foreground">
-            Quando a família percebe que é hora de buscar ajuda
+            Dependência química em São Carlos: quando procurar ajuda?
           </h2>
           <p>
-            Alguns sinais podem indicar que vale a pena buscar orientação profissional. Eles não
-            permitem diagnosticar alguém, mas podem mostrar que a situação merece atenção:
+            O uso de álcool ou outras drogas merece atenção quando começa a provocar prejuízos ou se
+            torna difícil de controlar. Não existe um sinal isolado que confirme um diagnóstico, mas
+            mudanças persistentes podem indicar que é hora de buscar orientação profissional.
+          </p>
+          <p>
+            Alguns sinais que podem justificar essa procura são:
           </p>
           <ul className="list-disc space-y-2 pl-6 marker:text-secondary">
             <li>dificuldade para reduzir ou interromper o consumo;</li>
@@ -127,44 +111,45 @@ function ArticlePage() {
             <li>preocupação da própria pessoa ou de familiares com o uso.</li>
           </ul>
           <p>
-            Mesmo quando a pessoa ainda não reconhece a necessidade de tratamento, a família pode
-            procurar orientação para aprender a conversar, estabelecer limites e cuidar da própria
-            saúde emocional.
+            A família não precisa esperar uma crise grave para pedir ajuda. Uma avaliação médica,
+            psicológica ou de outros profissionais pode esclarecer necessidades e possibilidades sem
+            pressupor que exista uma única solução.
           </p>
 
           <h2 className="pt-4 font-display text-2xl font-bold leading-tight text-foreground">
-            Tratamento e acolhimento para dependência química
+            Onde buscar atendimento público em São Carlos?
           </h2>
           <p>
-            O tratamento pode envolver avaliação e acompanhamento de profissionais de saúde, apoio
-            psicológico, atividades terapêuticas, acompanhamento médico e participação da família.
-            A combinação e a intensidade dessas ações dependem das necessidades de cada pessoa.
+            São Carlos conta com uma rede pública de saúde e atenção psicossocial. Entre os serviços
+            municipais está o Centro de Atenção Psicossocial Álcool e Drogas (CAPS AD), destinado ao
+            atendimento relacionado aos prejuízos decorrentes do uso problemático de álcool e outras
+            drogas.
           </p>
           <p>
-            Em alguns casos, o acolhimento em uma instituição especializada ou a internação para
-            dependência química pode ser considerada. Essa decisão precisa ser orientada por uma
-            avaliação responsável, levando em conta as condições clínicas, a segurança e a realidade
-            da pessoa e de sua família.
+            Conforme a página oficial da Prefeitura de São Carlos, o CAPS AD fica na Rua Herbert de
+            Souza, 111, bairro Romeu Santini, e informa os telefones (16) 3374-3388, (16) 3307-8368 e
+            (16) 3374-2264. Como endereço, telefones e horários podem mudar, confirme os dados antes de
+            se deslocar na
+            {" "}<a href="https://saocarlos.sp.gov.br/index.php/saude/153937-centro-de-atencao-psicossocial-caps-alcool-e-drogas.html" target="_blank" rel="noopener noreferrer" className="font-semibold text-secondary hover:underline">fonte oficial da Prefeitura de São Carlos</a>.
           </p>
           <p>
-            Para entender melhor as possibilidades, consulte também as informações sobre
-            <Link to="/tratamento" className="font-semibold text-secondary hover:underline"> tratamento para dependência química</Link>
-            . O cuidado deve ser individualizado, sem promessas de prazo ou de resultado.
+            A porta de entrada mais adequada depende da situação de cada pessoa. Também é possível
+            buscar orientação pela rede pública de saúde do município.
           </p>
 
           <h2 className="pt-4 font-display text-2xl font-bold leading-tight text-foreground">
-            Tratamento para dependência química em São Carlos
+            CAPS, tratamento e acolhimento: qual a diferença?
           </h2>
           <p>
-            Pessoas de São Carlos e região podem buscar orientação sobre opções de tratamento e
-            acolhimento por meio da Central de Acolhimento e Reabilitação. Uma conversa inicial pode
-            ajudar a esclarecer dúvidas sobre o processo, a rotina e os próximos passos, antes de
-            qualquer decisão.
+            O CAPS AD integra a rede pública de atenção psicossocial e oferece cuidado em saúde. Ele
+            não deve ser apresentado como sinônimo de clínica de recuperação ou de internação. Cada
+            modalidade tem objetivos, rotinas e critérios próprios.
           </p>
           <p>
-            Para conhecer a página local e encontrar informações sobre acolhimento, acesse
-            <a href={saoCarlosUrl} className="font-semibold text-secondary hover:underline"> clínica de recuperação em São Carlos</a>
-            .
+            Dependendo da avaliação, o cuidado pode incluir acompanhamento ambulatorial, atenção
+            psicossocial, apoio médico, acolhimento, tratamento residencial ou outras estratégias.
+            Consulte também as informações gerais sobre
+            {" "}<Link to="/tratamento" className="font-semibold text-secondary hover:underline">tratamento para dependência química</Link>.
           </p>
 
           <a
@@ -179,43 +164,48 @@ function ArticlePage() {
           </a>
 
           <h2 className="pt-4 font-display text-2xl font-bold leading-tight text-foreground">
-            Por que buscar ajuda o quanto antes?
+            Quando a família procura uma clínica de recuperação em São Carlos?
           </h2>
           <p>
-            Adiar uma conversa pode prolongar conflitos, prejuízos e sofrimento. Buscar orientação
-            não significa tomar uma decisão apressada: significa reunir informações, entender as
-            alternativas e avaliar o que pode ser feito com mais segurança.
+            Algumas famílias procuram serviços de acolhimento ou tratamento residencial quando
+            entendem que a pessoa pode precisar de acompanhamento mais estruturado. Essa busca deve
+            ser acompanhada de avaliação responsável; internação para dependência química em São
+            Carlos não é necessária para todos e não deve ser tratada como única alternativa.
           </p>
           <p>
-            Ninguém precisa enfrentar sozinho uma situação relacionada ao uso problemático de álcool
-            e outras drogas. Um atendimento acolhedor pode ajudar a organizar as preocupações e
-            orientar a família sobre os próximos passos possíveis.
+            Para conhecer opções de acolhimento e tratamento disponíveis para quem procura uma
+            {" "}<Link to="/$citySlug" params={{ citySlug: "clinica-de-recuperacao-em-sao-carlos-sp" }} className="font-semibold text-secondary hover:underline">clínica de recuperação em São Carlos</Link>, consulte a página específica. A disponibilidade e a adequação de qualquer serviço precisam ser verificadas para cada caso.
           </p>
 
           <h2 className="pt-4 font-display text-2xl font-bold leading-tight text-foreground">
-            A família também precisa de orientação
+            Como escolher um tratamento para dependência química?
           </h2>
           <p>
-            A família pode oferecer apoio sem assumir sozinha a responsabilidade pelo tratamento.
-            Comunicação respeitosa, escuta, limites claros e busca de orientação profissional podem
-            contribuir para lidar com a situação de forma mais consciente.
+            Antes de decidir, familiares podem solicitar informações claras e comparar aspectos
+            essenciais do serviço:
           </p>
-          <p>
-            Também é importante que familiares encontrem espaço para cuidar de suas próprias emoções e
-            dúvidas. Saiba mais sobre
-            <Link to="/familia" className="font-semibold text-secondary hover:underline"> orientação para a família</Link>
-            e procure ajuda profissional quando necessário, sem esperar garantias ou resultados
-            imediatos.
-          </p>
+          <ul className="list-disc space-y-2 pl-6 marker:text-secondary">
+            <li>proposta terapêutica e plano de acompanhamento;</li>
+            <li>profissionais responsáveis pelo cuidado;</li>
+            <li>condições de acolhimento, segurança e contato com a família;</li>
+            <li>transparência nas informações fornecidas;</li>
+            <li>regularidade e documentação do serviço.</li>
+          </ul>
+          <p>Esses critérios ajudam a fazer perguntas e compreender limites e responsabilidades, sem garantias de cura ou resultado.</p>
+
+          <h2 className="pt-4 font-display text-2xl font-bold leading-tight text-foreground">A importância da família no tratamento</h2>
+          <p>A participação familiar pode contribuir para a continuidade do cuidado. Escuta, comunicação respeitosa, limites claros e orientação profissional ajudam a família a apoiar sem assumir sozinha toda a responsabilidade pelo tratamento.</p>
+          <p>Familiares também podem precisar de apoio para lidar com medo, desgaste e dúvidas, protegendo a própria saúde emocional.</p>
 
           <h2 className="pt-4 font-display text-2xl font-bold leading-tight text-foreground">
-            Converse com a Central de Acolhimento e Reabilitação
+            Onde encontrar ajuda em São Carlos?
           </h2>
           <p>
-            Se você busca ajuda para dependência química em São Carlos, entre em contato para
-            esclarecer dúvidas sobre acolhimento e tratamento. A conversa pode ser o primeiro passo
-            para entender melhor a situação e encontrar um caminho possível.
+            Os caminhos podem incluir unidades da rede de saúde, serviços públicos, o CAPS AD e
+            serviços de acolhimento e tratamento, conforme a necessidade identificada. Em situações
+            de urgência, risco imediato ou emergência clínica, procure um serviço de emergência.
           </p>
+          <p>Quem busca ajuda para dependência química em São Carlos pode começar reunindo informações e solicitando uma avaliação adequada. A Central também pode orientar famílias sobre possibilidades de acolhimento, sem substituir a rede pública ou a avaliação de profissionais de saúde.</p>
           <p className="font-semibold text-foreground">Telefone: {phoneDisplay}</p>
         </div>
 
