@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, Camera, MessageCircle, Phone } from "lucide-react";
 
-import { phoneDisplay, phoneHref, siteUrl, whatsappHref } from "@/lib/site";
+import { phoneDisplay, siteUrl, whatsappHref } from "@/lib/site";
 
 const articleTitle = "Dependência Química em São Carlos | Acolhimento e Tratamento";
 const articleDescription =
