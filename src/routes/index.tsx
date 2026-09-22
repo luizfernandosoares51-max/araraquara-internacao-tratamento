@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import redeApoioImage from "@/assets/rede-de-apoio-sao-paulo.png.asset.json";
+import { cityPages } from "@/lib/city-pages";
 import {
   facebookHref,
   instagramHref,
@@ -413,12 +414,36 @@ function HomePage() {
                 <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">Se você procura ajuda para uma pessoa que enfrenta problemas com álcool ou outras drogas, nossa equipe pode orientar sobre as possibilidades de acolhimento e os próximos passos.</p>
               </div>
               <div className="mt-7 border-t border-border pt-6 lg:mt-0 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
-                <SectionLabel>Atendimento em Araraquara e região</SectionLabel>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Conheça as informações específicas sobre o atendimento da Central em Araraquara.</p>
-                <Link to="/clinica-de-recuperacao-em-araraquara" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:underline">Página de Araraquara <ArrowRight className="size-4" aria-hidden="true" /></Link>
-                <WhatsAppLink className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-accent hover:underline">
-                  Solicitar orientação <ArrowRight className="size-4" aria-hidden="true" />
-                </WhatsAppLink>
+                <SectionLabel>Acolhimento e tratamento em diferentes regiões de São Paulo</SectionLabel>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  A Central de Acolhimento e Reabilitação orienta pessoas e famílias que buscam acolhimento e tratamento para dependência química, alcoolismo e uso problemático de álcool e outras drogas, conectando a busca por ajuda a opções de atendimento em diferentes regiões do Estado de São Paulo.
+                </p>
+                <h3 className="mt-6 font-display text-base font-semibold">
+                  Encontre informações sobre atendimento na sua região
+                </h3>
+                <ul className="mt-4 grid gap-x-5 gap-y-3 sm:grid-cols-2">
+                  <li>
+                    <Link
+                      to="/clinica-de-recuperacao-em-araraquara"
+                      className="inline-flex items-start gap-2 text-sm font-medium leading-snug text-secondary hover:underline"
+                    >
+                      <MapPin className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
+                      Clínica de recuperação em Araraquara
+                    </Link>
+                  </li>
+                  {cityPages.map((city) => (
+                    <li key={city.slug}>
+                      <Link
+                        to="/$citySlug"
+                        params={{ citySlug: `clinica-de-recuperacao-em-${city.slug}` }}
+                        className="inline-flex items-start gap-2 text-sm font-medium leading-snug text-secondary hover:underline"
+                      >
+                        <MapPin className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
+                        Clínica de recuperação em {city.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </section>
