@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, Camera, MessageCircle, Phone } from "lucide-react";
 
-import { phoneDisplay, phoneHref, siteUrl, whatsappHref } from "@/lib/site";
+import { phoneDisplay, siteUrl, whatsappHref } from "@/lib/site";
 
 const articleTitle = "Dependência Química em São Carlos | Acolhimento e Tratamento";
 const articleDescription =
@@ -149,7 +149,7 @@ function ArticlePage() {
             Dependendo da avaliação, o cuidado pode incluir acompanhamento ambulatorial, atenção
             psicossocial, apoio médico, acolhimento, tratamento residencial ou outras estratégias.
             Consulte também as informações gerais sobre
-            {" "}<Link to="/tratamento" className="font-semibold text-secondary hover:underline">tratamento para dependência química</Link>.
+            {" "}<Link to="/" className="font-semibold text-secondary hover:underline">tratamento para dependência química</Link>.
           </p>
 
           <a
@@ -220,10 +220,10 @@ function ArticlePage() {
               <MessageCircle className="size-5 shrink-0" aria-hidden="true" /> Falar pelo WhatsApp
             </a>
             <a
-              href={phoneHref}
+              href="tel:+5516997654579"
               className="glass-panel flex min-h-14 flex-1 items-center justify-center gap-2 rounded-2xl px-5 py-4 text-center text-sm font-semibold"
             >
-              <Phone className="size-4 shrink-0" aria-hidden="true" /> Ligar para a Central
+              <Phone className="size-4 shrink-0" aria-hidden="true" /> Ligar: {phoneDisplay}
             </a>
           </div>
         </div>
