@@ -206,7 +206,12 @@ function ArticlePage() {
             de urgência, risco imediato ou emergência clínica, procure um serviço de emergência.
           </p>
           <p>Quem busca ajuda para dependência química em São Carlos pode começar reunindo informações e solicitando uma avaliação adequada. A Central também pode orientar famílias sobre possibilidades de acolhimento, sem substituir a rede pública ou a avaliação de profissionais de saúde.</p>
-          <p className="font-semibold text-foreground">Telefone: {phoneDisplay}</p>
+          <p className="font-semibold text-foreground">
+            Telefone:{" "}
+            <a href="tel:+5516997654579" className="text-secondary hover:underline">
+              {phoneDisplay}
+            </a>
+          </p>
         </div>
 
         <div className="glass-panel mt-10 rounded-2xl p-5 sm:p-7">
