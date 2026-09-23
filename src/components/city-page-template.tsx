@@ -122,6 +122,7 @@ export function CityPageTemplate({ city }: { city: CityPageData }) {
           </section>
 
           <section className="border-y border-border py-9">
+            <h2 className="sr-only">Informações iniciais sobre atendimento e acolhimento</h2>
             <div className="grid gap-4 text-sm sm:grid-cols-2">
               <p><span className="font-semibold text-foreground">Primeiro contato</span><br /><span className="text-muted-foreground">Orientação por telefone ou WhatsApp</span></p>
               <p><span className="font-semibold text-foreground">Acolhimento</span><br /><span className="text-muted-foreground">Sujeito a avaliação e disponibilidade</span></p>

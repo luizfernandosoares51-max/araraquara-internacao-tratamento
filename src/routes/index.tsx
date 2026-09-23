@@ -82,13 +82,13 @@ export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
   head: () => ({
     meta: [
-      { title: "Central de Acolhimento e Reabilitação" },
+      { title: "Central de Acolhimento e Reabilitação | Dependência Química e Alcoolismo" },
       {
         name: "description",
         content:
           "Acolhimento, orientação e apoio para pessoas e famílias que buscam tratamento para dependência química e alcoolismo em Araraquara e região.",
       },
-      { property: "og:title", content: "Central de Acolhimento e Reabilitação" },
+      { property: "og:title", content: "Central de Acolhimento e Reabilitação | Acolhimento e Tratamento" },
       {
         property: "og:description",
         content:
@@ -141,7 +141,7 @@ function WhatsAppLink({ children, className }: { children: ReactNode; className:
 
 function FacebookLink({ children, className }: { children: ReactNode; className: string }) {
   return (
-    <a href={facebookHref} target="_blank" rel="noopener noreferrer" className={className}>
+    <a href={facebookHref} target="_blank" rel="noopener noreferrer" className={className} aria-label="Página da Central no Facebook">
       {children}
     </a>
   );
@@ -157,7 +157,7 @@ function FacebookIcon({ className }: { className?: string }) {
 
 function InstagramLink({ children, className }: { children: ReactNode; className: string }) {
   return (
-    <a href={instagramHref} target="_blank" rel="noopener noreferrer" className={className}>
+    <a href={instagramHref} target="_blank" rel="noopener noreferrer" className={className} aria-label="Perfil da Central no Instagram">
       {children}
     </a>
   );
