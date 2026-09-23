@@ -5,6 +5,7 @@ import { cityPages } from "@/lib/city-pages";
 import { phoneDisplay, phoneHref, siteUrl, whatsappHref } from "@/lib/site";
 
 export const Route = createFileRoute("/cidades")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Cidades atendidas | Central de Acolhimento e Reabilitação" },

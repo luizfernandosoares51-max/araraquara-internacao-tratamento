@@ -5,6 +5,7 @@ import { cityPageBySlug } from "@/lib/city-pages";
 import { facebookHref, instagramHref, siteUrl } from "@/lib/site";
 
 export const Route = createFileRoute("/$citySlug")({
+  staticData: { sitemap: true },
   loader: ({ params }) => {
     const prefix = "clinica-de-recuperacao-em-";
     if (!params.citySlug.startsWith(prefix)) throw notFound();

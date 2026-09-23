@@ -66,6 +66,7 @@ const stages = [
 ];
 
 export const Route = createFileRoute("/videos")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: pageTitle },
