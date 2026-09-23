@@ -10,7 +10,7 @@ import {
   type SitemapEntry,
 } from "@/lib/sitemap";
 
-const BASE_URL = "https://araraquara-internacao-tratamento.lovable.app";
+const BASE_URL = "https://centraldeacolhimentoereabilitacao.com";
 
 export const Route = createFileRoute("/sitemap.xml")({
   staticData: { sitemap: false },
