@@ -200,7 +200,7 @@ function HomePage() {
                 loading="eager"
               />
               <span className="font-display text-[13px] font-semibold leading-tight sm:text-sm">
-                Central de Acolhimento e Atendimento
+                Central de Acolhimento e Reabilitação
               </span>
             </a>
             <div className="flex items-center gap-2">
