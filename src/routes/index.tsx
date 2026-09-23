@@ -476,9 +476,9 @@ function HomePage() {
                 <SectionLabel>Apoio para pessoas e famílias</SectionLabel>
                 <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-3xl">Quando alguém que você ama precisa de ajuda</h2>
                 <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">Buscar informações pode ajudar a família a compreender a situação com mais clareza. Nossa equipe oferece escuta e orientação sobre possibilidades de acolhimento e tratamento, sem prometer resultados e sem substituir uma avaliação profissional.</p>
-                <Link to="/familia" className="mt-6 inline-flex min-h-12 items-center gap-2 rounded-2xl bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5">
-                  Orientações para a família <ArrowRight className="size-4" aria-hidden="true" />
-                </Link>
+                <p className="mt-6 text-sm font-semibold text-secondary">
+                  Orientações para a família
+                </p>
               </div>
               <div className="mt-7 border-t border-border pt-6 lg:mt-0 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
                 <SectionLabel>Encontre informações sobre atendimento na sua região</SectionLabel>
