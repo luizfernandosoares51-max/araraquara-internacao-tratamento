@@ -44,6 +44,26 @@ function BlogPage() {
 
         <article className="glass-panel mt-8 rounded-2xl p-5 sm:p-7">
           <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">
+            Araraquara · Dependência química
+          </p>
+          <h2 className="mt-3 font-display text-xl font-bold leading-snug sm:text-2xl">
+            Dependência Química em Araraquara: Tratamento, CAPS AD, Acolhimento e Como Escolher uma
+            Instituição Segura
+          </h2>
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+            Informações sobre atendimento, orientação familiar e cuidados importantes antes de escolher
+            uma instituição para tratamento.
+          </p>
+          <Link
+            to="/blog/dependencia-quimica-em-araraquara-tratamento"
+            className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-secondary transition-colors hover:text-foreground"
+          >
+            Ler artigo <ArrowRight className="size-4" aria-hidden="true" />
+          </Link>
+        </article>
+
+        <article className="glass-panel mt-5 rounded-2xl p-5 sm:p-7">
+          <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">
             Dependência química
           </p>
           <h2 className="mt-3 font-display text-xl font-bold leading-snug sm:text-2xl">
