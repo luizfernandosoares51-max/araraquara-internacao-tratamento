@@ -17,6 +17,7 @@ import type { ReactNode } from "react";
 
 import acolhimentoImage from "@/assets/acolhimento-araraquara.jpg";
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
+import { AraraquaraPhotoGallery } from "@/components/araraquara-photo-gallery";
 import {
   instagramHref,
   mainNav,
@@ -311,11 +312,15 @@ function AraraquaraPage() {
 
         <section id="galeria-araraquara" className="scroll-mt-6 border-b border-deep/10 bg-ice">
           <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
-            <SectionLabel>Registros reais, sem imagens genéricas</SectionLabel>
+            <SectionLabel>Registros reais da unidade</SectionLabel>
             <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Conheça a unidade de Araraquara</h2>
-            <p className="mt-5 max-w-3xl text-[15px] leading-relaxed text-deep/75">Esta área é exclusiva para fotos identificadas da unidade de Araraquara. No momento, o projeto não possui fotografias confirmadas da unidade; por isso, nenhuma imagem fictícia ou de outra cidade é exibida aqui.</p>
-            <div className="mt-8 grid min-h-56 place-items-center rounded-lg border border-dashed border-primary/35 bg-foreground px-6 py-12 text-center text-deep">
-              <div><Camera className="mx-auto size-8 text-primary" aria-hidden="true" /><h3 className="mt-4 font-display text-lg font-semibold">Galeria de fotos da unidade de Araraquara</h3><p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-deep/65">Espaço preparado para receber somente fotografias reais e confirmadas da unidade.</p></div>
+            <p className="mt-5 max-w-3xl text-[15px] leading-relaxed text-deep/75">Confira algumas imagens dos espaços da unidade de Araraquara.</p>
+            <div className="mt-8">
+              <AraraquaraPhotoGallery light />
+            </div>
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <WhatsAppLink className="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg bg-whatsapp px-6 py-4 text-sm font-semibold text-whatsapp-foreground"><MessageCircle className="size-5" aria-hidden="true" /> Falar com nossa equipe</WhatsAppLink>
+              <a href={phoneHref} className="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg border border-deep/15 bg-foreground px-6 py-4 text-sm font-semibold text-deep transition-colors hover:border-primary/40"><Phone className="size-4" aria-hidden="true" /> Ligar agora · {phoneDisplay}</a>
             </div>
           </div>
         </section>

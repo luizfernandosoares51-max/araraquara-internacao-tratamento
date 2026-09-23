@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import redeApoioImage from "@/assets/rede-de-apoio-sao-paulo.png.asset.json";
+import { AraraquaraPhotoGallery } from "@/components/araraquara-photo-gallery";
 import { cityPages } from "@/lib/city-pages";
 import {
   facebookHref,
@@ -337,7 +338,24 @@ function HomePage() {
             </Link>
           </section>
 
-          <section id="galeria-fotos" aria-labelledby="galeria-titulo" className="border-t border-border py-14 lg:py-20">
+          <section id="galeria-fotos" aria-labelledby="galeria-araraquara-titulo" className="scroll-mt-6 border-t border-border py-14 lg:py-20">
+            <SectionLabel>Unidade de Araraquara</SectionLabel>
+            <h2 id="galeria-araraquara-titulo" className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Conheça a unidade de Araraquara</h2>
+            <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">Veja alguns dos espaços da unidade de Araraquara da Central de Acolhimento e Reabilitação.</p>
+            <div className="mt-8">
+              <AraraquaraPhotoGallery />
+            </div>
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <Link to="/clinica-de-recuperacao-em-araraquara" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-2xl bg-brand px-5 py-3 text-center text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5">
+                Ver informações de Araraquara <ArrowRight className="size-4" aria-hidden="true" />
+              </Link>
+              <a href="#galeria-geral" className="glass-panel inline-flex min-h-12 items-center justify-center gap-2 rounded-2xl px-5 py-3 text-center text-sm font-semibold text-secondary transition-colors hover:bg-glass-strong">
+                Ver todas as fotos <Images className="size-4" aria-hidden="true" />
+              </a>
+            </div>
+          </section>
+
+          <section id="galeria-geral" aria-labelledby="galeria-titulo" className="scroll-mt-6 border-t border-border py-14 lg:py-20">
             <SectionLabel>Galeria de fotos</SectionLabel>
             <h2 id="galeria-titulo" className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Conheça nossas unidades e espaços</h2>
             <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">Acesse a galeria existente, organizada por cidade e unidade, para visualizar as fotos cadastradas.</p>
