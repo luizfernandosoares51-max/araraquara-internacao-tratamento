@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://araraquara-internacao-tratamento.lovable.app/sitemap.xml
+Sitemap: https://centraldeacolhimentoereabilitacao.com/sitemap.xml
