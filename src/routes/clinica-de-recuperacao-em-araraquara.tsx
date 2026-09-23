@@ -69,6 +69,7 @@ const faqs = [
 ];
 
 export const Route = createFileRoute("/clinica-de-recuperacao-em-araraquara")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Clínica de Recuperação em Araraquara | Central de Acolhimento" },

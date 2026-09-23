@@ -4,6 +4,7 @@ import { ArrowRight, MessageCircle } from "lucide-react";
 import { siteUrl, whatsappHref } from "@/lib/site";
 
 export const Route = createFileRoute("/blog/")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Blog | Central de Acolhimento e Reabilitação" },

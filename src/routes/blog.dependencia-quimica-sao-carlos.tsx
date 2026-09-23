@@ -9,6 +9,7 @@ const articleDescription =
 const articleUrl = `${siteUrl}/blog/dependencia-quimica-sao-carlos`;
 
 export const Route = createFileRoute("/blog/dependencia-quimica-sao-carlos")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: articleTitle },

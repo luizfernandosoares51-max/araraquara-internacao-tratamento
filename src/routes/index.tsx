@@ -79,6 +79,7 @@ const faqs = [
 ];
 
 export const Route = createFileRoute("/")({
+  staticData: { sitemap: true },
   head: () => ({
     meta: [
       { title: "Central de Acolhimento e Reabilitação" },

@@ -17,6 +17,7 @@ import { Route as CidadesRouteImport } from './routes/cidades'
 import { Route as ClinicaDeRecuperacaoEmAraraquaraRouteImport } from './routes/clinica-de-recuperacao-em-araraquara'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as FamiliaRouteImport } from './routes/familia'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TratamentoRouteImport } from './routes/tratamento'
 import { Route as VideosRouteImport } from './routes/videos'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
@@ -64,6 +65,11 @@ const FamiliaRoute = FamiliaRouteImport.update({
   path: '/familia',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TratamentoRoute = TratamentoRouteImport.update({
   id: '/tratamento',
   path: '/tratamento',
@@ -101,6 +107,7 @@ export interface FileRoutesByFullPath {
   '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
   '/contato': typeof ContatoRoute
   '/familia': typeof FamiliaRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tratamento': typeof TratamentoRoute
   '/videos': typeof VideosRoute
   '/blog/dependencia-quimica-sao-carlos': typeof BlogDependenciaQuimicaSaoCarlosRoute
@@ -115,6 +122,7 @@ export interface FileRoutesByTo {
   '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
   '/contato': typeof ContatoRoute
   '/familia': typeof FamiliaRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tratamento': typeof TratamentoRoute
   '/videos': typeof VideosRoute
   '/blog/dependencia-quimica-sao-carlos': typeof BlogDependenciaQuimicaSaoCarlosRoute
@@ -131,6 +139,7 @@ export interface FileRoutesById {
   '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
   '/contato': typeof ContatoRoute
   '/familia': typeof FamiliaRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tratamento': typeof TratamentoRoute
   '/videos': typeof VideosRoute
   '/blog/dependencia-quimica-sao-carlos': typeof BlogDependenciaQuimicaSaoCarlosRoute
@@ -148,6 +157,7 @@ export interface FileRouteTypes {
     | '/clinica-de-recuperacao-em-araraquara'
     | '/contato'
     | '/familia'
+    | '/sitemap.xml'
     | '/tratamento'
     | '/videos'
     | '/blog/dependencia-quimica-sao-carlos'
@@ -162,6 +172,7 @@ export interface FileRouteTypes {
     | '/clinica-de-recuperacao-em-araraquara'
     | '/contato'
     | '/familia'
+    | '/sitemap.xml'
     | '/tratamento'
     | '/videos'
     | '/blog/dependencia-quimica-sao-carlos'
@@ -177,6 +188,7 @@ export interface FileRouteTypes {
     | '/clinica-de-recuperacao-em-araraquara'
     | '/contato'
     | '/familia'
+    | '/sitemap.xml'
     | '/tratamento'
     | '/videos'
     | '/blog/dependencia-quimica-sao-carlos'
@@ -193,6 +205,7 @@ export interface RootRouteChildren {
   ClinicaDeRecuperacaoEmAraraquaraRoute: typeof ClinicaDeRecuperacaoEmAraraquaraRoute
   ContatoRoute: typeof ContatoRoute
   FamiliaRoute: typeof FamiliaRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TratamentoRoute: typeof TratamentoRoute
   VideosRoute: typeof VideosRoute
 }
@@ -253,6 +266,13 @@ declare module '@tanstack/react-router' {
       path: '/familia'
       fullPath: '/familia'
       preLoaderRoute: typeof FamiliaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tratamento': {
@@ -317,6 +337,7 @@ const rootRouteChildren: RootRouteChildren = {
   ClinicaDeRecuperacaoEmAraraquaraRoute: ClinicaDeRecuperacaoEmAraraquaraRoute,
   ContatoRoute: ContatoRoute,
   FamiliaRoute: FamiliaRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   TratamentoRoute: TratamentoRoute,
   VideosRoute: VideosRoute,
 }
