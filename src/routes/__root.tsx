@@ -78,7 +78,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Central de Acolhimento e Reabilitação" },
+      { title: "Orientação para Dependência Química | Central de Acolhimento" },
       { name: "description", content: "Acolhimento e orientação para dependência química e alcoolismo." },
       { name: "author", content: "Central de Acolhimento e Reabilitação" },
       { property: "og:site_name", content: "Central de Acolhimento e Reabilitação" },

@@ -1,12 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, Camera, MessageCircle, Phone } from "lucide-react";
 
+import articleImage from "@/assets/blog-dependencia-quimica-sao-carlos.jpg";
 import { phoneDisplay, siteUrl, whatsappHref } from "@/lib/site";
 
 const articleTitle = "Dependência Química em São Carlos | Acolhimento e Tratamento";
 const articleDescription =
   "Informações sobre dependência química em São Carlos, acolhimento, tratamento, alcoolismo, serviços públicos e caminhos para buscar ajuda.";
 const articleUrl = `${siteUrl}/blog/dependencia-quimica-sao-carlos`;
+const articleImageUrl = new URL(articleImage, siteUrl).href;
 
 export const Route = createFileRoute("/blog/dependencia-quimica-sao-carlos")({
   staticData: { sitemap: true },
@@ -34,6 +36,8 @@ export const Route = createFileRoute("/blog/dependencia-quimica-sao-carlos")({
               headline: "Dependência Química em São Carlos: acolhimento, tratamento e onde buscar ajuda",
               description: articleDescription,
               mainEntityOfPage: articleUrl,
+              image: articleImageUrl,
+              datePublished: "2026-09-20",
               author: {
                 "@type": "Organization",
                 name: "Central de Acolhimento e Reabilitação",
@@ -77,6 +81,13 @@ function ArticlePage() {
           <h1 className="mt-3 font-display text-3xl font-bold leading-tight sm:text-5xl">
             Dependência Química em São Carlos: acolhimento, tratamento e onde buscar ajuda
           </h1>
+          <img
+            src={articleImage}
+            alt="Conversa de orientação sobre dependência química e acolhimento em São Carlos"
+            width={1200}
+            height={630}
+            className="mt-8 aspect-[40/21] w-full rounded-2xl object-cover"
+          />
         </header>
 
         <div className="mt-9 space-y-6 text-[16px] leading-8 text-muted-foreground">

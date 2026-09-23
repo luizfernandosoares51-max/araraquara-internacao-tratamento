@@ -1,12 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, MessageCircle } from "lucide-react";
 
+import articleImage from "@/assets/blog-dependencia-quimica-sinais.jpg";
 import { siteUrl, whatsappHref } from "@/lib/site";
 
 const articleTitle = "Dependência Química: Entenda os Sinais e a Importância do Tratamento";
 const articleDescription =
   "Entenda os principais sinais da dependência química e saiba quando buscar orientação, acolhimento e tratamento especializado.";
 const articleUrl = `${siteUrl}/blog/dependencia-quimica-sinais-tratamento`;
+const articleImageUrl = new URL(articleImage, siteUrl).href;
 
 export const Route = createFileRoute("/blog/dependencia-quimica-sinais-tratamento")({
   staticData: { sitemap: true },
@@ -34,6 +36,8 @@ export const Route = createFileRoute("/blog/dependencia-quimica-sinais-tratament
               headline: articleTitle,
               description: articleDescription,
               mainEntityOfPage: articleUrl,
+              image: articleImageUrl,
+              datePublished: "2026-09-15",
               author: {
                 "@type": "Organization",
                 name: "Central de Acolhimento e Reabilitação",
@@ -50,7 +54,7 @@ export const Route = createFileRoute("/blog/dependencia-quimica-sinais-tratament
                   "@type": "ListItem",
                   position: 1,
                   name: "Início",
-                  item: `${siteUrl}/clinica-de-recuperacao-em-araraquara`,
+                  item: siteUrl,
                 },
                 { "@type": "ListItem", position: 2, name: "Blog", item: `${siteUrl}/blog` },
                 { "@type": "ListItem", position: 3, name: articleTitle, item: articleUrl },
@@ -82,6 +86,13 @@ function ArticlePage() {
           <h1 className="mt-3 font-display text-3xl font-bold leading-tight sm:text-5xl">
             {articleTitle}
           </h1>
+          <img
+            src={articleImage}
+            alt="Conversa acolhedora sobre dependência química e possibilidades de tratamento"
+            width={1200}
+            height={630}
+            className="mt-8 aspect-[40/21] w-full rounded-2xl object-cover"
+          />
         </header>
 
         <div className="mt-9 space-y-6 text-[16px] leading-8 text-muted-foreground">

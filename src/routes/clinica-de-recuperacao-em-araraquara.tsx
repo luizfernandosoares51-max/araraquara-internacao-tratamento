@@ -144,7 +144,7 @@ function WhatsAppLink({ children, className }: { children: ReactNode; className:
 
 function FacebookLink({ children, className }: { children: ReactNode; className: string }) {
   return (
-    <a href={araraquaraFacebookHref} target="_blank" rel="noopener noreferrer" className={className}>
+    <a href={araraquaraFacebookHref} target="_blank" rel="noopener noreferrer" className={className} aria-label="Página da Central em Araraquara no Facebook">
       {children}
     </a>
   );
@@ -160,7 +160,7 @@ function FacebookIcon({ className }: { className?: string }) {
 
 function InstagramLink({ children, className }: { children: ReactNode; className: string }) {
   return (
-    <a href={instagramHref} target="_blank" rel="noopener noreferrer" className={className}>
+    <a href={instagramHref} target="_blank" rel="noopener noreferrer" className={className} aria-label="Perfil da Central no Instagram">
       {children}
     </a>
   );
