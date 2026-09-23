@@ -199,9 +199,8 @@ function HomePage() {
                 className="size-11 shrink-0 rounded-xl object-contain"
                 loading="eager"
               />
-              <span className="leading-tight">
-                <span className="block font-display text-[13px] font-semibold sm:text-sm">Central de Acolhimento</span>
-                <span className="block text-[11px] text-muted-foreground">e Reabilitação · Araraquara e região</span>
+              <span className="font-display text-[13px] font-semibold leading-tight sm:text-sm">
+                Central de Acolhimento e Atendimento
               </span>
             </a>
             <div className="flex items-center gap-2">
