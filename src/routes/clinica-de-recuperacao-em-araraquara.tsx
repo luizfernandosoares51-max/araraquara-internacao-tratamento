@@ -234,7 +234,7 @@ function AraraquaraPage() {
               <div className="mt-7 grid gap-3 sm:grid-cols-2">
                 <WhatsAppLink className="flex min-h-14 items-center justify-center gap-2 rounded-lg bg-whatsapp px-5 py-4 text-center text-sm font-semibold text-whatsapp-foreground shadow-lg transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"><MessageCircle className="size-5" aria-hidden="true" /> Falar com nossa equipe</WhatsAppLink>
                 <a href={phoneHref} className="flex min-h-14 items-center justify-center gap-2 rounded-lg border border-border bg-glass px-5 py-4 text-center text-sm font-semibold transition-colors hover:bg-glass-strong focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"><Phone className="size-4" aria-hidden="true" /> Ligar agora · {phoneDisplay}</a>
-                <a href="#galeria-araraquara" className="flex min-h-14 items-center justify-center gap-2 rounded-lg border border-secondary/40 px-5 py-4 text-center text-sm font-semibold text-secondary transition-colors hover:bg-glass sm:col-span-2"><Camera className="size-4" aria-hidden="true" /> Ver fotos da unidade</a>
+                <a href="#galeria-araraquara" className="flex min-h-14 items-center justify-center gap-2 rounded-lg border border-secondary/40 px-5 py-4 text-center text-sm font-semibold text-secondary transition-colors hover:bg-glass sm:col-span-2"><Camera className="size-4" aria-hidden="true" /> Galeria de fotos da unidade de Araraquara</a>
               </div>
               <p className="mt-5 flex items-start gap-2 text-xs leading-relaxed text-muted-foreground"><ShieldCheck className="mt-0.5 size-4 shrink-0 text-secondary" aria-hidden="true" /> Orientação inicial com respeito e discrição. Nenhuma modalidade de cuidado é indicada sem avaliação individual.</p>
             </div>
@@ -245,7 +245,7 @@ function AraraquaraPage() {
           </div>
         </section>
 
-        <section id="tratamento" className="scroll-mt-6 bg-background">
+        <section id="tratamento" className="scroll-mt-6 bg-ice">
           <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
             <SectionLabel>Informação antes da decisão</SectionLabel>
             <div className="mt-3 grid gap-8 lg:grid-cols-[.85fr_1.15fr] lg:gap-16">
@@ -258,7 +258,7 @@ function AraraquaraPage() {
             </div>
             <div className="mt-10 grid gap-4 md:grid-cols-3">
               {careSteps.map((step, index) => (
-                <article key={step.title} className="rounded-lg border border-deep/10 bg-card p-5 text-card-foreground shadow-sm sm:p-6">
+                <article key={step.title} className="rounded-lg border border-deep/10 bg-foreground p-5 text-deep shadow-sm sm:p-6">
                   <span className="grid size-9 place-items-center rounded-full bg-primary text-xs font-bold text-primary-foreground">0{index + 1}</span>
                   <h3 className="mt-5 font-display text-lg font-semibold">{step.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-deep/70">{step.text}</p>
@@ -287,15 +287,15 @@ function AraraquaraPage() {
           </div>
         </section>
 
-        <section className="bg-background">
+        <section className="bg-ice">
           <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
             <SectionLabel>Cuidado em rede</SectionLabel>
             <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Rede de apoio e serviços públicos em Araraquara</h2>
             <p className="mt-5 max-w-4xl text-[15px] leading-relaxed text-deep/75 sm:text-base">A rede pública faz parte dos caminhos de cuidado disponíveis no município. A Prefeitura de Araraquara informa que o CAPS Álcool e Drogas atende questões relacionadas ao uso abusivo de substâncias e que as Unidades Básicas de Saúde e Unidades de Saúde da Família também podem orientar o acesso à rede. A Central oferece informação sobre possibilidades de acolhimento e tratamento, mas não substitui o SUS nem os serviços de urgência.</p>
             <div className="mt-8 grid gap-4 md:grid-cols-3">
-              <a href={cityCapsInformationUrl} target="_blank" rel="noopener noreferrer" className="group rounded-lg border border-deep/10 bg-card p-5 text-card-foreground shadow-sm transition-transform hover:-translate-y-0.5"><Building2 className="size-6 text-primary" aria-hidden="true" /><h3 className="mt-4 font-display text-lg font-semibold">CAPS Álcool e Drogas</h3><p className="mt-3 text-sm leading-relaxed text-deep/70">Consulte a explicação oficial da Prefeitura sobre o atendimento psicossocial e o acesso à rede.</p><span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">Fonte oficial <ExternalLink className="size-4" aria-hidden="true" /></span></a>
-              <a href={cityHealthNetworkUrl} target="_blank" rel="noopener noreferrer" className="group rounded-lg border border-deep/10 bg-card p-5 text-card-foreground shadow-sm transition-transform hover:-translate-y-0.5"><HeartHandshake className="size-6 text-primary" aria-hidden="true" /><h3 className="mt-4 font-display text-lg font-semibold">Saúde especializada municipal</h3><p className="mt-3 text-sm leading-relaxed text-deep/70">Veja os canais oficiais da atenção especializada e da saúde mental do município.</p><span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">Prefeitura de Araraquara <ExternalLink className="size-4" aria-hidden="true" /></span></a>
-              <a href={ministryRapsUrl} target="_blank" rel="noopener noreferrer" className="group rounded-lg border border-deep/10 bg-card p-5 text-card-foreground shadow-sm transition-transform hover:-translate-y-0.5"><Info className="size-6 text-primary" aria-hidden="true" /><h3 className="mt-4 font-display text-lg font-semibold">Rede de Atenção Psicossocial</h3><p className="mt-3 text-sm leading-relaxed text-deep/70">Conheça a organização nacional da rede de cuidados em saúde mental pelo Ministério da Saúde.</p><span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">Ministério da Saúde <ExternalLink className="size-4" aria-hidden="true" /></span></a>
+              <a href={cityCapsInformationUrl} target="_blank" rel="noopener noreferrer" className="group rounded-lg border border-deep/10 bg-foreground p-5 text-deep shadow-sm transition-transform hover:-translate-y-0.5"><Building2 className="size-6 text-primary" aria-hidden="true" /><h3 className="mt-4 font-display text-lg font-semibold">CAPS Álcool e Drogas</h3><p className="mt-3 text-sm leading-relaxed text-deep/70">Consulte a explicação oficial da Prefeitura sobre o atendimento psicossocial e o acesso à rede.</p><span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">Fonte oficial <ExternalLink className="size-4" aria-hidden="true" /></span></a>
+              <a href={cityHealthNetworkUrl} target="_blank" rel="noopener noreferrer" className="group rounded-lg border border-deep/10 bg-foreground p-5 text-deep shadow-sm transition-transform hover:-translate-y-0.5"><HeartHandshake className="size-6 text-primary" aria-hidden="true" /><h3 className="mt-4 font-display text-lg font-semibold">Saúde especializada municipal</h3><p className="mt-3 text-sm leading-relaxed text-deep/70">Veja os canais oficiais da atenção especializada e da saúde mental do município.</p><span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">Prefeitura de Araraquara <ExternalLink className="size-4" aria-hidden="true" /></span></a>
+              <a href={ministryRapsUrl} target="_blank" rel="noopener noreferrer" className="group rounded-lg border border-deep/10 bg-foreground p-5 text-deep shadow-sm transition-transform hover:-translate-y-0.5"><Info className="size-6 text-primary" aria-hidden="true" /><h3 className="mt-4 font-display text-lg font-semibold">Rede de Atenção Psicossocial</h3><p className="mt-3 text-sm leading-relaxed text-deep/70">Conheça a organização nacional da rede de cuidados em saúde mental pelo Ministério da Saúde.</p><span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">Ministério da Saúde <ExternalLink className="size-4" aria-hidden="true" /></span></a>
             </div>
           </div>
         </section>
@@ -314,17 +314,17 @@ function AraraquaraPage() {
             <SectionLabel>Registros reais, sem imagens genéricas</SectionLabel>
             <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Conheça a unidade de Araraquara</h2>
             <p className="mt-5 max-w-3xl text-[15px] leading-relaxed text-deep/75">Esta área é exclusiva para fotos identificadas da unidade de Araraquara. No momento, o projeto não possui fotografias confirmadas da unidade; por isso, nenhuma imagem fictícia ou de outra cidade é exibida aqui.</p>
-            <div className="mt-8 grid min-h-56 place-items-center rounded-lg border border-dashed border-primary/35 bg-card px-6 py-12 text-center text-card-foreground">
+            <div className="mt-8 grid min-h-56 place-items-center rounded-lg border border-dashed border-primary/35 bg-foreground px-6 py-12 text-center text-deep">
               <div><Camera className="mx-auto size-8 text-primary" aria-hidden="true" /><h3 className="mt-4 font-display text-lg font-semibold">Galeria de fotos da unidade de Araraquara</h3><p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-deep/65">Espaço preparado para receber somente fotografias reais e confirmadas da unidade.</p></div>
             </div>
           </div>
         </section>
 
-        <section className="bg-background">
+        <section className="bg-ice">
           <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
             <div className="grid gap-9 lg:grid-cols-[.85fr_1.15fr] lg:gap-16">
               <div><SectionLabel>Informação direcionada</SectionLabel><h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Por que esta página é específica para Araraquara?</h2></div>
-              <div><p className="text-[15px] leading-relaxed text-deep/75 sm:text-base">Esta página reúne informações para quem pesquisa acolhimento, tratamento para dependência química, tratamento para alcoolismo ou ajuda relacionada ao uso de álcool e outras drogas em Araraquara e região. O objetivo é facilitar o acesso a informações locais, caminhos públicos e contato com a Central, sem transformar uma busca por ajuda em promessa de resultado.</p><nav aria-label="Links úteis da página de Araraquara" className="mt-7 grid gap-2 sm:grid-cols-2">{localLinks.map((item) => <Link key={item.label} to={item.to} className="flex min-h-12 items-center justify-between gap-3 rounded-lg border border-deep/10 bg-card px-4 py-3 text-sm font-semibold text-card-foreground transition-colors hover:border-primary/40">{item.label}<ArrowRight className="size-4 shrink-0 text-primary" aria-hidden="true" /></Link>)}<a href="#galeria-araraquara" className="flex min-h-12 items-center justify-between gap-3 rounded-lg border border-deep/10 bg-card px-4 py-3 text-sm font-semibold text-card-foreground transition-colors hover:border-primary/40">Galeria de Araraquara<ArrowRight className="size-4 shrink-0 text-primary" aria-hidden="true" /></a></nav></div>
+              <div><p className="text-[15px] leading-relaxed text-deep/75 sm:text-base">Esta página reúne informações para quem pesquisa acolhimento, tratamento para dependência química, tratamento para alcoolismo ou ajuda relacionada ao uso de álcool e outras drogas em Araraquara e região. O objetivo é facilitar o acesso a informações locais, caminhos públicos e contato com a Central, sem transformar uma busca por ajuda em promessa de resultado.</p><nav aria-label="Links úteis da página de Araraquara" className="mt-7 grid gap-2 sm:grid-cols-2">{localLinks.map((item) => <Link key={item.label} to={item.to} className="flex min-h-12 items-center justify-between gap-3 rounded-lg border border-deep/10 bg-foreground px-4 py-3 text-sm font-semibold text-deep transition-colors hover:border-primary/40">{item.label}<ArrowRight className="size-4 shrink-0 text-primary" aria-hidden="true" /></Link>)}<a href="#galeria-araraquara" className="flex min-h-12 items-center justify-between gap-3 rounded-lg border border-deep/10 bg-foreground px-4 py-3 text-sm font-semibold text-deep transition-colors hover:border-primary/40">Galeria de Araraquara<ArrowRight className="size-4 shrink-0 text-primary" aria-hidden="true" /></a></nav></div>
             </div>
           </div>
         </section>
