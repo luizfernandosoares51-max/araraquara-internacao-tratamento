@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowDown, ArrowRight, Camera, Check, ChevronDown, Images, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
+import { ArrowRight, Camera, Check, ChevronDown, Images, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
 import type { ReactNode } from "react";
 
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
@@ -33,6 +33,27 @@ const photoGalleryCities = [
   { name: "Bauru", units: ["Unidade 1", "Unidade 2"] },
   { name: "Ribeirão Preto", units: ["Unidade 1", "Unidade 2"] },
   { name: "Matão", units: ["Unidade 1", "Unidade 2"] },
+] as const;
+
+const guidanceLinks = [
+  { label: "Dependência química", href: "/blog/dependencia-quimica-sinais-tratamento" },
+  { label: "Alcoolismo", href: "#tratamento" },
+  { label: "Acolhimento", href: "#acolhimento" },
+  { label: "Tratamento", href: "#tratamento" },
+  { label: "Família", href: "#familia" },
+] as const;
+
+const existingArticles = [
+  {
+    title: "Dependência Química: Entenda os Sinais e a Importância do Tratamento",
+    description: "Informações para reconhecer sinais e compreender quando buscar orientação, acolhimento e tratamento especializado.",
+    to: "/blog/dependencia-quimica-sinais-tratamento" as const,
+  },
+  {
+    title: "Dependência Química em São Carlos: acolhimento, tratamento e onde buscar ajuda",
+    description: "Um conteúdo acolhedor para pessoas e familiares que procuram informações e caminhos de ajuda em São Carlos.",
+    to: "/blog/dependencia-quimica-sao-carlos" as const,
+  },
 ] as const;
 
 const faqs = [
@@ -72,9 +93,9 @@ const faqs = [
       "O tempo varia conforme as necessidades, a evolução e o plano de cuidado de cada pessoa. A duração deve ser acompanhada e reavaliada pela equipe, sem promessas de prazo fixo ou garantia de resultados.",
   },
   {
-    question: "A Central atende famílias de Araraquara e região?",
+    question: "A Central orienta famílias em diferentes regiões de São Paulo?",
     answer:
-      "Sim. A Central oferece acolhimento, orientação e apoio para pessoas e famílias de Araraquara e região. As condições de atendimento são esclarecidas no primeiro contato.",
+      "Sim. A Central oferece informações e orientação para pessoas e famílias que buscam possibilidades de acolhimento e tratamento em diferentes regiões de São Paulo. As condições de atendimento são esclarecidas no primeiro contato.",
   },
 ];
 
@@ -82,17 +103,17 @@ export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
   head: () => ({
     meta: [
-      { title: "Central de Acolhimento e Reabilitação | Dependência Química e Alcoolismo" },
+      { title: "Central de Acolhimento e Reabilitação | Acolhimento e Tratamento" },
       {
         name: "description",
         content:
-          "Acolhimento, orientação e apoio para pessoas e famílias que buscam tratamento para dependência química e alcoolismo em Araraquara e região.",
+          "Informações e orientação para pessoas e famílias que buscam acolhimento e tratamento para dependência química, alcoolismo e uso problemático de álcool e outras drogas em diferentes regiões de São Paulo.",
       },
       { property: "og:title", content: "Central de Acolhimento e Reabilitação | Acolhimento e Tratamento" },
       {
         property: "og:description",
         content:
-          "Acolhimento, orientação e apoio para pessoas e famílias que buscam tratamento para dependência química e alcoolismo.",
+          "Informações e orientação para pessoas e famílias que buscam acolhimento e tratamento para dependência química, alcoolismo e uso problemático de álcool e outras drogas em diferentes regiões de São Paulo.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: pageUrl },
@@ -110,10 +131,10 @@ export const Route = createFileRoute("/")({
               name: "Central de Acolhimento e Reabilitação",
               url: pageUrl,
               telephone: "+5516997654579",
-              areaServed: "Araraquara e região",
+              areaServed: "Estado de São Paulo",
               sameAs: [facebookHref, instagramHref],
               description:
-                "Acolhimento, orientação e apoio para pessoas e famílias que buscam tratamento para dependência química e alcoolismo.",
+                "Informações e orientação para pessoas e famílias que buscam acolhimento e tratamento para dependência química, alcoolismo e uso problemático de álcool e outras drogas em diferentes regiões de São Paulo.",
             },
             {
               "@type": "FAQPage",
@@ -260,18 +281,15 @@ function HomePage() {
                 Central de <span className="text-secondary">Acolhimento e Reabilitação</span>
               </h1>
               <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-muted-foreground sm:text-lg">
-                Acolhimento, orientação e apoio para pessoas e famílias que buscam tratamento para dependência química e alcoolismo.
+                Acolhimento, orientação e informações para pessoas e famílias que buscam ajuda para dependência química, alcoolismo e uso problemático de álcool e outras drogas.
               </p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                <a href="#atendimento-por-cidade" className="glass-panel flex min-h-14 items-center justify-center gap-2 rounded-2xl px-5 py-4 text-center text-sm font-semibold transition-colors hover:bg-glass-strong focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
+                  <MapPin className="size-4" aria-hidden="true" /> Encontrar atendimento por cidade
+                </a>
                 <WhatsAppLink className="flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-whatsapp px-5 py-4 text-center text-sm font-semibold text-whatsapp-foreground shadow-lg shadow-accent/20 transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
                   <MessageCircle className="size-5" aria-hidden="true" /> Falar com nossa equipe
                 </WhatsAppLink>
-                <a href={phoneHref} className="glass-panel flex min-h-14 items-center justify-center gap-2 rounded-2xl px-5 py-4 text-center text-sm font-semibold transition-colors hover:bg-glass-strong focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
-                  <Phone className="size-4" aria-hidden="true" /> Ligar agora
-                </a>
-                <a href="#como-funciona" className="glass-panel flex min-h-14 items-center justify-center gap-2 rounded-2xl px-5 py-4 text-center text-sm font-semibold transition-colors hover:bg-glass-strong focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
-                  Como funciona o acolhimento <ArrowDown className="size-4" aria-hidden="true" />
-                </a>
               </div>
               <div className="mt-6 flex items-start gap-3 text-xs leading-relaxed text-muted-foreground">
                 <ShieldCheck className="mt-0.5 size-4 shrink-0 text-secondary" aria-hidden="true" />
@@ -288,31 +306,54 @@ function HomePage() {
             </div>
           </section>
 
-          <section aria-labelledby="galeria-titulo" className="border-t border-border py-14 lg:py-20">
-            <Link
-              to="/cidades"
-              className="glass-panel mb-4 flex min-h-16 items-center justify-between gap-4 rounded-2xl px-5 py-4 transition-colors hover:bg-glass-strong sm:px-6"
-            >
-              <span className="flex items-center gap-3 font-display text-sm font-semibold uppercase tracking-[0.14em] text-secondary sm:text-base">
-                <MapPin className="size-5 shrink-0" aria-hidden="true" />
-                Cidades
-              </span>
-              <ArrowRight className="size-5 shrink-0 text-muted-foreground" aria-hidden="true" />
+          <section id="atendimento-por-cidade" className="border-t border-border py-14 lg:py-20">
+            <SectionLabel>Atendimento em diferentes regiões</SectionLabel>
+            <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Encontre atendimento por cidade</h2>
+            <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted-foreground sm:text-base">
+              Consulte informações específicas sobre acolhimento, tratamento e orientação nas diferentes regiões de São Paulo atendidas pela nossa rede de parceiros.
+            </p>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <article className="glass-panel flex min-h-52 flex-col rounded-2xl p-5 sm:p-6">
+                <MapPin className="size-5 text-secondary" aria-hidden="true" />
+                <h3 className="mt-4 font-display text-lg font-semibold">Araraquara</h3>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">Informações sobre acolhimento, orientação e possibilidades de tratamento em Araraquara e região.</p>
+                <Link to="/clinica-de-recuperacao-em-araraquara" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:underline">
+                  Ver informações <ArrowRight className="size-4" aria-hidden="true" />
+                </Link>
+              </article>
+              {cityPages.map((city) => (
+                <article key={city.slug} className="glass-panel flex min-h-52 flex-col rounded-2xl p-5 sm:p-6">
+                  <MapPin className="size-5 text-secondary" aria-hidden="true" />
+                  <h3 className="mt-4 font-display text-lg font-semibold">{city.name}</h3>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">Informações e orientação para pessoas e famílias de {city.name} e região que procuram ajuda.</p>
+                  <Link to="/$citySlug" params={{ citySlug: `clinica-de-recuperacao-em-${city.slug}` }} className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:underline">
+                    Ver informações <ArrowRight className="size-4" aria-hidden="true" />
+                  </Link>
+                </article>
+              ))}
+            </div>
+            <Link to="/cidades" className="mt-6 inline-flex min-h-12 items-center gap-2 rounded-2xl border border-border px-5 py-3 text-sm font-semibold text-secondary transition-colors hover:bg-glass">
+              Ver todas as cidades <ArrowRight className="size-4" aria-hidden="true" />
             </Link>
+          </section>
+
+          <section id="galeria-fotos" aria-labelledby="galeria-titulo" className="border-t border-border py-14 lg:py-20">
+            <SectionLabel>Galeria de fotos</SectionLabel>
+            <h2 id="galeria-titulo" className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Conheça nossas unidades e espaços</h2>
+            <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">Acesse a galeria existente, organizada por cidade e unidade, para visualizar as fotos cadastradas.</p>
             <details className="group/gallery">
-              <summary className="glass-panel flex min-h-16 cursor-pointer list-none items-center justify-between gap-4 rounded-2xl px-5 py-4 marker:content-none sm:px-6">
+              <summary className="glass-panel mt-6 flex min-h-16 cursor-pointer list-none items-center justify-between gap-4 rounded-2xl px-5 py-4 marker:content-none sm:px-6">
                 <span className="flex items-center gap-3 font-display text-sm font-semibold uppercase tracking-[0.14em] text-secondary sm:text-base">
                   <Camera className="size-5 shrink-0" aria-hidden="true" />
-                  Galeria de Fotos
+                  Ver galeria
                 </span>
                 <ChevronDown className="size-5 shrink-0 text-muted-foreground transition-transform group-open/gallery:rotate-180" aria-hidden="true" />
               </summary>
 
               <div className="pt-8">
-                <SectionLabel>Galeria de fotos</SectionLabel>
-                <h2 id="galeria-titulo" className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">
+                <h3 className="font-display text-xl font-semibold leading-tight sm:text-2xl">
                   Fotos organizadas por cidade e unidade
-                </h2>
+                </h3>
 
                 <div className="mt-8 grid gap-4 lg:grid-cols-2">
                   {photoGalleryCities.map((city) => (
@@ -344,6 +385,24 @@ function HomePage() {
                 </div>
               </div>
             </details>
+          </section>
+
+          <section className="border-t border-border py-14 lg:py-20">
+            <SectionLabel>Informação e caminhos possíveis</SectionLabel>
+            <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Como podemos orientar</h2>
+            <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+              {guidanceLinks.map((item) =>
+                item.href.startsWith("#") ? (
+                  <a key={item.label} href={item.href} className="glass-panel flex min-h-20 items-center justify-between gap-3 rounded-2xl px-5 py-4 text-sm font-semibold transition-colors hover:bg-glass-strong">
+                    {item.label} <ArrowRight className="size-4 shrink-0 text-secondary" aria-hidden="true" />
+                  </a>
+                ) : (
+                  <Link key={item.label} to="/blog/dependencia-quimica-sinais-tratamento" className="glass-panel flex min-h-20 items-center justify-between gap-3 rounded-2xl px-5 py-4 text-sm font-semibold transition-colors hover:bg-glass-strong">
+                    {item.label} <ArrowRight className="size-4 shrink-0 text-secondary" aria-hidden="true" />
+                  </Link>
+                ),
+              )}
+            </div>
           </section>
 
           <section id="acolhimento" className="border-t border-border py-14 lg:py-20">
@@ -410,41 +469,33 @@ function HomePage() {
             <div className="glass-panel-strong rounded-3xl p-6 sm:p-9 lg:grid lg:grid-cols-[1.2fr_.8fr] lg:gap-12">
               <div>
                 <SectionLabel>Apoio para pessoas e famílias</SectionLabel>
-                <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-3xl">A família não precisa enfrentar essa decisão sozinha.</h2>
-                <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">Se você procura ajuda para uma pessoa que enfrenta problemas com álcool ou outras drogas, nossa equipe pode orientar sobre as possibilidades de acolhimento e os próximos passos.</p>
+                <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-3xl">Quando alguém que você ama precisa de ajuda</h2>
+                <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">Buscar informações pode ajudar a família a compreender a situação com mais clareza. Nossa equipe oferece escuta e orientação sobre possibilidades de acolhimento e tratamento, sem prometer resultados e sem substituir uma avaliação profissional.</p>
+                <Link to="/familia" className="mt-6 inline-flex min-h-12 items-center gap-2 rounded-2xl bg-brand px-5 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5">
+                  Orientações para a família <ArrowRight className="size-4" aria-hidden="true" />
+                </Link>
               </div>
               <div className="mt-7 border-t border-border pt-6 lg:mt-0 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
-                <SectionLabel>Acolhimento e tratamento em diferentes regiões de São Paulo</SectionLabel>
+                <SectionLabel>Encontre informações sobre atendimento na sua região</SectionLabel>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  A Central de Acolhimento e Reabilitação orienta pessoas e famílias que buscam acolhimento e tratamento para dependência química, alcoolismo e uso problemático de álcool e outras drogas, conectando a busca por ajuda a opções de atendimento em diferentes regiões do Estado de São Paulo.
+                  Consulte informações específicas sobre acolhimento, tratamento e orientação nas diferentes regiões de São Paulo atendidas pela nossa rede de parceiros.
                 </p>
-                <h3 className="mt-6 font-display text-base font-semibold">
-                  Encontre informações sobre atendimento na sua região
-                </h3>
-                <ul className="mt-4 grid gap-x-5 gap-y-3 sm:grid-cols-2">
-                  <li>
-                    <Link
-                      to="/clinica-de-recuperacao-em-araraquara"
-                      className="inline-flex items-start gap-2 text-sm font-medium leading-snug text-secondary hover:underline"
-                    >
-                      <MapPin className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
-                      Clínica de recuperação em Araraquara
-                    </Link>
-                  </li>
-                  {cityPages.map((city) => (
-                    <li key={city.slug}>
-                      <Link
-                        to="/$citySlug"
-                        params={{ citySlug: `clinica-de-recuperacao-em-${city.slug}` }}
-                        className="inline-flex items-start gap-2 text-sm font-medium leading-snug text-secondary hover:underline"
-                      >
-                        <MapPin className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
-                        Clínica de recuperação em {city.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+                <a href="#atendimento-por-cidade" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:underline">
+                  Encontrar atendimento por cidade <ArrowRight className="size-4" aria-hidden="true" />
+                </a>
               </div>
+            </div>
+          </section>
+
+          <section className="border-t border-border py-14 lg:py-20">
+            <SectionLabel>Navegação simples</SectionLabel>
+            <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Não sabe por onde começar?</h2>
+            <div className="mt-8 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+              <a href="#contato" className="glass-panel flex min-h-16 items-center justify-between gap-4 rounded-2xl px-5 py-4 text-sm font-semibold transition-colors hover:bg-glass-strong">Estou procurando ajuda para alguém <ArrowRight className="size-4 shrink-0 text-secondary" aria-hidden="true" /></a>
+              <a href="#tratamento" className="glass-panel flex min-h-16 items-center justify-between gap-4 rounded-2xl px-5 py-4 text-sm font-semibold transition-colors hover:bg-glass-strong">Estou procurando tratamento <ArrowRight className="size-4 shrink-0 text-secondary" aria-hidden="true" /></a>
+              <a href="#familia" className="glass-panel flex min-h-16 items-center justify-between gap-4 rounded-2xl px-5 py-4 text-sm font-semibold transition-colors hover:bg-glass-strong">Sou familiar <ArrowRight className="size-4 shrink-0 text-secondary" aria-hidden="true" /></a>
+              <a href="#atendimento-por-cidade" className="glass-panel flex min-h-16 items-center justify-between gap-4 rounded-2xl px-5 py-4 text-sm font-semibold transition-colors hover:bg-glass-strong">Quero encontrar atendimento por cidade <ArrowRight className="size-4 shrink-0 text-secondary" aria-hidden="true" /></a>
+              <Link to="/blog/dependencia-quimica-sinais-tratamento" className="glass-panel flex min-h-16 items-center justify-between gap-4 rounded-2xl px-5 py-4 text-sm font-semibold transition-colors hover:bg-glass-strong">Quero entender melhor a dependência química <ArrowRight className="size-4 shrink-0 text-secondary" aria-hidden="true" /></Link>
             </div>
           </section>
 
@@ -479,16 +530,33 @@ function HomePage() {
             </div>
           </section>
 
+          <section className="border-t border-border py-14 lg:py-20">
+            <SectionLabel>Conteúdos do Blog</SectionLabel>
+            <h2 className="mt-3 max-w-3xl font-display text-2xl font-semibold leading-tight sm:text-4xl">Informação para quem está tentando entender o problema</h2>
+            <div className="mt-8 grid gap-4 md:grid-cols-2">
+              {existingArticles.map((article) => (
+                <article key={article.to} className="glass-panel flex min-h-56 flex-col rounded-2xl p-5 sm:p-7">
+                  <h3 className="font-display text-xl font-semibold leading-snug">{article.title}</h3>
+                  <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">{article.description}</p>
+                  <Link to={article.to} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:underline">Ler artigo <ArrowRight className="size-4" aria-hidden="true" /></Link>
+                </article>
+              ))}
+            </div>
+            <Link to="/blog" className="mt-6 inline-flex min-h-12 items-center gap-2 rounded-2xl border border-border px-5 py-3 text-sm font-semibold text-secondary transition-colors hover:bg-glass">
+              Ver todos os artigos <ArrowRight className="size-4" aria-hidden="true" />
+            </Link>
+          </section>
+
           <section id="contato" className="border-t border-border py-14 lg:py-20">
             <div className="relative overflow-hidden rounded-3xl bg-primary p-6 sm:p-10 lg:p-14">
               <div aria-hidden="true" className="absolute -right-16 -top-20 size-64 rounded-full bg-secondary/20 blur-3xl" />
               <div className="relative max-w-3xl">
                 <SectionLabel>Estamos aqui para orientar</SectionLabel>
-                <h2 className="mt-3 font-display text-3xl font-bold leading-tight sm:text-5xl">Não sabe qual é o próximo passo?</h2>
+                <h2 className="mt-3 font-display text-3xl font-bold leading-tight sm:text-5xl">Precisa de orientação?</h2>
                 <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-primary-foreground/75 sm:text-base">Converse com nossa equipe. Podemos esclarecer suas dúvidas e explicar como funciona o processo de acolhimento.</p>
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                   <WhatsAppLink className="inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-whatsapp px-5 py-4 text-center text-sm font-semibold text-whatsapp-foreground shadow-lg shadow-background/20 transition-transform hover:-translate-y-0.5">
-                    <MessageCircle className="size-5" aria-hidden="true" /> Falar com nossa equipe pelo WhatsApp
+                    <MessageCircle className="size-5" aria-hidden="true" /> Falar pelo WhatsApp
                   </WhatsAppLink>
                   <a href={phoneHref} className="inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl border border-primary-foreground/30 px-5 py-4 text-center text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10">
                     <Phone className="size-4" aria-hidden="true" /> Ligar agora · {phoneDisplay}
@@ -503,7 +571,7 @@ function HomePage() {
           <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="font-display font-semibold">Central de Acolhimento e Reabilitação</p>
-              <p className="mt-1 text-xs text-muted-foreground">Araraquara e região · São Paulo</p>
+              <p className="mt-1 text-xs text-muted-foreground">Atendimento em diferentes regiões de São Paulo</p>
               <a href={phoneHref} className="mt-3 inline-flex items-center gap-2 text-xs font-semibold text-secondary hover:underline">
                 <Phone className="size-3.5" aria-hidden="true" /> Ligar agora · {phoneDisplay}
               </a>
