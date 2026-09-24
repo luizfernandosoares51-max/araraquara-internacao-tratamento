@@ -10,13 +10,11 @@ import {
   type SitemapEntry,
 } from "@/lib/sitemap";
 
-const BASE_URL = "https://centraldeacolhimentoereabilitacao.com";
-
 export const Route = createFileRoute("/sitemap.xml")({
   staticData: { sitemap: false },
   server: {
     handlers: {
-      GET: async () => {
+      GET: async ({ request }) => {
         const router = await getRouterInstance();
         const entries: SitemapEntry[] = sitemapStaticPaths(router).map((path) => ({ path }));
         const cityRoute = router.routesById["/$citySlug"];
@@ -41,7 +39,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           });
         }
 
-        return new Response(sitemapXML(BASE_URL, entries), {
+        return new Response(sitemapXML(new URL(request.url).origin, entries), {
           headers: {
             "Content-Type": "application/xml",
             "Cache-Control": "public, max-age=3600",
