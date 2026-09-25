@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
+  ArrowLeft,
   ArrowRight,
   Building2,
   Camera,
@@ -228,6 +229,9 @@ function AraraquaraPage() {
               <nav aria-label="Navegação estrutural" className="mb-7 text-xs text-muted-foreground">
                 <ol className="flex flex-wrap items-center gap-2"><li><Link to="/" className="hover:text-secondary">Início</Link></li><li aria-hidden="true">/</li><li><Link to="/cidades" className="hover:text-secondary">Cidades</Link></li><li aria-hidden="true">/</li><li aria-current="page" className="text-foreground">Araraquara</li></ol>
               </nav>
+              <Link to="/" className="mb-7 inline-flex min-h-11 items-center gap-2 rounded-lg border border-border bg-glass px-4 py-3 text-sm font-semibold transition-colors hover:bg-glass-strong hover:text-secondary">
+                <ArrowLeft className="size-4" aria-hidden="true" /> Voltar para a página inicial
+              </Link>
               <div className="inline-flex items-center gap-2 rounded-full border border-border bg-glass px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-secondary"><span className="size-1.5 rounded-full bg-accent" /> Informação local e orientação</div>
               <h1 className="mt-5 max-w-3xl font-display text-[2.25rem] font-bold leading-[1.05] sm:text-5xl lg:text-[3.75rem]">Clínica de Recuperação em <span className="text-secondary">Araraquara</span></h1>
               <p className="mt-5 max-w-2xl text-[16px] leading-relaxed text-muted-foreground sm:text-lg">Informações sobre acolhimento e tratamento para dependência química e alcoolismo em Araraquara, com orientação para famílias que procuram ajuda.</p>
