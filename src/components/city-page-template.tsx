@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Check, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
 import type { ReactNode } from "react";
 
 import acolhimentoImage from "@/assets/acolhimento-araraquara.jpg";
@@ -93,6 +93,10 @@ export function CityPageTemplate({ city }: { city: CityPageData }) {
               <li aria-current="page" className="text-foreground">{city.name}</li>
             </ol>
           </nav>
+
+          <Link to="/" className="glass-panel mt-5 inline-flex min-h-11 items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold transition-colors hover:text-secondary">
+            <ArrowLeft className="size-4" aria-hidden="true" /> Voltar para a página inicial
+          </Link>
 
           <section className="grid gap-10 pb-14 pt-7 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:pb-20 lg:pt-12">
             <div>
