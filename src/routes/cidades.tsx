@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { MessageCircle, Phone } from "lucide-react";
+import { ArrowLeft, MessageCircle, Phone } from "lucide-react";
 
 import { cityPages } from "@/lib/city-pages";
 import { phoneDisplay, phoneHref, siteUrl, whatsappHref } from "@/lib/site";
@@ -33,6 +33,13 @@ function CidadesPage() {
   return (
     <div className="min-h-screen bg-deep font-body text-foreground">
       <div className="mx-auto max-w-3xl px-5 py-16 sm:px-8">
+        <Link
+          to="/"
+          className="glass-panel mb-8 inline-flex min-h-11 items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold transition-colors hover:bg-glass-strong"
+        >
+          <ArrowLeft className="size-4" aria-hidden="true" />
+          Voltar para a página inicial
+        </Link>
         <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">
           Cidades
         </p>
