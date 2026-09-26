@@ -1,5 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { Play } from "lucide-react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowLeft, Play } from "lucide-react";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -88,6 +88,12 @@ function VideosPage() {
   return (
     <main className="min-h-screen bg-deep font-body text-foreground">
       <div className="mx-auto max-w-3xl px-5 py-16 sm:px-8">
+        <Button asChild variant="outline" className="mb-8 h-auto min-h-11 px-4 py-3">
+          <Link to="/">
+            <ArrowLeft aria-hidden="true" />
+            Voltar para a página inicial
+          </Link>
+        </Button>
         <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">
           Vídeos
         </p>
