@@ -15,4 +15,4 @@
 - [x] Publicar e listar o artigo sobre dependência química em São Carlos
 - [x] Adicionar as 6 fotos reais de Araraquara na Home e na página local
 - [x] Adicionar retorno à página inicial na tela de Cidades
-- [ ] Adicionar retorno à página inicial na página de Vídeos
+- [x] Adicionar retorno à página inicial na página de Vídeos
