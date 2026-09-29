@@ -250,19 +250,19 @@ function SaoCarlosPage() {
             <h2 className="mt-3 max-w-4xl font-display text-3xl font-semibold leading-tight sm:text-4xl">Rede de Atendimento em Saúde Mental e Álcool e Drogas em São Carlos</h2>
             <p className="mt-5 max-w-4xl text-[15px] leading-relaxed text-deep/70">São Carlos possui serviços públicos de atenção psicossocial, incluindo o CAPS Álcool e Drogas e outros serviços de saúde mental. A Central não pertence ao SUS e não mantém parceria declarada com esses órgãos; os links abaixo servem somente para facilitar o acesso às informações oficiais.</p>
             <div className="mt-9 grid gap-5 md:grid-cols-3">
-              <a href="https://www.saocarlos.sp.gov.br/index.php/noticias-2023/176324-horario-de-atendimento-do-caps-ad-e-ampliado.html" target="_blank" rel="noopener noreferrer" className="group border border-deep/10 bg-ice p-6 transition-colors hover:border-brand">
+              <a href="http://saocarlos.sp.gov.br/index.php/saude/153937-centro-de-atencao-psicossocial-caps-alcool-e-drogas.html" target="_blank" rel="noopener noreferrer" className="group border border-deep/10 bg-ice p-6 transition-colors hover:border-brand">
                 <Building2 className="size-7 text-brand" aria-hidden="true" />
                 <h3 className="mt-5 font-display text-xl font-semibold">CAPS Álcool e Drogas</h3>
                 <p className="mt-3 text-sm leading-relaxed text-deep/65">Informações da Prefeitura sobre o serviço municipal voltado a pessoas adultas com prejuízos relacionados ao uso de álcool e outras drogas.</p>
                 <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand">Consultar fonte oficial <ArrowRight className="size-4" aria-hidden="true" /></span>
               </a>
-              <a href="https://www.saocarlos.sp.gov.br/index.php/saude/115415-centro-de-atencao-psicossocial-caps.html" target="_blank" rel="noopener noreferrer" className="group border border-deep/10 bg-ice p-6 transition-colors hover:border-brand">
+              <a href="http://saocarlos.sp.gov.br/index.php/saude/115415-centro-de-atencao-psicossocial-caps.html" target="_blank" rel="noopener noreferrer" className="group border border-deep/10 bg-ice p-6 transition-colors hover:border-brand">
                 <HeartHandshake className="size-7 text-brand" aria-hidden="true" />
                 <h3 className="mt-5 font-display text-xl font-semibold">CAPS e Saúde Mental</h3>
                 <p className="mt-3 text-sm leading-relaxed text-deep/65">Página municipal com informações sobre o Centro de Atenção Psicossocial e a atenção em saúde mental na comunidade.</p>
                 <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand">Consultar fonte oficial <ArrowRight className="size-4" aria-hidden="true" /></span>
               </a>
-              <a href="https://www.saocarlos.sp.gov.br/index.php/secretarias-municipais/115263-secretaria-municipal-de-saude.html" target="_blank" rel="noopener noreferrer" className="group border border-deep/10 bg-ice p-6 transition-colors hover:border-brand">
+              <a href="http://saocarlos.sp.gov.br/index.php/cidadao/saude.html" target="_blank" rel="noopener noreferrer" className="group border border-deep/10 bg-ice p-6 transition-colors hover:border-brand">
                 <Stethoscope className="size-7 text-brand" aria-hidden="true" />
                 <h3 className="mt-5 font-display text-xl font-semibold">Secretaria Municipal de Saúde</h3>
                 <p className="mt-3 text-sm leading-relaxed text-deep/65">Canal institucional para consultar a organização e os contatos atuais da rede municipal de saúde de São Carlos.</p>
