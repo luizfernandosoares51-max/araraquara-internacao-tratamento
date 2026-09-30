@@ -15,6 +15,7 @@ import { Route as AcolhimentoRouteImport } from './routes/acolhimento'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as CidadesRouteImport } from './routes/cidades'
 import { Route as ClinicaDeRecuperacaoEmAraraquaraRouteImport } from './routes/clinica-de-recuperacao-em-araraquara'
+import { Route as ClinicaDeRecuperacaoEmRioClaroSpRouteImport } from './routes/clinica-de-recuperacao-em-rio-claro-sp'
 import { Route as ClinicaDeRecuperacaoEmSaoCarlosSpRouteImport } from './routes/clinica-de-recuperacao-em-sao-carlos-sp'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as FamiliaRouteImport } from './routes/familia'
@@ -55,6 +56,12 @@ const ClinicaDeRecuperacaoEmAraraquaraRoute =
   ClinicaDeRecuperacaoEmAraraquaraRouteImport.update({
     id: '/clinica-de-recuperacao-em-araraquara',
     path: '/clinica-de-recuperacao-em-araraquara',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ClinicaDeRecuperacaoEmRioClaroSpRoute =
+  ClinicaDeRecuperacaoEmRioClaroSpRouteImport.update({
+    id: '/clinica-de-recuperacao-em-rio-claro-sp',
+    path: '/clinica-de-recuperacao-em-rio-claro-sp',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ClinicaDeRecuperacaoEmSaoCarlosSpRoute =
@@ -119,6 +126,7 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRouteWithChildren
   '/cidades': typeof CidadesRoute
   '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
+  '/clinica-de-recuperacao-em-rio-claro-sp': typeof ClinicaDeRecuperacaoEmRioClaroSpRoute
   '/clinica-de-recuperacao-em-sao-carlos-sp': typeof ClinicaDeRecuperacaoEmSaoCarlosSpRoute
   '/contato': typeof ContatoRoute
   '/familia': typeof FamiliaRoute
@@ -136,6 +144,7 @@ export interface FileRoutesByTo {
   '/acolhimento': typeof AcolhimentoRoute
   '/cidades': typeof CidadesRoute
   '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
+  '/clinica-de-recuperacao-em-rio-claro-sp': typeof ClinicaDeRecuperacaoEmRioClaroSpRoute
   '/clinica-de-recuperacao-em-sao-carlos-sp': typeof ClinicaDeRecuperacaoEmSaoCarlosSpRoute
   '/contato': typeof ContatoRoute
   '/familia': typeof FamiliaRoute
@@ -155,6 +164,7 @@ export interface FileRoutesById {
   '/blog': typeof BlogRouteWithChildren
   '/cidades': typeof CidadesRoute
   '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
+  '/clinica-de-recuperacao-em-rio-claro-sp': typeof ClinicaDeRecuperacaoEmRioClaroSpRoute
   '/clinica-de-recuperacao-em-sao-carlos-sp': typeof ClinicaDeRecuperacaoEmSaoCarlosSpRoute
   '/contato': typeof ContatoRoute
   '/familia': typeof FamiliaRoute
@@ -175,6 +185,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/cidades'
     | '/clinica-de-recuperacao-em-araraquara'
+    | '/clinica-de-recuperacao-em-rio-claro-sp'
     | '/clinica-de-recuperacao-em-sao-carlos-sp'
     | '/contato'
     | '/familia'
@@ -192,6 +203,7 @@ export interface FileRouteTypes {
     | '/acolhimento'
     | '/cidades'
     | '/clinica-de-recuperacao-em-araraquara'
+    | '/clinica-de-recuperacao-em-rio-claro-sp'
     | '/clinica-de-recuperacao-em-sao-carlos-sp'
     | '/contato'
     | '/familia'
@@ -210,6 +222,7 @@ export interface FileRouteTypes {
     | '/blog'
     | '/cidades'
     | '/clinica-de-recuperacao-em-araraquara'
+    | '/clinica-de-recuperacao-em-rio-claro-sp'
     | '/clinica-de-recuperacao-em-sao-carlos-sp'
     | '/contato'
     | '/familia'
@@ -229,6 +242,7 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRouteWithChildren
   CidadesRoute: typeof CidadesRoute
   ClinicaDeRecuperacaoEmAraraquaraRoute: typeof ClinicaDeRecuperacaoEmAraraquaraRoute
+  ClinicaDeRecuperacaoEmRioClaroSpRoute: typeof ClinicaDeRecuperacaoEmRioClaroSpRoute
   ClinicaDeRecuperacaoEmSaoCarlosSpRoute: typeof ClinicaDeRecuperacaoEmSaoCarlosSpRoute
   ContatoRoute: typeof ContatoRoute
   FamiliaRoute: typeof FamiliaRoute
@@ -279,6 +293,13 @@ declare module '@tanstack/react-router' {
       path: '/clinica-de-recuperacao-em-araraquara'
       fullPath: '/clinica-de-recuperacao-em-araraquara'
       preLoaderRoute: typeof ClinicaDeRecuperacaoEmAraraquaraRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/clinica-de-recuperacao-em-rio-claro-sp': {
+      id: '/clinica-de-recuperacao-em-rio-claro-sp'
+      path: '/clinica-de-recuperacao-em-rio-claro-sp'
+      fullPath: '/clinica-de-recuperacao-em-rio-claro-sp'
+      preLoaderRoute: typeof ClinicaDeRecuperacaoEmRioClaroSpRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/clinica-de-recuperacao-em-sao-carlos-sp': {
@@ -379,6 +400,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRouteWithChildren,
   CidadesRoute: CidadesRoute,
   ClinicaDeRecuperacaoEmAraraquaraRoute: ClinicaDeRecuperacaoEmAraraquaraRoute,
+  ClinicaDeRecuperacaoEmRioClaroSpRoute: ClinicaDeRecuperacaoEmRioClaroSpRoute,
   ClinicaDeRecuperacaoEmSaoCarlosSpRoute:
     ClinicaDeRecuperacaoEmSaoCarlosSpRoute,
   ContatoRoute: ContatoRoute,
