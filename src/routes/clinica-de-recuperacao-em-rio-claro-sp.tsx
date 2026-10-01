@@ -4,8 +4,6 @@ import {
   ArrowRight,
   Check,
   ChevronRight,
-  CircleAlert,
-  FileText,
   HeartHandshake,
   MapPin,
   MessageCircle,
@@ -305,13 +303,13 @@ function RioClaroPage() {
               </div>
             </div>
             <div className="mt-10 grid gap-4 md:grid-cols-2">
-              <a href="https://www.saude-rioclaro.org.br/" target="_blank" rel="noopener noreferrer" className="group border border-border bg-glass p-6 transition-colors hover:bg-glass-strong">
+              <a href="https://www.saude-rioclaro.org.br/uac/sistema%20municipal%20de%20saude.htm" target="_blank" rel="noopener noreferrer" className="group border border-border bg-glass p-6 transition-colors hover:bg-glass-strong">
                 <HeartHandshake className="size-7 text-secondary" aria-hidden="true" />
                 <h3 className="mt-5 font-display text-xl font-bold">CAPS AD de Rio Claro</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Consulte a Fundação Municipal de Saúde para confirmar informações atuais sobre a atenção a problemas relacionados ao uso de álcool e outras drogas.</p>
                 <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-secondary">Acessar fonte oficial <ArrowRight className="size-4" aria-hidden="true" /></span>
               </a>
-              <a href="https://www.saude-rioclaro.org.br/" target="_blank" rel="noopener noreferrer" className="group border border-border bg-glass p-6 transition-colors hover:bg-glass-strong">
+              <a href="https://rioclaro.sp.gov.br/fundacao-de-saude/campanha-janeiro-branco-conscientiza-sobre-saude-mental-2/" target="_blank" rel="noopener noreferrer" className="group border border-border bg-glass p-6 transition-colors hover:bg-glass-strong">
                 <Users className="size-7 text-secondary" aria-hidden="true" />
                 <h3 className="mt-5 font-display text-xl font-bold">CAPS III 18 de Maio</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">O serviço integra a atenção psicossocial do município. Endereço, horários e formas de acesso devem ser confirmados no canal oficial.</p>
