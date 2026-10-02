@@ -19,3 +19,7 @@
 - [x] Adicionar retorno à página inicial na página de Vídeos
 - [x] Criar e validar a página local exclusiva de Ribeirão Preto
 - [x] Auditar tecnicamente e editorialmente as 15 páginas locais antes de qualquer correção
+- [x] Auditar a Home antes de alterações
+- [x] Fortalecer a autoridade temática e a arquitetura interna da Home
+- [x] Otimizar imagens principais e metadados sociais da Home
+- [x] Validar a Home otimizada em desktop, celular e HTML para Googlebot
