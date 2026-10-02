@@ -1,11 +1,10 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowLeft, ArrowRight, Check, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, ExternalLink, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
 import type { ReactNode } from "react";
 
-import acolhimentoImage from "@/assets/acolhimento-araraquara.jpg";
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import type { CityPageData } from "@/lib/city-pages";
-import { cityPageBySlug } from "@/lib/city-pages";
+import { cityDirectory } from "@/lib/city-pages";
 import {
   facebookHref,
   instagramHref,
@@ -44,8 +43,8 @@ function SectionLabel({ children }: { children: ReactNode }) {
 
 export function CityPageTemplate({ city }: { city: CityPageData }) {
   const relatedCities = city.relatedSlugs
-    .map((slug) => cityPageBySlug[slug])
-    .filter((related): related is CityPageData => related !== undefined);
+    .map((slug) => cityDirectory.find((related) => related.slug === slug))
+    .filter((related): related is (typeof cityDirectory)[number] => related !== undefined);
   const cityFacebookHref = city.slug === "sao-carlos-sp" ? saoCarlosFacebookHref : facebookHref;
 
   return (
@@ -98,8 +97,8 @@ export function CityPageTemplate({ city }: { city: CityPageData }) {
             <ArrowLeft className="size-4" aria-hidden="true" /> Voltar para a página inicial
           </Link>
 
-          <section className="grid gap-10 pb-14 pt-7 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:pb-20 lg:pt-12">
-            <div>
+          <section className="pb-14 pt-7 lg:pb-20 lg:pt-12">
+            <div className="max-w-4xl">
               <div className="glass-panel inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-secondary">
                 <span className="size-1.5 rounded-full bg-accent" /> Orientação para {city.name}
               </div>
@@ -119,10 +118,6 @@ export function CityPageTemplate({ city }: { city: CityPageData }) {
                 <ShieldCheck className="mt-0.5 size-4 shrink-0 text-secondary" aria-hidden="true" /> Avaliação individual, conforme disponibilidade e condições do acolhimento.
               </div>
             </div>
-            <div className="overflow-hidden rounded-3xl border border-border shadow-2xl shadow-background/30">
-              <img src={acolhimentoImage} width={1024} height={640} loading="lazy" decoding="async" alt="Ambiente terapêutico ilustrativo da proposta de acolhimento" className="aspect-[16/10] w-full object-cover" />
-              <div className="glass-panel-strong border-x-0 border-b-0 px-5 py-4 text-sm text-muted-foreground">Imagem ilustrativa de um ambiente de escuta e cuidado.</div>
-            </div>
           </section>
 
           <section className="border-y border-border py-9">
@@ -139,6 +134,23 @@ export function CityPageTemplate({ city }: { city: CityPageData }) {
               <p className="text-[15px] leading-relaxed text-muted-foreground sm:text-base">{city.localContext}</p>
             </div>
           </section>
+
+          {city.localResource ? (
+            <section className="border-b border-border py-14 lg:py-20">
+              <div className="grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:gap-16">
+                <div>
+                  <SectionLabel>Informação pública local</SectionLabel>
+                  <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">{city.localResource.heading}</h2>
+                </div>
+                <div>
+                  <p className="text-[15px] leading-relaxed text-muted-foreground sm:text-base">{city.localResource.text}</p>
+                  <a href={city.localResource.sourceUrl} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-secondary underline underline-offset-4">
+                    {city.localResource.sourceLabel} <ExternalLink className="size-4" aria-hidden="true" />
+                  </a>
+                </div>
+              </div>
+            </section>
+          ) : null}
 
           <section id="acolhimento" className="border-b border-border py-14 lg:py-20">
             <SectionLabel>Sobre o acolhimento</SectionLabel>

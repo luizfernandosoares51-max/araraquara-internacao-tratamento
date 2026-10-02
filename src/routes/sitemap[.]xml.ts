@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { getRouterInstance } from "@tanstack/react-start";
 
-import { cityPages } from "@/lib/city-pages";
+import { cityDirectory } from "@/lib/city-pages";
 import { siteUrl } from "@/lib/site";
 import {
   isSitemapRouteIncluded,
@@ -21,7 +21,7 @@ export const Route = createFileRoute("/sitemap.xml")({
         const cityRoute = router.routesById["/$citySlug"];
 
         if (isSitemapRouteIncluded(cityRoute)) {
-          for (const city of cityPages) {
+          for (const city of cityDirectory) {
             const location = router.buildLocation({
               to: "/$citySlug",
               params: { citySlug: `clinica-de-recuperacao-em-${city.slug}` },

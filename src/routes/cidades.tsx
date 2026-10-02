@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, MessageCircle, Phone } from "lucide-react";
 
-import { cityPages } from "@/lib/city-pages";
+import { cityDirectory } from "@/lib/city-pages";
 import { phoneDisplay, phoneHref, siteUrl, whatsappHref } from "@/lib/site";
 
 export const Route = createFileRoute("/cidades")({
@@ -63,7 +63,7 @@ function CidadesPage() {
               <span className="text-xs text-muted-foreground">Ver página</span>
             </Link>
           </li>
-          {cityPages.map((city) => (
+          {cityDirectory.map((city) => (
             <li key={city.slug}>
               <Link
                 to="/$citySlug"

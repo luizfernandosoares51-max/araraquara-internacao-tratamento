@@ -1,7 +1,7 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 
 import { CityPageTemplate } from "@/components/city-page-template";
-import { cityPageBySlug } from "@/lib/city-pages";
+import { templatedCityPageBySlug } from "@/lib/city-pages";
 import { facebookHref, instagramHref, siteUrl } from "@/lib/site";
 
 export const Route = createFileRoute("/$citySlug")({
@@ -9,7 +9,7 @@ export const Route = createFileRoute("/$citySlug")({
   loader: ({ params }) => {
     const prefix = "clinica-de-recuperacao-em-";
     if (!params.citySlug.startsWith(prefix)) throw notFound();
-    const city = cityPageBySlug[params.citySlug.slice(prefix.length)];
+    const city = templatedCityPageBySlug[params.citySlug.slice(prefix.length)];
     if (!city) throw notFound();
     return city;
   },

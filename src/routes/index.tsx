@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import redeApoioImage from "@/assets/rede-de-apoio-sao-paulo.png.asset.json";
 import { AraraquaraPhotoGallery } from "@/components/araraquara-photo-gallery";
-import { cityPages } from "@/lib/city-pages";
+import { cityDirectory } from "@/lib/city-pages";
 import {
   facebookHref,
   instagramHref,
@@ -317,7 +317,7 @@ function HomePage() {
                   Ver informações <ArrowRight className="size-4" aria-hidden="true" />
                 </Link>
               </article>
-              {cityPages.map((city) => (
+              {cityDirectory.map((city) => (
                 <article key={city.slug} className="glass-panel flex min-h-52 flex-col rounded-2xl p-5 sm:p-6">
                   <MapPin className="size-5 text-secondary" aria-hidden="true" />
                   <h3 className="mt-4 font-display text-lg font-semibold">{city.name}</h3>
