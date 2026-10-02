@@ -27,6 +27,8 @@ import { Route as TratamentoRouteImport } from './routes/tratamento'
 import { Route as VideosRouteImport } from './routes/videos'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRouteImport } from './routes/blog.alcoolismo-quando-o-consumo-se-torna-um-problema'
+import { Route as BlogComoEscolherUmaClinicaDeReabilitacaoRouteImport } from './routes/blog.como-escolher-uma-clinica-de-reabilitacao'
+import { Route as BlogComoFuncionaUmaClinicaDeReabilitacaoRouteImport } from './routes/blog.como-funciona-uma-clinica-de-reabilitacao'
 import { Route as BlogComoSaberSeUmaPessoaPrecisaDeUmaClinicaDeReabilitacaoRouteImport } from './routes/blog.como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao'
 import { Route as BlogDependenciaQuimicaEmAraraquaraTratamentoRouteImport } from './routes/blog.dependencia-quimica-em-araraquara-tratamento'
 import { Route as BlogDependenciaQuimicaSaoCarlosRouteImport } from './routes/blog.dependencia-quimica-sao-carlos'
@@ -129,6 +131,18 @@ const BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute =
     path: '/alcoolismo-quando-o-consumo-se-torna-um-problema',
     getParentRoute: () => BlogRoute,
   } as any)
+const BlogComoEscolherUmaClinicaDeReabilitacaoRoute =
+  BlogComoEscolherUmaClinicaDeReabilitacaoRouteImport.update({
+    id: '/como-escolher-uma-clinica-de-reabilitacao',
+    path: '/como-escolher-uma-clinica-de-reabilitacao',
+    getParentRoute: () => BlogRoute,
+  } as any)
+const BlogComoFuncionaUmaClinicaDeReabilitacaoRoute =
+  BlogComoFuncionaUmaClinicaDeReabilitacaoRouteImport.update({
+    id: '/como-funciona-uma-clinica-de-reabilitacao',
+    path: '/como-funciona-uma-clinica-de-reabilitacao',
+    getParentRoute: () => BlogRoute,
+  } as any)
 const BlogComoSaberSeUmaPessoaPrecisaDeUmaClinicaDeReabilitacaoRoute =
   BlogComoSaberSeUmaPessoaPrecisaDeUmaClinicaDeReabilitacaoRouteImport.update({
     id: '/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao',
@@ -178,6 +192,8 @@ export interface FileRoutesByFullPath {
   '/tratamento': typeof TratamentoRoute
   '/videos': typeof VideosRoute
   '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema': typeof BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute
+  '/blog/como-escolher-uma-clinica-de-reabilitacao': typeof BlogComoEscolherUmaClinicaDeReabilitacaoRoute
+  '/blog/como-funciona-uma-clinica-de-reabilitacao': typeof BlogComoFuncionaUmaClinicaDeReabilitacaoRoute
   '/blog/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao': typeof BlogComoSaberSeUmaPessoaPrecisaDeUmaClinicaDeReabilitacaoRoute
   '/blog/dependencia-quimica-em-araraquara-tratamento': typeof BlogDependenciaQuimicaEmAraraquaraTratamentoRoute
   '/blog/dependencia-quimica-sao-carlos': typeof BlogDependenciaQuimicaSaoCarlosRoute
@@ -202,6 +218,8 @@ export interface FileRoutesByTo {
   '/tratamento': typeof TratamentoRoute
   '/videos': typeof VideosRoute
   '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema': typeof BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute
+  '/blog/como-escolher-uma-clinica-de-reabilitacao': typeof BlogComoEscolherUmaClinicaDeReabilitacaoRoute
+  '/blog/como-funciona-uma-clinica-de-reabilitacao': typeof BlogComoFuncionaUmaClinicaDeReabilitacaoRoute
   '/blog/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao': typeof BlogComoSaberSeUmaPessoaPrecisaDeUmaClinicaDeReabilitacaoRoute
   '/blog/dependencia-quimica-em-araraquara-tratamento': typeof BlogDependenciaQuimicaEmAraraquaraTratamentoRoute
   '/blog/dependencia-quimica-sao-carlos': typeof BlogDependenciaQuimicaSaoCarlosRoute
@@ -228,6 +246,8 @@ export interface FileRoutesById {
   '/tratamento': typeof TratamentoRoute
   '/videos': typeof VideosRoute
   '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema': typeof BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute
+  '/blog/como-escolher-uma-clinica-de-reabilitacao': typeof BlogComoEscolherUmaClinicaDeReabilitacaoRoute
+  '/blog/como-funciona-uma-clinica-de-reabilitacao': typeof BlogComoFuncionaUmaClinicaDeReabilitacaoRoute
   '/blog/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao': typeof BlogComoSaberSeUmaPessoaPrecisaDeUmaClinicaDeReabilitacaoRoute
   '/blog/dependencia-quimica-em-araraquara-tratamento': typeof BlogDependenciaQuimicaEmAraraquaraTratamentoRoute
   '/blog/dependencia-quimica-sao-carlos': typeof BlogDependenciaQuimicaSaoCarlosRoute
@@ -255,6 +275,8 @@ export interface FileRouteTypes {
     | '/tratamento'
     | '/videos'
     | '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema'
+    | '/blog/como-escolher-uma-clinica-de-reabilitacao'
+    | '/blog/como-funciona-uma-clinica-de-reabilitacao'
     | '/blog/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao'
     | '/blog/dependencia-quimica-em-araraquara-tratamento'
     | '/blog/dependencia-quimica-sao-carlos'
@@ -279,6 +301,8 @@ export interface FileRouteTypes {
     | '/tratamento'
     | '/videos'
     | '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema'
+    | '/blog/como-escolher-uma-clinica-de-reabilitacao'
+    | '/blog/como-funciona-uma-clinica-de-reabilitacao'
     | '/blog/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao'
     | '/blog/dependencia-quimica-em-araraquara-tratamento'
     | '/blog/dependencia-quimica-sao-carlos'
@@ -304,6 +328,8 @@ export interface FileRouteTypes {
     | '/tratamento'
     | '/videos'
     | '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema'
+    | '/blog/como-escolher-uma-clinica-de-reabilitacao'
+    | '/blog/como-funciona-uma-clinica-de-reabilitacao'
     | '/blog/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao'
     | '/blog/dependencia-quimica-em-araraquara-tratamento'
     | '/blog/dependencia-quimica-sao-carlos'
@@ -459,6 +485,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRouteImport
       parentRoute: typeof BlogRoute
     }
+    '/blog/como-escolher-uma-clinica-de-reabilitacao': {
+      id: '/blog/como-escolher-uma-clinica-de-reabilitacao'
+      path: '/como-escolher-uma-clinica-de-reabilitacao'
+      fullPath: '/blog/como-escolher-uma-clinica-de-reabilitacao'
+      preLoaderRoute: typeof BlogComoEscolherUmaClinicaDeReabilitacaoRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/como-funciona-uma-clinica-de-reabilitacao': {
+      id: '/blog/como-funciona-uma-clinica-de-reabilitacao'
+      path: '/como-funciona-uma-clinica-de-reabilitacao'
+      fullPath: '/blog/como-funciona-uma-clinica-de-reabilitacao'
+      preLoaderRoute: typeof BlogComoFuncionaUmaClinicaDeReabilitacaoRouteImport
+      parentRoute: typeof BlogRoute
+    }
     '/blog/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao': {
       id: '/blog/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao'
       path: '/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao'
@@ -499,6 +539,8 @@ declare module '@tanstack/react-router' {
 
 interface BlogRouteChildren {
   BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute: typeof BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute
+  BlogComoEscolherUmaClinicaDeReabilitacaoRoute: typeof BlogComoEscolherUmaClinicaDeReabilitacaoRoute
+  BlogComoFuncionaUmaClinicaDeReabilitacaoRoute: typeof BlogComoFuncionaUmaClinicaDeReabilitacaoRoute
   BlogComoSaberSeUmaPessoaPrecisaDeUmaClinicaDeReabilitacaoRoute: typeof BlogComoSaberSeUmaPessoaPrecisaDeUmaClinicaDeReabilitacaoRoute
   BlogDependenciaQuimicaEmAraraquaraTratamentoRoute: typeof BlogDependenciaQuimicaEmAraraquaraTratamentoRoute
   BlogDependenciaQuimicaSaoCarlosRoute: typeof BlogDependenciaQuimicaSaoCarlosRoute
@@ -510,6 +552,10 @@ interface BlogRouteChildren {
 const BlogRouteChildren: BlogRouteChildren = {
   BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute:
     BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute,
+  BlogComoEscolherUmaClinicaDeReabilitacaoRoute:
+    BlogComoEscolherUmaClinicaDeReabilitacaoRoute,
+  BlogComoFuncionaUmaClinicaDeReabilitacaoRoute:
+    BlogComoFuncionaUmaClinicaDeReabilitacaoRoute,
   BlogComoSaberSeUmaPessoaPrecisaDeUmaClinicaDeReabilitacaoRoute:
     BlogComoSaberSeUmaPessoaPrecisaDeUmaClinicaDeReabilitacaoRoute,
   BlogDependenciaQuimicaEmAraraquaraTratamentoRoute:
