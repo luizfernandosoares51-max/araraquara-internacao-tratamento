@@ -23,7 +23,7 @@
 - [x] Fortalecer a autoridade temática e a arquitetura interna da Home
 - [x] Otimizar imagens principais e metadados sociais da Home
 - [x] Validar a Home otimizada em desktop, celular e HTML para Googlebot
-- [ ] Criar cinco artigos estratégicos com pautas, imagens e metadados próprios
-- [ ] Conectar os novos artigos ao Blog, às páginas temáticas e entre si
-- [ ] Validar rotas, sitemap, indexabilidade e apresentação em celular e computador
+- [x] Criar cinco artigos estratégicos com pautas, imagens e metadados próprios
+- [x] Conectar os novos artigos ao Blog, às páginas temáticas e entre si
+- [x] Validar rotas, sitemap, indexabilidade e apresentação em celular e computador
 - [ ] Publicar os cinco novos artigos
