@@ -13,6 +13,7 @@ import {
   ShieldCheck,
   Users,
 } from "lucide-react";
+import type { ReactNode } from "react";
 
 import guidanceImage from "@/assets/blog-dependencia-quimica-sinais.jpg";
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
@@ -166,7 +167,7 @@ export const Route = createFileRoute("/clinica-de-recuperacao-em-bauru-sp")({
   component: BauruPage,
 });
 
-function Eyebrow({ children }: { children: React.ReactNode }) {
+function Eyebrow({ children }: { children: ReactNode }) {
   return <p className="text-xs font-bold uppercase tracking-widest text-brand">{children}</p>;
 }
 
