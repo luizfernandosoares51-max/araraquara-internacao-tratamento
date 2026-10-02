@@ -7,10 +7,10 @@
 - [x] Atualizar a página simples de cidades
 - [x] Garantir caminhos internos de tratamento, acolhimento, família e contato
 - [x] Validar desktop, celular e contatos
-- [ ] Diferenciar editorialmente as 10 páginas locais ainda compartilhadas
+- [x] Diferenciar editorialmente as 10 páginas locais ainda compartilhadas
 - [x] Corrigir afirmações de unidades e parceiros sem comprovação na Home
 - [x] Fixar o sitemap no domínio oficial
-- [ ] Validar SEO, links, contatos e responsividade das 15 páginas
+- [x] Validar SEO, links, contatos e responsividade das 15 páginas
 - [x] Transformar a raiz `/` em apresentação institucional, preservando a página de Araraquara.
 - [x] Corrigir o retorno do Blog para a página inicial institucional
 - [x] Publicar e listar o artigo sobre dependência química em São Carlos
