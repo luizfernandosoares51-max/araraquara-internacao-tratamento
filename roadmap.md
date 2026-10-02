@@ -17,3 +17,4 @@
 - [x] Adicionar retorno à página inicial na tela de Cidades
 - [x] Adicionar retorno à página inicial na página de Vídeos
 - [x] Criar e validar a página local exclusiva de Ribeirão Preto
+- [ ] Auditar tecnicamente e editorialmente as 15 páginas locais antes de qualquer correção
