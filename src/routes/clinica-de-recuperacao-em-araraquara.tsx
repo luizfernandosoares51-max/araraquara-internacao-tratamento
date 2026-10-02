@@ -31,7 +31,7 @@ import {
 const pageUrl = `${siteUrl}/clinica-de-recuperacao-em-araraquara`;
 const araraquaraFacebookHref = "https://www.facebook.com/share/1drREi2gvi/";
 const cityHealthNetworkUrl =
-  "https://www.araraquara.sp.gov.br/secretarias/saude/sobre-a-secretaria-saude/atencao-especializada";
+  "https://araraquara.sp.gov.br/atencao-especializada";
 const cityCapsInformationUrl =
   "https://araraquara.sp.gov.br/atendimento-psicossocial-e-tema-do-canal-direto-com-a-prefeitura";
 const ministryRapsUrl = "https://www.gov.br/saude/pt-br/composicao/saes/desmad/raps";

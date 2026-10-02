@@ -23,6 +23,12 @@ export type CityPageData = {
   seoDescription: string;
   relatedSlugs: string[];
   faqs: CityFaq[];
+  localResource?: {
+    heading: string;
+    text: string;
+    sourceLabel: string;
+    sourceUrl: string;
+  };
 };
 
 export const cityPages: CityPageData[] = [
@@ -149,11 +155,18 @@ export const cityPages: CityPageData[] = [
     contactText: "Ligue ou envie uma mensagem para explicar a situação. A equipe informa como funciona o acolhimento em Araraquara e, se for possível avançar, combina as etapas seguintes.",
     seoDescription: "Famílias de Matão encontram orientação sobre dependência química, alcoolismo e acolhimento na unidade da Central localizada em Araraquara.",
     relatedSlugs: ["taquaritinga-sp", "jaboticabal-sp"],
+    localResource: {
+      heading: "Rede municipal de saúde mental em Matão",
+      text: "A Prefeitura de Matão informa que a rede municipal reúne serviços de saúde mental, entre eles CAPS AD, CAPS II e Ambulatório de Saúde Mental. Esses equipamentos pertencem à rede pública local e não possuem vínculo com a Central. Consultar o canal oficial ajuda a família a conhecer portas de entrada existentes no próprio município.",
+      sourceLabel: "Consultar informações oficiais da Prefeitura de Matão",
+      sourceUrl: "https://www.matao.sp.gov.br/noticias/geral/matao-reforca-compromisso-com-a-saude-mental-na-semana-da-luta-antimanicomial",
+    },
     faqs: [
       { question: "Há uma clínica da Central em Matão?", answer: "Não. A Central possui unidade física em Araraquara. Moradores de Matão podem pedir informações sobre o acolhimento realizado lá." },
       { question: "O que contar no primeiro contato?", answer: "A família pode descrever mudanças observadas, histórico conhecido, situação atual e principais dúvidas. A equipe indicará outras informações necessárias." },
       { question: "Buscar ajuda significa decidir pela internação?", answer: "Não. Pedir orientação não obriga a família a seguir com acolhimento ou internação. A situação deve ser avaliada." },
       { question: "Como falar com a equipe?", answer: "O contato pode ser feito pelo WhatsApp ou pelo telefone informado nesta página." },
+      { question: "Matão possui atendimento público para álcool e outras drogas?", answer: "A Prefeitura informa que a rede municipal inclui CAPS AD, CAPS II e Ambulatório de Saúde Mental. A Central não integra esses serviços; condições e formas de acesso devem ser confirmadas no canal oficial do município." },
     ],
   },
   {
@@ -175,11 +188,18 @@ export const cityPages: CityPageData[] = [
     contactText: "Use o WhatsApp para enviar uma mensagem ou ligue diretamente. A equipe responderá sobre o processo em Araraquara sem criar expectativa de resultado ou admissão automática.",
     seoDescription: "Orientação para famílias de Américo Brasiliense sobre acolhimento para álcool e drogas na unidade da Central localizada em Araraquara.",
     relatedSlugs: ["sao-carlos-sp", "matao-sp"],
+    localResource: {
+      heading: "Onde consultar a rede de saúde de Américo Brasiliense",
+      text: "A Prefeitura mantém uma página oficial do Departamento de Saúde com informações sobre os equipamentos municipais, incluindo o CAPS Doçura. O serviço é público e não possui parceria com a Central. A família deve confirmar diretamente no canal municipal quais atendimentos são oferecidos e como acessá-los.",
+      sourceLabel: "Consultar o Departamento de Saúde de Américo Brasiliense",
+      sourceUrl: "https://americobrasiliense.sp.gov.br/site/saude/",
+    },
     faqs: [
       { question: "A unidade fica em Américo Brasiliense?", answer: "Não. A unidade física da Central fica em Araraquara. Esta página atende à busca de famílias de Américo Brasiliense por orientação." },
       { question: "Posso conhecer o processo antes de ir à unidade?", answer: "Sim. A equipe explica por telefone ou WhatsApp as etapas e condições iniciais antes de qualquer procedimento presencial." },
       { question: "Como a família pode ajudar sem discutir?", answer: "É útil escolher um momento seguro, falar sobre fatos concretos e evitar ameaças. A orientação profissional pode apoiar a organização dos próximos passos." },
       { question: "O acolhimento depende de disponibilidade?", answer: "Sim. Além da avaliação individual, é necessário confirmar disponibilidade e demais condições com a equipe." },
+      { question: "Onde consultar apoio público em Américo Brasiliense?", answer: "O Departamento de Saúde municipal mantém informações oficiais sobre seus equipamentos, incluindo o CAPS Doçura. Esse serviço público não possui vínculo com a Central." },
     ],
   },
   {
@@ -201,11 +221,18 @@ export const cityPages: CityPageData[] = [
     contactText: "A família pode ligar ou usar o WhatsApp para apresentar o contexto. Se houver possibilidade de seguir, serão explicados os procedimentos relacionados à unidade de Araraquara.",
     seoDescription: "Informações para famílias de Taquaritinga sobre dependência química, alcoolismo e possível acolhimento na unidade da Central em Araraquara.",
     relatedSlugs: ["matao-sp", "jaboticabal-sp"],
+    localResource: {
+      heading: "Informações públicas de saúde mental em Taquaritinga",
+      text: "O município mantém serviços de saúde mental sob responsabilidade da rede pública. Como atribuições e formas de acesso podem mudar, a orientação segura é consultar a Prefeitura antes de procurar atendimento. Não existe parceria declarada entre esses serviços e a Central.",
+      sourceLabel: "Acessar o portal oficial de Taquaritinga",
+      sourceUrl: "https://taquaritinga.sp.gov.br/",
+    },
     faqs: [
       { question: "Existe unidade física em Taquaritinga?", answer: "Não. A unidade da Central de Acolhimento e Reabilitação está em Araraquara." },
       { question: "A família pode pedir orientação sem a pessoa presente?", answer: "A família pode fazer o contato inicial e relatar o contexto. A equipe explicará quais participações e avaliações serão necessárias depois." },
       { question: "Como funciona a avaliação para acolhimento?", answer: "A situação é analisada individualmente a partir das informações disponíveis e das condições aplicáveis. A avaliação não garante admissão." },
       { question: "Há prazo fixo de tratamento?", answer: "Não. Duração e acompanhamento dependem das necessidades e da evolução de cada pessoa, sem promessa de prazo ou resultado." },
+      { question: "Onde confirmar os serviços de saúde mental de Taquaritinga?", answer: "A confirmação deve ser feita diretamente nos canais oficiais da Prefeitura, pois atribuições, horários e formas de acesso podem mudar. A Central não pertence à rede pública municipal." },
     ],
   },
   {
@@ -227,11 +254,18 @@ export const cityPages: CityPageData[] = [
     contactText: "Moradores de Ibitinga podem falar com a equipe sem deslocamento inicial. Havendo possibilidade de acolhimento, os detalhes da unidade em Araraquara são combinados diretamente.",
     seoDescription: "Famílias de Ibitinga podem conhecer o acolhimento para dependência química e alcoolismo realizado na unidade da Central em Araraquara.",
     relatedSlugs: ["itapolis-sp", "bauru-sp"],
+    localResource: {
+      heading: "Saúde mental na rede municipal de Ibitinga",
+      text: "A saúde municipal de Ibitinga é administrada pelo Serviço Autônomo Municipal de Saúde, que apresenta sua estrutura e canais oficiais. O planejamento municipal inclui uma Coordenadoria de Saúde Mental. Essa referência é pública e independente da Central.",
+      sourceLabel: "Conhecer o SAMS de Ibitinga",
+      sourceUrl: "https://samsibitinga.sp.gov.br/sobre/",
+    },
     faqs: [
       { question: "A Central tem unidade em Ibitinga?", answer: "Não. A unidade física está em Araraquara. O site oferece esta página para orientar famílias de Ibitinga sobre essa possibilidade." },
       { question: "Como obter informações sem viajar?", answer: "WhatsApp e telefone permitem conversar com a equipe, descrever a situação e conhecer as condições iniciais." },
       { question: "O acolhimento é confirmado pela internet?", answer: "Não. O site oferece informação e contato. Qualquer possibilidade depende de conversa, avaliação, disponibilidade e procedimentos adequados." },
       { question: "Quanto tempo dura o acompanhamento?", answer: "Não há duração única. O período depende das necessidades e deve ser reavaliado, sem garantias antecipadas." },
+      { question: "Quem administra a saúde municipal em Ibitinga?", answer: "A gestão é realizada pelo Serviço Autônomo Municipal de Saúde, o SAMS. A Central é independente desse órgão e apenas indica a fonte oficial para consulta da população." },
     ],
   },
   {
@@ -253,11 +287,18 @@ export const cityPages: CityPageData[] = [
     contactText: "A conversa pode começar por mensagem ou ligação. A equipe informa se é possível avaliar o caso e quais seriam os passos seguintes.",
     seoDescription: "Orientação para moradores de Itápolis sobre dependência química, alcoolismo e acolhimento na unidade física da Central em Araraquara.",
     relatedSlugs: ["ibitinga-sp", "taquaritinga-sp"],
+    localResource: {
+      heading: "Rede pública de saúde mental em Itápolis",
+      text: "A Secretaria Municipal de Saúde de Itápolis reúne informações sobre os serviços públicos do município, incluindo o CAPS Guido Cavicchiolli. A Central não integra essa rede e não mantém parceria declarada com o serviço; a referência serve para orientar a consulta a uma fonte oficial.",
+      sourceLabel: "Consultar a Secretaria de Saúde de Itápolis",
+      sourceUrl: "https://www.itapolis.sp.gov.br/portal/secretarias/17/secretaria-municipal-de-saude/",
+    },
     faqs: [
       { question: "Existe uma filial da Central em Itápolis?", answer: "Não. A única unidade física informada fica em Araraquara. Famílias de Itápolis podem entrar em contato para conhecer essa estrutura." },
       { question: "Quais informações ajudam na conversa inicial?", answer: "Histórico conhecido, situação atual, impactos na rotina e dúvidas da família ajudam a equipe a compreender o contexto." },
       { question: "A internação involuntária é uma solução automática?", answer: "Não. Ela exige avaliação responsável, indicação profissional e cumprimento da legislação aplicável. Cada situação é individual." },
       { question: "O primeiro contato tem compromisso?", answer: "Não. A conversa inicial serve para orientação e esclarecimento das possibilidades." },
+      { question: "Itápolis possui CAPS na rede pública?", answer: "A Secretaria Municipal de Saúde informa o CAPS Guido Cavicchiolli entre seus serviços. Ele pertence à rede pública local e não possui parceria declarada com a Central." },
     ],
   },
   {
@@ -279,11 +320,18 @@ export const cityPages: CityPageData[] = [
     contactText: "WhatsApp e ligação estão disponíveis para o atendimento inicial. Se o acolhimento for considerado possível, a equipe orienta sobre a chegada à unidade de Araraquara.",
     seoDescription: "Famílias de Ibaté podem pedir orientação sobre álcool, drogas e acolhimento na unidade da Central de Acolhimento em Araraquara.",
     relatedSlugs: ["sao-carlos-sp", "descalvado-sp"],
+    localResource: {
+      heading: "Como localizar apoio público em Ibaté",
+      text: "A Prefeitura de Ibaté disponibiliza os canais da Secretaria Municipal de Saúde e uma relação oficial de telefones, na qual consta o Ambulatório de Saúde Mental. A página não atribui um CAPS específico à cidade; por isso, informações sobre o atendimento devem ser confirmadas diretamente com o município.",
+      sourceLabel: "Consultar os telefones oficiais de Ibaté",
+      sourceUrl: "https://www.ibate.sp.gov.br/portal/telefones",
+    },
     faqs: [
       { question: "A Central está localizada em Ibaté?", answer: "Não. A unidade física fica em Araraquara. Famílias de Ibaté podem consultar a equipe sobre o acolhimento nessa unidade." },
       { question: "A proximidade garante uma vaga?", answer: "Não. A cidade de origem não garante acolhimento. É necessário avaliar a situação e confirmar disponibilidade e condições." },
       { question: "Posso falar sobre um familiar pelo WhatsApp?", answer: "Sim. O contato inicial pode apresentar a situação de forma resumida; a equipe indicará como aprofundar as informações com privacidade." },
       { question: "Há promessa de recuperação?", answer: "Não. O cuidado depende de diversos fatores e não é responsável prometer cura ou resultado." },
+      { question: "Onde buscar informação pública de saúde mental em Ibaté?", answer: "A Prefeitura lista o Ambulatório de Saúde Mental entre seus contatos oficiais. Como a fonte municipal consultada não identifica um CAPS específico, a família deve confirmar diretamente com a Secretaria de Saúde quais serviços atendem sua necessidade." },
     ],
   },
   {
@@ -305,11 +353,18 @@ export const cityPages: CityPageData[] = [
     contactText: "Envie uma mensagem ou ligue para a Central. A equipe explica o atendimento em Araraquara e informa o que pode ser feito a partir do contexto apresentado.",
     seoDescription: "Orientação a famílias de Descalvado que procuram acolhimento para dependência química e alcoolismo na unidade da Central em Araraquara.",
     relatedSlugs: ["porto-ferreira-sp", "sao-carlos-sp"],
+    localResource: {
+      heading: "Rede municipal de saúde em Descalvado",
+      text: "A Secretaria Municipal de Saúde de Descalvado apresenta o CAPS entre os serviços públicos disponíveis. A Central não pertence à rede municipal e não declara parceria com o CAPS. Em caso de dúvida sobre acesso, horários ou atribuições, a família deve consultar a fonte oficial.",
+      sourceLabel: "Consultar a Secretaria de Saúde de Descalvado",
+      sourceUrl: "https://www.descalvado.sp.gov.br/novoportal/prefeitura/index.php/portal/secretarias/45c48cce2e2d7fbdea1afc51c7c6ad26",
+    },
     faqs: [
       { question: "Há unidade da Central em Descalvado?", answer: "Não. A unidade física está em Araraquara. O contato de famílias de Descalvado é feito para conhecer essa possibilidade." },
       { question: "Como saber se é hora de pedir ajuda?", answer: "Prejuízos repetidos, situações de risco e dificuldade de mudança justificam buscar orientação. A definição de cuidado depende de avaliação." },
       { question: "A família deve levar a pessoa diretamente?", answer: "Não é indicado realizar procedimentos por conta própria. Primeiro converse com a equipe e confirme avaliação, disponibilidade e orientações." },
       { question: "O telefone funciona para dúvidas iniciais?", answer: "Sim. A família pode ligar para esclarecer o processo antes de qualquer decisão." },
+      { question: "Descalvado possui serviço público de saúde mental?", answer: "A Secretaria Municipal de Saúde apresenta o CAPS entre seus serviços. A Central não faz parte dessa rede, e informações de acesso devem ser confirmadas diretamente com o município." },
     ],
   },
   {
@@ -331,11 +386,18 @@ export const cityPages: CityPageData[] = [
     contactText: "O WhatsApp e o telefone permitem iniciar o atendimento. Se houver indicação, disponibilidade e condições, a equipe combina os procedimentos necessários.",
     seoDescription: "Famílias de Porto Ferreira encontram informações sobre acolhimento para álcool e drogas na unidade física da Central em Araraquara.",
     relatedSlugs: ["descalvado-sp", "rio-claro-sp"],
+    localResource: {
+      heading: "Serviços públicos de saúde em Porto Ferreira",
+      text: "A Prefeitura de Porto Ferreira mantém uma relação oficial das unidades municipais de saúde. Esse canal é a referência adequada para confirmar quais serviços de saúde mental estão disponíveis e como procurá-los. A Central não faz parte da rede pública local.",
+      sourceLabel: "Consultar as unidades de saúde de Porto Ferreira",
+      sourceUrl: "https://www.portoferreira.sp.gov.br/secretarias/saude/unidades-de-saude",
+    },
     faqs: [
       { question: "Existe unidade da Central em Porto Ferreira?", answer: "Não. A unidade física fica em Araraquara. Esta página esclarece a famílias de Porto Ferreira como consultar essa possibilidade." },
       { question: "Preciso agendar antes de ir?", answer: "A família deve entrar em contato antes de qualquer deslocamento para apresentar a situação e confirmar orientações e disponibilidade." },
       { question: "O tratamento para alcoolismo tem resultado garantido?", answer: "Não. Nenhum cuidado responsável deve prometer resultado. A evolução varia conforme múltiplos fatores individuais." },
       { question: "Como começo a conversa?", answer: "Basta ligar ou enviar a mensagem inicial pelo WhatsApp. A equipe fará perguntas para compreender o contexto." },
+      { question: "Onde consultar as unidades públicas de saúde de Porto Ferreira?", answer: "A Prefeitura mantém uma relação oficial das unidades municipais. A consulta deve ser feita nesse canal, que é independente da Central e pode informar os serviços disponíveis no momento." },
     ],
   },
   {
@@ -357,11 +419,18 @@ export const cityPages: CityPageData[] = [
     contactText: "O primeiro atendimento ocorre por telefone ou WhatsApp. A localização em Araraquara e os possíveis procedimentos são apresentados com antecedência.",
     seoDescription: "Informações para famílias de Jaboticabal sobre dependência química, alcoolismo e acolhimento na unidade da Central em Araraquara.",
     relatedSlugs: ["taquaritinga-sp", "ribeirao-preto-sp"],
+    localResource: {
+      heading: "Atenção psicossocial em Jaboticabal",
+      text: "A Prefeitura de Jaboticabal informa que o CAPS II integra a rede municipal e atende demandas de saúde mental, inclusive situações relacionadas a álcool e outras drogas. Trata-se de um serviço público sem vínculo ou parceria declarada com a Central.",
+      sourceLabel: "Ler a informação oficial sobre o CAPS II de Jaboticabal",
+      sourceUrl: "https://www.jaboticabal.sp.gov.br/portal/noticias/0/3/18603/saude-nova-sede-do-caps-ii-e-inaugurada-no-jardim-kennedy",
+    },
     faqs: [
       { question: "A Central tem clínica em Jaboticabal?", answer: "Não. A unidade física fica em Araraquara. Famílias de Jaboticabal podem consultar o atendimento realizado nessa unidade." },
       { question: "Buscar informação compromete a família com o acolhimento?", answer: "Não. O contato inicial é orientativo e serve para esclarecer dúvidas e avaliar possibilidades." },
       { question: "Como falar com alguém que recusa ajuda?", answer: "Evite confronto em momentos de risco e procure orientação. Cada caso exige cuidado; não há uma abordagem única que garanta aceitação." },
       { question: "A internação involuntária pode ser decidida pela família sozinha?", answer: "Não. Essa modalidade exige critérios legais e profissionais aplicáveis e nunca deve ser realizada por conta própria." },
+      { question: "O CAPS II de Jaboticabal atende questões relacionadas a álcool e drogas?", answer: "A Prefeitura informa que o serviço atende demandas de saúde mental, inclusive situações relacionadas a álcool e outras drogas. O CAPS II é municipal e não possui vínculo com a Central." },
     ],
   },
   {
@@ -383,16 +452,33 @@ export const cityPages: CityPageData[] = [
     contactText: "Ligue ou envie mensagem para a Central. Se a situação puder seguir para avaliação, a equipe orientará como organizar os próximos passos em relação à unidade de Araraquara.",
     seoDescription: "Orientação a famílias de Franca que buscam informações sobre acolhimento para dependência química e alcoolismo na Central em Araraquara.",
     relatedSlugs: ["ribeirao-preto-sp", "jaboticabal-sp"],
+    localResource: {
+      heading: "Rede de Atenção Psicossocial de Franca",
+      text: "A Prefeitura de Franca mantém uma Carta de Serviços para a Rede de Atenção Psicossocial, onde a população pode conferir orientações e canais atuais. A rede municipal é independente da Central e deve ser procurada diretamente para informações sobre atendimento público.",
+      sourceLabel: "Consultar a RAPS no portal oficial de Franca",
+      sourceUrl: "https://www3.franca.sp.gov.br/cartadeservicos/servicos/rede-de-ateno-psicossocial-de-franca-raps",
+    },
     faqs: [
       { question: "Existe unidade da Central em Franca?", answer: "Não. A Central possui unidade física em Araraquara. O contato de Franca serve para consultar essa possibilidade de acolhimento." },
       { question: "Como avaliar o atendimento à distância?", answer: "Comece pelo telefone ou WhatsApp, faça perguntas sobre o processo e só organize qualquer deslocamento depois de receber as orientações necessárias." },
       { question: "A dependência química tem solução garantida?", answer: "Não existe garantia de resultado. O cuidado é individual e a evolução depende de diversos fatores." },
       { question: "A Central recebe pessoas de cidades mais distantes?", answer: "A equipe pode avaliar contatos de diferentes cidades, mas toda possibilidade depende do caso, da disponibilidade e das condições do acolhimento." },
+      { question: "Franca possui rede pública para saúde mental e álcool e drogas?", answer: "A Prefeitura mantém a Rede de Atenção Psicossocial e publica seus serviços em uma Carta de Serviços. Essa rede é independente da Central; a família deve consultar o portal oficial para informações atuais." },
     ],
   },
 ];
 
-export const cityPageBySlug = Object.fromEntries(cityPages.map((city) => [city.slug, city])) as Record<
-  string,
-  CityPageData
->;
+const dedicatedCitySlugs = new Set(["sao-carlos-sp", "rio-claro-sp", "bauru-sp", "ribeirao-preto-sp"]);
+
+export const templatedCityPages = cityPages.filter((city) => !dedicatedCitySlugs.has(city.slug));
+
+export const templatedCityPageBySlug = Object.fromEntries(
+  templatedCityPages.map((city) => [city.slug, city]),
+) as Record<string, CityPageData>;
+
+export const cityDirectory = cityPages.map(({ slug, name, preposition, relatedSlugs }) => ({
+  slug,
+  name,
+  preposition,
+  relatedSlugs,
+}));

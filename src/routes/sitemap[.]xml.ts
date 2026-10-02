@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { getRouterInstance } from "@tanstack/react-start";
 
-import { cityPages } from "@/lib/city-pages";
+import { cityDirectory } from "@/lib/city-pages";
+import { siteUrl } from "@/lib/site";
 import {
   isSitemapRouteIncluded,
   sitemapPathForLocation,
@@ -14,13 +15,13 @@ export const Route = createFileRoute("/sitemap.xml")({
   staticData: { sitemap: false },
   server: {
     handlers: {
-      GET: async ({ request }) => {
+      GET: async () => {
         const router = await getRouterInstance();
         const entries: SitemapEntry[] = sitemapStaticPaths(router).map((path) => ({ path }));
         const cityRoute = router.routesById["/$citySlug"];
 
         if (isSitemapRouteIncluded(cityRoute)) {
-          for (const city of cityPages) {
+          for (const city of cityDirectory) {
             const location = router.buildLocation({
               to: "/$citySlug",
               params: { citySlug: `clinica-de-recuperacao-em-${city.slug}` },
@@ -39,7 +40,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           });
         }
 
-        return new Response(sitemapXML(new URL(request.url).origin, entries), {
+        return new Response(sitemapXML(siteUrl, entries), {
           headers: {
             "Content-Type": "application/xml",
             "Cache-Control": "public, max-age=3600",
