@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep high-value city SEO pages as explicit route files while retaining the dynamic city route for the remaining cities, so direct crawler requests receive stable route-specific content.
