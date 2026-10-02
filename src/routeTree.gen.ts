@@ -26,8 +26,11 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TratamentoRouteImport } from './routes/tratamento'
 import { Route as VideosRouteImport } from './routes/videos'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRouteImport } from './routes/blog.alcoolismo-quando-o-consumo-se-torna-um-problema'
+import { Route as BlogComoSaberSeUmaPessoaPrecisaDeUmaClinicaDeReabilitacaoRouteImport } from './routes/blog.como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao'
 import { Route as BlogDependenciaQuimicaEmAraraquaraTratamentoRouteImport } from './routes/blog.dependencia-quimica-em-araraquara-tratamento'
 import { Route as BlogDependenciaQuimicaSaoCarlosRouteImport } from './routes/blog.dependencia-quimica-sao-carlos'
+import { Route as BlogDependenciaQuimicaSinaisConsequenciasTratamentoRouteImport } from './routes/blog.dependencia-quimica-sinais-consequencias-tratamento'
 import { Route as BlogDependenciaQuimicaSinaisTratamentoRouteImport } from './routes/blog.dependencia-quimica-sinais-tratamento'
 
 const IndexRoute = IndexRouteImport.update({
@@ -120,6 +123,18 @@ const BlogIndexRoute = BlogIndexRouteImport.update({
   path: '/',
   getParentRoute: () => BlogRoute,
 } as any)
+const BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute =
+  BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRouteImport.update({
+    id: '/alcoolismo-quando-o-consumo-se-torna-um-problema',
+    path: '/alcoolismo-quando-o-consumo-se-torna-um-problema',
+    getParentRoute: () => BlogRoute,
+  } as any)
+const BlogComoSaberSeUmaPessoaPrecisaDeUmaClinicaDeReabilitacaoRoute =
+  BlogComoSaberSeUmaPessoaPrecisaDeUmaClinicaDeReabilitacaoRouteImport.update({
+    id: '/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao',
+    path: '/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao',
+    getParentRoute: () => BlogRoute,
+  } as any)
 const BlogDependenciaQuimicaEmAraraquaraTratamentoRoute =
   BlogDependenciaQuimicaEmAraraquaraTratamentoRouteImport.update({
     id: '/dependencia-quimica-em-araraquara-tratamento',
@@ -130,6 +145,12 @@ const BlogDependenciaQuimicaSaoCarlosRoute =
   BlogDependenciaQuimicaSaoCarlosRouteImport.update({
     id: '/dependencia-quimica-sao-carlos',
     path: '/dependencia-quimica-sao-carlos',
+    getParentRoute: () => BlogRoute,
+  } as any)
+const BlogDependenciaQuimicaSinaisConsequenciasTratamentoRoute =
+  BlogDependenciaQuimicaSinaisConsequenciasTratamentoRouteImport.update({
+    id: '/dependencia-quimica-sinais-consequencias-tratamento',
+    path: '/dependencia-quimica-sinais-consequencias-tratamento',
     getParentRoute: () => BlogRoute,
   } as any)
 const BlogDependenciaQuimicaSinaisTratamentoRoute =
@@ -156,8 +177,11 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tratamento': typeof TratamentoRoute
   '/videos': typeof VideosRoute
+  '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema': typeof BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute
+  '/blog/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao': typeof BlogComoSaberSeUmaPessoaPrecisaDeUmaClinicaDeReabilitacaoRoute
   '/blog/dependencia-quimica-em-araraquara-tratamento': typeof BlogDependenciaQuimicaEmAraraquaraTratamentoRoute
   '/blog/dependencia-quimica-sao-carlos': typeof BlogDependenciaQuimicaSaoCarlosRoute
+  '/blog/dependencia-quimica-sinais-consequencias-tratamento': typeof BlogDependenciaQuimicaSinaisConsequenciasTratamentoRoute
   '/blog/dependencia-quimica-sinais-tratamento': typeof BlogDependenciaQuimicaSinaisTratamentoRoute
   '/blog/': typeof BlogIndexRoute
 }
@@ -177,8 +201,11 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tratamento': typeof TratamentoRoute
   '/videos': typeof VideosRoute
+  '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema': typeof BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute
+  '/blog/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao': typeof BlogComoSaberSeUmaPessoaPrecisaDeUmaClinicaDeReabilitacaoRoute
   '/blog/dependencia-quimica-em-araraquara-tratamento': typeof BlogDependenciaQuimicaEmAraraquaraTratamentoRoute
   '/blog/dependencia-quimica-sao-carlos': typeof BlogDependenciaQuimicaSaoCarlosRoute
+  '/blog/dependencia-quimica-sinais-consequencias-tratamento': typeof BlogDependenciaQuimicaSinaisConsequenciasTratamentoRoute
   '/blog/dependencia-quimica-sinais-tratamento': typeof BlogDependenciaQuimicaSinaisTratamentoRoute
   '/blog': typeof BlogIndexRoute
 }
@@ -200,8 +227,11 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tratamento': typeof TratamentoRoute
   '/videos': typeof VideosRoute
+  '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema': typeof BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute
+  '/blog/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao': typeof BlogComoSaberSeUmaPessoaPrecisaDeUmaClinicaDeReabilitacaoRoute
   '/blog/dependencia-quimica-em-araraquara-tratamento': typeof BlogDependenciaQuimicaEmAraraquaraTratamentoRoute
   '/blog/dependencia-quimica-sao-carlos': typeof BlogDependenciaQuimicaSaoCarlosRoute
+  '/blog/dependencia-quimica-sinais-consequencias-tratamento': typeof BlogDependenciaQuimicaSinaisConsequenciasTratamentoRoute
   '/blog/dependencia-quimica-sinais-tratamento': typeof BlogDependenciaQuimicaSinaisTratamentoRoute
   '/blog/': typeof BlogIndexRoute
 }
@@ -224,8 +254,11 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/tratamento'
     | '/videos'
+    | '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema'
+    | '/blog/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao'
     | '/blog/dependencia-quimica-em-araraquara-tratamento'
     | '/blog/dependencia-quimica-sao-carlos'
+    | '/blog/dependencia-quimica-sinais-consequencias-tratamento'
     | '/blog/dependencia-quimica-sinais-tratamento'
     | '/blog/'
   fileRoutesByTo: FileRoutesByTo
@@ -245,8 +278,11 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/tratamento'
     | '/videos'
+    | '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema'
+    | '/blog/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao'
     | '/blog/dependencia-quimica-em-araraquara-tratamento'
     | '/blog/dependencia-quimica-sao-carlos'
+    | '/blog/dependencia-quimica-sinais-consequencias-tratamento'
     | '/blog/dependencia-quimica-sinais-tratamento'
     | '/blog'
   id:
@@ -267,8 +303,11 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/tratamento'
     | '/videos'
+    | '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema'
+    | '/blog/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao'
     | '/blog/dependencia-quimica-em-araraquara-tratamento'
     | '/blog/dependencia-quimica-sao-carlos'
+    | '/blog/dependencia-quimica-sinais-consequencias-tratamento'
     | '/blog/dependencia-quimica-sinais-tratamento'
     | '/blog/'
   fileRoutesById: FileRoutesById
@@ -413,6 +452,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof BlogRoute
     }
+    '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema': {
+      id: '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema'
+      path: '/alcoolismo-quando-o-consumo-se-torna-um-problema'
+      fullPath: '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema'
+      preLoaderRoute: typeof BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRouteImport
+      parentRoute: typeof BlogRoute
+    }
+    '/blog/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao': {
+      id: '/blog/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao'
+      path: '/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao'
+      fullPath: '/blog/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao'
+      preLoaderRoute: typeof BlogComoSaberSeUmaPessoaPrecisaDeUmaClinicaDeReabilitacaoRouteImport
+      parentRoute: typeof BlogRoute
+    }
     '/blog/dependencia-quimica-em-araraquara-tratamento': {
       id: '/blog/dependencia-quimica-em-araraquara-tratamento'
       path: '/dependencia-quimica-em-araraquara-tratamento'
@@ -427,6 +480,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogDependenciaQuimicaSaoCarlosRouteImport
       parentRoute: typeof BlogRoute
     }
+    '/blog/dependencia-quimica-sinais-consequencias-tratamento': {
+      id: '/blog/dependencia-quimica-sinais-consequencias-tratamento'
+      path: '/dependencia-quimica-sinais-consequencias-tratamento'
+      fullPath: '/blog/dependencia-quimica-sinais-consequencias-tratamento'
+      preLoaderRoute: typeof BlogDependenciaQuimicaSinaisConsequenciasTratamentoRouteImport
+      parentRoute: typeof BlogRoute
+    }
     '/blog/dependencia-quimica-sinais-tratamento': {
       id: '/blog/dependencia-quimica-sinais-tratamento'
       path: '/dependencia-quimica-sinais-tratamento'
@@ -438,16 +498,25 @@ declare module '@tanstack/react-router' {
 }
 
 interface BlogRouteChildren {
+  BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute: typeof BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute
+  BlogComoSaberSeUmaPessoaPrecisaDeUmaClinicaDeReabilitacaoRoute: typeof BlogComoSaberSeUmaPessoaPrecisaDeUmaClinicaDeReabilitacaoRoute
   BlogDependenciaQuimicaEmAraraquaraTratamentoRoute: typeof BlogDependenciaQuimicaEmAraraquaraTratamentoRoute
   BlogDependenciaQuimicaSaoCarlosRoute: typeof BlogDependenciaQuimicaSaoCarlosRoute
+  BlogDependenciaQuimicaSinaisConsequenciasTratamentoRoute: typeof BlogDependenciaQuimicaSinaisConsequenciasTratamentoRoute
   BlogDependenciaQuimicaSinaisTratamentoRoute: typeof BlogDependenciaQuimicaSinaisTratamentoRoute
   BlogIndexRoute: typeof BlogIndexRoute
 }
 
 const BlogRouteChildren: BlogRouteChildren = {
+  BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute:
+    BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute,
+  BlogComoSaberSeUmaPessoaPrecisaDeUmaClinicaDeReabilitacaoRoute:
+    BlogComoSaberSeUmaPessoaPrecisaDeUmaClinicaDeReabilitacaoRoute,
   BlogDependenciaQuimicaEmAraraquaraTratamentoRoute:
     BlogDependenciaQuimicaEmAraraquaraTratamentoRoute,
   BlogDependenciaQuimicaSaoCarlosRoute: BlogDependenciaQuimicaSaoCarlosRoute,
+  BlogDependenciaQuimicaSinaisConsequenciasTratamentoRoute:
+    BlogDependenciaQuimicaSinaisConsequenciasTratamentoRoute,
   BlogDependenciaQuimicaSinaisTratamentoRoute:
     BlogDependenciaQuimicaSinaisTratamentoRoute,
   BlogIndexRoute: BlogIndexRoute,
