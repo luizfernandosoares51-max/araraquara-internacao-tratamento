@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Camera, Check, ChevronDown, Images, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
+import { ArrowRight, Camera, Check, ChevronDown, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
 import type { ReactNode } from "react";
 
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
@@ -28,12 +28,7 @@ const steps = [
 ];
 
 const photoGalleryCities = [
-  { name: "Araraquara", units: ["Unidade 1", "Unidade 2", "Unidade 3"] },
-  { name: "São Carlos", units: ["Unidade 1", "Unidade 2", "Unidade 3"] },
-  { name: "Rio Claro", units: ["Unidade 1", "Unidade 2"] },
-  { name: "Bauru", units: ["Unidade 1", "Unidade 2"] },
-  { name: "Ribeirão Preto", units: ["Unidade 1", "Unidade 2"] },
-  { name: "Matão", units: ["Unidade 1", "Unidade 2"] },
+  { name: "Araraquara", units: ["Unidade de Araraquara"] },
 ] as const;
 
 const guidanceLinks = [
@@ -311,7 +306,7 @@ function HomePage() {
             <SectionLabel>Atendimento em diferentes regiões</SectionLabel>
             <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Encontre atendimento por cidade</h2>
             <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted-foreground sm:text-base">
-              Consulte informações específicas sobre acolhimento, tratamento e orientação nas diferentes regiões de São Paulo atendidas pela nossa rede de parceiros.
+              Consulte informações específicas sobre acolhimento, tratamento e orientação para famílias de diferentes regiões de São Paulo.
             </p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               <article className="glass-panel flex min-h-52 flex-col rounded-2xl p-5 sm:p-6">
@@ -340,8 +335,8 @@ function HomePage() {
 
           <section id="galeria-fotos" aria-labelledby="galeria-titulo" className="scroll-mt-6 border-t border-border py-14 lg:py-20">
             <SectionLabel>Galeria de fotos</SectionLabel>
-            <h2 id="galeria-titulo" className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Conheça nossas unidades e espaços</h2>
-            <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">Acesse a galeria existente, organizada por cidade e unidade, para visualizar as fotos cadastradas.</p>
+            <h2 id="galeria-titulo" className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Conheça a unidade de Araraquara</h2>
+            <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">Acesse a galeria para visualizar fotos reais dos espaços da unidade de Araraquara.</p>
             <details className="group/gallery">
               <summary className="glass-panel mt-6 flex min-h-16 cursor-pointer list-none items-center justify-between gap-4 rounded-2xl px-5 py-4 marker:content-none sm:px-6">
                 <span className="flex items-center gap-3 font-display text-sm font-semibold uppercase tracking-[0.14em] text-secondary sm:text-base">
@@ -353,7 +348,7 @@ function HomePage() {
 
               <div className="pt-8">
                 <h3 className="font-display text-xl font-semibold leading-tight sm:text-2xl">
-                  Fotos organizadas por cidade e unidade
+                  Fotos da unidade física da Central
                 </h3>
 
                 <div className="mt-8 grid gap-4 lg:grid-cols-2">
@@ -371,16 +366,7 @@ function HomePage() {
                               <ChevronDown className="size-4 shrink-0 text-muted-foreground transition-transform group-open/unit:rotate-180" aria-hidden="true" />
                             </summary>
                             <div className="border-t border-border p-4">
-                              {city.name === "Araraquara" && unit === "Unidade 1" ? (
-                                <AraraquaraPhotoGallery />
-                              ) : (
-                                <div className="grid min-h-32 place-items-center rounded-lg border border-dashed border-border bg-background/20 px-4 py-8 text-center">
-                                  <div>
-                                    <Images className="mx-auto size-6 text-secondary" aria-hidden="true" />
-                                    <p className="mt-3 text-sm font-medium">Nenhuma foto cadastrada</p>
-                                  </div>
-                                </div>
-                              )}
+                              <AraraquaraPhotoGallery />
                             </div>
                           </details>
                         ))}

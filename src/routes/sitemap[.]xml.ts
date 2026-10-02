@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { getRouterInstance } from "@tanstack/react-start";
 
 import { cityPages } from "@/lib/city-pages";
+import { siteUrl } from "@/lib/site";
 import {
   isSitemapRouteIncluded,
   sitemapPathForLocation,
@@ -39,7 +40,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           });
         }
 
-        return new Response(sitemapXML(new URL(request.url).origin, entries), {
+        return new Response(sitemapXML(siteUrl, entries), {
           headers: {
             "Content-Type": "application/xml",
             "Cache-Control": "public, max-age=3600",
