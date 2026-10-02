@@ -119,3 +119,7 @@
   html { scroll-behavior: auto; }
   .float-one, .float-two { animation: none; }
 }
+
+#lovable-badge {
+  display: none !important;
+}
