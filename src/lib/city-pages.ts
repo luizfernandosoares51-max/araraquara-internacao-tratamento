@@ -166,6 +166,7 @@ export const cityPages: CityPageData[] = [
       { question: "O que contar no primeiro contato?", answer: "A família pode descrever mudanças observadas, histórico conhecido, situação atual e principais dúvidas. A equipe indicará outras informações necessárias." },
       { question: "Buscar ajuda significa decidir pela internação?", answer: "Não. Pedir orientação não obriga a família a seguir com acolhimento ou internação. A situação deve ser avaliada." },
       { question: "Como falar com a equipe?", answer: "O contato pode ser feito pelo WhatsApp ou pelo telefone informado nesta página." },
+      { question: "Matão possui atendimento público para álcool e outras drogas?", answer: "A Prefeitura informa que a rede municipal inclui CAPS AD, CAPS II e Ambulatório de Saúde Mental. A Central não integra esses serviços; condições e formas de acesso devem ser confirmadas no canal oficial do município." },
     ],
   },
   {
@@ -198,6 +199,7 @@ export const cityPages: CityPageData[] = [
       { question: "Posso conhecer o processo antes de ir à unidade?", answer: "Sim. A equipe explica por telefone ou WhatsApp as etapas e condições iniciais antes de qualquer procedimento presencial." },
       { question: "Como a família pode ajudar sem discutir?", answer: "É útil escolher um momento seguro, falar sobre fatos concretos e evitar ameaças. A orientação profissional pode apoiar a organização dos próximos passos." },
       { question: "O acolhimento depende de disponibilidade?", answer: "Sim. Além da avaliação individual, é necessário confirmar disponibilidade e demais condições com a equipe." },
+      { question: "Onde consultar apoio público em Américo Brasiliense?", answer: "O Departamento de Saúde municipal mantém informações oficiais sobre seus equipamentos, incluindo o CAPS Doçura. Esse serviço público não possui vínculo com a Central." },
     ],
   },
   {
@@ -230,6 +232,7 @@ export const cityPages: CityPageData[] = [
       { question: "A família pode pedir orientação sem a pessoa presente?", answer: "A família pode fazer o contato inicial e relatar o contexto. A equipe explicará quais participações e avaliações serão necessárias depois." },
       { question: "Como funciona a avaliação para acolhimento?", answer: "A situação é analisada individualmente a partir das informações disponíveis e das condições aplicáveis. A avaliação não garante admissão." },
       { question: "Há prazo fixo de tratamento?", answer: "Não. Duração e acompanhamento dependem das necessidades e da evolução de cada pessoa, sem promessa de prazo ou resultado." },
+      { question: "Onde confirmar os serviços de saúde mental de Taquaritinga?", answer: "A confirmação deve ser feita diretamente nos canais oficiais da Prefeitura, pois atribuições, horários e formas de acesso podem mudar. A Central não pertence à rede pública municipal." },
     ],
   },
   {
@@ -262,6 +265,7 @@ export const cityPages: CityPageData[] = [
       { question: "Como obter informações sem viajar?", answer: "WhatsApp e telefone permitem conversar com a equipe, descrever a situação e conhecer as condições iniciais." },
       { question: "O acolhimento é confirmado pela internet?", answer: "Não. O site oferece informação e contato. Qualquer possibilidade depende de conversa, avaliação, disponibilidade e procedimentos adequados." },
       { question: "Quanto tempo dura o acompanhamento?", answer: "Não há duração única. O período depende das necessidades e deve ser reavaliado, sem garantias antecipadas." },
+      { question: "Quem administra a saúde municipal em Ibitinga?", answer: "A gestão é realizada pelo Serviço Autônomo Municipal de Saúde, o SAMS. A Central é independente desse órgão e apenas indica a fonte oficial para consulta da população." },
     ],
   },
   {
@@ -294,6 +298,7 @@ export const cityPages: CityPageData[] = [
       { question: "Quais informações ajudam na conversa inicial?", answer: "Histórico conhecido, situação atual, impactos na rotina e dúvidas da família ajudam a equipe a compreender o contexto." },
       { question: "A internação involuntária é uma solução automática?", answer: "Não. Ela exige avaliação responsável, indicação profissional e cumprimento da legislação aplicável. Cada situação é individual." },
       { question: "O primeiro contato tem compromisso?", answer: "Não. A conversa inicial serve para orientação e esclarecimento das possibilidades." },
+      { question: "Itápolis possui CAPS na rede pública?", answer: "A Secretaria Municipal de Saúde informa o CAPS Guido Cavicchiolli entre seus serviços. Ele pertence à rede pública local e não possui parceria declarada com a Central." },
     ],
   },
   {
@@ -326,6 +331,7 @@ export const cityPages: CityPageData[] = [
       { question: "A proximidade garante uma vaga?", answer: "Não. A cidade de origem não garante acolhimento. É necessário avaliar a situação e confirmar disponibilidade e condições." },
       { question: "Posso falar sobre um familiar pelo WhatsApp?", answer: "Sim. O contato inicial pode apresentar a situação de forma resumida; a equipe indicará como aprofundar as informações com privacidade." },
       { question: "Há promessa de recuperação?", answer: "Não. O cuidado depende de diversos fatores e não é responsável prometer cura ou resultado." },
+      { question: "Onde buscar informação pública de saúde mental em Ibaté?", answer: "A Prefeitura lista o Ambulatório de Saúde Mental entre seus contatos oficiais. Como a fonte municipal consultada não identifica um CAPS específico, a família deve confirmar diretamente com a Secretaria de Saúde quais serviços atendem sua necessidade." },
     ],
   },
   {
@@ -358,6 +364,7 @@ export const cityPages: CityPageData[] = [
       { question: "Como saber se é hora de pedir ajuda?", answer: "Prejuízos repetidos, situações de risco e dificuldade de mudança justificam buscar orientação. A definição de cuidado depende de avaliação." },
       { question: "A família deve levar a pessoa diretamente?", answer: "Não é indicado realizar procedimentos por conta própria. Primeiro converse com a equipe e confirme avaliação, disponibilidade e orientações." },
       { question: "O telefone funciona para dúvidas iniciais?", answer: "Sim. A família pode ligar para esclarecer o processo antes de qualquer decisão." },
+      { question: "Descalvado possui serviço público de saúde mental?", answer: "A Secretaria Municipal de Saúde apresenta o CAPS entre seus serviços. A Central não faz parte dessa rede, e informações de acesso devem ser confirmadas diretamente com o município." },
     ],
   },
   {
@@ -390,6 +397,7 @@ export const cityPages: CityPageData[] = [
       { question: "Preciso agendar antes de ir?", answer: "A família deve entrar em contato antes de qualquer deslocamento para apresentar a situação e confirmar orientações e disponibilidade." },
       { question: "O tratamento para alcoolismo tem resultado garantido?", answer: "Não. Nenhum cuidado responsável deve prometer resultado. A evolução varia conforme múltiplos fatores individuais." },
       { question: "Como começo a conversa?", answer: "Basta ligar ou enviar a mensagem inicial pelo WhatsApp. A equipe fará perguntas para compreender o contexto." },
+      { question: "Onde consultar as unidades públicas de saúde de Porto Ferreira?", answer: "A Prefeitura mantém uma relação oficial das unidades municipais. A consulta deve ser feita nesse canal, que é independente da Central e pode informar os serviços disponíveis no momento." },
     ],
   },
   {
@@ -422,6 +430,7 @@ export const cityPages: CityPageData[] = [
       { question: "Buscar informação compromete a família com o acolhimento?", answer: "Não. O contato inicial é orientativo e serve para esclarecer dúvidas e avaliar possibilidades." },
       { question: "Como falar com alguém que recusa ajuda?", answer: "Evite confronto em momentos de risco e procure orientação. Cada caso exige cuidado; não há uma abordagem única que garanta aceitação." },
       { question: "A internação involuntária pode ser decidida pela família sozinha?", answer: "Não. Essa modalidade exige critérios legais e profissionais aplicáveis e nunca deve ser realizada por conta própria." },
+      { question: "O CAPS II de Jaboticabal atende questões relacionadas a álcool e drogas?", answer: "A Prefeitura informa que o serviço atende demandas de saúde mental, inclusive situações relacionadas a álcool e outras drogas. O CAPS II é municipal e não possui vínculo com a Central." },
     ],
   },
   {
@@ -454,6 +463,7 @@ export const cityPages: CityPageData[] = [
       { question: "Como avaliar o atendimento à distância?", answer: "Comece pelo telefone ou WhatsApp, faça perguntas sobre o processo e só organize qualquer deslocamento depois de receber as orientações necessárias." },
       { question: "A dependência química tem solução garantida?", answer: "Não existe garantia de resultado. O cuidado é individual e a evolução depende de diversos fatores." },
       { question: "A Central recebe pessoas de cidades mais distantes?", answer: "A equipe pode avaliar contatos de diferentes cidades, mas toda possibilidade depende do caso, da disponibilidade e das condições do acolhimento." },
+      { question: "Franca possui rede pública para saúde mental e álcool e drogas?", answer: "A Prefeitura mantém a Rede de Atenção Psicossocial e publica seus serviços em uma Carta de Serviços. Essa rede é independente da Central; a família deve consultar o portal oficial para informações atuais." },
     ],
   },
 ];
