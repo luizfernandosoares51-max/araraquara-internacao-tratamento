@@ -437,7 +437,7 @@ function HomePage() {
                 <h3 className="mt-4 font-display text-lg font-semibold">Araraquara</h3>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">Informações sobre acolhimento, orientação e possibilidades de tratamento em Araraquara e região.</p>
                 <Link to="/clinica-de-recuperacao-em-araraquara" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:underline">
-                  Orientação para famílias de {city.name} <ArrowRight className="size-4" aria-hidden="true" />
+                  Conhecer a unidade em Araraquara <ArrowRight className="size-4" aria-hidden="true" />
                 </Link>
               </article>
               {featuredCities.map((city) => (
