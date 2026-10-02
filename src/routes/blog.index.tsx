@@ -42,6 +42,13 @@ function BlogPage() {
           Informações sobre dependência química, acolhimento, tratamento e apoio às famílias.
         </p>
 
+        <p className="mt-5 border-l-2 border-secondary pl-4 text-sm leading-7 text-muted-foreground">
+          Para uma visão integrada sobre avaliação, acolhimento e continuidade do cuidado, consulte o{" "}
+          <Link to="/clinica-de-reabilitacao" className="font-semibold text-secondary hover:text-foreground">
+            guia central sobre clínica de reabilitação
+          </Link>.
+        </p>
+
         {[
           {
             category: "Família e busca de ajuda",
@@ -114,8 +121,8 @@ function BlogPage() {
             Dependência Química: Entenda os Sinais e a Importância do Tratamento
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            Entenda os principais sinais da dependência química e saiba quando buscar orientação,
-            acolhimento e tratamento especializado.
+            Uma introdução para famílias reconhecerem mudanças, organizarem a conversa e entenderem
+            os primeiros passos para buscar orientação.
           </p>
           <Link
             to="/blog/dependencia-quimica-sinais-tratamento"

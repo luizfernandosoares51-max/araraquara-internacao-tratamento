@@ -102,8 +102,9 @@ function ArticlePage() {
             comportamento, nos relacionamentos, na saúde e na rotina.
           </p>
           <p>
-            Reconhecer os sinais e buscar informação é um passo importante para encontrar ajuda
-            adequada.
+            Este conteúdo é uma introdução para famílias que perceberam mudanças e precisam organizar
+            os primeiros passos. Reconhecer sinais, conversar sem acusações e buscar informação pode
+            ajudar a decidir quando pedir orientação.
           </p>
 
           <h2 className="pt-4 font-display text-2xl font-bold leading-tight text-foreground">
@@ -143,7 +144,7 @@ function ArticlePage() {
           </p>
 
           <h2 className="pt-4 font-display text-2xl font-bold leading-tight text-foreground">
-            Quando procurar ajuda?
+            Como organizar os primeiros passos?
           </h2>
           <p>
             Muitas famílias demoram para buscar ajuda porque esperam que a situação melhore sozinha.
@@ -153,6 +154,11 @@ function ArticlePage() {
             social, procurar orientação pode ser um passo importante.
           </p>
           <p>O tratamento deve considerar as necessidades e a realidade de cada pessoa.</p>
+          <p>
+            Uma conversa inicial pode se concentrar em fatos observáveis, riscos e mudanças na rotina,
+            sem tentar fazer um diagnóstico. A família também pode buscar orientação antes de definir
+            qualquer modalidade de cuidado.
+          </p>
 
           <h2 className="pt-4 font-display text-2xl font-bold leading-tight text-foreground">
             Como funciona o tratamento?
@@ -213,6 +219,23 @@ function ArticlePage() {
             entre em contato com a Central de Acolhimento e Reabilitação para receber orientação.
           </p>
         </div>
+
+        <section className="mt-10 border-t border-border pt-8" aria-labelledby="next-steps-heading">
+          <h2 id="next-steps-heading" className="font-display text-2xl font-bold">Próximos caminhos de informação</h2>
+          <div className="mt-5 grid gap-3 sm:grid-cols-2">
+            {[
+              { to: "/clinica-de-reabilitacao" as const, label: "Guia sobre clínica de reabilitação", text: "Entenda como avaliação, tratamento e continuidade do cuidado se relacionam." },
+              { to: "/blog/dependencia-quimica-sinais-consequencias-tratamento" as const, label: "Consequências e caminhos de tratamento", text: "Aprofunde os impactos da dependência e as diferentes possibilidades de cuidado." },
+              { to: "/acolhimento" as const, label: "Como funciona o acolhimento", text: "Conheça o início da escuta e da orientação para cada situação." },
+              { to: "/familia" as const, label: "Orientação para a família", text: "Veja formas responsáveis de oferecer apoio e estabelecer limites." },
+            ].map((item) => (
+              <Link key={item.to} to={item.to} className="glass-panel rounded-xl p-5">
+                <span className="font-semibold text-foreground">{item.label}</span>
+                <span className="mt-2 block text-sm leading-6 text-muted-foreground">{item.text}</span>
+              </Link>
+            ))}
+          </div>
+        </section>
 
         <div className="glass-panel mt-10 rounded-2xl p-5 sm:p-7">
           <a

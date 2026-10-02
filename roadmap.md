@@ -27,3 +27,8 @@
 - [x] Conectar os novos artigos ao Blog, às páginas temáticas e entre si
 - [x] Validar rotas, sitemap, indexabilidade e apresentação em celular e computador
 - [ ] Confirmar a conclusão da publicação dos cinco novos artigos
+- [x] Adicionar os cinco novos artigos à página pilar
+- [x] Conectar o Blog à página pilar de forma contextual
+- [x] Diferenciar as intenções dos dois artigos sobre sinais da dependência química
+- [x] Revisar a interligação prioritária sem alterar URLs ou configurações técnicas
+- [ ] Apresentar a prévia das correções prioritárias para aprovação antes de publicar

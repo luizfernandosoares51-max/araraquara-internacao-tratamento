@@ -93,6 +93,34 @@ const faqs = [
   },
 ] as const;
 
+const relatedArticles = [
+  {
+    title: "Como saber se uma pessoa precisa de uma clínica de reabilitação?",
+    description: "Sinais de prejuízo, busca de avaliação e formas responsáveis de a família oferecer apoio.",
+    to: "/blog/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao" as const,
+  },
+  {
+    title: "Dependência química: sinais, consequências e caminhos para o tratamento",
+    description: "Uma visão aprofundada dos impactos e das possibilidades de cuidado ao longo da recuperação.",
+    to: "/blog/dependencia-quimica-sinais-consequencias-tratamento" as const,
+  },
+  {
+    title: "Alcoolismo: quando o consumo de álcool se torna um problema?",
+    description: "Critérios de atenção para compreender perda de controle, riscos e prejuízos relacionados ao álcool.",
+    to: "/blog/alcoolismo-quando-o-consumo-se-torna-um-problema" as const,
+  },
+  {
+    title: "Como funciona uma clínica de reabilitação para dependência química?",
+    description: "Entenda avaliação, acolhimento, rotina de cuidado, participação familiar e preparação para a continuidade.",
+    to: "/blog/como-funciona-uma-clinica-de-reabilitacao" as const,
+  },
+  {
+    title: "Como escolher uma clínica de reabilitação para um familiar?",
+    description: "Perguntas importantes sobre proposta, equipe, estrutura, contrato e segurança antes de decidir.",
+    to: "/blog/como-escolher-uma-clinica-de-reabilitacao" as const,
+  },
+] as const;
+
 export const Route = createFileRoute("/clinica-de-reabilitacao")({
   staticData: { sitemap: true },
   head: () => ({
@@ -248,6 +276,28 @@ function RehabilitationClinicPage() {
               </ul>
             </div>
             <p className="mt-8 border-l-2 border-secondary pl-5 text-sm leading-6 text-muted-foreground"><strong className="text-foreground">Situações urgentes:</strong> alteração importante da consciência, risco de violência, tentativa de suicídio, convulsão ou outro risco imediato exigem atendimento de urgência. Uma página informativa ou conversa por mensagem não substitui esse cuidado.</p>
+          </div>
+        </section>
+
+        <section className="bg-background px-5 py-16 text-foreground sm:px-8 lg:px-12 lg:py-24" aria-labelledby="related-articles-heading">
+          <div className="mx-auto max-w-6xl">
+            <SectionLabel>Informação para cada decisão</SectionLabel>
+            <div className="mt-3 grid gap-5 lg:grid-cols-[.72fr_1.28fr] lg:gap-12">
+              <div>
+                <h2 id="related-articles-heading" className="font-display text-3xl font-bold leading-tight sm:text-4xl">Leituras para compreender cada etapa</h2>
+                <p className="mt-5 max-w-xl text-base leading-7 text-muted-foreground">Aprofunde dúvidas sobre sinais de atenção, possibilidades de cuidado e critérios para uma decisão informada.</p>
+                <Link to="/blog" className="mt-6 inline-flex items-center gap-2 font-semibold text-secondary hover:text-foreground">Ver todos os conteúdos <ArrowRight className="size-4" aria-hidden="true" /></Link>
+              </div>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {relatedArticles.map((article) => (
+                  <article key={article.to} className="rounded-lg border border-border bg-glass p-5 sm:p-6">
+                    <h3 className="font-display text-lg font-bold leading-snug">{article.title}</h3>
+                    <p className="mt-3 text-sm leading-6 text-muted-foreground">{article.description}</p>
+                    <Link to={article.to} className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:text-foreground">Ler artigo <ArrowRight className="size-4" aria-hidden="true" /></Link>
+                  </article>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 

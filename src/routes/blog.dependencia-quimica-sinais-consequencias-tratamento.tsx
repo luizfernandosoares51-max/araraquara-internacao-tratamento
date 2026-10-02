@@ -53,6 +53,7 @@ function Page() {
       { to: "/clinica-de-reabilitacao", label: "Guia sobre clínica de reabilitação", description: "Veja como tratamento, acolhimento e recuperação se relacionam." },
       { to: "/tratamento", label: "Tratamento", description: "Conheça aspectos gerais do cuidado individualizado." },
       { to: "/familia", label: "Apoio à família", description: "Encontre orientação para lidar com esse processo." },
+      { to: "/blog/dependencia-quimica-sinais-tratamento", label: "Primeiros sinais e busca de orientação", description: "Comece por uma introdução para famílias que perceberam mudanças recentes." },
       { to: "/blog/alcoolismo-quando-o-consumo-se-torna-um-problema", label: "Uso problemático de álcool", description: "Entenda sinais específicos relacionados ao consumo de álcool." },
     ]}
   />;
