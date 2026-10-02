@@ -14,6 +14,7 @@ import { Route as CitySlugRouteImport } from './routes/$citySlug'
 import { Route as AcolhimentoRouteImport } from './routes/acolhimento'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as CidadesRouteImport } from './routes/cidades'
+import { Route as ClinicaDeReabilitacaoRouteImport } from './routes/clinica-de-reabilitacao'
 import { Route as ClinicaDeRecuperacaoEmAraraquaraRouteImport } from './routes/clinica-de-recuperacao-em-araraquara'
 import { Route as ClinicaDeRecuperacaoEmBauruSpRouteImport } from './routes/clinica-de-recuperacao-em-bauru-sp'
 import { Route as ClinicaDeRecuperacaoEmRibeiraoPretoSpRouteImport } from './routes/clinica-de-recuperacao-em-ribeirao-preto-sp'
@@ -52,6 +53,11 @@ const BlogRoute = BlogRouteImport.update({
 const CidadesRoute = CidadesRouteImport.update({
   id: '/cidades',
   path: '/cidades',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ClinicaDeReabilitacaoRoute = ClinicaDeReabilitacaoRouteImport.update({
+  id: '/clinica-de-reabilitacao',
+  path: '/clinica-de-reabilitacao',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ClinicaDeRecuperacaoEmAraraquaraRoute =
@@ -139,6 +145,7 @@ export interface FileRoutesByFullPath {
   '/acolhimento': typeof AcolhimentoRoute
   '/blog': typeof BlogRouteWithChildren
   '/cidades': typeof CidadesRoute
+  '/clinica-de-reabilitacao': typeof ClinicaDeReabilitacaoRoute
   '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
   '/clinica-de-recuperacao-em-bauru-sp': typeof ClinicaDeRecuperacaoEmBauruSpRoute
   '/clinica-de-recuperacao-em-ribeirao-preto-sp': typeof ClinicaDeRecuperacaoEmRibeiraoPretoSpRoute
@@ -159,6 +166,7 @@ export interface FileRoutesByTo {
   '/$citySlug': typeof CitySlugRoute
   '/acolhimento': typeof AcolhimentoRoute
   '/cidades': typeof CidadesRoute
+  '/clinica-de-reabilitacao': typeof ClinicaDeReabilitacaoRoute
   '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
   '/clinica-de-recuperacao-em-bauru-sp': typeof ClinicaDeRecuperacaoEmBauruSpRoute
   '/clinica-de-recuperacao-em-ribeirao-preto-sp': typeof ClinicaDeRecuperacaoEmRibeiraoPretoSpRoute
@@ -181,6 +189,7 @@ export interface FileRoutesById {
   '/acolhimento': typeof AcolhimentoRoute
   '/blog': typeof BlogRouteWithChildren
   '/cidades': typeof CidadesRoute
+  '/clinica-de-reabilitacao': typeof ClinicaDeReabilitacaoRoute
   '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
   '/clinica-de-recuperacao-em-bauru-sp': typeof ClinicaDeRecuperacaoEmBauruSpRoute
   '/clinica-de-recuperacao-em-ribeirao-preto-sp': typeof ClinicaDeRecuperacaoEmRibeiraoPretoSpRoute
@@ -204,6 +213,7 @@ export interface FileRouteTypes {
     | '/acolhimento'
     | '/blog'
     | '/cidades'
+    | '/clinica-de-reabilitacao'
     | '/clinica-de-recuperacao-em-araraquara'
     | '/clinica-de-recuperacao-em-bauru-sp'
     | '/clinica-de-recuperacao-em-ribeirao-preto-sp'
@@ -224,6 +234,7 @@ export interface FileRouteTypes {
     | '/$citySlug'
     | '/acolhimento'
     | '/cidades'
+    | '/clinica-de-reabilitacao'
     | '/clinica-de-recuperacao-em-araraquara'
     | '/clinica-de-recuperacao-em-bauru-sp'
     | '/clinica-de-recuperacao-em-ribeirao-preto-sp'
@@ -245,6 +256,7 @@ export interface FileRouteTypes {
     | '/acolhimento'
     | '/blog'
     | '/cidades'
+    | '/clinica-de-reabilitacao'
     | '/clinica-de-recuperacao-em-araraquara'
     | '/clinica-de-recuperacao-em-bauru-sp'
     | '/clinica-de-recuperacao-em-ribeirao-preto-sp'
@@ -267,6 +279,7 @@ export interface RootRouteChildren {
   AcolhimentoRoute: typeof AcolhimentoRoute
   BlogRoute: typeof BlogRouteWithChildren
   CidadesRoute: typeof CidadesRoute
+  ClinicaDeReabilitacaoRoute: typeof ClinicaDeReabilitacaoRoute
   ClinicaDeRecuperacaoEmAraraquaraRoute: typeof ClinicaDeRecuperacaoEmAraraquaraRoute
   ClinicaDeRecuperacaoEmBauruSpRoute: typeof ClinicaDeRecuperacaoEmBauruSpRoute
   ClinicaDeRecuperacaoEmRibeiraoPretoSpRoute: typeof ClinicaDeRecuperacaoEmRibeiraoPretoSpRoute
@@ -314,6 +327,13 @@ declare module '@tanstack/react-router' {
       path: '/cidades'
       fullPath: '/cidades'
       preLoaderRoute: typeof CidadesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/clinica-de-reabilitacao': {
+      id: '/clinica-de-reabilitacao'
+      path: '/clinica-de-reabilitacao'
+      fullPath: '/clinica-de-reabilitacao'
+      preLoaderRoute: typeof ClinicaDeReabilitacaoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/clinica-de-recuperacao-em-araraquara': {
@@ -441,6 +461,7 @@ const rootRouteChildren: RootRouteChildren = {
   AcolhimentoRoute: AcolhimentoRoute,
   BlogRoute: BlogRouteWithChildren,
   CidadesRoute: CidadesRoute,
+  ClinicaDeReabilitacaoRoute: ClinicaDeReabilitacaoRoute,
   ClinicaDeRecuperacaoEmAraraquaraRoute: ClinicaDeRecuperacaoEmAraraquaraRoute,
   ClinicaDeRecuperacaoEmBauruSpRoute: ClinicaDeRecuperacaoEmBauruSpRoute,
   ClinicaDeRecuperacaoEmRibeiraoPretoSpRoute:
