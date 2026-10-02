@@ -42,6 +42,50 @@ function BlogPage() {
           Informações sobre dependência química, acolhimento, tratamento e apoio às famílias.
         </p>
 
+        {[
+          {
+            category: "Família e busca de ajuda",
+            title: "Como saber se uma pessoa precisa de uma clínica de reabilitação?",
+            description: "Sinais de prejuízo, momento de buscar avaliação e participação responsável da família.",
+            to: "/blog/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao" as const,
+          },
+          {
+            category: "Dependência química",
+            title: "Dependência química: sinais, consequências e caminhos para o tratamento",
+            description: "Uma visão aprofundada dos impactos, das formas de cuidado e da continuidade da recuperação.",
+            to: "/blog/dependencia-quimica-sinais-consequencias-tratamento" as const,
+          },
+          {
+            category: "Alcoolismo",
+            title: "Alcoolismo: quando o consumo de álcool se torna um problema?",
+            description: "Como reconhecer perda de controle, riscos e prejuízos sem fazer diagnósticos pela internet.",
+            to: "/blog/alcoolismo-quando-o-consumo-se-torna-um-problema" as const,
+          },
+          {
+            category: "Tratamento e acolhimento",
+            title: "Como funciona uma clínica de reabilitação para dependência química?",
+            description: "Avaliação, acolhimento, rotina terapêutica, participação familiar e cuidado após a saída.",
+            to: "/blog/como-funciona-uma-clinica-de-reabilitacao" as const,
+          },
+          {
+            category: "Decisão da família",
+            title: "Como escolher uma clínica de reabilitação para um familiar?",
+            description: "Critérios e perguntas sobre equipe, estrutura, proposta, contrato e continuidade do cuidado.",
+            to: "/blog/como-escolher-uma-clinica-de-reabilitacao" as const,
+          },
+        ].map((post) => (
+          <article key={post.to} className="glass-panel mt-5 rounded-2xl p-5 sm:p-7">
+            <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">
+              {post.category}
+            </p>
+            <h2 className="mt-3 font-display text-xl font-bold leading-snug sm:text-2xl">{post.title}</h2>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{post.description}</p>
+            <Link to={post.to} className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-secondary transition-colors hover:text-foreground">
+              Ler artigo <ArrowRight className="size-4" aria-hidden="true" />
+            </Link>
+          </article>
+        ))}
+
         <article className="glass-panel mt-8 rounded-2xl p-5 sm:p-7">
           <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">
             Araraquara · Dependência química
