@@ -10,3 +10,4 @@
 <!-- LOVABLE:END -->
 
 - Keep high-value city SEO pages as explicit route files while retaining the dynamic city route for the remaining cities, so direct crawler requests receive stable route-specific content.
+- Render new editorial articles through the shared blog article shell while keeping route-specific copy and metadata in each route, so presentation stays consistent without homogenizing content.
