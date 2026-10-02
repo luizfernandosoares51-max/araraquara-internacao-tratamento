@@ -31,4 +31,4 @@
 - [x] Conectar o Blog à página pilar de forma contextual
 - [x] Diferenciar as intenções dos dois artigos sobre sinais da dependência química
 - [x] Revisar a interligação prioritária sem alterar URLs ou configurações técnicas
-- [ ] Apresentar a prévia das correções prioritárias para aprovação antes de publicar
+- [x] Apresentar a prévia das correções prioritárias para aprovação antes de publicar
