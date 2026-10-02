@@ -22,4 +22,4 @@
 - [x] Auditar a Home antes de alterações
 - [x] Fortalecer a autoridade temática e a arquitetura interna da Home
 - [x] Otimizar imagens principais e metadados sociais da Home
-- [ ] Validar a Home otimizada em desktop, celular e HTML para Googlebot
+- [x] Validar a Home otimizada em desktop, celular e HTML para Googlebot
