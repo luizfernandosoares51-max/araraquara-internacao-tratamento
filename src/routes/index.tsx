@@ -469,7 +469,7 @@ function HomePage() {
               <div className="mt-7 border-t border-border pt-6 lg:mt-0 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
                 <SectionLabel>Encontre informações sobre atendimento na sua região</SectionLabel>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  Consulte informações específicas sobre acolhimento, tratamento e orientação nas diferentes regiões de São Paulo atendidas pela nossa rede de parceiros.
+                  Consulte informações específicas sobre acolhimento, tratamento e orientação para famílias de diferentes regiões de São Paulo.
                 </p>
                 <a href="#atendimento-por-cidade" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:underline">
                   Encontrar atendimento por cidade <ArrowRight className="size-4" aria-hidden="true" />

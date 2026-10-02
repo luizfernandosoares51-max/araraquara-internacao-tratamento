@@ -15,7 +15,7 @@ export const Route = createFileRoute("/sitemap.xml")({
   staticData: { sitemap: false },
   server: {
     handlers: {
-      GET: async ({ request }) => {
+      GET: async () => {
         const router = await getRouterInstance();
         const entries: SitemapEntry[] = sitemapStaticPaths(router).map((path) => ({ path }));
         const cityRoute = router.routesById["/$citySlug"];

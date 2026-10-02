@@ -468,11 +468,6 @@ export const cityPages: CityPageData[] = [
   },
 ];
 
-export const cityPageBySlug = Object.fromEntries(cityPages.map((city) => [city.slug, city])) as Record<
-  string,
-  CityPageData
->;
-
 const dedicatedCitySlugs = new Set(["sao-carlos-sp", "rio-claro-sp", "bauru-sp", "ribeirao-preto-sp"]);
 
 export const templatedCityPages = cityPages.filter((city) => !dedicatedCitySlugs.has(city.slug));

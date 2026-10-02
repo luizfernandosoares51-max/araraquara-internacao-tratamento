@@ -2,7 +2,7 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 
 import { CityPageTemplate } from "@/components/city-page-template";
 import { templatedCityPageBySlug } from "@/lib/city-pages";
-import { facebookHref, instagramHref, siteUrl } from "@/lib/site";
+import { siteUrl } from "@/lib/site";
 
 export const Route = createFileRoute("/$citySlug")({
   staticData: { sitemap: true },
@@ -46,22 +46,17 @@ export const Route = createFileRoute("/$citySlug")({
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "Organization",
-                name: "Central de Acolhimento e Reabilitação",
-                url: siteUrl,
-                telephone: "+5516997654579",
-                sameAs: [facebookHref, instagramHref],
-                areaServed: [
-                  { "@type": "City", name: "Araraquara" },
-                  { "@type": "City", name: loaderData.name },
-                ],
-              },
-              {
-                "@type": "Service",
-                name: `Orientação sobre acolhimento para famílias de ${loaderData.name}`,
-                provider: { "@type": "Organization", name: "Central de Acolhimento e Reabilitação" },
-                areaServed: { "@type": "City", name: loaderData.name },
+                "@type": "WebPage",
+                "@id": `${pageUrl}#webpage`,
+                url: pageUrl,
+                name: title,
                 description: loaderData.seoDescription,
+                inLanguage: "pt-BR",
+                isPartOf: {
+                  "@type": "WebSite",
+                  name: "Central de Acolhimento e Reabilitação",
+                  url: siteUrl,
+                },
               },
               {
                 "@type": "BreadcrumbList",
