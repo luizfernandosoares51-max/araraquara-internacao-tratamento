@@ -15,11 +15,21 @@ import { Route as AcolhimentoRouteImport } from './routes/acolhimento'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as CidadesRouteImport } from './routes/cidades'
 import { Route as ClinicaDeReabilitacaoRouteImport } from './routes/clinica-de-reabilitacao'
+import { Route as ClinicaDeRecuperacaoEmAmericoBrasilienseSpRouteImport } from './routes/clinica-de-recuperacao-em-americo-brasiliense-sp'
 import { Route as ClinicaDeRecuperacaoEmAraraquaraRouteImport } from './routes/clinica-de-recuperacao-em-araraquara'
 import { Route as ClinicaDeRecuperacaoEmBauruSpRouteImport } from './routes/clinica-de-recuperacao-em-bauru-sp'
+import { Route as ClinicaDeRecuperacaoEmDescalvadoSpRouteImport } from './routes/clinica-de-recuperacao-em-descalvado-sp'
+import { Route as ClinicaDeRecuperacaoEmFrancaSpRouteImport } from './routes/clinica-de-recuperacao-em-franca-sp'
+import { Route as ClinicaDeRecuperacaoEmIbateSpRouteImport } from './routes/clinica-de-recuperacao-em-ibate-sp'
+import { Route as ClinicaDeRecuperacaoEmIbitingaSpRouteImport } from './routes/clinica-de-recuperacao-em-ibitinga-sp'
+import { Route as ClinicaDeRecuperacaoEmItapolisSpRouteImport } from './routes/clinica-de-recuperacao-em-itapolis-sp'
+import { Route as ClinicaDeRecuperacaoEmJaboticabalSpRouteImport } from './routes/clinica-de-recuperacao-em-jaboticabal-sp'
+import { Route as ClinicaDeRecuperacaoEmMataoSpRouteImport } from './routes/clinica-de-recuperacao-em-matao-sp'
+import { Route as ClinicaDeRecuperacaoEmPortoFerreiraSpRouteImport } from './routes/clinica-de-recuperacao-em-porto-ferreira-sp'
 import { Route as ClinicaDeRecuperacaoEmRibeiraoPretoSpRouteImport } from './routes/clinica-de-recuperacao-em-ribeirao-preto-sp'
 import { Route as ClinicaDeRecuperacaoEmRioClaroSpRouteImport } from './routes/clinica-de-recuperacao-em-rio-claro-sp'
 import { Route as ClinicaDeRecuperacaoEmSaoCarlosSpRouteImport } from './routes/clinica-de-recuperacao-em-sao-carlos-sp'
+import { Route as ClinicaDeRecuperacaoEmTaquaritingaSpRouteImport } from './routes/clinica-de-recuperacao-em-taquaritinga-sp'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as FamiliaRouteImport } from './routes/familia'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
@@ -65,6 +75,12 @@ const ClinicaDeReabilitacaoRoute = ClinicaDeReabilitacaoRouteImport.update({
   path: '/clinica-de-reabilitacao',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ClinicaDeRecuperacaoEmAmericoBrasilienseSpRoute =
+  ClinicaDeRecuperacaoEmAmericoBrasilienseSpRouteImport.update({
+    id: '/clinica-de-recuperacao-em-americo-brasiliense-sp',
+    path: '/clinica-de-recuperacao-em-americo-brasiliense-sp',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ClinicaDeRecuperacaoEmAraraquaraRoute =
   ClinicaDeRecuperacaoEmAraraquaraRouteImport.update({
     id: '/clinica-de-recuperacao-em-araraquara',
@@ -75,6 +91,54 @@ const ClinicaDeRecuperacaoEmBauruSpRoute =
   ClinicaDeRecuperacaoEmBauruSpRouteImport.update({
     id: '/clinica-de-recuperacao-em-bauru-sp',
     path: '/clinica-de-recuperacao-em-bauru-sp',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ClinicaDeRecuperacaoEmDescalvadoSpRoute =
+  ClinicaDeRecuperacaoEmDescalvadoSpRouteImport.update({
+    id: '/clinica-de-recuperacao-em-descalvado-sp',
+    path: '/clinica-de-recuperacao-em-descalvado-sp',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ClinicaDeRecuperacaoEmFrancaSpRoute =
+  ClinicaDeRecuperacaoEmFrancaSpRouteImport.update({
+    id: '/clinica-de-recuperacao-em-franca-sp',
+    path: '/clinica-de-recuperacao-em-franca-sp',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ClinicaDeRecuperacaoEmIbateSpRoute =
+  ClinicaDeRecuperacaoEmIbateSpRouteImport.update({
+    id: '/clinica-de-recuperacao-em-ibate-sp',
+    path: '/clinica-de-recuperacao-em-ibate-sp',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ClinicaDeRecuperacaoEmIbitingaSpRoute =
+  ClinicaDeRecuperacaoEmIbitingaSpRouteImport.update({
+    id: '/clinica-de-recuperacao-em-ibitinga-sp',
+    path: '/clinica-de-recuperacao-em-ibitinga-sp',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ClinicaDeRecuperacaoEmItapolisSpRoute =
+  ClinicaDeRecuperacaoEmItapolisSpRouteImport.update({
+    id: '/clinica-de-recuperacao-em-itapolis-sp',
+    path: '/clinica-de-recuperacao-em-itapolis-sp',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ClinicaDeRecuperacaoEmJaboticabalSpRoute =
+  ClinicaDeRecuperacaoEmJaboticabalSpRouteImport.update({
+    id: '/clinica-de-recuperacao-em-jaboticabal-sp',
+    path: '/clinica-de-recuperacao-em-jaboticabal-sp',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ClinicaDeRecuperacaoEmMataoSpRoute =
+  ClinicaDeRecuperacaoEmMataoSpRouteImport.update({
+    id: '/clinica-de-recuperacao-em-matao-sp',
+    path: '/clinica-de-recuperacao-em-matao-sp',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ClinicaDeRecuperacaoEmPortoFerreiraSpRoute =
+  ClinicaDeRecuperacaoEmPortoFerreiraSpRouteImport.update({
+    id: '/clinica-de-recuperacao-em-porto-ferreira-sp',
+    path: '/clinica-de-recuperacao-em-porto-ferreira-sp',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ClinicaDeRecuperacaoEmRibeiraoPretoSpRoute =
@@ -93,6 +157,12 @@ const ClinicaDeRecuperacaoEmSaoCarlosSpRoute =
   ClinicaDeRecuperacaoEmSaoCarlosSpRouteImport.update({
     id: '/clinica-de-recuperacao-em-sao-carlos-sp',
     path: '/clinica-de-recuperacao-em-sao-carlos-sp',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ClinicaDeRecuperacaoEmTaquaritingaSpRoute =
+  ClinicaDeRecuperacaoEmTaquaritingaSpRouteImport.update({
+    id: '/clinica-de-recuperacao-em-taquaritinga-sp',
+    path: '/clinica-de-recuperacao-em-taquaritinga-sp',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ContatoRoute = ContatoRouteImport.update({
@@ -181,11 +251,21 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRouteWithChildren
   '/cidades': typeof CidadesRoute
   '/clinica-de-reabilitacao': typeof ClinicaDeReabilitacaoRoute
+  '/clinica-de-recuperacao-em-americo-brasiliense-sp': typeof ClinicaDeRecuperacaoEmAmericoBrasilienseSpRoute
   '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
   '/clinica-de-recuperacao-em-bauru-sp': typeof ClinicaDeRecuperacaoEmBauruSpRoute
+  '/clinica-de-recuperacao-em-descalvado-sp': typeof ClinicaDeRecuperacaoEmDescalvadoSpRoute
+  '/clinica-de-recuperacao-em-franca-sp': typeof ClinicaDeRecuperacaoEmFrancaSpRoute
+  '/clinica-de-recuperacao-em-ibate-sp': typeof ClinicaDeRecuperacaoEmIbateSpRoute
+  '/clinica-de-recuperacao-em-ibitinga-sp': typeof ClinicaDeRecuperacaoEmIbitingaSpRoute
+  '/clinica-de-recuperacao-em-itapolis-sp': typeof ClinicaDeRecuperacaoEmItapolisSpRoute
+  '/clinica-de-recuperacao-em-jaboticabal-sp': typeof ClinicaDeRecuperacaoEmJaboticabalSpRoute
+  '/clinica-de-recuperacao-em-matao-sp': typeof ClinicaDeRecuperacaoEmMataoSpRoute
+  '/clinica-de-recuperacao-em-porto-ferreira-sp': typeof ClinicaDeRecuperacaoEmPortoFerreiraSpRoute
   '/clinica-de-recuperacao-em-ribeirao-preto-sp': typeof ClinicaDeRecuperacaoEmRibeiraoPretoSpRoute
   '/clinica-de-recuperacao-em-rio-claro-sp': typeof ClinicaDeRecuperacaoEmRioClaroSpRoute
   '/clinica-de-recuperacao-em-sao-carlos-sp': typeof ClinicaDeRecuperacaoEmSaoCarlosSpRoute
+  '/clinica-de-recuperacao-em-taquaritinga-sp': typeof ClinicaDeRecuperacaoEmTaquaritingaSpRoute
   '/contato': typeof ContatoRoute
   '/familia': typeof FamiliaRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -207,11 +287,21 @@ export interface FileRoutesByTo {
   '/acolhimento': typeof AcolhimentoRoute
   '/cidades': typeof CidadesRoute
   '/clinica-de-reabilitacao': typeof ClinicaDeReabilitacaoRoute
+  '/clinica-de-recuperacao-em-americo-brasiliense-sp': typeof ClinicaDeRecuperacaoEmAmericoBrasilienseSpRoute
   '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
   '/clinica-de-recuperacao-em-bauru-sp': typeof ClinicaDeRecuperacaoEmBauruSpRoute
+  '/clinica-de-recuperacao-em-descalvado-sp': typeof ClinicaDeRecuperacaoEmDescalvadoSpRoute
+  '/clinica-de-recuperacao-em-franca-sp': typeof ClinicaDeRecuperacaoEmFrancaSpRoute
+  '/clinica-de-recuperacao-em-ibate-sp': typeof ClinicaDeRecuperacaoEmIbateSpRoute
+  '/clinica-de-recuperacao-em-ibitinga-sp': typeof ClinicaDeRecuperacaoEmIbitingaSpRoute
+  '/clinica-de-recuperacao-em-itapolis-sp': typeof ClinicaDeRecuperacaoEmItapolisSpRoute
+  '/clinica-de-recuperacao-em-jaboticabal-sp': typeof ClinicaDeRecuperacaoEmJaboticabalSpRoute
+  '/clinica-de-recuperacao-em-matao-sp': typeof ClinicaDeRecuperacaoEmMataoSpRoute
+  '/clinica-de-recuperacao-em-porto-ferreira-sp': typeof ClinicaDeRecuperacaoEmPortoFerreiraSpRoute
   '/clinica-de-recuperacao-em-ribeirao-preto-sp': typeof ClinicaDeRecuperacaoEmRibeiraoPretoSpRoute
   '/clinica-de-recuperacao-em-rio-claro-sp': typeof ClinicaDeRecuperacaoEmRioClaroSpRoute
   '/clinica-de-recuperacao-em-sao-carlos-sp': typeof ClinicaDeRecuperacaoEmSaoCarlosSpRoute
+  '/clinica-de-recuperacao-em-taquaritinga-sp': typeof ClinicaDeRecuperacaoEmTaquaritingaSpRoute
   '/contato': typeof ContatoRoute
   '/familia': typeof FamiliaRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -235,11 +325,21 @@ export interface FileRoutesById {
   '/blog': typeof BlogRouteWithChildren
   '/cidades': typeof CidadesRoute
   '/clinica-de-reabilitacao': typeof ClinicaDeReabilitacaoRoute
+  '/clinica-de-recuperacao-em-americo-brasiliense-sp': typeof ClinicaDeRecuperacaoEmAmericoBrasilienseSpRoute
   '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
   '/clinica-de-recuperacao-em-bauru-sp': typeof ClinicaDeRecuperacaoEmBauruSpRoute
+  '/clinica-de-recuperacao-em-descalvado-sp': typeof ClinicaDeRecuperacaoEmDescalvadoSpRoute
+  '/clinica-de-recuperacao-em-franca-sp': typeof ClinicaDeRecuperacaoEmFrancaSpRoute
+  '/clinica-de-recuperacao-em-ibate-sp': typeof ClinicaDeRecuperacaoEmIbateSpRoute
+  '/clinica-de-recuperacao-em-ibitinga-sp': typeof ClinicaDeRecuperacaoEmIbitingaSpRoute
+  '/clinica-de-recuperacao-em-itapolis-sp': typeof ClinicaDeRecuperacaoEmItapolisSpRoute
+  '/clinica-de-recuperacao-em-jaboticabal-sp': typeof ClinicaDeRecuperacaoEmJaboticabalSpRoute
+  '/clinica-de-recuperacao-em-matao-sp': typeof ClinicaDeRecuperacaoEmMataoSpRoute
+  '/clinica-de-recuperacao-em-porto-ferreira-sp': typeof ClinicaDeRecuperacaoEmPortoFerreiraSpRoute
   '/clinica-de-recuperacao-em-ribeirao-preto-sp': typeof ClinicaDeRecuperacaoEmRibeiraoPretoSpRoute
   '/clinica-de-recuperacao-em-rio-claro-sp': typeof ClinicaDeRecuperacaoEmRioClaroSpRoute
   '/clinica-de-recuperacao-em-sao-carlos-sp': typeof ClinicaDeRecuperacaoEmSaoCarlosSpRoute
+  '/clinica-de-recuperacao-em-taquaritinga-sp': typeof ClinicaDeRecuperacaoEmTaquaritingaSpRoute
   '/contato': typeof ContatoRoute
   '/familia': typeof FamiliaRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -264,11 +364,21 @@ export interface FileRouteTypes {
     | '/blog'
     | '/cidades'
     | '/clinica-de-reabilitacao'
+    | '/clinica-de-recuperacao-em-americo-brasiliense-sp'
     | '/clinica-de-recuperacao-em-araraquara'
     | '/clinica-de-recuperacao-em-bauru-sp'
+    | '/clinica-de-recuperacao-em-descalvado-sp'
+    | '/clinica-de-recuperacao-em-franca-sp'
+    | '/clinica-de-recuperacao-em-ibate-sp'
+    | '/clinica-de-recuperacao-em-ibitinga-sp'
+    | '/clinica-de-recuperacao-em-itapolis-sp'
+    | '/clinica-de-recuperacao-em-jaboticabal-sp'
+    | '/clinica-de-recuperacao-em-matao-sp'
+    | '/clinica-de-recuperacao-em-porto-ferreira-sp'
     | '/clinica-de-recuperacao-em-ribeirao-preto-sp'
     | '/clinica-de-recuperacao-em-rio-claro-sp'
     | '/clinica-de-recuperacao-em-sao-carlos-sp'
+    | '/clinica-de-recuperacao-em-taquaritinga-sp'
     | '/contato'
     | '/familia'
     | '/sitemap.xml'
@@ -290,11 +400,21 @@ export interface FileRouteTypes {
     | '/acolhimento'
     | '/cidades'
     | '/clinica-de-reabilitacao'
+    | '/clinica-de-recuperacao-em-americo-brasiliense-sp'
     | '/clinica-de-recuperacao-em-araraquara'
     | '/clinica-de-recuperacao-em-bauru-sp'
+    | '/clinica-de-recuperacao-em-descalvado-sp'
+    | '/clinica-de-recuperacao-em-franca-sp'
+    | '/clinica-de-recuperacao-em-ibate-sp'
+    | '/clinica-de-recuperacao-em-ibitinga-sp'
+    | '/clinica-de-recuperacao-em-itapolis-sp'
+    | '/clinica-de-recuperacao-em-jaboticabal-sp'
+    | '/clinica-de-recuperacao-em-matao-sp'
+    | '/clinica-de-recuperacao-em-porto-ferreira-sp'
     | '/clinica-de-recuperacao-em-ribeirao-preto-sp'
     | '/clinica-de-recuperacao-em-rio-claro-sp'
     | '/clinica-de-recuperacao-em-sao-carlos-sp'
+    | '/clinica-de-recuperacao-em-taquaritinga-sp'
     | '/contato'
     | '/familia'
     | '/sitemap.xml'
@@ -317,11 +437,21 @@ export interface FileRouteTypes {
     | '/blog'
     | '/cidades'
     | '/clinica-de-reabilitacao'
+    | '/clinica-de-recuperacao-em-americo-brasiliense-sp'
     | '/clinica-de-recuperacao-em-araraquara'
     | '/clinica-de-recuperacao-em-bauru-sp'
+    | '/clinica-de-recuperacao-em-descalvado-sp'
+    | '/clinica-de-recuperacao-em-franca-sp'
+    | '/clinica-de-recuperacao-em-ibate-sp'
+    | '/clinica-de-recuperacao-em-ibitinga-sp'
+    | '/clinica-de-recuperacao-em-itapolis-sp'
+    | '/clinica-de-recuperacao-em-jaboticabal-sp'
+    | '/clinica-de-recuperacao-em-matao-sp'
+    | '/clinica-de-recuperacao-em-porto-ferreira-sp'
     | '/clinica-de-recuperacao-em-ribeirao-preto-sp'
     | '/clinica-de-recuperacao-em-rio-claro-sp'
     | '/clinica-de-recuperacao-em-sao-carlos-sp'
+    | '/clinica-de-recuperacao-em-taquaritinga-sp'
     | '/contato'
     | '/familia'
     | '/sitemap.xml'
@@ -345,11 +475,21 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRouteWithChildren
   CidadesRoute: typeof CidadesRoute
   ClinicaDeReabilitacaoRoute: typeof ClinicaDeReabilitacaoRoute
+  ClinicaDeRecuperacaoEmAmericoBrasilienseSpRoute: typeof ClinicaDeRecuperacaoEmAmericoBrasilienseSpRoute
   ClinicaDeRecuperacaoEmAraraquaraRoute: typeof ClinicaDeRecuperacaoEmAraraquaraRoute
   ClinicaDeRecuperacaoEmBauruSpRoute: typeof ClinicaDeRecuperacaoEmBauruSpRoute
+  ClinicaDeRecuperacaoEmDescalvadoSpRoute: typeof ClinicaDeRecuperacaoEmDescalvadoSpRoute
+  ClinicaDeRecuperacaoEmFrancaSpRoute: typeof ClinicaDeRecuperacaoEmFrancaSpRoute
+  ClinicaDeRecuperacaoEmIbateSpRoute: typeof ClinicaDeRecuperacaoEmIbateSpRoute
+  ClinicaDeRecuperacaoEmIbitingaSpRoute: typeof ClinicaDeRecuperacaoEmIbitingaSpRoute
+  ClinicaDeRecuperacaoEmItapolisSpRoute: typeof ClinicaDeRecuperacaoEmItapolisSpRoute
+  ClinicaDeRecuperacaoEmJaboticabalSpRoute: typeof ClinicaDeRecuperacaoEmJaboticabalSpRoute
+  ClinicaDeRecuperacaoEmMataoSpRoute: typeof ClinicaDeRecuperacaoEmMataoSpRoute
+  ClinicaDeRecuperacaoEmPortoFerreiraSpRoute: typeof ClinicaDeRecuperacaoEmPortoFerreiraSpRoute
   ClinicaDeRecuperacaoEmRibeiraoPretoSpRoute: typeof ClinicaDeRecuperacaoEmRibeiraoPretoSpRoute
   ClinicaDeRecuperacaoEmRioClaroSpRoute: typeof ClinicaDeRecuperacaoEmRioClaroSpRoute
   ClinicaDeRecuperacaoEmSaoCarlosSpRoute: typeof ClinicaDeRecuperacaoEmSaoCarlosSpRoute
+  ClinicaDeRecuperacaoEmTaquaritingaSpRoute: typeof ClinicaDeRecuperacaoEmTaquaritingaSpRoute
   ContatoRoute: typeof ContatoRoute
   FamiliaRoute: typeof FamiliaRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -401,6 +541,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ClinicaDeReabilitacaoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/clinica-de-recuperacao-em-americo-brasiliense-sp': {
+      id: '/clinica-de-recuperacao-em-americo-brasiliense-sp'
+      path: '/clinica-de-recuperacao-em-americo-brasiliense-sp'
+      fullPath: '/clinica-de-recuperacao-em-americo-brasiliense-sp'
+      preLoaderRoute: typeof ClinicaDeRecuperacaoEmAmericoBrasilienseSpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/clinica-de-recuperacao-em-araraquara': {
       id: '/clinica-de-recuperacao-em-araraquara'
       path: '/clinica-de-recuperacao-em-araraquara'
@@ -413,6 +560,62 @@ declare module '@tanstack/react-router' {
       path: '/clinica-de-recuperacao-em-bauru-sp'
       fullPath: '/clinica-de-recuperacao-em-bauru-sp'
       preLoaderRoute: typeof ClinicaDeRecuperacaoEmBauruSpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/clinica-de-recuperacao-em-descalvado-sp': {
+      id: '/clinica-de-recuperacao-em-descalvado-sp'
+      path: '/clinica-de-recuperacao-em-descalvado-sp'
+      fullPath: '/clinica-de-recuperacao-em-descalvado-sp'
+      preLoaderRoute: typeof ClinicaDeRecuperacaoEmDescalvadoSpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/clinica-de-recuperacao-em-franca-sp': {
+      id: '/clinica-de-recuperacao-em-franca-sp'
+      path: '/clinica-de-recuperacao-em-franca-sp'
+      fullPath: '/clinica-de-recuperacao-em-franca-sp'
+      preLoaderRoute: typeof ClinicaDeRecuperacaoEmFrancaSpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/clinica-de-recuperacao-em-ibate-sp': {
+      id: '/clinica-de-recuperacao-em-ibate-sp'
+      path: '/clinica-de-recuperacao-em-ibate-sp'
+      fullPath: '/clinica-de-recuperacao-em-ibate-sp'
+      preLoaderRoute: typeof ClinicaDeRecuperacaoEmIbateSpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/clinica-de-recuperacao-em-ibitinga-sp': {
+      id: '/clinica-de-recuperacao-em-ibitinga-sp'
+      path: '/clinica-de-recuperacao-em-ibitinga-sp'
+      fullPath: '/clinica-de-recuperacao-em-ibitinga-sp'
+      preLoaderRoute: typeof ClinicaDeRecuperacaoEmIbitingaSpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/clinica-de-recuperacao-em-itapolis-sp': {
+      id: '/clinica-de-recuperacao-em-itapolis-sp'
+      path: '/clinica-de-recuperacao-em-itapolis-sp'
+      fullPath: '/clinica-de-recuperacao-em-itapolis-sp'
+      preLoaderRoute: typeof ClinicaDeRecuperacaoEmItapolisSpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/clinica-de-recuperacao-em-jaboticabal-sp': {
+      id: '/clinica-de-recuperacao-em-jaboticabal-sp'
+      path: '/clinica-de-recuperacao-em-jaboticabal-sp'
+      fullPath: '/clinica-de-recuperacao-em-jaboticabal-sp'
+      preLoaderRoute: typeof ClinicaDeRecuperacaoEmJaboticabalSpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/clinica-de-recuperacao-em-matao-sp': {
+      id: '/clinica-de-recuperacao-em-matao-sp'
+      path: '/clinica-de-recuperacao-em-matao-sp'
+      fullPath: '/clinica-de-recuperacao-em-matao-sp'
+      preLoaderRoute: typeof ClinicaDeRecuperacaoEmMataoSpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/clinica-de-recuperacao-em-porto-ferreira-sp': {
+      id: '/clinica-de-recuperacao-em-porto-ferreira-sp'
+      path: '/clinica-de-recuperacao-em-porto-ferreira-sp'
+      fullPath: '/clinica-de-recuperacao-em-porto-ferreira-sp'
+      preLoaderRoute: typeof ClinicaDeRecuperacaoEmPortoFerreiraSpRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/clinica-de-recuperacao-em-ribeirao-preto-sp': {
@@ -434,6 +637,13 @@ declare module '@tanstack/react-router' {
       path: '/clinica-de-recuperacao-em-sao-carlos-sp'
       fullPath: '/clinica-de-recuperacao-em-sao-carlos-sp'
       preLoaderRoute: typeof ClinicaDeRecuperacaoEmSaoCarlosSpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/clinica-de-recuperacao-em-taquaritinga-sp': {
+      id: '/clinica-de-recuperacao-em-taquaritinga-sp'
+      path: '/clinica-de-recuperacao-em-taquaritinga-sp'
+      fullPath: '/clinica-de-recuperacao-em-taquaritinga-sp'
+      preLoaderRoute: typeof ClinicaDeRecuperacaoEmTaquaritingaSpRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contato': {
@@ -577,13 +787,28 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRouteWithChildren,
   CidadesRoute: CidadesRoute,
   ClinicaDeReabilitacaoRoute: ClinicaDeReabilitacaoRoute,
+  ClinicaDeRecuperacaoEmAmericoBrasilienseSpRoute:
+    ClinicaDeRecuperacaoEmAmericoBrasilienseSpRoute,
   ClinicaDeRecuperacaoEmAraraquaraRoute: ClinicaDeRecuperacaoEmAraraquaraRoute,
   ClinicaDeRecuperacaoEmBauruSpRoute: ClinicaDeRecuperacaoEmBauruSpRoute,
+  ClinicaDeRecuperacaoEmDescalvadoSpRoute:
+    ClinicaDeRecuperacaoEmDescalvadoSpRoute,
+  ClinicaDeRecuperacaoEmFrancaSpRoute: ClinicaDeRecuperacaoEmFrancaSpRoute,
+  ClinicaDeRecuperacaoEmIbateSpRoute: ClinicaDeRecuperacaoEmIbateSpRoute,
+  ClinicaDeRecuperacaoEmIbitingaSpRoute: ClinicaDeRecuperacaoEmIbitingaSpRoute,
+  ClinicaDeRecuperacaoEmItapolisSpRoute: ClinicaDeRecuperacaoEmItapolisSpRoute,
+  ClinicaDeRecuperacaoEmJaboticabalSpRoute:
+    ClinicaDeRecuperacaoEmJaboticabalSpRoute,
+  ClinicaDeRecuperacaoEmMataoSpRoute: ClinicaDeRecuperacaoEmMataoSpRoute,
+  ClinicaDeRecuperacaoEmPortoFerreiraSpRoute:
+    ClinicaDeRecuperacaoEmPortoFerreiraSpRoute,
   ClinicaDeRecuperacaoEmRibeiraoPretoSpRoute:
     ClinicaDeRecuperacaoEmRibeiraoPretoSpRoute,
   ClinicaDeRecuperacaoEmRioClaroSpRoute: ClinicaDeRecuperacaoEmRioClaroSpRoute,
   ClinicaDeRecuperacaoEmSaoCarlosSpRoute:
     ClinicaDeRecuperacaoEmSaoCarlosSpRoute,
+  ClinicaDeRecuperacaoEmTaquaritingaSpRoute:
+    ClinicaDeRecuperacaoEmTaquaritingaSpRoute,
   ContatoRoute: ContatoRoute,
   FamiliaRoute: FamiliaRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,

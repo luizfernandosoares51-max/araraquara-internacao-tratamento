@@ -468,7 +468,22 @@ export const cityPages: CityPageData[] = [
   },
 ];
 
-const dedicatedCitySlugs = new Set(["sao-carlos-sp", "rio-claro-sp", "bauru-sp", "ribeirao-preto-sp"]);
+const dedicatedCitySlugs = new Set([
+  "sao-carlos-sp",
+  "rio-claro-sp",
+  "bauru-sp",
+  "ribeirao-preto-sp",
+  "matao-sp",
+  "americo-brasiliense-sp",
+  "taquaritinga-sp",
+  "ibitinga-sp",
+  "itapolis-sp",
+  "ibate-sp",
+  "descalvado-sp",
+  "porto-ferreira-sp",
+  "jaboticabal-sp",
+  "franca-sp",
+]);
 
 export const templatedCityPages = cityPages.filter((city) => !dedicatedCitySlugs.has(city.slug));
 
