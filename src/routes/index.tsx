@@ -217,7 +217,7 @@ function InstagramIcon({ className }: { className?: string }) {
 
 function SectionLabel({ children }: { children: ReactNode }) {
   return (
-    <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">
+    <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">
       {children}
     </p>
   );
@@ -225,15 +225,9 @@ function SectionLabel({ children }: { children: ReactNode }) {
 
 function HomePage() {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-deep font-body text-foreground">
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="float-one absolute -left-32 top-16 size-80 rounded-full bg-brand/35 blur-3xl" />
-        <div className="float-two absolute -right-24 top-[28rem] size-72 rounded-full bg-secondary/20 blur-3xl" />
-        <div className="float-one absolute left-1/3 top-[80rem] size-80 rounded-full bg-brand/20 blur-3xl" />
-      </div>
-
-      <div className="relative z-10 mx-auto max-w-6xl px-5 pb-32 pt-6 sm:px-8 lg:px-12">
-        <header>
+    <div className="home-serene min-h-screen overflow-hidden bg-deep font-body text-foreground">
+      <div className="mx-auto max-w-6xl px-5 pb-32 sm:px-8 lg:px-12">
+        <header className="border-b border-border bg-background/95 pb-5 pt-5 backdrop-blur-sm">
           <div className="flex items-center justify-between gap-4">
             <a href="#inicio" className="flex items-center gap-3" aria-label="Central de Acolhimento e Reabilitação">
               <img
@@ -244,7 +238,7 @@ function HomePage() {
                 className="size-11 shrink-0 rounded-xl object-contain"
                 loading="eager"
               />
-              <span className="font-display text-[13px] font-semibold leading-tight sm:text-sm">
+               <span className="font-display text-[13px] font-bold leading-tight text-foreground sm:text-sm">
                 Central de Acolhimento e Reabilitação
               </span>
             </a>
@@ -295,22 +289,22 @@ function HomePage() {
         </header>
 
         <main id="inicio">
-          <section className="grid gap-10 pb-14 pt-10 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:pb-20 lg:pt-16">
+          <section className="grid gap-10 pb-20 pt-12 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:gap-16 lg:pb-28 lg:pt-20">
             <div>
-              <div className="glass-panel inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-secondary">
+              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-secondary shadow-sm">
                 <span className="size-1.5 rounded-full bg-accent" /> Acolhimento, orientação e apoio
               </div>
-              <h1 className="mt-5 max-w-3xl font-display text-[2.15rem] font-bold leading-[1.04] sm:text-5xl lg:text-[3.75rem]">
+              <h1 className="mt-6 max-w-3xl font-display text-[2.15rem] font-bold leading-[1.08] text-foreground sm:text-5xl lg:text-[3.75rem]">
                 Clínica de Reabilitação e <span className="text-secondary">Acolhimento para Dependência Química</span>
               </h1>
               <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-muted-foreground sm:text-lg">
                 A Central de Acolhimento e Reabilitação oferece informação e orientação a pessoas e famílias que buscam ajuda para dependência química, alcoolismo e uso problemático de álcool e outras drogas.
               </p>
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <a href="#tratamento" className="glass-panel flex min-h-14 items-center justify-center gap-2 rounded-2xl px-5 py-4 text-center text-sm font-semibold transition-colors hover:bg-glass-strong focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <a href="#tratamento" className="flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-primary px-5 py-4 text-center text-sm font-semibold text-primary-foreground shadow-lg shadow-brand/10 transition-colors hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
                   Conhecer o tratamento <ArrowRight className="size-4" aria-hidden="true" />
                 </a>
-                <WhatsAppLink className="flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-whatsapp px-5 py-4 text-center text-sm font-semibold text-whatsapp-foreground shadow-lg shadow-accent/20 transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
+                <WhatsAppLink className="flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-whatsapp px-5 py-4 text-center text-sm font-semibold text-whatsapp-foreground shadow-lg shadow-accent/15 transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
                   <MessageCircle className="size-5" aria-hidden="true" /> Buscar orientação
                 </WhatsAppLink>
               </div>
@@ -320,21 +314,21 @@ function HomePage() {
               </div>
             </div>
 
-            <div className="overflow-hidden rounded-3xl border border-border shadow-2xl shadow-background/30">
+            <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-2xl shadow-brand/10">
               <img src={heroImage.url} width={1200} height={630} decoding="async" fetchPriority="high" alt="Área externa arborizada da unidade física da Central em Araraquara" className="aspect-[4/3] w-full object-cover" />
-              <div className="glass-panel-strong flex items-center justify-between gap-4 border-x-0 border-b-0 px-5 py-4">
+              <div className="flex items-center justify-between gap-4 border-t border-border bg-card px-5 py-4">
                 <p className="text-sm leading-snug text-muted-foreground">Unidade física localizada exclusivamente em Araraquara.</p>
                 <Link to="/clinica-de-recuperacao-em-araraquara" className="shrink-0 text-xs font-semibold text-secondary hover:underline">Conhecer</Link>
               </div>
             </div>
           </section>
 
-          <section className="border-t border-border py-14 lg:py-20">
+          <section className="border-t border-border py-16 lg:py-24">
             <SectionLabel>Informação e caminhos possíveis</SectionLabel>
             <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Como podemos orientar</h2>
-            <div className="mt-8 grid gap-4 md:grid-cols-3">
+             <div className="mt-10 grid gap-5 md:grid-cols-3">
               {guidanceLinks.map((item) => (
-                <a key={item.title} href={item.href} className="glass-panel flex min-h-48 flex-col rounded-2xl p-5 transition-colors hover:bg-glass-strong sm:p-6">
+                 <a key={item.title} href={item.href} className="glass-panel flex min-h-48 flex-col rounded-2xl p-5 transition-all hover:-translate-y-0.5 hover:border-brand/25 sm:p-7">
                   <h3 className="font-display text-lg font-semibold">{item.title}</h3>
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
                   <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-secondary">Saiba mais <ArrowRight className="size-4" aria-hidden="true" /></span>
@@ -343,7 +337,7 @@ function HomePage() {
             </div>
           </section>
 
-          <section id="acolhimento" className="border-t border-border py-14 lg:py-20">
+          <section id="acolhimento" className="border-t border-border bg-muted/45 py-16 -mx-5 px-5 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 lg:py-24">
             <div className="grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:gap-16">
               <div>
                 <SectionLabel>Sobre o acolhimento</SectionLabel>
@@ -356,14 +350,14 @@ function HomePage() {
             </div>
           </section>
 
-          <section id="tratamento" className="border-t border-border py-14 lg:py-20">
+          <section id="tratamento" className="border-t border-border py-16 lg:py-24">
             <SectionLabel>Tratamento para dependência química e alcoolismo</SectionLabel>
             <div className="mt-3 grid gap-5 lg:grid-cols-[1fr_.8fr] lg:items-end">
               <h2 className="font-display text-2xl font-semibold leading-tight sm:text-4xl">Tratamento para dependência química e alcoolismo</h2>
               <p className="text-[15px] leading-relaxed text-muted-foreground">O tratamento para dependência química e alcoolismo pode envolver diferentes profissionais e estratégias. O plano de cuidado deve considerar a história, as condições de saúde e a realidade de cada pessoa.</p>
             </div>
 
-            <div className="mt-8 grid gap-3 md:grid-cols-3">
+            <div className="mt-10 grid gap-5 md:grid-cols-3">
               <article className="glass-panel rounded-2xl p-5 sm:p-6">
                 <span className="font-display text-xs font-semibold text-secondary">01</span>
                 <h3 className="mt-4 font-display text-lg font-semibold">Acompanhamento terapêutico</h3>
@@ -382,18 +376,18 @@ function HomePage() {
             </div>
           </section>
 
-          <section id="internacao" className="border-t border-border py-14 lg:py-20">
+          <section id="internacao" className="border-t border-border bg-muted/45 py-16 -mx-5 px-5 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 lg:py-24">
             <SectionLabel>Modalidades de acolhimento</SectionLabel>
             <h2 className="mt-3 max-w-2xl font-display text-2xl font-semibold leading-tight sm:text-4xl">Internação para dependência química: decisões com responsabilidade</h2>
-            <div className="mt-8 grid gap-4 md:grid-cols-2">
-              <article className="rounded-2xl border border-border bg-glass p-5 sm:p-7">
+            <div className="mt-10 grid gap-5 md:grid-cols-2">
+              <article className="rounded-2xl border border-border bg-card p-5 shadow-sm sm:p-7">
                 <div className="flex items-center gap-3">
                   <span className="grid size-8 place-items-center rounded-full bg-brand text-xs font-bold text-primary-foreground">V</span>
                   <h3 className="font-display text-xl font-semibold">Internação voluntária</h3>
                 </div>
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground">A internação voluntária acontece quando a própria pessoa concorda em receber acolhimento. O processo inclui conversa inicial, explicação sobre a rotina e avaliação das condições para que a entrada ocorra de forma consciente e organizada.</p>
               </article>
-              <article className="rounded-2xl border border-border bg-glass p-5 sm:p-7">
+              <article className="rounded-2xl border border-border bg-card p-5 shadow-sm sm:p-7">
                 <div className="flex items-center gap-3">
                   <span className="grid size-8 place-items-center rounded-full bg-secondary text-xs font-bold text-secondary-foreground">I</span>
                   <h3 className="font-display text-xl font-semibold">Internação involuntária</h3>
@@ -403,8 +397,8 @@ function HomePage() {
             </div>
           </section>
 
-          <section id="familia" className="border-t border-border py-14 lg:py-20">
-            <div className="glass-panel-strong rounded-3xl p-6 sm:p-9 lg:grid lg:grid-cols-[1.2fr_.8fr] lg:gap-12">
+          <section id="familia" className="border-t border-border py-16 lg:py-24">
+            <div className="glass-panel-strong rounded-3xl border-l-4 border-l-accent p-6 sm:p-9 lg:grid lg:grid-cols-[1.2fr_.8fr] lg:gap-12">
               <div>
                 <SectionLabel>Apoio para pessoas e famílias</SectionLabel>
                 <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-3xl">Apoio para famílias que buscam ajuda</h2>
@@ -425,13 +419,13 @@ function HomePage() {
             </div>
           </section>
 
-          <section id="atendimento-por-cidade" className="border-t border-border py-14 lg:py-20">
+          <section id="atendimento-por-cidade" className="border-t border-border bg-muted/45 py-16 -mx-5 px-5 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 lg:py-24">
             <SectionLabel>Orientação em diferentes regiões</SectionLabel>
             <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Atendimento e orientação por cidade</h2>
             <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted-foreground sm:text-base">
               A Central orienta pessoas e famílias de diferentes regiões de São Paulo. Consulte as páginas locais sem confundir orientação regional com a existência de uma unidade física.
             </p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+             <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               <article className="glass-panel flex min-h-52 flex-col rounded-2xl p-5 sm:p-6">
                 <MapPin className="size-5 text-secondary" aria-hidden="true" />
                 <h3 className="mt-4 font-display text-lg font-semibold">Araraquara</h3>
@@ -456,7 +450,7 @@ function HomePage() {
             </Link>
           </section>
 
-          <section id="galeria-fotos" aria-labelledby="galeria-titulo" className="scroll-mt-6 border-t border-border py-14 lg:py-20">
+          <section id="galeria-fotos" aria-labelledby="galeria-titulo" className="scroll-mt-6 border-t border-border py-16 lg:py-24">
             <SectionLabel>Unidade física</SectionLabel>
             <h2 id="galeria-titulo" className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Unidade física em Araraquara</h2>
             <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">A Central possui unidade física exclusivamente em Araraquara. Veja informações locais e fotos reais dos espaços desta unidade.</p>
@@ -502,7 +496,7 @@ function HomePage() {
             </details>
           </section>
 
-          <section id="como-funciona" className="border-t border-border py-14 lg:py-20">
+          <section id="como-funciona" className="border-t border-border bg-muted/45 py-16 -mx-5 px-5 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 lg:py-24">
             <SectionLabel>Como funciona</SectionLabel>
             <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Como funciona o primeiro contato</h2>
             <ol className="glass-panel mt-8 grid gap-0 overflow-hidden rounded-3xl md:grid-cols-3">
@@ -517,7 +511,7 @@ function HomePage() {
             </ol>
           </section>
 
-          <section id="perguntas" className="border-t border-border py-14 lg:py-20">
+          <section id="perguntas" className="border-t border-border py-16 lg:py-24">
             <SectionLabel>Perguntas frequentes</SectionLabel>
             <h2 className="mt-3 max-w-2xl font-display text-2xl font-semibold leading-tight sm:text-4xl">Informação clara para uma decisão mais segura</h2>
             <div className="mt-8 divide-y divide-border border-y border-border">
@@ -525,7 +519,7 @@ function HomePage() {
                 <details key={faq.question} className="group py-5">
                   <summary className="flex cursor-pointer list-none items-start justify-between gap-5 font-display text-[15px] font-semibold marker:content-none sm:text-base">
                     {faq.question}
-                    <span className="grid size-7 shrink-0 place-items-center rounded-full bg-glass text-secondary transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+                    <span className="grid size-7 shrink-0 place-items-center rounded-full bg-muted text-secondary transition-transform group-open:rotate-45" aria-hidden="true">+</span>
                   </summary>
                   <p className="max-w-3xl pt-4 text-sm leading-relaxed text-muted-foreground">{faq.answer}</p>
                 </details>
@@ -533,7 +527,7 @@ function HomePage() {
             </div>
           </section>
 
-          <section className="border-t border-border py-14 lg:py-20">
+          <section className="border-t border-border bg-muted/45 py-16 -mx-5 px-5 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 lg:py-24">
             <SectionLabel>Blog e vídeos</SectionLabel>
             <h2 className="mt-3 max-w-3xl font-display text-2xl font-semibold leading-tight sm:text-4xl">Conteúdos para entender a dependência química</h2>
             <div className="mt-8 grid gap-4 md:grid-cols-2">
@@ -555,9 +549,8 @@ function HomePage() {
             </div>
           </section>
 
-          <section id="contato" className="border-t border-border py-14 lg:py-20">
-            <div className="relative overflow-hidden rounded-3xl bg-primary p-6 sm:p-10 lg:p-14">
-              <div aria-hidden="true" className="absolute -right-16 -top-20 size-64 rounded-full bg-secondary/20 blur-3xl" />
+          <section id="contato" className="border-t border-border py-16 lg:py-24">
+            <div className="relative overflow-hidden rounded-3xl bg-primary p-6 shadow-xl shadow-brand/10 sm:p-10 lg:p-14">
               <div className="relative max-w-3xl">
                 <SectionLabel>Estamos aqui para orientar</SectionLabel>
                 <h2 className="mt-3 font-display text-3xl font-bold leading-tight sm:text-5xl">Fale com a Central</h2>
@@ -575,7 +568,7 @@ function HomePage() {
           </section>
         </main>
 
-        <footer className="border-t border-border py-8">
+        <footer className="border-t border-border py-10">
           <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="font-display font-semibold">Central de Acolhimento e Reabilitação</p>
