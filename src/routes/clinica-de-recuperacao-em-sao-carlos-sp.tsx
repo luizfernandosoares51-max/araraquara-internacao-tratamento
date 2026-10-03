@@ -5,6 +5,7 @@ import {
   Building2,
   CheckCircle2,
   HeartHandshake,
+  Mail,
   MapPin,
   MessageCircle,
   Phone,
@@ -15,6 +16,8 @@ import {
 import saoCarlosImage from "@/assets/blog-dependencia-quimica-sao-carlos.jpg";
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import {
+  emailDisplay,
+  emailHref,
   instagramHref,
   phoneDisplay,
   phoneHref,
@@ -348,6 +351,7 @@ function SaoCarlosPage() {
           <div>
             <p className="font-display font-semibold">Central de Acolhimento e Reabilitação</p>
             <p className="mt-2 max-w-xl text-xs leading-relaxed text-muted-foreground">Orientação para pessoas e famílias de São Carlos. Esta página não apresenta a Central como unidade pública ou como instituição física localizada no município.</p>
+            <a href={emailHref} className="mt-2 flex items-center gap-2 break-all text-xs font-semibold text-secondary hover:underline"><Mail className="size-3.5 shrink-0" aria-hidden="true" /> {emailDisplay}</a>
           </div>
           <div className="flex flex-wrap gap-5 text-xs text-muted-foreground">
             <Link to="/" className="hover:text-secondary">Página inicial</Link>

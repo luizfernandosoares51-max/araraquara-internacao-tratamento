@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Camera, Check, ChevronDown, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
+import { ArrowRight, Camera, Check, ChevronDown, Mail, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
 import type { ReactNode } from "react";
 
 import logoAsset from "@/assets/logo-central-optimized.webp.asset.json";
@@ -7,6 +7,8 @@ import heroImage from "@/assets/unidade-araraquara-home.webp.asset.json";
 import { AraraquaraPhotoGallery } from "@/components/araraquara-photo-gallery";
 import { cityDirectory } from "@/lib/city-pages";
 import {
+  emailDisplay,
+  emailHref,
   facebookHref,
   instagramHref,
   mainNav,
@@ -562,6 +564,9 @@ function HomePage() {
                     <Phone className="size-4" aria-hidden="true" /> Ligar agora · {phoneDisplay}
                   </a>
                 </div>
+                <a href={emailHref} className="mt-5 inline-flex items-center gap-2 break-all text-sm font-semibold text-primary-foreground hover:underline">
+                  <Mail className="size-4 shrink-0" aria-hidden="true" /> {emailDisplay}
+                </a>
               </div>
             </div>
           </section>
@@ -574,6 +579,9 @@ function HomePage() {
               <p className="mt-1 text-xs text-muted-foreground">Atendimento em diferentes regiões de São Paulo</p>
               <a href={phoneHref} className="mt-3 inline-flex items-center gap-2 text-xs font-semibold text-secondary hover:underline">
                 <Phone className="size-3.5" aria-hidden="true" /> Ligar agora · {phoneDisplay}
+              </a>
+              <a href={emailHref} className="mt-2 flex items-center gap-2 break-all text-xs font-semibold text-secondary hover:underline">
+                <Mail className="size-3.5 shrink-0" aria-hidden="true" /> {emailDisplay}
               </a>
             </div>
             <div className="flex flex-col gap-4 sm:items-end">

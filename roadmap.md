@@ -39,3 +39,4 @@
 - [x] Apresentar a prévia e o relatório por cidade antes de publicar
 - [x] Redesenhar exclusivamente a camada visual da Home com direção clara e institucional
 - [x] Validar a nova Home em celular e computador e apresentar a prévia sem publicar
+- [x] Adicionar o e-mail oficial à página de contato e aos rodapés existentes
