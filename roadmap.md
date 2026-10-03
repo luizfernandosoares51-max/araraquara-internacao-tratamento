@@ -38,4 +38,4 @@
 - [x] Auditar comparativamente as 10 páginas em celular, computador e acesso direto
 - [x] Apresentar a prévia e o relatório por cidade antes de publicar
 - [x] Redesenhar exclusivamente a camada visual da Home com direção clara e institucional
-- [ ] Validar a nova Home em celular e computador e apresentar a prévia sem publicar
+- [x] Validar a nova Home em celular e computador e apresentar a prévia sem publicar
