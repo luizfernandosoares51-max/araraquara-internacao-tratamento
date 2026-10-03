@@ -32,8 +32,8 @@
 - [x] Diferenciar as intenções dos dois artigos sobre sinais da dependência química
 - [x] Revisar a interligação prioritária sem alterar URLs ou configurações técnicas
 - [x] Apresentar a prévia das correções prioritárias para aprovação antes de publicar
-- [ ] Pesquisar fontes públicas oficiais para as 10 páginas locais pendentes
-- [ ] Criar conteúdo, metadados, FAQs, imagens e links próprios para cada uma das 10 cidades
-- [ ] Preservar URLs e páginas já consolidadas durante a expansão local
-- [ ] Auditar comparativamente as 10 páginas em celular, computador e acesso direto
-- [ ] Apresentar a prévia e o relatório por cidade antes de publicar
+- [x] Pesquisar fontes públicas oficiais para as 10 páginas locais pendentes
+- [x] Criar conteúdo, metadados, FAQs, imagens e links próprios para cada uma das 10 cidades
+- [x] Preservar URLs e páginas já consolidadas durante a expansão local
+- [x] Auditar comparativamente as 10 páginas em celular, computador e acesso direto
+- [x] Apresentar a prévia e o relatório por cidade antes de publicar
