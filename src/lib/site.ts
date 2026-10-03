@@ -3,6 +3,9 @@ export const siteUrl = "https://centraldeacolhimentoereabilitacao.com";
 export const phoneDisplay = "(16) 99765-4579";
 export const phoneHref = "tel:+5516997654579";
 
+export const emailDisplay = "centraldeacolhimentospbr@gmail.com";
+export const emailHref = `mailto:${emailDisplay}`;
+
 export const whatsappNumber = "5516997654579";
 export const whatsappMessage =
   "Olá, gostaria de receber informações sobre o acolhimento e tratamento.";

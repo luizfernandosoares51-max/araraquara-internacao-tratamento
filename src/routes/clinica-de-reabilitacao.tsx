@@ -5,6 +5,7 @@ import {
   ChevronDown,
   ClipboardCheck,
   HeartHandshake,
+  Mail,
   MapPin,
   MessageCircle,
   Phone,
@@ -14,7 +15,7 @@ import {
 import type { ReactNode } from "react";
 
 import heroImage from "@/assets/unidade-araraquara-home.webp.asset.json";
-import { phoneDisplay, phoneHref, siteUrl, whatsappHref } from "@/lib/site";
+import { emailDisplay, emailHref, phoneDisplay, phoneHref, siteUrl, whatsappHref } from "@/lib/site";
 
 const pageUrl = `${siteUrl}/clinica-de-reabilitacao`;
 const imageUrl = heroImage.url.startsWith("http") ? heroImage.url : `${siteUrl}${heroImage.url}`;
@@ -415,7 +416,7 @@ function RehabilitationClinicPage() {
 
       <footer className="border-t border-border bg-deep px-5 py-8 text-foreground sm:px-8 lg:px-12">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <p>Central de Acolhimento e Reabilitação</p>
+          <div><p>Central de Acolhimento e Reabilitação</p><a href={emailHref} className="mt-2 flex items-center gap-2 break-all font-semibold text-secondary hover:underline"><Mail className="size-3.5 shrink-0" aria-hidden="true" /> {emailDisplay}</a></div>
           <nav aria-label="Navegação do rodapé" className="flex flex-wrap gap-5">
             <Link to="/">Início</Link>
             <Link to="/cidades">Cidades</Link>
