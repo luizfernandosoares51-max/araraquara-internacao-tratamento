@@ -73,6 +73,34 @@
   --whatsapp-foreground: oklch(0.17 0.06 271);
 }
 
+.home-serene {
+  --background: oklch(0.985 0.006 245);
+  --foreground: oklch(0.25 0.025 255);
+  --card: oklch(1 0 0 / 0.96);
+  --card-foreground: oklch(0.25 0.025 255);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.25 0.025 255);
+  --primary: oklch(0.4 0.12 253);
+  --primary-foreground: oklch(0.99 0.004 245);
+  --secondary: oklch(0.43 0.09 252);
+  --secondary-foreground: oklch(0.99 0.004 245);
+  --muted: oklch(0.96 0.009 245);
+  --muted-foreground: oklch(0.49 0.025 252);
+  --accent: oklch(0.67 0.1 155);
+  --accent-foreground: oklch(0.22 0.035 160);
+  --border: oklch(0.88 0.015 245);
+  --input: oklch(0.9 0.015 245);
+  --ring: oklch(0.54 0.11 253);
+  --brand: oklch(0.4 0.12 253);
+  --brand-soft: oklch(0.93 0.025 245);
+  --ice: oklch(0.975 0.008 245);
+  --deep: oklch(0.985 0.006 245);
+  --glass: oklch(1 0 0 / 0.92);
+  --glass-strong: oklch(1 0 0 / 0.98);
+  --whatsapp: oklch(0.61 0.13 153);
+  --whatsapp-foreground: oklch(0.99 0.004 245);
+}
+
 @layer base {
   * { border-color: var(--color-border); }
   html { scroll-behavior: smooth; }
@@ -92,6 +120,18 @@
   box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.08), 0 18px 55px oklch(0.08 0.03 270 / 0.18);
   backdrop-filter: blur(22px) saturate(140%);
   -webkit-backdrop-filter: blur(22px) saturate(140%);
+}
+
+.home-serene .glass-panel {
+  box-shadow: 0 10px 32px oklch(0.3 0.03 250 / 0.06);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.home-serene .glass-panel-strong {
+  box-shadow: 0 16px 44px oklch(0.3 0.03 250 / 0.08);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 @utility glass-panel-strong {
