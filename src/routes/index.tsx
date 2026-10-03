@@ -35,9 +35,9 @@ const photoGalleryCities = [
 const featuredCities = cityDirectory.slice(0, 4);
 
 const guidanceLinks = [
-  { title: "Acolhimento responsável", description: "Entenda como a escuta inicial ajuda a avaliar necessidades e possibilidades de cuidado.", href: "#acolhimento" },
-  { title: "Tratamento individualizado", description: "Conheça os aspectos que podem integrar um plano de cuidado para dependência química e alcoolismo.", href: "#tratamento" },
-  { title: "Orientação para a família", description: "Encontre informações para compreender a situação e buscar ajuda com mais segurança.", href: "#familia" },
+  { title: "Acolhimento responsável", description: "Entenda como a escuta inicial ajuda a avaliar necessidades e possibilidades de cuidado.", to: "/acolhimento" as const },
+  { title: "Tratamento individualizado", description: "Conheça os aspectos que podem integrar um plano de cuidado para dependência química e alcoolismo.", to: "/tratamento" as const },
+  { title: "Orientação para a família", description: "Encontre informações para compreender a situação e buscar ajuda com mais segurança.", to: "/familia" as const },
 ] as const;
 
 const existingArticles = [
@@ -55,9 +55,9 @@ const existingArticles = [
 
 const faqs = [
   {
-    question: "Como escolher um serviço de acolhimento e reabilitação?",
+    question: "O que avaliar ao escolher uma clínica de reabilitação?",
     answer:
-      "A escolha depende das necessidades da pessoa e da família. É importante avaliar a proposta de cuidado, a qualificação da equipe, a clareza das informações, a estrutura e a forma como o acompanhamento é conduzido. Nossa equipe pode explicar o modelo de acolhimento para que a família tome uma decisão consciente.",
+      "A escolha depende das necessidades da pessoa e da família. É importante compreender a proposta de cuidado, verificar a clareza das informações, conhecer a estrutura e perguntar como o acompanhamento é conduzido antes de tomar uma decisão.",
   },
   {
     question: "Como funciona o acolhimento para dependência química?",
@@ -70,14 +70,9 @@ const faqs = [
       "A internação é uma possibilidade de cuidado que precisa ser avaliada individualmente. Antes do acolhimento, a equipe conversa com a família, reúne informações relevantes e orienta sobre a modalidade adequada e as etapas do processo.",
   },
   {
-    question: "Existe internação voluntária?",
+    question: "Qual é a diferença entre internação voluntária e involuntária?",
     answer:
-      "Sim. Na internação voluntária, a própria pessoa concorda com o acolhimento e participa da decisão de iniciar o cuidado. A equipe apresenta as regras, a rotina e a proposta de acompanhamento antes da entrada.",
-  },
-  {
-    question: "Como funciona a internação involuntária?",
-    answer:
-      "Essa modalidade depende de avaliação responsável, indicação profissional e cumprimento dos critérios previstos na legislação aplicável. Cada situação deve ser analisada de forma individual, com respeito à dignidade e aos direitos da pessoa.",
+      "Na modalidade voluntária, a pessoa concorda com o acolhimento. A internação involuntária depende de avaliação responsável, indicação profissional e cumprimento da legislação aplicável. Cada situação deve ser analisada individualmente, com respeito à dignidade e aos direitos da pessoa.",
   },
   {
     question: "Como a família pode entrar em contato?",
@@ -90,9 +85,9 @@ const faqs = [
       "O tempo varia conforme as necessidades, a evolução e o plano de cuidado de cada pessoa. A duração deve ser acompanhada e reavaliada pela equipe, sem promessas de prazo fixo ou garantia de resultados.",
   },
   {
-    question: "A Central orienta famílias em diferentes regiões de São Paulo?",
+    question: "Onde fica a unidade física da Central?",
     answer:
-      "Sim. A Central oferece informações e orientação para pessoas e famílias que buscam possibilidades de acolhimento e tratamento em diferentes regiões de São Paulo. As condições de atendimento são esclarecidas no primeiro contato.",
+      "A única unidade física da Central está localizada em Araraquara, SP. Pessoas e famílias de outras cidades podem entrar em contato para receber informações e orientação; as páginas locais não representam filiais ou unidades físicas.",
   },
 ];
 
@@ -100,17 +95,17 @@ export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
   head: () => ({
     meta: [
-      { title: "Clínica de Reabilitação para Dependência Química | Central" },
+      { title: "Clínica de Reabilitação: Dependência e Alcoolismo | Central" },
       {
         name: "description",
         content:
-          "A Central de Acolhimento e Reabilitação oferece orientação sobre tratamento para dependência química e alcoolismo, com atendimento para famílias em São Paulo.",
+          "Informação, acolhimento e orientação sobre tratamento para dependência química e alcoolismo. Unidade física da Central em Araraquara, SP.",
       },
-      { property: "og:title", content: "Clínica de Reabilitação para Dependência Química | Central" },
+      { property: "og:title", content: "Clínica de Reabilitação: Dependência e Alcoolismo | Central" },
       {
         property: "og:description",
         content:
-          "Orientação sobre acolhimento e tratamento para dependência química e alcoolismo, com atendimento a famílias em diferentes regiões de São Paulo.",
+          "Informação, acolhimento e orientação sobre tratamento para dependência química e alcoolismo, com unidade física em Araraquara.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: pageUrl },
@@ -119,8 +114,8 @@ export const Route = createFileRoute("/")({
       { property: "og:image:height", content: "630" },
       { property: "og:image:alt", content: "Área externa da unidade física da Central em Araraquara" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Clínica de Reabilitação para Dependência Química | Central" },
-      { name: "twitter:description", content: "Orientação sobre acolhimento e tratamento para dependência química e alcoolismo em São Paulo." },
+      { name: "twitter:title", content: "Clínica de Reabilitação: Dependência e Alcoolismo | Central" },
+      { name: "twitter:description", content: "Informação, acolhimento e orientação sobre tratamento para dependência química e alcoolismo." },
       { name: "twitter:image", content: heroImageUrl },
     ],
     links: [{ rel: "canonical", href: pageUrl }],
@@ -141,8 +136,8 @@ export const Route = createFileRoute("/")({
               "@type": "WebPage",
               "@id": `${pageUrl}#webpage`,
               url: pageUrl,
-              name: "Clínica de Reabilitação para Dependência Química | Central",
-              description: "Orientação sobre acolhimento e tratamento para dependência química e alcoolismo em São Paulo.",
+               name: "Clínica de Reabilitação: Dependência e Alcoolismo | Central",
+               description: "Informação, acolhimento e orientação sobre tratamento para dependência química e alcoolismo, com unidade física em Araraquara.",
               isPartOf: { "@id": `${pageUrl}#website` },
               about: { "@id": `${pageUrl}#organization` },
               primaryImageOfPage: { "@type": "ImageObject", url: heroImageUrl, width: 1200, height: 630 },
@@ -295,10 +290,13 @@ function HomePage() {
                 <span className="size-1.5 rounded-full bg-accent" /> Acolhimento, orientação e apoio
               </div>
               <h1 className="mt-6 max-w-3xl font-display text-[2.15rem] font-bold leading-[1.08] text-foreground sm:text-5xl lg:text-[3.75rem]">
-                Clínica de Reabilitação e <span className="text-secondary">Acolhimento para Dependência Química</span>
+                Clínica de Reabilitação para <span className="text-secondary">Dependência Química e Alcoolismo</span>
               </h1>
               <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-muted-foreground sm:text-lg">
-                A Central de Acolhimento e Reabilitação oferece informação e orientação a pessoas e famílias que buscam ajuda para dependência química, alcoolismo e uso problemático de álcool e outras drogas.
+                A Central de Acolhimento e Reabilitação reúne informação, orientação e acolhimento para pessoas e famílias que buscam ajuda diante da dependência química, do alcoolismo e do uso problemático de outras drogas.
+              </p>
+              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+                Cada situação pede uma avaliação individual. Conheça nosso <Link to="/clinica-de-reabilitacao" className="font-semibold text-secondary hover:underline">guia sobre clínica de reabilitação e recuperação</Link> e entenda possibilidades de tratamento sem promessas de prazo ou resultado.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a href="#tratamento" className="flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-primary px-5 py-4 text-center text-sm font-semibold text-primary-foreground shadow-lg shadow-brand/10 transition-colors hover:bg-primary/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
@@ -328,11 +326,11 @@ function HomePage() {
             <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Como podemos orientar</h2>
              <div className="mt-10 grid gap-5 md:grid-cols-3">
               {guidanceLinks.map((item) => (
-                 <a key={item.title} href={item.href} className="glass-panel flex min-h-48 flex-col rounded-2xl p-5 transition-all hover:-translate-y-0.5 hover:border-brand/25 sm:p-7">
+                 <Link key={item.title} to={item.to} className="glass-panel flex min-h-48 flex-col rounded-2xl p-5 transition-all hover:-translate-y-0.5 hover:border-brand/25 sm:p-7">
                   <h3 className="font-display text-lg font-semibold">{item.title}</h3>
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{item.description}</p>
                   <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-secondary">Saiba mais <ArrowRight className="size-4" aria-hidden="true" /></span>
-                </a>
+                 </Link>
               ))}
             </div>
           </section>
@@ -345,7 +343,7 @@ function HomePage() {
               </div>
               <div className="space-y-4 text-[15px] leading-relaxed text-muted-foreground sm:text-base">
                 <p>O acolhimento começa com escuta, sem julgamentos. A família pode relatar o que está vivendo, tirar dúvidas e conhecer as possibilidades disponíveis antes de qualquer decisão.</p>
-                <p>Nossa equipe oferece orientação clara sobre cada etapa, considera as necessidades da pessoa e de seus familiares e explica como funciona o cuidado. Buscar informação já é um passo importante.</p>
+                <p>Nossa equipe oferece orientação clara sobre cada etapa, considera as necessidades da pessoa e de seus familiares e explica como funciona o cuidado. Veja também as <Link to="/acolhimento" className="font-semibold text-secondary hover:underline">informações sobre acolhimento</Link>.</p>
               </div>
             </div>
           </section>
@@ -354,7 +352,7 @@ function HomePage() {
             <SectionLabel>Tratamento para dependência química e alcoolismo</SectionLabel>
             <div className="mt-3 grid gap-5 lg:grid-cols-[1fr_.8fr] lg:items-end">
               <h2 className="font-display text-2xl font-semibold leading-tight sm:text-4xl">Tratamento para dependência química e alcoolismo</h2>
-              <p className="text-[15px] leading-relaxed text-muted-foreground">O tratamento para dependência química e alcoolismo pode envolver diferentes profissionais e estratégias. O plano de cuidado deve considerar a história, as condições de saúde e a realidade de cada pessoa.</p>
+              <p className="text-[15px] leading-relaxed text-muted-foreground">O tratamento para dependência química e alcoolismo pode envolver diferentes estratégias. Em uma clínica de recuperação, o plano de cuidado deve considerar a história, as condições de saúde e a realidade de cada pessoa. <Link to="/tratamento" className="font-semibold text-secondary hover:underline">Entenda o tratamento</Link>.</p>
             </div>
 
             <div className="mt-10 grid gap-5 md:grid-cols-3">
@@ -403,9 +401,9 @@ function HomePage() {
                 <SectionLabel>Apoio para pessoas e famílias</SectionLabel>
                 <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-3xl">Apoio para famílias que buscam ajuda</h2>
                 <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">Buscar informações pode ajudar a família a compreender a situação com mais clareza. Nossa equipe oferece escuta e orientação sobre possibilidades de acolhimento e tratamento, sem prometer resultados e sem substituir uma avaliação profissional.</p>
-                <p className="mt-6 text-sm font-semibold text-secondary">
-                  Orientações para a família
-                </p>
+                <Link to="/familia" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:underline">
+                  Orientações para a família <ArrowRight className="size-4" aria-hidden="true" />
+                </Link>
               </div>
               <div className="mt-7 border-t border-border pt-6 lg:mt-0 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
                 <h3 className="font-display text-lg font-semibold">Encontre informações sobre atendimento na sua região</h3>
@@ -452,8 +450,8 @@ function HomePage() {
 
           <section id="galeria-fotos" aria-labelledby="galeria-titulo" className="scroll-mt-6 border-t border-border py-16 lg:py-24">
             <SectionLabel>Unidade física</SectionLabel>
-            <h2 id="galeria-titulo" className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Unidade física em Araraquara</h2>
-            <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">A Central possui unidade física exclusivamente em Araraquara. Veja informações locais e fotos reais dos espaços desta unidade.</p>
+             <h2 id="galeria-titulo" className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Clínica de Reabilitação em Araraquara</h2>
+             <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted-foreground">A única unidade física da Central está localizada em Araraquara, SP. Pessoas e famílias de outras cidades da região também podem buscar informação e orientação; as páginas locais não representam filiais. Veja informações sobre a unidade e fotos reais de seus espaços.</p>
             <Link to="/clinica-de-recuperacao-em-araraquara" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:underline">Conheça a unidade em Araraquara <ArrowRight className="size-4" aria-hidden="true" /></Link>
             <details className="group/gallery">
               <summary className="glass-panel mt-6 flex min-h-16 cursor-pointer list-none items-center justify-between gap-4 rounded-2xl px-5 py-4 marker:content-none sm:px-6">
@@ -530,6 +528,7 @@ function HomePage() {
           <section className="border-t border-border bg-muted/45 py-16 -mx-5 px-5 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 lg:py-24">
             <SectionLabel>Blog e vídeos</SectionLabel>
             <h2 className="mt-3 max-w-3xl font-display text-2xl font-semibold leading-tight sm:text-4xl">Conteúdos para entender a dependência química</h2>
+             <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted-foreground">O conteúdo educativo aprofunda temas como sinais, consequências, alcoolismo, tratamento e participação da família. Para uma visão geral, comece pelo <Link to="/clinica-de-reabilitacao" className="font-semibold text-secondary hover:underline">guia de clínica de reabilitação</Link>.</p>
             <div className="mt-8 grid gap-4 md:grid-cols-2">
               {existingArticles.map((article) => (
                 <article key={article.to} className="glass-panel flex min-h-56 flex-col rounded-2xl p-5 sm:p-7">
