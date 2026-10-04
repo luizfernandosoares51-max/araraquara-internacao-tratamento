@@ -66,10 +66,10 @@ export async function handleAcolhimentoChat(request: Request) {
   }
 
   const messages = validation.data;
-  const hasUnsupportedPart = messages.some(
+  const hasUnsupportedInput = messages.some(
     (message) =>
       !["user", "assistant"].includes(message.role) ||
-      message.parts.some((part) => part.type !== "text" && part.type !== "reasoning"),
+      (message.role === "user" && message.parts.some((part) => part.type !== "text")),
   );
   const textLength = messages.reduce(
     (total, message) =>
@@ -81,7 +81,7 @@ export async function handleAcolhimentoChat(request: Request) {
     0,
   );
 
-  if (hasUnsupportedPart || messages.length > 30 || textLength > 24_000) {
+  if (hasUnsupportedInput || messages.length > 30 || textLength > 24_000) {
     return Response.json(
       { error: "A conversa ficou muito longa. Feche o assistente e inicie uma nova conversa." },
       { status: 400 },

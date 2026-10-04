@@ -200,7 +200,6 @@ export function AcolhimentoAssistant() {
               <PromptInputSubmit
                 status={status}
                 onStop={() => void stop()}
-                disabled={!busy && status !== "ready"}
                 aria-label={busy ? "Interromper resposta" : "Enviar mensagem"}
               />
             </PromptInputFooter>
