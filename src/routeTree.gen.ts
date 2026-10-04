@@ -35,6 +35,7 @@ import { Route as FamiliaRouteImport } from './routes/familia'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TratamentoRouteImport } from './routes/tratamento'
 import { Route as VideosRouteImport } from './routes/videos'
+import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRouteImport } from './routes/blog.alcoolismo-quando-o-consumo-se-torna-um-problema'
 import { Route as BlogComoEscolherUmaClinicaDeReabilitacaoRouteImport } from './routes/blog.como-escolher-uma-clinica-de-reabilitacao'
@@ -190,6 +191,11 @@ const VideosRoute = VideosRouteImport.update({
   path: '/videos',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiChatRoute = ApiChatRouteImport.update({
+  id: '/api/chat',
+  path: '/api/chat',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/',
   path: '/',
@@ -271,6 +277,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tratamento': typeof TratamentoRoute
   '/videos': typeof VideosRoute
+  '/api/chat': typeof ApiChatRoute
   '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema': typeof BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute
   '/blog/como-escolher-uma-clinica-de-reabilitacao': typeof BlogComoEscolherUmaClinicaDeReabilitacaoRoute
   '/blog/como-funciona-uma-clinica-de-reabilitacao': typeof BlogComoFuncionaUmaClinicaDeReabilitacaoRoute
@@ -307,6 +314,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tratamento': typeof TratamentoRoute
   '/videos': typeof VideosRoute
+  '/api/chat': typeof ApiChatRoute
   '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema': typeof BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute
   '/blog/como-escolher-uma-clinica-de-reabilitacao': typeof BlogComoEscolherUmaClinicaDeReabilitacaoRoute
   '/blog/como-funciona-uma-clinica-de-reabilitacao': typeof BlogComoFuncionaUmaClinicaDeReabilitacaoRoute
@@ -345,6 +353,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tratamento': typeof TratamentoRoute
   '/videos': typeof VideosRoute
+  '/api/chat': typeof ApiChatRoute
   '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema': typeof BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute
   '/blog/como-escolher-uma-clinica-de-reabilitacao': typeof BlogComoEscolherUmaClinicaDeReabilitacaoRoute
   '/blog/como-funciona-uma-clinica-de-reabilitacao': typeof BlogComoFuncionaUmaClinicaDeReabilitacaoRoute
@@ -384,6 +393,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/tratamento'
     | '/videos'
+    | '/api/chat'
     | '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema'
     | '/blog/como-escolher-uma-clinica-de-reabilitacao'
     | '/blog/como-funciona-uma-clinica-de-reabilitacao'
@@ -420,6 +430,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/tratamento'
     | '/videos'
+    | '/api/chat'
     | '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema'
     | '/blog/como-escolher-uma-clinica-de-reabilitacao'
     | '/blog/como-funciona-uma-clinica-de-reabilitacao'
@@ -457,6 +468,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/tratamento'
     | '/videos'
+    | '/api/chat'
     | '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema'
     | '/blog/como-escolher-uma-clinica-de-reabilitacao'
     | '/blog/como-funciona-uma-clinica-de-reabilitacao'
@@ -495,6 +507,7 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TratamentoRoute: typeof TratamentoRoute
   VideosRoute: typeof VideosRoute
+  ApiChatRoute: typeof ApiChatRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -681,6 +694,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VideosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/chat': {
+      id: '/api/chat'
+      path: '/api/chat'
+      fullPath: '/api/chat'
+      preLoaderRoute: typeof ApiChatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/': {
       id: '/blog/'
       path: '/'
@@ -814,6 +834,7 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TratamentoRoute: TratamentoRoute,
   VideosRoute: VideosRoute,
+  ApiChatRoute: ApiChatRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

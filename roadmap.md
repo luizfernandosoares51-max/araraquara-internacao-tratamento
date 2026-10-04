@@ -40,6 +40,6 @@
 - [x] Redesenhar exclusivamente a camada visual da Home com direção clara e institucional
 - [x] Validar a nova Home em celular e computador e apresentar a prévia sem publicar
 - [x] Adicionar o e-mail oficial à página de contato e aos rodapés existentes
-- [ ] Aprovar a arquitetura e os serviços do Assistente de Acolhimento
-- [ ] Implementar o chat temporário com orientação segura e conteúdo real do site
-- [ ] Validar IA, contatos, privacidade, celular e preservação integral do SEO
+- [x] Aprovar a arquitetura e os serviços do Assistente de Acolhimento
+- [x] Implementar o chat temporário com orientação segura e conteúdo real do site
+- [x] Validar IA, contatos, privacidade, celular e preservação integral do SEO
