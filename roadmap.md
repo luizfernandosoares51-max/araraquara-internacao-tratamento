@@ -43,5 +43,5 @@
 - [x] Aprovar a arquitetura e os serviços do Assistente de Acolhimento
 - [x] Implementar o chat temporário com orientação segura e conteúdo real do site
 - [x] Validar IA, contatos, privacidade, celular e preservação integral do SEO
-- [ ] Refinar o acolhimento, a triagem breve e o encaminhamento humano do assistente
-- [ ] Validar cidades, localização, preço, internação e emergência no assistente
+- [x] Refinar o acolhimento, a triagem breve e o encaminhamento humano do assistente
+- [x] Validar cidades, localização, preço, internação e emergência no assistente
