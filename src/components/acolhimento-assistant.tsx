@@ -45,11 +45,11 @@ const welcomeMessage: UIMessage = {
 };
 
 const quickSuggestions = [
-  "Como funciona a internação?",
   "Preciso de ajuda para um familiar",
+  "Como funciona a internação?",
   "Tratamento para dependência química",
   "Tratamento para alcoolismo",
-  "Como entrar em contato?",
+  "Quero falar com a equipe",
 ] as const;
 
 function textFromPart(part: UIMessage["parts"][number]) {
