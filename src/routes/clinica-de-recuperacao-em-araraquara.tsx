@@ -193,7 +193,7 @@ function SectionLabel({ children }: { children: ReactNode }) {
 
 function AraraquaraPage() {
   return (
-    <div className="home-serene home-editorial min-h-screen overflow-hidden bg-ice font-body text-deep">
+    <div className="araraquara-editorial min-h-screen overflow-hidden bg-ice font-body text-deep">
       <header className="border-b border-border bg-background/95 text-foreground backdrop-blur-sm">
         <div className="mx-auto max-w-6xl px-5 pb-5 pt-5 sm:px-8 lg:px-12">
           <div className="flex items-center justify-between gap-4">
@@ -321,7 +321,7 @@ function AraraquaraPage() {
           </div>
         </section>
 
-        <section className="bg-deep text-foreground">
+        <section className="bg-deep text-primary-foreground">
           <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 lg:px-12 lg:py-16">
             <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
               <div><p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">Conversa confidencial</p><h2 className="mt-3 max-w-3xl font-display text-2xl font-semibold leading-tight sm:text-4xl">Precisa conversar sobre uma situação de dependência química ou alcoolismo?</h2><p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">Explique o que está acontecendo e receba informações sobre possibilidades de cuidado. A orientação não substitui uma avaliação profissional.</p></div>
@@ -364,14 +364,14 @@ function AraraquaraPage() {
           </div>
         </section>
 
-        <section id="contato" className="scroll-mt-6 bg-deep text-foreground">
+        <section id="contato" className="scroll-mt-6 bg-deep text-primary-foreground">
           <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
             <div className="max-w-4xl"><p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">Orientação em Araraquara</p><h2 className="mt-3 font-display text-3xl font-bold leading-tight sm:text-5xl">Precisa conversar sobre uma situação de dependência química ou alcoolismo?</h2><p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">A equipe pode ouvir sua dúvida e explicar possibilidades de acolhimento e tratamento. Cada caso é analisado individualmente, sem garantia de resultado e sem afirmar que internação seja sempre necessária.</p><div className="mt-7 flex flex-col gap-3 sm:flex-row"><WhatsAppLink className="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg bg-whatsapp px-6 py-4 text-sm font-semibold text-whatsapp-foreground"><MessageCircle className="size-5" aria-hidden="true" /> Falar pelo WhatsApp</WhatsAppLink><a href={phoneHref} className="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg border border-border px-6 py-4 text-sm font-semibold"><Phone className="size-4" aria-hidden="true" /> Ligar agora · {phoneDisplay}</a></div><a href={emailHref} className="mt-5 inline-flex items-center gap-2 break-all text-sm font-semibold text-secondary hover:underline"><Mail className="size-4 shrink-0" aria-hidden="true" /> {emailDisplay}</a></div>
           </div>
         </section>
       </main>
 
-      <footer className="bg-deep text-foreground">
+      <footer className="bg-deep text-primary-foreground">
         <div className="mx-auto max-w-6xl border-t border-border px-5 pb-28 pt-8 sm:px-8 lg:px-12">
           <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between"><div><p className="font-display font-semibold">Central de Acolhimento e Reabilitação</p><p className="mt-1 text-xs text-muted-foreground">Informações e orientação em Araraquara e região</p><a href={phoneHref} className="mt-3 flex items-center gap-2 text-xs font-semibold text-secondary"><Phone className="size-3.5" aria-hidden="true" /> {phoneDisplay}</a><a href={emailHref} className="mt-2 flex items-center gap-2 break-all text-xs font-semibold text-secondary hover:underline"><Mail className="size-3.5 shrink-0" aria-hidden="true" /> {emailDisplay}</a></div><div className="flex flex-wrap gap-5 text-xs text-muted-foreground"><Link to="/" className="hover:text-foreground">Home</Link><Link to="/blog" className="hover:text-foreground">Blog</Link><Link to="/contato" className="hover:text-foreground">Contato</Link><a href={araraquaraFacebookHref} target="_blank" rel="noopener noreferrer" aria-label="Facebook da Central em Araraquara" className="inline-flex items-center gap-2 hover:text-secondary"><SocialIcon network="facebook" /> Facebook</a><a href={instagramHref} target="_blank" rel="noopener noreferrer" aria-label="Instagram da Central" className="inline-flex items-center gap-2 hover:text-secondary"><SocialIcon network="instagram" /> Instagram</a></div></div>
           <p className="mt-7 max-w-3xl text-[11px] leading-relaxed text-muted-foreground/70">As informações desta página têm caráter orientativo. A indicação de qualquer modalidade de cuidado depende de avaliação individual e profissional.</p>
