@@ -101,6 +101,37 @@
   --whatsapp-foreground: oklch(0.99 0.004 245);
 }
 
+.home-editorial {
+  --font-display: "Playfair Display", serif;
+}
+
+.home-editorial h1,
+.home-editorial h2,
+.home-editorial h3 {
+  letter-spacing: 0;
+}
+
+.home-editorial img {
+  background: var(--muted);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .home-editorial main > section {
+    animation: home-section-reveal 600ms ease-out both;
+  }
+}
+
+@keyframes home-section-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @layer base {
   * { border-color: var(--color-border); }
   html { scroll-behavior: smooth; }
