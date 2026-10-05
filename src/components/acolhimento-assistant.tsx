@@ -85,11 +85,11 @@ export function AcolhimentoAssistant() {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button
-          className="fixed bottom-20 right-4 z-40 h-11 max-w-[calc(100vw-5rem)] gap-2 rounded-full px-4 shadow-lg sm:bottom-24 sm:right-6"
+          className="fixed bottom-4 right-20 z-50 h-11 w-[9.5rem] gap-1.5 rounded-full px-2.5 text-[11px] leading-tight shadow-lg sm:bottom-6 sm:right-24 sm:w-auto sm:px-3"
           aria-label="Falar com nosso assistente"
         >
-          <MessageCircle className="size-4" aria-hidden="true" />
-          <span className="truncate">Falar com nosso assistente</span>
+          <MessageCircle className="size-3.5" aria-hidden="true" />
+          <span className="whitespace-normal text-center sm:whitespace-nowrap">Falar com nosso assistente</span>
         </Button>
       </DialogTrigger>
 
