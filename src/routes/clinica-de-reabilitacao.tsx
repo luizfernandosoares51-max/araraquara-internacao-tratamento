@@ -14,11 +14,11 @@ import {
 } from "lucide-react";
 import type { ReactNode } from "react";
 
-import heroImage from "@/assets/unidade-araraquara-home.webp.asset.json";
 import { emailDisplay, emailHref, phoneDisplay, phoneHref, siteUrl, whatsappHref } from "@/lib/site";
+import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
 
 const pageUrl = `${siteUrl}/clinica-de-reabilitacao`;
-const imageUrl = heroImage.url.startsWith("http") ? heroImage.url : `${siteUrl}${heroImage.url}`;
+const imageUrl = `${siteUrl}${visualAssets.clinic.src}`;
 const title = "Clínica de Reabilitação | Tratamento e Acolhimento";
 const description =
   "Entenda como funcionam clínica de reabilitação, acolhimento e tratamento para dependência química e alcoolismo, com orientação responsável às famílias.";
@@ -134,7 +134,7 @@ export const Route = createFileRoute("/clinica-de-reabilitacao")({
       { property: "og:type", content: "website" },
       { property: "og:url", content: pageUrl },
       { property: "og:image", content: imageUrl },
-      { property: "og:image:alt", content: "Área externa da unidade física da Central em Araraquara" },
+      { property: "og:image:alt", content: visualAssets.clinic.alt },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
@@ -235,8 +235,8 @@ function RehabilitationClinicPage() {
               </div>
             </div>
             <figure className="overflow-hidden rounded-lg border border-border bg-glass">
-              <img src={heroImage.url} alt="Área externa da unidade física da Central em Araraquara" width={1200} height={800} className="aspect-[4/3] w-full object-cover" loading="eager" fetchPriority="high" />
-              <figcaption className="px-4 py-3 text-xs leading-relaxed text-muted-foreground">Imagem real da unidade física da Central em Araraquara, São Paulo.</figcaption>
+              <img src={visualAssets.clinic.src} alt={visualAssets.clinic.alt} width={1600} height={1067} className="aspect-[4/3] w-full object-cover" loading="eager" fetchPriority="high" />
+              <figcaption className="px-4 py-3 text-xs leading-relaxed text-muted-foreground">{conceptualImageCaption}</figcaption>
             </figure>
           </div>
         </section>
@@ -307,6 +307,10 @@ function RehabilitationClinicPage() {
             <SectionLabel>Etapas possíveis</SectionLabel>
             <h2 className="mt-3 max-w-3xl font-display text-3xl font-bold leading-tight sm:text-4xl">Como funciona o tratamento?</h2>
             <p className="mt-5 max-w-3xl text-base leading-7 text-deep/80">O tratamento não é uma sequência idêntica para todos. Em um cuidado responsável, cada etapa tem finalidade clara e depende das necessidades identificadas na avaliação.</p>
+            <figure className="mt-9 overflow-hidden rounded-lg border border-deep/10 bg-foreground shadow-sm">
+              <img src={visualAssets.treatment.src} alt={visualAssets.treatment.alt} width={1600} height={1067} loading="lazy" decoding="async" className="aspect-[16/7] w-full object-cover" />
+              <figcaption className="px-5 py-3 text-xs leading-relaxed text-deep/60">{conceptualImageCaption}</figcaption>
+            </figure>
             <div className="mt-10 grid gap-5 md:grid-cols-2">
               {treatmentStages.map((stage, index) => (
                 <article key={stage.title} className="rounded-lg border border-deep/10 bg-foreground p-6 shadow-sm sm:p-7">

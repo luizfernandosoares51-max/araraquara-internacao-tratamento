@@ -3,6 +3,7 @@ import { ArrowLeft, MessageCircle, Phone } from "lucide-react";
 
 import { cityDirectory } from "@/lib/city-pages";
 import { phoneDisplay, phoneHref, siteUrl, whatsappHref } from "@/lib/site";
+import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
 
 export const Route = createFileRoute("/cidades")({
   staticData: { sitemap: true },
@@ -31,8 +32,8 @@ export const Route = createFileRoute("/cidades")({
 
 function CidadesPage() {
   return (
-    <div className="min-h-screen bg-deep font-body text-foreground">
-      <div className="mx-auto max-w-3xl px-5 py-16 sm:px-8">
+    <div className="site-editorial min-h-screen bg-deep font-body text-foreground">
+      <div className="mx-auto max-w-5xl px-5 py-16 sm:px-8">
         <Link
           to="/"
           className="glass-panel mb-8 inline-flex min-h-11 items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold transition-colors hover:bg-glass-strong"
@@ -51,9 +52,13 @@ function CidadesPage() {
           cidades da região também podem receber orientação, conforme a avaliação feita no primeiro
           contato.
         </p>
+        <figure className="mt-8 overflow-hidden rounded-lg border border-border bg-glass shadow-xl shadow-background/20">
+          <img src={visualAssets.cities.src} alt={visualAssets.cities.alt} width={1600} height={1067} fetchPriority="high" decoding="async" className="aspect-[16/8] w-full object-cover" />
+          <figcaption className="border-t border-border px-5 py-3 text-xs leading-relaxed text-muted-foreground">{conceptualImageCaption}</figcaption>
+        </figure>
 
         <h2 className="mt-10 font-display text-xl font-semibold">Páginas disponíveis</h2>
-        <ul className="mt-4 space-y-3 text-sm">
+        <ul className="mt-4 grid gap-3 text-sm sm:grid-cols-2">
           <li>
             <Link
               to="/clinica-de-recuperacao-em-araraquara"

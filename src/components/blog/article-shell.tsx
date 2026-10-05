@@ -38,8 +38,8 @@ export function ArticleShell({
   related,
 }: ArticleShellProps) {
   return (
-    <main className="min-h-screen bg-deep font-body text-foreground">
-      <article className="mx-auto max-w-3xl px-5 py-12 sm:px-8 sm:py-16">
+    <main className="site-editorial min-h-screen bg-deep font-body text-foreground">
+      <article className="mx-auto max-w-4xl px-5 py-12 sm:px-8 sm:py-16">
         <Link
           to="/blog"
           className="inline-flex items-center gap-2 text-sm font-semibold text-secondary transition-colors hover:text-foreground"
@@ -53,7 +53,7 @@ export function ArticleShell({
           </p>
           <h1 className="mt-3 font-display text-3xl font-bold leading-tight sm:text-5xl">{title}</h1>
           <p className="mt-5 text-[17px] leading-8 text-muted-foreground">{description}</p>
-          <figure className="mt-8">
+          <figure className="mt-8 overflow-hidden rounded-lg border border-border bg-glass shadow-xl shadow-background/20">
             <img
               src={image}
               alt={imageAlt}
@@ -61,10 +61,10 @@ export function ArticleShell({
               height={640}
               fetchPriority="high"
               decoding="async"
-              className="aspect-[15/8] w-full rounded-2xl object-cover"
+              className="aspect-[15/8] w-full object-cover"
             />
-            <figcaption className="mt-2 text-xs leading-relaxed text-muted-foreground">
-              Imagem ilustrativa sobre apoio, orientação e busca de cuidado.
+            <figcaption className="border-t border-border px-5 py-3 text-xs leading-relaxed text-muted-foreground">
+              Imagem conceitual gerada por IA; não representa paciente, atendimento ou instalação real da Central.
             </figcaption>
           </figure>
         </header>

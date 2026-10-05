@@ -16,6 +16,7 @@ import {
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { emailDisplay, emailHref, phoneDisplay, phoneHref, siteUrl, whatsappHref } from "@/lib/site";
+import { visualAssets } from "@/lib/visual-assets";
 
 const pagePath = "/clinica-de-recuperacao-em-rio-claro-sp";
 const pageUrl = `${siteUrl}${pagePath}`;
@@ -172,7 +173,7 @@ export const Route = createFileRoute("/clinica-de-recuperacao-em-rio-claro-sp")(
 
 function RioClaroPage() {
   return (
-    <div className="min-h-screen bg-ice font-body text-deep">
+    <div className="site-editorial min-h-screen bg-ice font-body text-deep">
       <header className="border-b border-deep/10 bg-foreground">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-4 sm:px-8 lg:px-12">
           <Link to="/" className="flex items-center gap-3" aria-label="Central de Acolhimento e Reabilitação — página inicial">
@@ -210,7 +211,7 @@ function RioClaroPage() {
               <Link to="/"><ArrowLeft aria-hidden="true" /> Voltar para a página inicial</Link>
             </Button>
 
-            <div className="mt-12 grid gap-12 lg:grid-cols-[1.35fr_.65fr] lg:items-end">
+             <div className="mt-12 grid gap-12 lg:grid-cols-[1.12fr_.88fr] lg:items-end">
               <div>
                 <div className="flex items-center gap-2 text-xs font-semibold uppercase text-secondary">
                   <MapPin className="size-4" aria-hidden="true" /> Rio Claro, São Paulo
@@ -230,13 +231,19 @@ function RioClaroPage() {
                   </Button>
                 </div>
               </div>
-              <aside className="border-l-4 border-secondary bg-glass p-6">
+               <div>
+               <figure className="overflow-hidden border border-border bg-glass shadow-xl shadow-background/20">
+                 <img src={visualAssets.cityCovers["rio-claro-sp"].src} alt={visualAssets.cityCovers["rio-claro-sp"].alt} width={1600} height={1067} fetchPriority="high" decoding="async" className="aspect-[4/3] w-full object-cover" />
+                 <figcaption className="border-t border-border px-4 py-3 text-xs leading-relaxed text-muted-foreground">Imagem conceitual gerada por IA; não representa unidade ou atendimento real em Rio Claro.</figcaption>
+               </figure>
+               <aside className="mt-4 border-l-4 border-secondary bg-glass p-6">
                 <ShieldCheck className="size-7 text-secondary" aria-hidden="true" />
                 <p className="mt-4 font-display text-lg font-semibold">Informação transparente</p>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   Esta página atende famílias de Rio Claro, mas não afirma que a Central possua unidade física na cidade. O trabalho começa pela orientação e pela avaliação de possibilidades adequadas a cada caso.
                 </p>
               </aside>
+               </div>
             </div>
           </div>
         </section>

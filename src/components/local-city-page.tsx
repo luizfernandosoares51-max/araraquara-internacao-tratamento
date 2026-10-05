@@ -8,7 +8,7 @@ import { phoneDisplay, phoneHref, whatsappHref } from "@/lib/site";
 
 export function LocalCityPageView({ city }: { city: LocalCityPage }) {
   return (
-    <div className="min-h-screen bg-deep font-body text-foreground">
+    <div className="site-editorial min-h-screen bg-deep font-body text-foreground">
       <header className="border-b border-border">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-12">
           <Link to="/" className="flex items-center gap-3" aria-label="Central de Acolhimento e Reabilitação — início">
@@ -50,10 +50,10 @@ export function LocalCityPageView({ city }: { city: LocalCityPage }) {
                 <p className="mt-6 flex max-w-2xl items-start gap-3 text-sm leading-relaxed text-muted-foreground"><ShieldCheck className="mt-0.5 size-4 shrink-0 text-secondary" aria-hidden="true" />{city.transparency}</p>
               </div>
               <figure>
-                <div className="overflow-hidden rounded-lg border border-border bg-glass">
+                <div className="overflow-hidden rounded-lg border border-border bg-glass shadow-xl shadow-background/20">
                   <img src={city.image} alt={city.imageAlt} width={1200} height={630} loading="eager" className="aspect-[1200/630] w-full object-cover" />
                 </div>
-                <figcaption className="mt-3 text-xs leading-relaxed text-muted-foreground">{city.imageCaption}</figcaption>
+                 <figcaption className="mt-3 text-xs leading-relaxed text-muted-foreground">{city.imageCaption}</figcaption>
               </figure>
             </div>
           </div>

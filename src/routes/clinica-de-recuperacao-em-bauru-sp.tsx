@@ -16,10 +16,10 @@ import {
 } from "lucide-react";
 import type { ReactNode } from "react";
 
-import guidanceImage from "@/assets/blog-dependencia-quimica-sinais.jpg";
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { emailDisplay, emailHref, phoneDisplay, phoneHref, siteUrl, whatsappHref } from "@/lib/site";
+import { visualAssets } from "@/lib/visual-assets";
 
 const pagePath = "/clinica-de-recuperacao-em-bauru-sp";
 const pageUrl = `${siteUrl}${pagePath}`;
@@ -174,7 +174,7 @@ function Eyebrow({ children }: { children: ReactNode }) {
 
 function BauruPage() {
   return (
-    <div className="min-h-screen bg-foreground font-body text-deep">
+    <div className="site-editorial min-h-screen bg-foreground font-body text-deep">
       <header className="border-b border-deep/10 bg-foreground">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-12">
           <Link to="/" className="flex items-center gap-3" aria-label="Central de Acolhimento e Reabilitação — página inicial">
@@ -226,13 +226,19 @@ function BauruPage() {
                 </div>
               </div>
 
-              <aside className="border border-deep/10 bg-foreground p-7 shadow-xl shadow-deep/5 sm:p-9" aria-label="Informação de transparência">
+               <div>
+               <figure className="overflow-hidden border border-deep/10 bg-foreground shadow-xl shadow-deep/5">
+                 <img src={visualAssets.cityCovers["bauru-sp"].src} alt={visualAssets.cityCovers["bauru-sp"].alt} width={1600} height={1067} fetchPriority="high" decoding="async" className="aspect-[4/3] w-full object-cover" />
+                 <figcaption className="border-t border-deep/10 px-4 py-3 text-xs leading-relaxed text-deep/60">Imagem conceitual gerada por IA; não representa unidade ou atendimento real em Bauru.</figcaption>
+               </figure>
+               <aside className="mt-4 border border-deep/10 bg-foreground p-7 shadow-xl shadow-deep/5 sm:p-9" aria-label="Informação de transparência">
                 <ShieldCheck className="size-8 text-brand" aria-hidden="true" />
                 <h2 className="mt-5 font-display text-xl font-bold">Informação clara antes de decidir</h2>
                 <p className="mt-3 text-sm leading-7 text-deep/65">
                   A Central não possui unidade física em Bauru. O atendimento começa com orientação à família, e qualquer possibilidade de acolhimento depende de avaliação individual, indicação, concordância e disponibilidade da unidade adequada.
                 </p>
               </aside>
+               </div>
             </div>
           </div>
         </section>
@@ -309,7 +315,7 @@ function BauruPage() {
           <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
             <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
               <div className="overflow-hidden border border-deep/10">
-                <img src={guidanceImage} alt="Conversa de orientação sobre dependência química para uma família de Bauru" width={1200} height={800} loading="lazy" decoding="async" className="aspect-[4/3] w-full object-cover" />
+                <img src={visualAssets.family.src} alt={visualAssets.family.alt} width={1600} height={1067} loading="lazy" decoding="async" className="aspect-[4/3] w-full object-cover" />
                 <p className="border-t border-deep/10 px-5 py-4 text-xs leading-5 text-deep/55">Imagem ilustrativa de uma conversa de orientação; não representa uma unidade física em Bauru.</p>
               </div>
               <div>

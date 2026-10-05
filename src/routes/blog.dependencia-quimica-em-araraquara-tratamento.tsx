@@ -11,8 +11,8 @@ import emergenciaAsset from "@/assets/blog-araraquara-emergencia.webp.asset.json
 import escolhaInstituicaoAsset from "@/assets/blog-araraquara-escolha-instituicao.webp.asset.json";
 import familiaTratamentoAsset from "@/assets/blog-araraquara-familia-tratamento.webp.asset.json";
 import verificacaoDocumentosAsset from "@/assets/blog-araraquara-verificacao-documentos.webp.asset.json";
-import unidadeAraraquaraAsset from "@/assets/unidade-araraquara-sala-de-convivencia.webp.asset.json";
 import { siteUrl, whatsappHref } from "@/lib/site";
+import { visualAssets } from "@/lib/visual-assets";
 
 const articleHeading =
   "Dependência Química em Araraquara: Tratamento, CAPS AD, Acolhimento e Como Escolher uma Instituição Segura";
@@ -460,8 +460,8 @@ function AraraquaraArticlePage() {
 
           <figure className="my-10">
             <img
-              src={unidadeAraraquaraAsset.url}
-              alt="Unidade de acolhimento em Araraquara da Central de Acolhimento e Reabilitação"
+              src={visualAssets.araraquara[2].src}
+              alt={visualAssets.araraquara[2].alt}
               width={1400}
               height={1050}
               loading="lazy"
@@ -469,7 +469,7 @@ function AraraquaraArticlePage() {
               className="aspect-[4/3] w-full rounded-2xl object-cover"
             />
             <figcaption className="mt-3 text-sm leading-6 text-muted-foreground">
-              Foto real de um espaço de convivência da unidade de Araraquara.
+              Imagem conceitual gerada por IA; não representa instalação, paciente ou atendimento real.
             </figcaption>
           </figure>
 
