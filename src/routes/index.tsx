@@ -1,10 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Camera, Check, ChevronDown, Mail, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
+import { ArrowRight, Camera, Check, ChevronDown, HeartHandshake, Mail, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
 import type { ReactNode } from "react";
 
 import logoAsset from "@/assets/logo-central-optimized.webp.asset.json";
+import articleSignsImage from "@/assets/blog-dependencia-quimica-sinais.jpg";
+import articleCityImage from "@/assets/blog-dependencia-quimica-sao-carlos.jpg";
 import heroImage from "@/assets/unidade-araraquara-home.webp.asset.json";
-import { AraraquaraPhotoGallery } from "@/components/araraquara-photo-gallery";
+import { AraraquaraPhotoGallery, araraquaraPhotos } from "@/components/araraquara-photo-gallery";
 import { cityDirectory } from "@/lib/city-pages";
 import {
   emailDisplay,
@@ -34,7 +36,8 @@ const photoGalleryCities = [
   { name: "Araraquara", units: ["Unidade de Araraquara"] },
 ] as const;
 
-const featuredCities = cityDirectory.slice(0, 4);
+const featuredCityNames = new Set(["São Carlos", "Bauru", "Ribeirão Preto"]);
+const featuredCities = cityDirectory.filter((city) => featuredCityNames.has(city.name));
 
 const guidanceLinks = [
   { title: "Acolhimento responsável", description: "Entenda como a escuta inicial ajuda a avaliar necessidades e possibilidades de cuidado.", to: "/acolhimento" as const },
@@ -47,11 +50,15 @@ const existingArticles = [
     title: "Dependência Química: Entenda os Sinais e a Importância do Tratamento",
     description: "Informações para reconhecer sinais e compreender quando buscar orientação, acolhimento e tratamento especializado.",
     to: "/blog/dependencia-quimica-sinais-tratamento" as const,
+    image: articleSignsImage,
+    imageAlt: "Pessoa em reflexão durante a busca de informações sobre dependência química",
   },
   {
     title: "Dependência Química em São Carlos: acolhimento, tratamento e onde buscar ajuda",
     description: "Um conteúdo acolhedor para pessoas e familiares que procuram informações e caminhos de ajuda em São Carlos.",
     to: "/blog/dependencia-quimica-sao-carlos" as const,
+    image: articleCityImage,
+    imageAlt: "Pessoa recebendo apoio durante uma conversa sobre dependência química em São Carlos",
   },
 ] as const;
 
@@ -222,8 +229,8 @@ function SectionLabel({ children }: { children: ReactNode }) {
 
 function HomePage() {
   return (
-    <div className="home-serene min-h-screen overflow-hidden bg-deep font-body text-foreground">
-      <div className="mx-auto max-w-6xl px-5 pb-32 sm:px-8 lg:px-12">
+    <div className="home-serene home-editorial min-h-screen overflow-hidden bg-deep font-body text-foreground">
+      <div className="mx-auto max-w-7xl px-5 pb-32 sm:px-8 lg:px-12">
         <header className="border-b border-border bg-background/95 pb-5 pt-5 backdrop-blur-sm">
           <div className="flex items-center justify-between gap-4">
             <a href="#inicio" className="flex items-center gap-3" aria-label="Central de Acolhimento e Reabilitação">
@@ -286,12 +293,12 @@ function HomePage() {
         </header>
 
         <main id="inicio">
-          <section className="grid gap-10 pb-20 pt-12 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:gap-16 lg:pb-28 lg:pt-20">
+          <section className="grid gap-10 pb-20 pt-12 lg:min-h-[720px] lg:grid-cols-[.88fr_1.12fr] lg:items-center lg:gap-16 lg:pb-28 lg:pt-16">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-secondary shadow-sm">
                 <span className="size-1.5 rounded-full bg-accent" /> Acolhimento, orientação e apoio
               </div>
-              <h1 className="mt-6 max-w-3xl font-display text-[2.15rem] font-bold leading-[1.08] text-foreground sm:text-5xl lg:text-[3.75rem]">
+              <h1 className="mt-6 max-w-3xl font-display text-[2.45rem] font-semibold leading-[1.05] text-foreground sm:text-5xl lg:text-[4.15rem]">
                 Clínica de Reabilitação para <span className="text-secondary">Dependência Química e Alcoolismo</span>
               </h1>
               <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-muted-foreground sm:text-lg">
@@ -314,11 +321,33 @@ function HomePage() {
               </div>
             </div>
 
-            <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-2xl shadow-brand/10">
-              <img src={heroImage.url} width={1200} height={630} decoding="async" fetchPriority="high" alt="Área externa arborizada da unidade física da Central em Araraquara" className="aspect-[4/3] w-full object-cover" />
-              <div className="flex items-center justify-between gap-4 border-t border-border bg-card px-5 py-4">
-                <p className="text-sm leading-snug text-muted-foreground">Unidade física localizada exclusivamente em Araraquara.</p>
-                <Link to="/clinica-de-recuperacao-em-araraquara" className="shrink-0 text-xs font-semibold text-secondary hover:underline">Conhecer</Link>
+            <div className="relative min-h-[470px] sm:min-h-[620px] lg:min-h-[680px]">
+              <div className="absolute inset-y-0 right-0 w-[91%] overflow-hidden rounded-[2rem] border border-border bg-card shadow-2xl shadow-brand/10 sm:w-[86%]">
+                <img src={heroImage.url} width={1200} height={630} decoding="async" fetchPriority="high" alt="Área externa arborizada da unidade física da Central em Araraquara" className="h-full w-full object-cover" />
+                <div className="absolute inset-x-0 bottom-0 bg-foreground/80 px-5 py-4 text-background backdrop-blur-sm">
+                  <p className="text-sm leading-snug">Unidade física localizada exclusivamente em Araraquara.</p>
+                </div>
+              </div>
+              <div className="absolute left-0 top-10 w-[42%] overflow-hidden rounded-2xl border-[6px] border-background bg-card shadow-xl sm:top-14 sm:border-[10px]">
+                <img src={araraquaraPhotos[3].src} width={araraquaraPhotos[3].width} height={araraquaraPhotos[3].height} decoding="async" loading="eager" alt="Entrada da unidade física da Central em Araraquara com edifícios azuis e arco-íris ao fundo" className="aspect-[3/4] w-full object-cover" />
+              </div>
+              <Link to="/clinica-de-recuperacao-em-araraquara" className="absolute bottom-8 left-4 inline-flex min-h-12 items-center gap-2 rounded-full border border-border bg-background/95 px-5 py-3 text-sm font-semibold text-secondary shadow-xl backdrop-blur-sm transition-transform hover:-translate-y-0.5 sm:bottom-12 sm:left-10">
+                Conhecer a unidade <ArrowRight className="size-4" aria-hidden="true" />
+              </Link>
+            </div>
+          </section>
+
+          <section className="border-t border-border py-16 lg:py-28">
+            <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_.95fr] lg:gap-20">
+              <div className="relative overflow-hidden rounded-[2rem] bg-card shadow-xl shadow-brand/10">
+                <img src={araraquaraPhotos[0].src} width={araraquaraPhotos[0].width} height={araraquaraPhotos[0].height} loading="lazy" decoding="async" alt={araraquaraPhotos[0].alt} className="aspect-[4/3] w-full object-cover" />
+                <p className="absolute inset-x-0 bottom-0 bg-foreground/80 px-5 py-3 text-xs font-medium text-background backdrop-blur-sm">Foto real da unidade física em Araraquara</p>
+              </div>
+              <div>
+                <SectionLabel>Sobre a Central</SectionLabel>
+                <h2 className="mt-3 font-display text-3xl font-semibold leading-tight sm:text-5xl">Sobre a Central de Acolhimento e Reabilitação</h2>
+                <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground sm:text-base">A Central reúne informação, orientação e acolhimento para pessoas e famílias que procuram compreender possibilidades de cuidado diante da dependência química e do alcoolismo. A conversa inicial ajuda a organizar dúvidas com clareza e responsabilidade.</p>
+                <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground sm:text-base">A unidade física está localizada exclusivamente em Araraquara. As páginas de outras cidades oferecem conteúdo regional e caminhos de orientação, sem representar filiais.</p>
               </div>
             </div>
           </section>
@@ -337,27 +366,38 @@ function HomePage() {
             </div>
           </section>
 
-          <section id="acolhimento" className="border-t border-border bg-muted/45 py-16 -mx-5 px-5 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 lg:py-24">
-            <div className="grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:gap-16">
+          <section id="acolhimento" className="border-t border-border bg-muted/45 py-16 -mx-5 px-5 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 lg:py-28">
+            <div className="grid items-center gap-10 lg:grid-cols-[.9fr 1.1fr] lg:gap-20">
               <div>
                 <SectionLabel>Sobre o acolhimento</SectionLabel>
-                <h2 className="mt-3 max-w-md font-display text-2xl font-semibold leading-tight sm:text-4xl">Um caminho acompanhado, do primeiro contato ao cuidado.</h2>
+                <h2 className="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight sm:text-5xl">Um caminho acompanhado, do primeiro contato ao cuidado.</h2>
+                <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted-foreground sm:text-base">
+                  <p>O acolhimento começa com escuta, sem julgamentos. A família pode relatar o que está vivendo, tirar dúvidas e conhecer as possibilidades disponíveis antes de qualquer decisão.</p>
+                  <p>Nossa equipe oferece orientação clara sobre cada etapa, considera as necessidades da pessoa e de seus familiares e explica como funciona o cuidado. Veja também as <Link to="/acolhimento" className="font-semibold text-secondary hover:underline">informações sobre acolhimento</Link>.</p>
+                </div>
+                <Link to="/acolhimento" className="mt-7 inline-flex min-h-12 items-center gap-2 rounded-full border border-border bg-background px-5 py-3 text-sm font-semibold text-secondary shadow-sm">Conhecer o acolhimento <ArrowRight className="size-4" aria-hidden="true" /></Link>
               </div>
-              <div className="space-y-4 text-[15px] leading-relaxed text-muted-foreground sm:text-base">
-                <p>O acolhimento começa com escuta, sem julgamentos. A família pode relatar o que está vivendo, tirar dúvidas e conhecer as possibilidades disponíveis antes de qualquer decisão.</p>
-                <p>Nossa equipe oferece orientação clara sobre cada etapa, considera as necessidades da pessoa e de seus familiares e explica como funciona o cuidado. Veja também as <Link to="/acolhimento" className="font-semibold text-secondary hover:underline">informações sobre acolhimento</Link>.</p>
-              </div>
+              <figure className="overflow-hidden rounded-[2rem] bg-card shadow-xl shadow-brand/10">
+                <img src={araraquaraPhotos[3].src} width={araraquaraPhotos[3].width} height={araraquaraPhotos[3].height} loading="lazy" decoding="async" alt={araraquaraPhotos[3].alt} className="aspect-[4/3] w-full object-cover" />
+                <figcaption className="px-5 py-4 text-xs leading-relaxed text-muted-foreground">Entrada e ambiente externo da unidade física da Central em Araraquara.</figcaption>
+              </figure>
             </div>
           </section>
 
-          <section id="tratamento" className="border-t border-border py-16 lg:py-24">
-            <SectionLabel>Tratamento para dependência química e alcoolismo</SectionLabel>
-            <div className="mt-3 grid gap-5 lg:grid-cols-[1fr_.8fr] lg:items-end">
-              <h2 className="font-display text-2xl font-semibold leading-tight sm:text-4xl">Tratamento para dependência química e alcoolismo</h2>
-              <p className="text-[15px] leading-relaxed text-muted-foreground">O tratamento para dependência química e alcoolismo pode envolver diferentes estratégias. Em uma clínica de recuperação, o plano de cuidado deve considerar a história, as condições de saúde e a realidade de cada pessoa. <Link to="/tratamento" className="font-semibold text-secondary hover:underline">Entenda o tratamento</Link>.</p>
+          <section id="tratamento" className="border-t border-border py-16 lg:py-28">
+            <div className="grid items-center gap-10 lg:grid-cols-[1.08fr_.92fr] lg:gap-20">
+              <figure className="order-2 overflow-hidden rounded-[2rem] bg-card shadow-xl shadow-brand/10 lg:order-1">
+                <img src={araraquaraPhotos[5].src} width={araraquaraPhotos[5].width} height={araraquaraPhotos[5].height} loading="lazy" decoding="async" alt={araraquaraPhotos[5].alt} className="aspect-[4/3] w-full object-cover" />
+                <figcaption className="px-5 py-4 text-xs leading-relaxed text-muted-foreground">Espaço real de convivência da unidade de Araraquara.</figcaption>
+              </figure>
+              <div className="order-1 lg:order-2">
+                <SectionLabel>Tratamento para dependência química e alcoolismo</SectionLabel>
+                <h2 className="mt-3 font-display text-3xl font-semibold leading-tight sm:text-5xl">Tratamento para dependência química e alcoolismo</h2>
+                <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground">O tratamento para dependência química e alcoolismo pode envolver diferentes estratégias. Em uma clínica de recuperação, o plano de cuidado deve considerar a história, as condições de saúde e a realidade de cada pessoa. <Link to="/tratamento" className="font-semibold text-secondary hover:underline">Entenda o tratamento</Link>.</p>
+              </div>
             </div>
 
-            <div className="mt-10 grid gap-5 md:grid-cols-3">
+            <div className="mt-12 grid gap-5 md:grid-cols-3">
               <article className="glass-panel rounded-2xl p-5 sm:p-6">
                 <span className="font-display text-xs font-semibold text-secondary">01</span>
                 <h3 className="mt-4 font-display text-lg font-semibold">Acompanhamento terapêutico</h3>
@@ -397,17 +437,20 @@ function HomePage() {
             </div>
           </section>
 
-          <section id="familia" className="border-t border-border py-16 lg:py-24">
-            <div className="glass-panel-strong rounded-3xl border-l-4 border-l-accent p-6 sm:p-9 lg:grid lg:grid-cols-[1.2fr_.8fr] lg:gap-12">
+          <section id="familia" className="border-t border-border py-16 lg:py-28">
+            <div className="grid items-center gap-10 lg:grid-cols-[.92fr_1.08fr] lg:gap-20">
+              <div className="relative overflow-hidden rounded-[2rem] shadow-xl shadow-brand/10">
+                <img src={araraquaraPhotos[1].src} width={araraquaraPhotos[1].width} height={araraquaraPhotos[1].height} loading="lazy" decoding="async" alt={araraquaraPhotos[1].alt} className="aspect-[4/3] w-full object-cover" />
+                <div className="absolute bottom-4 left-4 grid size-12 place-items-center rounded-full bg-background/95 text-secondary shadow-lg"><HeartHandshake className="size-5" aria-hidden="true" /></div>
+              </div>
               <div>
                 <SectionLabel>Apoio para pessoas e famílias</SectionLabel>
-                <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-3xl">Apoio para famílias que buscam ajuda</h2>
+                <h2 className="mt-3 font-display text-3xl font-semibold leading-tight sm:text-5xl">Apoio para famílias que buscam ajuda</h2>
                 <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">Buscar informações pode ajudar a família a compreender a situação com mais clareza. Nossa equipe oferece escuta e orientação sobre possibilidades de acolhimento e tratamento, sem prometer resultados e sem substituir uma avaliação profissional.</p>
                 <Link to="/familia" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:underline">
                   Orientações para a família <ArrowRight className="size-4" aria-hidden="true" />
                 </Link>
-              </div>
-              <div className="mt-7 border-t border-border pt-6 lg:mt-0 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
+                <div className="mt-8 border-t border-border pt-6">
                 <h3 className="font-display text-lg font-semibold">Encontre informações sobre atendimento na sua região</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   Consulte informações específicas sobre acolhimento, tratamento e orientação para famílias de diferentes regiões de São Paulo.
@@ -415,6 +458,7 @@ function HomePage() {
                 <a href="#atendimento-por-cidade" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:underline">
                   Encontrar atendimento por cidade <ArrowRight className="size-4" aria-hidden="true" />
                 </a>
+                </div>
               </div>
             </div>
           </section>
@@ -455,6 +499,13 @@ function HomePage() {
              <h2 id="galeria-titulo" className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Clínica de Reabilitação em Araraquara</h2>
              <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted-foreground">A única unidade física da Central está localizada em Araraquara, SP. Pessoas e famílias de outras cidades da região também podem buscar informação e orientação; as páginas locais não representam filiais. Veja informações sobre a unidade e fotos reais de seus espaços.</p>
             <Link to="/clinica-de-recuperacao-em-araraquara" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:underline">Conheça a unidade em Araraquara <ArrowRight className="size-4" aria-hidden="true" /></Link>
+            <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-12">
+              {araraquaraPhotos.slice(2, 5).map((photo, index) => (
+                <figure key={photo.src} className={`overflow-hidden rounded-2xl bg-card shadow-lg shadow-brand/10 ${index === 0 ? "col-span-2 lg:col-span-6" : "col-span-1 lg:col-span-3"}`}>
+                  <img src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} loading="lazy" decoding="async" className="aspect-[4/5] h-full w-full object-cover lg:aspect-auto" />
+                </figure>
+              ))}
+            </div>
             <details className="group/gallery">
               <summary className="glass-panel mt-6 flex min-h-16 cursor-pointer list-none items-center justify-between gap-4 rounded-2xl px-5 py-4 marker:content-none sm:px-6">
                 <span className="flex items-center gap-3 font-display text-sm font-semibold uppercase tracking-[0.14em] text-secondary sm:text-base">
@@ -496,19 +547,24 @@ function HomePage() {
             </details>
           </section>
 
-          <section id="como-funciona" className="border-t border-border bg-muted/45 py-16 -mx-5 px-5 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 lg:py-24">
-            <SectionLabel>Como funciona</SectionLabel>
-            <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Como funciona o primeiro contato</h2>
-            <ol className="glass-panel mt-8 grid gap-0 overflow-hidden rounded-3xl md:grid-cols-3">
+          <section id="como-funciona" className="border-t border-border bg-muted/45 py-16 -mx-5 px-5 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 lg:py-28">
+            <div className="grid gap-10 lg:grid-cols-[.7fr_1.3fr] lg:gap-16">
+              <div>
+                <SectionLabel>Como funciona</SectionLabel>
+                <h2 className="mt-3 font-display text-3xl font-semibold leading-tight sm:text-5xl">Como funciona o primeiro contato</h2>
+                <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground">Uma sequência clara ajuda a família a compreender como a conversa começa e quais informações orientam os próximos passos.</p>
+              </div>
+            <ol className="overflow-hidden border-y border-border lg:border-l">
               {steps.map((step, index) => (
-                <li key={step} className="relative flex min-h-24 items-center gap-4 border-b border-border p-5 last:border-b-0 md:border-b md:border-r md:[&:nth-child(3n)]:border-r-0 md:[&:nth-child(n+4)]:border-b-0">
-                  <span className={`grid size-8 shrink-0 place-items-center rounded-full text-xs font-bold ${index === steps.length - 1 ? "bg-accent text-accent-foreground" : "bg-brand text-primary-foreground"}`}>
+                <li key={step} className="relative flex min-h-20 items-center gap-5 border-b border-border px-5 py-4 last:border-b-0 sm:px-7">
+                  <span className={`grid size-9 shrink-0 place-items-center rounded-full text-xs font-bold ${index === steps.length - 1 ? "bg-accent text-accent-foreground" : "bg-brand text-primary-foreground"}`}>
                     {index === steps.length - 1 ? <Check className="size-4" aria-hidden="true" /> : index + 1}
                   </span>
                   <span className="text-sm font-medium text-foreground/85">{step}</span>
                 </li>
               ))}
             </ol>
+            </div>
           </section>
 
           <section id="perguntas" className="border-t border-border py-16 lg:py-24">
@@ -531,12 +587,15 @@ function HomePage() {
             <SectionLabel>Blog e vídeos</SectionLabel>
             <h2 className="mt-3 max-w-3xl font-display text-2xl font-semibold leading-tight sm:text-4xl">Conteúdos para entender a dependência química</h2>
              <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted-foreground">O conteúdo educativo aprofunda temas como sinais, consequências, alcoolismo, tratamento e participação da família. Para uma visão geral, comece pelo <Link to="/clinica-de-reabilitacao" className="font-semibold text-secondary hover:underline">guia de clínica de reabilitação</Link>.</p>
-            <div className="mt-8 grid gap-4 md:grid-cols-2">
+            <div className="mt-8 grid gap-5 md:grid-cols-2">
               {existingArticles.map((article) => (
-                <article key={article.to} className="glass-panel flex min-h-56 flex-col rounded-2xl p-5 sm:p-7">
-                  <h3 className="font-display text-xl font-semibold leading-snug">{article.title}</h3>
-                  <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">{article.description}</p>
-                  <Link to={article.to} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:underline">Ler artigo <ArrowRight className="size-4" aria-hidden="true" /></Link>
+                <article key={article.to} className="group overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
+                  <img src={article.image} alt={article.imageAlt} width={800} height={520} loading="lazy" decoding="async" className="aspect-[16/9] w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]" />
+                  <div className="flex min-h-64 flex-col p-5 sm:p-7">
+                    <h3 className="font-display text-xl font-semibold leading-snug sm:text-2xl">{article.title}</h3>
+                    <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">{article.description}</p>
+                    <Link to={article.to} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:underline">Ler artigo <ArrowRight className="size-4" aria-hidden="true" /></Link>
+                  </div>
                 </article>
               ))}
             </div>
@@ -563,6 +622,9 @@ function HomePage() {
                   <a href={phoneHref} className="inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl border border-primary-foreground/30 px-5 py-4 text-center text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10">
                     <Phone className="size-4" aria-hidden="true" /> Ligar agora · {phoneDisplay}
                   </a>
+                  <Link to="/clinica-de-reabilitacao" className="inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl border border-primary-foreground/30 px-5 py-4 text-center text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/10">
+                    Conhecer a Central <ArrowRight className="size-4" aria-hidden="true" />
+                  </Link>
                 </div>
                 <a href={emailHref} className="mt-5 inline-flex items-center gap-2 break-all text-sm font-semibold text-primary-foreground hover:underline">
                   <Mail className="size-4 shrink-0" aria-hidden="true" /> {emailDisplay}
