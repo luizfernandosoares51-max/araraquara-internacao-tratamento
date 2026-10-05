@@ -3,8 +3,6 @@ import {
   ArrowLeft,
   ArrowRight,
   Building2,
-  Camera,
-  Check,
   ExternalLink,
   HeartHandshake,
   Info,
@@ -17,9 +15,8 @@ import {
 } from "lucide-react";
 import type { ReactNode } from "react";
 
-import acolhimentoImage from "@/assets/acolhimento-araraquara.jpg";
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
-import { AraraquaraPhotoGallery } from "@/components/araraquara-photo-gallery";
+import { AraraquaraPhotoGallery, araraquaraPhotos } from "@/components/araraquara-photo-gallery";
 import {
   emailDisplay,
   emailHref,
@@ -89,11 +86,13 @@ const faqs = [
 
 const localLinks = [
   { label: "Voltar para a Home", to: "/" as const },
+  { label: "Guia sobre clínica de reabilitação", to: "/clinica-de-reabilitacao" as const },
   { label: "Orientações para a família", to: "/familia" as const },
   { label: "Entender o tratamento", to: "/tratamento" as const },
   { label: "Conhecer o acolhimento", to: "/acolhimento" as const },
   { label: "Ler o Blog", to: "/blog" as const },
   { label: "Entrar em contato", to: "/contato" as const },
+  { label: "Ver todas as cidades", to: "/cidades" as const },
 ];
 
 export const Route = createFileRoute("/clinica-de-recuperacao-em-araraquara")({
@@ -194,8 +193,8 @@ function SectionLabel({ children }: { children: ReactNode }) {
 
 function AraraquaraPage() {
   return (
-    <div className="min-h-screen bg-ice font-body text-deep">
-      <header className="bg-deep text-foreground">
+    <div className="home-serene home-editorial min-h-screen overflow-hidden bg-ice font-body text-deep">
+      <header className="border-b border-border bg-background/95 text-foreground backdrop-blur-sm">
         <div className="mx-auto max-w-6xl px-5 pb-5 pt-5 sm:px-8 lg:px-12">
           <div className="flex items-center justify-between gap-4">
             <Link to="/" className="flex items-center gap-3" aria-label="Central de Acolhimento e Reabilitação — página inicial">
@@ -226,8 +225,8 @@ function AraraquaraPage() {
       </header>
 
       <main id="inicio">
-        <section className="bg-deep text-foreground">
-          <div className="mx-auto grid max-w-6xl gap-10 px-5 pb-16 pt-8 sm:px-8 lg:grid-cols-[1.08fr_.92fr] lg:items-center lg:px-12 lg:pb-24 lg:pt-16">
+        <section className="bg-background text-foreground">
+          <div className="mx-auto grid max-w-6xl gap-12 px-5 pb-20 pt-8 sm:px-8 lg:min-h-[720px] lg:grid-cols-[.9fr_1.1fr] lg:items-center lg:px-12 lg:pb-28 lg:pt-16">
             <div>
               <nav aria-label="Navegação estrutural" className="mb-7 text-xs text-muted-foreground">
                 <ol className="flex flex-wrap items-center gap-2"><li><Link to="/" className="hover:text-secondary">Início</Link></li><li aria-hidden="true">/</li><li><Link to="/cidades" className="hover:text-secondary">Cidades</Link></li><li aria-hidden="true">/</li><li aria-current="page" className="text-foreground">Araraquara</li></ol>
@@ -241,23 +240,35 @@ function AraraquaraPage() {
               <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">A Central de Acolhimento e Reabilitação orienta pessoas que enfrentam o uso problemático de álcool e outras drogas, sempre considerando a história e as necessidades de cada caso.</p>
               <div className="mt-7 grid gap-3 sm:grid-cols-2">
                 <WhatsAppLink className="flex min-h-14 items-center justify-center gap-2 rounded-lg bg-whatsapp px-5 py-4 text-center text-sm font-semibold text-whatsapp-foreground shadow-lg transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"><MessageCircle className="size-5" aria-hidden="true" /> Falar com nossa equipe</WhatsAppLink>
-                <a href={phoneHref} className="flex min-h-14 items-center justify-center gap-2 rounded-lg border border-border bg-glass px-5 py-4 text-center text-sm font-semibold transition-colors hover:bg-glass-strong focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"><Phone className="size-4" aria-hidden="true" /> Ligar agora · {phoneDisplay}</a>
-                <a href="#galeria-araraquara" className="flex min-h-14 items-center justify-center gap-2 rounded-lg border border-secondary/40 px-5 py-4 text-center text-sm font-semibold text-secondary transition-colors hover:bg-glass sm:col-span-2"><Camera className="size-4" aria-hidden="true" /> Galeria de fotos da unidade de Araraquara</a>
+                <Link to="/tratamento" className="flex min-h-14 items-center justify-center gap-2 rounded-lg border border-primary/30 bg-card px-5 py-4 text-center text-sm font-semibold text-primary shadow-sm transition-colors hover:border-primary/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">Conhecer o tratamento <ArrowRight className="size-4" aria-hidden="true" /></Link>
               </div>
               <p className="mt-5 flex items-start gap-2 text-xs leading-relaxed text-muted-foreground"><ShieldCheck className="mt-0.5 size-4 shrink-0 text-secondary" aria-hidden="true" /> Orientação inicial com respeito e discrição. Nenhuma modalidade de cuidado é indicada sem avaliação individual.</p>
             </div>
-            <figure className="overflow-hidden rounded-lg border border-border bg-glass shadow-2xl shadow-background/30">
-              <img src={acolhimentoImage} width={1024} height={640} decoding="async" alt="Ambiente ilustrativo de escuta e acolhimento" className="aspect-[16/10] w-full object-cover" />
-              <figcaption className="border-t border-border px-5 py-4 text-xs leading-relaxed text-muted-foreground">Imagem ilustrativa de um ambiente de escuta. Não representa fotografia confirmada da unidade de Araraquara.</figcaption>
-            </figure>
+            <div className="relative mx-auto w-full max-w-xl pb-12 sm:pb-16">
+              <figure className="overflow-hidden rounded-lg border border-border bg-card shadow-xl">
+                <img src={araraquaraPhotos[0].src} width={araraquaraPhotos[0].width} height={araraquaraPhotos[0].height} decoding="async" alt={araraquaraPhotos[0].alt} className="aspect-[5/4] w-full object-cover" />
+              </figure>
+              <figure className="absolute -bottom-1 right-3 w-[42%] overflow-hidden rounded-lg border-4 border-background bg-card shadow-xl sm:-right-5 sm:w-[46%]">
+                <img src={araraquaraPhotos[3].src} width={araraquaraPhotos[3].width} height={araraquaraPhotos[3].height} decoding="async" alt={araraquaraPhotos[3].alt} className="aspect-[4/5] w-full object-cover" />
+              </figure>
+              <div className="absolute bottom-3 left-3 max-w-[52%] rounded-md bg-background/95 px-4 py-3 shadow-lg sm:bottom-5 sm:left-5">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-primary">Unidade física</p>
+                <p className="mt-1 font-display text-sm font-semibold text-foreground">Araraquara, São Paulo</p>
+              </div>
+            </div>
           </div>
         </section>
 
         <section id="tratamento" className="scroll-mt-6 bg-ice">
           <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
             <SectionLabel>Informação antes da decisão</SectionLabel>
-            <div className="mt-3 grid gap-8 lg:grid-cols-[.85fr_1.15fr] lg:gap-16">
-              <h2 className="font-display text-2xl font-semibold leading-tight sm:text-4xl">Tratamento e acolhimento para dependência química em Araraquara</h2>
+            <div className="mt-3 grid gap-8 lg:grid-cols-[.85fr_1.15fr] lg:items-start lg:gap-16">
+              <div>
+                <h2 className="font-display text-2xl font-semibold leading-tight sm:text-4xl">Tratamento e acolhimento para dependência química em Araraquara</h2>
+                <figure className="mt-7 overflow-hidden rounded-lg border border-deep/10 bg-card shadow-sm">
+                  <img src={araraquaraPhotos[5].src} width={araraquaraPhotos[5].width} height={araraquaraPhotos[5].height} loading="lazy" decoding="async" alt={araraquaraPhotos[5].alt} className="aspect-[4/3] w-full object-cover" />
+                </figure>
+              </div>
               <div className="space-y-4 text-[15px] leading-relaxed text-deep/75 sm:text-base">
                 <p>A dependência química é uma condição complexa relacionada ao uso persistente de substâncias, mesmo quando surgem prejuízos à saúde, à rotina ou aos vínculos. Uma página na internet não substitui avaliação e não deve ser usada para diagnosticar alguém.</p>
                 <p>Famílias de Araraquara podem procurar orientação quando o consumo de álcool ou outras drogas começa a provocar preocupação, conflitos, perda de autonomia ou riscos. Buscar informação é diferente de iniciar acolhimento, e acolhimento não significa necessariamente internação.</p>
@@ -278,20 +289,22 @@ function AraraquaraPage() {
 
         <section id="acolhimento" className="scroll-mt-6 border-y border-deep/10 bg-ice">
           <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
-            <div className="grid gap-8 lg:grid-cols-[1fr_.9fr] lg:items-start lg:gap-16">
+            <div className="grid gap-8 lg:grid-cols-[1fr_.8fr] lg:items-center lg:gap-14">
               <div>
                 <SectionLabel>Acolhimento responsável</SectionLabel>
-                <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Atendimento para famílias de Araraquara e região</h2>
+                <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Reabilitação e acolhimento em Araraquara</h2>
                 <p className="mt-5 text-[15px] leading-relaxed text-deep/75 sm:text-base">Pessoas e famílias de Araraquara e dos municípios próximos podem procurar a Central para entender possibilidades de acolhimento e tratamento. A conversa inicial serve para ouvir a situação, esclarecer limites e orientar os próximos passos, conforme a avaliação e a disponibilidade.</p>
                 <p className="mt-4 text-[15px] leading-relaxed text-deep/75 sm:text-base">A proximidade com a família pode ser relevante no planejamento do cuidado, mas nenhum caminho deve ser escolhido apenas pela localização. A segurança, as necessidades individuais e a indicação profissional precisam vir primeiro.</p>
               </div>
-              <aside id="familia" className="scroll-mt-6 rounded-lg bg-primary p-6 text-primary-foreground sm:p-8">
-                <Users className="size-7 text-secondary" aria-hidden="true" />
-                <h3 className="mt-5 font-display text-2xl font-semibold">Quando a família pode pedir ajuda?</h3>
-                <p className="mt-4 text-sm leading-relaxed text-primary-foreground/75">Quando há preocupação com mudanças de comportamento, conflitos frequentes, riscos à saúde ou prejuízos na vida cotidiana. A orientação pode ajudar a família a organizar uma conversa e procurar avaliação adequada.</p>
-                <Link to="/familia" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:underline">Ler orientações para a família <ArrowRight className="size-4" aria-hidden="true" /></Link>
-              </aside>
+              <figure className="overflow-hidden rounded-lg border border-deep/10 bg-card shadow-lg">
+                <img src={araraquaraPhotos[3].src} width={araraquaraPhotos[3].width} height={araraquaraPhotos[3].height} loading="lazy" decoding="async" alt={araraquaraPhotos[3].alt} className="aspect-[4/5] w-full object-cover" />
+              </figure>
             </div>
+            <aside id="familia" className="mt-10 grid scroll-mt-6 gap-6 rounded-lg bg-primary p-6 text-primary-foreground shadow-lg sm:p-8 lg:grid-cols-[auto_1fr_auto] lg:items-center">
+              <Users className="size-8 text-secondary" aria-hidden="true" />
+              <div><h3 className="font-display text-2xl font-semibold">Orientação para famílias de Araraquara</h3><p className="mt-3 text-sm leading-relaxed text-primary-foreground/75">Quando há preocupação com mudanças de comportamento, conflitos frequentes, riscos à saúde ou prejuízos na vida cotidiana. A orientação pode ajudar a família a organizar uma conversa e procurar avaliação adequada.</p></div>
+              <WhatsAppLink className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-whatsapp px-5 py-3 text-sm font-semibold text-whatsapp-foreground"><MessageCircle className="size-4" aria-hidden="true" /> Falar com nossa equipe</WhatsAppLink>
+            </aside>
           </div>
         </section>
 
@@ -312,7 +325,7 @@ function AraraquaraPage() {
           <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 lg:px-12 lg:py-16">
             <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
               <div><p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">Conversa confidencial</p><h2 className="mt-3 max-w-3xl font-display text-2xl font-semibold leading-tight sm:text-4xl">Precisa conversar sobre uma situação de dependência química ou alcoolismo?</h2><p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">Explique o que está acontecendo e receba informações sobre possibilidades de cuidado. A orientação não substitui uma avaliação profissional.</p></div>
-              <div className="flex flex-col gap-3 sm:flex-row lg:flex-col"><WhatsAppLink className="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg bg-whatsapp px-6 py-4 text-sm font-semibold text-whatsapp-foreground"><MessageCircle className="size-5" aria-hidden="true" /> Falar pelo WhatsApp</WhatsAppLink><a href={phoneHref} className="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg border border-border px-6 py-4 text-sm font-semibold"><Phone className="size-4" aria-hidden="true" /> Ligar agora</a></div>
+              <div className="flex flex-col gap-3 sm:flex-row lg:flex-col"><WhatsAppLink className="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg bg-whatsapp px-6 py-4 text-sm font-semibold text-whatsapp-foreground"><MessageCircle className="size-5" aria-hidden="true" /> Falar pelo WhatsApp</WhatsAppLink><Link to="/tratamento" className="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg border border-border px-6 py-4 text-sm font-semibold">Conhecer o tratamento <ArrowRight className="size-4" aria-hidden="true" /></Link></div>
             </div>
           </div>
         </section>
