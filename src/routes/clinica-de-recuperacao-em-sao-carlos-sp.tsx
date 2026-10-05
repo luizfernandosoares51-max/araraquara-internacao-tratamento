@@ -13,7 +13,6 @@ import {
   Stethoscope,
 } from "lucide-react";
 
-import saoCarlosImage from "@/assets/blog-dependencia-quimica-sao-carlos.jpg";
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import {
   emailDisplay,
@@ -24,6 +23,7 @@ import {
   siteUrl,
   whatsappHref,
 } from "@/lib/site";
+import { visualAssets } from "@/lib/visual-assets";
 
 const pagePath = "/clinica-de-recuperacao-em-sao-carlos-sp";
 const pageUrl = `${siteUrl}${pagePath}`;
@@ -133,7 +133,7 @@ export const Route = createFileRoute("/clinica-de-recuperacao-em-sao-carlos-sp")
 
 function SaoCarlosPage() {
   return (
-    <div className="min-h-screen bg-ice font-body text-deep">
+    <div className="site-editorial min-h-screen bg-ice font-body text-deep">
       <header className="border-b border-deep/10 bg-ice/95">
         <div className="mx-auto max-w-6xl px-5 py-5 sm:px-8 lg:px-12">
           <div className="flex items-center justify-between gap-4">
@@ -204,8 +204,8 @@ function SaoCarlosPage() {
             </div>
           </div>
           <figure className="overflow-hidden border border-deep/10 bg-foreground shadow-xl">
-            <img src={saoCarlosImage} width={1200} height={630} alt="Família em conversa de orientação sobre tratamento para álcool e outras drogas em São Carlos" className="aspect-[16/10] w-full object-cover" decoding="async" />
-            <figcaption className="border-t border-deep/10 px-5 py-4 text-xs leading-relaxed text-deep/60">Imagem ilustrativa de uma conversa de orientação; não representa uma unidade física em São Carlos.</figcaption>
+            <img src={visualAssets.cityCovers["sao-carlos-sp"].src} width={1600} height={1067} alt={visualAssets.cityCovers["sao-carlos-sp"].alt} className="aspect-[16/10] w-full object-cover" decoding="async" fetchPriority="high" />
+            <figcaption className="border-t border-deep/10 px-5 py-4 text-xs leading-relaxed text-deep/60">Imagem conceitual gerada por IA; não representa uma unidade física em São Carlos.</figcaption>
           </figure>
         </section>
 

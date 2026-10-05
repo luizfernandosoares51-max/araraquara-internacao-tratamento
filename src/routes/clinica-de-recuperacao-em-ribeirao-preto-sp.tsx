@@ -19,6 +19,7 @@ import {
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { emailDisplay, emailHref, phoneDisplay, phoneHref, siteUrl, whatsappHref } from "@/lib/site";
+import { visualAssets } from "@/lib/visual-assets";
 
 const pagePath = "/clinica-de-recuperacao-em-ribeirao-preto-sp";
 const pageUrl = `${siteUrl}${pagePath}`;
@@ -190,7 +191,7 @@ export const Route = createFileRoute("/clinica-de-recuperacao-em-ribeirao-preto-
 
 function RibeiraoPretoPage() {
   return (
-    <div className="min-h-screen bg-foreground font-body text-deep">
+    <div className="site-editorial min-h-screen bg-foreground font-body text-deep">
       <header className="border-b border-deep/10 bg-foreground">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-12">
           <Link
@@ -260,13 +261,19 @@ function RibeiraoPretoPage() {
                 </div>
               </div>
 
-              <aside className="border-t-4 border-secondary bg-glass p-7" aria-label="Transparência sobre a localização">
+               <div>
+               <figure className="overflow-hidden border border-border bg-glass shadow-xl shadow-background/20">
+                 <img src={visualAssets.cityCovers["ribeirao-preto-sp"].src} alt={visualAssets.cityCovers["ribeirao-preto-sp"].alt} width={1600} height={1067} fetchPriority="high" decoding="async" className="aspect-[4/3] w-full object-cover" />
+                 <figcaption className="border-t border-border px-4 py-3 text-xs leading-relaxed text-muted-foreground">Imagem conceitual gerada por IA; não representa unidade ou atendimento real em Ribeirão Preto.</figcaption>
+               </figure>
+               <aside className="mt-4 border-t-4 border-secondary bg-glass p-7" aria-label="Transparência sobre a localização">
                 <ShieldCheck className="size-8 text-secondary" aria-hidden="true" />
                 <h2 className="mt-5 font-display text-xl font-bold">Orientação sem criar falsas expectativas</h2>
                 <p className="mt-3 text-sm leading-7 text-muted-foreground">
                   A Central não possui unidade física em Ribeirão Preto. O contato serve para compreender a situação e apresentar possibilidades conforme o caso e a disponibilidade das unidades, sem garantia de vaga, internação ou resultado.
                 </p>
               </aside>
+               </div>
             </div>
           </div>
         </section>

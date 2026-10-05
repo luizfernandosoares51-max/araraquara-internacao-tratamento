@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import progressaoVideo from "@/assets/progressao-do-colapso.mp4.asset.json";
 import { siteUrl } from "@/lib/site";
+import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
 
 const pageTitle = "Vídeos – Central de Acolhimento e Reabilitação";
 const pageDescription =
@@ -86,7 +87,7 @@ function VideosPage() {
   const [showPlayer, setShowPlayer] = useState(false);
 
   return (
-    <main className="min-h-screen bg-deep font-body text-foreground">
+    <main className="site-editorial min-h-screen bg-deep font-body text-foreground">
       <div className="mx-auto max-w-3xl px-5 py-16 sm:px-8">
         <Button asChild variant="outline" className="mb-8 h-auto min-h-11 px-4 py-3">
           <Link to="/">
@@ -104,6 +105,10 @@ function VideosPage() {
           Esta página receberá conteúdos do canal da Central sobre acolhimento, tratamento e
           dependência química.
         </p>
+        <figure className="mt-8 overflow-hidden rounded-lg border border-border bg-glass shadow-xl shadow-background/20">
+          <img src={visualAssets.videos.src} alt={visualAssets.videos.alt} width={1600} height={1067} fetchPriority="high" decoding="async" className="aspect-[16/8] w-full object-cover" />
+          <figcaption className="border-t border-border px-5 py-3 text-xs leading-relaxed text-muted-foreground">{conceptualImageCaption}</figcaption>
+        </figure>
 
         <section aria-labelledby="progressao-title" className="mt-12 border-t border-border pt-10">
           <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">

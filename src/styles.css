@@ -11,7 +11,7 @@
   --radius-xl: calc(var(--radius) + 4px);
   --radius-2xl: calc(var(--radius) + 10px);
   --radius-3xl: calc(var(--radius) + 18px);
-  --font-display: "Space Grotesk", sans-serif;
+  --font-display: "Playfair Display", serif;
   --font-body: "Inter", sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -125,6 +125,20 @@
   --glass-strong: oklch(1 0 0 / 0.98);
   --whatsapp: oklch(0.61 0.13 153);
   --whatsapp-foreground: oklch(0.99 0.004 245);
+}
+
+.site-editorial {
+  --font-display: "Playfair Display", serif;
+}
+
+.site-editorial h1,
+.site-editorial h2,
+.site-editorial h3 {
+  letter-spacing: 0;
+}
+
+.site-editorial img {
+  background: var(--muted);
 }
 
 .home-editorial h1,

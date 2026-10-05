@@ -27,6 +27,7 @@ import {
   siteUrl,
   whatsappHref,
 } from "@/lib/site";
+import { conceptualImageCaption } from "@/lib/visual-assets";
 
 const pageUrl = `${siteUrl}/clinica-de-recuperacao-em-araraquara`;
 const araraquaraFacebookHref = "https://www.facebook.com/share/1drREi2gvi/";
@@ -252,9 +253,10 @@ function AraraquaraPage() {
                 <img src={araraquaraPhotos[3].src} width={araraquaraPhotos[3].width} height={araraquaraPhotos[3].height} decoding="async" alt={araraquaraPhotos[3].alt} className="aspect-[4/5] w-full object-cover" />
               </figure>
               <div className="absolute bottom-3 left-3 max-w-[52%] rounded-md bg-background/95 px-4 py-3 shadow-lg sm:bottom-5 sm:left-5">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-primary">Unidade física</p>
+                 <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-primary">Orientação local</p>
                 <p className="mt-1 font-display text-sm font-semibold text-foreground">Araraquara, São Paulo</p>
               </div>
+              <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{conceptualImageCaption}</p>
             </div>
           </div>
         </section>
@@ -266,7 +268,7 @@ function AraraquaraPage() {
               <div>
                 <h2 className="font-display text-2xl font-semibold leading-tight sm:text-4xl">Tratamento e acolhimento para dependência química em Araraquara</h2>
                 <figure className="mt-7 overflow-hidden rounded-lg border border-deep/10 bg-card shadow-sm">
-                  <img src={araraquaraPhotos[5].src} width={araraquaraPhotos[5].width} height={araraquaraPhotos[5].height} loading="lazy" decoding="async" alt={araraquaraPhotos[5].alt} className="aspect-[4/3] w-full object-cover" />
+                  <img src={araraquaraPhotos[4].src} width={araraquaraPhotos[4].width} height={araraquaraPhotos[4].height} loading="lazy" decoding="async" alt={araraquaraPhotos[4].alt} className="aspect-[4/3] w-full object-cover" />
                 </figure>
               </div>
               <div className="space-y-4 text-[15px] leading-relaxed text-deep/75 sm:text-base">
@@ -332,9 +334,9 @@ function AraraquaraPage() {
 
         <section id="galeria-araraquara" className="scroll-mt-6 border-b border-deep/10 bg-ice">
           <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
-            <SectionLabel>Registros reais da unidade</SectionLabel>
+             <SectionLabel>Representações institucionais</SectionLabel>
             <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Conheça a unidade de Araraquara</h2>
-            <p className="mt-5 max-w-3xl text-[15px] leading-relaxed text-deep/75">Confira algumas imagens dos espaços da unidade de Araraquara.</p>
+             <p className="mt-5 max-w-3xl text-[15px] leading-relaxed text-deep/75">Veja representações conceituais de acolhimento, escuta e orientação. As imagens não retratam instalações, pacientes ou atendimentos reais.</p>
             <div className="mt-8">
               <AraraquaraPhotoGallery light />
             </div>

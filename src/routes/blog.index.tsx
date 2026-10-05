@@ -1,7 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, MessageCircle } from "lucide-react";
 
+import alcoholImage from "@/assets/blog-alcoolismo-consumo-problema.webp";
+import chooseImage from "@/assets/blog-como-escolher-clinica.webp";
+import worksImage from "@/assets/blog-como-funciona-clinica.webp";
+import needsImage from "@/assets/blog-como-saber-clinica-reabilitacao.webp";
+import saoCarlosImage from "@/assets/blog-dependencia-quimica-sao-carlos.jpg";
+import signsImage from "@/assets/blog-dependencia-quimica-sinais.jpg";
+import consequencesImage from "@/assets/blog-dependencia-sinais-consequencias.webp";
 import { siteUrl, whatsappHref } from "@/lib/site";
+import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
 
 export const Route = createFileRoute("/blog/")({
   staticData: { sitemap: true },
@@ -30,8 +38,12 @@ export const Route = createFileRoute("/blog/")({
 
 function BlogPage() {
   return (
-    <div className="min-h-screen bg-deep font-body text-foreground">
-      <div className="mx-auto max-w-3xl px-5 py-16 sm:px-8">
+    <div className="site-editorial min-h-screen bg-deep font-body text-foreground">
+      <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 lg:px-12">
+        <figure className="mb-10 overflow-hidden rounded-lg border border-border bg-glass shadow-xl shadow-background/20">
+          <img src={visualAssets.blog.src} alt={visualAssets.blog.alt} width={1600} height={1067} fetchPriority="high" decoding="async" className="aspect-[16/7] w-full object-cover" />
+          <figcaption className="border-t border-border px-5 py-3 text-xs leading-relaxed text-muted-foreground">{conceptualImageCaption}</figcaption>
+        </figure>
         <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">
           Blog
         </p>
@@ -49,39 +61,47 @@ function BlogPage() {
           </Link>.
         </p>
 
+        <div className="mt-10 grid gap-5 md:grid-cols-2">
         {[
           {
             category: "Família e busca de ajuda",
             title: "Como saber se uma pessoa precisa de uma clínica de reabilitação?",
             description: "Sinais de prejuízo, momento de buscar avaliação e participação responsável da família.",
             to: "/blog/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao" as const,
+            image: needsImage,
           },
           {
             category: "Dependência química",
             title: "Dependência química: sinais, consequências e caminhos para o tratamento",
             description: "Uma visão aprofundada dos impactos, das formas de cuidado e da continuidade da recuperação.",
             to: "/blog/dependencia-quimica-sinais-consequencias-tratamento" as const,
+            image: consequencesImage,
           },
           {
             category: "Alcoolismo",
             title: "Alcoolismo: quando o consumo de álcool se torna um problema?",
             description: "Como reconhecer perda de controle, riscos e prejuízos sem fazer diagnósticos pela internet.",
             to: "/blog/alcoolismo-quando-o-consumo-se-torna-um-problema" as const,
+            image: alcoholImage,
           },
           {
             category: "Tratamento e acolhimento",
             title: "Como funciona uma clínica de reabilitação para dependência química?",
             description: "Avaliação, acolhimento, rotina terapêutica, participação familiar e cuidado após a saída.",
             to: "/blog/como-funciona-uma-clinica-de-reabilitacao" as const,
+            image: worksImage,
           },
           {
             category: "Decisão da família",
             title: "Como escolher uma clínica de reabilitação para um familiar?",
             description: "Critérios e perguntas sobre equipe, estrutura, proposta, contrato e continuidade do cuidado.",
             to: "/blog/como-escolher-uma-clinica-de-reabilitacao" as const,
+            image: chooseImage,
           },
         ].map((post) => (
-          <article key={post.to} className="glass-panel mt-5 rounded-2xl p-5 sm:p-7">
+          <article key={post.to} className="glass-panel group overflow-hidden rounded-lg">
+            <img src={post.image} alt={`Imagem conceitual do artigo: ${post.title}`} width={1200} height={640} loading="lazy" decoding="async" className="aspect-[16/9] w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]" />
+            <div className="p-5 sm:p-7">
             <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">
               {post.category}
             </p>
@@ -90,10 +110,15 @@ function BlogPage() {
             <Link to={post.to} className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-secondary transition-colors hover:text-foreground">
               Ler artigo <ArrowRight className="size-4" aria-hidden="true" />
             </Link>
+            </div>
           </article>
         ))}
+        </div>
 
-        <article className="glass-panel mt-8 rounded-2xl p-5 sm:p-7">
+        <div className="mt-5 grid gap-5 md:grid-cols-3">
+        <article className="glass-panel overflow-hidden rounded-lg">
+          <img src={visualAssets.araraquara[4].src} alt={visualAssets.araraquara[4].alt} width={1600} height={1067} loading="lazy" decoding="async" className="aspect-[16/9] w-full object-cover" />
+          <div className="p-5 sm:p-7">
           <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">
             Araraquara · Dependência química
           </p>
@@ -111,9 +136,12 @@ function BlogPage() {
           >
             Ler artigo <ArrowRight className="size-4" aria-hidden="true" />
           </Link>
+          </div>
         </article>
 
-        <article className="glass-panel mt-5 rounded-2xl p-5 sm:p-7">
+        <article className="glass-panel overflow-hidden rounded-lg">
+          <img src={signsImage} alt="Pessoa em reflexão para artigo sobre sinais de dependência química" width={1200} height={640} loading="lazy" decoding="async" className="aspect-[16/9] w-full object-cover" />
+          <div className="p-5 sm:p-7">
           <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">
             Dependência química
           </p>
@@ -130,9 +158,12 @@ function BlogPage() {
           >
             Ler artigo <ArrowRight className="size-4" aria-hidden="true" />
           </Link>
+          </div>
         </article>
 
-        <article className="glass-panel mt-5 rounded-2xl p-5 sm:p-7">
+        <article className="glass-panel overflow-hidden rounded-lg">
+          <img src={saoCarlosImage} alt="Conversa de apoio para artigo sobre dependência química em São Carlos" width={1200} height={640} loading="lazy" decoding="async" className="aspect-[16/9] w-full object-cover" />
+          <div className="p-5 sm:p-7">
           <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">
             São Carlos · Dependência química
           </p>
@@ -149,7 +180,9 @@ function BlogPage() {
           >
             Ler artigo <ArrowRight className="size-4" aria-hidden="true" />
           </Link>
+          </div>
         </article>
+        </div>
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <a

@@ -14,6 +14,7 @@ import {
   phoneHref,
   whatsappHref,
 } from "@/lib/site";
+import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
 
 const steps = [
   "A família entra em contato",
@@ -48,14 +49,10 @@ export function CityPageTemplate({ city }: { city: CityPageData }) {
     .map((slug) => cityDirectory.find((related) => related.slug === slug))
     .filter((related): related is (typeof cityDirectory)[number] => related !== undefined);
   const cityFacebookHref = city.slug === "sao-carlos-sp" ? saoCarlosFacebookHref : facebookHref;
+  const cover = visualAssets.cityCovers[city.slug as keyof typeof visualAssets.cityCovers] ?? visualAssets.cities;
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-deep font-body text-foreground">
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="float-one absolute -left-32 top-16 size-80 rounded-full bg-brand/35 blur-3xl" />
-        <div className="float-two absolute -right-24 top-[34rem] size-72 rounded-full bg-secondary/20 blur-3xl" />
-      </div>
-
+    <div className="site-editorial relative min-h-screen overflow-hidden bg-deep font-body text-foreground">
       <div className="relative z-10 mx-auto max-w-6xl px-5 pb-32 pt-6 sm:px-8 lg:px-12">
         <header>
           <div className="flex items-center justify-between gap-4">
@@ -100,6 +97,7 @@ export function CityPageTemplate({ city }: { city: CityPageData }) {
           </Link>
 
           <section className="pb-14 pt-7 lg:pb-20 lg:pt-12">
+            <div className="grid gap-10 lg:grid-cols-[1fr_.9fr] lg:items-center lg:gap-16">
             <div className="max-w-4xl">
               <div className="glass-panel inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-secondary">
                 <span className="size-1.5 rounded-full bg-accent" /> Orientação para {city.name}
@@ -119,6 +117,11 @@ export function CityPageTemplate({ city }: { city: CityPageData }) {
               <div className="mt-6 flex items-start gap-3 text-xs leading-relaxed text-muted-foreground">
                 <ShieldCheck className="mt-0.5 size-4 shrink-0 text-secondary" aria-hidden="true" /> Avaliação individual, conforme disponibilidade e condições do acolhimento.
               </div>
+            </div>
+              <figure className="overflow-hidden rounded-lg border border-border bg-glass shadow-xl shadow-background/20">
+                <img src={cover.src} alt={cover.alt} width={1600} height={1067} decoding="async" fetchPriority="high" className="aspect-[4/3] w-full object-cover" />
+                <figcaption className="border-t border-border px-4 py-3 text-xs leading-relaxed text-muted-foreground">{conceptualImageCaption}</figcaption>
+              </figure>
             </div>
           </section>
 

@@ -51,7 +51,7 @@
 - [x] Evoluir visualmente somente a página local de Araraquara
 - [x] Integrar fotos reais aos blocos locais sem reduzir conteúdo ou SEO
 - [x] Validar Araraquara em celular, tablet e computador sem publicar
-- [ ] Planejar a evolução visual de todas as páginas públicas sem alterar SEO ou arquitetura
-- [ ] Gerar e integrar imagens conceituais exclusivas por página e contexto
-- [ ] Evoluir os modelos institucionais, locais, editoriais, Blog, Cidades e Vídeos
-- [ ] Auditar todas as páginas em celular, tablet e computador sem publicar
+- [x] Planejar a evolução visual de todas as páginas públicas sem alterar SEO ou arquitetura
+- [x] Gerar e integrar imagens conceituais exclusivas por página e contexto
+- [x] Evoluir os modelos institucionais, locais, editoriais, Blog, Cidades e Vídeos
+- [x] Auditar todas as páginas em celular, tablet e computador sem publicar

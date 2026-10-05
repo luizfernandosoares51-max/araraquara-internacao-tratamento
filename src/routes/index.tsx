@@ -5,7 +5,6 @@ import type { ReactNode } from "react";
 import logoAsset from "@/assets/logo-central-optimized.webp.asset.json";
 import articleSignsImage from "@/assets/blog-dependencia-quimica-sinais.jpg";
 import articleCityImage from "@/assets/blog-dependencia-quimica-sao-carlos.jpg";
-import heroImage from "@/assets/unidade-araraquara-home.webp.asset.json";
 import { AraraquaraPhotoGallery, araraquaraPhotos } from "@/components/araraquara-photo-gallery";
 import { cityDirectory } from "@/lib/city-pages";
 import {
@@ -19,9 +18,10 @@ import {
   siteUrl,
   whatsappHref,
 } from "@/lib/site";
+import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
 
 const pageUrl = siteUrl;
-const heroImageUrl = `${siteUrl}${heroImage.url}`;
+const heroImageUrl = `${siteUrl}${visualAssets.home.hero.src}`;
 
 const steps = [
   "Contato com a família",
@@ -121,7 +121,7 @@ export const Route = createFileRoute("/")({
       { property: "og:image", content: heroImageUrl },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "Área externa da unidade física da Central em Araraquara" },
+      { property: "og:image:alt", content: visualAssets.home.hero.alt },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Clínica de Reabilitação: Dependência e Alcoolismo | Central" },
       { name: "twitter:description", content: "Informação, acolhimento e orientação sobre tratamento para dependência química e alcoolismo." },
@@ -323,13 +323,13 @@ function HomePage() {
 
             <div className="relative min-h-[470px] sm:min-h-[620px] lg:min-h-[680px]">
               <div className="absolute inset-y-0 right-0 w-[91%] overflow-hidden rounded-[2rem] border border-border bg-card shadow-2xl shadow-brand/10 sm:w-[86%]">
-                <img src={heroImage.url} width={1200} height={630} decoding="async" fetchPriority="high" alt="Área externa arborizada da unidade física da Central em Araraquara" className="h-full w-full object-cover" />
+                <img src={visualAssets.home.hero.src} width={1600} height={1067} decoding="async" fetchPriority="high" alt={visualAssets.home.hero.alt} className="h-full w-full object-cover" />
                 <div className="absolute inset-x-0 bottom-0 bg-foreground/80 px-5 py-4 text-background backdrop-blur-sm">
                   <p className="text-sm leading-snug">Unidade física localizada exclusivamente em Araraquara.</p>
                 </div>
               </div>
               <div className="absolute left-0 top-10 w-[42%] overflow-hidden rounded-2xl border-[6px] border-background bg-card shadow-xl sm:top-14 sm:border-[10px]">
-                <img src={araraquaraPhotos[3].src} width={araraquaraPhotos[3].width} height={araraquaraPhotos[3].height} decoding="async" loading="eager" alt="Entrada da unidade física da Central em Araraquara com edifícios azuis e arco-íris ao fundo" className="aspect-[3/4] w-full object-cover" />
+                <img src={visualAssets.home.conversation.src} width={1200} height={1200} decoding="async" loading="eager" alt={visualAssets.home.conversation.alt} className="aspect-[3/4] w-full object-cover" />
               </div>
               <Link to="/clinica-de-recuperacao-em-araraquara" className="absolute bottom-8 left-4 inline-flex min-h-12 items-center gap-2 rounded-full border border-border bg-background/95 px-5 py-3 text-sm font-semibold text-secondary shadow-xl backdrop-blur-sm transition-transform hover:-translate-y-0.5 sm:bottom-12 sm:left-10">
                 Conhecer a unidade <ArrowRight className="size-4" aria-hidden="true" />
@@ -340,8 +340,8 @@ function HomePage() {
           <section className="border-t border-border py-16 lg:py-28">
             <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_.95fr] lg:gap-20">
               <div className="relative overflow-hidden rounded-[2rem] bg-card shadow-xl shadow-brand/10">
-                <img src={araraquaraPhotos[0].src} width={araraquaraPhotos[0].width} height={araraquaraPhotos[0].height} loading="lazy" decoding="async" alt={araraquaraPhotos[0].alt} className="aspect-[4/3] w-full object-cover" />
-                <p className="absolute inset-x-0 bottom-0 bg-foreground/80 px-5 py-3 text-xs font-medium text-background backdrop-blur-sm">Foto real da unidade física em Araraquara</p>
+                <img src={visualAssets.home.continuity.src} width={1200} height={1200} loading="lazy" decoding="async" alt={visualAssets.home.continuity.alt} className="aspect-[4/3] w-full object-cover" />
+                <p className="absolute inset-x-0 bottom-0 bg-foreground/80 px-5 py-3 text-xs font-medium text-background backdrop-blur-sm">{conceptualImageCaption}</p>
               </div>
               <div>
                 <SectionLabel>Sobre a Central</SectionLabel>
@@ -378,8 +378,8 @@ function HomePage() {
                 <Link to="/acolhimento" className="mt-7 inline-flex min-h-12 items-center gap-2 rounded-full border border-border bg-background px-5 py-3 text-sm font-semibold text-secondary shadow-sm">Conhecer o acolhimento <ArrowRight className="size-4" aria-hidden="true" /></Link>
               </div>
               <figure className="overflow-hidden rounded-[2rem] bg-card shadow-xl shadow-brand/10">
-                <img src={araraquaraPhotos[3].src} width={araraquaraPhotos[3].width} height={araraquaraPhotos[3].height} loading="lazy" decoding="async" alt={araraquaraPhotos[3].alt} className="aspect-[4/3] w-full object-cover" />
-                <figcaption className="px-5 py-4 text-xs leading-relaxed text-muted-foreground">Entrada e ambiente externo da unidade física da Central em Araraquara.</figcaption>
+                <img src={visualAssets.home.welcome.src} width={1600} height={1067} loading="lazy" decoding="async" alt={visualAssets.home.welcome.alt} className="aspect-[4/3] w-full object-cover" />
+                <figcaption className="px-5 py-4 text-xs leading-relaxed text-muted-foreground">{conceptualImageCaption}</figcaption>
               </figure>
             </div>
           </section>
@@ -387,8 +387,8 @@ function HomePage() {
           <section id="tratamento" className="border-t border-border py-16 lg:py-28">
             <div className="grid items-center gap-10 lg:grid-cols-[1.08fr_.92fr] lg:gap-20">
               <figure className="order-2 overflow-hidden rounded-[2rem] bg-card shadow-xl shadow-brand/10 lg:order-1">
-                <img src={araraquaraPhotos[5].src} width={araraquaraPhotos[5].width} height={araraquaraPhotos[5].height} loading="lazy" decoding="async" alt={araraquaraPhotos[5].alt} className="aspect-[4/3] w-full object-cover" />
-                <figcaption className="px-5 py-4 text-xs leading-relaxed text-muted-foreground">Espaço real de convivência da unidade de Araraquara.</figcaption>
+                <img src={visualAssets.home.routine.src} width={1200} height={1200} loading="lazy" decoding="async" alt={visualAssets.home.routine.alt} className="aspect-[4/3] w-full object-cover" />
+                <figcaption className="px-5 py-4 text-xs leading-relaxed text-muted-foreground">{conceptualImageCaption}</figcaption>
               </figure>
               <div className="order-1 lg:order-2">
                 <SectionLabel>Tratamento para dependência química e alcoolismo</SectionLabel>
@@ -440,7 +440,7 @@ function HomePage() {
           <section id="familia" className="border-t border-border py-16 lg:py-28">
             <div className="grid items-center gap-10 lg:grid-cols-[.92fr_1.08fr] lg:gap-20">
               <div className="relative overflow-hidden rounded-[2rem] shadow-xl shadow-brand/10">
-                <img src={araraquaraPhotos[1].src} width={araraquaraPhotos[1].width} height={araraquaraPhotos[1].height} loading="lazy" decoding="async" alt={araraquaraPhotos[1].alt} className="aspect-[4/3] w-full object-cover" />
+                <img src={visualAssets.home.family.src} width={1200} height={1200} loading="lazy" decoding="async" alt={visualAssets.home.family.alt} className="aspect-[4/3] w-full object-cover" />
                 <div className="absolute bottom-4 left-4 grid size-12 place-items-center rounded-full bg-background/95 text-secondary shadow-lg"><HeartHandshake className="size-5" aria-hidden="true" /></div>
               </div>
               <div>
@@ -497,7 +497,7 @@ function HomePage() {
           <section id="galeria-fotos" aria-labelledby="galeria-titulo" className="scroll-mt-6 border-t border-border py-16 lg:py-24">
             <SectionLabel>Unidade física</SectionLabel>
              <h2 id="galeria-titulo" className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Clínica de Reabilitação em Araraquara</h2>
-             <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted-foreground">A única unidade física da Central está localizada em Araraquara, SP. Pessoas e famílias de outras cidades da região também podem buscar informação e orientação; as páginas locais não representam filiais. Veja informações sobre a unidade e fotos reais de seus espaços.</p>
+             <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted-foreground">A única unidade física da Central está localizada em Araraquara, SP. Pessoas e famílias de outras cidades da região também podem buscar informação e orientação; as páginas locais não representam filiais. As imagens abaixo são representações conceituais da jornada de acolhimento.</p>
             <Link to="/clinica-de-recuperacao-em-araraquara" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:underline">Conheça a unidade em Araraquara <ArrowRight className="size-4" aria-hidden="true" /></Link>
             <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-12">
               {araraquaraPhotos.slice(2, 5).map((photo, index) => (
@@ -517,7 +517,7 @@ function HomePage() {
 
               <div className="pt-8">
                 <h3 className="font-display text-xl font-semibold leading-tight sm:text-2xl">
-                  Fotos da unidade física da Central
+                  Representações conceituais de acolhimento
                 </h3>
 
                 <div className="mt-8 grid gap-4 lg:grid-cols-2">
