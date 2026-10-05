@@ -48,3 +48,6 @@
 - [x] Evoluir visualmente a Home com a direção editorial humana aprovada
 - [x] Integrar fotografias reais às seções sem reduzir o conteúdo SEO
 - [x] Validar a Home evoluída em celular, tablet e computador sem publicar
+- [ ] Evoluir visualmente somente a página local de Araraquara
+- [ ] Integrar fotos reais aos blocos locais sem reduzir conteúdo ou SEO
+- [ ] Validar Araraquara em celular, tablet e computador sem publicar
