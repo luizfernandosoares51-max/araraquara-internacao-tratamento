@@ -47,4 +47,4 @@
 - [x] Validar cidades, localização, preço, internação e emergência no assistente
 - [x] Evoluir visualmente a Home com a direção editorial humana aprovada
 - [x] Integrar fotografias reais às seções sem reduzir o conteúdo SEO
-- [ ] Validar a Home evoluída em celular, tablet e computador sem publicar
+- [x] Validar a Home evoluída em celular, tablet e computador sem publicar
