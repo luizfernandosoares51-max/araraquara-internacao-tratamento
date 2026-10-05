@@ -367,7 +367,7 @@ function HomePage() {
           </section>
 
           <section id="acolhimento" className="border-t border-border bg-muted/45 py-16 -mx-5 px-5 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 lg:py-28">
-            <div className="grid items-center gap-10 lg:grid-cols-[.9fr 1.1fr] lg:gap-20">
+            <div className="grid items-center gap-10 lg:grid-cols-[.9fr_1.1fr] lg:gap-20">
               <div>
                 <SectionLabel>Sobre o acolhimento</SectionLabel>
                 <h2 className="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight sm:text-5xl">Um caminho acompanhado, do primeiro contato ao cuidado.</h2>
