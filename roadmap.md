@@ -45,3 +45,6 @@
 - [x] Validar IA, contatos, privacidade, celular e preservação integral do SEO
 - [x] Refinar o acolhimento, a triagem breve e o encaminhamento humano do assistente
 - [x] Validar cidades, localização, preço, internação e emergência no assistente
+- [ ] Evoluir visualmente a Home com a direção editorial humana aprovada
+- [ ] Integrar fotografias reais às seções sem reduzir o conteúdo SEO
+- [ ] Validar a Home evoluída em celular, tablet e computador sem publicar
