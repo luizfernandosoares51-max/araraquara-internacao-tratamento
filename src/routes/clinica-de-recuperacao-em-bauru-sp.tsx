@@ -21,8 +21,63 @@ import { Button } from "@/components/ui/button";
 import { emailDisplay, emailHref, phoneDisplay, phoneHref, siteUrl, whatsappHref } from "@/lib/site";
 import { visualAssets } from "@/lib/visual-assets";
 
-const pagePath = "/clinica-de-recuperacao-em-bauru-sp";
-const pageUrl = `${siteUrl}${pagePath}`;
+export const Route = createFileRoute("/clinica-de-recuperacao-em-bauru-sp")({
+  staticData: { sitemap: true },
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { name: "robots", content: "index,follow" },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: pageUrl },
+      { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
+    ],
+    links: [{ rel: "canonical", href: pageUrl }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": `${pageUrl}#webpage`,
+              url: pageUrl,
+              name: title,
+              description,
+              inLanguage: "pt-BR",
+              isPartOf: { "@type": "WebSite", name: "Central de Acolhimento e Reabilitação", url: siteUrl },
+            },
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Início", item: siteUrl },
+                { "@type": "ListItem", position: 2, name: "Cidades", item: `${siteUrl}/cidades` },
+                { "@type": "ListItem", position: 3, name: "Bauru", item: pageUrl },
+              ],
+            },
+            {
+              "@type": "FAQPage",
+              mainEntity: faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: { "@type": "Answer", text: faq.answer },
+              })),
+            },
+          ],
+        }),
+      },
+    ],
+  }),
+  component: OfficialBauruPage,
+});
+
+
+const pageUrl = "https://centraldeacolhimentoereabilitacao.com/clinica-de-recuperacao-em-bauru-sp";
 const title = "Clínica de Reabilitação em Bauru | Dependência Química e Alcoolismo";
 const description =
   "Orientação para famílias de Bauru que procuram tratamento para dependência química e alcoolismo. Conheça as possibilidades de acolhimento e tratamento.";
@@ -114,65 +169,12 @@ const faqs = [
   },
 ];
 
-export const Route = createFileRoute("/clinica-de-recuperacao-em-bauru-sp")({
-  staticData: { sitemap: true },
-  head: () => ({
-    meta: [
-      { title },
-      { name: "description", content: description },
-      { property: "og:title", content: title },
-      { property: "og:description", content: description },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: pageUrl },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: title },
-      { name: "twitter:description", content: description },
-    ],
-    links: [{ rel: "canonical", href: pageUrl }],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@graph": [
-            {
-              "@type": "WebPage",
-              "@id": `${pageUrl}#webpage`,
-              url: pageUrl,
-              name: title,
-              description,
-              inLanguage: "pt-BR",
-              isPartOf: { "@type": "WebSite", name: "Central de Acolhimento e Reabilitação", url: siteUrl },
-            },
-            {
-              "@type": "BreadcrumbList",
-              itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Início", item: siteUrl },
-                { "@type": "ListItem", position: 2, name: "Cidades", item: `${siteUrl}/cidades` },
-                { "@type": "ListItem", position: 3, name: "Bauru", item: pageUrl },
-              ],
-            },
-            {
-              "@type": "FAQPage",
-              mainEntity: faqs.map((faq) => ({
-                "@type": "Question",
-                name: faq.question,
-                acceptedAnswer: { "@type": "Answer", text: faq.answer },
-              })),
-            },
-          ],
-        }),
-      },
-    ],
-  }),
-  component: BauruPage,
-});
 
 function Eyebrow({ children }: { children: ReactNode }) {
   return <p className="text-xs font-bold uppercase tracking-widest text-brand">{children}</p>;
 }
 
-function BauruPage() {
+function OfficialBauruPage() {
   return (
     <div className="site-editorial min-h-screen bg-foreground font-body text-deep">
       <header className="border-b border-deep/10 bg-foreground">
