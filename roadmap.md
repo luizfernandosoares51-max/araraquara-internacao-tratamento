@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Criar e verificar a rota experimental independente de Bauru, fora do sitemap e sem publicação.
+- [x] Criar e verificar a rota experimental independente de Bauru, fora do sitemap e sem publicação — prévia GET 200 com identificações de navegador, Googlebot e Google-InspectionTool; produção 404 pois a nova rota não foi publicada.
 
 - [x] Preservar a página existente de Araraquara
 - [x] Criar conteúdo original para 14 cidades
