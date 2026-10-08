@@ -55,4 +55,4 @@
 - [x] Gerar e integrar imagens conceituais exclusivas por página e contexto
 - [x] Evoluir os modelos institucionais, locais, editoriais, Blog, Cidades e Vídeos
 - [x] Auditar todas as páginas em celular, tablet e computador sem publicar
-- [ ] Confirmar se o briefing do LUMEN·IA pertence a este projeto antes de alterar a Home
+- [x] Confirmar que o briefing do LUMEN·IA pertence a outro projeto e preservar o site da Central
