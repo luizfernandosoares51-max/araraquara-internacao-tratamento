@@ -56,3 +56,4 @@
 - [x] Evoluir os modelos institucionais, locais, editoriais, Blog, Cidades e Vídeos
 - [x] Auditar todas as páginas em celular, tablet e computador sem publicar
 - [x] Confirmar que o briefing do LUMEN·IA pertence a outro projeto e preservar o site da Central
+- [ ] Verificar acesso direto, Googlebot, canonical, indexação, sitemap e links da página de Ribeirão Preto sem alterar outras páginas
