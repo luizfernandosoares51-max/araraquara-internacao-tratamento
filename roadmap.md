@@ -56,6 +56,6 @@
 - [x] Evoluir os modelos institucionais, locais, editoriais, Blog, Cidades e Vídeos
 - [x] Auditar todas as páginas em celular, tablet e computador sem publicar
 - [x] Confirmar que o briefing do LUMEN·IA pertence a outro projeto e preservar o site da Central
-- [x] Verificar acesso direto, Googlebot, canonical, indexação, sitemap e links da página de Ribeirão Preto sem alterar outras páginas — URL oficial retorna HTTP 200; nenhuma correção necessária
+- [x] Verificar acesso direto, identificações de Googlebot, canonical, sitemap e links da página de Ribeirão Preto sem alterar outras páginas — testes retornam HTTP 200, sem explicar o 404 real do Google
 - [x] Revalidar Ribeirão Preto no domínio publicado em 08/10/2026 — acesso direto e identificações de navegador, Googlebot e Google-InspectionTool retornam 200; canonical próprio, sem noindex e sitemap com uma entrada
-- [ ] Esclarecer o 404 do teste real do Google em Ribeirão Preto — bloqueado pela ausência de propriedades na conta conectada; aguarda captura dos detalhes do teste ou evidência dos registros de hospedagem
+- [ ] Esclarecer o 404 do teste real do Google em Ribeirão Preto — relato recebido do teste de 08/10/2026 às 10:32:39 (13:32:39 UTC); investigar respostas públicas, configuração da rota e diferenças de CDN/DNS; correlacionar com os registros da hospedagem antes de concluir
