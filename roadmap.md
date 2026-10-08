@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Criar e verificar a rota experimental independente de Bauru, fora do sitemap e sem publicação.
+
 - [x] Preservar a página existente de Araraquara
 - [x] Criar conteúdo original para 14 cidades
 - [x] Criar modelo visual reutilizável para páginas locais
