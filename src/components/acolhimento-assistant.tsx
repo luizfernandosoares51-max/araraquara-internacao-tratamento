@@ -85,7 +85,7 @@ export function AcolhimentoAssistant() {
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
         <Button
-          className="fixed bottom-4 right-20 z-50 h-11 w-[9.5rem] gap-1.5 rounded-full px-2.5 text-[11px] leading-tight shadow-lg sm:bottom-6 sm:right-24 sm:w-auto sm:px-3"
+          className="floating-assistant h-12 w-[9.5rem] gap-1.5 rounded-full px-2.5 text-[11px] leading-tight shadow-lg sm:w-auto sm:px-3"
           aria-label="Falar com nosso assistente"
         >
           <MessageCircle className="size-3.5" aria-hidden="true" />

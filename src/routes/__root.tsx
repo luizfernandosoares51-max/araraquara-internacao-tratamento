@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { AcolhimentoAssistant } from "../components/acolhimento-assistant";
+import { FloatingWhatsApp } from "../components/floating-whatsapp";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
@@ -129,6 +130,8 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
+      <div className="floating-contact-spacer" aria-hidden="true" />
+      <FloatingWhatsApp />
       <AcolhimentoAssistant />
     </QueryClientProvider>
   );
