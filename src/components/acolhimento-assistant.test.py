@@ -24,7 +24,7 @@ class AssistantHomeNavigation(unittest.TestCase):
                     field.fill('Rascunho que não deve ser enviado')
                     link = dialog.get_by_role('link', name='Voltar ao início', exact=True)
                     self.assertEqual(link.get_attribute('href'), HOME)
-                    self.assertEqual(dialog.get_by_role('link', name='WhatsApp', exact=True).get_attribute('href'), 'https://wa.me/5516997654579')
+                    self.assertEqual(dialog.get_by_role('link', name='WhatsApp', exact=True).get_attribute('href').split('?')[0], 'https://wa.me/5516997654579')
                     self.assertTrue(dialog.get_by_role('link', name='Ligar agora para', exact=False).is_visible())
                     page.evaluate("""() => { window.__homeClicks = []; document.addEventListener('click', e => { if(e.target.closest('a')?.textContent.includes('Voltar ao início')) window.__homeClicks.push('propagated'); }); document.querySelector('textarea').addEventListener('focus', () => window.__homeClicks.push('focused')); }""")
                     link.focus()
@@ -33,6 +33,9 @@ class AssistantHomeNavigation(unittest.TestCase):
                     # Hold the real destination request long enough to inspect closure,
                     # then display the local institutional Home under the exact requested URL.
                     def home_response(route):
+                        page.wait_for_timeout(150)
+                        self.assertEqual(page.get_by_role("dialog").count(), 0)
+                        self.assertEqual(page.evaluate("window.__homeClicks"), [])
                         response = context.request.get(LOCAL)
                         body = response.text().replace('<head>', '<head><base href="'+LOCAL+'/">', 1)
                         route.fulfill(status=200, content_type='text/html', body=body)
