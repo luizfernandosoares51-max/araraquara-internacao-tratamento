@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Atualizar responsáveis técnicos e declaração sanitária no rodapé e transparência com ícones verdes; validar dados e separação dos contatos no celular, sem publicação.
+- [x] Atualizar responsáveis técnicos e declaração sanitária no rodapé e transparência com ícones verdes; onze testes aprovados e doze visitas em 1280/390/320 confirmam nomes, CRP, navegação e rodapé separado dos contatos; sem publicação.
 
 - [x] Criar rodapé global único, transparência, privacidade/LGPD, termos e página de contato com microdados e emergências públicas; 32 páginas HTTP 200, navegação e exibição em 1280/390/320 verificadas, nove testes aprovados; sem publicação.
 - [ ] Completar razão social, endereço/mapa/rotas, responsável médico/CRM, licença sanitária, ouvidoria e detalhes de tratamento de dados — bloqueado por confirmação documental da instituição; CRP e responsáveis técnicos foram informados pelo usuário.
