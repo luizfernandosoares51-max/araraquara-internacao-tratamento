@@ -7,15 +7,20 @@ test("preserves the exact CNPJ supplied by the institution", () => {
 });
 
 test("preserves the psychologist and exact CRP confirmed by the institution", () => {
-  assert.equal(institutionalIdentity.psychologyResponsible.name, "Adelmo João Antunes");
+  assert.equal(institutionalIdentity.psychologyResponsible.name, "Margarete Vasques");
   assert.equal(institutionalIdentity.psychologyResponsible.registration, "CRP 06/130268");
-  assert.equal(institutionalIdentity.psychologyResponsible.role, "Responsável Técnico Psicólogo / Coordenação Técnica");
+  assert.equal(institutionalIdentity.psychologyResponsible.role, "Responsável Técnica Psicóloga");
 });
 
-test("preserves Margarete's stated responsibility without inventing a professional registration", () => {
-  assert.equal(institutionalIdentity.technicalResponsible.name, "Margarete Vasques");
-  assert.equal(institutionalIdentity.technicalResponsible.role, "Responsável Técnica");
-  assert.equal("registration" in institutionalIdentity.technicalResponsible, false);
+test("preserves Adelmo's ownership without attributing Margarete's CRP to him", () => {
+  assert.equal(institutionalIdentity.ownership.name, "Adelmo João Antunes");
+  assert.equal(institutionalIdentity.ownership.role, "Proprietário / Direção");
+  assert.equal("registration" in institutionalIdentity.ownership, false);
+});
+
+test("preserves the confirmed business holder in institutional identity and schema", () => {
+  assert.equal(institutionalIdentity.legalName, "Adelmo João Antunes");
+  assert.equal(institutionalLocalBusiness.legalName, "Adelmo João Antunes");
 });
 
 test("does not fabricate unconfirmed medical credentials", () => {

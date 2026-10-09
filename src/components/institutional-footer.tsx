@@ -13,8 +13,8 @@ export function InstitutionalFooter() {
           <section className="min-w-0">
             <h2 className="font-display text-xl font-semibold">{institutionalIdentity.publicName}</h2>
             <dl className="mt-5 space-y-3 text-sm leading-relaxed">
-              <div><dt className="font-semibold">CNPJ informado</dt><dd className="text-muted-foreground">{institutionalIdentity.cnpj}</dd></div>
-              <div><dt className="font-semibold">Nome empresarial completo</dt><dd className="text-muted-foreground">Razão social não fornecida.</dd></div>
+              <div><dt className="font-semibold">Empresa / Titular</dt><dd className="text-muted-foreground">{institutionalIdentity.legalName}</dd></div>
+              <div><dt className="font-semibold">CNPJ</dt><dd className="text-muted-foreground">{institutionalIdentity.cnpj}</dd></div>
             </dl>
             <p className="mb-3 mt-5 text-sm font-semibold">Unidade física somente em Araraquara/SP</p>
             <InstitutionalLocation compact />
