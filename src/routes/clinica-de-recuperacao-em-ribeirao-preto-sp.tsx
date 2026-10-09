@@ -493,9 +493,6 @@ function OfficialRibeiraoPretoPage() {
         </div>
       </footer>
 
-      <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="fixed bottom-4 left-4 right-4 z-50 flex min-h-14 items-center justify-center gap-2 rounded-full bg-whatsapp px-6 py-4 text-sm font-semibold text-whatsapp-foreground shadow-xl shadow-deep/30 sm:left-auto sm:right-6">
-        <MessageCircle className="size-5" aria-hidden="true" /> WhatsApp
-      </a>
     </div>
   );
 }

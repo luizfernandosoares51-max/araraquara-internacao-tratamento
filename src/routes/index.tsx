@@ -678,9 +678,6 @@ function HomePage() {
         </footer>
       </div>
 
-      <WhatsAppLink className="fixed bottom-4 right-4 z-50 grid size-12 place-items-center rounded-full bg-whatsapp text-whatsapp-foreground shadow-lg shadow-background/20 transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring sm:bottom-6 sm:right-6 sm:size-13">
-        <WhatsAppIcon className="size-5" /> <span className="sr-only">WhatsApp</span>
-      </WhatsAppLink>
     </div>
   );
 }

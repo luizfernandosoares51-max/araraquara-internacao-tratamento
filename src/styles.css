@@ -244,3 +244,41 @@
 #lovable-badge {
   display: none !important;
 }
+
+:root {
+  --floating-contact-edge: 1rem;
+  --floating-contact-bottom: max(var(--floating-contact-edge), env(safe-area-inset-bottom, 0px));
+  --floating-contact-right: max(var(--floating-contact-edge), env(safe-area-inset-right, 0px));
+  --floating-contact-size: 3.25rem;
+}
+
+.floating-whatsapp,
+.floating-assistant {
+  position: fixed;
+  bottom: var(--floating-contact-bottom);
+  z-index: 50;
+}
+
+.floating-whatsapp {
+  right: var(--floating-contact-right);
+  width: var(--floating-contact-size);
+  height: var(--floating-contact-size);
+  --whatsapp: oklch(0.61 0.13 153);
+  --whatsapp-foreground: oklch(0.99 0.004 245);
+}
+
+.floating-assistant {
+  right: calc(var(--floating-contact-right) + var(--floating-contact-size) + 0.75rem);
+}
+
+.floating-contact-spacer {
+  height: calc(var(--floating-contact-size) + var(--floating-contact-bottom) + 1rem);
+}
+
+html {
+  scroll-padding-bottom: calc(var(--floating-contact-size) + var(--floating-contact-bottom) + 1rem);
+}
+
+@media (min-width: 640px) {
+  :root { --floating-contact-edge: 1.5rem; }
+}

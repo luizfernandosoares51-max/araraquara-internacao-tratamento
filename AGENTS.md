@@ -14,3 +14,4 @@
 - Keep the global welcome assistant session-only, with its model, safety instructions, and credentials behind the server chat endpoint, so visitor conversations are never persisted or exposed.
 - Keep public-page imagery in the shared visual asset catalog and use conceptual AI imagery rather than documentary facility photos, so visual representation stays consistent and does not imply unverified facts.
 - Keep infrastructure diagnostic pages as standalone explicit routes excluded from the sitemap, so controlled delivery tests do not change existing city pages or discovery paths.
+- Mount floating WhatsApp once in the root layout and share safe-area positioning with the assistant; page-level floating duplicates must not be added, so contact controls stay consistent across routes.
