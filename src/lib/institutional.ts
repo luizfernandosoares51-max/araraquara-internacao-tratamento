@@ -6,7 +6,16 @@ export const institutionalIdentity = {
   legalName: null,
   fullAddress: null,
   medicalResponsible: null,
-  psychologyResponsible: null,
+  psychologyResponsible: {
+    name: "Adelmo João Antunes",
+    registration: "CRP 06/130268",
+    role: "Responsável Técnico Psicólogo / Coordenação Técnica",
+  },
+  technicalResponsible: {
+    name: "Margarete Vasques",
+    role: "Responsável Técnica",
+  },
+  sanitaryStatement: "A instituição declara que a unidade segue os protocolos sanitários e as diretrizes da Vigilância Sanitária local para acolhimento e reabilitação psicossocial, observando as Leis 10.216/2001 e 13.840/2019 conforme o enquadramento aplicável.",
   sanitaryLicense: null,
   dedicatedOmbudsman: null,
 } as const;

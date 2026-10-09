@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, Phone } from "lucide-react";
 import { institutionalIdentity, institutionalLinks } from "@/lib/institutional";
+import { TechnicalResponsibility } from "@/components/technical-responsibility";
 import { emailDisplay, emailHref, phoneDisplay, phoneHref, instagramHref, facebookHref } from "@/lib/site";
 
 export function InstitutionalFooter() {
@@ -18,12 +19,11 @@ export function InstitutionalFooter() {
           </section>
           <section className="min-w-0">
             <h2 className="text-base font-semibold">Responsabilidade técnica e sanitária</h2>
-            <dl className="mt-5 space-y-3 text-sm leading-relaxed">
-              <div><dt className="font-semibold">Responsável Técnico Médico · CRM/UF</dt><dd className="text-muted-foreground">Nome e registro não confirmados.</dd></div>
-              <div><dt className="font-semibold">Responsável Técnico Psicólogo · CRP</dt><dd className="text-muted-foreground">Nome e registro não confirmados.</dd></div>
-              <div><dt className="font-semibold">Vigilância Sanitária</dt><dd className="text-muted-foreground">Licença e enquadramento do serviço aguardam comprovação; não há declaração de regularidade sanitária nesta página.</dd></div>
-            </dl>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">As Leis 10.216/2001 e 13.840/2019 orientam as informações sobre internação, conforme o enquadramento aplicável. Acolhimento não equivale automaticamente a internação médica.</p>
+            <div className="mt-5 text-sm leading-relaxed"><TechnicalResponsibility /></div>
+            <p className="mt-3 text-xs leading-relaxed text-muted-foreground">Dados confirmados pela instituição; ícones não representam certificação independente.</p>
+            <p className="mt-4 text-sm font-semibold">Vigilância Sanitária</p>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{institutionalIdentity.sanitaryStatement}</p>
+            <p className="mt-3 text-xs leading-relaxed text-muted-foreground">Número e validade da licença sanitária e responsável médico/CRM não informados. Acolhimento não equivale automaticamente a internação médica.</p>
           </section>
           <section className="min-w-0">
             <h2 className="text-base font-semibold">Contato oficial e transparência</h2>
