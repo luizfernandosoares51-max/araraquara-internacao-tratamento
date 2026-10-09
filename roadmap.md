@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Organizar contatos na base móvel e reservar área de conteúdo independente em todas as páginas; validar toques de 48px, navegação e assistente em 320–390px e computador, sem alterar conteúdo/SEO nem publicar.
+- [x] Organizar contatos na base móvel e reservar área de conteúdo independente em todas as páginas; 116 visitas em 320/360/390/1280px, quatro fluxos do assistente e seis testes aprovados, contatos com toque de 48px; conteúdo/SEO preservados, sem publicação.
 
 - [x] Corrigir “Voltar ao início” para fechar o assistente e navegar à Home institucional como link; teste em 1280/390/320 confirma fechamento, destino exato, ausência de envio e foco no campo, WhatsApp e ligação preservados. Destino interceptado com a Home local para verificar a alteração ainda não publicada; sem publicação.
 
