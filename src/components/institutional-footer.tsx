@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Mail, Phone } from "lucide-react";
 import { institutionalIdentity, institutionalLinks } from "@/lib/institutional";
 import { TechnicalResponsibility } from "@/components/technical-responsibility";
+import { InstitutionalLocation } from "@/components/institutional-location";
 import { emailDisplay, emailHref, phoneDisplay, phoneHref, instagramHref, facebookHref } from "@/lib/site";
 
 export function InstitutionalFooter() {
@@ -13,9 +14,10 @@ export function InstitutionalFooter() {
             <h2 className="font-display text-xl font-semibold">{institutionalIdentity.publicName}</h2>
             <dl className="mt-5 space-y-3 text-sm leading-relaxed">
               <div><dt className="font-semibold">CNPJ informado</dt><dd className="text-muted-foreground">{institutionalIdentity.cnpj}</dd></div>
-              <div><dt className="font-semibold">Nome empresarial completo</dt><dd className="text-muted-foreground">Aguardando confirmação documental.</dd></div>
-              <div><dt className="font-semibold">Endereço físico</dt><dd className="text-muted-foreground">Unidade somente em Araraquara/SP. Endereço completo aguardando confirmação.</dd></div>
+              <div><dt className="font-semibold">Nome empresarial completo</dt><dd className="text-muted-foreground">Razão social não fornecida.</dd></div>
             </dl>
+            <p className="mb-3 mt-5 text-sm font-semibold">Unidade física somente em Araraquara/SP</p>
+            <InstitutionalLocation compact />
           </section>
           <section className="min-w-0">
             <h2 className="text-base font-semibold">Responsabilidade técnica e sanitária</h2>

@@ -1,10 +1,20 @@
-import { siteUrl } from "./site";
+import { siteUrl, phoneDisplay, emailDisplay } from "./site";
 
 export const institutionalIdentity = {
   publicName: "Central de Acolhimento e Reabilitação",
   cnpj: "40.241.645/0001-30",
   legalName: null,
-  fullAddress: null,
+  fullAddress: "R. Alfredo Micelli, 70 - Condomínio Satélite, Araraquara - SP, CEP 14808-579",
+  postalAddress: {
+    "@type": "PostalAddress",
+    streetAddress: "R. Alfredo Micelli, 70 - Condomínio Satélite",
+    addressLocality: "Araraquara",
+    addressRegion: "SP",
+    postalCode: "14808-579",
+    addressCountry: "BR",
+  },
+  mapsHref: "https://maps.app.goo.gl/LuhVM9HZwsrFWbXk9",
+  generalCoordination: { name: "Luiz Fernando Soares", role: "Coordenação Geral / Operacional" },
   medicalResponsible: null,
   psychologyResponsible: {
     name: "Adelmo João Antunes",
@@ -19,6 +29,19 @@ export const institutionalIdentity = {
   sanitaryLicense: null,
   dedicatedOmbudsman: null,
 } as const;
+
+export const institutionalLocalBusiness = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": `${siteUrl}/#organization`,
+  name: institutionalIdentity.publicName,
+  url: siteUrl,
+  telephone: phoneDisplay,
+  email: emailDisplay,
+  taxID: institutionalIdentity.cnpj,
+  address: institutionalIdentity.postalAddress,
+  hasMap: institutionalIdentity.mapsHref,
+};
 
 export const institutionalLinks = [
   { href: "/transparencia", label: "Transparência e Responsabilidade Técnica" },
