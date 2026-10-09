@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Camera, Check, ChevronDown, HeartHandshake, Mail, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
 import type { ReactNode } from "react";
 
-import logoAsset from "@/assets/logo-central-optimized.webp.asset.json";
+import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import articleSignsImage from "@/assets/blog-dependencia-quimica-sinais.jpg";
 import articleCityImage from "@/assets/blog-dependencia-quimica-sao-carlos.jpg";
 import { AraraquaraPhotoGallery, araraquaraPhotos } from "@/components/araraquara-photo-gallery";

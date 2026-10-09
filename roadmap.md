@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Corrigir exclusivamente a nitidez da logo na abertura da Home usando o original existente e validar computador/celulares, sem publicação.
+
 - [x] Organizar os oito artigos auditados em quatro temas preenchidos, diferenciar as intenções dos dois pares e melhorar cartões e links contextuais — 11 URLs HTTP 200, 22 visitas em 1280/390 sem overflow, imagens visíveis carregadas, H1 único, oito titles/descriptions/canonicals preservados, navegação temática e de artigo confirmada; sitemap e robots idênticos, contato oficial testado. Sem publicação; histórico no Google não verificado por falta de acesso à propriedade correta no Search Console.
 
 - [x] Auditar sobreposição e aprimorar o artigo existente `/blog/como-funciona-uma-clinica-de-reabilitacao`, com seis imagens WebP conceituais próprias, fontes oficiais e validação isolada — HTTP 200, HTML direto, H1 único, canonical, index/follow, BlogPosting/BreadcrumbList, links internos 200 e sitemap com uma entrada; imagens carregadas e alternância verificada em 1280/390/320. Artigo sobre escolha, índice do Blog e páginas não relacionadas preservados. Sem publicação; revisão clínica identificada não disponível.
