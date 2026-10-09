@@ -3,7 +3,7 @@ import { siteUrl, phoneDisplay, emailDisplay } from "./site";
 export const institutionalIdentity = {
   publicName: "Central de Acolhimento e Reabilitação",
   cnpj: "40.241.645/0001-30",
-  legalName: null,
+  legalName: "Adelmo João Antunes",
   fullAddress: "R. Alfredo Micelli, 70 - Condomínio Satélite, Araraquara - SP, CEP 14808-579",
   postalAddress: {
     "@type": "PostalAddress",
@@ -17,13 +17,13 @@ export const institutionalIdentity = {
   generalCoordination: { name: "Luiz Fernando Soares", role: "Coordenação Geral / Operacional" },
   medicalResponsible: null,
   psychologyResponsible: {
-    name: "Adelmo João Antunes",
-    registration: "CRP 06/130268",
-    role: "Responsável Técnico Psicólogo / Coordenação Técnica",
-  },
-  technicalResponsible: {
     name: "Margarete Vasques",
-    role: "Responsável Técnica",
+    registration: "CRP 06/130268",
+    role: "Responsável Técnica Psicóloga",
+  },
+  ownership: {
+    name: "Adelmo João Antunes",
+    role: "Proprietário / Direção",
   },
   sanitaryStatement: "A instituição declara que a unidade segue os protocolos sanitários e as diretrizes da Vigilância Sanitária local para acolhimento e reabilitação psicossocial, observando as Leis 10.216/2001 e 13.840/2019 conforme o enquadramento aplicável.",
   sanitaryLicense: null,
@@ -35,6 +35,7 @@ export const institutionalLocalBusiness = {
   "@type": "LocalBusiness",
   "@id": `${siteUrl}/#organization`,
   name: institutionalIdentity.publicName,
+  legalName: institutionalIdentity.legalName,
   url: siteUrl,
   telephone: phoneDisplay,
   email: emailDisplay,

@@ -2,12 +2,12 @@ import { CircleCheck } from "lucide-react";
 import { institutionalIdentity } from "@/lib/institutional";
 
 export function TechnicalResponsibility() {
-  const { psychologyResponsible, technicalResponsible, generalCoordination } = institutionalIdentity;
+  const { psychologyResponsible, ownership, generalCoordination } = institutionalIdentity;
   return (
     <dl className="space-y-5">
       <div className="flex items-start gap-3">
         <CircleCheck className="mt-1 size-5 shrink-0 text-whatsapp" aria-hidden="true" />
-        <div className="min-w-0"><dt className="font-semibold">{generalCoordination.role}</dt><dd className="mt-1 text-muted-foreground">{generalCoordination.name}</dd></div>
+        <div className="min-w-0"><dt className="font-semibold">{ownership.role}</dt><dd className="mt-1 text-muted-foreground">{ownership.name}</dd></div>
       </div>
       <div className="flex items-start gap-3">
         <CircleCheck className="mt-1 size-5 shrink-0 text-whatsapp" aria-hidden="true" />
@@ -15,7 +15,7 @@ export function TechnicalResponsibility() {
       </div>
       <div className="flex items-start gap-3">
         <CircleCheck className="mt-1 size-5 shrink-0 text-whatsapp" aria-hidden="true" />
-        <div className="min-w-0"><dt className="font-semibold">{technicalResponsible.role}</dt><dd className="mt-1 text-muted-foreground">{technicalResponsible.name}</dd></div>
+        <div className="min-w-0"><dt className="font-semibold">{generalCoordination.role}</dt><dd className="mt-1 text-muted-foreground">{generalCoordination.name}</dd></div>
       </div>
     </dl>
   );
