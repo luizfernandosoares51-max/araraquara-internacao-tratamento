@@ -40,7 +40,7 @@ class AssistantHomeNavigation(unittest.TestCase):
                     page.route('https://centraldeacolhimentoereabilitacao.com/assets/**', lambda route: route.fulfill(response=context.request.get(LOCAL + '/' + route.request.url.split('.com/',1)[1])))
                     # Capture dialog closure and absence of textarea focus before unload.
                     page.evaluate("""() => { window.__homeEvidence = {closed:false}; new MutationObserver(() => {if(!document.querySelector('[role=dialog]')) {window.__homeEvidence.closed=true; sessionStorage.setItem('homeEvidence', JSON.stringify({closed:true, events:window.__homeClicks}));}}).observe(document.body,{childList:true,subtree:true}); }""")
-                    link.evaluate("el => el.addEventListener("click", e => e.preventDefault(), {once:true})")
+                    link.evaluate("el => el.addEventListener('click', e => e.preventDefault(), {once:true})")
                     link.click()
                     page.wait_for_timeout(250)
                     self.assertEqual(page.get_by_role("dialog").count(), 0)
