@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Auditar sobreposição e aprimorar o artigo existente sobre funcionamento de clínica de reabilitação, com seis imagens contextuais, fontes oficiais e validação isolada; sem publicar nem alterar páginas não relacionadas.
+
 - [x] Unificar o WhatsApp flutuante global e preservar o assistente — 21 verificações em sete páginas, nas larguras 1280, 390 e 320; link oficial, foco por teclado, botão único, separação dos contatos e abertura/fechamento do assistente confirmados; títulos, metadados, canonical e H1 preservados. Sem publicação.
 
 - [x] Reconstruir e auditar somente o registro explícito oficial de Bauru sem publicar — conteúdo, links, imagens e schemas preservados; GET/HEAD 200 para navegador e identificações Googlebot/Google-InspectionTool; canonical oficial, index,follow e uma entrada no sitemap. Validação real do Google aguarda publicação autorizada e novo teste no Search Console.
