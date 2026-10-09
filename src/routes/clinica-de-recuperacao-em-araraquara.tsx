@@ -373,12 +373,7 @@ function AraraquaraPage() {
         </section>
       </main>
 
-      <footer className="bg-deep text-primary-foreground">
-        <div className="mx-auto max-w-6xl border-t border-border px-5 pb-28 pt-8 sm:px-8 lg:px-12">
-          <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between"><div><p className="font-display font-semibold">Central de Acolhimento e Reabilitação</p><p className="mt-1 text-xs text-muted-foreground">Informações e orientação em Araraquara e região</p><a href={phoneHref} className="mt-3 flex items-center gap-2 text-xs font-semibold text-secondary"><Phone className="size-3.5" aria-hidden="true" /> {phoneDisplay}</a><a href={emailHref} className="mt-2 flex items-center gap-2 break-all text-xs font-semibold text-secondary hover:underline"><Mail className="size-3.5 shrink-0" aria-hidden="true" /> {emailDisplay}</a></div><div className="flex flex-wrap gap-5 text-xs text-muted-foreground"><Link to="/" className="hover:text-foreground">Home</Link><Link to="/blog" className="hover:text-foreground">Blog</Link><Link to="/contato" className="hover:text-foreground">Contato</Link><a href={araraquaraFacebookHref} target="_blank" rel="noopener noreferrer" aria-label="Facebook da Central em Araraquara" className="inline-flex items-center gap-2 hover:text-secondary"><SocialIcon network="facebook" /> Facebook</a><a href={instagramHref} target="_blank" rel="noopener noreferrer" aria-label="Instagram da Central" className="inline-flex items-center gap-2 hover:text-secondary"><SocialIcon network="instagram" /> Instagram</a></div></div>
-          <p className="mt-7 max-w-3xl text-[11px] leading-relaxed text-muted-foreground/70">As informações desta página têm caráter orientativo. A indicação de qualquer modalidade de cuidado depende de avaliação individual e profissional.</p>
-        </div>
-      </footer>
+      
 
     </div>
   );

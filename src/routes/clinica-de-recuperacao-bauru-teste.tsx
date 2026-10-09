@@ -76,7 +76,7 @@ function BauruExperimentalPage() {
           </section>
         </div>
       </main>
-      <footer className="border-t border-border px-6 py-8 text-center text-sm text-muted-foreground">Central de Acolhimento e Reabilitação · Unidade física somente em Araraquara</footer>
+      
     </div>
   );
 }

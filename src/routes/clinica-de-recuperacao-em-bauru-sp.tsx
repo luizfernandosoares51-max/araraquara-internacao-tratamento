@@ -401,12 +401,7 @@ function OfficialBauruPage() {
         </section>
       </main>
 
-      <footer className="border-t border-deep/10 bg-foreground">
-        <div className="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-8 text-sm sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:px-12">
-          <div><p className="font-display font-bold">Central de Acolhimento e Reabilitação</p><p className="mt-1 text-xs text-deep/60">Unidade física em Araraquara/SP</p><a href={emailHref} className="mt-2 flex items-center gap-2 break-all text-xs font-semibold text-brand hover:underline"><Mail className="size-3.5 shrink-0" aria-hidden="true" /> {emailDisplay}</a></div>
-          <a href={phoneHref} className="inline-flex items-center gap-2 font-semibold text-brand"><Phone className="size-4" aria-hidden="true" /> Ligar agora · {phoneDisplay}</a>
-        </div>
-      </footer>
+      
 
     </div>
   );

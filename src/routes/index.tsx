@@ -645,40 +645,7 @@ function HomePage() {
           </section>
         </main>
 
-        <footer className="border-t border-border py-10">
-          <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p className="font-display font-semibold">Central de Acolhimento e Reabilitação</p>
-              <p className="mt-1 text-xs text-muted-foreground">Atendimento em diferentes regiões de São Paulo</p>
-              <a href={phoneHref} className="mt-3 inline-flex items-center gap-2 text-xs font-semibold text-secondary hover:underline">
-                <Phone className="size-3.5" aria-hidden="true" /> Ligar agora · {phoneDisplay}
-              </a>
-              <a href={emailHref} className="mt-2 flex items-center gap-2 break-all text-xs font-semibold text-secondary hover:underline">
-                <Mail className="size-3.5 shrink-0" aria-hidden="true" /> {emailDisplay}
-              </a>
-            </div>
-            <div className="flex flex-col gap-4 sm:items-end">
-              <nav aria-label="Navegação complementar" className="flex flex-wrap gap-x-5 gap-y-3 text-xs text-muted-foreground">
-                <a href="#acolhimento" className="hover:text-foreground">Acolhimento</a>
-                <a href="#tratamento" className="hover:text-foreground">Tratamento</a>
-                <a href="#internacao" className="hover:text-foreground">Internação</a>
-                <a href="#familia" className="hover:text-foreground">Família</a>
-                <a href="#perguntas" className="hover:text-foreground">Dúvidas</a>
-                <Link to="/cidades" className="hover:text-foreground">Cidades</Link>
-                <Link to="/blog" className="hover:text-foreground">Blog</Link>
-              </nav>
-              <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
-                <FacebookLink className="inline-flex items-center gap-2 text-xs font-medium text-muted-foreground transition-colors hover:text-secondary">
-                  <FacebookIcon className="size-4" /> Siga no Facebook
-                </FacebookLink>
-                <InstagramLink className="inline-flex items-center gap-2 text-xs font-medium text-muted-foreground transition-colors hover:text-secondary">
-                  <InstagramIcon className="size-4" /> Siga no Instagram
-                </InstagramLink>
-              </div>
-            </div>
-          </div>
-          <p className="mt-7 max-w-3xl text-[11px] leading-relaxed text-muted-foreground/70">As informações desta página têm caráter orientativo. A indicação de qualquer modalidade de cuidado depende de avaliação individual e profissional.</p>
-        </footer>
+        
       </div>
 
     </div>

@@ -33,7 +33,10 @@ import { Route as ClinicaDeRecuperacaoEmSaoCarlosSpRouteImport } from './routes/
 import { Route as ClinicaDeRecuperacaoEmTaquaritingaSpRouteImport } from './routes/clinica-de-recuperacao-em-taquaritinga-sp'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as FamiliaRouteImport } from './routes/familia'
+import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as TermosDeAcolhimentoRouteImport } from './routes/termos-de-acolhimento'
+import { Route as TransparenciaRouteImport } from './routes/transparencia'
 import { Route as TratamentoRouteImport } from './routes/tratamento'
 import { Route as VideosRouteImport } from './routes/videos'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
@@ -183,9 +186,24 @@ const FamiliaRoute = FamiliaRouteImport.update({
   path: '/familia',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
+  id: '/politica-de-privacidade',
+  path: '/politica-de-privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermosDeAcolhimentoRoute = TermosDeAcolhimentoRouteImport.update({
+  id: '/termos-de-acolhimento',
+  path: '/termos-de-acolhimento',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TransparenciaRoute = TransparenciaRouteImport.update({
+  id: '/transparencia',
+  path: '/transparencia',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TratamentoRoute = TratamentoRouteImport.update({
@@ -282,7 +300,10 @@ export interface FileRoutesByFullPath {
   '/clinica-de-recuperacao-em-taquaritinga-sp': typeof ClinicaDeRecuperacaoEmTaquaritingaSpRoute
   '/contato': typeof ContatoRoute
   '/familia': typeof FamiliaRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/termos-de-acolhimento': typeof TermosDeAcolhimentoRoute
+  '/transparencia': typeof TransparenciaRoute
   '/tratamento': typeof TratamentoRoute
   '/videos': typeof VideosRoute
   '/api/chat': typeof ApiChatRoute
@@ -320,7 +341,10 @@ export interface FileRoutesByTo {
   '/clinica-de-recuperacao-em-taquaritinga-sp': typeof ClinicaDeRecuperacaoEmTaquaritingaSpRoute
   '/contato': typeof ContatoRoute
   '/familia': typeof FamiliaRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/termos-de-acolhimento': typeof TermosDeAcolhimentoRoute
+  '/transparencia': typeof TransparenciaRoute
   '/tratamento': typeof TratamentoRoute
   '/videos': typeof VideosRoute
   '/api/chat': typeof ApiChatRoute
@@ -360,7 +384,10 @@ export interface FileRoutesById {
   '/clinica-de-recuperacao-em-taquaritinga-sp': typeof ClinicaDeRecuperacaoEmTaquaritingaSpRoute
   '/contato': typeof ContatoRoute
   '/familia': typeof FamiliaRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/termos-de-acolhimento': typeof TermosDeAcolhimentoRoute
+  '/transparencia': typeof TransparenciaRoute
   '/tratamento': typeof TratamentoRoute
   '/videos': typeof VideosRoute
   '/api/chat': typeof ApiChatRoute
@@ -401,7 +428,10 @@ export interface FileRouteTypes {
     | '/clinica-de-recuperacao-em-taquaritinga-sp'
     | '/contato'
     | '/familia'
+    | '/politica-de-privacidade'
     | '/sitemap.xml'
+    | '/termos-de-acolhimento'
+    | '/transparencia'
     | '/tratamento'
     | '/videos'
     | '/api/chat'
@@ -439,7 +469,10 @@ export interface FileRouteTypes {
     | '/clinica-de-recuperacao-em-taquaritinga-sp'
     | '/contato'
     | '/familia'
+    | '/politica-de-privacidade'
     | '/sitemap.xml'
+    | '/termos-de-acolhimento'
+    | '/transparencia'
     | '/tratamento'
     | '/videos'
     | '/api/chat'
@@ -478,7 +511,10 @@ export interface FileRouteTypes {
     | '/clinica-de-recuperacao-em-taquaritinga-sp'
     | '/contato'
     | '/familia'
+    | '/politica-de-privacidade'
     | '/sitemap.xml'
+    | '/termos-de-acolhimento'
+    | '/transparencia'
     | '/tratamento'
     | '/videos'
     | '/api/chat'
@@ -518,7 +554,10 @@ export interface RootRouteChildren {
   ClinicaDeRecuperacaoEmTaquaritingaSpRoute: typeof ClinicaDeRecuperacaoEmTaquaritingaSpRoute
   ContatoRoute: typeof ContatoRoute
   FamiliaRoute: typeof FamiliaRoute
+  PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  TermosDeAcolhimentoRoute: typeof TermosDeAcolhimentoRoute
+  TransparenciaRoute: typeof TransparenciaRoute
   TratamentoRoute: typeof TratamentoRoute
   VideosRoute: typeof VideosRoute
   ApiChatRoute: typeof ApiChatRoute
@@ -694,11 +733,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FamiliaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/politica-de-privacidade': {
+      id: '/politica-de-privacidade'
+      path: '/politica-de-privacidade'
+      fullPath: '/politica-de-privacidade'
+      preLoaderRoute: typeof PoliticaDePrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/termos-de-acolhimento': {
+      id: '/termos-de-acolhimento'
+      path: '/termos-de-acolhimento'
+      fullPath: '/termos-de-acolhimento'
+      preLoaderRoute: typeof TermosDeAcolhimentoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/transparencia': {
+      id: '/transparencia'
+      path: '/transparencia'
+      fullPath: '/transparencia'
+      preLoaderRoute: typeof TransparenciaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tratamento': {
@@ -853,7 +913,10 @@ const rootRouteChildren: RootRouteChildren = {
     ClinicaDeRecuperacaoEmTaquaritingaSpRoute,
   ContatoRoute: ContatoRoute,
   FamiliaRoute: FamiliaRoute,
+  PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  TermosDeAcolhimentoRoute: TermosDeAcolhimentoRoute,
+  TransparenciaRoute: TransparenciaRoute,
   TratamentoRoute: TratamentoRoute,
   VideosRoute: VideosRoute,
   ApiChatRoute: ApiChatRoute,

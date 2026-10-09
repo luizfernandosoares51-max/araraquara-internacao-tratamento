@@ -418,17 +418,7 @@ function RehabilitationClinicPage() {
         </section>
       </main>
 
-      <footer className="border-t border-border bg-deep px-5 py-8 text-foreground sm:px-8 lg:px-12">
-        <div className="mx-auto flex max-w-6xl flex-col gap-4 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <div><p>Central de Acolhimento e Reabilitação</p><a href={emailHref} className="mt-2 flex items-center gap-2 break-all font-semibold text-secondary hover:underline"><Mail className="size-3.5 shrink-0" aria-hidden="true" /> {emailDisplay}</a></div>
-          <nav aria-label="Navegação do rodapé" className="flex flex-wrap gap-5">
-            <Link to="/">Início</Link>
-            <Link to="/cidades">Cidades</Link>
-            <Link to="/blog">Blog</Link>
-            <Link to="/videos">Vídeos</Link>
-          </nav>
-        </div>
-      </footer>
+      
     </div>
   );
 }

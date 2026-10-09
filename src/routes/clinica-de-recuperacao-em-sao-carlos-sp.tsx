@@ -346,22 +346,7 @@ function SaoCarlosPage() {
         </section>
       </main>
 
-      <footer className="bg-deep pb-24 pt-10 text-foreground sm:pb-10">
-        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 sm:flex-row sm:items-end sm:justify-between sm:px-8 lg:px-12">
-          <div>
-            <p className="font-display font-semibold">Central de Acolhimento e Reabilitação</p>
-            <p className="mt-2 max-w-xl text-xs leading-relaxed text-muted-foreground">Orientação para pessoas e famílias de São Carlos. Esta página não apresenta a Central como unidade pública ou como instituição física localizada no município.</p>
-            <a href={emailHref} className="mt-2 flex items-center gap-2 break-all text-xs font-semibold text-secondary hover:underline"><Mail className="size-3.5 shrink-0" aria-hidden="true" /> {emailDisplay}</a>
-          </div>
-          <div className="flex flex-wrap gap-5 text-xs text-muted-foreground">
-            <Link to="/" className="hover:text-secondary">Página inicial</Link>
-            <Link to="/cidades" className="hover:text-secondary">Cidades</Link>
-            <Link to="/blog/dependencia-quimica-sao-carlos" className="hover:text-secondary">Artigo sobre São Carlos</Link>
-            <a href={saoCarlosFacebookHref} target="_blank" rel="noopener noreferrer" className="hover:text-secondary">Facebook</a>
-            <a href={instagramHref} target="_blank" rel="noopener noreferrer" className="hover:text-secondary">Instagram</a>
-          </div>
-        </div>
-      </footer>
+      
 
     </div>
   );
