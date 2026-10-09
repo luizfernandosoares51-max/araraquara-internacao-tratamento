@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Corrigir Empresa / Titular e Proprietário / Direção para Adelmo João Antunes, vincular CRP 06/130268 à psicóloga Margarete Vasques e preservar Luiz Fernando Soares e os selos verdes; validar celular e computador sem publicar.
+- [x] Corrigir Empresa / Titular e Proprietário / Direção para Adelmo João Antunes, vincular CRP 06/130268 à psicóloga Margarete Vasques e preservar Luiz Fernando Soares e os selos verdes; quinze testes e nove visitas em 1280/390/320 confirmam dados e separação dos contatos; sem publicação.
 - [x] Atualizar endereço oficial e coordenação na transparência, contato e rodapé; adicionar embed Google em origens Lovable autorizadas, botão oficial e LocalBusiness; nove visitas em 1280/390/320 e quatorze testes aprovados; sem publicação. Renderização Google não testada no ambiente do agente.
 - [ ] Habilitar mapa no domínio próprio e completar coordenadas — depende de chave Google própria autorizada para o domínio e coordenadas confirmadas; link oficial de acesso disponível enquanto isso.
 
