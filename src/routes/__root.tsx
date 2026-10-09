@@ -13,6 +13,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { AcolhimentoAssistant } from "../components/acolhimento-assistant";
 import { FloatingWhatsApp } from "../components/floating-whatsapp";
+import { InstitutionalFooter } from "../components/institutional-footer";
 import { Button } from "../components/ui/button";
 import { Phone } from "lucide-react";
 import { phoneDisplay, phoneHref } from "../lib/site";
@@ -134,6 +135,7 @@ function RootComponent() {
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <div className="public-page-content">
         <Outlet />
+        <InstitutionalFooter />
         <div className="floating-contact-spacer" aria-hidden="true" />
       </div>
       <div className="floating-contact-bar home-serene" role="region" aria-label="Contatos da Central">
