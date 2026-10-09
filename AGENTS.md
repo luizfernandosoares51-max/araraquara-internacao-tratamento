@@ -11,6 +11,7 @@
 
 - Keep each researched local city page in an explicit route backed by shared rendering and city-specific editorial data, so URLs stay stable without homogenizing content.
 - Render new editorial articles through the shared blog article shell while keeping route-specific copy and metadata in each route, so presentation stays consistent without homogenizing content.
+- Use opt-in illustrated section rendering for long-form articles without changing the existing article shell, so alternating editorial imagery stays isolated from other published articles.
 - Keep the global welcome assistant session-only, with its model, safety instructions, and credentials behind the server chat endpoint, so visitor conversations are never persisted or exposed.
 - Keep public-page imagery in the shared visual asset catalog and use conceptual AI imagery rather than documentary facility photos, so visual representation stays consistent and does not imply unverified facts.
 - Keep infrastructure diagnostic pages as standalone explicit routes excluded from the sitemap, so controlled delivery tests do not change existing city pages or discovery paths.
