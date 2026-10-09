@@ -55,6 +55,8 @@ class AssistantHomeNavigation(unittest.TestCase):
                     self.assertEqual(page.get_by_role('dialog').count(), 0)
                     self.assertEqual(posts, [])
                     self.assertNotEqual(page.evaluate('document.activeElement?.tagName'), 'TEXTAREA')
+                    page.goto(LOCAL, wait_until="networkidle")
+                    self.assertEqual(page.get_by_role("dialog").count(), 0)
                     page.screenshot(path=str(shots / f'{width}-after.png'))
                     print(f'{width}px: institutional Home loaded at exact destination, panel absent, no chat submission')
                     context.close()
