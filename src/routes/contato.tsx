@@ -6,6 +6,7 @@ import { institutionalHead, institutionalIdentity } from "@/lib/institutional";
 import { phoneDisplay, phoneHref, emailDisplay, emailHref, whatsappHref } from "@/lib/site";
 
 export const Route = createFileRoute("/contato")({
+  staticData: { sitemap: true },
   head: () => institutionalHead("/contato", "Contato e Orientações de Emergência", "Telefone, WhatsApp e e-mail da Central de Acolhimento, informação sobre localização em Araraquara e serviços públicos de emergência 24h."),
   component: ContactPage,
 });

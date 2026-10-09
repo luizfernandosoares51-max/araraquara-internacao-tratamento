@@ -4,6 +4,7 @@ import { institutionalHead, institutionalIdentity, legalSources } from "@/lib/in
 import { emailDisplay, emailHref } from "@/lib/site";
 
 export const Route = createFileRoute("/politica-de-privacidade")({
+  staticData: { sitemap: true },
   head: () => institutionalHead("/politica-de-privacidade", "Política de Privacidade e LGPD", "Informações sobre dados pessoais, assistente virtual, orientação à família, serviços externos e solicitações de privacidade na Central."),
   component: PrivacyPage,
 });

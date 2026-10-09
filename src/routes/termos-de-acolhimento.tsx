@@ -3,6 +3,7 @@ import { InstitutionalPage } from "@/components/institutional-page";
 import { institutionalHead } from "@/lib/institutional";
 
 export const Route = createFileRoute("/termos-de-acolhimento")({
+  staticData: { sitemap: true },
   head: () => institutionalHead("/termos-de-acolhimento", "Termos de Acolhimento e Atendimento", "Limites das orientações do site, avaliação profissional, direitos e esclarecimentos prévios ao acolhimento na Central."),
   component: TermsPage,
 });

@@ -4,6 +4,7 @@ import { institutionalHead, institutionalIdentity, legalSources } from "@/lib/in
 import { emailDisplay, emailHref } from "@/lib/site";
 
 export const Route = createFileRoute("/transparencia")({
+  staticData: { sitemap: true },
   head: () => institutionalHead("/transparencia", "Transparência e Responsabilidade Técnica", "Identificação institucional informada, situação das informações técnicas e sanitárias e referências legais da Central de Acolhimento."),
   component: TransparencyPage,
 });
