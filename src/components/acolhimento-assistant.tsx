@@ -2,7 +2,7 @@
 
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport, type UIMessage } from "ai";
-import { Bot, MessageCircle, Phone, ShieldCheck } from "lucide-react";
+import { Bot, House, MessageCircle, Phone, ShieldCheck } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import logoAsset from "@/assets/logo-central-optimized.webp.asset.json";
@@ -39,7 +39,7 @@ const welcomeMessage: UIMessage = {
   parts: [
     {
       type: "text",
-      text: "Olá! Sou o Assistente de Acolhimento da Central de Acolhimento e Reabilitação. Posso orientar você sobre dependência química, alcoolismo, tratamento, internação e os próximos passos para buscar ajuda. Como posso ajudar?",
+      text: "Olá! Sou o Assistente de Acolhimento da Central de Acolhimento e Reabilitação. Posso orientar você sobre dependência química, alcoolismo, tratamento, acolhimento e os próximos passos para buscar ajuda. Como posso ajudar?",
     },
   ],
 };
@@ -58,9 +58,12 @@ function textFromPart(part: UIMessage["parts"][number]) {
 
 export function AcolhimentoAssistant() {
   const [open, setOpen] = useState(false);
+  const [resetVersion, setResetVersion] = useState(0);
+  const [resetting, setResetting] = useState(false);
+  const resettingRef = useRef(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const transport = useMemo(() => new DefaultChatTransport({ api: "/api/chat" }), []);
-  const { messages, sendMessage, status, error, clearError, stop } = useChat({
+  const { messages, setMessages, sendMessage, status, error, clearError, stop } = useChat({
     id: "assistente-acolhimento",
     messages: [welcomeMessage],
     transport,
@@ -76,9 +79,25 @@ export function AcolhimentoAssistant() {
 
   const submitText = async (text: string) => {
     const value = text.trim();
-    if (!value || busy) return;
+    if (!value || busy || resettingRef.current) return;
     clearError();
     await sendMessage({ text: value });
+  };
+
+  const resetConversation = async () => {
+    if (resettingRef.current) return;
+    resettingRef.current = true;
+    setResetting(true);
+    try {
+      await stop();
+      clearError();
+      setMessages([welcomeMessage]);
+      setResetVersion((version) => version + 1);
+    } finally {
+      resettingRef.current = false;
+      setResetting(false);
+      requestAnimationFrame(() => textareaRef.current?.focus());
+    }
   };
 
   return (
@@ -94,7 +113,7 @@ export function AcolhimentoAssistant() {
       </DialogTrigger>
 
       <DialogContent className="home-serene inset-x-2 bottom-2 top-auto h-[min(44rem,calc(100dvh-1rem))] w-auto max-w-none translate-x-0 translate-y-0 gap-0 overflow-hidden rounded-lg border-border bg-background p-0 text-foreground shadow-2xl sm:left-auto sm:right-6 sm:bottom-6 sm:h-[min(44rem,calc(100dvh-3rem))] sm:w-[26rem] sm:max-w-[calc(100vw-3rem)]">
-        <header className="flex min-h-20 items-center gap-3 border-b border-border bg-card px-4 pr-12">
+        <header className="flex min-h-20 items-center gap-3 border-b border-border bg-card px-4 py-3 pr-12">
           <img
             src={logoAsset.url}
             alt="Central de Acolhimento e Reabilitação"
@@ -108,10 +127,20 @@ export function AcolhimentoAssistant() {
               <ShieldCheck className="size-3.5 shrink-0 text-accent" aria-hidden="true" />
               Orientação inicial, sem diagnóstico
             </DialogDescription>
+            <Button
+              type="button"
+              variant="ghost"
+              size="sm"
+              className="mt-1 min-h-11 gap-1.5 px-2 text-xs text-secondary"
+              onClick={() => void resetConversation()}
+              disabled={resetting}
+            >
+              <House className="size-3.5" aria-hidden="true" /> Voltar ao início
+            </Button>
           </div>
         </header>
 
-        <Conversation className="min-h-0 bg-background">
+        <Conversation key={`conversation-${resetVersion}`} className="min-h-0 bg-background">
           <ConversationContent className="gap-5 px-4 py-5">
             {messages.map((message) => (
               <Message from={message.role} key={message.id}>
@@ -184,6 +213,7 @@ export function AcolhimentoAssistant() {
 
         <div className="border-t border-border bg-card p-3">
           <PromptInput
+            key={`prompt-${resetVersion}`}
             onSubmit={async ({ text }) => submitText(text)}
             className="bg-background"
           >
