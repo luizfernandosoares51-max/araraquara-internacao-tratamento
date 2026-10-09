@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import image from "@/assets/blog-dependencia-sinais-consequencias.webp";
 import { createArticleHead } from "@/components/blog/article-head";
 import { ArticleShell } from "@/components/blog/article-shell";
@@ -12,12 +12,13 @@ export const Route = createFileRoute("/blog/dependencia-quimica-sinais-consequen
 });
 
 function Page() {
-  return <ArticleShell category="Dependência química" title={title} description={description} image={image}
+  return <ArticleShell category="Dependência Química" title={title} description={description} image={image}
     imageAlt="Pessoa em conversa de apoio com profissional e familiar em ambiente acolhedor"
     sections={[
       { title: "O que é dependência química", paragraphs: [
         "Dependência química é uma condição de saúde complexa. Ela pode envolver desejo intenso, dificuldade de controlar o uso, prioridade crescente dada à substância e manutenção do consumo apesar de consequências negativas.",
-        "A experiência varia conforme a substância, a frequência, a saúde física e emocional e o contexto de vida. Por isso, listas de sinais orientam a observação, mas não substituem avaliação profissional."
+        "A experiência varia conforme a substância, a frequência, a saúde física e emocional e o contexto de vida. Por isso, listas de sinais orientam a observação, mas não substituem avaliação profissional.",
+        "Este artigo aprofunda consequências, alternativas de cuidado e acompanhamento após a avaliação. Para perceber mudanças recentes e organizar a primeira conversa familiar, use a leitura introdutória indicada ao final."
       ]},
       { title: "Sinais que merecem atenção", items: [
         "usar mais ou por mais tempo do que pretendia;",
@@ -31,7 +32,7 @@ function Page() {
         "O impacto pode aparecer no sono, na alimentação, na saúde mental, nas finanças, no trabalho e nas relações. Familiares frequentemente alternam medo, raiva, culpa e tentativas de controlar a situação.",
         "A dependência não deve ser tratada como falta de caráter. Ao mesmo tempo, reconhecer a condição não significa ignorar danos ou retirar responsabilidades: cuidado e limites podem caminhar juntos."
       ]},
-      { title: "Caminhos possíveis para o tratamento", paragraphs: [
+      { title: "Caminhos possíveis para o tratamento", context: <p>Para compreender a jornada da avaliação à continuidade, leia <Link to="/blog/como-funciona-uma-clinica-de-reabilitacao" className="font-semibold text-secondary underline underline-offset-4">como funciona o processo de cuidado</Link>; aqui o foco são os impactos da dependência e os critérios que orientam as alternativas.</p>, paragraphs: [
         "O cuidado pode combinar acompanhamento médico, psicológico, terapêutico e social. Há alternativas ambulatoriais, grupos de apoio, serviços públicos e, quando indicado, acolhimento em ambiente estruturado.",
         "A escolha considera riscos clínicos, padrão de uso, presença de outras condições, apoio disponível e autonomia da pessoa. O plano deve ter objetivos claros, ser revisto periodicamente e preparar a continuidade do cuidado."
       ], subsections: [

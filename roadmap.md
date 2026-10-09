@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Organizar os oito artigos auditados por temas, diferenciar as intenções dos dois pares e melhorar cartões e links contextuais, preservando URLs e metadados válidos; validar Home, Blog, oito artigos e página institucional em desktop/celular, sem publicar. Histórico no Google depende de acesso à propriedade correta no Search Console.
+
 - [x] Auditar sobreposição e aprimorar o artigo existente `/blog/como-funciona-uma-clinica-de-reabilitacao`, com seis imagens WebP conceituais próprias, fontes oficiais e validação isolada — HTTP 200, HTML direto, H1 único, canonical, index/follow, BlogPosting/BreadcrumbList, links internos 200 e sitemap com uma entrada; imagens carregadas e alternância verificada em 1280/390/320. Artigo sobre escolha, índice do Blog e páginas não relacionadas preservados. Sem publicação; revisão clínica identificada não disponível.
 
 - [x] Unificar o WhatsApp flutuante global e preservar o assistente — 21 verificações em sete páginas, nas larguras 1280, 390 e 320; link oficial, foco por teclado, botão único, separação dos contatos e abertura/fechamento do assistente confirmados; títulos, metadados, canonical e H1 preservados. Sem publicação.

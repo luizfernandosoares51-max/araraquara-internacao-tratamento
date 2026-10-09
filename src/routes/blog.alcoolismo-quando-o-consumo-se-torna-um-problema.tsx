@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import image from "@/assets/blog-alcoolismo-consumo-problema.webp";
 import { createArticleHead } from "@/components/blog/article-head";
 import { ArticleShell } from "@/components/blog/article-shell";
@@ -35,7 +35,7 @@ function Page() {
         "Discussões, promessas quebradas, preocupação financeira e imprevisibilidade podem desgastar a confiança. Crianças e outros familiares também podem ser afetados pelo clima de tensão.",
         "Estabelecer limites de segurança não é abandonar a pessoa. A família pode deixar claro o que não aceita, evitar encobrir consequências e procurar orientação para conduzir conversas difíceis."
       ]},
-      { title: "Quando e como procurar ajuda", paragraphs: [
+      { title: "Quando e como procurar ajuda", context: <p>A <Link to="/clinica-de-reabilitacao" className="font-semibold text-secondary underline underline-offset-4">orientação institucional sobre modalidades de cuidado</Link> complementa a busca por avaliação. Os riscos relacionados ao álcool precisam ser considerados individualmente.</p>, paragraphs: [
         "Procure avaliação quando houver perda de controle, sintomas de abstinência, riscos, prejuízos persistentes ou tentativas frustradas de mudança. Em uma emergência, busque imediatamente o serviço de urgência local.",
         "O tratamento pode incluir cuidado médico, psicoterapia, intervenções familiares, grupos e outras estratégias. O acolhimento estruturado é uma possibilidade para alguns casos, não uma resposta automática para todos."
       ]},

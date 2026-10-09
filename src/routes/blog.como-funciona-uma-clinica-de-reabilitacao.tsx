@@ -65,7 +65,7 @@ const sections: IllustratedSection[] = [
     "Construir uma rotina pode ajudar a organizar sono, alimentação, autocuidado e compromissos. Quando houver atividades individuais ou coletivas, pergunte sobre sua finalidade, quem as acompanha e como são adaptadas às condições de cada pessoa.",
     "Convivência, descanso e atividades significativas não devem ser confundidos com apenas ocupar o tempo. Regras precisam preservar segurança e respeito. Humilhação, violência, exploração e isolamento indevido não se tornam aceitáveis por estarem apresentados como disciplina.",
   ]},
-  { title: "Como escolher uma clínica de reabilitação com responsabilidade?", paragraphs: [
+  { title: "Como escolher uma clínica de reabilitação com responsabilidade?", context: <p>Esta seção resume cuidados que ajudam a compreender a jornada. Para comparar opções durante uma visita, use as <Link to="/blog/como-escolher-uma-clinica-de-reabilitacao" className="font-semibold text-secondary underline underline-offset-4">perguntas práticas de escolha de uma instituição</Link>; para modalidades e finalidades, consulte a <Link to="/clinica-de-reabilitacao" className="font-semibold text-secondary underline underline-offset-4">orientação institucional sobre clínica de reabilitação</Link>.</p>, paragraphs: [
     "Compare informações verificáveis antes de decidir. Uma instituição responsável esclarece sua proposta e suas limitações, não promete cura e informa quando outro recurso de saúde é mais apropriado. Visitar o local, quando possível, ajuda a confrontar a apresentação com as condições observadas.",
   ], items: [
     "Regularidade: solicite identificação da instituição e documentos de funcionamento e licenças aplicáveis à modalidade. Confirme vigência e correspondência com o endereço junto aos órgãos competentes; um documento isolado não garante a qualidade do cuidado.",
@@ -106,7 +106,7 @@ function RehabilitationArticle() {
     <article className="mx-auto max-w-6xl px-5 py-10 sm:px-8 sm:py-14">
       <ArticleBreadcrumb title="Como funciona o tratamento" />
       <header className="mt-9">
-        <p className="font-display text-xs font-semibold uppercase text-secondary">Tratamento e acolhimento</p>
+        <p className="font-display text-xs font-semibold uppercase text-secondary">Clínica de Reabilitação e Tratamento</p>
         <h1 className="mt-4 max-w-4xl font-display text-3xl font-bold leading-tight sm:text-5xl">{title}</h1>
         <p className="mt-6 max-w-3xl text-lg leading-8 text-muted-foreground">{description}</p>
         <p className="mt-4 text-sm leading-6 text-muted-foreground">Central de Acolhimento e Reabilitação · Publicado em 2 de outubro de 2026 · Atualizado em 9 de outubro de 2026</p>

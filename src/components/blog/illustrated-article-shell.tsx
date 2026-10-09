@@ -16,6 +16,7 @@ export function IllustratedSections({ sections }: { sections: IllustratedSection
         <h2 className="font-display text-2xl font-bold leading-tight text-foreground sm:text-3xl">{section.title}</h2>
         <div className={section.image ? "mt-6 grid items-start gap-7 lg:grid-cols-2 lg:gap-10" : "mt-5 max-w-3xl space-y-4"}>
           <div className={reversed ? "space-y-4 lg:order-2" : "space-y-4"}>
+            {section.context}
             {section.paragraphs?.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
             {section.items && <ul className="list-disc space-y-3 pl-5 marker:text-secondary">{section.items.map((item) => <li key={item}>{item}</li>)}</ul>}
             {section.subsections?.map((subsection) => <div key={subsection.title} className="space-y-3 pt-3">

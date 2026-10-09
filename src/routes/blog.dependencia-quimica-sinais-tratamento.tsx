@@ -106,6 +106,11 @@ function ArticlePage() {
             os primeiros passos. Reconhecer sinais, conversar sem acusações e buscar informação pode
             ajudar a decidir quando pedir orientação.
           </p>
+          <p>
+            O foco aqui é o primeiro pedido de ajuda, não a comparação de modalidades de cuidado.
+            Para aprofundar impactos e alternativas após a avaliação, leia sobre{" "}
+            <Link to="/blog/dependencia-quimica-sinais-consequencias-tratamento" className="font-semibold text-secondary underline underline-offset-4">consequências da dependência e caminhos de tratamento</Link>.
+          </p>
 
           <h2 className="pt-4 font-display text-2xl font-bold leading-tight text-foreground">
             O que é dependência química?

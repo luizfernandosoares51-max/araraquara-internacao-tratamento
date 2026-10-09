@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import image from "@/assets/blog-como-saber-clinica-reabilitacao.webp";
 import { createArticleHead } from "@/components/blog/article-head";
 import { ArticleShell } from "@/components/blog/article-shell";
@@ -14,7 +14,7 @@ export const Route = createFileRoute("/blog/como-saber-se-uma-pessoa-precisa-de-
 });
 
 function Page() {
-  return <ArticleShell category="Família e busca de ajuda" title={title} description={description} image={image}
+  return <ArticleShell category="Família e Acolhimento" title={title} description={description} image={image}
     imageAlt="Família reunida em conversa acolhedora sobre a busca de ajuda"
     sections={[
       { title: "Não existe um único sinal que defina a necessidade de acolhimento", paragraphs: [
@@ -36,7 +36,7 @@ function Page() {
         "Não é necessário esperar uma crise grave. A família pode procurar orientação quando não sabe como conversar, quando os conflitos se repetem ou quando o uso afeta saúde e segurança. Se houver risco imediato, alteração intensa de consciência, convulsão, ameaça de violência ou ideação suicida, procure o serviço de urgência da sua região.",
         "Uma avaliação individualizada considera condições clínicas, saúde mental, rede de apoio e contexto social. Ela ajuda a comparar opções de tratamento e a compreender se o acolhimento é indicado naquele momento."
       ]},
-      { title: "A participação da família", paragraphs: [
+      { title: "A participação da família", context: <p>Quando a dúvida é por onde começar a conversa, consulte <Link to="/blog/dependencia-quimica-sinais-tratamento" className="font-semibold text-secondary underline underline-offset-4">primeiros sinais e organização da busca de orientação</Link>. Reconhecer prejuízos não equivale a indicar acolhimento residencial por conta própria.</p>, paragraphs: [
         "Familiares podem organizar informações sobre a rotina, estabelecer limites coerentes e buscar apoio para si. Isso não significa vigiar todos os passos nem assumir a responsabilidade pela recuperação da outra pessoa.",
         "Conhecer como funciona uma clínica, quais alternativas existem e como ocorre a orientação familiar permite decisões mais conscientes. O plano de cuidado pode mudar ao longo do tempo conforme a resposta e as necessidades da pessoa."
       ]},

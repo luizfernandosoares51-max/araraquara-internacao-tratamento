@@ -195,6 +195,12 @@ function AraraquaraArticlePage() {
             química em Araraquara, tratamento, acolhimento, serviços públicos e cuidados que devem ser
             observados antes de escolher uma instituição.
           </p>
+          <p>
+            Para complementar os recursos locais, veja as{" "}
+            <Link to="/blog/como-escolher-uma-clinica-de-reabilitacao" className="font-semibold text-secondary underline underline-offset-4">perguntas práticas para comparar instituições</Link>{" "}
+            e a explicação sobre{" "}
+            <Link to="/blog/dependencia-quimica-sinais-consequencias-tratamento" className="font-semibold text-secondary underline underline-offset-4">consequências da dependência e modalidades de cuidado</Link>.
+          </p>
 
           <h2 className="pt-4 font-display text-2xl font-bold leading-tight text-foreground">
             O que é dependência química?
