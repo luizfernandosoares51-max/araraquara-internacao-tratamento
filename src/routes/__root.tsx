@@ -138,7 +138,7 @@ function RootComponent() {
       </div>
       <div className="floating-contact-bar home-serene" role="region" aria-label="Contatos da Central">
         <AcolhimentoAssistant />
-        <Button asChild size="icon" variant="outline" className="mobile-contact-call size-12 shrink-0 rounded-full">
+        <Button asChild size="icon" variant="outline" className="mobile-contact-call size-12 shrink-0 rounded-full text-foreground">
           <a href={phoneHref} aria-label={`Ligar para a Central: ${phoneDisplay}`} title="Ligar para a Central">
             <Phone className="size-5" aria-hidden="true" />
           </a>
