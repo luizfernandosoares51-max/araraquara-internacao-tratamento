@@ -93,8 +93,8 @@ export function AcolhimentoAssistant() {
         </Button>
       </DialogTrigger>
 
-      <DialogContent className="home-serene inset-x-2 bottom-2 top-auto h-[min(44rem,calc(100dvh-1rem))] w-auto max-w-none translate-x-0 translate-y-0 gap-0 overflow-hidden rounded-lg border-border bg-background p-0 text-foreground shadow-2xl sm:left-auto sm:right-6 sm:bottom-6 sm:h-[min(44rem,calc(100dvh-3rem))] sm:w-[26rem] sm:max-w-[calc(100vw-3rem)]">
-        <header className="flex min-h-20 items-center gap-3 border-b border-border bg-card px-4 py-3 pr-12">
+      <DialogContent className="home-serene inset-x-2 bottom-2 top-auto h-[min(44rem,calc(100dvh-1rem))] w-auto max-w-none translate-x-0 translate-y-0 grid-rows-[auto_minmax(0,1fr)_auto] gap-0 overflow-hidden rounded-lg border-border bg-background p-0 text-foreground shadow-2xl [&>button:last-child]:right-1 [&>button:last-child]:top-1 [&>button:last-child]:grid [&>button:last-child]:size-12 [&>button:last-child]:place-items-center sm:left-auto sm:right-6 sm:bottom-6 sm:h-[min(44rem,calc(100dvh-3rem))] sm:w-[26rem] sm:max-w-[calc(100vw-3rem)]">
+        <header className="grid min-h-20 grid-cols-[auto_minmax(0,1fr)] items-center gap-3 border-b border-border bg-card px-4 py-3 pr-14">
           <img
             src={logoAsset.url}
             alt="Central de Acolhimento e Reabilitação"
@@ -112,7 +112,7 @@ export function AcolhimentoAssistant() {
               asChild
               variant="ghost"
               size="sm"
-              className="mt-1 min-h-11 gap-1.5 px-2 text-xs text-secondary"
+              className="mt-1 min-h-12 gap-1.5 px-2 text-xs text-secondary"
             >
               <a
                 href="https://centraldeacolhimentoereabilitacao.com/"
@@ -179,7 +179,7 @@ export function AcolhimentoAssistant() {
                     key={suggestion}
                     type="button"
                     variant="outline"
-                    className="h-auto justify-start whitespace-normal px-3 py-2.5 text-left text-xs leading-snug"
+                    className="h-auto min-h-12 justify-start whitespace-normal px-3 py-2.5 text-left text-xs leading-snug"
                     onClick={() => void submitText(suggestion)}
                     disabled={busy}
                   >
@@ -214,6 +214,7 @@ export function AcolhimentoAssistant() {
             />
             <PromptInputFooter className="justify-end">
               <PromptInputSubmit
+                className="size-12"
                 status={status}
                 onStop={() => void stop()}
                 aria-label={busy ? "Interromper resposta" : "Enviar mensagem"}
@@ -222,12 +223,12 @@ export function AcolhimentoAssistant() {
           </PromptInput>
 
           <div className="mt-3 grid grid-cols-2 gap-2">
-            <Button asChild size="sm" className="bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90">
+            <Button asChild size="sm" className="min-h-12 min-w-0 bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90">
               <a href={whatsappHref} target="_blank" rel="noreferrer">
                 <MessageCircle aria-hidden="true" /> WhatsApp
               </a>
             </Button>
-            <Button asChild size="sm" variant="outline">
+            <Button asChild size="sm" variant="outline" className="min-h-12 min-w-0">
               <a href={phoneHref} aria-label={`Ligar agora para ${phoneDisplay}`}>
                 <Phone aria-hidden="true" /> Ligar agora
               </a>

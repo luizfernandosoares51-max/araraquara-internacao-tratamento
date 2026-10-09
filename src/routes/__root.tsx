@@ -13,6 +13,9 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { AcolhimentoAssistant } from "../components/acolhimento-assistant";
 import { FloatingWhatsApp } from "../components/floating-whatsapp";
+import { Button } from "../components/ui/button";
+import { Phone } from "lucide-react";
+import { phoneDisplay, phoneHref } from "../lib/site";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
@@ -129,10 +132,19 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
-      <div className="floating-contact-spacer" aria-hidden="true" />
-      <FloatingWhatsApp />
-      <AcolhimentoAssistant />
+      <div className="public-page-content">
+        <Outlet />
+        <div className="floating-contact-spacer" aria-hidden="true" />
+      </div>
+      <div className="floating-contact-bar home-serene" role="region" aria-label="Contatos da Central">
+        <AcolhimentoAssistant />
+        <Button asChild size="icon" variant="outline" className="mobile-contact-call size-12 shrink-0 rounded-full">
+          <a href={phoneHref} aria-label={`Ligar para a Central: ${phoneDisplay}`} title="Ligar para a Central">
+            <Phone className="size-5" aria-hidden="true" />
+          </a>
+        </Button>
+        <FloatingWhatsApp />
+      </div>
     </QueryClientProvider>
   );
 }
