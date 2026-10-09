@@ -1,6 +1,7 @@
-import { expect, test } from "bun:test";
+import assert from "node:assert/strict";
+import { test } from "node:test";
 import { whatsappNumber } from "./site";
 
 test("institutional floating contact opens the official WhatsApp number", () => {
-  expect(`https://wa.me/${whatsappNumber}`).toBe("https://wa.me/5516997654579");
+  assert.equal(`https://wa.me/${whatsappNumber}`, "https://wa.me/5516997654579");
 });
