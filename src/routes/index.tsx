@@ -6,6 +6,7 @@ import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import articleSignsImage from "@/assets/blog-dependencia-quimica-sinais.jpg";
 import articleCityImage from "@/assets/blog-dependencia-quimica-sao-carlos.jpg";
 import { AraraquaraPhotoGallery, araraquaraPhotos } from "@/components/araraquara-photo-gallery";
+import { FamilyOrientationGuide } from "@/components/family-orientation-guide";
 import { cityDirectory } from "@/lib/city-pages";
 import {
   emailDisplay,
@@ -373,6 +374,8 @@ function HomePage() {
               ))}
             </div>
           </section>
+
+          <FamilyOrientationGuide />
 
           <section id="acolhimento" className="border-t border-border bg-muted/45 py-16 -mx-5 px-5 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 lg:py-28">
             <div className="grid items-center gap-10 lg:grid-cols-[.9fr_1.1fr] lg:gap-20">

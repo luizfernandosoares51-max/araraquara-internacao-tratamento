@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Implementar o Guia de Orientação à Família isolado na Home — 12 ramificações, dois caminhos de emergência, 15 municípios, voltar/reiniciar, 23 links internos HTTP 200, WhatsApp único, seis testes automatizados, teclado/foco e exibição em 1280/390/320 verificados; escolhas sem envio externo e descartadas ao recarregar, metadados/H1/schema da Home idênticos ao registro anterior, build OK. Referências públicas não confirmam disponibilidade em tempo real; sem publicação.
+
 - [x] Corrigir exclusivamente a nitidez da logo na abertura da Home — referência da imagem no cabeçalho trocada da versão 71 × 128 pelo original existente 768 × 1376, sem novos arquivos de imagem; validada em 1280/390/320 com alta densidade e rede limitada, HTTP 200, proporções e metadados preservados. Não existe splash personalizado; sem publicação.
 
 - [x] Organizar os oito artigos auditados em quatro temas preenchidos, diferenciar as intenções dos dois pares e melhorar cartões e links contextuais — 11 URLs HTTP 200, 22 visitas em 1280/390 sem overflow, imagens visíveis carregadas, H1 único, oito titles/descriptions/canonicals preservados, navegação temática e de artigo confirmada; sitemap e robots idênticos, contato oficial testado. Sem publicação; histórico no Google não verificado por falta de acesso à propriedade correta no Search Console.

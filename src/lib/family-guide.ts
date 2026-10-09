@@ -1,0 +1,45 @@
+export type GuidePath = "self" | "family" | "welcome" | "substances" | "gambling" | "public";
+export type SafetyAnswer = "no" | "yes" | "unsure";
+export type GuideLink = { title: string; to: "/familia" | "/acolhimento" | "/clinica-de-reabilitacao" | "/blog/alcoolismo-quando-o-consumo-se-torna-um-problema" | "/blog/dependencia-quimica-sinais-consequencias-tratamento" | "/blog/como-escolher-uma-clinica-de-reabilitacao" };
+type GuideChoice = { id: string; label: string; title: string; steps: readonly string[]; links: readonly GuideLink[] };
+export type GuideJourney = { id: GuidePath; label: string; question: string; summary: string; choices: readonly GuideChoice[] };
+
+const familyLink: GuideLink = { title: "Orientação para a família", to: "/familia" };
+const clinicLink: GuideLink = { title: "Entenda as possibilidades de cuidado", to: "/clinica-de-reabilitacao" };
+const welcomeLink: GuideLink = { title: "Como funciona o acolhimento", to: "/acolhimento" };
+
+export const guideJourneys: readonly GuideJourney[] = [
+  { id: "self", label: "Estou procurando ajuda para mim.", question: "O que você gostaria de fazer primeiro?", summary: "Você pode começar por uma conversa reservada com um profissional e participar das decisões sobre seu cuidado.", choices: [
+    { id: "talk", label: "Conversar com alguém", title: "Um primeiro pedido de ajuda", steps: ["Escolha alguém de confiança e diga que gostaria de apoio, sem precisar contar tudo de uma vez.", "Procure a UBS do seu município para conversar sobre sua saúde e as opções de acompanhamento.", "Anote suas dúvidas para uma avaliação profissional. Você não precisa decidir sobre internação neste guia."], links: [clinicLink] },
+    { id: "care", label: "Conhecer caminhos de cuidado", title: "Cuidado construído com você", steps: ["Uma avaliação profissional considera suas necessidades e ajuda a discutir caminhos de cuidado.", "Acompanhamento na rede pública, apoio familiar e outras modalidades podem ser considerados individualmente.", "Para saber sobre a proposta da Central, converse com a equipe; a única unidade física fica em Araraquara."], links: [clinicLink, welcomeLink] },
+  ] },
+  { id: "family", label: "Estou preocupado com um familiar.", question: "Qual dúvida você quer esclarecer agora?", summary: "Escuta, respeito e limites ajudam a família a oferecer apoio sem assumir o papel de profissional de saúde.", choices: [
+    { id: "conversation", label: "Como iniciar uma conversa", title: "Converse sem acusações", steps: ["Escolha um momento tranquilo, sem intoxicação aparente e em que todos estejam seguros.", "Descreva fatos observados e sua preocupação: ‘Estou preocupado e gostaria de ouvir você’. Evite rótulos, ameaças e confrontos.", "Ofereça acompanhar a pessoa em uma avaliação, respeitando sua participação e sem decidir uma internação por conta própria."], links: [familyLink] },
+    { id: "limits", label: "Como apoiar e estabelecer limites", title: "Apoio também precisa de limites", steps: ["Combine limites claros sobre o que você consegue oferecer, sem humilhação ou punição.", "Cuide da sua própria saúde e procure apoio profissional quando necessário.", "Se a pessoa não quiser conversar, evite confrontos e procure orientação para compreender alternativas e direitos."], links: [familyLink, clinicLink] },
+  ] },
+  { id: "welcome", label: "Quero entender como funciona o acolhimento.", question: "Sobre qual etapa você quer saber?", summary: "Acolhimento começa com escuta e informação; condições e indicação dependem de avaliação individual.", choices: [
+    { id: "start", label: "Primeiro contato e avaliação", title: "Informação antes de qualquer decisão", steps: ["Reúna as perguntas que deseja esclarecer sobre a proposta de cuidado.", "Pergunte como ocorre a avaliação, quais condições se aplicam e como a pessoa participa das decisões.", "Confirme diretamente valores, documentação e disponibilidade. O guia não confirma vagas nem indica internação."], links: [welcomeLink, clinicLink] },
+    { id: "compare", label: "O que perguntar à instituição", title: "Compare com segurança", steps: ["Pergunte sobre documentação, responsáveis, proposta de cuidado e procedimentos de segurança.", "Solicite explicações claras sobre rotina, contato com a família, valores e contrato antes de decidir.", "Desconfie de garantias de cura ou de resultados. A Central possui unidade física apenas em Araraquara."], links: [{ title: "Critérios para escolher uma instituição", to: "/blog/como-escolher-uma-clinica-de-reabilitacao" }, welcomeLink] },
+  ] },
+  { id: "substances", label: "Preciso de informações sobre álcool ou outras drogas.", question: "Qual assunto você deseja compreender?", summary: "Informações educativas ajudam a organizar dúvidas, mas não permitem diagnosticar alguém ou definir uma modalidade de tratamento.", choices: [
+    { id: "alcohol", label: "Consumo de álcool", title: "Quando o álcool traz preocupações", steps: ["Observe impactos na saúde, nos compromissos e nas relações sem tentar fechar um diagnóstico.", "Procure avaliação profissional para conversar sobre consumo e cuidado. Interromper álcool após uso frequente e intenso pode exigir acompanhamento médico.", "Convulsão, confusão intensa ou perda de consciência exigem atendimento de emergência, não orientação por este guia."], links: [{ title: "Informações sobre álcool e busca de avaliação", to: "/blog/alcoolismo-quando-o-consumo-se-torna-um-problema" }] },
+    { id: "drugs", label: "Outras drogas e possibilidades de cuidado", title: "Compreenda antes de decidir", steps: ["Mudanças na rotina e prejuízos podem motivar uma conversa, mas não confirmam um diagnóstico.", "UBS e serviços de saúde mental podem orientar a avaliação e os caminhos de cuidado pertinentes.", "Não altere medicamentos nem tente conduzir desintoxicação por conta própria; procure orientação profissional."], links: [{ title: "Dependência química e caminhos de tratamento", to: "/blog/dependencia-quimica-sinais-consequencias-tratamento" }, clinicLink] },
+  ] },
+  { id: "gambling", label: "Preciso de orientação sobre apostas e compulsão.", question: "Por onde você prefere começar?", summary: "Dificuldade de controlar apostas merece escuta e avaliação. Este guia não diagnostica compulsão nem confirma tratamento para apostas na Central.", choices: [
+    { id: "control", label: "Buscar apoio para mim", title: "Crie espaço para pedir apoio", steps: ["Considere uma pausa e reduza exposição a aplicativos, publicidade e situações que incentivem apostar.", "Não tente recuperar perdas com novas apostas. Converse com alguém de confiança sobre apoio e limites financeiros.", "Procure a UBS para uma avaliação e orientação sobre a rede de saúde mental; estratégias de cuidado devem ser discutidas com um profissional."], links: [familyLink] },
+    { id: "support", label: "Apoiar alguém que está apostando", title: "Apoie sem ampliar os prejuízos", steps: ["Converse sobre fatos e preocupações em um momento tranquilo, sem rótulos ou julgamento.", "Estabeleça limites sobre empréstimos e acesso aos seus recursos; não prometa quitar dívidas nem use novas apostas como solução.", "Ofereça apoio para procurar avaliação na UBS e cuide também da saúde da família. Não há confirmação de serviço específico para apostas na Central."], links: [familyLink] },
+  ] },
+  { id: "public", label: "Quero encontrar serviços públicos de saúde mental.", question: "Que informação você procura?", summary: "A UBS é uma porta de entrada para conversar sobre saúde. CAPS e CAPS AD integram a rede de atenção psicossocial conforme a organização local.", choices: [
+    { id: "network", label: "Entender UBS, CAPS e CAPS AD", title: "Conheça a rede pública", steps: ["A UBS oferece cuidado na atenção primária e pode orientar sobre recursos locais de saúde mental.", "CAPS oferece atenção psicossocial; CAPS AD é voltado a necessidades relacionadas ao álcool e outras drogas. A oferta varia por município.", "Consulte a referência oficial do município para confirmar como procurar o serviço, sem presumir vagas, horários ou disponibilidade."], links: [clinicLink] },
+    { id: "local", label: "Consultar referências do meu município", title: "Informação local em fonte oficial", steps: ["Selecione abaixo um município com conteúdo já publicado no site.", "Consulte a fonte pública indicada e confirme os detalhes com a rede municipal de saúde.", "Para outros municípios, procure o portal oficial da prefeitura ou a Secretaria Municipal de Saúde. As páginas da Central não representam filiais nem parcerias com o SUS."], links: [] },
+  ] },
+];
+
+export function needsEmergency(answer: SafetyAnswer) { return answer !== "no"; }
+export function getGuideResult(path: GuidePath, choiceId: string) {
+  return guideJourneys.find((journey) => journey.id === path)?.choices.find((choice) => choice.id === choiceId);
+}
+export function cityGuideHref(slug: string) {
+  return slug === "araraquara" ? "/clinica-de-recuperacao-em-araraquara" : `/clinica-de-recuperacao-em-${slug}`;
+}
+export const emergencyPhoneHref = "tel:192";
