@@ -58,12 +58,9 @@ function textFromPart(part: UIMessage["parts"][number]) {
 
 export function AcolhimentoAssistant() {
   const [open, setOpen] = useState(false);
-  const [resetVersion, setResetVersion] = useState(0);
-  const [resetting, setResetting] = useState(false);
-  const resettingRef = useRef(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const transport = useMemo(() => new DefaultChatTransport({ api: "/api/chat" }), []);
-  const { messages, setMessages, sendMessage, status, error, clearError, stop } = useChat({
+  const { messages, sendMessage, status, error, clearError, stop } = useChat({
     id: "assistente-acolhimento",
     messages: [welcomeMessage],
     transport,
@@ -79,25 +76,9 @@ export function AcolhimentoAssistant() {
 
   const submitText = async (text: string) => {
     const value = text.trim();
-    if (!value || busy || resettingRef.current) return;
+    if (!value || busy) return;
     clearError();
     await sendMessage({ text: value });
-  };
-
-  const resetConversation = async () => {
-    if (resettingRef.current) return;
-    resettingRef.current = true;
-    setResetting(true);
-    try {
-      await stop();
-      clearError();
-      setMessages([welcomeMessage]);
-      setResetVersion((version) => version + 1);
-    } finally {
-      resettingRef.current = false;
-      setResetting(false);
-      requestAnimationFrame(() => textareaRef.current?.focus());
-    }
   };
 
   return (
@@ -128,19 +109,25 @@ export function AcolhimentoAssistant() {
               Orientação inicial, sem diagnóstico
             </DialogDescription>
             <Button
-              type="button"
+              asChild
               variant="ghost"
               size="sm"
               className="mt-1 min-h-11 gap-1.5 px-2 text-xs text-secondary"
-              onClick={() => void resetConversation()}
-              disabled={resetting}
             >
-              <House className="size-3.5" aria-hidden="true" /> Voltar ao início
+              <a
+                href="https://centraldeacolhimentoereabilitacao.com/"
+                onClick={(event) => {
+                  event.stopPropagation();
+                  setOpen(false);
+                }}
+              >
+                <House className="size-3.5" aria-hidden="true" /> Voltar ao início
+              </a>
             </Button>
           </div>
         </header>
 
-        <Conversation key={`conversation-${resetVersion}`} className="min-h-0 bg-background">
+        <Conversation className="min-h-0 bg-background">
           <ConversationContent className="gap-5 px-4 py-5">
             {messages.map((message) => (
               <Message from={message.role} key={message.id}>
@@ -213,7 +200,6 @@ export function AcolhimentoAssistant() {
 
         <div className="border-t border-border bg-card p-3">
           <PromptInput
-            key={`prompt-${resetVersion}`}
             onSubmit={async ({ text }) => submitText(text)}
             className="bg-background"
           >
