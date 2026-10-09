@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Atualizar endereço oficial e coordenação na transparência, contato e rodapé; adicionar mapa Google, link de acesso e dados locais estruturados sem inventar coordenadas; validar apresentação, sem publicação.
+
 - [x] Atualizar responsáveis técnicos e declaração sanitária no rodapé e transparência com ícones verdes; onze testes aprovados e doze visitas em 1280/390/320 confirmam nomes, CRP, navegação e rodapé separado dos contatos; sem publicação.
 
 - [x] Criar rodapé global único, transparência, privacidade/LGPD, termos e página de contato com microdados e emergências públicas; 32 páginas HTTP 200, navegação e exibição em 1280/390/320 verificadas, nove testes aprovados; sem publicação.
