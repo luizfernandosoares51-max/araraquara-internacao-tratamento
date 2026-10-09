@@ -5,11 +5,10 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import progressaoVideo from "@/assets/progressao-do-colapso.mp4.asset.json";
 import { siteUrl } from "@/lib/site";
-import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
 
-const pageTitle = "Vídeos – Central de Acolhimento e Reabilitação";
+const pageTitle = "Vídeos sobre Dependência Química, Alcoolismo e Recuperação | Central";
 const pageDescription =
-  "Vídeo sobre a progressão de comportamentos ligados à dependência química, prevenção, compulsão, tratamento e acolhimento.";
+  "Assista a Progressão do Colapso, conteúdo educativo da Central sobre dependência química, alcoolismo, prevenção e a importância de buscar acolhimento e tratamento.";
 
 const videoSource = progressaoVideo.url;
 
@@ -99,16 +98,14 @@ function VideosPage() {
           Vídeos
         </p>
         <h1 className="mt-3 font-display text-3xl font-bold leading-tight sm:text-4xl">
-          Vídeos – Central de Acolhimento e Reabilitação
+          Vídeos sobre Dependência Química, Alcoolismo e Recuperação
         </h1>
         <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground">
-          Esta página receberá conteúdos do canal da Central sobre acolhimento, tratamento e
-          dependência química.
+          Assista ao conteúdo da Central de Acolhimento e Reabilitação sobre dependência química,
+          alcoolismo e prevenção. Em “Progressão do Colapso”, conheça uma narrativa sobre mudanças
+          de comportamento e a importância de buscar ajuda, acolhimento e tratamento, com informações
+          para orientar a família na procura por atendimento responsável.
         </p>
-        <figure className="mt-8 overflow-hidden rounded-lg border border-border bg-glass shadow-xl shadow-background/20">
-          <img src={visualAssets.videos.src} alt={visualAssets.videos.alt} width={1600} height={1067} fetchPriority="high" decoding="async" className="aspect-[16/8] w-full object-cover" />
-          <figcaption className="border-t border-border px-5 py-3 text-xs leading-relaxed text-muted-foreground">{conceptualImageCaption}</figcaption>
-        </figure>
 
         <section aria-labelledby="progressao-title" className="mt-12 border-t border-border pt-10">
           <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">
