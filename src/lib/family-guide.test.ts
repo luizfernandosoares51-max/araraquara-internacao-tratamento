@@ -23,7 +23,7 @@ test("general orientation proceeds only when immediate risk is denied", () => {
 });
 test("municipality references cover existing local routes and preserve Araraquara without suffix", () => {
   assert.equal(cityGuideHref("araraquara"), "/clinica-de-recuperacao-em-araraquara");
-  assert.ok(municipalGuideSources.araraquara);
+  assert.ok(municipalGuideSources["araraquara"]);
   for (const city of cityDirectory) {
     assert.equal(cityGuideHref(city.slug), `/clinica-de-recuperacao-em-${city.slug}`);
     assert.ok(municipalGuideSources[city.slug]);
