@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import image from "@/assets/blog-como-escolher-clinica.webp";
 import { createArticleHead } from "@/components/blog/article-head";
 import { ArticleShell } from "@/components/blog/article-shell";
@@ -12,10 +12,10 @@ export const Route = createFileRoute("/blog/como-escolher-uma-clinica-de-reabili
 });
 
 function Page() {
-  return <ArticleShell category="Decisão da família" title={title} description={description} image={image}
+  return <ArticleShell category="Clínica de Reabilitação e Tratamento" title={title} description={description} image={image}
     imageAlt="Família anota informações durante conversa com uma profissional"
     sections={[
-      { title: "Comece pela necessidade da pessoa, não pela promessa da instituição", paragraphs: [
+      { title: "Comece pela necessidade da pessoa, não pela promessa da instituição", context: <p>Antes de comparar instituições, consulte a <Link to="/clinica-de-reabilitacao" className="font-semibold text-secondary underline underline-offset-4">visão institucional sobre clínica de reabilitação</Link> para distinguir modalidades de cuidado. Este artigo se concentra nas perguntas da visita e na verificação das condições oferecidas.</p>, paragraphs: [
         "Antes de comparar locais, procure entender riscos, condições de saúde, padrão de uso e apoio disponível. Uma avaliação profissional ajuda a saber qual modalidade faz sentido e evita decisões baseadas apenas em urgência emocional.",
         "Desconfie de respostas prontas antes de qualquer escuta. Uma instituição responsável explica limites, não garante resultados e informa quando outro serviço pode ser mais adequado."
       ]},

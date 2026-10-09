@@ -161,7 +161,14 @@ function ArticlePage() {
             Dependendo da avaliação, o cuidado pode incluir acompanhamento ambulatorial, atenção
             psicossocial, apoio médico, acolhimento, tratamento residencial ou outras estratégias.
             Consulte também as informações gerais sobre
-            {" "}<Link to="/" className="font-semibold text-secondary hover:underline">tratamento para dependência química</Link>.
+            {" "}<Link to="/clinica-de-reabilitacao" className="font-semibold text-secondary hover:underline">modalidades de cuidado e clínica de reabilitação</Link>.
+          </p>
+          <p>
+            Para organizar o primeiro pedido de orientação, leia{" "}
+            <Link to="/blog/dependencia-quimica-sinais-tratamento" className="font-semibold text-secondary underline underline-offset-4">como observar mudanças e iniciar uma conversa</Link>.
+            Para aprofundar o cuidado, consulte{" "}
+            <Link to="/blog/dependencia-quimica-sinais-consequencias-tratamento" className="font-semibold text-secondary underline underline-offset-4">impactos da dependência e alternativas de tratamento</Link>.
+            Essas leituras complementam as informações locais, sem substituir avaliação individual.
           </p>
 
           <a

@@ -1,10 +1,12 @@
 import { Link } from "@tanstack/react-router";
+import type { ReactNode } from "react";
 import { ArrowLeft, ArrowRight, MessageCircle } from "lucide-react";
 
 import { whatsappHref } from "@/lib/site";
 
 export type ArticleSection = {
   title: string;
+  context?: ReactNode;
   paragraphs?: string[];
   items?: string[];
   subsections?: Array<{ title: string; paragraphs: string[] }>;
@@ -76,6 +78,7 @@ export function ArticleShell({
                 {section.title}
               </h2>
               <div className="mt-4 space-y-4">
+                {section.context}
                 {section.paragraphs?.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
                 {section.items ? (
                   <ul className="list-disc space-y-2 pl-6 marker:text-secondary">

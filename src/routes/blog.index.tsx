@@ -1,13 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, MessageCircle } from "lucide-react";
 
-import alcoholImage from "@/assets/blog-alcoolismo-consumo-problema.webp";
-import chooseImage from "@/assets/blog-como-escolher-clinica.webp";
-import worksImage from "@/assets/blog-como-funciona-clinica.webp";
-import needsImage from "@/assets/blog-como-saber-clinica-reabilitacao.webp";
-import saoCarlosImage from "@/assets/blog-dependencia-quimica-sao-carlos.jpg";
-import signsImage from "@/assets/blog-dependencia-quimica-sinais.jpg";
-import consequencesImage from "@/assets/blog-dependencia-sinais-consequencias.webp";
+import { blogPosts, blogTopics } from "@/lib/blog-catalog";
 import { siteUrl, whatsappHref } from "@/lib/site";
 import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
 
@@ -61,128 +55,28 @@ function BlogPage() {
           </Link>.
         </p>
 
-        <div className="mt-10 grid gap-5 md:grid-cols-2">
-        {[
-          {
-            category: "Família e busca de ajuda",
-            title: "Como saber se uma pessoa precisa de uma clínica de reabilitação?",
-            description: "Sinais de prejuízo, momento de buscar avaliação e participação responsável da família.",
-            to: "/blog/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao" as const,
-            image: needsImage,
-          },
-          {
-            category: "Dependência química",
-            title: "Dependência química: sinais, consequências e caminhos para o tratamento",
-            description: "Uma visão aprofundada dos impactos, das formas de cuidado e da continuidade da recuperação.",
-            to: "/blog/dependencia-quimica-sinais-consequencias-tratamento" as const,
-            image: consequencesImage,
-          },
-          {
-            category: "Alcoolismo",
-            title: "Alcoolismo: quando o consumo de álcool se torna um problema?",
-            description: "Como reconhecer perda de controle, riscos e prejuízos sem fazer diagnósticos pela internet.",
-            to: "/blog/alcoolismo-quando-o-consumo-se-torna-um-problema" as const,
-            image: alcoholImage,
-          },
-          {
-            category: "Tratamento e acolhimento",
-            title: "Como funciona uma clínica de reabilitação para dependência química?",
-            description: "Avaliação, acolhimento, rotina terapêutica, participação familiar e cuidado após a saída.",
-            to: "/blog/como-funciona-uma-clinica-de-reabilitacao" as const,
-            image: worksImage,
-          },
-          {
-            category: "Decisão da família",
-            title: "Como escolher uma clínica de reabilitação para um familiar?",
-            description: "Critérios e perguntas sobre equipe, estrutura, proposta, contrato e continuidade do cuidado.",
-            to: "/blog/como-escolher-uma-clinica-de-reabilitacao" as const,
-            image: chooseImage,
-          },
-        ].map((post) => (
-          <article key={post.to} className="glass-panel group overflow-hidden rounded-lg">
-            <img src={post.image} alt={`Imagem conceitual do artigo: ${post.title}`} width={1200} height={640} loading="lazy" decoding="async" className="aspect-[16/9] w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]" />
-            <div className="p-5 sm:p-7">
-            <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">
-              {post.category}
-            </p>
-            <h2 className="mt-3 font-display text-xl font-bold leading-snug sm:text-2xl">{post.title}</h2>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{post.description}</p>
-            <Link to={post.to} className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-secondary transition-colors hover:text-foreground">
-              Ler artigo <ArrowRight className="size-4" aria-hidden="true" />
-            </Link>
-            </div>
-          </article>
-        ))}
-        </div>
-
-        <div className="mt-5 grid gap-5 md:grid-cols-3">
-        <article className="glass-panel overflow-hidden rounded-lg">
-          <img src={visualAssets.araraquara[4].src} alt={visualAssets.araraquara[4].alt} width={1600} height={1067} loading="lazy" decoding="async" className="aspect-[16/9] w-full object-cover" />
-          <div className="p-5 sm:p-7">
-          <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">
-            Araraquara · Dependência química
-          </p>
-          <h2 className="mt-3 font-display text-xl font-bold leading-snug sm:text-2xl">
-            Dependência Química em Araraquara: Tratamento, CAPS AD, Acolhimento e Como Escolher uma
-            Instituição Segura
-          </h2>
-          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            Informações sobre atendimento, orientação familiar e cuidados importantes antes de escolher
-            uma instituição para tratamento.
-          </p>
-          <Link
-            to="/blog/dependencia-quimica-em-araraquara-tratamento"
-            className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-secondary transition-colors hover:text-foreground"
-          >
-            Ler artigo <ArrowRight className="size-4" aria-hidden="true" />
-          </Link>
+        <nav aria-label="Temas do blog" className="mt-10 border-y border-border py-5">
+          <p className="font-display text-lg font-semibold">Explore por tema</p>
+          <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-4">
+            {blogTopics.map((topic) => <li key={topic.id}><a href={`#${topic.id}`} className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-secondary underline underline-offset-4">{topic.title}<ArrowRight className="size-4 shrink-0" aria-hidden="true" /></a></li>)}
+          </ul>
+        </nav>
+        {blogTopics.map((topic) => <section key={topic.id} id={topic.id} aria-labelledby={`${topic.id}-heading`} className="mt-12 scroll-mt-8">
+          <h2 id={`${topic.id}-heading`} className="font-display text-2xl font-bold sm:text-3xl">{topic.title}</h2>
+          <p className="mt-3 max-w-3xl text-sm leading-7 text-muted-foreground">{topic.description}</p>
+          <div className="mt-6 grid gap-5 md:grid-cols-2">
+            {blogPosts.filter((post) => post.topic === topic.id).map((post) => <article key={post.to} className="glass-panel group overflow-hidden rounded-lg">
+              <img src={post.image} alt={post.alt} width={1200} height={800} loading="lazy" decoding="async" className="aspect-[16/9] w-full object-cover transition-transform duration-500 motion-reduce:transition-none group-hover:scale-[1.02]" />
+              <div className="p-5 sm:p-7">
+                <p className="text-xs font-semibold text-secondary">{post.detail}</p>
+                <h3 className="mt-3 font-display text-xl font-bold leading-snug sm:text-2xl"><Link to={post.to} className="hover:text-secondary">{post.title}</Link></h3>
+                <p className="mt-3 text-sm leading-7 text-muted-foreground">{post.description}</p>
+                <Link to={post.to} aria-label={`Ler artigo: ${post.title}`} className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-secondary transition-colors hover:text-foreground">Ler artigo <ArrowRight className="size-4" aria-hidden="true" /></Link>
+              </div>
+            </article>)}
           </div>
-        </article>
-
-        <article className="glass-panel overflow-hidden rounded-lg">
-          <img src={signsImage} alt="Pessoa em reflexão para artigo sobre sinais de dependência química" width={1200} height={640} loading="lazy" decoding="async" className="aspect-[16/9] w-full object-cover" />
-          <div className="p-5 sm:p-7">
-          <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">
-            Dependência química
-          </p>
-          <h2 className="mt-3 font-display text-xl font-bold leading-snug sm:text-2xl">
-            Dependência Química: Entenda os Sinais e a Importância do Tratamento
-          </h2>
-          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            Uma introdução para famílias reconhecerem mudanças, organizarem a conversa e entenderem
-            os primeiros passos para buscar orientação.
-          </p>
-          <Link
-            to="/blog/dependencia-quimica-sinais-tratamento"
-            className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-secondary transition-colors hover:text-foreground"
-          >
-            Ler artigo <ArrowRight className="size-4" aria-hidden="true" />
-          </Link>
-          </div>
-        </article>
-
-        <article className="glass-panel overflow-hidden rounded-lg">
-          <img src={saoCarlosImage} alt="Conversa de apoio para artigo sobre dependência química em São Carlos" width={1200} height={640} loading="lazy" decoding="async" className="aspect-[16/9] w-full object-cover" />
-          <div className="p-5 sm:p-7">
-          <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">
-            São Carlos · Dependência química
-          </p>
-          <h2 className="mt-3 font-display text-xl font-bold leading-snug sm:text-2xl">
-            Dependência Química em São Carlos: acolhimento, tratamento e onde buscar ajuda
-          </h2>
-          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            Informações sobre sinais de atenção, atendimento público, acolhimento e caminhos de
-            tratamento para pessoas e famílias em São Carlos.
-          </p>
-          <Link
-            to="/blog/dependencia-quimica-sao-carlos"
-            className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-secondary transition-colors hover:text-foreground"
-          >
-            Ler artigo <ArrowRight className="size-4" aria-hidden="true" />
-          </Link>
-          </div>
-        </article>
-        </div>
+        </section>)}
+        <p className="mt-8 text-xs leading-6 text-muted-foreground">{conceptualImageCaption}</p>
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <a
