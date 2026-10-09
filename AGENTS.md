@@ -16,5 +16,5 @@
 - Keep the global welcome assistant session-only, with its model, safety instructions, and credentials behind the server chat endpoint, so visitor conversations are never persisted or exposed.
 - Keep public-page imagery in the shared visual asset catalog and use conceptual AI imagery rather than documentary facility photos, so visual representation stays consistent and does not imply unverified facts.
 - Keep infrastructure diagnostic pages as standalone explicit routes excluded from the sitemap, so controlled delivery tests do not change existing city pages or discovery paths.
-- Mount floating WhatsApp once in the root layout and share safe-area positioning with the assistant; page-level floating duplicates must not be added, so contact controls stay consistent across routes.
+- Mount WhatsApp once with the assistant and mobile call link in a root contact dock; reserve a separate mobile scroll viewport above its safe-area height so content never passes beneath contact controls, while desktop floating placement stays unchanged.
 - Keep the family orientation guide isolated on the Home with typed, deterministic educational journeys and in-memory navigation only; use existing city routes and a verified source catalog, so visitor answers never require external processing or persistence.

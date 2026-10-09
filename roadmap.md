@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Organizar contatos na base móvel e reservar área de conteúdo independente em todas as páginas; 116 visitas em 320/360/390/1280px, quatro fluxos do assistente e seis testes aprovados, contatos com toque de 48px; conteúdo/SEO preservados, sem publicação.
+
 - [x] Corrigir “Voltar ao início” para fechar o assistente e navegar à Home institucional como link; teste em 1280/390/320 confirma fechamento, destino exato, ausência de envio e foco no campo, WhatsApp e ligação preservados. Destino interceptado com a Home local para verificar a alteração ainda não publicada; sem publicação.
 
 - [x] Implementar o Guia de Orientação à Família isolado na Home — 12 ramificações, dois caminhos de emergência, 15 municípios, voltar/reiniciar, 23 links internos HTTP 200, WhatsApp único, seis testes automatizados, teclado/foco e exibição em 1280/390/320 verificados; escolhas sem envio externo e descartadas ao recarregar, metadados/H1/schema da Home idênticos ao registro anterior, build OK. Referências públicas não confirmam disponibilidade em tempo real; sem publicação.
