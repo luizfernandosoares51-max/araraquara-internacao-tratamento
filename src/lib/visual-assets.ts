@@ -19,6 +19,12 @@ import homeRoutine from "@/assets/concept-home-routine.webp";
 import treatmentRoutine from "@/assets/concept-treatment-routine.webp";
 import videosProgression from "@/assets/concept-videos-progression.webp";
 import welcomeListening from "@/assets/concept-welcome-listening.webp";
+import articleWelcome from "@/assets/blog-clinica-busca-orientacao.webp";
+import articleAssessment from "@/assets/blog-clinica-avaliacao-inicial.webp";
+import articleTherapy from "@/assets/blog-clinica-acompanhamento.webp";
+import articleRoutine from "@/assets/blog-clinica-rotina-saudavel.webp";
+import articleFamily from "@/assets/blog-clinica-dialogo-familiar.webp";
+import articleContinuity from "@/assets/blog-clinica-continuidade-cuidado.webp";
 
 export const visualAssets = {
   home: {
@@ -47,6 +53,14 @@ export const visualAssets = {
     "rio-claro-sp": { src: cityRioClaro, alt: "Caminhos entre um jardim e um portão aberto, representação de escolhas em Rio Claro" },
   },
   blog: { src: blogLearning, alt: "Livro aberto e caderno em um ambiente iluminado para leitura e orientação" },
+  rehabilitationArticle: {
+    welcome: { src: articleWelcome, alt: "Mulher adulta conversa com um interlocutor em ambiente reservado e iluminado" },
+    assessment: { src: articleAssessment, alt: "Homem adulto participa de uma conversa de escuta inicial à mesa" },
+    therapy: { src: articleTherapy, alt: "Duas mulheres adultas conversam com atenção em um ambiente reservado" },
+    routine: { src: articleRoutine, alt: "Três adultos plantam ervas juntos em um canteiro de jardim" },
+    family: { src: articleFamily, alt: "Dois familiares adultos participam de uma conversa de orientação à mesa" },
+    continuity: { src: articleContinuity, alt: "Duas pessoas conversam sobre planejamento com cadernos abertos à mesa" },
+  },
   videos: { src: videosProgression, alt: "Sequência de formas entre sombra e luz representando etapas de mudança" },
 } as const;
 
