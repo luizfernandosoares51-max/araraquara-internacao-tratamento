@@ -5,7 +5,6 @@ import araraquaraPath from "@/assets/concept-araraquara-path.webp";
 import araraquaraWelcome from "@/assets/concept-araraquara-welcome.webp";
 import blogLearning from "@/assets/concept-blog-learning.webp";
 import citiesGuidance from "@/assets/concept-cities-guidance.webp";
-import cityBauru from "@/assets/concept-city-bauru.webp";
 import cityRibeiraoPreto from "@/assets/concept-city-ribeirao-preto.webp";
 import cityRioClaro from "@/assets/concept-city-rio-claro.webp";
 import citySaoCarlos from "@/assets/concept-city-sao-carlos.webp";
@@ -48,7 +47,6 @@ export const visualAssets = {
   cities: { src: citiesGuidance, alt: "Mapa e caminhos convergentes representando a busca por orientação regional" },
   cityCovers: {
     "sao-carlos-sp": { src: citySaoCarlos, alt: "Mesa preparada para conversa e orientação a famílias de São Carlos" },
-    "bauru-sp": { src: cityBauru, alt: "Caderno sendo compartilhado em uma conversa de orientação para Bauru" },
     "ribeirao-preto-sp": { src: cityRibeiraoPreto, alt: "Duas pessoas caminhando juntas, representação de apoio familiar em Ribeirão Preto" },
     "rio-claro-sp": { src: cityRioClaro, alt: "Caminhos entre um jardim e um portão aberto, representação de escolhas em Rio Claro" },
   },

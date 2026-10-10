@@ -15,7 +15,6 @@ import { Route as AcolhimentoRouteImport } from './routes/acolhimento'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as CidadesRouteImport } from './routes/cidades'
 import { Route as ClinicaDeReabilitacaoRouteImport } from './routes/clinica-de-reabilitacao'
-import { Route as ClinicaDeRecuperacaoBauruTesteRouteImport } from './routes/clinica-de-recuperacao-bauru-teste'
 import { Route as ClinicaDeRecuperacaoEmAmericoBrasilienseSpRouteImport } from './routes/clinica-de-recuperacao-em-americo-brasiliense-sp'
 import { Route as ClinicaDeRecuperacaoEmAraraquaraRouteImport } from './routes/clinica-de-recuperacao-em-araraquara'
 import { Route as ClinicaDeRecuperacaoEmBauruSpRouteImport } from './routes/clinica-de-recuperacao-em-bauru-sp'
@@ -80,12 +79,6 @@ const ClinicaDeReabilitacaoRoute = ClinicaDeReabilitacaoRouteImport.update({
   path: '/clinica-de-reabilitacao',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ClinicaDeRecuperacaoBauruTesteRoute =
-  ClinicaDeRecuperacaoBauruTesteRouteImport.update({
-    id: '/clinica-de-recuperacao-bauru-teste',
-    path: '/clinica-de-recuperacao-bauru-teste',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 const ClinicaDeRecuperacaoEmAmericoBrasilienseSpRoute =
   ClinicaDeRecuperacaoEmAmericoBrasilienseSpRouteImport.update({
     id: '/clinica-de-recuperacao-em-americo-brasiliense-sp',
@@ -282,7 +275,6 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRouteWithChildren
   '/cidades': typeof CidadesRoute
   '/clinica-de-reabilitacao': typeof ClinicaDeReabilitacaoRoute
-  '/clinica-de-recuperacao-bauru-teste': typeof ClinicaDeRecuperacaoBauruTesteRoute
   '/clinica-de-recuperacao-em-americo-brasiliense-sp': typeof ClinicaDeRecuperacaoEmAmericoBrasilienseSpRoute
   '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
   '/clinica-de-recuperacao-em-bauru-sp': typeof ClinicaDeRecuperacaoEmBauruSpRoute
@@ -323,7 +315,6 @@ export interface FileRoutesByTo {
   '/acolhimento': typeof AcolhimentoRoute
   '/cidades': typeof CidadesRoute
   '/clinica-de-reabilitacao': typeof ClinicaDeReabilitacaoRoute
-  '/clinica-de-recuperacao-bauru-teste': typeof ClinicaDeRecuperacaoBauruTesteRoute
   '/clinica-de-recuperacao-em-americo-brasiliense-sp': typeof ClinicaDeRecuperacaoEmAmericoBrasilienseSpRoute
   '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
   '/clinica-de-recuperacao-em-bauru-sp': typeof ClinicaDeRecuperacaoEmBauruSpRoute
@@ -366,7 +357,6 @@ export interface FileRoutesById {
   '/blog': typeof BlogRouteWithChildren
   '/cidades': typeof CidadesRoute
   '/clinica-de-reabilitacao': typeof ClinicaDeReabilitacaoRoute
-  '/clinica-de-recuperacao-bauru-teste': typeof ClinicaDeRecuperacaoBauruTesteRoute
   '/clinica-de-recuperacao-em-americo-brasiliense-sp': typeof ClinicaDeRecuperacaoEmAmericoBrasilienseSpRoute
   '/clinica-de-recuperacao-em-araraquara': typeof ClinicaDeRecuperacaoEmAraraquaraRoute
   '/clinica-de-recuperacao-em-bauru-sp': typeof ClinicaDeRecuperacaoEmBauruSpRoute
@@ -410,7 +400,6 @@ export interface FileRouteTypes {
     | '/blog'
     | '/cidades'
     | '/clinica-de-reabilitacao'
-    | '/clinica-de-recuperacao-bauru-teste'
     | '/clinica-de-recuperacao-em-americo-brasiliense-sp'
     | '/clinica-de-recuperacao-em-araraquara'
     | '/clinica-de-recuperacao-em-bauru-sp'
@@ -451,7 +440,6 @@ export interface FileRouteTypes {
     | '/acolhimento'
     | '/cidades'
     | '/clinica-de-reabilitacao'
-    | '/clinica-de-recuperacao-bauru-teste'
     | '/clinica-de-recuperacao-em-americo-brasiliense-sp'
     | '/clinica-de-recuperacao-em-araraquara'
     | '/clinica-de-recuperacao-em-bauru-sp'
@@ -493,7 +481,6 @@ export interface FileRouteTypes {
     | '/blog'
     | '/cidades'
     | '/clinica-de-reabilitacao'
-    | '/clinica-de-recuperacao-bauru-teste'
     | '/clinica-de-recuperacao-em-americo-brasiliense-sp'
     | '/clinica-de-recuperacao-em-araraquara'
     | '/clinica-de-recuperacao-em-bauru-sp'
@@ -536,7 +523,6 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRouteWithChildren
   CidadesRoute: typeof CidadesRoute
   ClinicaDeReabilitacaoRoute: typeof ClinicaDeReabilitacaoRoute
-  ClinicaDeRecuperacaoBauruTesteRoute: typeof ClinicaDeRecuperacaoBauruTesteRoute
   ClinicaDeRecuperacaoEmAmericoBrasilienseSpRoute: typeof ClinicaDeRecuperacaoEmAmericoBrasilienseSpRoute
   ClinicaDeRecuperacaoEmAraraquaraRoute: typeof ClinicaDeRecuperacaoEmAraraquaraRoute
   ClinicaDeRecuperacaoEmBauruSpRoute: typeof ClinicaDeRecuperacaoEmBauruSpRoute
@@ -605,13 +591,6 @@ declare module '@tanstack/react-router' {
       path: '/clinica-de-reabilitacao'
       fullPath: '/clinica-de-reabilitacao'
       preLoaderRoute: typeof ClinicaDeReabilitacaoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/clinica-de-recuperacao-bauru-teste': {
-      id: '/clinica-de-recuperacao-bauru-teste'
-      path: '/clinica-de-recuperacao-bauru-teste'
-      fullPath: '/clinica-de-recuperacao-bauru-teste'
-      preLoaderRoute: typeof ClinicaDeRecuperacaoBauruTesteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/clinica-de-recuperacao-em-americo-brasiliense-sp': {
@@ -888,7 +867,6 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRouteWithChildren,
   CidadesRoute: CidadesRoute,
   ClinicaDeReabilitacaoRoute: ClinicaDeReabilitacaoRoute,
-  ClinicaDeRecuperacaoBauruTesteRoute: ClinicaDeRecuperacaoBauruTesteRoute,
   ClinicaDeRecuperacaoEmAmericoBrasilienseSpRoute:
     ClinicaDeRecuperacaoEmAmericoBrasilienseSpRoute,
   ClinicaDeRecuperacaoEmAraraquaraRoute: ClinicaDeRecuperacaoEmAraraquaraRoute,
