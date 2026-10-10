@@ -7,6 +7,7 @@ import articleSignsImage from "@/assets/blog-dependencia-quimica-sinais.jpg";
 import articleCityImage from "@/assets/blog-dependencia-quimica-sao-carlos.jpg";
 import { AraraquaraPhotoGallery, araraquaraPhotos } from "@/components/araraquara-photo-gallery";
 import { FamilyOrientationGuide } from "@/components/family-orientation-guide";
+import { CareSpecialties, FinancialGuidance, RegionalCare, TherapeuticRoutine } from "@/components/care-program-sections";
 import { cityDirectory } from "@/lib/city-pages";
 import { institutionalIdentity, legalSources } from "@/lib/institutional";
 import {
@@ -376,6 +377,7 @@ function HomePage() {
             </div>
           </section>
 
+          <CareSpecialties />
           <FamilyOrientationGuide />
 
           <section id="acolhimento" className="border-t border-border bg-muted/45 py-16 -mx-5 px-5 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 lg:py-28">
@@ -428,6 +430,8 @@ function HomePage() {
             </div>
           </section>
 
+          <TherapeuticRoutine />
+          <FinancialGuidance />
           <section id="internacao" className="border-t border-border bg-muted/45 py-16 -mx-5 px-5 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 lg:py-24">
             <SectionLabel>Acolhimento e encaminhamento médico</SectionLabel>
             <h2 className="mt-3 max-w-2xl font-display text-2xl font-semibold leading-tight sm:text-4xl">Internação para dependência química: decisões com responsabilidade</h2>
@@ -512,6 +516,7 @@ function HomePage() {
             </Link>
           </section>
 
+          <RegionalCare />
           <section id="galeria-fotos" aria-labelledby="galeria-titulo" className="scroll-mt-6 border-t border-border py-16 lg:py-24">
             <SectionLabel>Unidade física</SectionLabel>
              <h2 id="galeria-titulo" className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Clínica de Reabilitação em Araraquara</h2>

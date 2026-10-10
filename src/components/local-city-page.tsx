@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight, ExternalLink, MapPin, MessageCircle, Phone, Shie
 
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import { Button } from "@/components/ui/button";
+import { RegionalCare } from "@/components/care-program-sections";
 import type { LocalCityPage } from "@/lib/local-city-pages";
 import { phoneDisplay, phoneHref, whatsappHref } from "@/lib/site";
 
@@ -60,6 +61,7 @@ export function LocalCityPageView({ city }: { city: LocalCityPage }) {
         </section>
 
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+          <RegionalCare cityName={city.name} />
           {city.sections.map((section, index) => (
             <section key={section.heading} className="border-b border-border py-14 lg:py-20">
               <div className={`grid gap-8 lg:grid-cols-[.78fr_1.22fr] lg:gap-16 ${index % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""}`}>

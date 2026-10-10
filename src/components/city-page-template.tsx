@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight, Check, ExternalLink, Mail, MapPin, MessageCircle
 import type { ReactNode } from "react";
 
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
+import { RegionalCare } from "@/components/care-program-sections";
 import type { CityPageData } from "@/lib/city-pages";
 import { cityDirectory } from "@/lib/city-pages";
 import {
@@ -125,6 +126,7 @@ export function CityPageTemplate({ city }: { city: CityPageData }) {
             </div>
           </section>
 
+          <RegionalCare cityName={city.name} />
           <section className="border-y border-border py-9">
             <h2 className="sr-only">Informações iniciais sobre atendimento e acolhimento</h2>
             <div className="grid gap-4 text-sm sm:grid-cols-2">
