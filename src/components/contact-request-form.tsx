@@ -43,7 +43,7 @@ export function ContactRequestForm() {
       <p>Entendemos a urgência da sua família. Para encaminhar seu contato à coordenação, abra o WhatsApp abaixo e envie a mensagem preparada. Seus dados ainda não foram enviados; o recebimento e o retorno dependem do atendimento da equipe.</p>
       <p>Compartilhe apenas o necessário. O atendimento pelo WhatsApp segue as práticas de privacidade desse serviço e da instituição, sem garantia de sigilo absoluto.</p>
       <div className="flex flex-col items-stretch gap-3 sm:items-start">
-        <Button asChild className="min-h-12 h-auto whitespace-normal bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90 [&]:text-whatsapp-foreground [&]:no-underline"><a href={whatsappLink} target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer"><MessageCircle aria-hidden="true" />Enviar pelo WhatsApp</a></Button>
+        <Button asChild className="min-h-12 h-auto whitespace-normal bg-whatsapp text-whatsapp-foreground! no-underline! hover:bg-whatsapp/90"><a href={whatsappLink} target="_blank" rel="noopener noreferrer" referrerPolicy="no-referrer"><MessageCircle aria-hidden="true" />Enviar pelo WhatsApp</a></Button>
         <Button variant="outline" className="min-h-12" onClick={() => setWhatsappLink(null)}><ArrowLeft aria-hidden="true" />Revisar dados</Button>
       </div>
       <p className="mt-5 font-medium">Em emergência imediata, não aguarde a Central: ligue 192 — SAMU.</p>
