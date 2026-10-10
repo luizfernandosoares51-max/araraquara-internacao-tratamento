@@ -8,6 +8,7 @@ import articleCityImage from "@/assets/blog-dependencia-quimica-sao-carlos.jpg";
 import { AraraquaraPhotoGallery, araraquaraPhotos } from "@/components/araraquara-photo-gallery";
 import { FamilyOrientationGuide } from "@/components/family-orientation-guide";
 import { cityDirectory } from "@/lib/city-pages";
+import { institutionalIdentity, legalSources } from "@/lib/institutional";
 import {
   emailDisplay,
   emailHref,
@@ -77,12 +78,12 @@ const faqs = [
   {
     question: "Como funciona a internação para dependência química?",
     answer:
-      "A internação é uma possibilidade de cuidado que precisa ser avaliada individualmente. Antes do acolhimento, a equipe conversa com a família, reúne informações relevantes e orienta sobre a modalidade adequada e as etapas do processo.",
+      "A unidade própria da Central oferece acolhimento voluntário, que não equivale a internação hospitalar. Quando há necessidade de intervenção médica hospitalar, a Central orienta a família e encaminha o caso para avaliação em estabelecimento habilitado, com responsabilidade médica.",
   },
   {
     question: "Qual é a diferença entre internação voluntária e involuntária?",
     answer:
-      "Na modalidade voluntária, a pessoa concorda com o acolhimento. A internação involuntária depende de avaliação responsável, indicação profissional e cumprimento da legislação aplicável. Cada situação deve ser analisada individualmente, com respeito à dignidade e aos direitos da pessoa.",
+      "A internação voluntária ocorre com consentimento da pessoa; a involuntária ocorre sem esse consentimento e depende dos requisitos legais e da avaliação e autorização médicas. Ambas são distintas do acolhimento voluntário psicossocial oferecido na unidade própria da Central.",
   },
   {
     question: "Como a família pode entrar em contato?",
@@ -428,23 +429,29 @@ function HomePage() {
           </section>
 
           <section id="internacao" className="border-t border-border bg-muted/45 py-16 -mx-5 px-5 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 lg:py-24">
-            <SectionLabel>Modalidades de acolhimento</SectionLabel>
+            <SectionLabel>Acolhimento e encaminhamento médico</SectionLabel>
             <h2 className="mt-3 max-w-2xl font-display text-2xl font-semibold leading-tight sm:text-4xl">Internação para dependência química: decisões com responsabilidade</h2>
             <div className="mt-10 grid gap-5 md:grid-cols-2">
               <article className="rounded-2xl border border-border bg-card p-5 shadow-sm sm:p-7">
                 <div className="flex items-center gap-3">
                   <span className="grid size-8 place-items-center rounded-full bg-brand text-xs font-bold text-primary-foreground">V</span>
-                  <h3 className="font-display text-xl font-semibold">Internação voluntária</h3>
+                  <h3 className="font-display text-xl font-semibold">Acolhimento voluntário na Central</h3>
                 </div>
-                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">A internação voluntária acontece quando a própria pessoa concorda em receber acolhimento. O processo inclui conversa inicial, explicação sobre a rotina e avaliação das condições para que a entrada ocorra de forma consciente e organizada.</p>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{institutionalIdentity.receptionStatement} O acolhimento psicossocial não equivale a internação hospitalar.</p>
               </article>
               <article className="rounded-2xl border border-border bg-card p-5 shadow-sm sm:p-7">
                 <div className="flex items-center gap-3">
                   <span className="grid size-8 place-items-center rounded-full bg-secondary text-xs font-bold text-secondary-foreground">I</span>
-                  <h3 className="font-display text-xl font-semibold">Internação involuntária</h3>
+                  <h3 className="font-display text-xl font-semibold">Orientação e encaminhamento hospitalar</h3>
                 </div>
-                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">A internação involuntária exige avaliação profissional, critérios específicos e observância da legislação aplicável. A situação deve ser analisada individualmente, com responsabilidade, documentação adequada e respeito aos direitos da pessoa.</p>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{institutionalIdentity.referralStatement}</p>
               </article>
+            </div>
+            <div className="mt-8 border-y border-border py-6">
+              <h3 className="flex items-start gap-3 font-display text-xl font-semibold"><ShieldCheck className="mt-1 size-5 shrink-0 text-secondary" aria-hidden="true" />Segurança jurídica e notificação legal</h3>
+              <p className="mt-4 max-w-4xl text-sm leading-relaxed text-muted-foreground">A internação involuntária exige avaliação e autorização médicas e cumprimento dos requisitos legais. Conforme a Lei 10.216/2001, a comunicação ao Ministério Público Estadual deve ocorrer em até 72 horas, sob responsabilidade do responsável técnico do estabelecimento onde a internação ocorreu. A orientação da Central não substitui avaliação médica ou assessoria jurídica e não garante vaga, admissão ou resultado.</p>
+              <p className="mt-3 text-xs leading-relaxed text-muted-foreground">O escopo de atendimento acima é uma declaração da instituição; não representa verificação independente das habilitações de estabelecimentos parceiros.</p>
+              <div className="mt-4 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-secondary">{legalSources.slice(0, 2).map(source => <a key={source.href} href={source.href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">{source.label}</a>)}<Link to="/transparencia" className="underline underline-offset-4">Transparência e responsabilidade técnica</Link></div>
             </div>
           </section>
 

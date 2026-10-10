@@ -28,6 +28,14 @@ export const institutionalIdentity = {
   sanitaryStatement: "A instituição declara que a unidade segue os protocolos sanitários e as diretrizes da Vigilância Sanitária local para acolhimento e reabilitação psicossocial, observando as Leis 10.216/2001 e 13.840/2019 conforme o enquadramento aplicável.",
   sanitaryLicense: null,
   dedicatedOmbudsman: null,
+  careScope: {
+    ownUnitReception: "voluntary",
+    ownUnitMedicalHospitalization: false,
+    hospitalReferral: true,
+    transport24HoursConfirmed: false,
+  },
+  receptionStatement: "A Central oferece acolhimento voluntário em sua unidade própria em Araraquara e orientação à família sobre os trâmites legais da internação involuntária, conforme as Leis 10.216/2001 e 13.840/2019.",
+  referralStatement: "Nos casos que exigem intervenção médica hospitalar ou internação involuntária clínica, a instituição declara atuar com triagem, acolhimento psicossocial, suporte à família e encaminhamento/remoção segura para estabelecimentos e unidades parceiras devidamente habilitadas, com responsabilidade médica. Esse encaminhamento não significa realização de internação médica na unidade própria da Central.",
 } as const;
 
 export const institutionalLocalBusiness = {
