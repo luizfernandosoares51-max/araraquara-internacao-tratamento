@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Excluir a página experimental de Bauru, substituir a página oficial por redirecionamento 301 para Araraquara e retirar Bauru do catálogo, links e sitemap; verificar sem publicar.
+
 - [x] Criar formulário humanizado em /contato com validação, confirmação verde de preparação e envio explícito pelo WhatsApp oficial; cinco testes aprovados e fluxo conferido em 1280/390/320, incluindo revisão e descarte ao recarregar; orientação de emergência e privacidade preservadas, sem envio externo ou publicação.
 
 - [x] Incorporar a declaração confirmada de acolhimento voluntário, suporte familiar e encaminhamento a unidades habilitadas na Home e transparência; distinção médica e notificação em até 72 horas com fontes legais, treze testes aprovados e seis visitas em 1280/390/320; sem publicação.

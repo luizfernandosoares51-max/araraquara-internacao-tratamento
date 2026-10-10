@@ -10,6 +10,7 @@
 <!-- LOVABLE:END -->
 
 - Keep each researched local city page in an explicit route backed by shared rendering and city-specific editorial data, so URLs stay stable without homogenizing content.
+- Keep retired public city URLs as redirect-only routes excluded from the city catalog and sitemap, so legacy visits receive a permanent redirect without restoring retired content.
 - Render new editorial articles through the shared blog article shell while keeping route-specific copy and metadata in each route, so presentation stays consistent without homogenizing content.
 - Use opt-in illustrated section rendering for long-form articles without changing the existing article shell, so alternating editorial imagery stays isolated from other published articles.
 - Keep the blog's existing article inventory in one typed editorial catalog and render topic navigation with all article links in initial HTML, so categories improve discovery without empty archives or interaction-only indexing.
