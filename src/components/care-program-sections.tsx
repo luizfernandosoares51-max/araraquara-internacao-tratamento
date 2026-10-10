@@ -29,13 +29,13 @@ export function CareSpecialties() {
       <article className="rounded-lg border border-border bg-card p-6">
         <ShieldCheck className="size-6 text-secondary" aria-hidden="true" />
         <h3 className="mt-4 font-display text-xl font-semibold">Desintoxicação médica: encaminhamento externo</h3>
-        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">A desintoxicação médica não é realizada na unidade própria. A Central orienta a família, realiza triagem e encaminhamento seguro para avaliação e cuidado em estabelecimentos médicos parceiros habilitados. Protocolos e condutas são responsabilidade da equipe médica desses serviços.</p>
+        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">A desintoxicação médica não é realizada na unidade própria. A Central orienta a família, realiza triagem e encaminhamento para avaliação e cuidado em estabelecimentos médicos habilitados. Protocolos e condutas são responsabilidade da equipe médica desses serviços.</p>
         <Button asChild variant="link" className="mt-4 h-auto min-h-12 whitespace-normal px-0 text-left"><Link to="/clinica-de-reabilitacao">Compreender as etapas do cuidado <ArrowRight aria-hidden="true" /></Link></Button>
       </article>
       <article className="rounded-lg border border-border bg-card p-6">
         <HeartHandshake className="size-6 text-secondary" aria-hidden="true" />
         <h3 className="mt-4 font-display text-xl font-semibold">Acolhimento voluntário e orientação em internação involuntária</h3>
-        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Acolhimento voluntário psicossocial não equivale a internação hospitalar. Casos de internação involuntária hospitalar são encaminhados, com orientação jurídica e familiar sobre os trâmites; a decisão e a autorização são médicas, conforme os requisitos legais.</p>
+        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Acolhimento voluntário psicossocial não equivale a internação hospitalar. Situações que requerem internação involuntária clínica são encaminhadas a unidades habilitadas, com orientação familiar sobre os trâmites; a decisão e a autorização são médicas, conforme os requisitos legais.</p>
         <Button asChild variant="link" className="mt-4 h-auto min-h-12 whitespace-normal px-0 text-left"><Link to="/termos-de-acolhimento">Consultar os termos de atendimento <ArrowRight aria-hidden="true" /></Link></Button>
       </article>
     </div>
@@ -80,7 +80,7 @@ export function FinancialGuidance() {
     <h2 className={headingClass}>Acolhimento particular e orientação sobre planos de saúde</h2>
     <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground">A Central oferece acolhimento particular e orientação sobre possibilidades de cobertura e reembolso via planos de saúde. Consulte as opções com a equipe antes de contratar qualquer serviço.</p>
     <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">Essa orientação não significa aceitação de convênios nem garantia de cobertura ou reembolso. As condições dependem do contrato, da operadora e do serviço indicado; solicite a confirmação diretamente ao plano.</p>
-    <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">O acolhimento voluntário e o encaminhamento hospitalar são distintos. Os trâmites de internação devem observar as Leis 10.216/2001 e 13.840/2019. A orientação familiar da Central não substitui assessoria jurídica ou avaliação médica, nem comprova independentemente as habilitações dos parceiros.</p>
+    <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">O acolhimento voluntário e o encaminhamento hospitalar são distintos. Os trâmites de internação devem observar as Leis 10.216/2001 e 13.840/2019. A orientação familiar da Central não substitui assessoria jurídica ou avaliação médica, nem garante vaga em serviços externos.</p>
     <div className="mt-4 flex flex-wrap gap-x-6 gap-y-3 text-sm text-secondary">{legalSources.slice(0, 2).map(source => <a key={source.href} href={source.href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">{source.label}</a>)}</div>
     <Button asChild className="mt-6 h-auto min-h-12 max-w-full whitespace-normal bg-whatsapp py-3 text-whatsapp-foreground hover:bg-whatsapp/90"><a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />Consultar condições de acolhimento</a></Button>
   </section>;
