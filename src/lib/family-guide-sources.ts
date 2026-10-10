@@ -3,7 +3,6 @@ export const gamblingSource = "https://bvsms.saude.gov.br/bvs/publicacoes/linha_
 export const municipalGuideSources: Record<string, string> = {
   araraquara: "https://araraquara.sp.gov.br/atencao-especializada",
   "americo-brasiliense-sp": "https://americobrasiliense.sp.gov.br/site/saude/",
-  "bauru-sp": "https://www2.bauru.sp.gov.br/saude/servicos_saude.aspx",
   "descalvado-sp": "https://www.descalvado.sp.gov.br/novoportal/prefeitura/index.php/portal/secretarias/45c48cce2e2d7fbdea1afc51c7c6ad26",
   "franca-sp": "https://www3.franca.sp.gov.br/cartadeservicos/servicos/rede-de-ateno-psicossocial-de-franca-raps",
   "ibate-sp": "https://www.ibate.sp.gov.br/portal/telefones",

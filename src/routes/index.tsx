@@ -39,7 +39,7 @@ const photoGalleryCities = [
   { name: "Araraquara", units: ["Unidade de Araraquara"] },
 ] as const;
 
-const featuredCityNames = new Set(["São Carlos", "Bauru", "Ribeirão Preto"]);
+const featuredCityNames = new Set(["São Carlos", "Ribeirão Preto"]);
 const featuredCities = cityDirectory.filter((city) => featuredCityNames.has(city.name));
 
 const guidanceLinks = [
