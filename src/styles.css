@@ -290,6 +290,8 @@
 
   .floating-contact-spacer { height: 1rem; }
 
+  .care-program-section { padding-bottom: 100px; }
+
   .floating-contact-bar {
     position: fixed;
     inset: auto 0 0;

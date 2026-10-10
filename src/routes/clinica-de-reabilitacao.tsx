@@ -16,6 +16,7 @@ import type { ReactNode } from "react";
 
 import { emailDisplay, emailHref, phoneDisplay, phoneHref, siteUrl, whatsappHref } from "@/lib/site";
 import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
+import { CareSpecialties, FinancialGuidance } from "@/components/care-program-sections";
 
 const pageUrl = `${siteUrl}/clinica-de-reabilitacao`;
 const imageUrl = `${siteUrl}${visualAssets.clinic.src}`;
@@ -280,6 +281,7 @@ function RehabilitationClinicPage() {
           </div>
         </section>
 
+        <div className="bg-background px-5 text-foreground sm:px-8 lg:px-12"><div className="mx-auto max-w-6xl"><CareSpecialties /><FinancialGuidance /></div></div>
         <section className="bg-background px-5 py-16 text-foreground sm:px-8 lg:px-12 lg:py-24" aria-labelledby="related-articles-heading">
           <div className="mx-auto max-w-6xl">
             <SectionLabel>Informação para cada decisão</SectionLabel>

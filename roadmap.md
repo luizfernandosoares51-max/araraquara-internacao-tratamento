@@ -1,7 +1,7 @@
 # Roadmap
 
 - [x] Incorporar a declaração confirmada de acolhimento voluntário, suporte familiar e encaminhamento a unidades habilitadas na Home e transparência; distinção médica e notificação em até 72 horas com fontes legais, treze testes aprovados e seis visitas em 1280/390/320; sem publicação.
-- [ ] Faixas de planos/particular, rotina e facilidades regionais — aguardam confirmação de modalidades, atividades, visitação e disponibilidade de transporte; não anunciar garantias jurídicas, cobertura ou resgate 24h sem confirmação.
+- [x] Integrar modalidades confirmadas na Home, página pilar e Araraquara; cronograma e orientação financeira na Home/Araraquara e orientação financeira na página pilar; acesso regional nas quinze páginas locais. Vinte e seis testes e 51 visitas em 1280/390/320 verificaram H1, metadados, ausência de overflow e separação dos contatos; 32 URLs no sitemap e redirecionamentos preservados; sem publicação.
 
 - [x] Corrigir Empresa / Titular e Proprietário / Direção para Adelmo João Antunes, vincular CRP 06/130268 à psicóloga Margarete Vasques e preservar Luiz Fernando Soares e os selos verdes; quinze testes e nove visitas em 1280/390/320 confirmam dados e separação dos contatos; sem publicação.
 - [x] Atualizar endereço oficial e coordenação na transparência, contato e rodapé; adicionar embed Google em origens Lovable autorizadas, botão oficial e LocalBusiness; nove visitas em 1280/390/320 e quatorze testes aprovados; sem publicação. Renderização Google não testada no ambiente do agente.
