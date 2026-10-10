@@ -46,3 +46,19 @@ test("does not fabricate a sanitary license or geographic coordinates", () => {
   assert.equal(institutionalIdentity.sanitaryLicense, null);
   assert.equal("geo" in institutionalLocalBusiness, false);
 });
+
+test("the institution's own unit offers voluntary reception", () => {
+  assert.equal(institutionalIdentity.careScope.ownUnitReception, "voluntary");
+});
+
+test("medical hospitalization is not performed in the institution's own unit", () => {
+  assert.equal(institutionalIdentity.careScope.ownUnitMedicalHospitalization, false);
+});
+
+test("the institution confirms referral for hospital care", () => {
+  assert.equal(institutionalIdentity.careScope.hospitalReferral, true);
+});
+
+test("referral does not establish round-the-clock transport availability", () => {
+  assert.equal(institutionalIdentity.careScope.transport24HoursConfirmed, false);
+});
