@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
+import { RegionalCare } from "@/components/care-program-sections";
 import {
   emailDisplay,
   emailHref,
@@ -344,6 +345,7 @@ function SaoCarlosPage() {
             </div>
           </div>
         </section>
+        <div className="bg-background px-5 text-foreground sm:px-8 lg:px-12"><div className="mx-auto max-w-6xl"><RegionalCare cityName="São Carlos" /></div></div>
       </main>
 
       

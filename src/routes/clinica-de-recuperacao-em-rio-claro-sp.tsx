@@ -15,6 +15,7 @@ import {
 
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import { Button } from "@/components/ui/button";
+import { RegionalCare } from "@/components/care-program-sections";
 import { emailDisplay, emailHref, phoneDisplay, phoneHref, siteUrl, whatsappHref } from "@/lib/site";
 import { visualAssets } from "@/lib/visual-assets";
 
@@ -417,6 +418,7 @@ function RioClaroPage() {
             </div>
           </div>
         </section>
+        <div className="bg-background px-5 text-foreground sm:px-8 lg:px-12"><div className="mx-auto max-w-7xl"><RegionalCare cityName="Rio Claro" /></div></div>
       </main>
 
       
