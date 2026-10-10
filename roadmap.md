@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Criar formulário humanizado em /contato com validação, confirmação de preparação e envio explícito pelo WhatsApp oficial; preservar orientação de emergência e privacidade, testar sem publicar.
+
 - [x] Incorporar a declaração confirmada de acolhimento voluntário, suporte familiar e encaminhamento a unidades habilitadas na Home e transparência; distinção médica e notificação em até 72 horas com fontes legais, treze testes aprovados e seis visitas em 1280/390/320; sem publicação.
 - [x] Integrar modalidades confirmadas na Home, página pilar e Araraquara; cronograma e orientação financeira na Home/Araraquara e orientação financeira na página pilar; acesso regional nas quinze páginas locais. Vinte e seis testes e 51 visitas em 1280/390/320 verificaram H1, metadados, ausência de overflow e separação dos contatos; 32 URLs no sitemap e redirecionamentos preservados; sem publicação.
 
