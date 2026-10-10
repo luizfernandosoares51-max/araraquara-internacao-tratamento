@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Incorporar a declaração confirmada de acolhimento voluntário, suporte familiar e encaminhamento a unidades habilitadas na Home e transparência; sem atribuir internação médica à unidade própria.
+- [x] Incorporar a declaração confirmada de acolhimento voluntário, suporte familiar e encaminhamento a unidades habilitadas na Home e transparência; distinção médica e notificação em até 72 horas com fontes legais, treze testes aprovados e seis visitas em 1280/390/320; sem publicação.
 - [ ] Faixas de planos/particular, rotina e facilidades regionais — aguardam confirmação de modalidades, atividades, visitação e disponibilidade de transporte; não anunciar garantias jurídicas, cobertura ou resgate 24h sem confirmação.
 
 - [x] Corrigir Empresa / Titular e Proprietário / Direção para Adelmo João Antunes, vincular CRP 06/130268 à psicóloga Margarete Vasques e preservar Luiz Fernando Soares e os selos verdes; quinze testes e nove visitas em 1280/390/320 confirmam dados e separação dos contatos; sem publicação.
