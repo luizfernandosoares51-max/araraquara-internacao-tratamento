@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Aprofundar as 14 páginas de Cidades com artigos integrados exclusivos, acesso à sede, FAQs correspondentes ao schema e metadados regionais; preservar URLs e validar sem publicar.
+- [x] Aprofundar as 14 páginas de Cidades com artigos integrados exclusivos, acesso à sede, FAQs correspondentes ao schema e metadados regionais com telefone; URLs, imagens próprias e retirada de Bauru preservadas. Quarenta e dois testes aprovados e 14 páginas conferidas em 1280/390/320, HTTP 200, H1 único, perguntas visíveis iguais ao schema e sem overflow. Tempos de viagem, emergência imediata, cura pelo afastamento, desintoxicação natural e sigilo absoluto não prometidos; serviços não confirmados não anunciados. Sem publicação.
 
 - [x] Otimizar Home e Araraquara com H1/H2 locais, FAQ e schema correspondentes, metodologia confirmada, endereço estruturado e telefone no cabeçalho; mapa e rodapé preservados. Trinta e dois testes aprovados e seis visualizações em 1280/390/320 confirmam HTTP 200, H1 único, canonical próprio, perguntas, telefone, iframe e ausência de overflow; comparação por DDD e verificação independente não afirmadas. Sem publicação; presença do iframe não verifica o mapa no domínio publicado nem garante destaque do FAQ ou posição no Google.
 
