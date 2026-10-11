@@ -29,6 +29,9 @@ import {
   whatsappHref,
 } from "@/lib/site";
 import { conceptualImageCaption } from "@/lib/visual-assets";
+import { araraquaraOrientationFaqs } from "@/lib/araraquara-orientation";
+import { institutionalIdentity } from "@/lib/institutional";
+import { Button } from "@/components/ui/button";
 
 const pageUrl = `${siteUrl}/clinica-de-recuperacao-em-araraquara`;
 const araraquaraFacebookHref = "https://www.facebook.com/share/1drREi2gvi/";
@@ -54,6 +57,7 @@ const careSteps = [
 ];
 
 const faqs = [
+  ...araraquaraOrientationFaqs,
   {
     question: "Como procurar ajuda para dependência química em Araraquara?",
     answer:
@@ -101,22 +105,22 @@ export const Route = createFileRoute("/clinica-de-recuperacao-em-araraquara")({
   staticData: { sitemap: true },
   head: () => ({
     meta: [
-      { title: "Clínica de Recuperação em Araraquara | Central de Acolhimento" },
+      { title: "Clínica de Recuperação e Reabilitação em Araraquara - SP | Central" },
       {
         name: "description",
         content:
-          "Informações e orientação para famílias que procuram clínica de recuperação, acolhimento e tratamento para dependência química e alcoolismo em Araraquara e região.",
+          "Acolhimento voluntário e reabilitação psicossocial em Araraquara, SP. Sede própria, apoio psicológico, 12 Passos e orientação às famílias da região.",
       },
-      { property: "og:title", content: "Clínica de Recuperação em Araraquara | Central de Acolhimento" },
+      { property: "og:title", content: "Clínica de Recuperação e Reabilitação em Araraquara - SP | Central" },
       {
         property: "og:description",
         content:
-          "Informações e orientação para famílias que procuram clínica de recuperação, acolhimento e tratamento para dependência química e alcoolismo em Araraquara e região.",
+          "Acolhimento voluntário e reabilitação psicossocial em Araraquara, SP. Sede própria, apoio psicológico, 12 Passos e orientação às famílias da região.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: pageUrl },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Clínica de Recuperação em Araraquara | Central de Acolhimento" },
+      { name: "twitter:title", content: "Clínica de Recuperação e Reabilitação em Araraquara - SP | Central" },
       {
         name: "twitter:description",
         content:
@@ -212,6 +216,9 @@ function AraraquaraPage() {
               <span className="ml-1 inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-2 text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground"><MapPin className="size-3" aria-hidden="true" /> Araraquara/SP</span>
             </div>
           </div>
+          <Button asChild variant="link" className="mt-3 h-auto min-h-12 max-w-full whitespace-normal px-0 text-left">
+            <a href={phoneHref}><Phone className="size-4 shrink-0" aria-hidden="true" />Telefone e WhatsApp: {phoneDisplay}</a>
+          </Button>
           <nav aria-label="Menu principal" className="-mx-5 mt-5 overflow-x-auto px-5 sm:mx-0 sm:px-0">
             <ul className="flex min-w-max items-center gap-x-5 text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
               {mainNav.map((item) =>
@@ -237,8 +244,8 @@ function AraraquaraPage() {
                 <ArrowLeft className="size-4" aria-hidden="true" /> Voltar para a página inicial
               </Link>
               <div className="inline-flex items-center gap-2 rounded-full border border-border bg-glass px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-secondary"><span className="size-1.5 rounded-full bg-accent" /> Informação local e orientação</div>
-              <h1 className="mt-5 max-w-3xl font-display text-[2.25rem] font-bold leading-[1.05] sm:text-5xl lg:text-[3.75rem]">Clínica de Recuperação em <span className="text-secondary">Araraquara</span></h1>
-              <p className="mt-5 max-w-2xl text-[16px] leading-relaxed text-muted-foreground sm:text-lg">Informações sobre acolhimento e tratamento para dependência química e alcoolismo em Araraquara, com orientação para famílias que procuram ajuda.</p>
+              <h1 className="mt-5 max-w-3xl font-display text-[2.25rem] font-bold leading-[1.05] sm:text-5xl lg:text-[3.75rem]">Clínica de Recuperação e Reabilitação em <span className="text-secondary">Araraquara - SP</span></h1>
+              <p className="mt-5 max-w-2xl text-[16px] leading-relaxed text-muted-foreground sm:text-lg">Acolhimento voluntário e reabilitação psicossocial para dependência química e alcoolismo, com sede própria em Araraquara e orientação às famílias da região.</p>
               <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">A Central de Acolhimento e Reabilitação orienta pessoas que enfrentam o uso problemático de álcool e outras drogas, sempre considerando a história e as necessidades de cada caso.</p>
               <div className="mt-7 grid gap-3 sm:grid-cols-2">
                 <WhatsAppLink className="flex min-h-14 items-center justify-center gap-2 rounded-lg bg-whatsapp px-5 py-4 text-center text-sm font-semibold text-whatsapp-foreground shadow-lg transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"><MessageCircle className="size-5" aria-hidden="true" /> Falar com nossa equipe</WhatsAppLink>
@@ -268,7 +275,7 @@ function AraraquaraPage() {
             <SectionLabel>Informação antes da decisão</SectionLabel>
             <div className="mt-3 grid gap-8 lg:grid-cols-[.85fr_1.15fr] lg:items-start lg:gap-16">
               <div>
-                <h2 className="font-display text-2xl font-semibold leading-tight sm:text-4xl">Tratamento e acolhimento para dependência química em Araraquara</h2>
+                <h2 className="font-display text-2xl font-semibold leading-tight sm:text-4xl">Metodologia Terapêutica: 12 Passos, Apoio Psicológico e Convivência</h2>
                 <figure className="mt-7 overflow-hidden rounded-lg border border-deep/10 bg-card shadow-sm">
                   <img src={araraquaraPhotos[4].src} width={araraquaraPhotos[4].width} height={araraquaraPhotos[4].height} loading="lazy" decoding="async" alt={araraquaraPhotos[4].alt} className="aspect-[4/3] w-full object-cover" />
                 </figure>
@@ -276,7 +283,7 @@ function AraraquaraPage() {
               <div className="space-y-4 text-[15px] leading-relaxed text-deep/75 sm:text-base">
                 <p>A dependência química é uma condição complexa relacionada ao uso persistente de substâncias, mesmo quando surgem prejuízos à saúde, à rotina ou aos vínculos. Uma página na internet não substitui avaliação e não deve ser usada para diagnosticar alguém.</p>
                 <p>Famílias de Araraquara podem procurar orientação quando o consumo de álcool ou outras drogas começa a provocar preocupação, conflitos, perda de autonomia ou riscos. Buscar informação é diferente de iniciar acolhimento, e acolhimento não significa necessariamente internação.</p>
-                <p>O tratamento pode envolver diferentes estratégias e profissionais. Por isso, cada situação precisa ser analisada individualmente, considerando saúde física e mental, rede familiar, contexto social e disponibilidade dos serviços adequados.</p>
+                <p>A proposta confirmada da Central inclui conscientização em 12 Passos, suporte psicológico com Margarete Vasques (CRP 06/130268), laborterapia, convivência terapêutica e prevenção à recaída. Cada situação precisa ser analisada individualmente; cuidados médicos e hospitalares são encaminhados a estabelecimentos habilitados, não realizados na unidade própria.</p>
               </div>
             </div>
             <div className="mt-10 grid gap-4 md:grid-cols-3">
@@ -298,7 +305,7 @@ function AraraquaraPage() {
             <div className="grid gap-8 lg:grid-cols-[1fr_.8fr] lg:items-center lg:gap-14">
               <div>
                 <SectionLabel>Acolhimento responsável</SectionLabel>
-                <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Reabilitação e acolhimento em Araraquara</h2>
+                <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Acolhimento Humanizado para Dependência Química e Alcoolismo em Araraquara e Região</h2>
                 <p className="mt-5 text-[15px] leading-relaxed text-deep/75 sm:text-base">Pessoas e famílias de Araraquara e dos municípios próximos podem procurar a Central para entender possibilidades de acolhimento e tratamento. A conversa inicial serve para ouvir a situação, esclarecer limites e orientar os próximos passos, conforme a avaliação e a disponibilidade.</p>
                 <p className="mt-4 text-[15px] leading-relaxed text-deep/75 sm:text-base">A proximidade com a família pode ser relevante no planejamento do cuidado, mas nenhum caminho deve ser escolhido apenas pela localização. A segurança, as necessidades individuais e a indicação profissional precisam vir primeiro.</p>
               </div>
@@ -339,8 +346,8 @@ function AraraquaraPage() {
         <section id="galeria-araraquara" className="scroll-mt-6 border-b border-deep/10 bg-ice">
           <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
              <SectionLabel>Representações institucionais</SectionLabel>
-            <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Conheça a unidade de Araraquara</h2>
-             <p className="mt-5 max-w-3xl text-[15px] leading-relaxed text-deep/75">Veja representações conceituais de acolhimento, escuta e orientação. As imagens não retratam instalações, pacientes ou atendimentos reais.</p>
+            <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Estrutura Terapêutica Local com Sede Própria em Araraquara</h2>
+             <p className="mt-5 max-w-3xl text-[15px] leading-relaxed text-deep/75">A única sede física da Central fica na R. Alfredo Micelli, 70, Condomínio Satélite, Araraquara - SP, CEP 14808-579. A família pode organizar visitas agendadas e contato direto com a coordenação local. As imagens abaixo são representações conceituais de acolhimento, escuta e orientação; não retratam instalações, pacientes ou atendimentos reais.</p>
             <div className="mt-8">
               <AraraquaraPhotoGallery light />
             </div>
