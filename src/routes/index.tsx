@@ -123,14 +123,9 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: pageUrl },
-      { property: "og:image", content: heroImageUrl },
-      { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: visualAssets.home.hero.alt },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Clínica de Recuperação e Reabilitação em Araraquara | Central" },
       { name: "twitter:description", content: "Informação, acolhimento e orientação sobre tratamento para dependência química e alcoolismo." },
-      { name: "twitter:image", content: heroImageUrl },
     ],
     links: [{ rel: "canonical", href: pageUrl }],
     scripts: [
@@ -154,7 +149,6 @@ export const Route = createFileRoute("/")({
                description: "Acolhimento voluntário em sede própria em Araraquara, apoio psicológico, 12 Passos e orientação às famílias da região, sem promessa de resultados.",
               isPartOf: { "@id": `${pageUrl}#website` },
               about: { "@id": `${pageUrl}#organization` },
-              primaryImageOfPage: { "@type": "ImageObject", url: heroImageUrl, width: 1200, height: 630 },
               inLanguage: "pt-BR",
             },
             {
@@ -163,6 +157,8 @@ export const Route = createFileRoute("/")({
               name: "Central de Acolhimento e Reabilitação",
               url: pageUrl,
               telephone: "+5516997654579",
+              address: institutionalIdentity.postalAddress,
+              hasMap: institutionalIdentity.mapsHref,
               areaServed: "Estado de São Paulo",
               sameAs: [facebookHref, instagramHref],
               description:
