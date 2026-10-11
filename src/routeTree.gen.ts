@@ -32,11 +32,16 @@ import { Route as ClinicaDeRecuperacaoEmSaoCarlosSpRouteImport } from './routes/
 import { Route as ClinicaDeRecuperacaoEmTaquaritingaSpRouteImport } from './routes/clinica-de-recuperacao-em-taquaritinga-sp'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as FamiliaRouteImport } from './routes/familia'
+import { Route as InternacaoInvoluntariaAraraquaraRouteImport } from './routes/internacao-involuntaria-araraquara'
+import { Route as InternacaoVoluntariaAraraquaraRouteImport } from './routes/internacao-voluntaria-araraquara'
 import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
+import { Route as ResgateRemocaoAraraquaraRouteImport } from './routes/resgate-remocao-araraquara'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TermosDeAcolhimentoRouteImport } from './routes/termos-de-acolhimento'
 import { Route as TransparenciaRouteImport } from './routes/transparencia'
 import { Route as TratamentoRouteImport } from './routes/tratamento'
+import { Route as TratamentoAlcoolismoAraraquaraRouteImport } from './routes/tratamento-alcoolismo-araraquara'
+import { Route as TratamentoCocainaCrackAraraquaraRouteImport } from './routes/tratamento-cocaina-crack-araraquara'
 import { Route as VideosRouteImport } from './routes/videos'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
@@ -179,11 +184,29 @@ const FamiliaRoute = FamiliaRouteImport.update({
   path: '/familia',
   getParentRoute: () => rootRouteImport,
 } as any)
+const InternacaoInvoluntariaAraraquaraRoute =
+  InternacaoInvoluntariaAraraquaraRouteImport.update({
+    id: '/internacao-involuntaria-araraquara',
+    path: '/internacao-involuntaria-araraquara',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InternacaoVoluntariaAraraquaraRoute =
+  InternacaoVoluntariaAraraquaraRouteImport.update({
+    id: '/internacao-voluntaria-araraquara',
+    path: '/internacao-voluntaria-araraquara',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
   id: '/politica-de-privacidade',
   path: '/politica-de-privacidade',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ResgateRemocaoAraraquaraRoute =
+  ResgateRemocaoAraraquaraRouteImport.update({
+    id: '/resgate-remocao-araraquara',
+    path: '/resgate-remocao-araraquara',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -204,6 +227,18 @@ const TratamentoRoute = TratamentoRouteImport.update({
   path: '/tratamento',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TratamentoAlcoolismoAraraquaraRoute =
+  TratamentoAlcoolismoAraraquaraRouteImport.update({
+    id: '/tratamento-alcoolismo-araraquara',
+    path: '/tratamento-alcoolismo-araraquara',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const TratamentoCocainaCrackAraraquaraRoute =
+  TratamentoCocainaCrackAraraquaraRouteImport.update({
+    id: '/tratamento-cocaina-crack-araraquara',
+    path: '/tratamento-cocaina-crack-araraquara',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const VideosRoute = VideosRouteImport.update({
   id: '/videos',
   path: '/videos',
@@ -292,11 +327,16 @@ export interface FileRoutesByFullPath {
   '/clinica-de-recuperacao-em-taquaritinga-sp': typeof ClinicaDeRecuperacaoEmTaquaritingaSpRoute
   '/contato': typeof ContatoRoute
   '/familia': typeof FamiliaRoute
+  '/internacao-involuntaria-araraquara': typeof InternacaoInvoluntariaAraraquaraRoute
+  '/internacao-voluntaria-araraquara': typeof InternacaoVoluntariaAraraquaraRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
+  '/resgate-remocao-araraquara': typeof ResgateRemocaoAraraquaraRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/termos-de-acolhimento': typeof TermosDeAcolhimentoRoute
   '/transparencia': typeof TransparenciaRoute
   '/tratamento': typeof TratamentoRoute
+  '/tratamento-alcoolismo-araraquara': typeof TratamentoAlcoolismoAraraquaraRoute
+  '/tratamento-cocaina-crack-araraquara': typeof TratamentoCocainaCrackAraraquaraRoute
   '/videos': typeof VideosRoute
   '/api/chat': typeof ApiChatRoute
   '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema': typeof BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute
@@ -332,11 +372,16 @@ export interface FileRoutesByTo {
   '/clinica-de-recuperacao-em-taquaritinga-sp': typeof ClinicaDeRecuperacaoEmTaquaritingaSpRoute
   '/contato': typeof ContatoRoute
   '/familia': typeof FamiliaRoute
+  '/internacao-involuntaria-araraquara': typeof InternacaoInvoluntariaAraraquaraRoute
+  '/internacao-voluntaria-araraquara': typeof InternacaoVoluntariaAraraquaraRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
+  '/resgate-remocao-araraquara': typeof ResgateRemocaoAraraquaraRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/termos-de-acolhimento': typeof TermosDeAcolhimentoRoute
   '/transparencia': typeof TransparenciaRoute
   '/tratamento': typeof TratamentoRoute
+  '/tratamento-alcoolismo-araraquara': typeof TratamentoAlcoolismoAraraquaraRoute
+  '/tratamento-cocaina-crack-araraquara': typeof TratamentoCocainaCrackAraraquaraRoute
   '/videos': typeof VideosRoute
   '/api/chat': typeof ApiChatRoute
   '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema': typeof BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute
@@ -374,11 +419,16 @@ export interface FileRoutesById {
   '/clinica-de-recuperacao-em-taquaritinga-sp': typeof ClinicaDeRecuperacaoEmTaquaritingaSpRoute
   '/contato': typeof ContatoRoute
   '/familia': typeof FamiliaRoute
+  '/internacao-involuntaria-araraquara': typeof InternacaoInvoluntariaAraraquaraRoute
+  '/internacao-voluntaria-araraquara': typeof InternacaoVoluntariaAraraquaraRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
+  '/resgate-remocao-araraquara': typeof ResgateRemocaoAraraquaraRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/termos-de-acolhimento': typeof TermosDeAcolhimentoRoute
   '/transparencia': typeof TransparenciaRoute
   '/tratamento': typeof TratamentoRoute
+  '/tratamento-alcoolismo-araraquara': typeof TratamentoAlcoolismoAraraquaraRoute
+  '/tratamento-cocaina-crack-araraquara': typeof TratamentoCocainaCrackAraraquaraRoute
   '/videos': typeof VideosRoute
   '/api/chat': typeof ApiChatRoute
   '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema': typeof BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute
@@ -417,11 +467,16 @@ export interface FileRouteTypes {
     | '/clinica-de-recuperacao-em-taquaritinga-sp'
     | '/contato'
     | '/familia'
+    | '/internacao-involuntaria-araraquara'
+    | '/internacao-voluntaria-araraquara'
     | '/politica-de-privacidade'
+    | '/resgate-remocao-araraquara'
     | '/sitemap.xml'
     | '/termos-de-acolhimento'
     | '/transparencia'
     | '/tratamento'
+    | '/tratamento-alcoolismo-araraquara'
+    | '/tratamento-cocaina-crack-araraquara'
     | '/videos'
     | '/api/chat'
     | '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema'
@@ -457,11 +512,16 @@ export interface FileRouteTypes {
     | '/clinica-de-recuperacao-em-taquaritinga-sp'
     | '/contato'
     | '/familia'
+    | '/internacao-involuntaria-araraquara'
+    | '/internacao-voluntaria-araraquara'
     | '/politica-de-privacidade'
+    | '/resgate-remocao-araraquara'
     | '/sitemap.xml'
     | '/termos-de-acolhimento'
     | '/transparencia'
     | '/tratamento'
+    | '/tratamento-alcoolismo-araraquara'
+    | '/tratamento-cocaina-crack-araraquara'
     | '/videos'
     | '/api/chat'
     | '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema'
@@ -498,11 +558,16 @@ export interface FileRouteTypes {
     | '/clinica-de-recuperacao-em-taquaritinga-sp'
     | '/contato'
     | '/familia'
+    | '/internacao-involuntaria-araraquara'
+    | '/internacao-voluntaria-araraquara'
     | '/politica-de-privacidade'
+    | '/resgate-remocao-araraquara'
     | '/sitemap.xml'
     | '/termos-de-acolhimento'
     | '/transparencia'
     | '/tratamento'
+    | '/tratamento-alcoolismo-araraquara'
+    | '/tratamento-cocaina-crack-araraquara'
     | '/videos'
     | '/api/chat'
     | '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema'
@@ -540,11 +605,16 @@ export interface RootRouteChildren {
   ClinicaDeRecuperacaoEmTaquaritingaSpRoute: typeof ClinicaDeRecuperacaoEmTaquaritingaSpRoute
   ContatoRoute: typeof ContatoRoute
   FamiliaRoute: typeof FamiliaRoute
+  InternacaoInvoluntariaAraraquaraRoute: typeof InternacaoInvoluntariaAraraquaraRoute
+  InternacaoVoluntariaAraraquaraRoute: typeof InternacaoVoluntariaAraraquaraRoute
   PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
+  ResgateRemocaoAraraquaraRoute: typeof ResgateRemocaoAraraquaraRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermosDeAcolhimentoRoute: typeof TermosDeAcolhimentoRoute
   TransparenciaRoute: typeof TransparenciaRoute
   TratamentoRoute: typeof TratamentoRoute
+  TratamentoAlcoolismoAraraquaraRoute: typeof TratamentoAlcoolismoAraraquaraRoute
+  TratamentoCocainaCrackAraraquaraRoute: typeof TratamentoCocainaCrackAraraquaraRoute
   VideosRoute: typeof VideosRoute
   ApiChatRoute: typeof ApiChatRoute
 }
@@ -712,11 +782,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FamiliaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/internacao-involuntaria-araraquara': {
+      id: '/internacao-involuntaria-araraquara'
+      path: '/internacao-involuntaria-araraquara'
+      fullPath: '/internacao-involuntaria-araraquara'
+      preLoaderRoute: typeof InternacaoInvoluntariaAraraquaraRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/internacao-voluntaria-araraquara': {
+      id: '/internacao-voluntaria-araraquara'
+      path: '/internacao-voluntaria-araraquara'
+      fullPath: '/internacao-voluntaria-araraquara'
+      preLoaderRoute: typeof InternacaoVoluntariaAraraquaraRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/politica-de-privacidade': {
       id: '/politica-de-privacidade'
       path: '/politica-de-privacidade'
       fullPath: '/politica-de-privacidade'
       preLoaderRoute: typeof PoliticaDePrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resgate-remocao-araraquara': {
+      id: '/resgate-remocao-araraquara'
+      path: '/resgate-remocao-araraquara'
+      fullPath: '/resgate-remocao-araraquara'
+      preLoaderRoute: typeof ResgateRemocaoAraraquaraRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap.xml': {
@@ -745,6 +836,20 @@ declare module '@tanstack/react-router' {
       path: '/tratamento'
       fullPath: '/tratamento'
       preLoaderRoute: typeof TratamentoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tratamento-alcoolismo-araraquara': {
+      id: '/tratamento-alcoolismo-araraquara'
+      path: '/tratamento-alcoolismo-araraquara'
+      fullPath: '/tratamento-alcoolismo-araraquara'
+      preLoaderRoute: typeof TratamentoAlcoolismoAraraquaraRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tratamento-cocaina-crack-araraquara': {
+      id: '/tratamento-cocaina-crack-araraquara'
+      path: '/tratamento-cocaina-crack-araraquara'
+      fullPath: '/tratamento-cocaina-crack-araraquara'
+      preLoaderRoute: typeof TratamentoCocainaCrackAraraquaraRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/videos': {
@@ -891,11 +996,16 @@ const rootRouteChildren: RootRouteChildren = {
     ClinicaDeRecuperacaoEmTaquaritingaSpRoute,
   ContatoRoute: ContatoRoute,
   FamiliaRoute: FamiliaRoute,
+  InternacaoInvoluntariaAraraquaraRoute: InternacaoInvoluntariaAraraquaraRoute,
+  InternacaoVoluntariaAraraquaraRoute: InternacaoVoluntariaAraraquaraRoute,
   PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
+  ResgateRemocaoAraraquaraRoute: ResgateRemocaoAraraquaraRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermosDeAcolhimentoRoute: TermosDeAcolhimentoRoute,
   TransparenciaRoute: TransparenciaRoute,
   TratamentoRoute: TratamentoRoute,
+  TratamentoAlcoolismoAraraquaraRoute: TratamentoAlcoolismoAraraquaraRoute,
+  TratamentoCocainaCrackAraraquaraRoute: TratamentoCocainaCrackAraraquaraRoute,
   VideosRoute: VideosRoute,
   ApiChatRoute: ApiChatRoute,
 }
