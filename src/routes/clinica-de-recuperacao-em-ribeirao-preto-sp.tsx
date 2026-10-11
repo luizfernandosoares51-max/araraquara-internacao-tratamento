@@ -20,6 +20,7 @@ import {
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { CityEditorialSection } from "@/components/city-editorial-section";
+import { RibeiraoPretoSpecialties } from "@/components/ribeirao-preto-specialties";
 import { emailDisplay, emailHref, phoneDisplay, phoneHref, siteUrl, whatsappHref } from "@/lib/site";
 import { visualAssets } from "@/lib/visual-assets";
 
@@ -280,6 +281,7 @@ function OfficialRibeiraoPretoPage() {
             </div>
           </div>
         </section>
+        <RibeiraoPretoSpecialties />
         <div className="bg-background px-5 text-foreground sm:px-8 lg:px-12"><div className="mx-auto max-w-7xl"><CityEditorialSection slug="ribeirao-preto-sp" /></div></div>
 
 
