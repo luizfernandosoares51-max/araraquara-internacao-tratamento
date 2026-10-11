@@ -1,3 +1,4 @@
+import { cityEditorialFaqs, cityEditorialMetadata } from "@/lib/city-editorial";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
@@ -15,15 +16,13 @@ import {
 
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import { Button } from "@/components/ui/button";
-import { RegionalCare } from "@/components/care-program-sections";
+import { CityEditorialSection } from "@/components/city-editorial-section";
 import { emailDisplay, emailHref, phoneDisplay, phoneHref, siteUrl, whatsappHref } from "@/lib/site";
 import { visualAssets } from "@/lib/visual-assets";
 
 const pagePath = "/clinica-de-recuperacao-em-rio-claro-sp";
 const pageUrl = `${siteUrl}${pagePath}`;
-const title = "Clínica de Recuperação em Rio Claro | Central de Acolhimento";
-const description =
-  "Orientação para famílias de Rio Claro que buscam tratamento para dependência química, alcoolismo e outras situações relacionadas ao uso de álcool e drogas.";
+const { title, description } = cityEditorialMetadata("rio-claro-sp");
 
 const warningSigns = [
   {
@@ -59,7 +58,7 @@ const supportSteps = [
   "Esclarecer como funciona o acolhimento",
   "Conversar sobre internação somente quando essa alternativa precisar ser avaliada",
   "Orientar sobre documentos e preparação necessária",
-  "Buscar uma unidade compatível com o perfil e as condições do caso",
+  "Avaliar acolhimento voluntário na sede própria de Araraquara ou encaminhamento médico externo, conforme a necessidade",
   "Manter a família informada durante a busca por tratamento",
 ];
 
@@ -69,11 +68,12 @@ const processSteps = [
   { title: "Entendimento da situação", text: "São considerados histórico, momento atual, riscos e rede de apoio." },
   { title: "Orientação sobre possibilidades", text: "A equipe explica caminhos que podem ser analisados para o cuidado." },
   { title: "Avaliação da necessidade", text: "A indicação de tratamento depende de análise individual; internação não é automática." },
-  { title: "Definição da unidade adequada", text: "Quando aplicável, busca-se uma estrutura compatível com as necessidades identificadas." },
+  { title: "Definição da unidade adequada", text: "Avalia-se a sede própria em Araraquara para acolhimento voluntário; necessidades médicas exigem serviço habilitado externo." },
   { title: "Preparação para o acolhimento", text: "A família recebe informações sobre documentos, condições e próximos passos." },
 ];
 
 const faqs = [
+  ...cityEditorialFaqs("rio-claro-sp"),
   {
     question: "Existe clínica de recuperação em Rio Claro?",
     answer:
@@ -87,7 +87,7 @@ const faqs = [
   {
     question: "Como funciona o acolhimento de uma pessoa de Rio Claro?",
     answer:
-      "O processo começa com a apresentação da situação e o esclarecimento de dúvidas. Se o acolhimento for uma possibilidade, ainda será necessário avaliar o caso, confirmar uma unidade adequada, verificar disponibilidade e organizar a preparação. O processo varia conforme cada situação.",
+      "O processo começa com a apresentação da situação e o esclarecimento de dúvidas. Se o acolhimento for uma possibilidade, ainda será necessário avaliar o caso, confirmar as condições da sede própria em Araraquara, verificar disponibilidade e organizar a preparação. O processo varia conforme cada situação.",
   },
   {
     question: "Onde buscar ajuda para alcoolismo em Rio Claro?",
@@ -112,7 +112,7 @@ const faqs = [
   {
     question: "A Central possui unidade em Rio Claro?",
     answer:
-      "Não há informação de unidade física da Central em Rio Claro. Esta é uma página de orientação local para moradores da cidade, e qualquer encaminhamento depende da avaliação e da definição de uma unidade adequada.",
+      "Não. A única sede física da Central fica em Araraquara, na R. Alfredo Micelli, 70. Esta página orienta famílias de Rio Claro; acolhimento voluntário depende de avaliação e disponibilidade. Necessidades médicas são encaminhadas a serviços habilitados externos.",
   },
   {
     question: "Como saber qual tipo de tratamento é adequado?",
@@ -191,6 +191,7 @@ function RioClaroPage() {
             </Button>
           </div>
         </div>
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12"><Button asChild variant="link" className="h-auto min-h-12 max-w-full whitespace-normal px-0 text-left"><a href={phoneHref}><Phone aria-hidden="true" />{phoneDisplay}</a></Button></div>
       </header>
 
       <main>
@@ -248,6 +249,8 @@ function RioClaroPage() {
             </div>
           </div>
         </section>
+        <div className="bg-background px-5 text-foreground sm:px-8 lg:px-12"><div className="mx-auto max-w-7xl"><CityEditorialSection slug="rio-claro-sp" /></div></div>
+
 
         <section id="tratamento" className="py-16 lg:py-24">
           <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[.72fr_1.28fr] lg:px-12">
@@ -418,7 +421,6 @@ function RioClaroPage() {
             </div>
           </div>
         </section>
-        <div className="bg-background px-5 text-foreground sm:px-8 lg:px-12"><div className="mx-auto max-w-7xl"><RegionalCare cityName="Rio Claro" /></div></div>
       </main>
 
       

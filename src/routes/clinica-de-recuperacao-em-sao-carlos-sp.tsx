@@ -1,3 +1,4 @@
+import { cityEditorialFaqs, cityEditorialMetadata } from "@/lib/city-editorial";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
@@ -14,7 +15,8 @@ import {
 } from "lucide-react";
 
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
-import { RegionalCare } from "@/components/care-program-sections";
+import { Button } from "@/components/ui/button";
+import { CityEditorialSection } from "@/components/city-editorial-section";
 import {
   emailDisplay,
   emailHref,
@@ -28,12 +30,11 @@ import { visualAssets } from "@/lib/visual-assets";
 
 const pagePath = "/clinica-de-recuperacao-em-sao-carlos-sp";
 const pageUrl = `${siteUrl}${pagePath}`;
-const title = "Clínica de Recuperação em São Carlos | Tratamento e Acolhimento";
-const description =
-  "Orientação para famílias de São Carlos sobre dependência química, alcoolismo, tratamento, acolhimento, internação e serviços públicos de saúde mental.";
+const { title, description } = cityEditorialMetadata("sao-carlos-sp");
 const saoCarlosFacebookHref = "https://www.facebook.com/share/19LjvZp41r/";
 
 const faqs = [
+  ...cityEditorialFaqs("sao-carlos-sp"),
   {
     question: "Onde procurar ajuda para dependência química em São Carlos?",
     answer:
@@ -149,6 +150,7 @@ function SaoCarlosPage() {
               <MapPin className="size-4 text-brand" aria-hidden="true" /> São Carlos e região
             </span>
           </div>
+          <Button asChild variant="link" className="mt-3 h-auto min-h-12 max-w-full whitespace-normal px-0 text-left"><a href={phoneHref}><Phone aria-hidden="true" />{phoneDisplay}</a></Button>
           <nav aria-label="Menu principal" className="-mx-5 mt-5 overflow-x-auto px-5 sm:mx-0 sm:px-0">
             <ul className="flex min-w-max items-center gap-5 text-[11px] font-semibold uppercase text-deep/65">
               <li><Link to="/" className="hover:text-brand">Início</Link></li>
@@ -209,6 +211,9 @@ function SaoCarlosPage() {
             <figcaption className="border-t border-deep/10 px-5 py-4 text-xs leading-relaxed text-deep/60">Imagem conceitual gerada por IA; não representa uma unidade física em São Carlos.</figcaption>
           </figure>
         </section>
+
+
+        <div className="bg-background px-5 text-foreground sm:px-8 lg:px-12"><div className="mx-auto max-w-7xl"><CityEditorialSection slug="sao-carlos-sp" /></div></div>
 
         <section id="tratamento" className="bg-deep py-16 text-foreground lg:py-24">
           <div className="mx-auto max-w-6xl px-5 sm:px-8 lg:px-12">
@@ -345,7 +350,6 @@ function SaoCarlosPage() {
             </div>
           </div>
         </section>
-        <div className="bg-background px-5 text-foreground sm:px-8 lg:px-12"><div className="mx-auto max-w-6xl"><RegionalCare cityName="São Carlos" /></div></div>
       </main>
 
       

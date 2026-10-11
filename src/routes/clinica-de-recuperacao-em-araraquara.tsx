@@ -1,3 +1,5 @@
+import { cityEditorialFaqs, cityEditorialMetadata } from "@/lib/city-editorial";
+import { CityEditorialSection } from "@/components/city-editorial-section";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
@@ -17,7 +19,7 @@ import type { ReactNode } from "react";
 
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import { AraraquaraPhotoGallery, araraquaraPhotos } from "@/components/araraquara-photo-gallery";
-import { CareSpecialties, FinancialGuidance, RegionalCare, TherapeuticRoutine } from "@/components/care-program-sections";
+import { CareSpecialties, FinancialGuidance, TherapeuticRoutine } from "@/components/care-program-sections";
 import {
   emailDisplay,
   emailHref,
@@ -32,6 +34,8 @@ import { conceptualImageCaption } from "@/lib/visual-assets";
 import { araraquaraOrientationFaqs } from "@/lib/araraquara-orientation";
 import { institutionalIdentity } from "@/lib/institutional";
 import { Button } from "@/components/ui/button";
+
+const { title, description } = cityEditorialMetadata("araraquara");
 
 const pageUrl = `${siteUrl}/clinica-de-recuperacao-em-araraquara`;
 const araraquaraFacebookHref = "https://www.facebook.com/share/1drREi2gvi/";
@@ -57,6 +61,7 @@ const careSteps = [
 ];
 
 const faqs = [
+  ...cityEditorialFaqs("araraquara"),
   ...araraquaraOrientationFaqs,
   {
     question: "Como procurar ajuda para dependência química em Araraquara?",
@@ -105,26 +110,26 @@ export const Route = createFileRoute("/clinica-de-recuperacao-em-araraquara")({
   staticData: { sitemap: true },
   head: () => ({
     meta: [
-      { title: "Clínica de Recuperação e Reabilitação em Araraquara - SP | Central" },
+      { title },
       {
         name: "description",
         content:
-          "Acolhimento voluntário e reabilitação psicossocial em Araraquara, SP. Sede própria, apoio psicológico, 12 Passos e orientação às famílias da região.",
+          description,
       },
-      { property: "og:title", content: "Clínica de Recuperação e Reabilitação em Araraquara - SP | Central" },
+      { property: "og:title", content: title },
       {
         property: "og:description",
         content:
-          "Acolhimento voluntário e reabilitação psicossocial em Araraquara, SP. Sede própria, apoio psicológico, 12 Passos e orientação às famílias da região.",
+          description,
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: pageUrl },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Clínica de Recuperação e Reabilitação em Araraquara - SP | Central" },
+      { name: "twitter:title", content: title },
       {
         name: "twitter:description",
         content:
-          "Informações e orientação para famílias que procuram acolhimento e tratamento para dependência química e alcoolismo em Araraquara.",
+          description,
       },
     ],
     links: [{ rel: "canonical", href: pageUrl }],
@@ -271,6 +276,9 @@ function AraraquaraPage() {
           </div>
         </section>
 
+
+        <div className="bg-background px-5 text-foreground sm:px-8 lg:px-12"><div className="mx-auto max-w-7xl"><CityEditorialSection slug="araraquara" /></div></div>
+
         <section id="tratamento" className="scroll-mt-6 bg-ice">
           <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
             <CareSpecialties />
@@ -379,7 +387,6 @@ function AraraquaraPage() {
           </div>
         </section>
 
-        <div className="bg-background px-5 text-foreground sm:px-8 lg:px-12"><div className="mx-auto max-w-6xl"><RegionalCare cityName="Araraquara" /></div></div>
         <section id="contato" className="scroll-mt-6 bg-deep text-primary-foreground">
           <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
             <div className="max-w-4xl"><p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">Orientação em Araraquara</p><h2 className="mt-3 font-display text-3xl font-bold leading-tight sm:text-5xl">Precisa conversar sobre uma situação de dependência química ou alcoolismo?</h2><p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-primary-foreground/70">A equipe pode ouvir sua dúvida e explicar possibilidades de acolhimento e tratamento. Cada caso é analisado individualmente, sem garantia de resultado e sem afirmar que internação seja sempre necessária.</p><div className="mt-7 flex flex-col gap-3 sm:flex-row"><WhatsAppLink className="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg bg-whatsapp px-6 py-4 text-sm font-semibold text-whatsapp-foreground"><MessageCircle className="size-5" aria-hidden="true" /> Falar pelo WhatsApp</WhatsAppLink><a href={phoneHref} className="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg border border-primary-foreground/30 px-6 py-4 text-sm font-semibold"><Phone className="size-4" aria-hidden="true" /> Ligar agora · {phoneDisplay}</a></div><a href={emailHref} className="mt-5 inline-flex items-center gap-2 break-all text-sm font-semibold text-secondary hover:underline"><Mail className="size-4 shrink-0" aria-hidden="true" /> {emailDisplay}</a></div>
