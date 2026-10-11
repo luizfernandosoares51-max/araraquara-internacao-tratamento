@@ -33,19 +33,24 @@ import { Route as ClinicaDeRecuperacaoEmTaquaritingaSpRouteImport } from './rout
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as FamiliaRouteImport } from './routes/familia'
 import { Route as InternacaoInvoluntariaAraraquaraRouteImport } from './routes/internacao-involuntaria-araraquara'
+import { Route as InternacaoInvoluntariaRioClaroRouteImport } from './routes/internacao-involuntaria-rio-claro'
 import { Route as InternacaoInvoluntariaSaoCarlosRouteImport } from './routes/internacao-involuntaria-sao-carlos'
 import { Route as InternacaoVoluntariaAraraquaraRouteImport } from './routes/internacao-voluntaria-araraquara'
+import { Route as InternacaoVoluntariaRioClaroRouteImport } from './routes/internacao-voluntaria-rio-claro'
 import { Route as InternacaoVoluntariaSaoCarlosRouteImport } from './routes/internacao-voluntaria-sao-carlos'
 import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
 import { Route as ResgateRemocaoAraraquaraRouteImport } from './routes/resgate-remocao-araraquara'
+import { Route as ResgateRemocaoRioClaroRouteImport } from './routes/resgate-remocao-rio-claro'
 import { Route as ResgateRemocaoSaoCarlosRouteImport } from './routes/resgate-remocao-sao-carlos'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TermosDeAcolhimentoRouteImport } from './routes/termos-de-acolhimento'
 import { Route as TransparenciaRouteImport } from './routes/transparencia'
 import { Route as TratamentoRouteImport } from './routes/tratamento'
 import { Route as TratamentoAlcoolismoAraraquaraRouteImport } from './routes/tratamento-alcoolismo-araraquara'
+import { Route as TratamentoAlcoolismoRioClaroRouteImport } from './routes/tratamento-alcoolismo-rio-claro'
 import { Route as TratamentoAlcoolismoSaoCarlosRouteImport } from './routes/tratamento-alcoolismo-sao-carlos'
 import { Route as TratamentoCocainaCrackAraraquaraRouteImport } from './routes/tratamento-cocaina-crack-araraquara'
+import { Route as TratamentoCocainaCrackRioClaroRouteImport } from './routes/tratamento-cocaina-crack-rio-claro'
 import { Route as TratamentoCocainaCrackSaoCarlosRouteImport } from './routes/tratamento-cocaina-crack-sao-carlos'
 import { Route as VideosRouteImport } from './routes/videos'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
@@ -195,6 +200,12 @@ const InternacaoInvoluntariaAraraquaraRoute =
     path: '/internacao-involuntaria-araraquara',
     getParentRoute: () => rootRouteImport,
   } as any)
+const InternacaoInvoluntariaRioClaroRoute =
+  InternacaoInvoluntariaRioClaroRouteImport.update({
+    id: '/internacao-involuntaria-rio-claro',
+    path: '/internacao-involuntaria-rio-claro',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const InternacaoInvoluntariaSaoCarlosRoute =
   InternacaoInvoluntariaSaoCarlosRouteImport.update({
     id: '/internacao-involuntaria-sao-carlos',
@@ -205,6 +216,12 @@ const InternacaoVoluntariaAraraquaraRoute =
   InternacaoVoluntariaAraraquaraRouteImport.update({
     id: '/internacao-voluntaria-araraquara',
     path: '/internacao-voluntaria-araraquara',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const InternacaoVoluntariaRioClaroRoute =
+  InternacaoVoluntariaRioClaroRouteImport.update({
+    id: '/internacao-voluntaria-rio-claro',
+    path: '/internacao-voluntaria-rio-claro',
     getParentRoute: () => rootRouteImport,
   } as any)
 const InternacaoVoluntariaSaoCarlosRoute =
@@ -224,6 +241,11 @@ const ResgateRemocaoAraraquaraRoute =
     path: '/resgate-remocao-araraquara',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ResgateRemocaoRioClaroRoute = ResgateRemocaoRioClaroRouteImport.update({
+  id: '/resgate-remocao-rio-claro',
+  path: '/resgate-remocao-rio-claro',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ResgateRemocaoSaoCarlosRoute = ResgateRemocaoSaoCarlosRouteImport.update({
   id: '/resgate-remocao-sao-carlos',
   path: '/resgate-remocao-sao-carlos',
@@ -255,6 +277,12 @@ const TratamentoAlcoolismoAraraquaraRoute =
     path: '/tratamento-alcoolismo-araraquara',
     getParentRoute: () => rootRouteImport,
   } as any)
+const TratamentoAlcoolismoRioClaroRoute =
+  TratamentoAlcoolismoRioClaroRouteImport.update({
+    id: '/tratamento-alcoolismo-rio-claro',
+    path: '/tratamento-alcoolismo-rio-claro',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const TratamentoAlcoolismoSaoCarlosRoute =
   TratamentoAlcoolismoSaoCarlosRouteImport.update({
     id: '/tratamento-alcoolismo-sao-carlos',
@@ -265,6 +293,12 @@ const TratamentoCocainaCrackAraraquaraRoute =
   TratamentoCocainaCrackAraraquaraRouteImport.update({
     id: '/tratamento-cocaina-crack-araraquara',
     path: '/tratamento-cocaina-crack-araraquara',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const TratamentoCocainaCrackRioClaroRoute =
+  TratamentoCocainaCrackRioClaroRouteImport.update({
+    id: '/tratamento-cocaina-crack-rio-claro',
+    path: '/tratamento-cocaina-crack-rio-claro',
     getParentRoute: () => rootRouteImport,
   } as any)
 const TratamentoCocainaCrackSaoCarlosRoute =
@@ -362,19 +396,24 @@ export interface FileRoutesByFullPath {
   '/contato': typeof ContatoRoute
   '/familia': typeof FamiliaRoute
   '/internacao-involuntaria-araraquara': typeof InternacaoInvoluntariaAraraquaraRoute
+  '/internacao-involuntaria-rio-claro': typeof InternacaoInvoluntariaRioClaroRoute
   '/internacao-involuntaria-sao-carlos': typeof InternacaoInvoluntariaSaoCarlosRoute
   '/internacao-voluntaria-araraquara': typeof InternacaoVoluntariaAraraquaraRoute
+  '/internacao-voluntaria-rio-claro': typeof InternacaoVoluntariaRioClaroRoute
   '/internacao-voluntaria-sao-carlos': typeof InternacaoVoluntariaSaoCarlosRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/resgate-remocao-araraquara': typeof ResgateRemocaoAraraquaraRoute
+  '/resgate-remocao-rio-claro': typeof ResgateRemocaoRioClaroRoute
   '/resgate-remocao-sao-carlos': typeof ResgateRemocaoSaoCarlosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/termos-de-acolhimento': typeof TermosDeAcolhimentoRoute
   '/transparencia': typeof TransparenciaRoute
   '/tratamento': typeof TratamentoRoute
   '/tratamento-alcoolismo-araraquara': typeof TratamentoAlcoolismoAraraquaraRoute
+  '/tratamento-alcoolismo-rio-claro': typeof TratamentoAlcoolismoRioClaroRoute
   '/tratamento-alcoolismo-sao-carlos': typeof TratamentoAlcoolismoSaoCarlosRoute
   '/tratamento-cocaina-crack-araraquara': typeof TratamentoCocainaCrackAraraquaraRoute
+  '/tratamento-cocaina-crack-rio-claro': typeof TratamentoCocainaCrackRioClaroRoute
   '/tratamento-cocaina-crack-sao-carlos': typeof TratamentoCocainaCrackSaoCarlosRoute
   '/videos': typeof VideosRoute
   '/api/chat': typeof ApiChatRoute
@@ -412,19 +451,24 @@ export interface FileRoutesByTo {
   '/contato': typeof ContatoRoute
   '/familia': typeof FamiliaRoute
   '/internacao-involuntaria-araraquara': typeof InternacaoInvoluntariaAraraquaraRoute
+  '/internacao-involuntaria-rio-claro': typeof InternacaoInvoluntariaRioClaroRoute
   '/internacao-involuntaria-sao-carlos': typeof InternacaoInvoluntariaSaoCarlosRoute
   '/internacao-voluntaria-araraquara': typeof InternacaoVoluntariaAraraquaraRoute
+  '/internacao-voluntaria-rio-claro': typeof InternacaoVoluntariaRioClaroRoute
   '/internacao-voluntaria-sao-carlos': typeof InternacaoVoluntariaSaoCarlosRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/resgate-remocao-araraquara': typeof ResgateRemocaoAraraquaraRoute
+  '/resgate-remocao-rio-claro': typeof ResgateRemocaoRioClaroRoute
   '/resgate-remocao-sao-carlos': typeof ResgateRemocaoSaoCarlosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/termos-de-acolhimento': typeof TermosDeAcolhimentoRoute
   '/transparencia': typeof TransparenciaRoute
   '/tratamento': typeof TratamentoRoute
   '/tratamento-alcoolismo-araraquara': typeof TratamentoAlcoolismoAraraquaraRoute
+  '/tratamento-alcoolismo-rio-claro': typeof TratamentoAlcoolismoRioClaroRoute
   '/tratamento-alcoolismo-sao-carlos': typeof TratamentoAlcoolismoSaoCarlosRoute
   '/tratamento-cocaina-crack-araraquara': typeof TratamentoCocainaCrackAraraquaraRoute
+  '/tratamento-cocaina-crack-rio-claro': typeof TratamentoCocainaCrackRioClaroRoute
   '/tratamento-cocaina-crack-sao-carlos': typeof TratamentoCocainaCrackSaoCarlosRoute
   '/videos': typeof VideosRoute
   '/api/chat': typeof ApiChatRoute
@@ -464,19 +508,24 @@ export interface FileRoutesById {
   '/contato': typeof ContatoRoute
   '/familia': typeof FamiliaRoute
   '/internacao-involuntaria-araraquara': typeof InternacaoInvoluntariaAraraquaraRoute
+  '/internacao-involuntaria-rio-claro': typeof InternacaoInvoluntariaRioClaroRoute
   '/internacao-involuntaria-sao-carlos': typeof InternacaoInvoluntariaSaoCarlosRoute
   '/internacao-voluntaria-araraquara': typeof InternacaoVoluntariaAraraquaraRoute
+  '/internacao-voluntaria-rio-claro': typeof InternacaoVoluntariaRioClaroRoute
   '/internacao-voluntaria-sao-carlos': typeof InternacaoVoluntariaSaoCarlosRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/resgate-remocao-araraquara': typeof ResgateRemocaoAraraquaraRoute
+  '/resgate-remocao-rio-claro': typeof ResgateRemocaoRioClaroRoute
   '/resgate-remocao-sao-carlos': typeof ResgateRemocaoSaoCarlosRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/termos-de-acolhimento': typeof TermosDeAcolhimentoRoute
   '/transparencia': typeof TransparenciaRoute
   '/tratamento': typeof TratamentoRoute
   '/tratamento-alcoolismo-araraquara': typeof TratamentoAlcoolismoAraraquaraRoute
+  '/tratamento-alcoolismo-rio-claro': typeof TratamentoAlcoolismoRioClaroRoute
   '/tratamento-alcoolismo-sao-carlos': typeof TratamentoAlcoolismoSaoCarlosRoute
   '/tratamento-cocaina-crack-araraquara': typeof TratamentoCocainaCrackAraraquaraRoute
+  '/tratamento-cocaina-crack-rio-claro': typeof TratamentoCocainaCrackRioClaroRoute
   '/tratamento-cocaina-crack-sao-carlos': typeof TratamentoCocainaCrackSaoCarlosRoute
   '/videos': typeof VideosRoute
   '/api/chat': typeof ApiChatRoute
@@ -517,19 +566,24 @@ export interface FileRouteTypes {
     | '/contato'
     | '/familia'
     | '/internacao-involuntaria-araraquara'
+    | '/internacao-involuntaria-rio-claro'
     | '/internacao-involuntaria-sao-carlos'
     | '/internacao-voluntaria-araraquara'
+    | '/internacao-voluntaria-rio-claro'
     | '/internacao-voluntaria-sao-carlos'
     | '/politica-de-privacidade'
     | '/resgate-remocao-araraquara'
+    | '/resgate-remocao-rio-claro'
     | '/resgate-remocao-sao-carlos'
     | '/sitemap.xml'
     | '/termos-de-acolhimento'
     | '/transparencia'
     | '/tratamento'
     | '/tratamento-alcoolismo-araraquara'
+    | '/tratamento-alcoolismo-rio-claro'
     | '/tratamento-alcoolismo-sao-carlos'
     | '/tratamento-cocaina-crack-araraquara'
+    | '/tratamento-cocaina-crack-rio-claro'
     | '/tratamento-cocaina-crack-sao-carlos'
     | '/videos'
     | '/api/chat'
@@ -567,19 +621,24 @@ export interface FileRouteTypes {
     | '/contato'
     | '/familia'
     | '/internacao-involuntaria-araraquara'
+    | '/internacao-involuntaria-rio-claro'
     | '/internacao-involuntaria-sao-carlos'
     | '/internacao-voluntaria-araraquara'
+    | '/internacao-voluntaria-rio-claro'
     | '/internacao-voluntaria-sao-carlos'
     | '/politica-de-privacidade'
     | '/resgate-remocao-araraquara'
+    | '/resgate-remocao-rio-claro'
     | '/resgate-remocao-sao-carlos'
     | '/sitemap.xml'
     | '/termos-de-acolhimento'
     | '/transparencia'
     | '/tratamento'
     | '/tratamento-alcoolismo-araraquara'
+    | '/tratamento-alcoolismo-rio-claro'
     | '/tratamento-alcoolismo-sao-carlos'
     | '/tratamento-cocaina-crack-araraquara'
+    | '/tratamento-cocaina-crack-rio-claro'
     | '/tratamento-cocaina-crack-sao-carlos'
     | '/videos'
     | '/api/chat'
@@ -618,19 +677,24 @@ export interface FileRouteTypes {
     | '/contato'
     | '/familia'
     | '/internacao-involuntaria-araraquara'
+    | '/internacao-involuntaria-rio-claro'
     | '/internacao-involuntaria-sao-carlos'
     | '/internacao-voluntaria-araraquara'
+    | '/internacao-voluntaria-rio-claro'
     | '/internacao-voluntaria-sao-carlos'
     | '/politica-de-privacidade'
     | '/resgate-remocao-araraquara'
+    | '/resgate-remocao-rio-claro'
     | '/resgate-remocao-sao-carlos'
     | '/sitemap.xml'
     | '/termos-de-acolhimento'
     | '/transparencia'
     | '/tratamento'
     | '/tratamento-alcoolismo-araraquara'
+    | '/tratamento-alcoolismo-rio-claro'
     | '/tratamento-alcoolismo-sao-carlos'
     | '/tratamento-cocaina-crack-araraquara'
+    | '/tratamento-cocaina-crack-rio-claro'
     | '/tratamento-cocaina-crack-sao-carlos'
     | '/videos'
     | '/api/chat'
@@ -670,19 +734,24 @@ export interface RootRouteChildren {
   ContatoRoute: typeof ContatoRoute
   FamiliaRoute: typeof FamiliaRoute
   InternacaoInvoluntariaAraraquaraRoute: typeof InternacaoInvoluntariaAraraquaraRoute
+  InternacaoInvoluntariaRioClaroRoute: typeof InternacaoInvoluntariaRioClaroRoute
   InternacaoInvoluntariaSaoCarlosRoute: typeof InternacaoInvoluntariaSaoCarlosRoute
   InternacaoVoluntariaAraraquaraRoute: typeof InternacaoVoluntariaAraraquaraRoute
+  InternacaoVoluntariaRioClaroRoute: typeof InternacaoVoluntariaRioClaroRoute
   InternacaoVoluntariaSaoCarlosRoute: typeof InternacaoVoluntariaSaoCarlosRoute
   PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
   ResgateRemocaoAraraquaraRoute: typeof ResgateRemocaoAraraquaraRoute
+  ResgateRemocaoRioClaroRoute: typeof ResgateRemocaoRioClaroRoute
   ResgateRemocaoSaoCarlosRoute: typeof ResgateRemocaoSaoCarlosRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermosDeAcolhimentoRoute: typeof TermosDeAcolhimentoRoute
   TransparenciaRoute: typeof TransparenciaRoute
   TratamentoRoute: typeof TratamentoRoute
   TratamentoAlcoolismoAraraquaraRoute: typeof TratamentoAlcoolismoAraraquaraRoute
+  TratamentoAlcoolismoRioClaroRoute: typeof TratamentoAlcoolismoRioClaroRoute
   TratamentoAlcoolismoSaoCarlosRoute: typeof TratamentoAlcoolismoSaoCarlosRoute
   TratamentoCocainaCrackAraraquaraRoute: typeof TratamentoCocainaCrackAraraquaraRoute
+  TratamentoCocainaCrackRioClaroRoute: typeof TratamentoCocainaCrackRioClaroRoute
   TratamentoCocainaCrackSaoCarlosRoute: typeof TratamentoCocainaCrackSaoCarlosRoute
   VideosRoute: typeof VideosRoute
   ApiChatRoute: typeof ApiChatRoute
@@ -858,6 +927,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof InternacaoInvoluntariaAraraquaraRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/internacao-involuntaria-rio-claro': {
+      id: '/internacao-involuntaria-rio-claro'
+      path: '/internacao-involuntaria-rio-claro'
+      fullPath: '/internacao-involuntaria-rio-claro'
+      preLoaderRoute: typeof InternacaoInvoluntariaRioClaroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/internacao-involuntaria-sao-carlos': {
       id: '/internacao-involuntaria-sao-carlos'
       path: '/internacao-involuntaria-sao-carlos'
@@ -870,6 +946,13 @@ declare module '@tanstack/react-router' {
       path: '/internacao-voluntaria-araraquara'
       fullPath: '/internacao-voluntaria-araraquara'
       preLoaderRoute: typeof InternacaoVoluntariaAraraquaraRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/internacao-voluntaria-rio-claro': {
+      id: '/internacao-voluntaria-rio-claro'
+      path: '/internacao-voluntaria-rio-claro'
+      fullPath: '/internacao-voluntaria-rio-claro'
+      preLoaderRoute: typeof InternacaoVoluntariaRioClaroRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/internacao-voluntaria-sao-carlos': {
@@ -891,6 +974,13 @@ declare module '@tanstack/react-router' {
       path: '/resgate-remocao-araraquara'
       fullPath: '/resgate-remocao-araraquara'
       preLoaderRoute: typeof ResgateRemocaoAraraquaraRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resgate-remocao-rio-claro': {
+      id: '/resgate-remocao-rio-claro'
+      path: '/resgate-remocao-rio-claro'
+      fullPath: '/resgate-remocao-rio-claro'
+      preLoaderRoute: typeof ResgateRemocaoRioClaroRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/resgate-remocao-sao-carlos': {
@@ -935,6 +1025,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TratamentoAlcoolismoAraraquaraRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tratamento-alcoolismo-rio-claro': {
+      id: '/tratamento-alcoolismo-rio-claro'
+      path: '/tratamento-alcoolismo-rio-claro'
+      fullPath: '/tratamento-alcoolismo-rio-claro'
+      preLoaderRoute: typeof TratamentoAlcoolismoRioClaroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tratamento-alcoolismo-sao-carlos': {
       id: '/tratamento-alcoolismo-sao-carlos'
       path: '/tratamento-alcoolismo-sao-carlos'
@@ -947,6 +1044,13 @@ declare module '@tanstack/react-router' {
       path: '/tratamento-cocaina-crack-araraquara'
       fullPath: '/tratamento-cocaina-crack-araraquara'
       preLoaderRoute: typeof TratamentoCocainaCrackAraraquaraRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tratamento-cocaina-crack-rio-claro': {
+      id: '/tratamento-cocaina-crack-rio-claro'
+      path: '/tratamento-cocaina-crack-rio-claro'
+      fullPath: '/tratamento-cocaina-crack-rio-claro'
+      preLoaderRoute: typeof TratamentoCocainaCrackRioClaroRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tratamento-cocaina-crack-sao-carlos': {
@@ -1101,19 +1205,24 @@ const rootRouteChildren: RootRouteChildren = {
   ContatoRoute: ContatoRoute,
   FamiliaRoute: FamiliaRoute,
   InternacaoInvoluntariaAraraquaraRoute: InternacaoInvoluntariaAraraquaraRoute,
+  InternacaoInvoluntariaRioClaroRoute: InternacaoInvoluntariaRioClaroRoute,
   InternacaoInvoluntariaSaoCarlosRoute: InternacaoInvoluntariaSaoCarlosRoute,
   InternacaoVoluntariaAraraquaraRoute: InternacaoVoluntariaAraraquaraRoute,
+  InternacaoVoluntariaRioClaroRoute: InternacaoVoluntariaRioClaroRoute,
   InternacaoVoluntariaSaoCarlosRoute: InternacaoVoluntariaSaoCarlosRoute,
   PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
   ResgateRemocaoAraraquaraRoute: ResgateRemocaoAraraquaraRoute,
+  ResgateRemocaoRioClaroRoute: ResgateRemocaoRioClaroRoute,
   ResgateRemocaoSaoCarlosRoute: ResgateRemocaoSaoCarlosRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermosDeAcolhimentoRoute: TermosDeAcolhimentoRoute,
   TransparenciaRoute: TransparenciaRoute,
   TratamentoRoute: TratamentoRoute,
   TratamentoAlcoolismoAraraquaraRoute: TratamentoAlcoolismoAraraquaraRoute,
+  TratamentoAlcoolismoRioClaroRoute: TratamentoAlcoolismoRioClaroRoute,
   TratamentoAlcoolismoSaoCarlosRoute: TratamentoAlcoolismoSaoCarlosRoute,
   TratamentoCocainaCrackAraraquaraRoute: TratamentoCocainaCrackAraraquaraRoute,
+  TratamentoCocainaCrackRioClaroRoute: TratamentoCocainaCrackRioClaroRoute,
   TratamentoCocainaCrackSaoCarlosRoute: TratamentoCocainaCrackSaoCarlosRoute,
   VideosRoute: VideosRoute,
   ApiChatRoute: ApiChatRoute,

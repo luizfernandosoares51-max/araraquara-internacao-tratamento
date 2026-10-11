@@ -34,8 +34,20 @@ import saoCarlosCocaine from "@/assets/concept-sao-carlos-cocaine.webp";
 import saoCarlosInvoluntary from "@/assets/concept-sao-carlos-involuntary.webp";
 import saoCarlosVoluntary from "@/assets/concept-sao-carlos-voluntary.webp";
 import saoCarlosTransport from "@/assets/concept-sao-carlos-transport.webp";
+import rioClaroAlcohol from "@/assets/concept-rio-claro-alcohol.webp";
+import rioClaroCocaine from "@/assets/concept-rio-claro-cocaine.webp";
+import rioClaroInvoluntary from "@/assets/concept-rio-claro-involuntary.webp";
+import rioClaroVoluntary from "@/assets/concept-rio-claro-voluntary.webp";
+import rioClaroTransport from "@/assets/concept-rio-claro-transport.webp";
 
 export const visualAssets = {
+  rioClaroSpecialties: {
+    alcohol: { src: rioClaroAlcohol, alt: "Dois familiares conversando em um jardim, imagem conceitual de apoio e escuta" },
+    cocaine: { src: rioClaroCocaine, alt: "Adulto organizando mudas, imagem conceitual de construção de novos hábitos" },
+    involuntary: { src: rioClaroInvoluntary, alt: "Duas mulheres lendo documentos, imagem conceitual de orientação familiar" },
+    voluntary: { src: rioClaroVoluntary, alt: "Pessoa organizando um caderno pela manhã, imagem conceitual de escolha e rotina" },
+    transport: { src: rioClaroTransport, alt: "Familiares preparando uma bolsa, imagem conceitual de viagem planejada" },
+  },
   saoCarlosSpecialties: {
     alcohol: { src: saoCarlosAlcohol, alt: "Dois adultos conversando à mesa, imagem conceitual de reconstrução de vínculos" },
     cocaine: { src: saoCarlosCocaine, alt: "Pessoa com caderno junto a uma janela, imagem conceitual de reorganização da rotina" },
