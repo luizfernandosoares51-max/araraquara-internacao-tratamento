@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Criar cinco páginas especializadas de São Carlos com cartões após a apresentação, conteúdo e imagens próprios, três FAQs, SEO individual, retorno regional e sitemap; validar contatos e navegação sem ampliar o menu ou publicar.
+- [x] Criar cinco páginas especializadas de São Carlos com cartões após a apresentação, conteúdo e cinco imagens WebP próprios, três FAQs por página, SEO individual, retorno regional e inclusão nas 41 URLs do sitemap. Quarenta e três testes aprovados; páginas, imagens, perguntas e navegação verificadas em 1280/390/320. Sede única em Araraquara, encaminhamento médico externo e transporte agendado preservados, sem ampliar o menu ou publicar.
 
 - [x] Criar cinco páginas especializadas ligadas por cartões abaixo da apresentação de Araraquara, sem alterar o menu; conteúdo exclusivo, cinco imagens conceituais WebP, três FAQs por página e SEO próprio, retorno contextual e inclusão nas 36 URLs do sitemap. Trinta e nove testes aprovados e quinze visitas em 1280/390/320 confirmam HTTP 200, H1 único, canonical próprio, imagens, FAQs, contatos separados e navegação. LocalBusiness identifica a sede não hospitalar; MedicalCondition apenas contextualiza álcool/cocaína, sem atribuir MedicalBusiness à Central. Encaminhamento médico externo e remoção agendada preservados, sem anunciar 24h. Sem publicação.
 
