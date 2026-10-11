@@ -29,8 +29,20 @@ import specialtyCocaine from "@/assets/concept-specialty-cocaine.webp";
 import specialtyInvoluntary from "@/assets/concept-specialty-involuntary.webp";
 import specialtyVoluntary from "@/assets/concept-specialty-voluntary.webp";
 import specialtyTransport from "@/assets/concept-specialty-transport.webp";
+import saoCarlosAlcohol from "@/assets/concept-sao-carlos-alcohol.webp";
+import saoCarlosCocaine from "@/assets/concept-sao-carlos-cocaine.webp";
+import saoCarlosInvoluntary from "@/assets/concept-sao-carlos-involuntary.webp";
+import saoCarlosVoluntary from "@/assets/concept-sao-carlos-voluntary.webp";
+import saoCarlosTransport from "@/assets/concept-sao-carlos-transport.webp";
 
 export const visualAssets = {
+  saoCarlosSpecialties: {
+    alcohol: { src: saoCarlosAlcohol, alt: "Dois adultos conversando à mesa, imagem conceitual de reconstrução de vínculos" },
+    cocaine: { src: saoCarlosCocaine, alt: "Pessoa com caderno junto a uma janela, imagem conceitual de reorganização da rotina" },
+    involuntary: { src: saoCarlosInvoluntary, alt: "Familiares conversando junto a documentos, imagem conceitual de orientação e direitos" },
+    voluntary: { src: saoCarlosVoluntary, alt: "Dois adultos caminhando por um parque, imagem conceitual de escolha e continuidade" },
+    transport: { src: saoCarlosTransport, alt: "Mapa e bolsa junto à porta, imagem conceitual de planejamento do deslocamento" },
+  },
   specialties: {
     alcohol: { src: specialtyAlcohol, alt: "Água e caderno junto a um jardim com duas pessoas caminhando, representação conceitual de apoio" },
     cocaine: { src: specialtyCocaine, alt: "Pessoa cuidando de plantas junto a um caderno, representação conceitual de uma nova rotina" },
