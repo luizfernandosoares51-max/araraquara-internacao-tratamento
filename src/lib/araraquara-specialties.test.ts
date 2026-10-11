@@ -17,7 +17,9 @@ test("five specialty routes use the requested stable paths", () => assert.deepEq
 ]));
 test("structured business identity does not imply an own-unit medical business", () => {
   for (const page of specialtyList) {
-    const graph = JSON.parse(specialtyHead(page.key).scripts[0].children)["@graph"];
+    const script = specialtyHead(page.key).scripts[0];
+    assert.ok(script);
+    const graph = JSON.parse(script.children)["@graph"];
     assert.equal(graph[0]["@type"], "LocalBusiness");
     assert.equal(graph[0].address.streetAddress, "R. Alfredo Micelli, 70 - Condomínio Satélite");
     assert.equal(graph[0].telephone, "(16) 99765-4579");
