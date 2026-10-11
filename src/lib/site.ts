@@ -13,7 +13,7 @@ export const whatsappHref = `https://wa.me/${whatsappNumber}?text=${encodeURICom
 
 export const instagramHref =
   "https://www.instagram.com/centralacolhimento_sp?stkn=MTdjb3c0YWtsdWwzZg==";
-export const facebookHref = "https://www.facebook.com/share/1EqxvF95Qn/";
+export const facebookHref = "https://m.facebook.com/CentraldeAcolhimentoparareabilitacaoararaquara/";
 
 /**
  * Menu principal. Âncoras (#) apontam para seções da página de Araraquara;

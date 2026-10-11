@@ -24,6 +24,7 @@ import { CareSpecialties, FinancialGuidance, TherapeuticRoutine } from "@/compon
 import {
   emailDisplay,
   emailHref,
+  facebookHref,
   instagramHref,
   mainNav,
   phoneDisplay,
@@ -39,7 +40,6 @@ import { Button } from "@/components/ui/button";
 const { title, description } = cityEditorialMetadata("araraquara");
 
 const pageUrl = `${siteUrl}/clinica-de-recuperacao-em-araraquara`;
-const araraquaraFacebookHref = "https://www.facebook.com/share/1drREi2gvi/";
 const cityHealthNetworkUrl =
   "https://araraquara.sp.gov.br/atencao-especializada";
 const cityCapsInformationUrl =
@@ -148,7 +148,7 @@ export const Route = createFileRoute("/clinica-de-recuperacao-em-araraquara")({
               address: institutionalIdentity.postalAddress,
               hasMap: institutionalIdentity.mapsHref,
               areaServed: { "@type": "City", name: "Araraquara" },
-              sameAs: [araraquaraFacebookHref, instagramHref],
+              sameAs: [facebookHref, instagramHref],
               description:
                 "Informações e orientação sobre acolhimento e tratamento relacionado à dependência química e alcoolismo em Araraquara e região.",
             },
@@ -219,7 +219,7 @@ function AraraquaraPage() {
               </span>
             </Link>
             <div className="hidden items-center gap-2 sm:flex">
-              <a href={araraquaraFacebookHref} target="_blank" rel="noopener noreferrer" aria-label="Facebook da Central em Araraquara" className="grid size-10 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:text-secondary"><SocialIcon network="facebook" /></a>
+              <a href={facebookHref} target="_blank" rel="noopener noreferrer" aria-label="Facebook da Central em Araraquara" className="grid size-10 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:text-secondary"><SocialIcon network="facebook" /></a>
               <a href={instagramHref} target="_blank" rel="noopener noreferrer" aria-label="Instagram da Central" className="grid size-10 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:text-secondary"><SocialIcon network="instagram" /></a>
               <span className="ml-1 inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-2 text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground"><MapPin className="size-3" aria-hidden="true" /> Araraquara/SP</span>
             </div>
