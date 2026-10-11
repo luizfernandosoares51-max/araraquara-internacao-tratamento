@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Aprofundar as 14 páginas de Cidades com artigos integrados exclusivos, acesso à sede, FAQs correspondentes ao schema e metadados regionais; preservar URLs e validar sem publicar.
+
 - [x] Otimizar Home e Araraquara com H1/H2 locais, FAQ e schema correspondentes, metodologia confirmada, endereço estruturado e telefone no cabeçalho; mapa e rodapé preservados. Trinta e dois testes aprovados e seis visualizações em 1280/390/320 confirmam HTTP 200, H1 único, canonical próprio, perguntas, telefone, iframe e ausência de overflow; comparação por DDD e verificação independente não afirmadas. Sem publicação; presença do iframe não verifica o mapa no domínio publicado nem garante destaque do FAQ ou posição no Google.
 
 - [x] Excluir a página experimental de Bauru e retirar conteúdo, imagem, fonte municipal e links de descoberta; endereço oficial mantido exclusivamente como redirecionamento 301 direto para Araraquara, fora do sitemap. Nove testes aprovados, GET/HEAD 301, teste 404, Cidades/Home sem links de Bauru e destino visual conferidos; sem publicação.
