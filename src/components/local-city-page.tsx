@@ -3,15 +3,17 @@ import { ArrowLeft, ArrowRight, ExternalLink, MapPin, MessageCircle, Phone, Shie
 
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import { Button } from "@/components/ui/button";
-import { RegionalCare } from "@/components/care-program-sections";
+import { CityEditorialSection } from "@/components/city-editorial-section";
+import { cityEditorialFaqs } from "@/lib/city-editorial";
 import type { LocalCityPage } from "@/lib/local-city-pages";
 import { phoneDisplay, phoneHref, whatsappHref } from "@/lib/site";
 
 export function LocalCityPageView({ city }: { city: LocalCityPage }) {
+  const faqs = [...cityEditorialFaqs(city.slug), ...city.faqs];
   return (
     <div className="site-editorial min-h-screen bg-deep font-body text-foreground">
       <header className="border-b border-border">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-12">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-12">
           <Link to="/" className="flex items-center gap-3" aria-label="Central de Acolhimento e Reabilitação — início">
             <img src={logoAsset.url} alt="Logo da Central de Acolhimento e Reabilitação" width={48} height={48} className="size-12 rounded-xl object-contain" />
             <span className="hidden leading-tight sm:block">
@@ -22,6 +24,7 @@ export function LocalCityPageView({ city }: { city: LocalCityPage }) {
           <Button asChild className="min-h-11 bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90">
             <a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" /> Falar com a Central</a>
           </Button>
+          <Button asChild variant="link" className="h-auto min-h-12 max-w-full whitespace-normal px-0 text-left"><a href={phoneHref}><Phone aria-hidden="true" />{phoneDisplay}</a></Button>
         </div>
       </header>
 
@@ -61,7 +64,7 @@ export function LocalCityPageView({ city }: { city: LocalCityPage }) {
         </section>
 
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
-          <RegionalCare cityName={city.name} />
+          <CityEditorialSection slug={city.slug} />
           {city.sections.map((section, index) => (
             <section key={section.heading} className="border-b border-border py-14 lg:py-20">
               <div className={`grid gap-8 lg:grid-cols-[.78fr_1.22fr] lg:gap-16 ${index % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""}`}>
@@ -107,7 +110,7 @@ export function LocalCityPageView({ city }: { city: LocalCityPage }) {
             <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">Perguntas de {city.name}</p>
             <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Dúvidas locais respondidas com transparência</h2>
             <div className="mt-8 divide-y divide-border border-y border-border">
-              {city.faqs.map((faq) => <details key={faq.question} className="group py-5"><summary className="flex cursor-pointer list-none items-start justify-between gap-5 font-display font-semibold marker:content-none">{faq.question}<span className="grid size-7 shrink-0 place-items-center rounded-full bg-glass text-secondary transition-transform group-open:rotate-45" aria-hidden="true">+</span></summary><p className="max-w-3xl pt-4 text-sm leading-relaxed text-muted-foreground">{faq.answer}</p></details>)}
+              {faqs.map((faq) => <details key={faq.question} className="group py-5"><summary className="flex cursor-pointer list-none items-start justify-between gap-5 font-display font-semibold marker:content-none">{faq.question}<span className="grid size-7 shrink-0 place-items-center rounded-full bg-glass text-secondary transition-transform group-open:rotate-45" aria-hidden="true">+</span></summary><p className="max-w-3xl pt-4 text-sm leading-relaxed text-muted-foreground">{faq.answer}</p></details>)}
             </div>
           </section>
 

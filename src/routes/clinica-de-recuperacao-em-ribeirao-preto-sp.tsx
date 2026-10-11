@@ -1,3 +1,4 @@
+import { cityEditorialFaqs, cityEditorialMetadata } from "@/lib/city-editorial";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   AlertTriangle,
@@ -18,7 +19,7 @@ import {
 
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import { Button } from "@/components/ui/button";
-import { RegionalCare } from "@/components/care-program-sections";
+import { CityEditorialSection } from "@/components/city-editorial-section";
 import { emailDisplay, emailHref, phoneDisplay, phoneHref, siteUrl, whatsappHref } from "@/lib/site";
 import { visualAssets } from "@/lib/visual-assets";
 
@@ -88,9 +89,7 @@ export const Route = createFileRoute("/clinica-de-recuperacao-em-ribeirao-preto-
 });
 
 const pageUrl = "https://centraldeacolhimentoereabilitacao.com/clinica-de-recuperacao-em-ribeirao-preto-sp";
-const title = "Clínica de Reabilitação em Ribeirão Preto | Dependência Química e Alcoolismo";
-const description =
-  "Orientação para famílias de Ribeirão Preto que procuram tratamento para dependência química e alcoolismo. Conheça possibilidades de acolhimento e tratamento.";
+const { title, description } = cityEditorialMetadata("ribeirao-preto-sp");
 
 const familySituations = [
   {
@@ -144,11 +143,12 @@ const orientationSteps = [
   "Informações iniciais ajudam a identificar dúvidas, riscos e necessidades.",
   "A família recebe orientação sobre os caminhos que podem ser considerados.",
   "Possibilidades de tratamento são apresentadas conforme o caso, sem resposta pronta.",
-  "Se houver indicação e disponibilidade, pode ser avaliada uma unidade adequada.",
+  "Se houver indicação e disponibilidade, pode ser considerado acolhimento voluntário na sede própria em Araraquara; necessidades médicas são encaminhadas a serviços habilitados externos.",
   "Os próximos passos, condições e preparativos são explicados com clareza.",
 ];
 
 const faqs = [
+  ...cityEditorialFaqs("ribeirao-preto-sp"),
   {
     question: "Existe clínica de reabilitação em Ribeirão Preto para dependência química?",
     answer:
@@ -182,7 +182,7 @@ const faqs = [
   {
     question: "A Central possui unidade em Ribeirão Preto?",
     answer:
-      "Não há unidade física da Central em Ribeirão Preto. A Central atua na orientação de famílias da cidade e pode apresentar possibilidades de tratamento em uma unidade adequada, conforme o caso e a disponibilidade.",
+      "Não há unidade física da Central em Ribeirão Preto. A única sede própria fica em Araraquara, na R. Alfredo Micelli, 70, com acolhimento voluntário conforme avaliação e disponibilidade. Necessidades médicas são encaminhadas a estabelecimentos habilitados externos.",
   },
   {
     question: "Como entrar em contato com a Central de Acolhimento e Reabilitação?",
@@ -219,6 +219,7 @@ function OfficialRibeiraoPretoPage() {
             </a>
           </Button>
         </div>
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12"><Button asChild variant="link" className="h-auto min-h-12 max-w-full whitespace-normal px-0 text-left"><a href={phoneHref}><Phone aria-hidden="true" />{phoneDisplay}</a></Button></div>
       </header>
 
       <main>
@@ -272,13 +273,15 @@ function OfficialRibeiraoPretoPage() {
                 <ShieldCheck className="size-8 text-secondary" aria-hidden="true" />
                 <h2 className="mt-5 font-display text-xl font-bold">Orientação sem criar falsas expectativas</h2>
                 <p className="mt-3 text-sm leading-7 text-muted-foreground">
-                  A Central não possui unidade física em Ribeirão Preto. O contato serve para compreender a situação e apresentar possibilidades conforme o caso e a disponibilidade das unidades, sem garantia de vaga, internação ou resultado.
+                  A Central não possui unidade física em Ribeirão Preto. O contato serve para compreender a situação e apresentar possibilidades conforme o caso e a disponibilidade da sede própria em Araraquara, sem garantia de vaga, internação ou resultado.
                 </p>
               </aside>
                </div>
             </div>
           </div>
         </section>
+        <div className="bg-background px-5 text-foreground sm:px-8 lg:px-12"><div className="mx-auto max-w-7xl"><CityEditorialSection slug="ribeirao-preto-sp" /></div></div>
+
 
         <section className="border-b border-deep/10 py-16 lg:py-24">
           <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[.7fr_1.3fr] lg:px-12">
@@ -481,7 +484,6 @@ function OfficialRibeiraoPretoPage() {
             </nav>
           </div>
         </section>
-        <div className="bg-background px-5 text-foreground sm:px-8 lg:px-12"><div className="mx-auto max-w-7xl"><RegionalCare cityName="Ribeirão Preto" /></div></div>
       </main>
 
       
