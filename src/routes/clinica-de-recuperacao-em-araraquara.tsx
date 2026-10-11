@@ -139,6 +139,8 @@ export const Route = createFileRoute("/clinica-de-recuperacao-em-araraquara")({
               name: "Central de Acolhimento e Reabilitação",
               url: pageUrl,
               telephone: "+5516997654579",
+              address: institutionalIdentity.postalAddress,
+              hasMap: institutionalIdentity.mapsHref,
               areaServed: { "@type": "City", name: "Araraquara" },
               sameAs: [araraquaraFacebookHref, instagramHref],
               description:
