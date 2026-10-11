@@ -9,6 +9,8 @@ import { AraraquaraPhotoGallery, araraquaraPhotos } from "@/components/araraquar
 import { FamilyOrientationGuide } from "@/components/family-orientation-guide";
 import { CareSpecialties, FinancialGuidance, RegionalCare, TherapeuticRoutine } from "@/components/care-program-sections";
 import { cityDirectory } from "@/lib/city-pages";
+import { araraquaraOrientationFaqs } from "@/lib/araraquara-orientation";
+import { Button } from "@/components/ui/button";
 import { institutionalIdentity, legalSources } from "@/lib/institutional";
 import {
   emailDisplay,
@@ -24,7 +26,6 @@ import {
 import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
 
 const pageUrl = siteUrl;
-const heroImageUrl = `${siteUrl}${visualAssets.home.hero.src}`;
 
 const steps = [
   "Contato com a família",
@@ -66,6 +67,7 @@ const existingArticles = [
 ] as const;
 
 const faqs = [
+  ...araraquaraOrientationFaqs,
   {
     question: "O que avaliar ao escolher uma clínica de reabilitação?",
     answer:
@@ -107,28 +109,23 @@ export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
   head: () => ({
     meta: [
-      { title: "Clínica de Reabilitação: Dependência e Alcoolismo | Central" },
+      { title: "Clínica de Recuperação e Reabilitação em Araraquara | Central" },
       {
         name: "description",
         content:
-          "Informação, acolhimento e orientação sobre tratamento para dependência química e alcoolismo. Unidade física da Central em Araraquara, SP.",
+          "Acolhimento voluntário e reabilitação psicossocial em Araraquara, SP. Apoio psicológico, 12 Passos e orientação para famílias da região. Contato DDD 16.",
       },
-      { property: "og:title", content: "Clínica de Reabilitação: Dependência e Alcoolismo | Central" },
+      { property: "og:title", content: "Clínica de Recuperação e Reabilitação em Araraquara | Central" },
       {
         property: "og:description",
         content:
-          "Informação, acolhimento e orientação sobre tratamento para dependência química e alcoolismo, com unidade física em Araraquara.",
+          "Acolhimento voluntário em sede própria em Araraquara, apoio psicológico, 12 Passos e orientação às famílias da região, sem promessa de resultados.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: pageUrl },
-      { property: "og:image", content: heroImageUrl },
-      { property: "og:image:width", content: "1200" },
-      { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: visualAssets.home.hero.alt },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Clínica de Reabilitação: Dependência e Alcoolismo | Central" },
+      { name: "twitter:title", content: "Clínica de Recuperação e Reabilitação em Araraquara | Central" },
       { name: "twitter:description", content: "Informação, acolhimento e orientação sobre tratamento para dependência química e alcoolismo." },
-      { name: "twitter:image", content: heroImageUrl },
     ],
     links: [{ rel: "canonical", href: pageUrl }],
     scripts: [
@@ -148,11 +145,10 @@ export const Route = createFileRoute("/")({
               "@type": "WebPage",
               "@id": `${pageUrl}#webpage`,
               url: pageUrl,
-               name: "Clínica de Reabilitação: Dependência e Alcoolismo | Central",
-               description: "Informação, acolhimento e orientação sobre tratamento para dependência química e alcoolismo, com unidade física em Araraquara.",
+               name: "Clínica de Recuperação e Reabilitação em Araraquara | Central",
+               description: "Acolhimento voluntário em sede própria em Araraquara, apoio psicológico, 12 Passos e orientação às famílias da região, sem promessa de resultados.",
               isPartOf: { "@id": `${pageUrl}#website` },
               about: { "@id": `${pageUrl}#organization` },
-              primaryImageOfPage: { "@type": "ImageObject", url: heroImageUrl, width: 1200, height: 630 },
               inLanguage: "pt-BR",
             },
             {
@@ -161,6 +157,8 @@ export const Route = createFileRoute("/")({
               name: "Central de Acolhimento e Reabilitação",
               url: pageUrl,
               telephone: "+5516997654579",
+              address: institutionalIdentity.postalAddress,
+              hasMap: institutionalIdentity.mapsHref,
               areaServed: "Estado de São Paulo",
               sameAs: [facebookHref, instagramHref],
               description:
@@ -272,6 +270,10 @@ function HomePage() {
             </div>
           </div>
 
+          <Button asChild variant="link" className="mt-3 h-auto min-h-12 max-w-full whitespace-normal px-0 text-left">
+            <a href={phoneHref}><Phone className="size-4 shrink-0" aria-hidden="true" />Telefone e WhatsApp: {phoneDisplay}</a>
+          </Button>
+
           <nav
             aria-label="Menu principal"
             className="mt-4 -mx-5 overflow-x-auto px-5 sm:mx-0 sm:px-0"
@@ -310,7 +312,7 @@ function HomePage() {
                 <span className="size-1.5 rounded-full bg-accent" /> Acolhimento, orientação e apoio
               </div>
               <h1 className="mt-6 max-w-3xl font-display text-[2.45rem] font-semibold leading-[1.05] text-foreground sm:text-5xl lg:text-[4.15rem]">
-                Clínica de Reabilitação para <span className="text-secondary">Dependência Química e Alcoolismo</span>
+                Clínica de Recuperação e Reabilitação em <span className="text-secondary">Araraquara - SP</span>
               </h1>
               <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-muted-foreground sm:text-lg">
                 A Central de Acolhimento e Reabilitação reúne informação, orientação e acolhimento para pessoas e famílias que buscam ajuda diante da dependência química, do alcoolismo e do uso problemático de outras drogas.
@@ -384,7 +386,7 @@ function HomePage() {
             <div className="grid items-center gap-10 lg:grid-cols-[.9fr_1.1fr] lg:gap-20">
               <div>
                 <SectionLabel>Sobre o acolhimento</SectionLabel>
-                <h2 className="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight sm:text-5xl">Um caminho acompanhado, do primeiro contato ao cuidado.</h2>
+                <h2 className="mt-3 max-w-xl font-display text-3xl font-semibold leading-tight sm:text-5xl">Acolhimento Humanizado para Dependência Química e Alcoolismo em Araraquara e Região</h2>
                 <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted-foreground sm:text-base">
                   <p>O acolhimento começa com escuta, sem julgamentos. A família pode relatar o que está vivendo, tirar dúvidas e conhecer as possibilidades disponíveis antes de qualquer decisão.</p>
                   <p>Nossa equipe oferece orientação clara sobre cada etapa, considera as necessidades da pessoa e de seus familiares e explica como funciona o cuidado. Veja também as <Link to="/acolhimento" className="font-semibold text-secondary hover:underline">informações sobre acolhimento</Link>.</p>
@@ -406,8 +408,8 @@ function HomePage() {
               </figure>
               <div className="order-1 lg:order-2">
                 <SectionLabel>Tratamento para dependência química e alcoolismo</SectionLabel>
-                <h2 className="mt-3 font-display text-3xl font-semibold leading-tight sm:text-5xl">Tratamento para dependência química e alcoolismo</h2>
-                <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground">O tratamento para dependência química e alcoolismo pode envolver diferentes estratégias. Em uma clínica de recuperação, o plano de cuidado deve considerar a história, as condições de saúde e a realidade de cada pessoa. <Link to="/tratamento" className="font-semibold text-secondary hover:underline">Entenda o tratamento</Link>.</p>
+                <h2 className="mt-3 font-display text-3xl font-semibold leading-tight sm:text-5xl">Metodologia Terapêutica: 12 Passos, Apoio Psicológico e Convivência</h2>
+                <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground">A proposta de acolhimento voluntário da Central inclui conscientização em 12 Passos, suporte psicológico com Margarete Vasques (CRP 06/130268), laborterapia, convivência terapêutica e prevenção à recaída. O plano considera a história, as condições de saúde e a realidade de cada pessoa; cuidados médicos são encaminhados a serviços habilitados. <Link to="/tratamento" className="font-semibold text-secondary hover:underline">Entenda o tratamento</Link>.</p>
               </div>
             </div>
 
@@ -519,7 +521,7 @@ function HomePage() {
           <RegionalCare />
           <section id="galeria-fotos" aria-labelledby="galeria-titulo" className="scroll-mt-6 border-t border-border py-16 lg:py-24">
             <SectionLabel>Unidade física</SectionLabel>
-             <h2 id="galeria-titulo" className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Clínica de Reabilitação em Araraquara</h2>
+             <h2 id="galeria-titulo" className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Estrutura Terapêutica Local com Sede Própria em Araraquara</h2>
              <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted-foreground">A única unidade física da Central está localizada em Araraquara, SP. Pessoas e famílias de outras cidades da região também podem buscar informação e orientação; as páginas locais não representam filiais. As imagens abaixo são representações conceituais da jornada de acolhimento.</p>
             <Link to="/clinica-de-recuperacao-em-araraquara" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:underline">Conheça a unidade em Araraquara <ArrowRight className="size-4" aria-hidden="true" /></Link>
             <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-12">
