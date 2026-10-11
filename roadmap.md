@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Criar cinco páginas especializadas ligadas por cartões abaixo da apresentação de Araraquara, sem alterar o menu; conteúdo exclusivo, imagens conceituais, FAQs e SEO próprios, retorno contextual e inclusão no sitemap. Preservar encaminhamento médico externo e remoção agendada, sem anunciar 24h; validar antes de publicar.
+
 - [x] Auditar a prévia antes da publicação: 14 cidades, 31 páginas do sitemap e 39 destinos internos sem links quebrados; metadados próprios, FAQs correspondentes, 93 visitas em 1280/390/320 e formulário funcional; 53 testes aprovados. Relatório detalhado entregue, sem alterar páginas ou publicar. Ressalvas: teste de Bauru excluído retorna 404 enquanto a oficial retorna 301; trajetos completos/distâncias e comprovações documentais pendentes; mapa e produção não verificados nesta etapa.
 
 - [x] Aprofundar as 14 páginas de Cidades com artigos integrados exclusivos, acesso à sede, FAQs correspondentes ao schema e metadados regionais com telefone; URLs, imagens próprias e retirada de Bauru preservadas. Quarenta e dois testes aprovados e 14 páginas conferidas em 1280/390/320, HTTP 200, H1 único, perguntas visíveis iguais ao schema e sem overflow. Tempos de viagem, emergência imediata, cura pelo afastamento, desintoxicação natural e sigilo absoluto não prometidos; serviços não confirmados não anunciados. Sem publicação.
