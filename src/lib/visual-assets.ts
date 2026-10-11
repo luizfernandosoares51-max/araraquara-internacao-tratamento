@@ -24,8 +24,20 @@ import articleTherapy from "@/assets/blog-clinica-acompanhamento.webp";
 import articleRoutine from "@/assets/blog-clinica-rotina-saudavel.webp";
 import articleFamily from "@/assets/blog-clinica-dialogo-familiar.webp";
 import articleContinuity from "@/assets/blog-clinica-continuidade-cuidado.webp";
+import specialtyAlcohol from "@/assets/concept-specialty-alcohol.webp";
+import specialtyCocaine from "@/assets/concept-specialty-cocaine.webp";
+import specialtyInvoluntary from "@/assets/concept-specialty-involuntary.webp";
+import specialtyVoluntary from "@/assets/concept-specialty-voluntary.webp";
+import specialtyTransport from "@/assets/concept-specialty-transport.webp";
 
 export const visualAssets = {
+  specialties: {
+    alcohol: { src: specialtyAlcohol, alt: "Água e caderno junto a um jardim com duas pessoas caminhando, representação conceitual de apoio" },
+    cocaine: { src: specialtyCocaine, alt: "Pessoa cuidando de plantas junto a um caderno, representação conceitual de uma nova rotina" },
+    involuntary: { src: specialtyInvoluntary, alt: "Dois adultos conversando junto a pastas, representação conceitual de orientação familiar" },
+    voluntary: { src: specialtyVoluntary, alt: "Pessoa diante de um portão aberto para um jardim, representação conceitual de uma escolha voluntária" },
+    transport: { src: specialtyTransport, alt: "Mapa, caderno e chaves sobre uma mesa, representação conceitual de planejamento do transporte" },
+  },
   home: {
     hero: { src: homeRenewal, alt: "Caminho arborizado com duas pessoas caminhando juntas ao amanhecer" },
     conversation: { src: homeConversation, alt: "Conversa acolhedora representada por duas pessoas junto a uma mesa" },
