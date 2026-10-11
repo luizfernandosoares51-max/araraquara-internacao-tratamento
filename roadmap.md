@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Otimizar Home e Araraquara com títulos locais, FAQ coerente com o conteúdo visível, sede própria, metodologia confirmada, mapa e telefone no cabeçalho; validar sem publicar.
+
 - [x] Excluir a página experimental de Bauru e retirar conteúdo, imagem, fonte municipal e links de descoberta; endereço oficial mantido exclusivamente como redirecionamento 301 direto para Araraquara, fora do sitemap. Nove testes aprovados, GET/HEAD 301, teste 404, Cidades/Home sem links de Bauru e destino visual conferidos; sem publicação.
 
 - [x] Criar formulário humanizado em /contato com validação, confirmação verde de preparação e envio explícito pelo WhatsApp oficial; cinco testes aprovados e fluxo conferido em 1280/390/320, incluindo revisão e descarte ao recarregar; orientação de emergência e privacidade preservadas, sem envio externo ou publicação.
