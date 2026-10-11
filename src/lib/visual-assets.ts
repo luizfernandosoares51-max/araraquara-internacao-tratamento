@@ -1,3 +1,12 @@
+import ribeiraoAlcohol from "@/assets/concept-ribeirao-alcohol.webp";
+import ribeiraoCocaine from "@/assets/concept-ribeirao-cocaine.webp";
+import ribeiraoInvoluntary from "@/assets/concept-ribeirao-involuntary.webp";
+import ribeiraoVoluntary from "@/assets/concept-ribeirao-voluntary.webp";
+import ribeiraoTransport from "@/assets/concept-ribeirao-transport.webp";
+import ribeiraoWomen from "@/assets/concept-ribeirao-women.webp";
+import ribeiraoDual from "@/assets/concept-ribeirao-dual.webp";
+import ribeiraoMedication from "@/assets/concept-ribeirao-medication.webp";
+import ribeiraoYouth from "@/assets/concept-ribeirao-youth.webp";
 import araraquaraCare from "@/assets/concept-araraquara-care.webp";
 import araraquaraEvaluation from "@/assets/concept-araraquara-evaluation.webp";
 import araraquaraFamily from "@/assets/concept-araraquara-family.webp";
@@ -41,6 +50,17 @@ import rioClaroVoluntary from "@/assets/concept-rio-claro-voluntary.webp";
 import rioClaroTransport from "@/assets/concept-rio-claro-transport.webp";
 
 export const visualAssets = {
+  ribeiraoSpecialties: {
+    alcohol: { src: ribeiraoAlcohol, alt: "Família conversando à mesa, imagem conceitual de apoio diante do uso de álcool" },
+    cocaine: { src: ribeiraoCocaine, alt: "Adulto cuidando de mudas, imagem conceitual de novos hábitos" },
+    involuntary: { src: ribeiraoInvoluntary, alt: "Familiares lendo documentos, imagem conceitual de orientação e direitos" },
+    voluntary: { src: ribeiraoVoluntary, alt: "Dois adultos caminhando juntos, imagem conceitual de escolha voluntária" },
+    transport: { src: ribeiraoTransport, alt: "Família com mapa e bolsa, imagem conceitual de planejamento de viagem" },
+    women: { src: ribeiraoWomen, alt: "Duas mulheres conversando, imagem conceitual de escuta e dignidade" },
+    dual: { src: ribeiraoDual, alt: "Adulto com caderno junto à janela, imagem conceitual de planejamento do cuidado" },
+    medication: { src: ribeiraoMedication, alt: "Mulher organizando um caderno, imagem conceitual de avaliação e acompanhamento" },
+    youth: { src: ribeiraoYouth, alt: "Jovem adulto conversando com familiares, imagem conceitual de diálogo e conscientização" },
+  },
   rioClaroSpecialties: {
     alcohol: { src: rioClaroAlcohol, alt: "Dois familiares conversando em um jardim, imagem conceitual de apoio e escuta" },
     cocaine: { src: rioClaroCocaine, alt: "Adulto organizando mudas, imagem conceitual de construção de novos hábitos" },
