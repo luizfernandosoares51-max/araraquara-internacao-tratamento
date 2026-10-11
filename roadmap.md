@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Criar nove páginas de especialidades para Ribeirão Preto com cartões locais, imagens próprias, FAQs e metadados exclusivos; manter sede em Araraquara e limites confirmados, sem publicação.
+
 - [x] Criar cinco especialidades para Rio Claro com cartões após a apresentação, conteúdo e cinco imagens WebP originais, três FAQs por página, SEO individual, retorno regional e inclusão nas 46 URLs do sitemap. Cinquenta e um testes aprovados; páginas, imagens, FAQs e navegação conferidas em 1280/390/320. Sede em Araraquara, cuidado médico externo e transporte agendado preservados; menu inalterado e sem publicação.
 
 - [x] Criar cinco páginas especializadas de São Carlos com cartões após a apresentação, conteúdo e cinco imagens WebP próprios, três FAQs por página, SEO individual, retorno regional e inclusão nas 41 URLs do sitemap. Quarenta e três testes aprovados; páginas, imagens, perguntas e navegação verificadas em 1280/390/320. Sede única em Araraquara, encaminhamento médico externo e transporte agendado preservados, sem ampliar o menu ou publicar.
