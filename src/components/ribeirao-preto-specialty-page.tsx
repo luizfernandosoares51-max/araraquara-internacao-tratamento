@@ -10,7 +10,7 @@ import { visualAssets, conceptualImageCaption } from "@/lib/visual-assets";
 
 export function RibeiraoPretoSpecialtyPage({ specialty }: { specialty: RibeiraoSpecialtyKey }) {
   const page = ribeiraoSpecialty(specialty);
-  const image = visualAssets.ribeiraoSpecialty(specialty);
+  const image = visualAssets.ribeiraoSpecialties[specialty];
   return <div className="home-serene site-editorial min-h-screen bg-background font-body text-foreground">
     <header className="border-b border-border px-5 py-5 sm:px-8">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3">
