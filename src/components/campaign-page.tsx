@@ -52,7 +52,7 @@ export function CampaignLayout({ page, image, whatsappHref, callLabel = "Ligar A
             <h1 className="max-w-2xl font-display text-3xl font-semibold leading-tight sm:text-5xl">{page.title}</h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed sm:text-lg">{page.description}</p>
             <div className="mt-8"><CampaignActions whatsappHref={whatsappHref} callLabel={callLabel} /></div>
-            <p className="mt-5 max-w-xl text-sm leading-relaxed">Orientação 24h • Sede única em Araraquara • Acolhimento voluntário</p>
+            <p className="mt-5 max-w-xl text-sm leading-relaxed">Plantão 24h • Apoio Regional em SP • Acolhimento Humanizado</p>
           </div>
         </section>
         <p className="mx-auto max-w-7xl px-5 py-3 text-xs leading-relaxed text-muted-foreground sm:px-8">{conceptualImageCaption}</p>
