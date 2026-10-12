@@ -1,3 +1,19 @@
+import adsWomenSaoCarlos from "@/assets/ads-women-sao-carlos.jpg";
+import adsWomenAraraquara from "@/assets/ads-women-araraquara.jpg";
+import adsWomenRibeirao from "@/assets/ads-women-ribeirao.jpg";
+import adsLeme from "@/assets/ads-leme.jpg";
+import adsAraras from "@/assets/ads-araras.jpg";
+import adsPirassununga from "@/assets/ads-pirassununga.jpg";
+import localAmerico from "@/assets/local-americo-access.jpg";
+import localIbate from "@/assets/local-ibate-ambulatory.jpg";
+import localMatao from "@/assets/local-matao-family.jpg";
+import localTaquaritinga from "@/assets/local-taquaritinga-guidance.jpg";
+import localIbitinga from "@/assets/local-ibitinga-support.jpg";
+import localItapolis from "@/assets/local-itapolis-path.jpg";
+import localJaboticabal from "@/assets/local-jaboticabal-care.jpg";
+import localDescalvado from "@/assets/local-descalvado-prepare.jpg";
+import localPortoFerreira from "@/assets/local-porto-ferreira-network.jpg";
+import localFranca from "@/assets/local-franca-raps.jpg";
 import adsFamily from "@/assets/ads-family.jpg";
 import adsOrientation from "@/assets/ads-orientation.jpg";
 import adsGambling from "@/assets/ads-gambling.jpg";
@@ -54,6 +70,28 @@ import rioClaroVoluntary from "@/assets/concept-rio-claro-voluntary.webp";
 import rioClaroTransport from "@/assets/concept-rio-claro-transport.webp";
 
 export const visualAssets = {
+  localCampaigns: {
+    "sao-carlos": { src: citySaoCarlos, alt: "Representação conceitual de escuta e apoio familiar para São Carlos; não retrata atendimento real da Central" },
+    "sao-carlos-feminina": { src: adsWomenSaoCarlos, alt: "Representação conceitual de escuta e apoio a mulheres e famílias para São Carlos; não retrata atendimento real da Central" },
+    "araraquara": { src: araraquaraFamily, alt: "Representação conceitual de escuta e apoio familiar para Araraquara; não retrata atendimento real da Central" },
+    "araraquara-feminina": { src: adsWomenAraraquara, alt: "Representação conceitual de escuta e apoio a mulheres e famílias para Araraquara; não retrata atendimento real da Central" },
+    "ribeirao-preto": { src: cityRibeiraoPreto, alt: "Representação conceitual de escuta e apoio familiar para Ribeirão Preto; não retrata atendimento real da Central" },
+    "ribeirao-preto-feminina": { src: adsWomenRibeirao, alt: "Representação conceitual de escuta e apoio a mulheres e famílias para Ribeirão Preto; não retrata atendimento real da Central" },
+    "rio-claro": { src: cityRioClaro, alt: "Representação conceitual de escuta e apoio familiar para Rio Claro; não retrata atendimento real da Central" },
+    "americo-brasiliense": { src: localAmerico, alt: "Representação conceitual de escuta e apoio familiar para Américo Brasiliense; não retrata atendimento real da Central" },
+    "ibate": { src: localIbate, alt: "Representação conceitual de escuta e apoio familiar para Ibaté; não retrata atendimento real da Central" },
+    "matao": { src: localMatao, alt: "Representação conceitual de escuta e apoio familiar para Matão; não retrata atendimento real da Central" },
+    "taquaritinga": { src: localTaquaritinga, alt: "Representação conceitual de escuta e apoio familiar para Taquaritinga; não retrata atendimento real da Central" },
+    "ibitinga": { src: localIbitinga, alt: "Representação conceitual de escuta e apoio familiar para Ibitinga; não retrata atendimento real da Central" },
+    "itapolis": { src: localItapolis, alt: "Representação conceitual de escuta e apoio familiar para Itápolis; não retrata atendimento real da Central" },
+    "jaboticabal": { src: localJaboticabal, alt: "Representação conceitual de escuta e apoio familiar para Jaboticabal; não retrata atendimento real da Central" },
+    "descalvado": { src: localDescalvado, alt: "Representação conceitual de escuta e apoio familiar para Descalvado; não retrata atendimento real da Central" },
+    "porto-ferreira": { src: localPortoFerreira, alt: "Representação conceitual de escuta e apoio familiar para Porto Ferreira; não retrata atendimento real da Central" },
+    "franca": { src: localFranca, alt: "Representação conceitual de escuta e apoio familiar para Franca; não retrata atendimento real da Central" },
+    "leme": { src: adsLeme, alt: "Representação conceitual de escuta e apoio familiar para Leme; não retrata atendimento real da Central" },
+    "araras": { src: adsAraras, alt: "Representação conceitual de escuta e apoio familiar para Araras; não retrata atendimento real da Central" },
+    "pirassununga": { src: adsPirassununga, alt: "Representação conceitual de escuta e apoio familiar para Pirassununga; não retrata atendimento real da Central" },
+  },
   campaigns: {
     family: { src: adsFamily, alt: "Dois adultos caminhando em um jardim, representação conceitual de apoio familiar" },
     orientation: { src: adsOrientation, alt: "Mulher conversando por telefone ao lado de uma familiar, representação conceitual de orientação" },
