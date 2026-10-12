@@ -31,4 +31,4 @@
 - Keep Rio Claro specialty pages in explicit routes backed by a separate typed editorial catalog and opt-in shell; derive discovery and head metadata from the same data to preserve existing pages and avoid implied medical or emergency services.
 - Keep Ribeirão Preto specialty routes explicit with an isolated typed editorial catalog and opt-in shell; derive cards, FAQs and metadata from the same data and represent unconfirmed modalities as education rather than available services.
 - Mount typed regional links once in the global footer to avoid duplicate grids and retired URLs.
-- Use an explicit gambling route, tested educational scope and shared treatment submenu to avoid unconfirmed services.
+- Mount one root public header with typed disclosure links in initial HTML for accessible, indexable navigation; retain only editorial page headers.

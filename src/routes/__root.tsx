@@ -14,6 +14,7 @@ import appCss from "../styles.css?url";
 import { AcolhimentoAssistant } from "../components/acolhimento-assistant";
 import { FloatingWhatsApp } from "../components/floating-whatsapp";
 import { InstitutionalFooter } from "../components/institutional-footer";
+import { GlobalSiteHeader } from "../components/global-site-header";
 import { Button } from "../components/ui/button";
 import { Phone } from "lucide-react";
 import { phoneDisplay, phoneHref } from "../lib/site";
@@ -134,6 +135,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <div className="public-page-content">
+        <GlobalSiteHeader />
         <Outlet />
         <InstitutionalFooter />
         <div className="floating-contact-spacer" aria-hidden="true" />
