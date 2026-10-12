@@ -12,7 +12,7 @@ export function CareSpecialties() {
   return <><section className={sectionClass} aria-label="Modalidades de acolhimento e orientação">
     <p className="mb-3 text-xs font-semibold uppercase text-secondary">Modalidades e necessidades de cuidado</p>
     <h2 className={headingClass}>Acolhimento psicossocial e caminhos de tratamento</h2>
-    <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground">A unidade própria oferece acolhimento voluntário contínuo e suporte psicossocial. O plano considera as necessidades da pessoa; cuidados médicos são encaminhados a estabelecimentos habilitados.</p>
+    <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground">A unidade própria oferece acolhimento voluntário contínuo e suporte psicossocial. O plano reúne psicologia, acompanhamento médico e psiquiátrico integrado e enfermagem para supervisão diária e cuidados contínuos, conforme as necessidades da pessoa.</p>
     <div className="mt-8 grid gap-4 md:grid-cols-2">
       <article className="rounded-lg border border-border bg-card p-6">
         <HeartHandshake className="size-6 text-secondary" aria-hidden="true" />
@@ -28,8 +28,8 @@ export function CareSpecialties() {
       </article>
       <article className="rounded-lg border border-border bg-card p-6">
         <ShieldCheck className="size-6 text-secondary" aria-hidden="true" />
-        <h3 className="mt-4 font-display text-xl font-semibold">Desintoxicação médica: encaminhamento externo</h3>
-        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">A desintoxicação médica não é realizada na unidade própria. A Central orienta a família, realiza triagem e encaminhamento para avaliação e cuidado em estabelecimentos médicos habilitados. Protocolos e condutas são responsabilidade da equipe médica desses serviços.</p>
+        <h3 className="mt-4 font-display text-xl font-semibold">Avaliação clínica e encaminhamento para desintoxicação</h3>
+        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">A avaliação médica orienta o cuidado adequado. Quando há indicação de desintoxicação médica ou assistência hospitalar, a Central apoia a família no encaminhamento a estabelecimentos habilitados, com protocolos e condutas definidos pela equipe responsável.</p>
         <Button asChild variant="link" className="mt-4 h-auto min-h-12 whitespace-normal px-0 text-left"><Link to="/clinica-de-reabilitacao">Compreender as etapas do cuidado <ArrowRight aria-hidden="true" /></Link></Button>
       </article>
       <article className="rounded-lg border border-border bg-card p-6">
@@ -39,16 +39,16 @@ export function CareSpecialties() {
         <Button asChild variant="link" className="mt-4 h-auto min-h-12 whitespace-normal px-0 text-left"><Link to="/termos-de-acolhimento">Consultar os termos de atendimento <ArrowRight aria-hidden="true" /></Link></Button>
       </article>
     </div>
-    <p className="mt-6 max-w-3xl text-sm leading-relaxed text-muted-foreground">Para necessidades de acolhimento masculino ou feminino, consulte a equipe sobre perfil de admissão e possibilidades de encaminhamento. Não há confirmação de ambientes separados na unidade.</p>
+    <p className="mt-6 max-w-3xl text-sm leading-relaxed text-muted-foreground">Para necessidades de acolhimento masculino ou feminino, consulte a equipe sobre perfil de admissão e possibilidades de encaminhamento. A organização dos ambientes e a compatibilidade de admissão devem ser esclarecidas diretamente antes do ingresso.</p>
     <p className="mt-3 text-xs leading-relaxed text-muted-foreground">Informações de serviço fornecidas pela instituição, sem promessa de cura, prazo ou resultado. Em risco imediato, procure atendimento de urgência ou ligue para o SAMU 192.</p>
   </section><CareMethodology /></>;
 }
 
 function CareMethodology() {
-  return <section className={sectionClass} aria-label="Metodologia e limites do cuidado">
-    <p className="mb-3 text-xs font-semibold uppercase text-secondary">Cuidado psicossocial e orientação responsável</p>
-    <h2 className={headingClass}>Metodologia de Cuidado Psicossocial e Orientação sobre Abordagens Terapêuticas</h2>
-    <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground">O acolhimento voluntário da Central reúne suporte psicológico, conscientização em 12 Passos, laborterapia, convivência terapêutica e prevenção à recaída. As informações abaixo distinguem práticas confirmadas de orientação educativa e cuidados que exigem avaliação externa, sem atribuir protocolo médico à unidade.</p>
+  return <section className={sectionClass} aria-label="Metodologia e equipe multidisciplinar">
+    <p className="mb-3 text-xs font-semibold uppercase text-secondary">Equipe multidisciplinar e cuidado individualizado</p>
+    <h2 className={headingClass}>Metodologia Terapêutica e Equipe Multidisciplinar</h2>
+    <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground">O acolhimento voluntário da Central reúne suporte psicológico, conscientização em 12 Passos, laborterapia, convivência terapêutica e prevenção à recaída. Acompanhamento médico e psiquiátrico integrado e enfermagem com supervisão diária e cuidados contínuos complementam essa estrutura. O plano individual orienta as prioridades e eventuais encaminhamentos hospitalares.</p>
     <div className="mt-8 grid gap-4 lg:grid-cols-3">
       {careMethodology.map(method => <article key={method.title} className="rounded-lg border border-border bg-card p-6">
         <ShieldCheck className="size-6 text-secondary" aria-hidden="true" />
@@ -57,10 +57,10 @@ function CareMethodology() {
       </article>)}
     </div>
     <div className="mt-7 border-l-2 border-accent pl-5">
-      <h3 className="font-display text-lg font-semibold">Equipe confirmada e responsabilidade pelo cuidado</h3>
-      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">O suporte psicológico é realizado por Margarete Vasques (CRP 06/130268), com coordenação operacional de Luiz Fernando Soares. A unidade não anuncia psiquiatria própria, nutricionistas ou enfermagem 24 horas. Quando necessário, o atendimento médico ocorre em estabelecimentos externos habilitados, sob responsabilidade das respectivas equipes.</p>
+      <h3 className="font-display text-lg font-semibold">Estrutura de acolhimento multidisciplinar</h3>
+      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">O suporte psicológico especializado é conduzido por Margarete Vasques (CRP 06/130268), com foco em suporte emocional, manejo comportamental e acolhimento. Luiz Fernando Soares lidera a coordenação operacional, a organização da rotina terapêutica e o apoio às famílias. O acompanhamento médico e psiquiátrico integrado contempla avaliação clínica, estabilização e manejo de comorbidades. A equipe de enfermagem na unidade realiza supervisão diária e cuidados contínuos dos acolhidos. Conscientização em 12 Passos, PPR, laborterapia e convivência terapêutica integram o planejamento de autonomia e reinserção social.</p>
     </div>
-    <Button asChild variant="link" className="mt-5 h-auto min-h-12 max-w-full whitespace-normal px-0 text-left"><Link to="/transparencia">Consultar a equipe e os limites do atendimento <ArrowRight aria-hidden="true" /></Link></Button>
+    <Button asChild variant="link" className="mt-5 h-auto min-h-12 max-w-full whitespace-normal px-0 text-left"><Link to="/transparencia">Conhecer a equipe e a responsabilidade pelo cuidado <ArrowRight aria-hidden="true" /></Link></Button>
   </section>;
 }
 
@@ -86,7 +86,7 @@ export function RegionalCare({ cityName }: { cityName?: string }) {
     <address className="mt-4 text-sm not-italic font-semibold leading-relaxed">{institutionalIdentity.fullAddress}</address>
     <div className="mt-8 grid gap-6 md:grid-cols-2">
       <div className="border-l-2 border-accent pl-5"><CalendarDays className="size-5 text-secondary" aria-hidden="true" /><h3 className="mt-3 font-display text-lg font-semibold">Visitas familiares agendadas</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">As visitas seguem dias e horários agendados conforme o cronograma terapêutico, preservando a rotina de cuidado e o vínculo com a família.</p></div>
-      <div className="border-l-2 border-accent pl-5"><MapPin className="size-5 text-secondary" aria-hidden="true" /><h3 className="mt-3 font-display text-lg font-semibold">Transporte com agendamento prévio</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Suporte de remoção e translado especializado para Araraquara e municípios vizinhos, mediante agendamento com a equipe operacional coordenada por Luiz Fernando Soares. Confirme condições e disponibilidade antes de qualquer deslocamento; não é serviço de emergência 24h.</p></div>
+      <div className="border-l-2 border-accent pl-5"><MapPin className="size-5 text-secondary" aria-hidden="true" /><h3 className="mt-3 font-display text-lg font-semibold">Transporte com agendamento prévio</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Suporte de remoção e translado especializado para Araraquara e municípios vizinhos, mediante agendamento com a equipe operacional coordenada por Luiz Fernando Soares. O plantão de orientação e o suporte para agendamento funcionam 24 horas. Combine condições e disponibilidade antes do deslocamento; em emergência, acione o SAMU 192.</p></div>
     </div>
     <div className="mt-7 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap">
       <Button asChild variant="outline" className="h-auto min-h-12 max-w-full whitespace-normal py-3 text-left"><a href={institutionalIdentity.mapsHref} target="_blank" rel="noopener noreferrer"><MapPin aria-hidden="true" />Ver no Google Maps / Como Chegar</a></Button>
@@ -101,12 +101,12 @@ export function FinancialGuidance() {
     <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground">Sabemos que a busca de cuidado exige atenção e clareza. Além do acolhimento particular, a Central oferece orientação à família para consultar possibilidades de cobertura ou reembolso integral ou parcial junto ao plano de saúde, conforme as condições do contrato.</p>
     <div className="mt-7 border-l-2 border-accent pl-5">
       <h3 className="font-display text-lg font-semibold">Documentação e consulta à operadora</h3>
-      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">A Central fornece documentação administrativa referente ao acolhimento. Laudos e relatórios médicos, quando exigidos, devem ser solicitados aos profissionais e estabelecimentos médicos responsáveis pelo atendimento externo; não são emitidos pela Central como serviço médico próprio.</p>
+      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">A Central fornece documentação administrativa referente ao acolhimento. A equipe ajuda a família a identificar os documentos solicitados pela operadora e orienta a solicitação de laudos e relatórios aos profissionais responsáveis pelo atendimento. Cada documento clínico depende da avaliação e da competência do profissional emissor.</p>
       <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">Se o seu plano é Unimed, Bradesco Saúde, SulAmérica, Amil, Porto Seguro Saúde ou NotreDame Intermédica, consulte diretamente a operadora sobre requisitos, elegibilidade e documentos. A menção a essas operadoras é apenas informativa e não indica convênio, parceria ou atendimento credenciado da Central.</p>
     </div>
-    <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">Essa orientação não significa aceitação de convênios nem garantia de cobertura ou reembolso. As condições dependem do contrato, da operadora e do serviço indicado; solicite a confirmação diretamente ao plano.</p>
+    <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">A assessoria apoia a organização do pedido; autorização, cobertura e reembolso são decisões da operadora, conforme contrato e serviço indicado. Consulte diretamente seu plano para confirmar as condições. As operadoras citadas são exemplos para consulta, e não convênios anunciados.</p>
     <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">O acolhimento voluntário e o encaminhamento hospitalar são distintos. Os trâmites de internação devem observar as Leis 10.216/2001 e 13.840/2019. A orientação familiar da Central não substitui assessoria jurídica ou avaliação médica, nem garante vaga em serviços externos.</p>
     <div className="mt-4 flex flex-wrap gap-x-6 gap-y-3 text-sm text-secondary">{legalSources.slice(0, 2).map(source => <a key={source.href} href={source.href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">{source.label}</a>)}</div>
-    <Button asChild className="mt-6 h-auto min-h-12 max-w-full whitespace-normal bg-whatsapp py-3 text-whatsapp-foreground hover:bg-whatsapp/90"><a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />Consultar acolhimento e orientação sobre reembolso</a></Button>
+    <Button asChild className="mt-6 h-auto min-h-12 max-w-full whitespace-normal bg-whatsapp py-3 text-whatsapp-foreground hover:bg-whatsapp/90"><a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />Receber orientação sobre acolhimento e reembolso</a></Button>
   </section>;
 }

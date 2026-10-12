@@ -63,6 +63,12 @@ test("referral does not establish round-the-clock transport availability", () =>
   assert.equal(institutionalIdentity.careScope.transport24HoursConfirmed, false);
 });
 
+test("the institution confirms integrated medical and psychiatric accompaniment", () => assert.equal(institutionalIdentity.careScope.integratedMedicalPsychiatricCare, true));
+test("the institution confirms daily nursing supervision", () => assert.equal(institutionalIdentity.careScope.dailyNursingSupervision, true));
+test("the institution confirms continuous nursing care", () => assert.equal(institutionalIdentity.careScope.continuousNursingCare, true));
+test("the institution confirms 24-hour orientation", () => assert.equal(institutionalIdentity.careScope.orientation24Hours, true));
+test("the institution confirms 24-hour transport scheduling support", () => assert.equal(institutionalIdentity.careScope.transportScheduling24Hours, true));
+
 test("involuntary hospitalization notification has a maximum deadline of 72 hours", () => {
   assert.equal(involuntaryHospitalizationSafeguards.notificationDeadlineHours, 72);
 });

@@ -257,7 +257,7 @@ function AraraquaraPage() {
               <p className="mt-5 max-w-2xl text-[16px] leading-relaxed text-muted-foreground sm:text-lg">Acolhimento voluntário e reabilitação psicossocial para dependência química e alcoolismo, com sede própria em Araraquara e orientação às famílias da região.</p>
               <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">A Central de Acolhimento e Reabilitação orienta pessoas que enfrentam o uso problemático de álcool e outras drogas, sempre considerando a história e as necessidades de cada caso.</p>
               <div className="mt-7 grid gap-3 sm:grid-cols-2">
-                <WhatsAppLink className="flex min-h-14 items-center justify-center gap-2 rounded-lg bg-whatsapp px-5 py-4 text-center text-sm font-semibold text-whatsapp-foreground shadow-lg transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"><MessageCircle className="size-5" aria-hidden="true" /> Falar com nossa equipe</WhatsAppLink>
+                <WhatsAppLink className="flex min-h-14 items-center justify-center gap-2 rounded-lg bg-whatsapp px-5 py-4 text-center text-sm font-semibold text-whatsapp-foreground shadow-lg transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"><MessageCircle className="size-5" aria-hidden="true" /> Falar com a orientação 24h</WhatsAppLink>
                 <Link to="/tratamento" className="flex min-h-14 items-center justify-center gap-2 rounded-lg border border-primary/30 bg-card px-5 py-4 text-center text-sm font-semibold text-primary shadow-sm transition-colors hover:border-primary/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">Conhecer o tratamento <ArrowRight className="size-4" aria-hidden="true" /></Link>
               </div>
               <p className="mt-5 flex items-start gap-2 text-xs leading-relaxed text-muted-foreground"><ShieldCheck className="mt-0.5 size-4 shrink-0 text-secondary" aria-hidden="true" /> Orientação inicial com respeito e discrição. Nenhuma modalidade de cuidado é indicada sem avaliação individual.</p>
@@ -297,7 +297,7 @@ function AraraquaraPage() {
               <div className="space-y-4 text-[15px] leading-relaxed text-deep/75 sm:text-base">
                 <p>A dependência química é uma condição complexa relacionada ao uso persistente de substâncias, mesmo quando surgem prejuízos à saúde, à rotina ou aos vínculos. Uma página na internet não substitui avaliação e não deve ser usada para diagnosticar alguém.</p>
                 <p>Famílias de Araraquara podem procurar orientação quando o consumo de álcool ou outras drogas começa a provocar preocupação, conflitos, perda de autonomia ou riscos. Buscar informação é diferente de iniciar acolhimento, e acolhimento não significa necessariamente internação.</p>
-                <p>A proposta confirmada da Central inclui conscientização em 12 Passos, suporte psicológico com Margarete Vasques (CRP 06/130268), laborterapia, convivência terapêutica e prevenção à recaída. Cada situação precisa ser analisada individualmente; cuidados médicos e hospitalares são encaminhados a estabelecimentos habilitados, não realizados na unidade própria.</p>
+                <p>A proposta confirmada da Central inclui conscientização em 12 Passos, suporte psicológico com Margarete Vasques (CRP 06/130268), laborterapia, convivência terapêutica e prevenção à recaída. Cada situação precisa ser analisada individualmente; o acompanhamento médico e psiquiátrico integrado e a equipe de enfermagem participam do cuidado na unidade, com encaminhamento a estabelecimentos habilitados quando há necessidade hospitalar.</p>
               </div>
             </div>
             <div className="mt-10 grid gap-4 md:grid-cols-3">
@@ -330,7 +330,7 @@ function AraraquaraPage() {
             <aside id="familia" className="mt-10 grid scroll-mt-6 gap-6 rounded-lg bg-primary p-6 text-primary-foreground shadow-lg sm:p-8 lg:grid-cols-[auto_1fr_auto] lg:items-center">
               <Users className="size-8 text-secondary" aria-hidden="true" />
               <div><h3 className="font-display text-2xl font-semibold">Orientação para famílias de Araraquara</h3><p className="mt-3 text-sm leading-relaxed text-primary-foreground/75">Quando há preocupação com mudanças de comportamento, conflitos frequentes, riscos à saúde ou prejuízos na vida cotidiana. A orientação pode ajudar a família a organizar uma conversa e procurar avaliação adequada.</p></div>
-              <WhatsAppLink className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-whatsapp px-5 py-3 text-sm font-semibold text-whatsapp-foreground"><MessageCircle className="size-4" aria-hidden="true" /> Falar com nossa equipe</WhatsAppLink>
+              <WhatsAppLink className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-whatsapp px-5 py-3 text-sm font-semibold text-whatsapp-foreground"><MessageCircle className="size-4" aria-hidden="true" /> Falar com a orientação 24h</WhatsAppLink>
             </aside>
           </div>
         </section>
@@ -366,7 +366,7 @@ function AraraquaraPage() {
               <AraraquaraPhotoGallery light />
             </div>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <WhatsAppLink className="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg bg-whatsapp px-6 py-4 text-sm font-semibold text-whatsapp-foreground"><MessageCircle className="size-5" aria-hidden="true" /> Falar com nossa equipe</WhatsAppLink>
+              <WhatsAppLink className="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg bg-whatsapp px-6 py-4 text-sm font-semibold text-whatsapp-foreground"><MessageCircle className="size-5" aria-hidden="true" /> Falar com a orientação 24h</WhatsAppLink>
               <a href={phoneHref} className="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg border border-deep/15 bg-card px-6 py-4 text-sm font-semibold text-deep transition-colors hover:border-primary/40"><Phone className="size-4" aria-hidden="true" /> Ligar agora · {phoneDisplay}</a>
             </div>
           </div>

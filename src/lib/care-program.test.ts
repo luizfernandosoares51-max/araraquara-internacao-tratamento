@@ -25,8 +25,13 @@ test("private reception and reimbursement guidance never guarantee coverage", ()
 test("gender-specific environments remain unconfirmed", () => assert.equal(careProgram.genderSpecificEnvironmentsConfirmed, false));
 test("CBT is educational rather than a confirmed own-unit modality", () => assert.equal(careProgram.methodology.cbt, "educational"));
 test("relapse prevention remains a confirmed modality", () => assert.equal(careProgram.methodology.relapsePrevention, "confirmed"));
-test("comorbidity medical care requires external referral", () => assert.equal(careProgram.methodology.comorbidities, "external-referral"));
-test("own-unit psychiatry is not confirmed", () => assert.equal(careProgram.methodology.ownPsychiatryConfirmed, false));
+test("comorbidities have confirmed integrated medical care", () => assert.equal(careProgram.methodology.comorbidities, "integrated-medical-care"));
+test("own-unit psychiatric accompaniment is confirmed", () => assert.equal(careProgram.methodology.ownPsychiatryConfirmed, true));
+test("own-unit daily nursing supervision is confirmed", () => assert.equal(careProgram.methodology.ownDailyNursingConfirmed, true));
+test("own-unit continuous nursing care is confirmed", () => assert.equal(careProgram.methodology.ownContinuousNursingCareConfirmed, true));
+test("orientation is available 24 hours", () => assert.equal(careProgram.orientation.roundTheClock, true));
+test("transport scheduling support is available 24 hours", () => assert.equal(careProgram.orientation.transportSchedulingRoundTheClock, true));
+test("orientation is distinct from emergency response", () => assert.equal(careProgram.orientation.emergencyService, false));
 test("own-unit nutritionist is not confirmed", () => assert.equal(careProgram.methodology.ownNutritionistConfirmed, false));
 test("own-unit round-the-clock nursing is not confirmed", () => assert.equal(careProgram.methodology.ownRoundTheClockNursingConfirmed, false));
 for (const [index, start, end] of [[0, "07:00", "08:30"], [1, "08:30", "11:30"], [2, "11:30", "14:00"], [3, "14:00", "17:00"], [4, "18:00", "20:00"], [5, "20:00", "22:00"]] as const) {

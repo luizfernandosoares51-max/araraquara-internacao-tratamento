@@ -11,7 +11,7 @@ test('transport requires appointment', () => assert.equal(specialtyScope.transpo
 test('transport is not around the clock', () => assert.equal(specialtyScope.transport.roundTheClock, false));
 test('female unit is not confirmed', () => assert.equal(ribeiraoSpecialtyScope.femaleUnitConfirmed, false));
 test('adolescent program is not confirmed', () => assert.equal(ribeiraoSpecialtyScope.adolescentProgramConfirmed, false));
-test('own psychiatry is not confirmed', () => assert.equal(ribeiraoSpecialtyScope.ownPsychiatryConfirmed, false));
+test('own psychiatric accompaniment is confirmed', () => assert.equal(ribeiraoSpecialtyScope.ownPsychiatryConfirmed, true));
 test('own medication detox is unavailable', () => assert.equal(ribeiraoSpecialtyScope.ownMedicationDetox, false));
 test('confirmed psychology remains Margarete Vasques CRP 06/130268', () => {
   assert.equal(specialtyScope.psychology.name, 'Margarete Vasques');

@@ -144,7 +144,7 @@ const orientationSteps = [
   "Informações iniciais ajudam a identificar dúvidas, riscos e necessidades.",
   "A família recebe orientação sobre os caminhos que podem ser considerados.",
   "Possibilidades de tratamento são apresentadas conforme o caso, sem resposta pronta.",
-  "Se houver indicação e disponibilidade, pode ser considerado acolhimento voluntário na sede própria em Araraquara; necessidades médicas são encaminhadas a serviços habilitados externos.",
+  "Se houver indicação e disponibilidade, pode ser considerado acolhimento voluntário na sede própria em Araraquara; a equipe multidisciplinar reúne acompanhamento médico e psiquiátrico integrado e enfermagem, com encaminhamento hospitalar quando indicado.",
   "Os próximos passos, condições e preparativos são explicados com clareza.",
 ];
 
@@ -183,7 +183,7 @@ const faqs = [
   {
     question: "A Central possui unidade em Ribeirão Preto?",
     answer:
-      "Não há unidade física da Central em Ribeirão Preto. A única sede própria fica em Araraquara, na R. Alfredo Micelli, 70, com acolhimento voluntário conforme avaliação e disponibilidade. Necessidades médicas são encaminhadas a estabelecimentos habilitados externos.",
+      "Não há unidade física da Central em Ribeirão Preto. A única sede própria fica em Araraquara, na R. Alfredo Micelli, 70, com acolhimento voluntário conforme avaliação e disponibilidade. O acolhimento reúne suporte psicológico, acompanhamento médico e psiquiátrico integrado e enfermagem. Necessidades hospitalares recebem encaminhamento ao serviço habilitado adequado.",
   },
   {
     question: "Como entrar em contato com a Central de Acolhimento e Reabilitação?",
@@ -272,7 +272,7 @@ function OfficialRibeiraoPretoPage() {
                </figure>
                <aside className="mt-4 border-t-4 border-secondary bg-glass p-7" aria-label="Transparência sobre a localização">
                 <ShieldCheck className="size-8 text-secondary" aria-hidden="true" />
-                <h2 className="mt-5 font-display text-xl font-bold">Orientação sem criar falsas expectativas</h2>
+                <h2 className="mt-5 font-display text-xl font-bold">Acolhimento e orientação para sua família</h2>
                 <p className="mt-3 text-sm leading-7 text-muted-foreground">
                   A Central não possui unidade física em Ribeirão Preto. O contato serve para compreender a situação e apresentar possibilidades conforme o caso e a disponibilidade da sede própria em Araraquara, sem garantia de vaga, internação ou resultado.
                 </p>

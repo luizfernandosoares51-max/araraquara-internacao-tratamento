@@ -326,12 +326,12 @@ function HomePage() {
                   Conhecer o tratamento <ArrowRight className="size-4" aria-hidden="true" />
                 </a>
                 <WhatsAppLink className="flex min-h-14 items-center justify-center gap-2 rounded-2xl bg-whatsapp px-5 py-4 text-center text-sm font-semibold text-whatsapp-foreground shadow-lg shadow-accent/15 transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring">
-                  <MessageCircle className="size-5" aria-hidden="true" /> Buscar orientação
+                  <MessageCircle className="size-5" aria-hidden="true" /> Falar com a orientação 24h
                 </WhatsAppLink>
               </div>
               <div className="mt-6 flex items-start gap-3 text-xs leading-relaxed text-muted-foreground">
                 <ShieldCheck className="mt-0.5 size-4 shrink-0 text-secondary" aria-hidden="true" />
-                Orientação inicial com respeito, discrição e sem compromisso.
+                Plantão de orientação à família e suporte para agendamento 24 horas, com respeito e discrição.
               </div>
             </div>
 
@@ -410,7 +410,7 @@ function HomePage() {
               <div className="order-1 lg:order-2">
                 <SectionLabel>Tratamento para dependência química e alcoolismo</SectionLabel>
                 <h2 className="mt-3 font-display text-3xl font-semibold leading-tight sm:text-5xl">Metodologia Terapêutica: 12 Passos, Apoio Psicológico e Convivência</h2>
-                <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground">A proposta de acolhimento voluntário da Central inclui conscientização em 12 Passos, suporte psicológico com Margarete Vasques (CRP 06/130268), laborterapia, convivência terapêutica e prevenção à recaída. O plano considera a história, as condições de saúde e a realidade de cada pessoa; cuidados médicos são encaminhados a serviços habilitados. <Link to="/tratamento" className="font-semibold text-secondary hover:underline">Entenda o tratamento</Link>.</p>
+                <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground">A proposta de acolhimento voluntário da Central inclui conscientização em 12 Passos, suporte psicológico com Margarete Vasques (CRP 06/130268), laborterapia, convivência terapêutica e prevenção à recaída. O plano considera a história, as condições de saúde e a realidade de cada pessoa; o acompanhamento médico e psiquiátrico integrado e a enfermagem complementam o suporte psicológico, com encaminhamento hospitalar quando indicado. <Link to="/tratamento" className="font-semibold text-secondary hover:underline">Entenda o tratamento</Link>.</p>
               </div>
             </div>
 

@@ -6,8 +6,8 @@ test("gambling guidance does not confirm a specialized treatment program", () =>
   assert.equal(gamblingCareScope.educationalOnly, true);
   assert.equal(gamblingCareScope.specializedProgramConfirmed, false);
 });
-test("medical care remains external to the sole Araraquara unit", () => {
-  assert.equal(gamblingCareScope.ownMedicalCareConfirmed, false);
+test("integrated medical accompaniment is confirmed in the sole Araraquara unit", () => {
+  assert.equal(gamblingCareScope.ownMedicalCareConfirmed, true);
   assert.equal(gamblingCareScope.ownUnitCity, "Araraquara");
 });
 test("immediate medical risk points to SAMU 192", () => {

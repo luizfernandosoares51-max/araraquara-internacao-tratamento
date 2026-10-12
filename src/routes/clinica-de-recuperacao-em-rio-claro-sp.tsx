@@ -59,7 +59,7 @@ const supportSteps = [
   "Esclarecer como funciona o acolhimento",
   "Conversar sobre internação somente quando essa alternativa precisar ser avaliada",
   "Orientar sobre documentos e preparação necessária",
-  "Avaliar acolhimento voluntário na sede própria de Araraquara ou encaminhamento médico externo, conforme a necessidade",
+  "Avaliar acolhimento voluntário com equipe multidisciplinar na sede de Araraquara e encaminhamento hospitalar quando indicado",
   "Manter a família informada durante a busca por tratamento",
 ];
 
@@ -69,7 +69,7 @@ const processSteps = [
   { title: "Entendimento da situação", text: "São considerados histórico, momento atual, riscos e rede de apoio." },
   { title: "Orientação sobre possibilidades", text: "A equipe explica caminhos que podem ser analisados para o cuidado." },
   { title: "Avaliação da necessidade", text: "A indicação de tratamento depende de análise individual; internação não é automática." },
-  { title: "Definição da unidade adequada", text: "Avalia-se a sede própria em Araraquara para acolhimento voluntário; necessidades médicas exigem serviço habilitado externo." },
+  { title: "Definição da unidade adequada", text: "Avalia-se a sede própria em Araraquara para acolhimento voluntário; o acompanhamento médico e psiquiátrico integrado e a enfermagem compõem o cuidado, com encaminhamento hospitalar conforme indicação." },
   { title: "Preparação para o acolhimento", text: "A família recebe informações sobre documentos, condições e próximos passos." },
 ];
 
@@ -113,7 +113,7 @@ const faqs = [
   {
     question: "A Central possui unidade em Rio Claro?",
     answer:
-      "Não. A única sede física da Central fica em Araraquara, na R. Alfredo Micelli, 70. Esta página orienta famílias de Rio Claro; acolhimento voluntário depende de avaliação e disponibilidade. Necessidades médicas são encaminhadas a serviços habilitados externos.",
+      "Não. A única sede física da Central fica em Araraquara, na R. Alfredo Micelli, 70. Esta página orienta famílias de Rio Claro; acolhimento voluntário depende de avaliação e disponibilidade. A equipe na sede reúne psicologia, acompanhamento médico e psiquiátrico integrado e enfermagem, com encaminhamento hospitalar quando indicado.",
   },
   {
     question: "Como saber qual tipo de tratamento é adequado?",

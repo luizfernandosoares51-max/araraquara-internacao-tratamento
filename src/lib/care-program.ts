@@ -10,28 +10,31 @@ export const careProgram = {
   methodology: {
     cbt: "educational",
     relapsePrevention: "confirmed",
-    comorbidities: "external-referral",
-    ownPsychiatryConfirmed: false,
+    comorbidities: "integrated-medical-care",
+    ownPsychiatryConfirmed: true,
+    ownDailyNursingConfirmed: true,
+    ownContinuousNursingCareConfirmed: true,
     ownNutritionistConfirmed: false,
     ownRoundTheClockNursingConfirmed: false,
   },
   visitsByAppointment: true,
   transport: { byAppointment: true, roundTheClock: false, area: "Araraquara e municípios vizinhos" },
+  orientation: { roundTheClock: true, transportSchedulingRoundTheClock: true, emergencyService: false },
   finance: { privateReception: true, reimbursementGuidance: true, guaranteedCoverage: false },
 } as const;
 
 export const careMethodology = [
   {
     title: "Terapia Cognitivo-Comportamental (TCC): orientação educativa",
-    description: "A TCC é uma abordagem psicológica que trabalha relações entre pensamentos, emoções e comportamentos e pode apoiar o desenvolvimento de estratégias de enfrentamento. Sua indicação depende de avaliação profissional; a Central não apresenta a TCC como modalidade própria confirmada.",
+    description: "A TCC trabalha relações entre pensamentos, emoções e comportamentos e pode apoiar estratégias de enfrentamento. Apresentamos essa abordagem como informação educativa; a escolha das técnicas de cuidado deve ser discutida com o profissional responsável conforme a avaliação individual.",
   },
   {
     title: "Plano de Prevenção à Recaída (PPR)",
     description: "A prevenção à recaída integra o suporte psicossocial confirmado pela instituição. O plano considera situações de risco, gatilhos percebidos, estratégias de enfrentamento e rede de apoio, respeitando as necessidades individuais, sem garantir abstinência ou resultados.",
   },
   {
-    title: "Diagnóstico duplo e comorbidades: avaliação externa",
-    description: "O uso de substâncias pode coexistir com depressão, ansiedade, transtorno bipolar ou TDAH. Esses sinais exigem avaliação individual por profissionais habilitados, não um diagnóstico pela internet. A Central orienta a família e encaminha necessidades médicas e psiquiátricas a serviços externos habilitados; não anuncia acompanhamento médico integrado na unidade própria.",
+    title: "Diagnóstico duplo e comorbidades: acompanhamento integrado",
+    description: "O uso de substâncias pode coexistir com ansiedade, depressão ou transtorno bipolar. A Central reúne suporte psicológico e acompanhamento médico e psiquiátrico integrado para avaliação clínica, estabilização e manejo de comorbidades, conforme as necessidades individuais. Diagnósticos e condutas são definidos pelos profissionais responsáveis em avaliação, e necessidades hospitalares seguem encaminhamento ao serviço adequado.",
   },
 ] as const;
 
