@@ -26,7 +26,7 @@ export const cityEditorial: Record<string, CityEditorial> = {
     ],
     faqs: [
       { question: "Como organizar visitas saindo de São Carlos?", answer: "Fale com a equipe pelo (16) 99765-4579, confirme dia e horário de visita e planeje o percurso até a sede em Araraquara. A SP-310 é uma referência regional, mas não há tempo de viagem ou frequência de visitas garantidos." },
-      { question: "Acolhimento perto de São Carlos elimina gatilhos do consumo?", answer: "Não. Mudar de ambiente pode ser considerado na avaliação, mas não elimina fatores emocionais, sociais ou situações de risco. Convivência, apoio psicológico, prevenção à recaída e continuidade do cuidado precisam ser planejados individualmente." },
+      { question: "Como a mudança de ambiente pode apoiar o cuidado de quem vem de São Carlos?", answer: "Uma mudança de ambiente pode reduzir a exposição a contextos associados ao consumo. Na sede em Araraquara, convivência, apoio psicológico e prevenção à recaída integram o cuidado individual, mantendo os vínculos familiares e a continuidade em São Carlos, sem garantia de resultado." },
     ],
   },
   "americo-brasiliense-sp": {
@@ -41,8 +41,8 @@ export const cityEditorial: Record<string, CityEditorial> = {
       { heading: "Participação familiar com combinados claros", paragraphs: ["Ao considerar acolhimento voluntário, pergunte sobre avaliação, rotina, consentimento, condições particulares e visitas. A frequência deve ser combinada com a equipe conforme o plano de cuidado; a proximidade geográfica ajuda a planejar encontros nas datas acordadas.", "A família também merece apoio para estabelecer limites e dividir responsabilidades. A orientação ajuda a construir uma abordagem respeitosa, com escuta, proteção e atenção às necessidades individuais."] },
     ],
     faqs: [
-      { question: "Há transporte imediato para famílias de Américo Brasiliense?", answer: "A Central informa suporte regional de remoção e translado por agendamento, sujeito a avaliação, condições e disponibilidade. Não é serviço de emergência nem há promessa de chegada imediata. Em risco à vida, acione o SAMU 192." },
-      { question: "Quem mora em Américo Brasiliense pode visitar semanalmente?", answer: "A frequência de visitas não é automática. Dias e horários precisam ser agendados com a equipe e alinhados ao cronograma terapêutico e às necessidades individuais." },
+      { question: "Como organizar transporte para acolhimento saindo de Américo Brasiliense?", answer: "A equipe orienta a organização do transporte regional, combina o local de saída em Américo Brasiliense e confirma avaliação, condições e agendamento. O plantão de orientação funciona 24h; em risco à vida, o atendimento de urgência ou SAMU 192 tem prioridade." },
+      { question: "Como combinar visitas regulares de familiares de Américo Brasiliense?", answer: "A proximidade facilita combinar visitas regulares. A equipe e a família definem dias e horários conforme o cronograma terapêutico e as necessidades individuais." },
     ],
   },
   "matao-sp": {
@@ -74,7 +74,7 @@ export const cityEditorial: Record<string, CityEditorial> = {
     ],
     faqs: [
       { question: "Familiares de Ibaté podem buscar orientação sem decidir pelo acolhimento?", answer: "Sim. A conversa inicial pode esclarecer dúvidas sobre limites, riscos e próximos passos. Não obriga a contratar acolhimento nem permite diagnosticar a pessoa ou a família pela internet." },
-      { question: "Buscar Araraquara significa abandonar a rede de Ibaté?", answer: "Não. A escolha deve considerar avaliação individual e continuidade. O Ambulatório de Saúde Mental e os canais municipais são independentes da Central e podem orientar o acesso público local." },
+      { question: "Como manter o apoio da rede de Ibaté durante o acolhimento?", answer: "Não. A escolha deve considerar avaliação individual e continuidade. O Ambulatório de Saúde Mental e os canais municipais são independentes da Central e podem orientar o acesso público local." },
     ],
   },
   "itapolis-sp": {
@@ -121,7 +121,7 @@ export const cityEditorial: Record<string, CityEditorial> = {
       { heading: "O retorno a Descalvado precisa de continuidade", paragraphs: ["Durante o planejamento, converse sobre acompanhamento no território, contatos de apoio e responsabilidades que serão retomadas. Não interrompa cuidados anteriores sem orientação dos profissionais. A rede municipal e o CAPS de Descalvado têm atribuições próprias que devem ser confirmadas.", "Visitas agendadas à sede em Araraquara permitem à família acompanhar o processo. A instituição informa ambiente reservado e área verde, integrados à rotina de cuidado; as imagens são conceituais e não retratam as instalações reais."] },
     ],
     faqs: [
-      { question: "Ficar fora de Descalvado impede recaídas?", answer: "Não. A mudança de ambiente pode ser considerada individualmente, mas não elimina fatores de risco. Prevenção à recaída, apoio e continuidade precisam de planejamento, sem garantia de resultado." },
+      { question: "Como o ambiente terapêutico pode apoiar quem vem de Descalvado?", answer: "O ambiente reservado e a rotina de cuidado podem ajudar a trabalhar situações associadas ao consumo. Apoio psicológico, prevenção à recaída e continuidade em Descalvado são planejados individualmente, sem garantia de resultado." },
       { question: "O que relatar depois de uma retomada do consumo?", answer: "Informe substâncias conhecidas, situações recentes, sintomas, riscos e tratamentos em andamento. Procure avaliação sem acusação; intoxicação ou abstinência grave exige urgência médica." },
     ],
   },
@@ -169,7 +169,7 @@ export const cityEditorial: Record<string, CityEditorial> = {
       { heading: "Limites e rede de apoio sustentam a conversa", paragraphs: ["Combine responsabilidades realistas e preserve a segurança financeira e física da família. Não confunda limite com punição ou retirada de cuidados essenciais. Se a conversa não avançar, procure orientação para planejar outra abordagem em vez de aumentar ameaças.", "O SAMS é uma referência para confirmar os serviços públicos de Ibitinga. O cuidado local e a consulta privada à Central são independentes. Ao considerar viagem, visitas ou transporte, confirme condições e disponibilidade; situações de crise não devem esperar deslocamento regional agendado."] },
     ],
     faqs: [
-      { question: "A Central garante convencer um familiar de Ibitinga a aceitar ajuda?", answer: "Não. A orientação pode ajudar a organizar fatos, limites e uma conversa segura, mas não garante adesão. Acolhimento voluntário depende de avaliação e das condições aplicáveis." },
+      { question: "Como a orientação ajuda famílias de Ibitinga a conversar sobre acolhimento?", answer: "A orientação ajuda a organizar fatos, limites e uma conversa segura, com respeito à autonomia. A equipe apoia os próximos passos e avalia as possibilidades de acolhimento voluntário; a decisão e a adesão são individuais." },
       { question: "É melhor conversar durante a intoxicação para mostrar os prejuízos?", answer: "Não é um momento seguro para confronto. Priorize proteção e procure avaliação adequada se houver risco. Emergências devem ser encaminhadas à urgência ou SAMU 192." },
     ],
   },
@@ -201,8 +201,8 @@ export const cityEditorial: Record<string, CityEditorial> = {
       { heading: "O retorno precisa conversar com a vida real", paragraphs: ["Os fatores que preocupavam a família podem continuar existindo depois do acolhimento. Pergunte sobre prevenção à recaída, necessidades de acompanhamento e responsabilidades no retorno. Um plano deve considerar saúde, vínculos e condições concretas, não apenas afastamento.", "Se houver crise psiquiátrica, intoxicação ou risco imediato em Ribeirão Preto, procure a urgência local ou SAMU 192. Não adie atendimento para viajar a Araraquara. Conhecer uma proposta privada é diferente de receber uma indicação médica ou ter uma vaga reservada."] },
     ],
     faqs: [
-      { question: "Sair de Ribeirão Preto garante recuperação?", answer: "Não. A localização não elimina fatores de risco nem garante resultado. A escolha deve considerar avaliação individual, vínculos, continuidade e necessidades de saúde, sem substituir automaticamente a rede municipal." },
-      { question: "Há transporte automaticamente disponível de Ribeirão Preto?", answer: "O transporte depende de consulta e agendamento. A área informada é Araraquara e municípios vizinhos; para outras origens, confirme possibilidade, condições e disponibilidade. A orientação e o suporte para agendamento funcionam 24h; em emergência, acione o SAMU 192." },
+      { question: "Como a mudança de rotina pode apoiar famílias de Ribeirão Preto?", answer: "A mudança de rotina pode reduzir a exposição a contextos associados ao consumo, junto ao cuidado multidisciplinar e à prevenção à recaída. A família participa do planejamento, com vínculos e continuidade preservados; a localização, por si só, não garante recuperação." },
+      { question: "Como planejar transporte de Ribeirão Preto com a equipe operacional?", answer: "O plantão de orientação e suporte de agendamento funciona 24h. Informe o local de saída em Ribeirão Preto para a coordenação analisar e combinar a possibilidade de transporte, as condições e o horário. A execução é programada; em emergência, acione o SAMU 192." },
     ],
   },
   "franca-sp": {
@@ -233,7 +233,7 @@ export const cityEditorial: Record<string, CityEditorial> = {
       { heading: "Continuar cuidando além do período de permanência", paragraphs: ["Converse sobre responsabilidades, vínculos e necessidades de acompanhamento desde a avaliação. Um plano de prevenção à recaída deve considerar situações reais do cotidiano; estar perto da sede não elimina riscos nem assegura retorno sem dificuldades.", "O plantão de orientação 24h, pelo contato oficial DDD 16, acolhe as dúvidas da família e esclarece avaliação, documentação e condições. A coordenação local ajuda a organizar o primeiro encontro e a participação no cuidado."] },
     ],
     faqs: [
-      { question: "Moradores de Araraquara podem chegar sem agendar?", answer: "Combine antes com a equipe. Avaliação, disponibilidade e recepção precisam ser esclarecidas, e as visitas seguem agendamento conforme o cronograma terapêutico. A sede não é pronto atendimento." },
+      { question: "Como combinar a recepção na sede de Araraquara?", answer: "O plantão de orientação 24h ajuda a combinar a avaliação e a recepção na sede local, confirmando disponibilidade e necessidades individuais. Visitas são agendadas conforme o cronograma terapêutico; emergências recebem prioridade na rede de urgência." },
       { question: "O cronograma das 07h às 22h significa atendimento de emergência?", answer: "Não. Trata-se da rotina terapêutica informada da unidade, não de plantão de urgência. Em risco imediato, procure atendimento público de urgência ou acione SAMU 192." },
     ],
   },
