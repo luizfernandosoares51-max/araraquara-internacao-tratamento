@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Adicionar grade regional na Home: onze destinos HTTP 200 e navegação para remoção de São Carlos conferidos; sede única, remoção agendada, URLs existentes e retirada de Bauru preservadas, sem anunciar 24h/internação imediata; sem publicação.
+
 - [x] Adaptar o bloco de metodologia na Home, página pilar e Araraquara, distinguindo TCC educativa, prevenção à recaída confirmada e avaliação externa de comorbidades; 19 testes aprovados e três páginas conferidas com equipe, metadados preservados e navegação para Transparência, sem publicação.
 
 - [x] Criar nove páginas de especialidades para Ribeirão Preto com cartões após a apresentação, nove imagens WebP próprias, três FAQs por página, metadados individuais e retorno regional; 39 testes aprovados e validação em 1280/390/320 confirmam HTTP 200, imagens, perguntas, canonical, navegação e ausência de overflow; sitemap com 55 URLs. Sede em Araraquara, transporte agendado e cuidado médico externo preservados. Temas feminino, saúde mental, medicamentos e jovens educativos, sem anunciar serviços não confirmados; menu inalterado e sem publicação.

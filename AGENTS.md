@@ -9,7 +9,7 @@
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
 
-- Keep each researched local city page in an explicit route backed by shared rendering and city-specific editorial data, so URLs stay stable without homogenizing content.
+- Keep city pages explicit with shared rendering and city-specific data to preserve stable, original URLs.
 - Keep retired public city URLs as redirect-only routes excluded from the city catalog and sitemap, so legacy visits receive a permanent redirect without restoring retired content.
 - Render new editorial articles through the shared blog article shell while keeping route-specific copy and metadata in each route, so presentation stays consistent without homogenizing content.
 - Use opt-in illustrated section rendering for long-form articles without changing the existing article shell, so alternating editorial imagery stays isolated from other published articles.
@@ -30,3 +30,4 @@
 - Keep São Carlos specialty pages in explicit routes with their own typed editorial catalog and isolated rendering; derive cards and metadata from that catalog so regional guidance remains original and never implies a local branch.
 - Keep Rio Claro specialty pages in explicit routes backed by a separate typed editorial catalog and opt-in shell; derive discovery and head metadata from the same data to preserve existing pages and avoid implied medical or emergency services.
 - Keep Ribeirão Preto specialty routes explicit with an isolated typed editorial catalog and opt-in shell; derive cards, FAQs and metadata from the same data and represent unconfirmed modalities as education rather than available services.
+- Keep the Home regional grid opt-in with typed existing routes, to avoid aliases and retired city links.
