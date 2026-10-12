@@ -43,6 +43,9 @@ import { Route as InternacaoVoluntariaAraraquaraRouteImport } from './routes/int
 import { Route as InternacaoVoluntariaRibeiraoPretoRouteImport } from './routes/internacao-voluntaria-ribeirao-preto'
 import { Route as InternacaoVoluntariaRioClaroRouteImport } from './routes/internacao-voluntaria-rio-claro'
 import { Route as InternacaoVoluntariaSaoCarlosRouteImport } from './routes/internacao-voluntaria-sao-carlos'
+import { Route as LpAcolhimentoFamiliaRouteImport } from './routes/lp-acolhimento-familia'
+import { Route as LpAjudaJogosApostasRouteImport } from './routes/lp-ajuda-jogos-apostas'
+import { Route as LpPlantaoUrgenciaRemocaoRouteImport } from './routes/lp-plantao-urgencia-remocao'
 import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
 import { Route as ResgateRemocaoAraraquaraRouteImport } from './routes/resgate-remocao-araraquara'
 import { Route as ResgateRemocaoRibeiraoPretoRouteImport } from './routes/resgate-remocao-ribeirao-preto'
@@ -270,6 +273,22 @@ const InternacaoVoluntariaSaoCarlosRoute =
     path: '/internacao-voluntaria-sao-carlos',
     getParentRoute: () => rootRouteImport,
   } as any)
+const LpAcolhimentoFamiliaRoute = LpAcolhimentoFamiliaRouteImport.update({
+  id: '/lp-acolhimento-familia',
+  path: '/lp-acolhimento-familia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LpAjudaJogosApostasRoute = LpAjudaJogosApostasRouteImport.update({
+  id: '/lp-ajuda-jogos-apostas',
+  path: '/lp-ajuda-jogos-apostas',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LpPlantaoUrgenciaRemocaoRoute =
+  LpPlantaoUrgenciaRemocaoRouteImport.update({
+    id: '/lp-plantao-urgencia-remocao',
+    path: '/lp-plantao-urgencia-remocao',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
   id: '/politica-de-privacidade',
   path: '/politica-de-privacidade',
@@ -476,6 +495,9 @@ export interface FileRoutesByFullPath {
   '/internacao-voluntaria-ribeirao-preto': typeof InternacaoVoluntariaRibeiraoPretoRoute
   '/internacao-voluntaria-rio-claro': typeof InternacaoVoluntariaRioClaroRoute
   '/internacao-voluntaria-sao-carlos': typeof InternacaoVoluntariaSaoCarlosRoute
+  '/lp-acolhimento-familia': typeof LpAcolhimentoFamiliaRoute
+  '/lp-ajuda-jogos-apostas': typeof LpAjudaJogosApostasRoute
+  '/lp-plantao-urgencia-remocao': typeof LpPlantaoUrgenciaRemocaoRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/resgate-remocao-araraquara': typeof ResgateRemocaoAraraquaraRoute
   '/resgate-remocao-ribeirao-preto': typeof ResgateRemocaoRibeiraoPretoRoute
@@ -541,6 +563,9 @@ export interface FileRoutesByTo {
   '/internacao-voluntaria-ribeirao-preto': typeof InternacaoVoluntariaRibeiraoPretoRoute
   '/internacao-voluntaria-rio-claro': typeof InternacaoVoluntariaRioClaroRoute
   '/internacao-voluntaria-sao-carlos': typeof InternacaoVoluntariaSaoCarlosRoute
+  '/lp-acolhimento-familia': typeof LpAcolhimentoFamiliaRoute
+  '/lp-ajuda-jogos-apostas': typeof LpAjudaJogosApostasRoute
+  '/lp-plantao-urgencia-remocao': typeof LpPlantaoUrgenciaRemocaoRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/resgate-remocao-araraquara': typeof ResgateRemocaoAraraquaraRoute
   '/resgate-remocao-ribeirao-preto': typeof ResgateRemocaoRibeiraoPretoRoute
@@ -608,6 +633,9 @@ export interface FileRoutesById {
   '/internacao-voluntaria-ribeirao-preto': typeof InternacaoVoluntariaRibeiraoPretoRoute
   '/internacao-voluntaria-rio-claro': typeof InternacaoVoluntariaRioClaroRoute
   '/internacao-voluntaria-sao-carlos': typeof InternacaoVoluntariaSaoCarlosRoute
+  '/lp-acolhimento-familia': typeof LpAcolhimentoFamiliaRoute
+  '/lp-ajuda-jogos-apostas': typeof LpAjudaJogosApostasRoute
+  '/lp-plantao-urgencia-remocao': typeof LpPlantaoUrgenciaRemocaoRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/resgate-remocao-araraquara': typeof ResgateRemocaoAraraquaraRoute
   '/resgate-remocao-ribeirao-preto': typeof ResgateRemocaoRibeiraoPretoRoute
@@ -676,6 +704,9 @@ export interface FileRouteTypes {
     | '/internacao-voluntaria-ribeirao-preto'
     | '/internacao-voluntaria-rio-claro'
     | '/internacao-voluntaria-sao-carlos'
+    | '/lp-acolhimento-familia'
+    | '/lp-ajuda-jogos-apostas'
+    | '/lp-plantao-urgencia-remocao'
     | '/politica-de-privacidade'
     | '/resgate-remocao-araraquara'
     | '/resgate-remocao-ribeirao-preto'
@@ -741,6 +772,9 @@ export interface FileRouteTypes {
     | '/internacao-voluntaria-ribeirao-preto'
     | '/internacao-voluntaria-rio-claro'
     | '/internacao-voluntaria-sao-carlos'
+    | '/lp-acolhimento-familia'
+    | '/lp-ajuda-jogos-apostas'
+    | '/lp-plantao-urgencia-remocao'
     | '/politica-de-privacidade'
     | '/resgate-remocao-araraquara'
     | '/resgate-remocao-ribeirao-preto'
@@ -807,6 +841,9 @@ export interface FileRouteTypes {
     | '/internacao-voluntaria-ribeirao-preto'
     | '/internacao-voluntaria-rio-claro'
     | '/internacao-voluntaria-sao-carlos'
+    | '/lp-acolhimento-familia'
+    | '/lp-ajuda-jogos-apostas'
+    | '/lp-plantao-urgencia-remocao'
     | '/politica-de-privacidade'
     | '/resgate-remocao-araraquara'
     | '/resgate-remocao-ribeirao-preto'
@@ -874,6 +911,9 @@ export interface RootRouteChildren {
   InternacaoVoluntariaRibeiraoPretoRoute: typeof InternacaoVoluntariaRibeiraoPretoRoute
   InternacaoVoluntariaRioClaroRoute: typeof InternacaoVoluntariaRioClaroRoute
   InternacaoVoluntariaSaoCarlosRoute: typeof InternacaoVoluntariaSaoCarlosRoute
+  LpAcolhimentoFamiliaRoute: typeof LpAcolhimentoFamiliaRoute
+  LpAjudaJogosApostasRoute: typeof LpAjudaJogosApostasRoute
+  LpPlantaoUrgenciaRemocaoRoute: typeof LpPlantaoUrgenciaRemocaoRoute
   PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
   ResgateRemocaoAraraquaraRoute: typeof ResgateRemocaoAraraquaraRoute
   ResgateRemocaoRibeiraoPretoRoute: typeof ResgateRemocaoRibeiraoPretoRoute
@@ -1135,6 +1175,27 @@ declare module '@tanstack/react-router' {
       path: '/internacao-voluntaria-sao-carlos'
       fullPath: '/internacao-voluntaria-sao-carlos'
       preLoaderRoute: typeof InternacaoVoluntariaSaoCarlosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp-acolhimento-familia': {
+      id: '/lp-acolhimento-familia'
+      path: '/lp-acolhimento-familia'
+      fullPath: '/lp-acolhimento-familia'
+      preLoaderRoute: typeof LpAcolhimentoFamiliaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp-ajuda-jogos-apostas': {
+      id: '/lp-ajuda-jogos-apostas'
+      path: '/lp-ajuda-jogos-apostas'
+      fullPath: '/lp-ajuda-jogos-apostas'
+      preLoaderRoute: typeof LpAjudaJogosApostasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp-plantao-urgencia-remocao': {
+      id: '/lp-plantao-urgencia-remocao'
+      path: '/lp-plantao-urgencia-remocao'
+      fullPath: '/lp-plantao-urgencia-remocao'
+      preLoaderRoute: typeof LpPlantaoUrgenciaRemocaoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/politica-de-privacidade': {
@@ -1430,6 +1491,9 @@ const rootRouteChildren: RootRouteChildren = {
     InternacaoVoluntariaRibeiraoPretoRoute,
   InternacaoVoluntariaRioClaroRoute: InternacaoVoluntariaRioClaroRoute,
   InternacaoVoluntariaSaoCarlosRoute: InternacaoVoluntariaSaoCarlosRoute,
+  LpAcolhimentoFamiliaRoute: LpAcolhimentoFamiliaRoute,
+  LpAjudaJogosApostasRoute: LpAjudaJogosApostasRoute,
+  LpPlantaoUrgenciaRemocaoRoute: LpPlantaoUrgenciaRemocaoRoute,
   PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
   ResgateRemocaoAraraquaraRoute: ResgateRemocaoAraraquaraRoute,
   ResgateRemocaoRibeiraoPretoRoute: ResgateRemocaoRibeiraoPretoRoute,
