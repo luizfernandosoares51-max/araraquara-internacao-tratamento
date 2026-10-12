@@ -1,3 +1,5 @@
+import { regionalAccessFaqs } from "./regional-city-access";
+
 export type EditorialFaq = { question: string; answer: string };
 export type CityEditorial = {
   name: string;
@@ -244,10 +246,10 @@ export function cityEditorialMetadata(slug: string) {
     title: slug === "araraquara"
       ? "Clínica de Recuperação e Reabilitação em Araraquara - SP | (16) 99765-4579"
       : `Clínica de Recuperação: ${editorial.name} | Sede Araraquara | (16) 99765-4579`,
-    description: `Orientação para famílias de ${editorial.name}: ${editorial.focus}. Sede própria em Araraquara, acolhimento voluntário. (16) 99765-4579.`,
+    description: `Acolhimento para famílias de ${editorial.name}: ${editorial.focus}. Sede terapêutica em Araraquara, visitas agendadas e orientação 24h. (16) 99765-4579.`,
   };
 }
 
 export function cityEditorialFaqs(slug: string): EditorialFaq[] {
-  return cityEditorial[slug]?.faqs ?? [];
+  return [...regionalAccessFaqs(slug), ...(cityEditorial[slug]?.faqs ?? [])];
 }
