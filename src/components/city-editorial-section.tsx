@@ -24,7 +24,7 @@ export function CityEditorialSection({ slug }: { slug: string }) {
       <p className="mt-5 max-w-4xl text-base leading-relaxed text-muted-foreground">{editorial.access}</p>
       <address className="mt-4 text-sm font-semibold not-italic leading-relaxed">{institutionalIdentity.fullAddress}</address>
       <p className="mt-5 max-w-4xl text-base leading-relaxed text-muted-foreground">{editorial.preparation}</p>
-      <p className="mt-5 max-w-4xl text-sm leading-relaxed text-muted-foreground">A Central oferece acolhimento voluntário contínuo e suporte psicossocial somente na sede própria em Araraquara. Intervenção médica, desintoxicação e internação involuntária clínica exigem avaliação em estabelecimentos médicos habilitados externos. A instituição orienta os trâmites e o encaminhamento/remoção segura, conforme avaliação, condições e disponibilidade; não há garantia de vaga externa ou atendimento de emergência. Em risco imediato, procure urgência ou SAMU 192.</p>
+      <p className="mt-5 max-w-4xl text-sm leading-relaxed text-muted-foreground">A única sede própria da Central, em Araraquara, reúne acolhimento voluntário, suporte psicológico especializado, acompanhamento médico e psiquiátrico integrado e enfermagem com supervisão diária e cuidados contínuos. A família conta com orientação e suporte para agendamento de resgate/remoção 24 horas. Quando há indicação de desintoxicação médica ou internação hospitalar, a equipe orienta o encaminhamento a estabelecimentos habilitados. Transporte e admissão seguem avaliação e confirmação das condições; em risco imediato, procure urgência ou SAMU 192.</p>
       <div className="mt-7 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap">
         <Button asChild variant="outline" className="h-auto min-h-12 max-w-full whitespace-normal py-3 text-left"><a href={institutionalIdentity.mapsHref} target="_blank" rel="noopener noreferrer"><MapPin aria-hidden="true" />Conferir o trajeto no Google Maps</a></Button>
         <Button asChild variant="link" className="h-auto min-h-12 max-w-full whitespace-normal px-0 py-3 text-left"><a href={phoneHref}><Phone aria-hidden="true" />{phoneDisplay}</a></Button>
@@ -46,8 +46,8 @@ export function CityEditorialSection({ slug }: { slug: string }) {
         <p className="mt-4 max-w-4xl text-xs leading-relaxed text-muted-foreground">Orientação educativa, sem diagnóstico ou indicação individual. As fontes fundamentam informações gerais de saúde e direitos; os dados sobre a Central são declarações fornecidas pela instituição, não validação dos serviços por esses órgãos.</p>
       </aside>
       <div className="mt-7 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap">
-        <Button asChild className="h-auto min-h-12 max-w-full whitespace-normal bg-whatsapp py-3 text-left text-whatsapp-foreground hover:bg-whatsapp/90"><a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />Conversar sobre a situação da família</a></Button>
-        <Button asChild variant="link" className="h-auto min-h-12 max-w-full whitespace-normal py-3 text-left"><Link to="/transparencia">Responsabilidades e limites do atendimento<ArrowRight aria-hidden="true" /></Link></Button>
+        <Button asChild className="h-auto min-h-12 max-w-full whitespace-normal bg-whatsapp py-3 text-left text-whatsapp-foreground hover:bg-whatsapp/90"><a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />Falar com a orientação 24h</a></Button>
+        <Button asChild variant="link" className="h-auto min-h-12 max-w-full whitespace-normal py-3 text-left"><Link to="/transparencia">Equipe e responsabilidade pelo cuidado<ArrowRight aria-hidden="true" /></Link></Button>
       </div>
     </article>
   </div>;
