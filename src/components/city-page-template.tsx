@@ -55,32 +55,7 @@ export function CityPageTemplate({ city }: { city: CityPageData }) {
   return (
     <div className="site-editorial relative min-h-screen overflow-hidden bg-deep font-body text-foreground">
       <div className="relative z-10 mx-auto max-w-6xl px-5 pb-32 pt-6 sm:px-8 lg:px-12">
-        <header>
-          <div className="flex items-center justify-between gap-4">
-            <Link to="/clinica-de-recuperacao-em-araraquara" className="flex items-center gap-3" aria-label="Central de Acolhimento e Reabilitação">
-              <img src={logoAsset.url} alt="Logo da Central de Acolhimento e Reabilitação" width={44} height={44} className="size-11 shrink-0 rounded-xl object-contain" loading="eager" />
-              <span className="leading-tight">
-                <span className="block font-display text-[13px] font-semibold sm:text-sm">Central de Acolhimento</span>
-                <span className="block text-[11px] text-muted-foreground">e Reabilitação · unidade em Araraquara</span>
-              </span>
-            </Link>
-            <span className="hidden items-center gap-1.5 rounded-full border border-border px-3 py-1 text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground sm:flex">
-              <MapPin className="size-3" aria-hidden="true" /> Araraquara/SP
-            </span>
-          </div>
-          <nav aria-label="Menu principal" className="mt-4 -mx-5 overflow-x-auto px-5 sm:mx-0 sm:px-0">
-            <ul className="flex min-w-max items-center gap-x-5 text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
-              <li><Link to="/" className={sectionLinkClass}>Início</Link></li>
-              <li><Link to="/tratamento" className={sectionLinkClass}>Tratamento</Link></li>
-              <li><Link to="/acolhimento" className={sectionLinkClass}>Acolhimento</Link></li>
-              <li><Link to="/familia" className={sectionLinkClass}>Família</Link></li>
-              <li><Link to="/cidades" className={sectionLinkClass}>Cidades</Link></li>
-              <li><Link to="/blog" className={sectionLinkClass}>Blog</Link></li>
-               <li><Link to="/videos" className={sectionLinkClass}>Vídeos</Link></li>
-              <li><Link to="/contato" className={sectionLinkClass}>Contato</Link></li>
-            </ul>
-          </nav>
-        </header>
+        
 
         <main id="inicio">
           <nav aria-label="Navegação estrutural" className="pt-8 text-xs text-muted-foreground">

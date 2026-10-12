@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, MessageCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { TreatmentNavigationItem } from "@/components/treatment-navigation-item";
 import { gamblingCareScope, gamblingOrientationSections } from "@/lib/gambling-orientation";
 import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
 import { phoneDisplay, phoneHref, siteUrl, whatsappHref } from "@/lib/site";
@@ -40,12 +39,7 @@ export const Route = createFileRoute("/tratamento-jogos-compulsivos-apostas")({
 function GamblingOrientationPage() {
   return (
     <div className="home-serene site-editorial min-h-screen bg-background text-foreground">
-      <header className="border-b border-border px-5 py-5 sm:px-8">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4">
-          <Link to="/" className="max-w-sm font-display text-lg font-semibold">Central de Acolhimento e Reabilitação</Link>
-          <nav aria-label="Menu principal"><ul className="flex items-center gap-5"><li><Button asChild variant="ghost"><Link to="/"><ArrowLeft className="size-4" aria-hidden="true" />Início</Link></Button></li><TreatmentNavigationItem /></ul></nav>
-        </div>
-      </header>
+      
       <main>
         <section className="relative isolate overflow-hidden">
           <img src={visualAssets.gambling.src} alt={visualAssets.gambling.alt} width={1440} height={960} fetchPriority="high" className="absolute inset-0 -z-20 h-full w-full object-cover" />

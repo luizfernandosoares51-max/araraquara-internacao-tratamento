@@ -96,7 +96,7 @@ export function RegionalCare({ cityName }: { cityName?: string }) {
 }
 
 export function FinancialGuidance() {
-  return <section className={sectionClass} aria-label="Orientação financeira e requisitos legais">
+  return <section id="cobertura-reembolso" className={sectionClass} aria-label="Orientação financeira e requisitos legais">
     <h2 className={headingClass}>Atendimento Particular e Assessoria para Cobertura / Reembolso</h2>
     <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground">Sabemos que a busca de cuidado exige atenção e clareza. Além do acolhimento particular, a Central oferece orientação à família para consultar possibilidades de cobertura ou reembolso integral ou parcial junto ao plano de saúde, conforme as condições do contrato.</p>
     <div className="mt-7 border-l-2 border-accent pl-5">

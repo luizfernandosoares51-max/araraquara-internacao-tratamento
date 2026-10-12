@@ -137,35 +137,7 @@ export const Route = createFileRoute("/clinica-de-recuperacao-em-sao-carlos-sp")
 function SaoCarlosPage() {
   return (
     <div className="site-editorial min-h-screen bg-ice font-body text-deep">
-      <header className="border-b border-deep/10 bg-ice/95">
-        <div className="mx-auto max-w-6xl px-5 py-5 sm:px-8 lg:px-12">
-          <div className="flex items-center justify-between gap-4">
-            <Link to="/" className="flex items-center gap-3" aria-label="Central de Acolhimento e Reabilitação">
-              <img src={logoAsset.url} alt="Logo da Central de Acolhimento e Reabilitação" width={48} height={48} className="size-12 rounded-xl object-contain" />
-              <span className="leading-tight">
-                <span className="block font-display text-sm font-semibold">Central de Acolhimento</span>
-                <span className="block text-xs text-deep/60">e Reabilitação</span>
-              </span>
-            </Link>
-            <span className="hidden items-center gap-2 border-l-2 border-brand pl-4 text-xs font-semibold uppercase text-deep/70 sm:flex">
-              <MapPin className="size-4 text-brand" aria-hidden="true" /> São Carlos e região
-            </span>
-          </div>
-          <Button asChild variant="link" className="mt-3 h-auto min-h-12 max-w-full whitespace-normal px-0 text-left"><a href={phoneHref}><Phone aria-hidden="true" />{phoneDisplay}</a></Button>
-          <nav aria-label="Menu principal" className="-mx-5 mt-5 overflow-x-auto px-5 sm:mx-0 sm:px-0">
-            <ul className="flex min-w-max items-center gap-5 text-[11px] font-semibold uppercase text-deep/65">
-              <li><Link to="/" className="hover:text-brand">Início</Link></li>
-              <li><Link to="/tratamento" className="hover:text-brand">Tratamento</Link></li>
-              <li><Link to="/acolhimento" className="hover:text-brand">Acolhimento</Link></li>
-              <li><Link to="/familia" className="hover:text-brand">Família</Link></li>
-              <li><Link to="/cidades" className="hover:text-brand">Cidades</Link></li>
-              <li><Link to="/blog" className="hover:text-brand">Blog</Link></li>
-              <li><Link to="/videos" className="hover:text-brand">Vídeos</Link></li>
-              <li><Link to="/contato" className="hover:text-brand">Contato</Link></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      
 
       <main>
         <div className="mx-auto max-w-6xl px-5 pt-6 sm:px-8 lg:px-12">

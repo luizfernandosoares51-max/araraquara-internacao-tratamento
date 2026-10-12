@@ -12,21 +12,7 @@ export function LocalCityPageView({ city }: { city: LocalCityPage }) {
   const faqs = [...cityEditorialFaqs(city.slug), ...city.faqs];
   return (
     <div className="site-editorial min-h-screen bg-deep font-body text-foreground">
-      <header className="border-b border-border">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:px-12">
-          <Link to="/" className="flex items-center gap-3" aria-label="Central de Acolhimento e Reabilitação — início">
-            <img src={logoAsset.url} alt="Logo da Central de Acolhimento e Reabilitação" width={48} height={48} className="size-12 rounded-xl object-contain" />
-            <span className="hidden leading-tight sm:block">
-              <span className="block font-display text-sm font-semibold">Central de Acolhimento</span>
-              <span className="block text-xs text-muted-foreground">e Reabilitação · unidade em Araraquara</span>
-            </span>
-          </Link>
-          <Button asChild className="min-h-11 bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90">
-            <a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" /> Falar com a Central</a>
-          </Button>
-          <Button asChild variant="link" className="h-auto min-h-12 max-w-full whitespace-normal px-0 text-left"><a href={phoneHref}><Phone aria-hidden="true" />{phoneDisplay}</a></Button>
-        </div>
-      </header>
+      
 
       <main>
         <section className="border-b border-border">

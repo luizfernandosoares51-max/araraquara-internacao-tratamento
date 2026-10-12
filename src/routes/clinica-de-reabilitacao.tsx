@@ -193,20 +193,7 @@ function SectionLabel({ children }: { children: ReactNode }) {
 function RehabilitationClinicPage() {
   return (
     <div className="min-h-screen bg-ice font-body text-deep">
-      <header className="border-b border-border bg-deep text-foreground">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-5 sm:px-8 lg:px-12">
-          <Link to="/" className="font-display text-sm font-semibold sm:text-base" aria-label="Central de Acolhimento e Reabilitação — página inicial">
-            Central de Acolhimento <span className="block text-xs font-normal text-muted-foreground sm:inline">e Reabilitação</span>
-          </Link>
-          <nav aria-label="Navegação principal">
-            <ul className="flex items-center gap-4 text-xs font-semibold sm:gap-6 sm:text-sm">
-              <li><Link to="/cidades" className="text-muted-foreground transition-colors hover:text-secondary">Cidades</Link></li>
-              <li><Link to="/blog" className="text-muted-foreground transition-colors hover:text-secondary">Blog</Link></li>
-              <li><a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="text-secondary transition-colors hover:text-foreground">Falar agora</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      
 
       <main>
         <section className="bg-deep text-foreground">
