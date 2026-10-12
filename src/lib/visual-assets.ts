@@ -1,3 +1,6 @@
+import adsFamily from "@/assets/ads-family.jpg";
+import adsOrientation from "@/assets/ads-orientation.jpg";
+import adsGambling from "@/assets/ads-gambling.jpg";
 import ribeiraoAlcohol from "@/assets/concept-ribeirao-alcohol.webp";
 import gamblingSupport from "@/assets/concept-gambling-support.jpg";
 import ribeiraoCocaine from "@/assets/concept-ribeirao-cocaine.webp";
@@ -51,6 +54,11 @@ import rioClaroVoluntary from "@/assets/concept-rio-claro-voluntary.webp";
 import rioClaroTransport from "@/assets/concept-rio-claro-transport.webp";
 
 export const visualAssets = {
+  campaigns: {
+    family: { src: adsFamily, alt: "Dois adultos caminhando em um jardim, representação conceitual de apoio familiar" },
+    orientation: { src: adsOrientation, alt: "Mulher conversando por telefone ao lado de uma familiar, representação conceitual de orientação" },
+    gambling: { src: adsGambling, alt: "Dois adultos conversando junto a um celular virado para baixo, representação conceitual de apoio" },
+  },
   gambling: { src: gamblingSupport, alt: "Dois adultos conversando junto a um celular virado para baixo, representação conceitual de apoio e pausa nas apostas" },
   ribeiraoSpecialties: {
     alcohol: { src: ribeiraoAlcohol, alt: "Família conversando à mesa, imagem conceitual de apoio diante do uso de álcool" },
