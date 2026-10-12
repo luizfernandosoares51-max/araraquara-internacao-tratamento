@@ -1,4 +1,5 @@
 import ribeiraoAlcohol from "@/assets/concept-ribeirao-alcohol.webp";
+import gamblingSupport from "@/assets/concept-gambling-support.jpg";
 import ribeiraoCocaine from "@/assets/concept-ribeirao-cocaine.webp";
 import ribeiraoInvoluntary from "@/assets/concept-ribeirao-involuntary.webp";
 import ribeiraoVoluntary from "@/assets/concept-ribeirao-voluntary.webp";
@@ -50,6 +51,7 @@ import rioClaroVoluntary from "@/assets/concept-rio-claro-voluntary.webp";
 import rioClaroTransport from "@/assets/concept-rio-claro-transport.webp";
 
 export const visualAssets = {
+  gambling: { src: gamblingSupport, alt: "Dois adultos conversando junto a um celular virado para baixo, representação conceitual de apoio e pausa nas apostas" },
   ribeiraoSpecialties: {
     alcohol: { src: ribeiraoAlcohol, alt: "Família conversando à mesa, imagem conceitual de apoio diante do uso de álcool" },
     cocaine: { src: ribeiraoCocaine, alt: "Adulto cuidando de mudas, imagem conceitual de novos hábitos" },

@@ -61,6 +61,7 @@ import { Route as TratamentoCocainaCrackRibeiraoPretoRouteImport } from './route
 import { Route as TratamentoCocainaCrackRioClaroRouteImport } from './routes/tratamento-cocaina-crack-rio-claro'
 import { Route as TratamentoCocainaCrackSaoCarlosRouteImport } from './routes/tratamento-cocaina-crack-sao-carlos'
 import { Route as TratamentoDependenciaJovensRibeiraoPretoRouteImport } from './routes/tratamento-dependencia-jovens-ribeirao-preto'
+import { Route as TratamentoJogosCompulsivosApostasRouteImport } from './routes/tratamento-jogos-compulsivos-apostas'
 import { Route as VideosRouteImport } from './routes/videos'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
@@ -370,6 +371,12 @@ const TratamentoDependenciaJovensRibeiraoPretoRoute =
     path: '/tratamento-dependencia-jovens-ribeirao-preto',
     getParentRoute: () => rootRouteImport,
   } as any)
+const TratamentoJogosCompulsivosApostasRoute =
+  TratamentoJogosCompulsivosApostasRouteImport.update({
+    id: '/tratamento-jogos-compulsivos-apostas',
+    path: '/tratamento-jogos-compulsivos-apostas',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const VideosRoute = VideosRouteImport.update({
   id: '/videos',
   path: '/videos',
@@ -487,6 +494,7 @@ export interface FileRoutesByFullPath {
   '/tratamento-cocaina-crack-rio-claro': typeof TratamentoCocainaCrackRioClaroRoute
   '/tratamento-cocaina-crack-sao-carlos': typeof TratamentoCocainaCrackSaoCarlosRoute
   '/tratamento-dependencia-jovens-ribeirao-preto': typeof TratamentoDependenciaJovensRibeiraoPretoRoute
+  '/tratamento-jogos-compulsivos-apostas': typeof TratamentoJogosCompulsivosApostasRoute
   '/videos': typeof VideosRoute
   '/api/chat': typeof ApiChatRoute
   '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema': typeof BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute
@@ -551,6 +559,7 @@ export interface FileRoutesByTo {
   '/tratamento-cocaina-crack-rio-claro': typeof TratamentoCocainaCrackRioClaroRoute
   '/tratamento-cocaina-crack-sao-carlos': typeof TratamentoCocainaCrackSaoCarlosRoute
   '/tratamento-dependencia-jovens-ribeirao-preto': typeof TratamentoDependenciaJovensRibeiraoPretoRoute
+  '/tratamento-jogos-compulsivos-apostas': typeof TratamentoJogosCompulsivosApostasRoute
   '/videos': typeof VideosRoute
   '/api/chat': typeof ApiChatRoute
   '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema': typeof BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute
@@ -617,6 +626,7 @@ export interface FileRoutesById {
   '/tratamento-cocaina-crack-rio-claro': typeof TratamentoCocainaCrackRioClaroRoute
   '/tratamento-cocaina-crack-sao-carlos': typeof TratamentoCocainaCrackSaoCarlosRoute
   '/tratamento-dependencia-jovens-ribeirao-preto': typeof TratamentoDependenciaJovensRibeiraoPretoRoute
+  '/tratamento-jogos-compulsivos-apostas': typeof TratamentoJogosCompulsivosApostasRoute
   '/videos': typeof VideosRoute
   '/api/chat': typeof ApiChatRoute
   '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema': typeof BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute
@@ -684,6 +694,7 @@ export interface FileRouteTypes {
     | '/tratamento-cocaina-crack-rio-claro'
     | '/tratamento-cocaina-crack-sao-carlos'
     | '/tratamento-dependencia-jovens-ribeirao-preto'
+    | '/tratamento-jogos-compulsivos-apostas'
     | '/videos'
     | '/api/chat'
     | '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema'
@@ -748,6 +759,7 @@ export interface FileRouteTypes {
     | '/tratamento-cocaina-crack-rio-claro'
     | '/tratamento-cocaina-crack-sao-carlos'
     | '/tratamento-dependencia-jovens-ribeirao-preto'
+    | '/tratamento-jogos-compulsivos-apostas'
     | '/videos'
     | '/api/chat'
     | '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema'
@@ -813,6 +825,7 @@ export interface FileRouteTypes {
     | '/tratamento-cocaina-crack-rio-claro'
     | '/tratamento-cocaina-crack-sao-carlos'
     | '/tratamento-dependencia-jovens-ribeirao-preto'
+    | '/tratamento-jogos-compulsivos-apostas'
     | '/videos'
     | '/api/chat'
     | '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema'
@@ -879,6 +892,7 @@ export interface RootRouteChildren {
   TratamentoCocainaCrackRioClaroRoute: typeof TratamentoCocainaCrackRioClaroRoute
   TratamentoCocainaCrackSaoCarlosRoute: typeof TratamentoCocainaCrackSaoCarlosRoute
   TratamentoDependenciaJovensRibeiraoPretoRoute: typeof TratamentoDependenciaJovensRibeiraoPretoRoute
+  TratamentoJogosCompulsivosApostasRoute: typeof TratamentoJogosCompulsivosApostasRoute
   VideosRoute: typeof VideosRoute
   ApiChatRoute: typeof ApiChatRoute
 }
@@ -1249,6 +1263,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TratamentoDependenciaJovensRibeiraoPretoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tratamento-jogos-compulsivos-apostas': {
+      id: '/tratamento-jogos-compulsivos-apostas'
+      path: '/tratamento-jogos-compulsivos-apostas'
+      fullPath: '/tratamento-jogos-compulsivos-apostas'
+      preLoaderRoute: typeof TratamentoJogosCompulsivosApostasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/videos': {
       id: '/videos'
       path: '/videos'
@@ -1430,6 +1451,8 @@ const rootRouteChildren: RootRouteChildren = {
   TratamentoCocainaCrackSaoCarlosRoute: TratamentoCocainaCrackSaoCarlosRoute,
   TratamentoDependenciaJovensRibeiraoPretoRoute:
     TratamentoDependenciaJovensRibeiraoPretoRoute,
+  TratamentoJogosCompulsivosApostasRoute:
+    TratamentoJogosCompulsivosApostasRoute,
   VideosRoute: VideosRoute,
   ApiChatRoute: ApiChatRoute,
 }

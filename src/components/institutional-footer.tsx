@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { RegionalSeoGrid } from "@/components/regional-seo-grid";
 import { Mail, Phone } from "lucide-react";
 import { institutionalIdentity, institutionalLinks } from "@/lib/institutional";
 import { TechnicalResponsibility } from "@/components/technical-responsibility";
@@ -38,6 +39,7 @@ export function InstitutionalFooter() {
             </nav>
           </section>
         </div>
+        <div className="mt-9"><RegionalSeoGrid /></div>
         <div className="mt-9 flex flex-wrap gap-x-6 gap-y-2 border-t border-border pt-5 text-sm text-muted-foreground">
           <Link to="/">Início</Link><Link to="/cidades">Cidades</Link><Link to="/blog">Blog</Link><Link to="/videos">Vídeos</Link>
           <a href={instagramHref} target="_blank" rel="noopener noreferrer">Instagram</a><a href={facebookHref} target="_blank" rel="noopener noreferrer">Facebook</a>

@@ -27,7 +27,8 @@
 - Share regional family-orientation facts and FAQs between Home and Araraquara, deriving visible answers and FAQPage from the same route arrays, so confirmed regional access and financial limitations remain consistent without duplicating schema.
 - Keep integrated city articles, access guidance and added FAQs in a typed city-editorial catalog rendered opt-in by explicit city pages; derive visible FAQs and route metadata from that catalog to preserve URLs and city-specific copy without affecting Home or Blog.
 - Keep Araraquara specialty pages as explicit routes backed by a typed specialty catalog and an isolated shared shell; derive discovery cards and FAQ schema from the same data, so focused navigation does not expand the global menu or misrepresent medical services.
-- Keep São Carlos specialty pages in explicit routes with their own typed editorial catalog and isolated rendering; derive cards and metadata from that catalog so regional guidance remains original and never implies a local branch.
+- Keep São Carlos specialties explicit with an isolated typed catalog for cards and metadata, preserving original guidance without implying a branch.
 - Keep Rio Claro specialty pages in explicit routes backed by a separate typed editorial catalog and opt-in shell; derive discovery and head metadata from the same data to preserve existing pages and avoid implied medical or emergency services.
 - Keep Ribeirão Preto specialty routes explicit with an isolated typed editorial catalog and opt-in shell; derive cards, FAQs and metadata from the same data and represent unconfirmed modalities as education rather than available services.
-- Keep the Home regional grid opt-in with typed existing routes, to avoid aliases and retired city links.
+- Mount typed regional links once in the global footer to avoid duplicate grids and retired URLs.
+- Use an explicit gambling route, tested educational scope and shared treatment submenu to avoid unconfirmed services.
