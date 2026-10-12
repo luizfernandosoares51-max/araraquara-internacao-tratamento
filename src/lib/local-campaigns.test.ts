@@ -10,7 +10,7 @@ const expectedPaths = [
   "/lp-descalvado", "/lp-porto-ferreira", "/lp-franca", "/lp-leme", "/lp-araras", "/lp-pirassununga",
 ];
 test("all twenty requested campaign paths exist exactly once", () => {
-  assert.deepEqual(Object.values(localCampaigns).map(page => page.path).sort(), expectedPaths.toSorted());
+  assert.deepEqual(Object.values(localCampaigns).map(page => page.path).sort(), [...expectedPaths].sort());
 });
 test("only Araraquara is a confirmed physical unit", () => assert.equal(localCampaignPolicy.physicalUnitCity, "Araraquara"));
 test("female unit is not confirmed", () => assert.equal(localCampaignPolicy.femaleUnitConfirmed, false));
