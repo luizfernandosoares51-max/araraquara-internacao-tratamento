@@ -1,5 +1,8 @@
 # Roadmap
 
+- [ ] Criar página educativa de jogos e apostas com H1 solicitado, metadados próprios, acesso pelo menu de tratamentos e verificação de navegação.
+- [ ] Integrar onze links regionais ao rodapé global, sem duplicar a grade na Home, e conferir páginas e destinos; não publicar.
+
 - [x] Adicionar grade regional na Home: onze destinos HTTP 200 e navegação para remoção de São Carlos conferidos; sede única, remoção agendada, URLs existentes e retirada de Bauru preservadas, sem anunciar 24h/internação imediata; sem publicação.
 
 - [x] Adaptar o bloco de metodologia na Home, página pilar e Araraquara, distinguindo TCC educativa, prevenção à recaída confirmada e avaliação externa de comorbidades; 19 testes aprovados e três páginas conferidas com equipe, metadados preservados e navegação para Transparência, sem publicação.
