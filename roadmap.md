@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Revisar todo o conteúdo público para apresentar a equipe multidisciplinar confirmada, orientação e suporte de agendamento 24h em tom acolhedor; preservar transporte agendado, direitos, encaminhamento hospitalar e condições financeiras; atualizar catálogos/testes e conferir páginas na prévia sem publicar.
+
 - [x] Criar página educativa de jogos e apostas com H1 solicitado, imagem conceitual própria, metadados/canonical, acesso pelo menu de tratamentos e sitemap com 56 URLs; oito testes aprovados e navegação conferida em 1280/390/320, sem anúncio de programa especializado confirmado.
 - [x] Integrar onze links regionais ao rodapé global sem duplicar a grade na Home; cinco páginas e clique para remoção de São Carlos conferidos, onze destinos HTTP 200. Sem publicação.
 
