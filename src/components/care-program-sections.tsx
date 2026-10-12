@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, CalendarDays, Clock, HeartHandshake, MapPin, MessageCircle, ShieldCheck, Sprout } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { therapeuticSchedule } from "@/lib/care-program";
+import { careMethodology, therapeuticSchedule } from "@/lib/care-program";
 import { institutionalIdentity, legalSources } from "@/lib/institutional";
 import { whatsappHref } from "@/lib/site";
 
@@ -9,7 +9,7 @@ const sectionClass = "care-program-section border-y border-border py-14 sm:py-16
 const headingClass = "max-w-3xl font-display text-2xl font-semibold leading-tight sm:text-4xl";
 
 export function CareSpecialties() {
-  return <section className={sectionClass} aria-label="Modalidades de acolhimento e orientação">
+  return <><section className={sectionClass} aria-label="Modalidades de acolhimento e orientação">
     <p className="mb-3 text-xs font-semibold uppercase text-secondary">Modalidades e necessidades de cuidado</p>
     <h2 className={headingClass}>Acolhimento psicossocial e caminhos de tratamento</h2>
     <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground">A unidade própria oferece acolhimento voluntário contínuo e suporte psicossocial. O plano considera as necessidades da pessoa; cuidados médicos são encaminhados a estabelecimentos habilitados.</p>
@@ -41,6 +41,26 @@ export function CareSpecialties() {
     </div>
     <p className="mt-6 max-w-3xl text-sm leading-relaxed text-muted-foreground">Para necessidades de acolhimento masculino ou feminino, consulte a equipe sobre perfil de admissão e possibilidades de encaminhamento. Não há confirmação de ambientes separados na unidade.</p>
     <p className="mt-3 text-xs leading-relaxed text-muted-foreground">Informações de serviço fornecidas pela instituição, sem promessa de cura, prazo ou resultado. Em risco imediato, procure atendimento de urgência ou ligue para o SAMU 192.</p>
+  </section><CareMethodology /></>;
+}
+
+function CareMethodology() {
+  return <section className={sectionClass} aria-label="Metodologia e limites do cuidado">
+    <p className="mb-3 text-xs font-semibold uppercase text-secondary">Cuidado psicossocial e orientação responsável</p>
+    <h2 className={headingClass}>Metodologia de Cuidado Psicossocial e Orientação sobre Abordagens Terapêuticas</h2>
+    <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground">O acolhimento voluntário da Central reúne suporte psicológico, conscientização em 12 Passos, laborterapia, convivência terapêutica e prevenção à recaída. As informações abaixo distinguem práticas confirmadas de orientação educativa e cuidados que exigem avaliação externa, sem atribuir protocolo médico à unidade.</p>
+    <div className="mt-8 grid gap-4 lg:grid-cols-3">
+      {careMethodology.map(method => <article key={method.title} className="rounded-lg border border-border bg-card p-6">
+        <ShieldCheck className="size-6 text-secondary" aria-hidden="true" />
+        <h3 className="mt-4 font-display text-xl font-semibold">{method.title}</h3>
+        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{method.description}</p>
+      </article>)}
+    </div>
+    <div className="mt-7 border-l-2 border-accent pl-5">
+      <h3 className="font-display text-lg font-semibold">Equipe confirmada e responsabilidade pelo cuidado</h3>
+      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">O suporte psicológico é realizado por Margarete Vasques (CRP 06/130268), com coordenação operacional de Luiz Fernando Soares. A unidade não anuncia psiquiatria própria, nutricionistas ou enfermagem 24 horas. Quando necessário, o atendimento médico ocorre em estabelecimentos externos habilitados, sob responsabilidade das respectivas equipes.</p>
+    </div>
+    <Button asChild variant="link" className="mt-5 h-auto min-h-12 max-w-full whitespace-normal px-0 text-left"><Link to="/transparencia">Consultar a equipe e os limites do atendimento <ArrowRight aria-hidden="true" /></Link></Button>
   </section>;
 }
 
