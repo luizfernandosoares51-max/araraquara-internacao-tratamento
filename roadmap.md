@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Padronizar o cabeçalho global com quatro menus suspensos e links diretos, todos no HTML inicial; conferir navegação no celular/computador e preservar os limites dos serviços.
+
 - [x] Revisar conteúdo público e catálogos para apresentar equipe multidisciplinar confirmada, orientação e suporte de agendamento 24h em tom acolhedor; transporte agendado, direitos, encaminhamento hospitalar e condições financeiras preservados. 116 testes aprovados e nove páginas conferidas na prévia, com metadados, equipe e WhatsApp oficial; sem publicação.
 
 - [x] Criar página educativa de jogos e apostas com H1 solicitado, imagem conceitual própria, metadados/canonical, acesso pelo menu de tratamentos e sitemap com 56 URLs; oito testes aprovados e navegação conferida em 1280/390/320, sem anúncio de programa especializado confirmado.
