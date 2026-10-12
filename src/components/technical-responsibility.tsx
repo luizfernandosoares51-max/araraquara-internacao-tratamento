@@ -17,6 +17,14 @@ export function TechnicalResponsibility() {
         <CircleCheck className="mt-1 size-5 shrink-0 text-whatsapp" aria-hidden="true" />
         <div className="min-w-0"><dt className="font-semibold">{generalCoordination.role}</dt><dd className="mt-1 text-muted-foreground">{generalCoordination.name}</dd></div>
       </div>
+      <div className="flex items-start gap-3">
+        <CircleCheck className="mt-1 size-5 shrink-0 text-whatsapp" aria-hidden="true" />
+        <div className="min-w-0"><dt className="font-semibold">Acompanhamento médico e psiquiátrico integrado</dt><dd className="mt-1 text-muted-foreground">Avaliação clínica, estabilização e manejo de comorbidades conforme o plano individual.</dd></div>
+      </div>
+      <div className="flex items-start gap-3">
+        <CircleCheck className="mt-1 size-5 shrink-0 text-whatsapp" aria-hidden="true" />
+        <div className="min-w-0"><dt className="font-semibold">Monitoramento e cuidados de enfermagem</dt><dd className="mt-1 text-muted-foreground">Equipe na unidade para supervisão diária e cuidados contínuos dos acolhidos.</dd></div>
+      </div>
     </dl>
   );
 }
