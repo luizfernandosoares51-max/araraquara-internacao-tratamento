@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { institutionalIdentity, institutionalLocalBusiness } from "./institutional";
+import { institutionalIdentity, institutionalLocalBusiness, involuntaryHospitalizationSafeguards } from "./institutional";
 
 test("preserves the exact CNPJ supplied by the institution", () => {
   assert.equal(institutionalIdentity.cnpj, "40.241.645/0001-30");
@@ -61,4 +61,17 @@ test("the institution confirms referral for hospital care", () => {
 
 test("referral does not establish round-the-clock transport availability", () => {
   assert.equal(institutionalIdentity.careScope.transport24HoursConfirmed, false);
+});
+
+test("involuntary hospitalization notification has a maximum deadline of 72 hours", () => {
+  assert.equal(involuntaryHospitalizationSafeguards.notificationDeadlineHours, 72);
+});
+
+test("medical authorization requires a registered physician", () => {
+  assert.equal(involuntaryHospitalizationSafeguards.authorization, "registered-physician");
+});
+
+test("hospitalization safeguards belong to the receiving medical unit, not the Central's own unit", () => {
+  assert.equal(involuntaryHospitalizationSafeguards.responsibleEstablishment, "receiving-medical-unit");
+  assert.equal(involuntaryHospitalizationSafeguards.performedAtOwnUnit, false);
 });

@@ -78,3 +78,10 @@ export const legalSources = [
   { label: "Lei nº 13.840/2019", href: "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13840.htm" },
   { label: "Lei Geral de Proteção de Dados — Lei nº 13.709/2018", href: "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" },
 ] as const;
+
+export const involuntaryHospitalizationSafeguards = {
+  notificationDeadlineHours: 72,
+  authorization: "registered-physician",
+  responsibleEstablishment: "receiving-medical-unit",
+  performedAtOwnUnit: false,
+} as const;
