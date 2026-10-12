@@ -51,7 +51,7 @@ export function GlobalSiteHeader() {
                 </Button>
                 <ul id={`${id}-${group.label}`} hidden={openGroup !== group.label} className="global-nav-panel border border-border bg-popover text-popover-foreground">
                   {group.items.map((item) => (
-                    <li key={item.label}><Link to={item.to} hash={"hash" in item ? item.hash : undefined} onClick={close}
+                    <li key={item.label}><Link to={item.to} {...("hash" in item ? { hash: item.hash } : {})} onClick={close}
                       className="flex min-h-12 items-center rounded-md px-3 py-3 text-sm leading-relaxed transition-colors hover:bg-muted focus-visible:outline-2 focus-visible:outline-ring"
                       activeOptions={{ exact: true, includeHash: true }} activeProps={{ className: "bg-muted text-primary" }}>{item.label}</Link></li>
                   ))}
