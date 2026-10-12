@@ -1,3 +1,4 @@
+import { cityContactLabel, cityWhatsappHref, regionalCityAccess } from "@/lib/regional-city-access";
 import { cityEditorialFaqs, cityEditorialMetadata } from "@/lib/city-editorial";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -78,7 +79,7 @@ const faqs = [
   {
     question: "Existe clínica de recuperação em Rio Claro?",
     answer:
-      "Rio Claro conta com serviços públicos de saúde mental, e também pode haver instituições privadas na região. A Central não afirma possuir unidade física em Rio Claro: oferece orientação para que a família compreenda possibilidades e procure uma unidade adequada ao caso.",
+      "Rio Claro conta com serviços públicos de saúde mental, e também pode haver instituições privadas na região. A Central orienta famílias de Rio Claro a partir de sua sede própria em Araraquara, com apoio para avaliar acolhimento voluntário e organizar os próximos passos.",
   },
   {
     question: "Como encontrar tratamento para dependência química em Rio Claro?",
@@ -113,7 +114,7 @@ const faqs = [
   {
     question: "A Central possui unidade em Rio Claro?",
     answer:
-      "Não. A única sede física da Central fica em Araraquara, na R. Alfredo Micelli, 70. Esta página orienta famílias de Rio Claro; acolhimento voluntário depende de avaliação e disponibilidade. A equipe na sede reúne psicologia, acompanhamento médico e psiquiátrico integrado e enfermagem, com encaminhamento hospitalar quando indicado.",
+      "A única sede física da Central fica em Araraquara, na R. Alfredo Micelli, 70. Esta página orienta famílias de Rio Claro; acolhimento voluntário depende de avaliação e disponibilidade. A equipe na sede reúne psicologia, acompanhamento médico e psiquiátrico integrado e enfermagem, com encaminhamento hospitalar quando indicado.",
   },
   {
     question: "Como saber qual tipo de tratamento é adequado?",
@@ -206,11 +207,11 @@ function RioClaroPage() {
                   Clínica de Recuperação em Rio Claro – SP
                 </h1>
                 <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-                  Se você está em Rio Claro ou região e procura orientação para tratamento da dependência química, alcoolismo ou outras formas de dependência, a Central de Acolhimento e Reabilitação pode orientar você e sua família sobre os próximos passos.
+                  {regionalCityAccess["rio-claro-sp"].welcome}
                 </p>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                  <Button asChild size="lg" className="min-h-14 bg-whatsapp px-6 text-whatsapp-foreground hover:bg-whatsapp/90">
-                    <a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" /> Conversar pelo WhatsApp</a>
+                  <Button asChild size="lg" className="min-h-14 bg-whatsapp px-6 text-whatsapp-foreground hover:bg-whatsapp/90 h-auto whitespace-normal py-4">
+                    <a href={cityWhatsappHref("Rio Claro")} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" /> {cityContactLabel("Rio Claro")}</a>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="min-h-14 border-border bg-glass px-6 text-foreground hover:bg-glass-strong hover:text-foreground">
                     <a href={phoneHref}><Phone aria-hidden="true" /> Ligar agora · {phoneDisplay}</a>
@@ -226,7 +227,7 @@ function RioClaroPage() {
                 <ShieldCheck className="size-7 text-secondary" aria-hidden="true" />
                 <p className="mt-4 font-display text-lg font-semibold">Informação transparente</p>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  Esta página atende famílias de Rio Claro, mas não afirma que a Central possua unidade física na cidade. O trabalho começa pela orientação e pela avaliação de possibilidades adequadas a cada caso.
+                  Famílias de Rio Claro encontram orientação 24h e apoio na sede terapêutica da Central em Araraquara. A ligação pela Washington Luís ajuda a organizar acolhimento e visitas, com a família presente em cada etapa.
                 </p>
               </aside>
                </div>
@@ -363,7 +364,7 @@ function RioClaroPage() {
               <h2 className="mt-3 font-display text-3xl font-bold leading-tight sm:text-4xl">Atendimento para Rio Claro e região</h2>
             </div>
             <div className="text-[15px] leading-relaxed text-deep/70">
-              <p>A página foi criada para quem vive em Rio Claro e procura um ponto de partida diante da dependência química ou do alcoolismo. Famílias da região também podem pedir informações, sem que isso represente a existência de uma unidade local ou a garantia de acolhimento.</p>
+              <p>Famílias de Rio Claro e região podem contar com escuta e apoio para planejar o acolhimento na única sede da Central, em Araraquara. A equipe ajuda a organizar a recepção e a participação familiar, com avaliação individual e condições esclarecidas desde o primeiro contato.</p>
               <p className="mt-5">Para consultar outras localidades com conteúdo disponível, <Link to="/cidades" className="font-semibold text-brand underline underline-offset-4">conheça nossas cidades de atendimento</Link>. Para conteúdos educativos, leia o artigo sobre os <Link to="/blog/dependencia-quimica-sinais-tratamento" className="font-semibold text-brand underline underline-offset-4">sinais da dependência química e a importância do tratamento</Link>.</p>
             </div>
           </div>
@@ -393,11 +394,11 @@ function RioClaroPage() {
               <div>
                 <p className="text-xs font-semibold uppercase text-brand">Um primeiro passo possível</p>
                 <h2 className="mt-3 max-w-3xl font-display text-3xl font-bold leading-tight sm:text-4xl">Fale com a Central e organize suas dúvidas.</h2>
-                <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-deep/70">Conte o que está acontecendo e receba orientação inicial. A conversa não substitui atendimento de saúde e não cria promessa de vaga, internação ou resultado.</p>
+                <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-deep/70">Conte o que está acontecendo e receba orientação inicial. O plantão de orientação 24h ajuda sua família a planejar avaliação, acolhimento e visitas, com confirmação das condições para cada caso.</p>
               </div>
               <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-                <Button asChild size="lg" className="min-h-14 bg-whatsapp px-6 text-whatsapp-foreground hover:bg-whatsapp/90">
-                  <a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" /> Fale com a Central</a>
+                <Button asChild size="lg" className="min-h-14 bg-whatsapp px-6 text-whatsapp-foreground hover:bg-whatsapp/90 h-auto whitespace-normal py-4">
+                  <a href={cityWhatsappHref("Rio Claro")} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" /> {cityContactLabel("Rio Claro")}</a>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="min-h-14 border-deep/20 bg-foreground px-6">
                   <a href={phoneHref}><Phone aria-hidden="true" /> {phoneDisplay}</a>
