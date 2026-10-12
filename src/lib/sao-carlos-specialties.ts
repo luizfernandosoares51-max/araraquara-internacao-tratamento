@@ -28,7 +28,7 @@ export const saoCarlosSpecialties: Record<SpecialtyKey, Specialty> = {
       ] },
       { title: 'Abstinência: avaliar a segurança antes do deslocamento', paragraphs: [
         'Após uso intenso ou prolongado, a interrupção do álcool pode provocar abstinência e, em alguns casos, complicações graves. Não é seguro organizar uma viagem para acolhimento como alternativa a uma avaliação médica necessária. Tremores e agitação pedem avaliação; convulsões, desorientação e alteração de consciência exigem atendimento de urgência.',
-        'A família não deve improvisar medicamentos nem tentar desintoxicação desassistida. Quando indicada, essa etapa ocorre em estabelecimento médico habilitado, com condutas e alta definidas pelos profissionais externos. A Central não anuncia estrutura hospitalar ou monitoramento médico na sede própria de Araraquara.'
+        'A família não deve improvisar medicamentos nem tentar desintoxicação desassistida. Quando indicada, essa etapa ocorre em estabelecimento médico habilitado, com condutas e alta definidas pelos profissionais externos. A sede de Araraquara reúne acompanhamento médico e psiquiátrico integrado e enfermagem com supervisão diária e cuidados contínuos. A desintoxicação médica e as necessidades hospitalares seguem encaminhamento ao serviço habilitado adequado.'
       ] },
       { title: 'Reconstruir vínculos sem cobrar mudanças instantâneas', paragraphs: [
         'O apoio psicossocial pode abordar situações associadas ao consumo, comunicação e hábitos cotidianos. A proposta informada pela Central inclui suporte psicológico com Margarete Vasques, CRP 06/130268, 12 Passos, laborterapia, convivência terapêutica e prevenção à recaída. As prioridades são discutidas a partir da avaliação individual, não de um prazo padronizado de recuperação.',
@@ -125,7 +125,7 @@ export const saoCarlosSpecialties: Record<SpecialtyKey, Specialty> = {
       ] },
       { title: 'Um plano construído com a pessoa', paragraphs: [
         'O suporte psicológico informado é realizado com Margarete Vasques, CRP 06/130268. História de uso, vínculos, dificuldades e recursos ajudam a discutir objetivos individuais. O plano pode abordar organização cotidiana, consciência dos prejuízos e estratégias de continuidade, sem pressupor a mesma evolução para todos.',
-        'A proposta institucional reúne 12 Passos, laborterapia, convivência terapêutica e prevenção à recaída. Não se anuncia uma técnica clínica específica não confirmada nem resultados atribuídos a uma atividade isolada. Quando há necessidade médica, o encaminhamento é externo, sem transformar acolhimento em hospitalização.'
+        'A proposta institucional reúne 12 Passos, laborterapia, convivência terapêutica e prevenção à recaída. Não se anuncia uma técnica clínica específica não confirmada nem resultados atribuídos a uma atividade isolada. O acompanhamento médico e psiquiátrico integrado e a enfermagem complementam o cuidado na sede. Necessidades hospitalares seguem encaminhamento conforme avaliação.'
       ] },
       { title: 'Rotina e convivência sem perder a autonomia', paragraphs: [
         'A rotina informada vai das 07h às 22h, com períodos de organização, alimentação, apoio psicológico, atividades ao ar livre, reuniões temáticas e repouso. A participação considera o plano individual; convivência não deve ser apresentada como punição ou imposição de desempenho uniforme.',
@@ -146,10 +146,10 @@ export const saoCarlosSpecialties: Record<SpecialtyKey, Specialty> = {
   transport: {
     key: 'transport', path: '/resgate-remocao-sao-carlos', label: 'Resgate e Remoção Agendada', summary: 'Planejamento regional com a coordenação.',
     title: 'Remoção Agendada para São Carlos e Região | Orientação de Transporte',
-    description: 'Orientação sobre remoção e translado agendado para famílias de São Carlos. Consulte destino e disponibilidade com a Central em Araraquara; não é emergência 24h.',
+    description: 'Orientação sobre remoção e translado agendado para famílias de São Carlos. Plantão de orientação e suporte para agendamento 24h; confirme destino e disponibilidade com a Central em Araraquara.',
     heading: 'Remoção e translado agendado para São Carlos',
-    intro: 'Famílias de São Carlos que precisam organizar um deslocamento podem consultar a coordenação operacional de Luiz Fernando Soares. A instituição informa remoção e translado especializado regional por agendamento, sem base em São Carlos, atendimento 24h ou promessa de resposta imediata.',
-    notice: 'A Central não oferece resgate de emergência 24h. Em crise com risco imediato, convulsões ou alteração de consciência, procure urgência ou SAMU 192, sem aguardar agenda particular.',
+    intro: 'Famílias de São Carlos que precisam organizar um deslocamento podem consultar a coordenação operacional de Luiz Fernando Soares. A instituição informa remoção e translado especializado regional por agendamento, a partir da única sede em Araraquara, com plantão de orientação e suporte para agendamento 24 horas. A execução do transporte é combinada conforme condições e disponibilidade.',
+    notice: 'A orientação e o suporte para agendamento de resgate/remoção estão disponíveis 24h; o transporte é executado conforme agenda e condições confirmadas. Em crise com risco imediato, convulsões ou alteração de consciência, procure urgência ou SAMU 192, sem aguardar agenda particular.',
     sections: [
       { title: 'Primeiro distinguir uma viagem de uma emergência', paragraphs: [
         'O termo resgate pode aparecer na busca de uma família angustiada, mas não define o serviço disponível. Um deslocamento previamente planejado é diferente de atendimento de emergência. Em surto com risco imediato, dor no peito, convulsões ou alteração de consciência, não é seguro esperar a confirmação de transporte particular.',
@@ -171,7 +171,7 @@ export const saoCarlosSpecialties: Record<SpecialtyKey, Specialty> = {
     steps: [ { title: 'Verificar a urgência', text: 'Emergências não devem aguardar transporte agendado.' }, { title: 'Consultar condições', text: 'Informe São Carlos como origem e esclareça necessidades.' }, { title: 'Confirmar o destino', text: 'Agenda, condições e admissão precisam ser alinhadas previamente.' } ],
     faqs: [
       { question: 'Qual é o tempo de resposta da remoção para São Carlos?', answer: 'Não há tempo garantido. A possibilidade de transporte depende de agendamento, condições e disponibilidade consultadas com a coordenação. Em urgência, acione a rede de emergência ou SAMU 192.' },
-      { question: 'A Central realiza resgate 24h ou atendimento noturno em São Carlos?', answer: 'Não há confirmação de serviço 24h ou disponibilidade noturna. A remoção regional é agendada, com a coordenação operacional de Luiz Fernando Soares, e não substitui atendimento de emergência.' },
+      { question: 'A Central realiza resgate 24h ou atendimento noturno em São Carlos?', answer: 'A orientação e o suporte para agendamento funcionam 24 horas. A remoção regional é combinada com a coordenação operacional de Luiz Fernando Soares conforme agenda, condições e disponibilidade. Em emergência, acione o SAMU 192.' },
       { question: 'Como a família deve organizar o embarque?', answer: 'Esclareça previamente destino, documentação, acompanhamento e condições com a coordenação e o serviço responsável. Não improvise força, sedação ou contenção; recusa não autoriza remoção coercitiva informal. Não são prometidos veículos ou protocolos não confirmados.' }
     ]
   }

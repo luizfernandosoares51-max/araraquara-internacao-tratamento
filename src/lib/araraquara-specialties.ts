@@ -44,7 +44,7 @@ export const araraquaraSpecialties: Record<SpecialtyKey, Specialty> = {
       ] },
       { title: "Abstinência de álcool e desintoxicação: uma etapa médica", paragraphs: [
         "Após uso intenso ou prolongado, interromper o álcool pode provocar sintomas de abstinência. Tremores, agitação e outros sintomas precisam de avaliação; convulsões, desorientação ou perda de consciência são sinais de urgência. A família não deve improvisar medicamentos, doses ou uma desintoxicação em casa a partir de informações da internet.",
-        "A segurança dessa etapa depende de avaliação médica, que define necessidade de monitoramento, local de atendimento e condutas. A Central orienta e encaminha para estabelecimentos habilitados quando há necessidade médica. Protocolos de desintoxicação, prescrições e alta são responsabilidade da equipe do serviço externo, não da unidade de acolhimento psicossocial.",
+        "A segurança dessa etapa depende de avaliação médica, que define necessidade de monitoramento, local de atendimento e condutas. A Central reúne acompanhamento médico e psiquiátrico integrado e enfermagem para supervisão diária e cuidados contínuos. Quando há indicação de desintoxicação médica ou assistência hospitalar, orienta o encaminhamento ao estabelecimento habilitado adequado. Protocolos de desintoxicação, prescrições e alta são responsabilidade da equipe do serviço externo, não da unidade de acolhimento psicossocial.",
       ] },
       { title: "Reconstrução emocional e continuidade do cuidado", paragraphs: [
         "Depois de avaliadas as necessidades médicas, o cuidado psicossocial pode ajudar a reconhecer situações associadas ao consumo, reorganizar hábitos e trabalhar relações. Na proposta informada pela Central, suporte psicológico com Margarete Vasques (CRP 06/130268), conscientização em 12 Passos, laborterapia e convivência terapêutica compõem o acolhimento voluntário.",
@@ -86,7 +86,7 @@ export const araraquaraSpecialties: Record<SpecialtyKey, Specialty> = {
       ] },
       { title: "Convivência terapêutica não é isolamento forçado", paragraphs: [
         "Um contexto com rotina e apoio pode integrar o cuidado, mas afastamento geográfico não elimina a dependência nem garante interrupção da fissura. Acolhimento voluntário pressupõe consentimento, respeito e compreensão das condições. Não deve ser confundido com confinamento, punição ou internação involuntária realizada na unidade própria.",
-        "Na Central, a rotina informada inclui atividades de conscientização, atendimento psicológico, laborterapia e convivência terapêutica. A participação considera o plano individual. Necessidades de atendimento hospitalar ou de manejo de uma crise devem ser avaliadas por serviço habilitado, sem atribuir à sede equipamentos ou monitoramento médico que não foram confirmados.",
+        "Na Central, a rotina informada inclui atividades de conscientização, atendimento psicológico, laborterapia e convivência terapêutica. A participação considera o plano individual. Necessidades de atendimento hospitalar ou de manejo de uma crise devem ser avaliadas por serviço habilitado, com apoio do acompanhamento médico e psiquiátrico integrado e da enfermagem; necessidades de emergência ou internação hospitalar seguem o serviço adequado.",
       ] },
       { title: "Novas rotinas e apoio familiar em Araraquara", paragraphs: [
         "Reconstruir hábitos de sono, alimentação, convivência e atividades significativas pode fazer parte do plano psicossocial. O retorno às responsabilidades deve ser discutido de forma gradual e realista, conforme as necessidades da pessoa. Metas pequenas e possíveis são diferentes de promessas de recuperação rápida ou de resultado permanente.",
@@ -152,11 +152,11 @@ export const araraquaraSpecialties: Record<SpecialtyKey, Specialty> = {
     sections: [
       { title: "Uma decisão consciente, sem ameaças ou falsas promessas", paragraphs: [
         "Adesão voluntária envolve compreender a proposta, perguntar sobre as condições e manifestar consentimento. Pode existir ambivalência, medo ou dificuldade de reconhecer prejuízos. A conversa inicial deve acolher essas dúvidas sem transformar o ingresso em obrigação familiar ou vender a ideia de uma solução instantânea.",
-        "Antes de qualquer admissão, é importante avaliar saúde, necessidades e compatibilidade com o suporte disponível. A Central não substitui serviços médicos ou de urgência. Quando a avaliação indica cuidado hospitalar, há orientação para serviços habilitados; a unidade própria permanece voltada ao acolhimento voluntário psicossocial.",
+        "Antes de qualquer admissão, é importante avaliar saúde, necessidades e compatibilidade com o suporte disponível. A equipe multidisciplinar integra psicologia, acompanhamento médico e psiquiátrico e enfermagem. Emergências exigem o serviço de urgência adequado. Quando a avaliação indica cuidado hospitalar, há orientação para serviços habilitados; a unidade própria permanece voltada ao acolhimento voluntário psicossocial.",
       ] },
       { title: "Construir metas com participação da pessoa", paragraphs: [
         "O plano individual considera a história, as dificuldades e os recursos da pessoa. Reconhecer padrões de consumo, organizar hábitos e trabalhar vínculos podem ser objetivos, mas não são metas idênticas para todos. A avaliação psicológica e a evolução do acompanhamento ajudam a discutir prioridades sem estabelecer prazo de cura.",
-        "Na proposta confirmada pela instituição, Margarete Vasques (CRP 06/130268) atua no suporte psicológico. Conscientização em 12 Passos, laborterapia, convivência terapêutica e prevenção à recaída integram a rotina. Essas atividades não substituem medicação prescrita por serviço externo nem autorizam afirmar técnicas específicas que não foram informadas.",
+        "Na proposta confirmada pela instituição, Margarete Vasques (CRP 06/130268) atua no suporte psicológico. Conscientização em 12 Passos, laborterapia, convivência terapêutica e prevenção à recaída integram a rotina. O acompanhamento médico e psiquiátrico integrado e a enfermagem complementam essa rotina. Medicamentos e condutas seguem orientação dos profissionais responsáveis; técnicas específicas devem ser discutidas na avaliação individual.",
       ] },
       { title: "Rotina, autoestima e convivência", paragraphs: [
         "A rotina informada vai das 07h às 22h em períodos definidos para organização pessoal, alimentação, conscientização, apoio psicológico, atividades ao ar livre, partilha e repouso. A participação considera o plano e a avaliação da equipe. Não se trata de impor um desempenho igual a todos ou de associar uma atividade a um resultado garantido.",
@@ -182,14 +182,14 @@ export const araraquaraSpecialties: Record<SpecialtyKey, Specialty> = {
     key: "transport", path: "/resgate-remocao-araraquara", label: "Resgate e Remoção Agendada",
     summary: "Translado regional com consulta prévia à coordenação.",
     title: "Remoção e Translado Agendado em Araraquara | Orientação Familiar",
-    description: "Orientação sobre remoção e translado especializado agendado em Araraquara e municípios vizinhos. Consulte condições e disponibilidade; não é emergência 24h.",
+    description: "Orientação sobre remoção e translado especializado agendado em Araraquara e municípios vizinhos. Orientação e suporte para agendamento 24h; execução conforme agenda e disponibilidade.",
     heading: "Remoção e translado agendado em Araraquara",
     intro: "Planejar um deslocamento para cuidado exige informação, avaliação e respeito à pessoa. A instituição informa suporte de remoção e translado especializado para Araraquara e municípios vizinhos, mediante agendamento com a coordenação operacional de Luiz Fernando Soares.",
-    notice: "A Central não anuncia resgate de emergência ou remoção 24h. Em surto com risco imediato, alteração de consciência ou outra urgência, procure a rede de urgência ou ligue para o SAMU 192.",
+    notice: "O plantão de orientação e o suporte para agendamento de resgate/remoção funcionam 24 horas; a execução do transporte depende da confirmação de agenda e condições. Em surto com risco imediato, alteração de consciência ou outra urgência, procure a rede de urgência ou ligue para o SAMU 192.",
     sections: [
       { title: "Transporte agendado não substitui atendimento de urgência", paragraphs: [
         "O pedido de transporte deve distinguir um deslocamento planejado de uma situação que exige avaliação imediata. Não é seguro aguardar agenda particular diante de convulsões, dor no peito, alteração de consciência ou risco à integridade da pessoa ou de terceiros. O SAMU 192 é um recurso público de urgência, separado do contato da Central.",
-        "A expressão resgate é frequentemente usada pela família na busca por ajuda, mas não significa que a instituição disponibilize serviço de emergência. Horários, destino, condições e disponibilidade precisam ser consultados antes do deslocamento. Não há promessa de chegada rápida, funcionamento noturno ou cobertura ininterrupta.",
+        "A expressão resgate é frequentemente usada pela família na busca por ajuda, mas não significa que a instituição disponibilize serviço de emergência. Horários, destino, condições e disponibilidade precisam ser consultados antes do deslocamento. A orientação e o suporte para agendamento estão disponíveis 24h. A execução do transporte depende de agenda, condições e disponibilidade, sem prazo de chegada garantido.",
       ] },
       { title: "Organização do acesso e definição do destino", paragraphs: [
         "A conversa com a coordenação operacional ajuda a organizar origem, necessidades informadas, condições de deslocamento e destino adequado. A única sede própria da Central fica em Araraquara. Receber famílias da região não significa possuir bases, filiais ou equipes permanentemente disponíveis em cada município.",
@@ -197,7 +197,7 @@ export const araraquaraSpecialties: Record<SpecialtyKey, Specialty> = {
       ] },
       { title: "Recusa, crise e respeito aos direitos", paragraphs: [
         "Uma pessoa recusar ajuda não autoriza remoção forçada informal. Os trâmites de internação involuntária exigem avaliação médica e cumprimento da legislação. Familiares não devem tentar contenção, sedação, uso de força ou deslocamento coercitivo por conta própria. Em crise com risco imediato, acione a rede de urgência.",
-        "A orientação deve preservar dignidade, informação e segurança, sem violência. Esta página não descreve um protocolo de contenção ou promete equipe multidisciplinar de emergência, veículos com equipamentos específicos ou profissionais médicos da Central, pois essas estruturas não foram confirmadas. As condições efetivas de transporte devem ser esclarecidas diretamente com a instituição.",
+        "A orientação deve preservar dignidade, informação e segurança, sem violência. O acolhimento conta com acompanhamento médico e psiquiátrico integrado e enfermagem. A organização do transporte considera as necessidades individuais, os direitos da pessoa e os recursos efetivamente disponíveis; equipe de emergência e equipamentos de transporte devem ser esclarecidos antes da contratação. As condições efetivas de transporte devem ser esclarecidas diretamente com a instituição.",
       ] },
       { title: "Privacidade e preparação da família", paragraphs: [
         "Compartilhe somente informações necessárias para discutir a possibilidade de atendimento. O contato oficial permite orientar o agendamento, mas não é necessário publicar relatos pessoais em comentários ou redes sociais. O respeito à privacidade não equivale a promessa de sigilo absoluto ou a dispensa de obrigações legais dos serviços envolvidos.",
@@ -211,7 +211,7 @@ export const araraquaraSpecialties: Record<SpecialtyKey, Specialty> = {
     ],
     faqs: [
       { question: "Qual é a região atendida pelo transporte?", answer: "A instituição informa remoção e translado especializado para Araraquara e municípios vizinhos mediante agendamento. Não foi confirmado um raio fixo em quilômetros; consulte a coordenação sobre sua origem, destino e disponibilidade." },
-      { question: "A remoção funciona à noite ou 24 horas?", answer: "Não há confirmação de atendimento 24h ou disponibilidade noturna. O transporte depende de agendamento e consulta à coordenação. Em urgência ou risco imediato, procure atendimento de emergência ou ligue para o SAMU 192." },
+      { question: "A remoção funciona à noite ou 24 horas?", answer: "A orientação e o suporte para agendamento funcionam 24 horas. A execução da remoção depende de agendamento, condições e disponibilidade confirmadas com a coordenação. Em urgência ou risco imediato, procure atendimento de emergência ou ligue para o SAMU 192." },
       { question: "O transporte garante sigilo absoluto ou veículo sem identificação?", answer: "Não são prometidos sigilo absoluto ou características de veículo não confirmadas. A orientação deve respeitar a privacidade e as obrigações legais. Consulte diretamente a coordenação sobre as condições efetivas do deslocamento." },
     ],
   },

@@ -26,7 +26,7 @@ export const rioClaroSpecialties: Record<SpecialtyKey, Specialty> = {
       ] },
       { title: 'Parar abruptamente pode exigir cuidado médico', paragraphs: [
         'Depois de uso intenso ou prolongado, a redução ou interrupção do álcool pode provocar abstinência. Tremores, agitação e outros sintomas precisam de avaliação; confusão intensa, convulsões ou alteração de consciência são sinais de urgência. Não é seguro estabelecer em casa um protocolo de desintoxicação baseado em informações da internet.',
-        'A necessidade de monitoramento, tratamento e local de atendimento é definida pela equipe médica. Alguns casos exigem cuidados hospitalares, mas não se pode afirmar que todos sigam o mesmo protocolo ou prazo. A Central encaminha necessidades médicas a estabelecimentos habilitados externos e não oferece acompanhamento médico 24h na sede psicossocial.'
+        'A necessidade de monitoramento, tratamento e local de atendimento é definida pela equipe médica. Alguns casos exigem cuidados hospitalares, mas não se pode afirmar que todos sigam o mesmo protocolo ou prazo. A Central oferece acompanhamento médico e psiquiátrico integrado e enfermagem para supervisão diária e cuidados contínuos na sede. Desintoxicação médica e necessidades hospitalares seguem encaminhamento ao serviço habilitado adequado.'
       ] },
       { title: 'Cuidar dos vínculos além da interrupção do consumo', paragraphs: [
         'Uma etapa médica, quando necessária, não encerra todas as questões associadas ao álcool. Comunicação, hábitos e formas de pedir apoio podem ser trabalhados no plano psicossocial. A proposta informada pela Central inclui suporte psicológico de Margarete Vasques, CRP 06/130268, 12 Passos, laborterapia, convivência e prevenção à recaída.',
@@ -59,7 +59,7 @@ export const rioClaroSpecialties: Record<SpecialtyKey, Specialty> = {
       ] },
       { title: 'Fissura não tem um relógio igual para todos', paragraphs: [
         'O desejo intenso de consumir pode reaparecer em diferentes momentos. Emoções, lugares e relações podem estar associados ao uso; reconhecer esses contextos com profissionais permite discutir respostas possíveis. Não há tempo fixo de estabilização nem garantia de eliminar a fissura ao mudar de município.',
-        'O apoio psicológico informado pela Central é de Margarete Vasques, CRP 06/130268. A proposta reúne 12 Passos, convivência, laborterapia e prevenção à recaída. Psicoterapia cognitiva e reabilitação neuropsicológica específicas não são anunciadas como serviços próprios porque não foram confirmadas. Cuidados clínicos e prescrições permanecem sob responsabilidade médica externa.'
+        'O apoio psicológico informado pela Central é de Margarete Vasques, CRP 06/130268. A proposta reúne 12 Passos, convivência, laborterapia e prevenção à recaída. Psicoterapia cognitiva e reabilitação neuropsicológica específicas não são anunciadas como serviços próprios porque não foram confirmadas. O acompanhamento médico e psiquiátrico integrado participa da avaliação clínica e do manejo de comorbidades; prescrições e condutas cabem aos profissionais responsáveis.'
       ] },
       { title: 'Afastamento temporário com consentimento e propósito', paragraphs: [
         'Um período de acolhimento em Araraquara pode permitir que a pessoa discuta hábitos e relações em outro contexto, quando indicado e aceito. Isso não é isolamento forçado nem solução automática para gatilhos que também poderão existir no retorno a Rio Claro. A decisão precisa considerar saúde, direitos e necessidades individuais.',
@@ -122,7 +122,7 @@ export const rioClaroSpecialties: Record<SpecialtyKey, Specialty> = {
         'Para moradores de Rio Claro, a preparação também envolve organizar responsabilidades, vínculos e deslocamento. Converse com a coordenação antes de viajar. A admissão depende da avaliação, da compatibilidade com o suporte e da disponibilidade; um contato inicial não confirma permanência ou reserva de vaga.'
       ] },
       { title: 'Construir metas que façam sentido para a pessoa', paragraphs: [
-        'O plano individual pode discutir hábitos, situações relacionadas ao consumo e maneiras de pedir apoio. Metas precisam considerar recursos e dificuldades reais, não uma lista de conquistas igual para todos. O suporte psicológico informado é de Margarete Vasques, CRP 06/130268, sem atribuir à sede equipe médica própria não confirmada.',
+        'O plano individual pode discutir hábitos, situações relacionadas ao consumo e maneiras de pedir apoio. Metas precisam considerar recursos e dificuldades reais, não uma lista de conquistas igual para todos. O suporte psicológico informado é de Margarete Vasques, CRP 06/130268, em conjunto com acompanhamento médico e psiquiátrico integrado e enfermagem para supervisão diária e cuidados contínuos.',
         '12 Passos, laborterapia, convivência terapêutica e prevenção à recaída integram a proposta institucional. Trabalhar emoções e relações não equivale a garantir inteligência emocional ou eliminar conflitos. A evolução pede acompanhamento e revisão das prioridades, sem prazo universal de recuperação.'
       ] },
       { title: 'Rotina e comunicação com quem ficou em Rio Claro', paragraphs: [
@@ -144,13 +144,13 @@ export const rioClaroSpecialties: Record<SpecialtyKey, Specialty> = {
   transport: {
     key: 'transport', path: '/resgate-remocao-rio-claro', label: 'Resgate e Remoção Agendada', summary: 'Origem, destino e condições de viagem.',
     title: 'Remoção Agendada para Rio Claro - SP | Orientação Regional',
-    description: 'Consulta sobre remoção e translado regional agendado para famílias de Rio Claro. Confirme condições e destino com a Central em Araraquara; sem serviço 24h.',
+    description: 'Consulta sobre remoção e translado regional agendado para famílias de Rio Claro. Orientação e suporte para agendamento 24h; confirme condições e destino com a Central em Araraquara.',
     heading: 'Remoção e translado agendado para Rio Claro',
-    intro: 'Quem procura resgate em Rio Claro precisa primeiro distinguir uma emergência de um deslocamento planejado. A Central informa remoção e translado regional por agendamento com a coordenação operacional de Luiz Fernando Soares; não possui base em Rio Claro nem anuncia atendimento 24h.',
+    intro: 'Quem procura resgate em Rio Claro precisa primeiro distinguir uma emergência de um deslocamento planejado. A Central informa remoção e translado regional por agendamento com a coordenação operacional de Luiz Fernando Soares; atende a partir da única sede em Araraquara, com orientação e suporte para agendamento 24 horas. A execução da remoção segue agenda, condições e disponibilidade.',
     notice: 'Surto com risco imediato, convulsões, dor no peito ou alteração de consciência exigem urgência ou SAMU 192. Não aguarde agenda particular ou confirmação de acolhimento.',
     sections: [
       { title: 'O contato institucional não aciona uma equipe de emergência', paragraphs: [
-        'A busca por resgate muitas vezes surge quando a família não sabe como agir. Isso não significa que a Central disponha de resposta imediata, ambulância ou atendimento noturno. O telefone oficial permite discutir planejamento e disponibilidade, não garantir intervenção em uma crise.',
+        'A busca por resgate muitas vezes surge quando a família não sabe como agir. O telefone oficial oferece orientação e suporte para agendamento 24h, ajudando a organizar o planejamento e consultar disponibilidade. A execução do transporte é combinada previamente; em emergência, priorize a rede de urgência e o SAMU 192.',
         'Em Rio Claro, risco imediato deve ser dirigido à rede de urgência. O SAMU 192 é um serviço público distinto da Central. Não substitua esse acionamento por tentativas de negociar deslocamento particular, nem improvise transporte de uma pessoa com sintomas graves antes de avaliação adequada.'
       ] },
       { title: 'Confirmar o trajeto depois de definir o cuidado necessário', paragraphs: [
@@ -169,7 +169,7 @@ export const rioClaroSpecialties: Record<SpecialtyKey, Specialty> = {
     steps: [ { title: 'Reconhecer a emergência', text: 'Risco imediato não deve aguardar agendamento.' }, { title: 'Consultar a origem', text: 'Verifique disponibilidade e condições para Rio Claro.' }, { title: 'Alinhar o destino', text: 'Confirme avaliação, agenda e documentação previamente.' } ],
     faqs: [
       { question: 'Qual é o tempo de deslocamento de Rio Claro até a sede?', answer: 'Não há tempo garantido nesta página. O trajeto depende de origem, condições da viagem e planejamento; confirme rota e destino antes de sair. A existência da página não garante transporte disponível.' },
-      { question: 'A Central realiza resgate 24h em Rio Claro?', answer: 'Não há confirmação de serviço 24h ou disponibilidade noturna. Remoção e translado são agendados com a coordenação operacional, mediante consulta de condições. Emergências devem ser dirigidas à rede de urgência ou SAMU 192.' },
+      { question: 'A Central realiza resgate 24h em Rio Claro?', answer: 'O plantão de orientação e o suporte para agendamento funcionam 24 horas. Remoção e translado são executados conforme agenda, condições e disponibilidade confirmadas com a coordenação operacional. Emergências devem ser dirigidas à rede de urgência ou SAMU 192.' },
       { question: 'Como organizar o embarque e o acompanhamento?', answer: 'Combine documentação, custos, acompanhamento e destino com a coordenação e o serviço responsável. Não improvise força, sedação ou contenção. Não são prometidos veículos específicos, protocolo de crise ou discrição absoluta não confirmados.' }
     ]
   }
