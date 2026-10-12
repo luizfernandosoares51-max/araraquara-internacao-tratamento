@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Criar e validar 20 páginas hiperlocais de campanhas com contatos diretos, orientação feminina responsável, noindex/nofollow e exclusão do sitemap; preservar páginas existentes e não publicar.
+- [x] Criar 20 páginas hiperlocais de campanhas com contatos diretos e orientação feminina responsável; 79 testes aprovados e 60 visitas em 1280/390/320 confirmam HTTP 200, imagens, metadados próprios, noindex/nofollow, contatos e ausência de overflow. Clique do WhatsApp abre destino oficial com mensagem contextual (envio externo não realizado), Transparência recupera o menu orgânico e sitemap mantém 56 URLs sem campanhas. Sede única e transporte agendado preservados; sem publicação ou garantia de veiculação no Google Ads.
 
 - [x] Criar três páginas exclusivas de campanhas com cabeçalho limpo, imagens próprias, contatos fixos e noindex/nofollow; 18 testes aprovados e nove visitas em 1280/390/320 confirmam imagens, contatos, metadados, navegação institucional e ausência de overflow. Sitemap mantém 56 URLs sem campanhas. Texto preserva transporte agendado, SAMU 192, reembolso sem garantia e jogos como orientação. Política oficial do Google não permite promoção de reabilitação de álcool/drogas no Brasil; não garantir veiculação. Sem publicação.
 
