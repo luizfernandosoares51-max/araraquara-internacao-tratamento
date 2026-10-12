@@ -357,10 +357,11 @@ html {
   .campaign-header-contacts { width: 100%; justify-content: space-between; gap: 0.25rem; }
   .campaign-header-contacts a { padding-inline: 0.5rem; }
   .campaign-actions { display: grid; grid-template-columns: minmax(0, 1fr); }
-  .campaign-fixed-actions { display: grid; grid-template-columns: minmax(0, 1fr) 6.5rem; align-items: stretch; }
+  .campaign-fixed-actions { display: grid; grid-template-columns: minmax(0, 1fr) minmax(7.5rem, 0.7fr); align-items: stretch; }
   .campaign-fixed-actions > a { padding-inline: 0.5rem; }
   .campaign-fixed-actions .campaign-whatsapp { gap: 0.4rem; }
   .campaign-fixed-actions .campaign-whatsapp span { font-size: 0.75rem; }
+  .campaign-fixed-actions a[href^="tel:"] span { font-size: 0.75rem; line-height: 1.45; overflow-wrap: anywhere; text-align: center; }
   .campaign-cta-arrow { display: none; }
   .campaign-contact-dock { height: var(--campaign-contact-height); display: flex; align-items: center; }
   .campaign-fixed-actions { width: 100%; }

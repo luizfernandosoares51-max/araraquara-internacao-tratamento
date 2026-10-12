@@ -29,4 +29,4 @@
 - Keep specialties explicit with separate typed city catalogs and opt-in shells; derive cards, FAQs and metadata together to preserve URLs and original guidance without implying branches or unconfirmed medical services.
 - Mount typed regional links once in the global footer to avoid duplicate grids and retired URLs.
 - Mount one root public header with typed disclosure links in initial HTML for accessible, indexable navigation; retain only editorial page headers.
-- Render campaign routes through an isolated shell selected by typed static data, without the organic menu, assistant or regional footer; derive metadata and sitemap exclusion from a tested campaign catalog to preserve organic pages and direct-contact focus.
+- Render explicit campaign routes through one isolated shared shell selected by typed static data; keep regional and audience-specific copy in a tested local campaign catalog and derive metadata, WhatsApp messages and sitemap exclusion from it, preserving organic pages without a wildcard route.
