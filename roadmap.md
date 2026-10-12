@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Criar e validar três páginas exclusivas de campanhas, com cabeçalho limpo, contatos fixos, noindex/nofollow, fora do sitemap e comunicação responsável; sem publicação.
+- [x] Criar três páginas exclusivas de campanhas com cabeçalho limpo, imagens próprias, contatos fixos e noindex/nofollow; 18 testes aprovados e nove visitas em 1280/390/320 confirmam imagens, contatos, metadados, navegação institucional e ausência de overflow. Sitemap mantém 56 URLs sem campanhas. Texto preserva transporte agendado, SAMU 192, reembolso sem garantia e jogos como orientação. Política oficial do Google não permite promoção de reabilitação de álcool/drogas no Brasil; não garantir veiculação. Sem publicação.
 
 - [x] Atualizar as 14 páginas de cidades com acolhimento regional positivo, referências rodoviárias específicas, FAQs locais e contatos por município; 47 testes aprovados e 42 visitas em 1280/390/320 confirmam H1 único, metadados próprios, canonical, perguntas iguais ao schema e ausência de overflow. Estimativas institucionais indicativas, sede única, transporte agendado e urgência pública preservados; sem publicação.
 
