@@ -45,7 +45,27 @@ import { Route as InternacaoVoluntariaRioClaroRouteImport } from './routes/inter
 import { Route as InternacaoVoluntariaSaoCarlosRouteImport } from './routes/internacao-voluntaria-sao-carlos'
 import { Route as LpAcolhimentoFamiliaRouteImport } from './routes/lp-acolhimento-familia'
 import { Route as LpAjudaJogosApostasRouteImport } from './routes/lp-ajuda-jogos-apostas'
+import { Route as LpAmericoBrasilienseRouteImport } from './routes/lp-americo-brasiliense'
+import { Route as LpAraraquaraRouteImport } from './routes/lp-araraquara'
+import { Route as LpAraraquaraFemininaRouteImport } from './routes/lp-araraquara-feminina'
+import { Route as LpArarasRouteImport } from './routes/lp-araras'
+import { Route as LpDescalvadoRouteImport } from './routes/lp-descalvado'
+import { Route as LpFrancaRouteImport } from './routes/lp-franca'
+import { Route as LpIbateRouteImport } from './routes/lp-ibate'
+import { Route as LpIbitingaRouteImport } from './routes/lp-ibitinga'
+import { Route as LpItapolisRouteImport } from './routes/lp-itapolis'
+import { Route as LpJaboticabalRouteImport } from './routes/lp-jaboticabal'
+import { Route as LpLemeRouteImport } from './routes/lp-leme'
+import { Route as LpMataoRouteImport } from './routes/lp-matao'
+import { Route as LpPirassunungaRouteImport } from './routes/lp-pirassununga'
 import { Route as LpPlantaoUrgenciaRemocaoRouteImport } from './routes/lp-plantao-urgencia-remocao'
+import { Route as LpPortoFerreiraRouteImport } from './routes/lp-porto-ferreira'
+import { Route as LpRibeiraoPretoRouteImport } from './routes/lp-ribeirao-preto'
+import { Route as LpRibeiraoPretoFemininaRouteImport } from './routes/lp-ribeirao-preto-feminina'
+import { Route as LpRioClaroRouteImport } from './routes/lp-rio-claro'
+import { Route as LpSaoCarlosRouteImport } from './routes/lp-sao-carlos'
+import { Route as LpSaoCarlosFemininaRouteImport } from './routes/lp-sao-carlos-feminina'
+import { Route as LpTaquaritingaRouteImport } from './routes/lp-taquaritinga'
 import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
 import { Route as ResgateRemocaoAraraquaraRouteImport } from './routes/resgate-remocao-araraquara'
 import { Route as ResgateRemocaoRibeiraoPretoRouteImport } from './routes/resgate-remocao-ribeirao-preto'
@@ -283,12 +303,112 @@ const LpAjudaJogosApostasRoute = LpAjudaJogosApostasRouteImport.update({
   path: '/lp-ajuda-jogos-apostas',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LpAmericoBrasilienseRoute = LpAmericoBrasilienseRouteImport.update({
+  id: '/lp-americo-brasiliense',
+  path: '/lp-americo-brasiliense',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LpAraraquaraRoute = LpAraraquaraRouteImport.update({
+  id: '/lp-araraquara',
+  path: '/lp-araraquara',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LpAraraquaraFemininaRoute = LpAraraquaraFemininaRouteImport.update({
+  id: '/lp-araraquara-feminina',
+  path: '/lp-araraquara-feminina',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LpArarasRoute = LpArarasRouteImport.update({
+  id: '/lp-araras',
+  path: '/lp-araras',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LpDescalvadoRoute = LpDescalvadoRouteImport.update({
+  id: '/lp-descalvado',
+  path: '/lp-descalvado',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LpFrancaRoute = LpFrancaRouteImport.update({
+  id: '/lp-franca',
+  path: '/lp-franca',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LpIbateRoute = LpIbateRouteImport.update({
+  id: '/lp-ibate',
+  path: '/lp-ibate',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LpIbitingaRoute = LpIbitingaRouteImport.update({
+  id: '/lp-ibitinga',
+  path: '/lp-ibitinga',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LpItapolisRoute = LpItapolisRouteImport.update({
+  id: '/lp-itapolis',
+  path: '/lp-itapolis',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LpJaboticabalRoute = LpJaboticabalRouteImport.update({
+  id: '/lp-jaboticabal',
+  path: '/lp-jaboticabal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LpLemeRoute = LpLemeRouteImport.update({
+  id: '/lp-leme',
+  path: '/lp-leme',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LpMataoRoute = LpMataoRouteImport.update({
+  id: '/lp-matao',
+  path: '/lp-matao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LpPirassunungaRoute = LpPirassunungaRouteImport.update({
+  id: '/lp-pirassununga',
+  path: '/lp-pirassununga',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LpPlantaoUrgenciaRemocaoRoute =
   LpPlantaoUrgenciaRemocaoRouteImport.update({
     id: '/lp-plantao-urgencia-remocao',
     path: '/lp-plantao-urgencia-remocao',
     getParentRoute: () => rootRouteImport,
   } as any)
+const LpPortoFerreiraRoute = LpPortoFerreiraRouteImport.update({
+  id: '/lp-porto-ferreira',
+  path: '/lp-porto-ferreira',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LpRibeiraoPretoRoute = LpRibeiraoPretoRouteImport.update({
+  id: '/lp-ribeirao-preto',
+  path: '/lp-ribeirao-preto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LpRibeiraoPretoFemininaRoute = LpRibeiraoPretoFemininaRouteImport.update({
+  id: '/lp-ribeirao-preto-feminina',
+  path: '/lp-ribeirao-preto-feminina',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LpRioClaroRoute = LpRioClaroRouteImport.update({
+  id: '/lp-rio-claro',
+  path: '/lp-rio-claro',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LpSaoCarlosRoute = LpSaoCarlosRouteImport.update({
+  id: '/lp-sao-carlos',
+  path: '/lp-sao-carlos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LpSaoCarlosFemininaRoute = LpSaoCarlosFemininaRouteImport.update({
+  id: '/lp-sao-carlos-feminina',
+  path: '/lp-sao-carlos-feminina',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LpTaquaritingaRoute = LpTaquaritingaRouteImport.update({
+  id: '/lp-taquaritinga',
+  path: '/lp-taquaritinga',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
   id: '/politica-de-privacidade',
   path: '/politica-de-privacidade',
@@ -497,7 +617,27 @@ export interface FileRoutesByFullPath {
   '/internacao-voluntaria-sao-carlos': typeof InternacaoVoluntariaSaoCarlosRoute
   '/lp-acolhimento-familia': typeof LpAcolhimentoFamiliaRoute
   '/lp-ajuda-jogos-apostas': typeof LpAjudaJogosApostasRoute
+  '/lp-americo-brasiliense': typeof LpAmericoBrasilienseRoute
+  '/lp-araraquara': typeof LpAraraquaraRoute
+  '/lp-araraquara-feminina': typeof LpAraraquaraFemininaRoute
+  '/lp-araras': typeof LpArarasRoute
+  '/lp-descalvado': typeof LpDescalvadoRoute
+  '/lp-franca': typeof LpFrancaRoute
+  '/lp-ibate': typeof LpIbateRoute
+  '/lp-ibitinga': typeof LpIbitingaRoute
+  '/lp-itapolis': typeof LpItapolisRoute
+  '/lp-jaboticabal': typeof LpJaboticabalRoute
+  '/lp-leme': typeof LpLemeRoute
+  '/lp-matao': typeof LpMataoRoute
+  '/lp-pirassununga': typeof LpPirassunungaRoute
   '/lp-plantao-urgencia-remocao': typeof LpPlantaoUrgenciaRemocaoRoute
+  '/lp-porto-ferreira': typeof LpPortoFerreiraRoute
+  '/lp-ribeirao-preto': typeof LpRibeiraoPretoRoute
+  '/lp-ribeirao-preto-feminina': typeof LpRibeiraoPretoFemininaRoute
+  '/lp-rio-claro': typeof LpRioClaroRoute
+  '/lp-sao-carlos': typeof LpSaoCarlosRoute
+  '/lp-sao-carlos-feminina': typeof LpSaoCarlosFemininaRoute
+  '/lp-taquaritinga': typeof LpTaquaritingaRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/resgate-remocao-araraquara': typeof ResgateRemocaoAraraquaraRoute
   '/resgate-remocao-ribeirao-preto': typeof ResgateRemocaoRibeiraoPretoRoute
@@ -565,7 +705,27 @@ export interface FileRoutesByTo {
   '/internacao-voluntaria-sao-carlos': typeof InternacaoVoluntariaSaoCarlosRoute
   '/lp-acolhimento-familia': typeof LpAcolhimentoFamiliaRoute
   '/lp-ajuda-jogos-apostas': typeof LpAjudaJogosApostasRoute
+  '/lp-americo-brasiliense': typeof LpAmericoBrasilienseRoute
+  '/lp-araraquara': typeof LpAraraquaraRoute
+  '/lp-araraquara-feminina': typeof LpAraraquaraFemininaRoute
+  '/lp-araras': typeof LpArarasRoute
+  '/lp-descalvado': typeof LpDescalvadoRoute
+  '/lp-franca': typeof LpFrancaRoute
+  '/lp-ibate': typeof LpIbateRoute
+  '/lp-ibitinga': typeof LpIbitingaRoute
+  '/lp-itapolis': typeof LpItapolisRoute
+  '/lp-jaboticabal': typeof LpJaboticabalRoute
+  '/lp-leme': typeof LpLemeRoute
+  '/lp-matao': typeof LpMataoRoute
+  '/lp-pirassununga': typeof LpPirassunungaRoute
   '/lp-plantao-urgencia-remocao': typeof LpPlantaoUrgenciaRemocaoRoute
+  '/lp-porto-ferreira': typeof LpPortoFerreiraRoute
+  '/lp-ribeirao-preto': typeof LpRibeiraoPretoRoute
+  '/lp-ribeirao-preto-feminina': typeof LpRibeiraoPretoFemininaRoute
+  '/lp-rio-claro': typeof LpRioClaroRoute
+  '/lp-sao-carlos': typeof LpSaoCarlosRoute
+  '/lp-sao-carlos-feminina': typeof LpSaoCarlosFemininaRoute
+  '/lp-taquaritinga': typeof LpTaquaritingaRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/resgate-remocao-araraquara': typeof ResgateRemocaoAraraquaraRoute
   '/resgate-remocao-ribeirao-preto': typeof ResgateRemocaoRibeiraoPretoRoute
@@ -635,7 +795,27 @@ export interface FileRoutesById {
   '/internacao-voluntaria-sao-carlos': typeof InternacaoVoluntariaSaoCarlosRoute
   '/lp-acolhimento-familia': typeof LpAcolhimentoFamiliaRoute
   '/lp-ajuda-jogos-apostas': typeof LpAjudaJogosApostasRoute
+  '/lp-americo-brasiliense': typeof LpAmericoBrasilienseRoute
+  '/lp-araraquara': typeof LpAraraquaraRoute
+  '/lp-araraquara-feminina': typeof LpAraraquaraFemininaRoute
+  '/lp-araras': typeof LpArarasRoute
+  '/lp-descalvado': typeof LpDescalvadoRoute
+  '/lp-franca': typeof LpFrancaRoute
+  '/lp-ibate': typeof LpIbateRoute
+  '/lp-ibitinga': typeof LpIbitingaRoute
+  '/lp-itapolis': typeof LpItapolisRoute
+  '/lp-jaboticabal': typeof LpJaboticabalRoute
+  '/lp-leme': typeof LpLemeRoute
+  '/lp-matao': typeof LpMataoRoute
+  '/lp-pirassununga': typeof LpPirassunungaRoute
   '/lp-plantao-urgencia-remocao': typeof LpPlantaoUrgenciaRemocaoRoute
+  '/lp-porto-ferreira': typeof LpPortoFerreiraRoute
+  '/lp-ribeirao-preto': typeof LpRibeiraoPretoRoute
+  '/lp-ribeirao-preto-feminina': typeof LpRibeiraoPretoFemininaRoute
+  '/lp-rio-claro': typeof LpRioClaroRoute
+  '/lp-sao-carlos': typeof LpSaoCarlosRoute
+  '/lp-sao-carlos-feminina': typeof LpSaoCarlosFemininaRoute
+  '/lp-taquaritinga': typeof LpTaquaritingaRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/resgate-remocao-araraquara': typeof ResgateRemocaoAraraquaraRoute
   '/resgate-remocao-ribeirao-preto': typeof ResgateRemocaoRibeiraoPretoRoute
@@ -706,7 +886,27 @@ export interface FileRouteTypes {
     | '/internacao-voluntaria-sao-carlos'
     | '/lp-acolhimento-familia'
     | '/lp-ajuda-jogos-apostas'
+    | '/lp-americo-brasiliense'
+    | '/lp-araraquara'
+    | '/lp-araraquara-feminina'
+    | '/lp-araras'
+    | '/lp-descalvado'
+    | '/lp-franca'
+    | '/lp-ibate'
+    | '/lp-ibitinga'
+    | '/lp-itapolis'
+    | '/lp-jaboticabal'
+    | '/lp-leme'
+    | '/lp-matao'
+    | '/lp-pirassununga'
     | '/lp-plantao-urgencia-remocao'
+    | '/lp-porto-ferreira'
+    | '/lp-ribeirao-preto'
+    | '/lp-ribeirao-preto-feminina'
+    | '/lp-rio-claro'
+    | '/lp-sao-carlos'
+    | '/lp-sao-carlos-feminina'
+    | '/lp-taquaritinga'
     | '/politica-de-privacidade'
     | '/resgate-remocao-araraquara'
     | '/resgate-remocao-ribeirao-preto'
@@ -774,7 +974,27 @@ export interface FileRouteTypes {
     | '/internacao-voluntaria-sao-carlos'
     | '/lp-acolhimento-familia'
     | '/lp-ajuda-jogos-apostas'
+    | '/lp-americo-brasiliense'
+    | '/lp-araraquara'
+    | '/lp-araraquara-feminina'
+    | '/lp-araras'
+    | '/lp-descalvado'
+    | '/lp-franca'
+    | '/lp-ibate'
+    | '/lp-ibitinga'
+    | '/lp-itapolis'
+    | '/lp-jaboticabal'
+    | '/lp-leme'
+    | '/lp-matao'
+    | '/lp-pirassununga'
     | '/lp-plantao-urgencia-remocao'
+    | '/lp-porto-ferreira'
+    | '/lp-ribeirao-preto'
+    | '/lp-ribeirao-preto-feminina'
+    | '/lp-rio-claro'
+    | '/lp-sao-carlos'
+    | '/lp-sao-carlos-feminina'
+    | '/lp-taquaritinga'
     | '/politica-de-privacidade'
     | '/resgate-remocao-araraquara'
     | '/resgate-remocao-ribeirao-preto'
@@ -843,7 +1063,27 @@ export interface FileRouteTypes {
     | '/internacao-voluntaria-sao-carlos'
     | '/lp-acolhimento-familia'
     | '/lp-ajuda-jogos-apostas'
+    | '/lp-americo-brasiliense'
+    | '/lp-araraquara'
+    | '/lp-araraquara-feminina'
+    | '/lp-araras'
+    | '/lp-descalvado'
+    | '/lp-franca'
+    | '/lp-ibate'
+    | '/lp-ibitinga'
+    | '/lp-itapolis'
+    | '/lp-jaboticabal'
+    | '/lp-leme'
+    | '/lp-matao'
+    | '/lp-pirassununga'
     | '/lp-plantao-urgencia-remocao'
+    | '/lp-porto-ferreira'
+    | '/lp-ribeirao-preto'
+    | '/lp-ribeirao-preto-feminina'
+    | '/lp-rio-claro'
+    | '/lp-sao-carlos'
+    | '/lp-sao-carlos-feminina'
+    | '/lp-taquaritinga'
     | '/politica-de-privacidade'
     | '/resgate-remocao-araraquara'
     | '/resgate-remocao-ribeirao-preto'
@@ -913,7 +1153,27 @@ export interface RootRouteChildren {
   InternacaoVoluntariaSaoCarlosRoute: typeof InternacaoVoluntariaSaoCarlosRoute
   LpAcolhimentoFamiliaRoute: typeof LpAcolhimentoFamiliaRoute
   LpAjudaJogosApostasRoute: typeof LpAjudaJogosApostasRoute
+  LpAmericoBrasilienseRoute: typeof LpAmericoBrasilienseRoute
+  LpAraraquaraRoute: typeof LpAraraquaraRoute
+  LpAraraquaraFemininaRoute: typeof LpAraraquaraFemininaRoute
+  LpArarasRoute: typeof LpArarasRoute
+  LpDescalvadoRoute: typeof LpDescalvadoRoute
+  LpFrancaRoute: typeof LpFrancaRoute
+  LpIbateRoute: typeof LpIbateRoute
+  LpIbitingaRoute: typeof LpIbitingaRoute
+  LpItapolisRoute: typeof LpItapolisRoute
+  LpJaboticabalRoute: typeof LpJaboticabalRoute
+  LpLemeRoute: typeof LpLemeRoute
+  LpMataoRoute: typeof LpMataoRoute
+  LpPirassunungaRoute: typeof LpPirassunungaRoute
   LpPlantaoUrgenciaRemocaoRoute: typeof LpPlantaoUrgenciaRemocaoRoute
+  LpPortoFerreiraRoute: typeof LpPortoFerreiraRoute
+  LpRibeiraoPretoRoute: typeof LpRibeiraoPretoRoute
+  LpRibeiraoPretoFemininaRoute: typeof LpRibeiraoPretoFemininaRoute
+  LpRioClaroRoute: typeof LpRioClaroRoute
+  LpSaoCarlosRoute: typeof LpSaoCarlosRoute
+  LpSaoCarlosFemininaRoute: typeof LpSaoCarlosFemininaRoute
+  LpTaquaritingaRoute: typeof LpTaquaritingaRoute
   PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
   ResgateRemocaoAraraquaraRoute: typeof ResgateRemocaoAraraquaraRoute
   ResgateRemocaoRibeiraoPretoRoute: typeof ResgateRemocaoRibeiraoPretoRoute
@@ -1191,11 +1451,151 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LpAjudaJogosApostasRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/lp-americo-brasiliense': {
+      id: '/lp-americo-brasiliense'
+      path: '/lp-americo-brasiliense'
+      fullPath: '/lp-americo-brasiliense'
+      preLoaderRoute: typeof LpAmericoBrasilienseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp-araraquara': {
+      id: '/lp-araraquara'
+      path: '/lp-araraquara'
+      fullPath: '/lp-araraquara'
+      preLoaderRoute: typeof LpAraraquaraRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp-araraquara-feminina': {
+      id: '/lp-araraquara-feminina'
+      path: '/lp-araraquara-feminina'
+      fullPath: '/lp-araraquara-feminina'
+      preLoaderRoute: typeof LpAraraquaraFemininaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp-araras': {
+      id: '/lp-araras'
+      path: '/lp-araras'
+      fullPath: '/lp-araras'
+      preLoaderRoute: typeof LpArarasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp-descalvado': {
+      id: '/lp-descalvado'
+      path: '/lp-descalvado'
+      fullPath: '/lp-descalvado'
+      preLoaderRoute: typeof LpDescalvadoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp-franca': {
+      id: '/lp-franca'
+      path: '/lp-franca'
+      fullPath: '/lp-franca'
+      preLoaderRoute: typeof LpFrancaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp-ibate': {
+      id: '/lp-ibate'
+      path: '/lp-ibate'
+      fullPath: '/lp-ibate'
+      preLoaderRoute: typeof LpIbateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp-ibitinga': {
+      id: '/lp-ibitinga'
+      path: '/lp-ibitinga'
+      fullPath: '/lp-ibitinga'
+      preLoaderRoute: typeof LpIbitingaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp-itapolis': {
+      id: '/lp-itapolis'
+      path: '/lp-itapolis'
+      fullPath: '/lp-itapolis'
+      preLoaderRoute: typeof LpItapolisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp-jaboticabal': {
+      id: '/lp-jaboticabal'
+      path: '/lp-jaboticabal'
+      fullPath: '/lp-jaboticabal'
+      preLoaderRoute: typeof LpJaboticabalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp-leme': {
+      id: '/lp-leme'
+      path: '/lp-leme'
+      fullPath: '/lp-leme'
+      preLoaderRoute: typeof LpLemeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp-matao': {
+      id: '/lp-matao'
+      path: '/lp-matao'
+      fullPath: '/lp-matao'
+      preLoaderRoute: typeof LpMataoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp-pirassununga': {
+      id: '/lp-pirassununga'
+      path: '/lp-pirassununga'
+      fullPath: '/lp-pirassununga'
+      preLoaderRoute: typeof LpPirassunungaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/lp-plantao-urgencia-remocao': {
       id: '/lp-plantao-urgencia-remocao'
       path: '/lp-plantao-urgencia-remocao'
       fullPath: '/lp-plantao-urgencia-remocao'
       preLoaderRoute: typeof LpPlantaoUrgenciaRemocaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp-porto-ferreira': {
+      id: '/lp-porto-ferreira'
+      path: '/lp-porto-ferreira'
+      fullPath: '/lp-porto-ferreira'
+      preLoaderRoute: typeof LpPortoFerreiraRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp-ribeirao-preto': {
+      id: '/lp-ribeirao-preto'
+      path: '/lp-ribeirao-preto'
+      fullPath: '/lp-ribeirao-preto'
+      preLoaderRoute: typeof LpRibeiraoPretoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp-ribeirao-preto-feminina': {
+      id: '/lp-ribeirao-preto-feminina'
+      path: '/lp-ribeirao-preto-feminina'
+      fullPath: '/lp-ribeirao-preto-feminina'
+      preLoaderRoute: typeof LpRibeiraoPretoFemininaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp-rio-claro': {
+      id: '/lp-rio-claro'
+      path: '/lp-rio-claro'
+      fullPath: '/lp-rio-claro'
+      preLoaderRoute: typeof LpRioClaroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp-sao-carlos': {
+      id: '/lp-sao-carlos'
+      path: '/lp-sao-carlos'
+      fullPath: '/lp-sao-carlos'
+      preLoaderRoute: typeof LpSaoCarlosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp-sao-carlos-feminina': {
+      id: '/lp-sao-carlos-feminina'
+      path: '/lp-sao-carlos-feminina'
+      fullPath: '/lp-sao-carlos-feminina'
+      preLoaderRoute: typeof LpSaoCarlosFemininaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lp-taquaritinga': {
+      id: '/lp-taquaritinga'
+      path: '/lp-taquaritinga'
+      fullPath: '/lp-taquaritinga'
+      preLoaderRoute: typeof LpTaquaritingaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/politica-de-privacidade': {
@@ -1493,7 +1893,27 @@ const rootRouteChildren: RootRouteChildren = {
   InternacaoVoluntariaSaoCarlosRoute: InternacaoVoluntariaSaoCarlosRoute,
   LpAcolhimentoFamiliaRoute: LpAcolhimentoFamiliaRoute,
   LpAjudaJogosApostasRoute: LpAjudaJogosApostasRoute,
+  LpAmericoBrasilienseRoute: LpAmericoBrasilienseRoute,
+  LpAraraquaraRoute: LpAraraquaraRoute,
+  LpAraraquaraFemininaRoute: LpAraraquaraFemininaRoute,
+  LpArarasRoute: LpArarasRoute,
+  LpDescalvadoRoute: LpDescalvadoRoute,
+  LpFrancaRoute: LpFrancaRoute,
+  LpIbateRoute: LpIbateRoute,
+  LpIbitingaRoute: LpIbitingaRoute,
+  LpItapolisRoute: LpItapolisRoute,
+  LpJaboticabalRoute: LpJaboticabalRoute,
+  LpLemeRoute: LpLemeRoute,
+  LpMataoRoute: LpMataoRoute,
+  LpPirassunungaRoute: LpPirassunungaRoute,
   LpPlantaoUrgenciaRemocaoRoute: LpPlantaoUrgenciaRemocaoRoute,
+  LpPortoFerreiraRoute: LpPortoFerreiraRoute,
+  LpRibeiraoPretoRoute: LpRibeiraoPretoRoute,
+  LpRibeiraoPretoFemininaRoute: LpRibeiraoPretoFemininaRoute,
+  LpRioClaroRoute: LpRioClaroRoute,
+  LpSaoCarlosRoute: LpSaoCarlosRoute,
+  LpSaoCarlosFemininaRoute: LpSaoCarlosFemininaRoute,
+  LpTaquaritingaRoute: LpTaquaritingaRoute,
   PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
   ResgateRemocaoAraraquaraRoute: ResgateRemocaoAraraquaraRoute,
   ResgateRemocaoRibeiraoPretoRoute: ResgateRemocaoRibeiraoPretoRoute,

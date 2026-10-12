@@ -51,12 +51,23 @@ export const adsPages = {
 } as const;
 
 export type AdsPageKey = keyof typeof adsPages;
+export interface CampaignDefinition {
+  path: string;
+  image: string;
+  eyebrow: string;
+  title: string;
+  description: string;
+  intro: string;
+  sections: readonly { title: string; text: string }[];
+}
 export function campaignWhatsappHref(key: AdsPageKey) {
   const message = key === "gambling" ? "Olá, gostaria de orientação sobre apoio relacionado a jogos e apostas." : key === "orientation" ? "Olá, gostaria de falar com o plantão sobre orientação e agendamento de acolhimento." : "Olá, gostaria de orientação sobre acolhimento e apoio à minha família.";
   return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 }
 export function campaignHead(key: AdsPageKey) {
-  const page = adsPages[key];
+  return campaignDefinitionHead(adsPages[key]);
+}
+export function campaignDefinitionHead(page: CampaignDefinition) {
   return {
     meta: [
       { title: `${page.title} | Central de Acolhimento` },

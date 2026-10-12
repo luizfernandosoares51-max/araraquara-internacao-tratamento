@@ -2,20 +2,20 @@ import { Link } from "@tanstack/react-router";
 import { ArrowUpRight, HeartHandshake, MessageCircle, Phone, ShieldCheck } from "lucide-react";
 import logo from "@/assets/logo-central-optimized.webp.asset.json";
 import { Button } from "@/components/ui/button";
-import { adsPages, campaignWhatsappHref, type AdsPageKey } from "@/lib/ads-pages";
+import { adsPages, campaignWhatsappHref, type AdsPageKey, type CampaignDefinition } from "@/lib/ads-pages";
 import { institutionalIdentity } from "@/lib/institutional";
 import { phoneDisplay, phoneHref } from "@/lib/site";
 import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
 
-function CampaignActions({ pageKey, fixed = false }: { pageKey: AdsPageKey; fixed?: boolean }) {
+function CampaignActions({ whatsappHref, callLabel, fixed = false }: { whatsappHref: string; callLabel: string; fixed?: boolean }) {
   return <div className={fixed ? "campaign-fixed-actions" : "campaign-actions"}>
     <Button asChild className="campaign-whatsapp min-h-12 bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90">
-      <a href={campaignWhatsappHref(pageKey)} target="_blank" rel="noopener noreferrer" aria-label="Falar com Especialista de Plantão no WhatsApp">
+      <a href={whatsappHref} target="_blank" rel="noopener noreferrer" aria-label="Falar com Especialista de Plantão no WhatsApp">
         <MessageCircle aria-hidden="true" /><span>Falar com Especialista de Plantão no WhatsApp</span><ArrowUpRight aria-hidden="true" className="campaign-cta-arrow" />
       </a>
     </Button>
     <Button asChild variant="outline" className="min-h-12 border-border bg-background text-foreground hover:bg-muted">
-      <a href={phoneHref}><Phone aria-hidden="true" /><span>Ligar Agora</span></a>
+      <a href={phoneHref}><Phone aria-hidden="true" /><span>{callLabel}</span></a>
     </Button>
   </div>;
 }
@@ -23,6 +23,12 @@ function CampaignActions({ pageKey, fixed = false }: { pageKey: AdsPageKey; fixe
 export function CampaignPage({ pageKey }: { pageKey: AdsPageKey }) {
   const page = adsPages[pageKey];
   const image = visualAssets.campaigns[page.image];
+  return <CampaignLayout page={page} image={image} whatsappHref={campaignWhatsappHref(pageKey)} />;
+}
+
+export function CampaignLayout({ page, image, whatsappHref, callLabel = "Ligar Agora" }: {
+  page: CampaignDefinition; image: { src: string; alt: string }; whatsappHref: string; callLabel?: string;
+}) {
   return <div className="campaign-page home-serene bg-background text-foreground">
     <div className="campaign-scroll-content">
       <header className="border-b border-border bg-background">
@@ -33,7 +39,7 @@ export function CampaignPage({ pageKey }: { pageKey: AdsPageKey }) {
           </Link>
           <div className="campaign-header-contacts flex items-center gap-3">
             <Button asChild variant="link" className="min-h-12 text-foreground"><a href={phoneHref}><Phone aria-hidden="true" /><span>{phoneDisplay}</span></a></Button>
-            <Button asChild className="min-h-12 bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90"><a href={campaignWhatsappHref(pageKey)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />WhatsApp</a></Button>
+            <Button asChild className="min-h-12 bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90"><a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />WhatsApp</a></Button>
           </div>
         </div>
       </header>
@@ -45,7 +51,7 @@ export function CampaignPage({ pageKey }: { pageKey: AdsPageKey }) {
             <p className="mb-5 text-sm font-semibold uppercase leading-relaxed">{page.eyebrow}</p>
             <h1 className="max-w-2xl font-display text-3xl font-semibold leading-tight sm:text-5xl">{page.title}</h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed sm:text-lg">{page.description}</p>
-            <div className="mt-8"><CampaignActions pageKey={pageKey} /></div>
+            <div className="mt-8"><CampaignActions whatsappHref={whatsappHref} callLabel={callLabel} /></div>
             <p className="mt-5 max-w-xl text-sm leading-relaxed">Orientação 24h • Sede única em Araraquara • Acolhimento voluntário</p>
           </div>
         </section>
@@ -68,7 +74,7 @@ export function CampaignPage({ pageKey }: { pageKey: AdsPageKey }) {
             <ShieldCheck className="mb-4 size-8 text-whatsapp" aria-hidden="true" />
             <h2 className="font-display text-3xl">Converse com o plantão da Central</h2>
             <p className="mb-7 mt-4 max-w-2xl leading-relaxed text-muted-foreground">Escuta respeitosa e orientação para sua família. O contato não garante admissão, transporte imediato ou resultados.</p>
-            <CampaignActions pageKey={pageKey} />
+            <CampaignActions whatsappHref={whatsappHref} callLabel={callLabel} />
             <p className="mt-6 text-sm leading-relaxed text-muted-foreground">Em emergência ou risco à vida, ligue SAMU <a href="tel:192" className="font-semibold underline">192</a>.</p>
           </div>
         </section>
@@ -84,6 +90,6 @@ export function CampaignPage({ pageKey }: { pageKey: AdsPageKey }) {
         </div>
       </footer>
     </div>
-    <aside className="campaign-contact-dock border-t border-border bg-background" aria-label="Contato direto com o plantão"><CampaignActions pageKey={pageKey} fixed /></aside>
+    <aside className="campaign-contact-dock border-t border-border bg-background" aria-label="Contato direto com o plantão"><CampaignActions whatsappHref={whatsappHref} callLabel={callLabel} fixed /></aside>
   </div>;
 }
