@@ -4,6 +4,7 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useMatches,
   HeadContent,
   Scripts,
   type ErrorComponentProps,
@@ -130,6 +131,9 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const campaignPage = useMatches({ select: (matches) => matches.some(match => match.staticData.campaignPage === true) });
+
+  if (campaignPage) return <QueryClientProvider client={queryClient}><Outlet /></QueryClientProvider>;
 
   return (
     <QueryClientProvider client={queryClient}>
