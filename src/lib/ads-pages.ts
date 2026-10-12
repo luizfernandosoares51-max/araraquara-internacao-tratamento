@@ -20,7 +20,7 @@ export const adsPages = {
     sections: [
       { title: "Como acolhemos", text: "Acolhimento voluntário e reabilitação biopsicossocial com suporte psicológico especializado de Margarete Vasques (CRP 06/130268), coordenação de Luiz Fernando Soares, supervisão de enfermagem e acompanhamento médico e psiquiátrico integrado. O plano de cuidado considera a avaliação e as necessidades de cada pessoa." },
       { title: "Estrutura e rotina", text: "A sede própria em Araraquara oferece ambiente reservado e área verde. A rotina reúne conscientização em 12 Passos, convivência terapêutica, atividades ao ar livre e prevenção à recaída. Visitas familiares são organizadas por agendamento." },
-      { title: "Acesso para famílias do interior", text: "Orientamos famílias de Araraquara, São Carlos, Ribeirão Preto e do interior de SP a partir de nossa única sede em Araraquara. A equipe ajuda a planejar o acesso e a participação da família, sem representar filiais em outros municípios." },
+      { title: "Acesso para famílias do interior", text: "Orientamos famílias de Araraquara, São Carlos, Ribeirão Preto e do interior de SP. A equipe ajuda a planejar o acesso ao acolhimento em Araraquara e a participação da família, com atenção às necessidades de cada pessoa." },
       { title: "Orientação sobre planos de saúde", text: "Oferecemos orientação sobre processos de cobertura e reembolso e documentação administrativa. Laudos e relatórios clínicos são emitidos pelos profissionais responsáveis, conforme sua competência. A análise cabe à operadora e ao contrato: não há garantia de cobertura ou reembolso nem anúncio de convênio." },
     ],
   },
