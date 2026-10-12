@@ -40,7 +40,7 @@ export const rioClaroSpecialties: Record<SpecialtyKey, Specialty> = {
     steps: [ { title: 'Organizar preocupações', text: 'Considere saúde, vínculos e mudanças na rotina.' }, { title: 'Avaliar a abstinência', text: 'Segurança e desintoxicação são definidas em serviço médico.' }, { title: 'Manter apoios', text: 'Planeje continuidade do cuidado e vínculos em Rio Claro.' } ],
     faqs: [
       { question: 'Parar de beber abruptamente pode ser perigoso?', answer: 'Pode, especialmente após uso intenso ou prolongado. Procure avaliação médica, sem improvisar medicamentos. Confusão intensa, convulsões ou alteração de consciência exigem urgência ou SAMU 192, não espera por acolhimento.' },
-      { question: 'Como funciona a desintoxicação para quem procura ajuda em Rio Claro?', answer: 'A equipe médica avalia sintomas e define condutas, monitoramento e local adequado. A Central não realiza desintoxicação na sede própria; necessidades médicas são encaminhadas a estabelecimentos habilitados externos.' },
+      { question: 'Como funciona a desintoxicação para quem procura ajuda em Rio Claro?', answer: 'A equipe médica avalia sintomas e define condutas, monitoramento e local adequado. A Central reúne acompanhamento médico e psiquiátrico integrado e enfermagem; a desintoxicação médica e as necessidades hospitalares seguem encaminhamento a estabelecimentos habilitados externos.' },
       { question: 'Toda pessoa precisa de internação e acompanhamento médico 24h?', answer: 'Não existe indicação única. A necessidade de cuidado hospitalar e monitoramento depende da avaliação médica. Acolhimento voluntário psicossocial em Araraquara não equivale a internação ou serviço médico 24h.' }
     ]
   },

@@ -200,7 +200,7 @@ export const cityEditorial: Record<string, CityEditorial> = {
     ],
     faqs: [
       { question: "Sair de Ribeirão Preto garante recuperação?", answer: "Não. A localização não elimina fatores de risco nem garante resultado. A escolha deve considerar avaliação individual, vínculos, continuidade e necessidades de saúde, sem substituir automaticamente a rede municipal." },
-      { question: "Há transporte automaticamente disponível de Ribeirão Preto?", answer: "Não. A área informada de transporte agendado é Araraquara e municípios vizinhos. Para outras origens, consulte a equipe sobre possibilidade, condições e disponibilidade; não há serviço de emergência 24h anunciado." },
+      { question: "Há transporte automaticamente disponível de Ribeirão Preto?", answer: "O transporte depende de consulta e agendamento. A área informada é Araraquara e municípios vizinhos; para outras origens, confirme possibilidade, condições e disponibilidade. A orientação e o suporte para agendamento funcionam 24h; em emergência, acione o SAMU 192." },
     ],
   },
   "franca-sp": {

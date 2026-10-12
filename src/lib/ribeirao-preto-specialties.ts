@@ -29,7 +29,7 @@ export const ribeiraoSpecialtyList = [
         "title": "Desintoxicação é uma decisão clínica",
         "paragraphs": [
           "Após consumo intenso ou prolongado, interromper o álcool abruptamente pode provocar abstinência e complicações. Não improvise desintoxicação em casa ou medicamentos emprestados. Cabe ao serviço médico definir se há necessidade de observação, monitoramento ou atendimento hospitalar.",
-          "A sede da Central em Araraquara não realiza desintoxicação médica. Necessidades clínicas recebem encaminhamento a estabelecimentos habilitados externos. Organizar uma viagem a partir de Ribeirão Preto não deve adiar uma avaliação urgente na cidade de origem."
+          "A sede da Central em Araraquara reúne acompanhamento médico e psiquiátrico integrado e enfermagem. A desintoxicação médica e as necessidades hospitalares seguem encaminhamento a estabelecimentos habilitados. Organizar uma viagem a partir de Ribeirão Preto não deve adiar uma avaliação urgente na cidade de origem."
         ]
       },
       {
@@ -466,7 +466,7 @@ export const ribeiraoSpecialtyList = [
         "title": "Redução e interrupção pertencem ao médico",
         "paragraphs": [
           "Alguns medicamentos podem provocar abstinência ou agravamento de sintomas quando interrompidos abruptamente. A necessidade de redução gradual e seu planejamento dependem da substância, do histórico e das condições de saúde. Esta página não estabelece doses, prazos ou substituições.",
-          "A Central não realiza desmame médico ou desintoxicação em sua sede. Necessidades clínicas são encaminhadas a serviços habilitados externos. O acompanhamento deve avaliar também as razões do uso, como ansiedade, insônia ou dor, sem presumir que todos os casos tenham a mesma origem."
+          "O acompanhamento médico e psiquiátrico integrado da Central pode avaliar as necessidades clínicas, com apoio da enfermagem. Um programa próprio de desmame não está confirmado, e a desintoxicação médica segue encaminhamento externo. A avaliação considera também as razões do uso, como ansiedade, insônia ou dor, sem presumir uma origem única."
         ]
       },
       {
