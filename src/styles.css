@@ -332,6 +332,40 @@ html {
 }
 
 .global-site-header { position: relative; z-index: 30; }
+.campaign-page {
+  --campaign-overlay: oklch(0.18 0.025 155 / 0.82);
+  --campaign-contact-height: calc(6rem + env(safe-area-inset-bottom, 0px));
+}
+.campaign-hero { color: var(--primary-foreground); }
+.campaign-hero-shade { background: var(--campaign-overlay); }
+.campaign-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.campaign-actions > a { height: auto; padding: 0.85rem 1rem; border-radius: 0.5rem; white-space: normal; }
+.campaign-actions .campaign-whatsapp { max-width: 29rem; }
+.campaign-whatsapp span { white-space: normal; line-height: 1.45; }
+.campaign-scroll-content { padding-bottom: var(--campaign-contact-height); }
+.campaign-contact-dock {
+  position: fixed; inset: auto 0 0; z-index: 50;
+  min-height: var(--campaign-contact-height);
+  padding: 1rem max(1rem, env(safe-area-inset-right, 0px)) calc(1rem + env(safe-area-inset-bottom, 0px)) max(1rem, env(safe-area-inset-left, 0px));
+}
+.campaign-fixed-actions { display: flex; justify-content: center; gap: 0.75rem; }
+.campaign-fixed-actions > a { height: auto; min-height: 3rem; padding: 0.75rem 1rem; border-radius: 0.5rem; white-space: normal; }
+@media (max-width: 639px) {
+  .campaign-page { --campaign-contact-height: calc(9rem + env(safe-area-inset-bottom, 0px)); }
+  .campaign-scroll-content { height: calc(100dvh - var(--campaign-contact-height)); overflow-y: auto; overflow-x: clip; padding-bottom: 0; }
+  .campaign-header { flex-wrap: wrap; }
+  .campaign-header-contacts { width: 100%; justify-content: space-between; gap: 0.25rem; }
+  .campaign-header-contacts a { padding-inline: 0.5rem; }
+  .campaign-actions { display: grid; grid-template-columns: minmax(0, 1fr); }
+  .campaign-fixed-actions { display: grid; grid-template-columns: minmax(0, 1fr) 6.5rem; align-items: stretch; }
+  .campaign-fixed-actions > a { padding-inline: 0.5rem; }
+  .campaign-fixed-actions .campaign-whatsapp { gap: 0.4rem; }
+  .campaign-fixed-actions .campaign-whatsapp span { font-size: 0.75rem; }
+  .campaign-cta-arrow { display: none; }
+  .campaign-contact-dock { height: var(--campaign-contact-height); display: flex; align-items: center; }
+  .campaign-fixed-actions { width: 100%; }
+  .campaign-fixed-actions a[href^="tel:"] { flex-direction: column; gap: 0.5rem; }
+}
 .global-navigation { margin-top: 0.75rem; }
 .global-navigation-list { display: flex; flex-wrap: wrap; gap: 0.25rem; align-items: center; }
 .global-nav-group { position: relative; }
