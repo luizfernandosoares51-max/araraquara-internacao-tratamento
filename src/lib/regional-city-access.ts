@@ -9,7 +9,9 @@ export type RegionalCityAccess = {
   visits: string;
 };
 
-export const regionalCityAccess: Record<string, RegionalCityAccess> = {
+type RegionalCitySlug = "araraquara" | "americo-brasiliense-sp" | "ibate-sp" | "sao-carlos-sp" | "matao-sp" | "taquaritinga-sp" | "ibitinga-sp" | "itapolis-sp" | "jaboticabal-sp" | "descalvado-sp" | "porto-ferreira-sp" | "rio-claro-sp" | "ribeirao-preto-sp" | "franca-sp";
+
+export const regionalCityAccess: Record<RegionalCitySlug, RegionalCityAccess> & Record<string, RegionalCityAccess> = {
   araraquara: {
     name: "Araraquara", roads: [],
     route: "Nossa sede local fica na R. Alfredo Micelli, 70, Condomínio Satélite, com acesso a partir dos bairros de Araraquara e dos municípios próximos. O plantão de orientação 24h ajuda a organizar a recepção e o primeiro encontro com a equipe.",
