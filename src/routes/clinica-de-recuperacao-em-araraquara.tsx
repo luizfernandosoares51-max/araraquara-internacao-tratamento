@@ -1,6 +1,7 @@
 import { cityEditorialFaqs, cityEditorialMetadata } from "@/lib/city-editorial";
 import { CityEditorialSection } from "@/components/city-editorial-section";
 import { AraraquaraSpecialties } from "@/components/araraquara-specialties";
+import { TreatmentNavigationItem } from "@/components/treatment-navigation-item";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
@@ -230,7 +231,7 @@ function AraraquaraPage() {
           <nav aria-label="Menu principal" className="-mx-5 mt-5 overflow-x-auto px-5 sm:mx-0 sm:px-0">
             <ul className="flex min-w-max items-center gap-x-5 text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
               {mainNav.map((item) =>
-                item.href.includes("#") ? (
+                item.label === "Tratamento" ? <TreatmentNavigationItem key={item.label} /> : item.href.includes("#") ? (
                   <li key={item.label}><a href={item.href.slice(item.href.indexOf("#"))} className="transition-colors hover:text-secondary">{item.label}</a></li>
                 ) : (
                   <li key={item.label}><Link to={item.href as "/" | "/cidades" | "/blog" | "/videos"} className="transition-colors hover:text-secondary">{item.label}</Link></li>
