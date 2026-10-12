@@ -1,3 +1,4 @@
+import { cityContactLabel, cityWhatsappHref, regionalCityAccess } from "@/lib/regional-city-access";
 import { cityEditorialFaqs, cityEditorialMetadata } from "@/lib/city-editorial";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -164,11 +165,11 @@ function SaoCarlosPage() {
               Clínica de Recuperação em São Carlos – Tratamento e Acolhimento
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-deep/70 sm:text-lg">
-              A Central de Acolhimento e Reabilitação oferece orientação para pessoas e famílias que procuram ajuda para dependência química, alcoolismo e uso problemático de álcool e outras drogas na região de São Carlos. A equipe explica possibilidades de tratamento e acolhimento e ajuda a organizar os próximos passos.
+              {regionalCityAccess["sao-carlos-sp"].welcome}
             </p>
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center gap-2 bg-whatsapp px-6 py-4 text-sm font-semibold text-whatsapp-foreground shadow-lg">
-                <MessageCircle className="size-5" aria-hidden="true" /> Falar com a equipe
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row h-auto whitespace-normal py-4">
+              <a href={cityWhatsappHref("São Carlos")} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center gap-2 bg-whatsapp px-6 py-4 text-sm font-semibold text-whatsapp-foreground shadow-lg whitespace-normal text-center">
+                <MessageCircle className="size-5" aria-hidden="true" /> {cityContactLabel("São Carlos")}
               </a>
               <a href={phoneHref} className="inline-flex min-h-14 items-center justify-center gap-2 border border-deep/20 bg-foreground px-6 py-4 text-sm font-semibold">
                 <Phone className="size-4" aria-hidden="true" /> Ligar agora · {phoneDisplay}
@@ -176,7 +177,7 @@ function SaoCarlosPage() {
             </div>
             <div className="mt-6 flex items-start gap-3 border-l-2 border-secondary pl-4 text-sm leading-relaxed text-deep/65">
               <ShieldCheck className="mt-0.5 size-5 shrink-0 text-brand" aria-hidden="true" />
-              <p>Esta página oferece orientação a famílias de São Carlos. Não afirmamos que exista uma unidade física da Central na cidade.</p>
+              <p>A sede terapêutica da Central fica em Araraquara, conectada a São Carlos pela Washington Luís. Sua família conta com orientação 24h para organizar acolhimento, visitas e acompanhamento.</p>
             </div>
           </div>
           <figure className="overflow-hidden border border-deep/10 bg-foreground shadow-xl">
@@ -222,7 +223,7 @@ function SaoCarlosPage() {
             </div>
             <div className="space-y-5 text-[15px] leading-relaxed text-deep/70">
               <p>Famílias que procuram internação para dependência química ou alcoolismo precisam receber orientação e avaliação adequada para compreender qual modalidade de cuidado pode ser mais apropriada.</p>
-              <p>A internação não é indicada automaticamente para todas as pessoas. A decisão exige análise individual, participação dos profissionais responsáveis e respeito aos critérios legais aplicáveis. Por isso, a Central não promete internação imediata, vaga ou resultado antes de conhecer a situação.</p>
+              <p>A internação não é indicada automaticamente para todas as pessoas. A decisão exige análise individual, participação dos profissionais responsáveis e respeito aos critérios legais aplicáveis. A equipe explica as etapas e confirma disponibilidade e condições para um acolhimento seguro, com encaminhamento hospitalar quando indicado.</p>
               <p>Quando houver risco imediato à vida, intoxicação grave, alteração intensa de consciência ou outra emergência, a prioridade é procurar um serviço de urgência.</p>
             </div>
           </div>
@@ -283,9 +284,9 @@ function SaoCarlosPage() {
               <h2 className="mt-3 font-display text-3xl font-semibold leading-tight sm:text-4xl">Como a Central pode orientar sua família?</h2>
               <p className="mt-5 max-w-3xl text-[15px] leading-relaxed text-muted-foreground">No contato inicial, a família pode relatar o que vem acontecendo e apresentar suas dúvidas. A equipe explica possibilidades de tratamento e acolhimento, o que precisa ser avaliado e quais informações são importantes para os próximos passos. Essa conversa não substitui diagnóstico ou atendimento de saúde.</p>
             </div>
-            <div className="flex flex-col gap-3">
-              <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center gap-2 bg-whatsapp px-6 py-4 text-sm font-semibold text-whatsapp-foreground">
-                <MessageCircle className="size-5" aria-hidden="true" /> Falar com a equipe
+            <div className="flex flex-col gap-3 h-auto whitespace-normal py-4">
+              <a href={cityWhatsappHref("São Carlos")} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center gap-2 bg-whatsapp px-6 py-4 text-sm font-semibold text-whatsapp-foreground whitespace-normal text-center">
+                <MessageCircle className="size-5" aria-hidden="true" /> {cityContactLabel("São Carlos")}
               </a>
               <a href="#tratamento" className="inline-flex min-h-14 items-center justify-center gap-2 border border-primary-foreground/30 px-6 py-4 text-center text-sm font-semibold text-primary-foreground">
                 Conhecer as opções de tratamento <ArrowRight className="size-4" aria-hidden="true" />
@@ -317,9 +318,9 @@ function SaoCarlosPage() {
             <div className="border-l-4 border-brand pl-6 sm:pl-9">
               <p className="text-xs font-semibold uppercase text-brand">Converse antes de decidir</p>
               <h2 className="mt-3 max-w-3xl font-display text-3xl font-semibold leading-tight sm:text-4xl">Sua família pode começar pedindo orientação.</h2>
-              <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-deep/70">Explique a situação e tire dúvidas sobre as possibilidades de cuidado. Não há promessa de internação, vaga ou resultado: cada caso precisa ser compreendido com responsabilidade.</p>
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center gap-2 bg-whatsapp px-6 py-4 text-sm font-semibold text-whatsapp-foreground"><MessageCircle className="size-5" aria-hidden="true" /> Falar com a equipe</a>
+              <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-deep/70">Explique a situação e tire dúvidas sobre as possibilidades de cuidado. O plantão de orientação 24h acolhe sua preocupação e ajuda a organizar avaliação e os próximos passos conforme as necessidades da pessoa.</p>
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row h-auto whitespace-normal py-4">
+                <a href={cityWhatsappHref("São Carlos")} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center gap-2 bg-whatsapp px-6 py-4 text-sm font-semibold text-whatsapp-foreground whitespace-normal text-center"><MessageCircle className="size-5" aria-hidden="true" /> {cityContactLabel("São Carlos")}</a>
                 <a href={phoneHref} className="inline-flex min-h-14 items-center justify-center gap-2 border border-deep/20 px-6 py-4 text-sm font-semibold"><Phone className="size-4" aria-hidden="true" /> Ligar agora · {phoneDisplay}</a>
               </div>
             </div>

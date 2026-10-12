@@ -5,6 +5,7 @@ import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { CityEditorialSection } from "@/components/city-editorial-section";
 import { cityEditorialFaqs } from "@/lib/city-editorial";
+import { cityContactLabel, cityWhatsappHref } from "@/lib/regional-city-access";
 import type { LocalCityPage } from "@/lib/local-city-pages";
 import { phoneDisplay, phoneHref, whatsappHref } from "@/lib/site";
 
@@ -34,7 +35,7 @@ export function LocalCityPageView({ city }: { city: LocalCityPage }) {
                 <h1 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">{city.h1}</h1>
                 <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">{city.lead}</p>
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                  <Button asChild size="lg" className="min-h-14 bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90"><a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" /> Conversar pelo WhatsApp</a></Button>
+                  <Button asChild size="lg" className="h-auto min-h-14 whitespace-normal py-4 bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90"><a href={cityWhatsappHref(city.name)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />{cityContactLabel(city.name)}</a></Button>
                   <Button asChild size="lg" variant="outline" className="min-h-14 border-border bg-glass text-foreground hover:bg-glass-strong hover:text-foreground"><a href={phoneHref}><Phone aria-hidden="true" /> {phoneDisplay}</a></Button>
                 </div>
                 <p className="mt-6 flex max-w-2xl items-start gap-3 text-sm leading-relaxed text-muted-foreground"><ShieldCheck className="mt-0.5 size-4 shrink-0 text-secondary" aria-hidden="true" />{city.transparency}</p>
@@ -111,9 +112,9 @@ export function LocalCityPageView({ city }: { city: LocalCityPage }) {
 
         <section className="border-t border-border bg-primary text-primary-foreground">
           <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
-            <h2 className="max-w-3xl font-display text-3xl font-bold leading-tight sm:text-5xl">Converse antes de organizar qualquer deslocamento.</h2>
-            <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-primary-foreground/75">A equipe explica a unidade de Araraquara, ouve a situação e informa o que precisa ser avaliado, sem garantia de vaga ou resultado.</p>
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row"><Button asChild size="lg" className="min-h-14 bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90"><a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" /> Falar pelo WhatsApp</a></Button><Button asChild size="lg" variant="outline" className="min-h-14 border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"><a href={phoneHref}><Phone aria-hidden="true" /> {phoneDisplay}</a></Button></div>
+            <h2 className="max-w-3xl font-display text-3xl font-bold leading-tight sm:text-5xl">Família de {city.name}, conte com apoio para o próximo passo.</h2>
+            <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-primary-foreground/75">O plantão de orientação 24h acolhe sua preocupação e ajuda a organizar avaliação, recepção e visitas à sede em Araraquara. A equipe conversa sobre disponibilidade e condições, com atenção às necessidades de cada pessoa.</p>
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row"><Button asChild size="lg" className="h-auto min-h-14 whitespace-normal py-4 bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90"><a href={cityWhatsappHref(city.name)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />{cityContactLabel(city.name)}</a></Button><Button asChild size="lg" variant="outline" className="min-h-14 border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"><a href={phoneHref}><Phone aria-hidden="true" /> {phoneDisplay}</a></Button></div>
           </div>
         </section>
       </main>

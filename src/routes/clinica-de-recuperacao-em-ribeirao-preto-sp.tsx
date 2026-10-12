@@ -1,3 +1,4 @@
+import { cityContactLabel, cityWhatsappHref, regionalCityAccess } from "@/lib/regional-city-access";
 import { cityEditorialFaqs, cityEditorialMetadata } from "@/lib/city-editorial";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -153,7 +154,7 @@ const faqs = [
   {
     question: "Existe clínica de reabilitação em Ribeirão Preto para dependência química?",
     answer:
-      "Ribeirão Preto possui uma rede pública de saúde mental e pode contar com instituições de tratamento na região. A Central não afirma ter unidade física na cidade: oferece orientação inicial e pode apresentar possibilidades conforme o caso e a disponibilidade.",
+      "Ribeirão Preto possui uma rede pública de saúde mental e pode contar com instituições de tratamento na região. A Central orienta famílias de Ribeirão Preto a partir da sede terapêutica em Araraquara, com avaliação individual e apoio para organizar o acolhimento.",
   },
   {
     question: "Como uma família de Ribeirão Preto pode procurar tratamento para dependência química?",
@@ -183,7 +184,7 @@ const faqs = [
   {
     question: "A Central possui unidade em Ribeirão Preto?",
     answer:
-      "Não há unidade física da Central em Ribeirão Preto. A única sede própria fica em Araraquara, na R. Alfredo Micelli, 70, com acolhimento voluntário conforme avaliação e disponibilidade. O acolhimento reúne suporte psicológico, acompanhamento médico e psiquiátrico integrado e enfermagem. Necessidades hospitalares recebem encaminhamento ao serviço habilitado adequado.",
+      "Famílias de Ribeirão Preto são orientadas pela Central a partir da única sede própria em Araraquara, na R. Alfredo Micelli, 70, com acolhimento voluntário conforme avaliação e disponibilidade. O acolhimento reúne suporte psicológico, acompanhamento médico e psiquiátrico integrado e enfermagem. Necessidades hospitalares recebem encaminhamento ao serviço habilitado adequado.",
   },
   {
     question: "Como entrar em contato com a Central de Acolhimento e Reabilitação?",
@@ -225,12 +226,12 @@ function OfficialRibeiraoPretoPage() {
                   Clínica de Reabilitação em Ribeirão Preto – SP
                 </h1>
                 <p className="mt-6 max-w-3xl text-base leading-8 text-muted-foreground sm:text-lg">
-                  Quando o álcool ou outras drogas começam a mudar a rotina de uma família, saber por onde começar pode ser difícil. A Central oferece orientação inicial a moradores de Ribeirão Preto e informações sobre possibilidades de tratamento e acolhimento.
+                  {regionalCityAccess["ribeirao-preto-sp"].welcome}
                 </p>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                  <Button asChild size="lg" className="min-h-14 bg-whatsapp px-6 text-whatsapp-foreground hover:bg-whatsapp/90">
-                    <a href={whatsappHref} target="_blank" rel="noopener noreferrer">
-                      <MessageCircle aria-hidden="true" /> Pedir orientação
+                  <Button asChild size="lg" className="min-h-14 bg-whatsapp px-6 text-whatsapp-foreground hover:bg-whatsapp/90 h-auto whitespace-normal py-4">
+                    <a href={cityWhatsappHref("Ribeirão Preto")} target="_blank" rel="noopener noreferrer">
+                      <MessageCircle aria-hidden="true" /> {cityContactLabel("Ribeirão Preto")}
                     </a>
                   </Button>
                   <Button asChild size="lg" variant="outline" className="min-h-14 border-border bg-glass px-6 text-foreground hover:bg-glass-strong hover:text-foreground">
@@ -248,7 +249,7 @@ function OfficialRibeiraoPretoPage() {
                 <ShieldCheck className="size-8 text-secondary" aria-hidden="true" />
                 <h2 className="mt-5 font-display text-xl font-bold">Acolhimento e orientação para sua família</h2>
                 <p className="mt-3 text-sm leading-7 text-muted-foreground">
-                  A Central não possui unidade física em Ribeirão Preto. O contato serve para compreender a situação e apresentar possibilidades conforme o caso e a disponibilidade da sede própria em Araraquara, sem garantia de vaga, internação ou resultado.
+                  A sede terapêutica da Central fica em Araraquara, com ligação regional pela SP-255. Famílias de Ribeirão Preto contam com orientação 24h para organizar avaliação, acolhimento e visitas, preservando vínculos e acompanhamento.
                 </p>
               </aside>
                </div>
@@ -361,7 +362,7 @@ function OfficialRibeiraoPretoPage() {
             <div>
               <p className="text-xs font-bold uppercase text-brand">Escuta e orientação</p>
               <h2 className="mt-3 font-display text-3xl font-bold leading-tight sm:text-4xl">Como a Central pode ajudar uma família de Ribeirão Preto</h2>
-              <p className="mt-5 leading-8 text-deep/70">O papel da Central é ajudar a organizar informações e apresentar possibilidades com transparência. Não há atendimento presencial da Central em Ribeirão Preto nem garantia antecipada de acolhimento.</p>
+              <p className="mt-5 leading-8 text-deep/70">Sua família conta com escuta e orientação para organizar os próximos passos a partir de Ribeirão Preto. A equipe apresenta a proposta de acolhimento voluntário na sede em Araraquara, combina a avaliação e ajuda a planejar o deslocamento e as visitas.</p>
               <Link to="/familia" className="mt-6 inline-flex items-center gap-2 font-semibold text-brand underline underline-offset-4">
                 Veja orientações para famílias <ArrowRight className="size-4" aria-hidden="true" />
               </Link>
@@ -437,8 +438,8 @@ function OfficialRibeiraoPretoPage() {
               <p className="mt-5 leading-8 text-deep/70">Entre em contato com a Central de Acolhimento e Reabilitação para conversar sobre a situação e conhecer as possibilidades de tratamento.</p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-              <Button asChild size="lg" className="min-h-14 bg-whatsapp px-6 text-whatsapp-foreground hover:bg-whatsapp/90">
-                <a href={whatsappHref} target="_blank" rel="noopener noreferrer"><HeartHandshake aria-hidden="true" /> Falar com a Central</a>
+              <Button asChild size="lg" className="min-h-14 bg-whatsapp px-6 text-whatsapp-foreground hover:bg-whatsapp/90 h-auto whitespace-normal py-4">
+                <a href={cityWhatsappHref("Ribeirão Preto")} target="_blank" rel="noopener noreferrer"><HeartHandshake aria-hidden="true" /> {cityContactLabel("Ribeirão Preto")}</a>
               </Button>
               <Button asChild size="lg" variant="outline" className="min-h-14 border-deep/20 bg-transparent px-6 text-deep">
                 <a href={phoneHref}><Phone aria-hidden="true" /> {phoneDisplay}</a>

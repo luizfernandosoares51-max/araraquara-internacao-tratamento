@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Atualizar as 14 páginas de cidades com acolhimento regional positivo, referências rodoviárias específicas, FAQs locais e contatos por município; 47 testes aprovados e 42 visitas em 1280/390/320 confirmam H1 único, metadados próprios, canonical, perguntas iguais ao schema e ausência de overflow. Estimativas institucionais indicativas, sede única, transporte agendado e urgência pública preservados; sem publicação.
+
 - [x] Padronizar o cabeçalho global com quatro menus suspensos e links diretos; 22 links no HTML inicial das 56 páginas públicas, 50 testes aprovados e navegação/atalhos conferidos em computador e celulares de 390/320px. Rótulos de remoção, feminino e reembolso preservam os limites confirmados; sem publicação.
 
 - [x] Revisar conteúdo público e catálogos para apresentar equipe multidisciplinar confirmada, orientação e suporte de agendamento 24h em tom acolhedor; transporte agendado, direitos, encaminhamento hospitalar e condições financeiras preservados. 116 testes aprovados e nove páginas conferidas na prévia, com metadados, equipe e WhatsApp oficial; sem publicação.

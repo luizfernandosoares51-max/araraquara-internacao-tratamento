@@ -1,3 +1,5 @@
+import { regionalAccessFaqs, regionalCityAccess } from "./regional-city-access";
+
 export type EditorialFaq = { question: string; answer: string };
 export type CityEditorial = {
   name: string;
@@ -13,40 +15,40 @@ export type CityEditorial = {
 export const cityEditorial: Record<string, CityEditorial> = {
   "sao-carlos-sp": {
     name: "São Carlos", focus: "estudos, isolamento e convivência terapêutica",
-    access: "Para a saída de São Carlos, a Washington Luís (SP-310) é uma referência regional de acesso a Araraquara. Confira o percurso completo até a R. Alfredo Micelli, 70, e as condições da via antes de sair; tempo de viagem varia com origem, trânsito e paradas.",
-    preparation: "Se a pessoa estuda ou trabalha em São Carlos, leve à conversa as mudanças em sono, frequência às aulas, concentração e relações. Combine com a equipe como organizar visitas sem assumir um tempo fixo de deslocamento ou uma frequência já autorizada.",
+    access: regionalCityAccess["sao-carlos-sp"].route,
+    preparation: regionalCityAccess["sao-carlos-sp"].visits,
     articleTitle: "Do isolamento ao convívio terapêutico: estudos, apoio psicológico e 12 Passos",
     introduction: "Na rotina de estudos e trabalho, afastamento de amigos, noites sem dormir e uso de substâncias para manter o rendimento podem passar despercebidos. Para famílias de São Carlos, o ponto de partida é entender o que mudou, sem atribuir o consumo à universidade ou à profissão e sem concluir um diagnóstico pela internet.",
     sections: [
       { heading: "Pressão por desempenho não deve esconder prejuízos", paragraphs: ["Álcool, estimulantes e substâncias sintéticas exigem uma conversa sobre frequência, contexto e consequências, não apenas sobre o nome da substância. Pergunte se há perda de sono, faltas, conflitos ou dificuldade de interromper o uso. Medicamentos prescritos também devem ser relatados aos profissionais, sem suspensão por conta própria.", "A família pode descrever episódios concretos e ouvir a pessoa em um momento seguro. Atribuir tudo à falta de disciplina ou ao ambiente acadêmico pode fechar o diálogo. Quando houver confusão intensa, intoxicação ou risco à vida, não organize uma viagem para acolhimento: procure urgência ou acione o SAMU 192."] },
-      { heading: "Convivência e apoio psicológico têm papéis diferentes", paragraphs: ["A proposta da Central em Araraquara inclui apoio psicológico com Margarete Vasques (CRP 06/130268), conscientização em 12 Passos e convivência terapêutica. Compartilhar uma rotina pode criar oportunidades de diálogo e participação, mas não substitui avaliação individual nem garante interrupção do consumo.", "Trabalhar pensamentos, emoções e respostas a situações difíceis pode integrar o cuidado psicológico conforme avaliação profissional. Esta página não anuncia terapia cognitivo-comportamental como modalidade confirmada da Central. Os 12 Passos também não são apresentados como mecanismo que assegura recuperação para todas as pessoas."] },
-      { heading: "Preparar o retorno à vida em São Carlos", paragraphs: ["Se houver acolhimento voluntário indicado, a família deve conversar sobre vínculos, estudos, trabalho e acompanhamento posterior desde o planejamento. Distância física não apaga gatilhos: é preciso identificar situações de risco e pensar em apoio quando a pessoa retomar sua rotina.", "Combine visitas com antecedência e pergunte como compartilhar informações relevantes respeitando a privacidade. O afastamento de um contexto pode fazer sentido para determinada pessoa, mas não é automaticamente melhor do que o cuidado territorial oferecido pela rede de São Carlos."] },
+      { heading: "Convivência e apoio psicológico têm papéis diferentes", paragraphs: ["A proposta da Central em Araraquara inclui apoio psicológico com Margarete Vasques (CRP 06/130268), conscientização em 12 Passos e convivência terapêutica. Compartilhar uma rotina pode criar oportunidades de diálogo e participação, mas não substitui avaliação individual nem garante interrupção do consumo.", "Trabalhar pensamentos, emoções e respostas a situações difíceis pode integrar o cuidado psicológico conforme avaliação profissional. A terapia cognitivo-comportamental é uma referência educativa; as práticas confirmadas incluem apoio psicológico, 12 Passos e prevenção à recaída, com objetivos individualizados."] },
+      { heading: "Preparar o retorno à vida em São Carlos", paragraphs: ["Se houver acolhimento voluntário indicado, a família deve conversar sobre vínculos, estudos, trabalho e acompanhamento posterior desde o planejamento. Uma mudança de ambiente pode reduzir a exposição a contextos associados ao consumo, enquanto o plano de prevenção à recaída prepara apoio para a retomada da rotina.", "Combine visitas com antecedência e pergunte como compartilhar informações relevantes respeitando a privacidade. A mudança temporária de contexto pode integrar um plano que também preserve os cuidados e os vínculos de apoio em São Carlos."] },
     ],
     faqs: [
       { question: "Como organizar visitas saindo de São Carlos?", answer: "Fale com a equipe pelo (16) 99765-4579, confirme dia e horário de visita e planeje o percurso até a sede em Araraquara. A SP-310 é uma referência regional, mas não há tempo de viagem ou frequência de visitas garantidos." },
-      { question: "Acolhimento perto de São Carlos elimina gatilhos do consumo?", answer: "Não. Mudar de ambiente pode ser considerado na avaliação, mas não elimina fatores emocionais, sociais ou situações de risco. Convivência, apoio psicológico, prevenção à recaída e continuidade do cuidado precisam ser planejados individualmente." },
+      { question: "Como a mudança de ambiente pode apoiar o cuidado de quem vem de São Carlos?", answer: "Uma mudança de ambiente pode reduzir a exposição a contextos associados ao consumo. Na sede em Araraquara, convivência, apoio psicológico e prevenção à recaída integram o cuidado individual, mantendo os vínculos familiares e a continuidade em São Carlos, sem garantia de resultado." },
     ],
   },
   "americo-brasiliense-sp": {
     name: "Américo Brasiliense", focus: "sinais iniciais e diálogo familiar",
-    access: "A proximidade entre Américo Brasiliense e Araraquara permite planejar o acesso regional à sede. Confira no mapa a saída do seu bairro e o percurso até a R. Alfredo Micelli, 70; distância curta não garante chegada rápida, vaga ou atendimento de emergência.",
-    preparation: "Antes de solicitar transporte ou visita, confirme a necessidade com a equipe operacional. Registre quando mudanças de comportamento começaram e quais riscos estão presentes; em emergência, procure a rede de urgência, não o transporte agendado da Central.",
+    access: regionalCityAccess["americo-brasiliense-sp"].route,
+    preparation: regionalCityAccess["americo-brasiliense-sp"].visits,
     articleTitle: "Acolhimento precoce: reconhecer mudanças de comportamento sem rotular o familiar",
-    introduction: "Para quem mora em Américo Brasiliense, a proximidade com Araraquara pode facilitar o contato, mas não dispensa uma decisão cuidadosa. Buscar orientação cedo significa observar mudanças e avaliar necessidades; não significa que qualquer alteração de humor exija acolhimento residencial.",
+    introduction: "Para quem mora em Américo Brasiliense, a proximidade com Araraquara facilita o contato e a participação familiar. Buscar orientação cedo ajuda a compreender mudanças de comportamento e escolher, com os profissionais, o cuidado adequado.",
     sections: [
       { heading: "Observar uma sequência, não um episódio isolado", paragraphs: ["Sono desorganizado, afastamento, conflitos e dificuldades com compromissos podem ter causas diferentes. Anote desde quando ocorrem, em que situações aparecem e quais prejuízos se repetem. Se o uso de álcool ou outras drogas é conhecido, relate o que sabe sem preencher lacunas com suspeitas.", "Uma conversa inicial pode começar com uma observação concreta e uma pergunta aberta: o que está acontecendo e que ajuda a pessoa aceitaria? Evite interrogatórios, ameaças ou exposição a vizinhos. A família não precisa investigar a vida inteira do familiar para procurar orientação."] },
-      { heading: "A proximidade não transforma orientação em pronto atendimento", paragraphs: ["O CAPS Doçura e os canais de Saúde de Américo Brasiliense são referências públicas independentes da Central. A família pode confirmar com o município a porta adequada, enquanto uma conversa privada esclarece a proposta de acolhimento voluntário em Araraquara.", "A Central informa remoção e translado regional por agendamento, conforme condições e disponibilidade. Isso não equivale a resgate imediato. Perda de consciência, convulsão, intoxicação grave ou risco à vida exigem urgência pública e SAMU 192, mesmo quando a sede fica em município próximo."] },
-      { heading: "Participação familiar com combinados claros", paragraphs: ["Ao considerar acolhimento voluntário, pergunte sobre avaliação, rotina, consentimento, condições particulares e visitas. A frequência deve ser combinada com a equipe conforme o plano de cuidado; proximidade geográfica não autoriza visitas semanais automaticamente.", "A família também precisa de apoio para estabelecer limites e dividir responsabilidades. Procure uma orientação que ajude a diferenciar escuta, proteção e controle excessivo. Nenhuma abordagem precoce garante que a pessoa aceitará ajuda ou que o consumo deixará de causar problemas."] },
+      { heading: "Proximidade e orientação para escolher a porta de cuidado", paragraphs: ["O CAPS Doçura e os canais de Saúde de Américo Brasiliense são referências públicas independentes da Central. A família pode confirmar com o município a porta adequada, enquanto uma conversa privada esclarece a proposta de acolhimento voluntário em Araraquara.", "A Central informa remoção e translado regional por agendamento, conforme condições e disponibilidade. Isso não equivale a resgate imediato. Perda de consciência, convulsão, intoxicação grave ou risco à vida exigem urgência pública e SAMU 192, mesmo quando a sede fica em município próximo."] },
+      { heading: "Participação familiar com combinados claros", paragraphs: ["Ao considerar acolhimento voluntário, pergunte sobre avaliação, rotina, consentimento, condições particulares e visitas. A frequência deve ser combinada com a equipe conforme o plano de cuidado; a proximidade geográfica ajuda a planejar encontros nas datas acordadas.", "A família também merece apoio para estabelecer limites e dividir responsabilidades. A orientação ajuda a construir uma abordagem respeitosa, com escuta, proteção e atenção às necessidades individuais."] },
     ],
     faqs: [
-      { question: "Há transporte imediato para famílias de Américo Brasiliense?", answer: "A Central informa suporte regional de remoção e translado por agendamento, sujeito a avaliação, condições e disponibilidade. Não é serviço de emergência nem há promessa de chegada imediata. Em risco à vida, acione o SAMU 192." },
-      { question: "Quem mora em Américo Brasiliense pode visitar semanalmente?", answer: "A frequência de visitas não é automática. Dias e horários precisam ser agendados com a equipe e alinhados ao cronograma terapêutico e às necessidades individuais." },
+      { question: "Como organizar transporte para acolhimento saindo de Américo Brasiliense?", answer: "A equipe orienta a organização do transporte regional, combina o local de saída em Américo Brasiliense e confirma avaliação, condições e agendamento. O plantão de orientação funciona 24h; em risco à vida, o atendimento de urgência ou SAMU 192 tem prioridade." },
+      { question: "Como combinar visitas regulares de familiares de Américo Brasiliense?", answer: "A proximidade facilita combinar visitas regulares. A equipe e a família definem dias e horários conforme o cronograma terapêutico e as necessidades individuais." },
     ],
   },
   "matao-sp": {
     name: "Matão", focus: "álcool, trabalho e sigilo profissional",
-    access: "Para famílias de Matão, a Washington Luís (SP-310) é uma referência de acesso regional a Araraquara. Planeje a saída conforme seu bairro e confirme a chegada à R. Alfredo Micelli, 70, sem contar com um tempo fixo de viagem.",
-    preparation: "Converse sobre turnos de trabalho, responsabilidades familiares e episódios de risco, sem exigir documentos profissionais que não foram solicitados. Confirme como a equipe trata informações pessoais e como a família pode participar da orientação.",
+    access: regionalCityAccess["matao-sp"].route,
+    preparation: regionalCityAccess["matao-sp"].visits,
     articleTitle: "Álcool no trabalho e na família: reconhecer prejuízos que a rotina pode esconder",
     introduction: "Uma pessoa pode manter emprego e compromissos enquanto o consumo de álcool causa perdas em outras áreas. Para famílias de Matão, olhar apenas para a presença no trabalho pode adiar a busca de ajuda. O termo popular alcoolismo funcional não substitui diagnóstico nem significa consumo seguro.",
     sections: [
@@ -61,24 +63,24 @@ export const cityEditorial: Record<string, CityEditorial> = {
   },
   "ibate-sp": {
     name: "Ibaté", focus: "limites familiares e rede de apoio",
-    access: "O corredor da Washington Luís (SP-310) é uma referência para planejar o deslocamento de Ibaté a Araraquara. Consulte o percurso até a sede e confirme o horário combinado; não há duração fixa de viagem.",
-    preparation: "A família pode começar pelo Ambulatório de Saúde Mental e pelos canais municipais de Ibaté, ou consultar separadamente a Central. Leve dúvidas sobre limites, desgaste e participação, sem presumir que a ausência de uma modalidade publicada represente falta de toda a rede local.",
+    access: regionalCityAccess["ibate-sp"].route,
+    preparation: regionalCityAccess["ibate-sp"].visits,
     articleTitle: "Apoio à família e codependência: cuidar de quem acompanha sem atribuir culpa",
     introduction: "Em Ibaté, a busca por orientação pode envolver tanto a pessoa que usa substâncias quanto familiares sobrecarregados. O termo codependência é usado para discutir relações de cuidado e controle, mas não deve virar um rótulo ou responsabilizar a família pelo consumo de outra pessoa.",
     sections: [
       { heading: "Apoiar não é assumir todas as consequências", paragraphs: ["Exaustão, vigilância constante e medo de dizer não podem sinalizar que a família também precisa conversar com um profissional. Descreva o que está acontecendo e o impacto em sono, finanças e relações. Isso não equivale a diagnóstico de codependência nem significa falta de amor.", "Limites podem envolver proteger recursos, recusar situações inseguras e definir quem participa de cada decisão. Eles precisam ser realistas e comunicados sem humilhação. Não use privação de cuidados, ameaças ou contenção improvisada para tentar controlar o consumo."] },
-      { heading: "A rede de Ibaté e a opção em Araraquara são diferentes", paragraphs: ["As referências municipais publicadas incluem Ambulatório de Saúde Mental e Secretaria de Saúde. Confirme diretamente o fluxo atual e qual serviço avalia necessidades relacionadas a álcool e outras drogas. Não se conclui que Ibaté não dispõe de cuidado apenas porque uma classificação de CAPS não foi confirmada.", "Na Central, o contato explica a única sede em Araraquara e as condições de acolhimento voluntário. A proximidade pode facilitar visitas agendadas, mas não substitui o cuidado territorial nem permite acolhimento sem avaliação e disponibilidade."] },
+      { heading: "Apoio em Ibaté e acolhimento regional em Araraquara", paragraphs: ["As referências municipais publicadas incluem Ambulatório de Saúde Mental e Secretaria de Saúde. Confirme diretamente o fluxo atual e qual serviço avalia necessidades relacionadas a álcool e outras drogas. A Secretaria Municipal de Saúde orienta qual porta de atendimento corresponde à necessidade apresentada.", "Na Central, o contato explica a única sede em Araraquara e as condições de acolhimento voluntário. A proximidade facilita visitas agendadas e permite manter os cuidados territoriais, com avaliação e condições de acolhimento combinadas."] },
       { heading: "Preservar autonomia e distribuir responsabilidades", paragraphs: ["Pergunte quais decisões cabem à pessoa acolhida, quais informações a família pode oferecer e como será a comunicação durante o cuidado. Uma rede de apoio não precisa concentrar toda a responsabilidade em um único familiar.", "Organize também o apoio para quem permanece em Ibaté. Buscar orientação própria pode ajudar a sustentar limites e reconhecer riscos. Em emergência, a prioridade é atendimento público de urgência; a família não deve tentar resolver uma crise clínica apenas pelo diálogo ou por deslocamento à Central."] },
     ],
     faqs: [
       { question: "Familiares de Ibaté podem buscar orientação sem decidir pelo acolhimento?", answer: "Sim. A conversa inicial pode esclarecer dúvidas sobre limites, riscos e próximos passos. Não obriga a contratar acolhimento nem permite diagnosticar a pessoa ou a família pela internet." },
-      { question: "Buscar Araraquara significa abandonar a rede de Ibaté?", answer: "Não. A escolha deve considerar avaliação individual e continuidade. O Ambulatório de Saúde Mental e os canais municipais são independentes da Central e podem orientar o acesso público local." },
+      { question: "Como manter o apoio da rede de Ibaté durante o acolhimento?", answer: "Não. A escolha deve considerar avaliação individual e continuidade. O Ambulatório de Saúde Mental e os canais municipais são independentes da Central e podem orientar o acesso público local." },
     ],
   },
   "itapolis-sp": {
     name: "Itápolis", focus: "rotina, laborterapia e reinserção social",
-    access: "A saída de Itápolis pode exigir combinação de vias regionais até Araraquara. Confirme o itinerário completo no mapa oficial da sede antes de sair, incluindo acessos locais, paradas e condições de trânsito, sem usar uma estimativa como compromisso de chegada.",
-    preparation: "Ao planejar acolhimento fora de Itápolis, pergunte sobre avaliação médica quando necessária, rotina voluntária, atividades, custos e continuidade. A discrição no contato não equivale a anonimato ou sigilo absoluto.",
+    access: regionalCityAccess["itapolis-sp"].route,
+    preparation: regionalCityAccess["itapolis-sp"].visits,
     articleTitle: "Laborterapia, rotina equilibrada e reinserção social: o que não é desintoxicação médica",
     introduction: "Famílias de Itápolis podem procurar um ambiente diferente da rotina habitual para compreender possibilidades de cuidado. Essa escolha precisa separar organização do cotidiano de tratamento clínico: atividades, alimentação e repouso não são uma desintoxicação natural nem substituem avaliação médica.",
     sections: [
@@ -93,8 +95,8 @@ export const cityEditorial: Record<string, CityEditorial> = {
   },
   "jaboticabal-sp": {
     name: "Jaboticabal", focus: "uso de substâncias, ansiedade e depressão",
-    access: "Ao sair de Jaboticabal, confira as ligações regionais e o acesso final à R. Alfredo Micelli, 70, em Araraquara. Planeje o percurso com a equipe antes de qualquer acolhimento, sem presumir tempo fixo ou transporte já disponível.",
-    preparation: "Relate sintomas emocionais, substâncias e medicamentos conhecidos, tratamentos anteriores e riscos atuais. Pergunte qual cuidado precisa de avaliação médica e qual pode ser considerado no suporte psicossocial, sem presumir atendimento a menores ou uma especialidade não confirmada.",
+    access: regionalCityAccess["jaboticabal-sp"].route,
+    preparation: regionalCityAccess["jaboticabal-sp"].visits,
     articleTitle: "Uso de substâncias, ansiedade e depressão: por que a avaliação precisa ser integrada",
     introduction: "Para famílias de Jaboticabal, mudanças de humor e consumo podem gerar uma dúvida difícil: o que começou primeiro? Uma página não responde essa pergunta clinicamente. O importante é apresentar o conjunto de sintomas para avaliação, sem reduzir tudo à droga ou tratar ansiedade e depressão como explicações automáticas.",
     sections: [
@@ -109,30 +111,30 @@ export const cityEditorial: Record<string, CityEditorial> = {
   },
   "descalvado-sp": {
     name: "Descalvado", focus: "gatilhos emocionais e prevenção à recaída",
-    access: "Para a viagem de Descalvado a Araraquara, confira o percurso rodoviário e o acesso à sede no mapa antes de sair. A escolha de vias e o tempo dependem do ponto de partida e das condições atuais; confirme também o horário de recepção.",
-    preparation: "Leve informações sobre situações que precederam o consumo, apoios existentes e tentativas anteriores. Um ambiente diferente não deve ser tratado como cura nem como substituição dos serviços de Descalvado.",
+    access: regionalCityAccess["descalvado-sp"].route,
+    preparation: regionalCityAccess["descalvado-sp"].visits,
     articleTitle: "Prevenção à recaída: reconhecer gatilhos emocionais e construir respostas possíveis",
     introduction: "Famílias de Descalvado podem procurar tranquilidade e uma rotina diferente ao considerar acolhimento em Araraquara. Porém, prevenção à recaída não depende apenas de afastamento: exige compreender riscos e construir apoio que continue existindo quando a pessoa retornar ao seu cotidiano.",
     sections: [
       { heading: "Gatilhos são pessoais, não uma lista universal", paragraphs: ["Conflitos, solidão, celebrações, cansaço ou contatos associados ao uso podem ser relevantes para determinadas pessoas. Anote situações que ocorreram antes de episódios de consumo, sem presumir que toda emoção difícil levará a recaída.", "A avaliação pode explorar também sono, saúde, responsabilidades e acesso a apoio. A família contribui com fatos, mas não precisa vigiar todas as emoções. O objetivo é compreender necessidades e possibilidades, não responsabilizar alguém por não controlar o familiar."] },
       { heading: "Construir alternativas e procurar ajuda cedo", paragraphs: ["O plano de prevenção à recaída integra a proposta confirmada da Central, junto ao apoio psicológico, 12 Passos e convivência. Pergunte como o plano considera sinais de dificuldade, pessoas de apoio e necessidades de acompanhamento. Nenhuma técnica é uma garantia de que o consumo não voltará.", "Se houver retomada do uso, procure avaliação sem humilhar ou abandonar a pessoa. Recaída não deve ser tratada como falta de caráter, mas também não elimina a necessidade de revisar riscos e limites. Intoxicação ou abstinência grave exigem assistência médica, não apenas uma conversa sobre hábitos."] },
-      { heading: "O retorno a Descalvado precisa de continuidade", paragraphs: ["Durante o planejamento, converse sobre acompanhamento no território, contatos de apoio e responsabilidades que serão retomadas. Não interrompa cuidados anteriores sem orientação dos profissionais. A rede municipal e o CAPS de Descalvado têm atribuições próprias que devem ser confirmadas.", "Visitas à sede em Araraquara são agendadas e podem ajudar a família a compreender o processo conforme orientação. Não se anuncia ambiente campestre como fato sobre a unidade: imagens conceituais não comprovam instalações ou características físicas."] },
+      { heading: "O retorno a Descalvado precisa de continuidade", paragraphs: ["Durante o planejamento, converse sobre acompanhamento no território, contatos de apoio e responsabilidades que serão retomadas. Não interrompa cuidados anteriores sem orientação dos profissionais. A rede municipal e o CAPS de Descalvado têm atribuições próprias que devem ser confirmadas.", "Visitas agendadas à sede em Araraquara permitem à família acompanhar o processo. A instituição informa ambiente reservado e área verde, integrados à rotina de cuidado; as imagens são conceituais e não retratam as instalações reais."] },
     ],
     faqs: [
-      { question: "Ficar fora de Descalvado impede recaídas?", answer: "Não. A mudança de ambiente pode ser considerada individualmente, mas não elimina fatores de risco. Prevenção à recaída, apoio e continuidade precisam de planejamento, sem garantia de resultado." },
+      { question: "Como o ambiente terapêutico pode apoiar quem vem de Descalvado?", answer: "O ambiente reservado e a rotina de cuidado podem ajudar a trabalhar situações associadas ao consumo. Apoio psicológico, prevenção à recaída e continuidade em Descalvado são planejados individualmente, sem garantia de resultado." },
       { question: "O que relatar depois de uma retomada do consumo?", answer: "Informe substâncias conhecidas, situações recentes, sintomas, riscos e tratamentos em andamento. Procure avaliação sem acusação; intoxicação ou abstinência grave exige urgência médica." },
     ],
   },
   "porto-ferreira-sp": {
     name: "Porto Ferreira", focus: "espiritualidade, convivência e autoestima",
-    access: "A viagem de Porto Ferreira até Araraquara deve ser planejada com o itinerário completo e os acessos locais conferidos. Use o mapa oficial da sede, combine o horário e confirme condições antes de solicitar transporte.",
-    preparation: "Pergunte como as atividades em grupo e a espiritualidade ecumênica respeitam crenças e escolhas individuais. Conheça a responsabilidade técnica de Margarete Vasques (CRP 06/130268) sem interpretar o registro informado como certificação de toda a instituição.",
+    access: regionalCityAccess["porto-ferreira-sp"].route,
+    preparation: regionalCityAccess["porto-ferreira-sp"].visits,
     articleTitle: "Espiritualidade ecumênica e convivência em grupo: apoio sem imposição ou promessa",
     introduction: "Quem busca orientação a partir de Porto Ferreira pode querer entender como convivência e espiritualidade aparecem na rotina da Central. A proposta precisa ser explicada com clareza, respeitando a pessoa e sem confundir participação em atividades com garantia de autoestima ou recuperação.",
     sections: [
       { heading: "Crenças não substituem cuidado em saúde", paragraphs: ["A instituição informa espiritualidade ecumênica no cronograma, junto a 12 Passos e atividades de apoio. A família deve perguntar sobre a participação e a adaptação às convicções da pessoa. Não se presume adesão religiosa nem se apresenta falta de fé como causa de consumo.", "Atividades espirituais não substituem avaliação psicológica ou médica. Sintomas, prescrições e necessidades clínicas continuam exigindo profissionais responsáveis. O acolhimento voluntário da Central não é internação hospitalar, e conta com acompanhamento médico e psiquiátrico integrado e enfermagem, com encaminhamento hospitalar quando indicado."] },
       { heading: "Um grupo pode apoiar, mas não deve expor", paragraphs: ["Convivência e psicoterapia em grupo fazem parte da rotina informada. Pergunte sobre combinados, respeito à privacidade e formas de lidar com conflitos. Compartilhar experiências não significa obrigação de revelar toda a história pessoal a outros participantes.", "Reconstruir confiança pode envolver pequenos compromissos, escuta e revisão de expectativas. Não há promessa de resgate da autoestima em prazo definido. Cada pessoa tem ritmo e necessidades próprios, que precisam ser considerados no plano de cuidado."] },
-      { heading: "A família mantém vínculos com Porto Ferreira", paragraphs: ["Ao considerar a sede em Araraquara, organize visitas por agendamento e pergunte como acompanhar os próximos passos respeitando consentimento e sigilo profissional. Não confunda informação institucional sobre a psicóloga com verificação independente de credenciais.", "A rede de Porto Ferreira pode continuar relevante para avaliação e acompanhamento público. Os serviços municipais citados nesta página não endossam a Central. Compare propostas, condições particulares e limites com atenção, sem escolher apenas pelo ambiente ou pelas atividades em grupo."] },
+      { heading: "A família mantém vínculos com Porto Ferreira", paragraphs: ["Ao considerar a sede em Araraquara, organize visitas por agendamento e pergunte como acompanhar os próximos passos respeitando consentimento e sigilo profissional. Conheça as funções da equipe e esclareça suas dúvidas na página de transparência.", "A rede de Porto Ferreira pode continuar relevante para avaliação e acompanhamento público. Os serviços municipais citados nesta página não endossam a Central. Converse sobre a proposta, as condições particulares e a participação nos grupos para construir uma escolha informada e acolhedora."] },
     ],
     faqs: [
       { question: "A espiritualidade na Central substitui atendimento psicológico?", answer: "Não. A espiritualidade ecumênica é uma atividade informada da rotina. O apoio psicológico com Margarete Vasques (CRP 06/130268) e as necessidades médicas têm papéis distintos; crenças não substituem cuidados em saúde." },
@@ -141,8 +143,8 @@ export const cityEditorial: Record<string, CityEditorial> = {
   },
   "taquaritinga-sp": {
     name: "Taquaritinga", focus: "direitos e internação involuntária",
-    access: "Antes de viajar de Taquaritinga a Araraquara, confirme o itinerário regional e os acessos até a sede. A localização no interior não torna a opção automaticamente superior nem dispensa avaliação; tempo e transporte precisam ser confirmados.",
-    preparation: "Separe perguntas sobre consentimento, direitos, avaliação médica e limites da Central. Em crise, procure o atendimento de urgência; não tente organizar internação por conta própria nem use a viagem como substituto de assistência clínica.",
+    access: regionalCityAccess["taquaritinga-sp"].route,
+    preparation: regionalCityAccess["taquaritinga-sp"].visits,
     articleTitle: "Internação involuntária e direitos: o que a família precisa distinguir antes de decidir",
     introduction: "Para famílias de Taquaritinga, uma recusa de ajuda pode gerar medo e pedidos de internação imediata. A legislação não transforma a vontade da família em autorização médica. É essencial separar acolhimento voluntário, cuidado hospitalar involuntário e determinação judicial.",
     sections: [
@@ -157,8 +159,8 @@ export const cityEditorial: Record<string, CityEditorial> = {
   },
   "ibitinga-sp": {
     name: "Ibitinga", focus: "negação e comunicação familiar",
-    access: "Ao organizar a viagem de Ibitinga a Araraquara, confira o percurso completo no mapa e o horário combinado com a equipe. Saída do bairro, vias regionais e paradas influenciam a duração; não há tempo fixo de chegada.",
-    preparation: "Prepare uma descrição curta de fatos e uma pergunta de cada vez. Se o familiar estiver intoxicado ou houver risco, adie o confronto e procure assistência adequada. A conversa inicial da Central não exige decisão imediata sobre acolhimento.",
+    access: regionalCityAccess["ibitinga-sp"].route,
+    preparation: regionalCityAccess["ibitinga-sp"].visits,
     articleTitle: "Como conversar com um familiar que nega o problema: comunicação assertiva e acolhimento",
     introduction: "Famílias de Ibitinga que conciliam trabalho e cuidado podem se sentir pressionadas a resolver tudo em uma única conversa. Quando a pessoa não reconhece prejuízos, a abordagem precisa priorizar segurança e fatos. Nenhuma frase ou técnica garante aceitação de ajuda.",
     sections: [
@@ -167,14 +169,14 @@ export const cityEditorial: Record<string, CityEditorial> = {
       { heading: "Limites e rede de apoio sustentam a conversa", paragraphs: ["Combine responsabilidades realistas e preserve a segurança financeira e física da família. Não confunda limite com punição ou retirada de cuidados essenciais. Se a conversa não avançar, procure orientação para planejar outra abordagem em vez de aumentar ameaças.", "O SAMS é uma referência para confirmar os serviços públicos de Ibitinga. O cuidado local e a consulta privada à Central são independentes. Ao considerar viagem, visitas ou transporte, confirme condições e disponibilidade; situações de crise não devem esperar deslocamento regional agendado."] },
     ],
     faqs: [
-      { question: "A Central garante convencer um familiar de Ibitinga a aceitar ajuda?", answer: "Não. A orientação pode ajudar a organizar fatos, limites e uma conversa segura, mas não garante adesão. Acolhimento voluntário depende de avaliação e das condições aplicáveis." },
+      { question: "Como a orientação ajuda famílias de Ibitinga a conversar sobre acolhimento?", answer: "A orientação ajuda a organizar fatos, limites e uma conversa segura, com respeito à autonomia. A equipe apoia os próximos passos e avalia as possibilidades de acolhimento voluntário; a decisão e a adesão são individuais." },
       { question: "É melhor conversar durante a intoxicação para mostrar os prejuízos?", answer: "Não é um momento seguro para confronto. Priorize proteção e procure avaliação adequada se houver risco. Emergências devem ser encaminhadas à urgência ou SAMU 192." },
     ],
   },
   "rio-claro-sp": {
     name: "Rio Claro", focus: "12 Passos, custos e continuidade do cuidado",
-    access: "A Washington Luís (SP-310) é uma referência de ligação regional para famílias de Rio Claro que consideram a sede em Araraquara. Confira o percurso completo e as condições da viagem antes de combinar visita ou acolhimento; não se promete duração fixa.",
-    preparation: "Antes de contratar, esclareça o que está incluído no acolhimento particular, documentação administrativa, visitas e condições de continuidade. Consulte sua operadora sobre reembolso sem interpretar orientação financeira como aceitação de convênio.",
+    access: regionalCityAccess["rio-claro-sp"].route,
+    preparation: regionalCityAccess["rio-claro-sp"].visits,
     articleTitle: "12 Passos, acolhimento e continuidade: perguntas da admissão ao retorno a Rio Claro",
     introduction: "A decisão de uma família de Rio Claro não deve se limitar a encontrar um nome de clínica ou um valor. É importante compreender o papel dos 12 Passos, da avaliação, da rotina e do acompanhamento posterior, mantendo clara a diferença entre acolhimento psicossocial e internação médica.",
     sections: [
@@ -189,30 +191,30 @@ export const cityEditorial: Record<string, CityEditorial> = {
   },
   "ribeirao-preto-sp": {
     name: "Ribeirão Preto", focus: "mudança de ambiente e preservação de vínculos",
-    access: "Para sair de Ribeirão Preto, confira as ligações rodoviárias até Araraquara e o acesso final à sede. Não presuma que um corredor único ou um tempo estimado sirva para todos os bairros; use o mapa e confirme o horário com a equipe.",
-    preparation: "Compare o cuidado territorial disponível em Ribeirão Preto com a proposta voluntária em Araraquara. Pergunte como manter vínculos seguros e acompanhamentos existentes; distância não deve isolar a pessoa de sua rede de proteção.",
+    access: regionalCityAccess["ribeirao-preto-sp"].route,
+    preparation: regionalCityAccess["ribeirao-preto-sp"].visits,
     articleTitle: "Mudar de ambiente sem romper vínculos: o que o afastamento geográfico pode e não pode fazer",
     introduction: "Uma família de Ribeirão Preto pode considerar acolhimento fora do município quando a rotina parece ligada a episódios recorrentes de consumo. Essa escolha não equivale a fugir de uma cidade nem assegura cura. O cuidado precisa preservar autonomia, apoio e acesso aos serviços necessários.",
     sections: [
-      { heading: "Localização não é indicação terapêutica", paragraphs: ["O ritmo de trabalho, relações e acesso a substâncias podem ser discutidos na avaliação, mas não definem que toda pessoa deva sair de Ribeirão Preto. A rede municipal de saúde mental e álcool e drogas oferece caminhos próprios que precisam ser considerados conforme a necessidade.", "A Central tem única sede em Araraquara e oferece acolhimento voluntário psicossocial. O acompanhamento médico e psiquiátrico integrado e a enfermagem complementam o cuidado; necessidades hospitalares recebem encaminhamento adequado. Não se afirma que o ambiente seja protegido de todo risco ou que afastar contatos produza recuperação garantida."] },
-      { heading: "Afastar riscos não significa cortar apoio", paragraphs: ["Ao planejar uma mudança temporária de rotina, identifique com os profissionais quais vínculos ajudam e quais situações precisam de limites. A família não deve presumir que proibir toda comunicação seja parte do cuidado. Direitos, consentimento e privacidade permanecem importantes.", "Visitas devem ser agendadas conforme o cronograma da sede. Para moradores de Ribeirão Preto, considere custos, deslocamento e quem pode acompanhar cada etapa. Transporte fora da área regional confirmada precisa de consulta específica e não é anunciado como disponível automaticamente."] },
+      { heading: "Uma mudança de ambiente integrada ao plano de cuidado", paragraphs: ["O ritmo de trabalho, relações e acesso a substâncias podem ser discutidos na avaliação, mas não definem que toda pessoa deva sair de Ribeirão Preto. A rede municipal de saúde mental e álcool e drogas oferece caminhos próprios que precisam ser considerados conforme a necessidade.", "A Central tem única sede em Araraquara e oferece acolhimento voluntário psicossocial. O acompanhamento médico e psiquiátrico integrado e a enfermagem complementam o cuidado; necessidades hospitalares recebem encaminhamento adequado. Não se afirma que o ambiente seja protegido de todo risco ou que afastar contatos produza recuperação garantida."] },
+      { heading: "Afastar riscos não significa cortar apoio", paragraphs: ["Ao planejar uma mudança temporária de rotina, identifique com os profissionais quais vínculos ajudam e quais situações precisam de limites. A família não deve presumir que proibir toda comunicação seja parte do cuidado. Direitos, consentimento e privacidade permanecem importantes.", "Visitas devem ser agendadas conforme o cronograma da sede. Para moradores de Ribeirão Preto, considere custos, deslocamento e quem pode acompanhar cada etapa. A coordenação ajuda a consultar e organizar transporte programado conforme a origem, a avaliação e as condições operacionais."] },
       { heading: "O retorno precisa conversar com a vida real", paragraphs: ["Os fatores que preocupavam a família podem continuar existindo depois do acolhimento. Pergunte sobre prevenção à recaída, necessidades de acompanhamento e responsabilidades no retorno. Um plano deve considerar saúde, vínculos e condições concretas, não apenas afastamento.", "Se houver crise psiquiátrica, intoxicação ou risco imediato em Ribeirão Preto, procure a urgência local ou SAMU 192. Não adie atendimento para viajar a Araraquara. Conhecer uma proposta privada é diferente de receber uma indicação médica ou ter uma vaga reservada."] },
     ],
     faqs: [
-      { question: "Sair de Ribeirão Preto garante recuperação?", answer: "Não. A localização não elimina fatores de risco nem garante resultado. A escolha deve considerar avaliação individual, vínculos, continuidade e necessidades de saúde, sem substituir automaticamente a rede municipal." },
-      { question: "Há transporte automaticamente disponível de Ribeirão Preto?", answer: "O transporte depende de consulta e agendamento. A área informada é Araraquara e municípios vizinhos; para outras origens, confirme possibilidade, condições e disponibilidade. A orientação e o suporte para agendamento funcionam 24h; em emergência, acione o SAMU 192." },
+      { question: "Como a mudança de rotina pode apoiar famílias de Ribeirão Preto?", answer: "A mudança de rotina pode reduzir a exposição a contextos associados ao consumo, junto ao cuidado multidisciplinar e à prevenção à recaída. A família participa do planejamento, com vínculos e continuidade preservados; a localização, por si só, não garante recuperação." },
+      { question: "Como planejar transporte de Ribeirão Preto com a equipe operacional?", answer: "O plantão de orientação e suporte de agendamento funciona 24h. Informe o local de saída em Ribeirão Preto para a coordenação analisar e combinar a possibilidade de transporte, as condições e o horário. A execução é programada; em emergência, acione o SAMU 192." },
     ],
   },
   "franca-sp": {
     name: "Franca", focus: "decisão à distância e continuidade na RAPS",
-    access: "A viagem de Franca a Araraquara exige planejamento do percurso completo, acessos, paradas e horário de chegada. Consulte o mapa da sede e esclareça previamente todas as condições; não se presume um itinerário ou duração únicos.",
-    preparation: "Comece remotamente para evitar uma viagem sem indicação ou disponibilidade. Leve à avaliação os cuidados em andamento na RAPS de Franca e pergunte como organizar apoio familiar e continuidade se houver acolhimento fora do município.",
+    access: regionalCityAccess["franca-sp"].route,
+    preparation: regionalCityAccess["franca-sp"].visits,
     articleTitle: "Acolhimento fora de Franca: decidir à distância sem perder o cuidado no território",
-    introduction: "Franca possui referências públicas próprias para saúde mental e álcool e drogas. Uma família que também considera Araraquara precisa comparar propostas com informação, não com a promessa de um refúgio que cura. A distância exige planejamento e não torna uma modalidade superior.",
+    introduction: "Famílias de Franca podem conhecer a proposta da Central pelo contato remoto e planejar acolhimento em Araraquara com tranquilidade. A mudança temporária de rotina pode integrar o cuidado, preservando os vínculos familiares e os acompanhamentos existentes na rede local.",
     sections: [
       { heading: "Conhecer a proposta antes de viajar", paragraphs: ["O primeiro contato com a Central pode esclarecer a única sede na R. Alfredo Micelli, 70, avaliação, condições particulares e disponibilidade. A família deve saber o que é acolhimento voluntário e como psicologia, acompanhamento médico e psiquiátrico integrado e enfermagem participam do cuidado e quais necessidades hospitalares recebem encaminhamento.", "Faça perguntas sobre perfil de admissão, documentos e participação familiar antes de organizar a saída de Franca. Não há indicação automática por telefone, reserva implícita de vaga ou promessa de duração. Se a situação exige urgência, procure a rede local e não espere a viagem."] },
-      { heading: "Preservar referências e comunicação", paragraphs: ["A RAPS e o CAPS AD III Renascer são serviços públicos de Franca independentes da Central. A família deve confirmar os fluxos atuais nos canais oficiais. Considerar acolhimento privado não significa abandonar acompanhamentos existentes sem orientação.", "Se profissionais já acompanham a pessoa, pergunte como apresentar histórico e informações relevantes respeitando consentimento. Combine visitas e comunicação com a equipe da sede. O transporte regional confirmado não significa cobertura automática de Franca; consulte possibilidades sem assumir disponibilidade."] },
-      { heading: "Distância não substitui prevenção à recaída", paragraphs: ["Mudar de ambiente pode ter sentido para algumas situações, mas os fatores emocionais e sociais precisam continuar sendo trabalhados. A proposta da Central inclui apoio psicológico, 12 Passos, convivência e prevenção à recaída, sem prometer cura pelo afastamento.", "No planejamento do retorno a Franca, considere acompanhamento, rede de apoio e condições de vida. Esclareça custos, documentação administrativa e requisitos de eventual reembolso diretamente com a operadora. A orientação financeira não garante cobertura e não transforma a Central em serviço do SUS."] },
+      { heading: "Preservar referências e comunicação", paragraphs: ["A RAPS e o CAPS AD III Renascer são serviços públicos de Franca independentes da Central. A família deve confirmar os fluxos atuais nos canais oficiais. Considerar acolhimento privado não significa abandonar acompanhamentos existentes sem orientação.", "Se profissionais já acompanham a pessoa, pergunte como apresentar histórico e informações relevantes respeitando consentimento. Combine visitas e comunicação com a equipe da sede. A coordenação analisa a origem em Franca e ajuda a organizar as possibilidades de transporte seguro, conforme avaliação, agendamento e condições operacionais."] },
+      { heading: "Mudança de rotina com prevenção à recaída e vínculos preservados", paragraphs: ["Mudar de ambiente pode ter sentido para algumas situações, mas os fatores emocionais e sociais precisam continuar sendo trabalhados. A proposta da Central inclui apoio psicológico, 12 Passos, convivência e prevenção à recaída, sem prometer cura pelo afastamento.", "No planejamento do retorno a Franca, considere acompanhamento, rede de apoio e condições de vida. Esclareça custos, documentação administrativa e requisitos de eventual reembolso diretamente com a operadora. A orientação financeira não garante cobertura e não transforma a Central em serviço do SUS."] },
     ],
     faqs: [
       { question: "A família de Franca precisa viajar para iniciar a avaliação de possibilidades?", answer: "Não. Comece pelo (16) 99765-4579 para esclarecer proposta, documentos, condições e disponibilidade. O contato inicial não garante acolhimento nem substitui avaliação profissional." },
@@ -221,17 +223,17 @@ export const cityEditorial: Record<string, CityEditorial> = {
   },
   araraquara: {
     name: "Araraquara", focus: "avaliação, rotina e participação familiar na sede",
-    access: "A única sede física da Central fica na R. Alfredo Micelli, 70, Condomínio Satélite, Araraquara/SP, CEP 14808-579. Mesmo para quem já mora na cidade, recepção e visitas precisam ser combinadas antes do deslocamento.",
-    preparation: "Converse diretamente com a coordenação local sobre avaliação, rotina e condições particulares. A localização da sede não comprova licença ou credencial médica; a responsabilidade psicológica e os limites de atendimento estão na página de transparência.",
+    access: regionalCityAccess["araraquara"].route,
+    preparation: regionalCityAccess["araraquara"].visits,
     articleTitle: "Cuidado na sede de Araraquara: da avaliação ao vínculo com a família",
     introduction: "Para moradores de Araraquara, conhecer um endereço próximo pode tornar a busca por ajuda mais concreta. Ainda assim, a primeira pergunta não é quando entrar, mas qual cuidado é necessário. A Central distingue acolhimento voluntário psicossocial de intervenção médica e hospitalar.",
     sections: [
       { heading: "A rotina precisa caber nas necessidades da pessoa", paragraphs: ["A instituição informa apoio psicológico com Margarete Vasques (CRP 06/130268), 12 Passos, laborterapia, convivência e prevenção à recaída. O cronograma das 07h às 22h descreve atividades da sede, mas não define resultado nem substitui avaliação individual.", "Pergunte sobre participação, adaptações e acompanhamento. Desintoxicação médica e internação involuntária clínica não são realizadas na unidade própria. Quando indicadas, exigem avaliação e serviços habilitados externos; em emergência, procure urgência ou SAMU 192."] },
-      { heading: "Proximidade facilita planejamento, não acesso irrestrito", paragraphs: ["Visitas familiares seguem dias e horários agendados conforme o plano e o cronograma terapêutico. Morar em Araraquara não dispensa esses combinados. A família pode contribuir com informações relevantes sem presumir acesso irrestrito a atendimentos psicológicos.", "A rede pública municipal e o CAPS AD possuem funções independentes da Central. Acolhimento particular não equivale a acesso pelo SUS. Documentação administrativa para orientação de reembolso não garante cobertura ou aprovação pela operadora."] },
-      { heading: "Continuar cuidando além do período de permanência", paragraphs: ["Converse sobre responsabilidades, vínculos e necessidades de acompanhamento desde a avaliação. Um plano de prevenção à recaída deve considerar situações reais do cotidiano; estar perto da sede não elimina riscos nem assegura retorno sem dificuldades.", "A equipe pode esclarecer condições e limites pelo contato oficial DDD 16. Não escolha apenas por distância, imagem ou promessa. Endereço e informações institucionais são fornecidos pela Central, e dúvidas sobre documentos e responsabilidades devem ser discutidas antes de decidir."] },
+      { heading: "Proximidade da família e visitas integradas ao cuidado", paragraphs: ["Visitas familiares seguem dias e horários agendados conforme o plano e o cronograma terapêutico. A proximidade de quem mora em Araraquara facilita organizar esses encontros. A família pode contribuir com informações relevantes sem presumir acesso irrestrito a atendimentos psicológicos.", "A rede pública municipal e o CAPS AD possuem funções independentes da Central. Acolhimento particular não equivale a acesso pelo SUS. Documentação administrativa para orientação de reembolso não garante cobertura ou aprovação pela operadora."] },
+      { heading: "Continuar cuidando além do período de permanência", paragraphs: ["Converse sobre responsabilidades, vínculos e necessidades de acompanhamento desde a avaliação. Um plano de prevenção à recaída deve considerar situações reais do cotidiano; estar perto da sede não elimina riscos nem assegura retorno sem dificuldades.", "O plantão de orientação 24h, pelo contato oficial DDD 16, acolhe as dúvidas da família e esclarece avaliação, documentação e condições. A coordenação local ajuda a organizar o primeiro encontro e a participação no cuidado."] },
     ],
     faqs: [
-      { question: "Moradores de Araraquara podem chegar sem agendar?", answer: "Combine antes com a equipe. Avaliação, disponibilidade e recepção precisam ser esclarecidas, e as visitas seguem agendamento conforme o cronograma terapêutico. A sede não é pronto atendimento." },
+      { question: "Como combinar a recepção na sede de Araraquara?", answer: "O plantão de orientação 24h ajuda a combinar a avaliação e a recepção na sede local, confirmando disponibilidade e necessidades individuais. Visitas são agendadas conforme o cronograma terapêutico; emergências recebem prioridade na rede de urgência." },
       { question: "O cronograma das 07h às 22h significa atendimento de emergência?", answer: "Não. Trata-se da rotina terapêutica informada da unidade, não de plantão de urgência. Em risco imediato, procure atendimento público de urgência ou acione SAMU 192." },
     ],
   },
@@ -244,10 +246,10 @@ export function cityEditorialMetadata(slug: string) {
     title: slug === "araraquara"
       ? "Clínica de Recuperação e Reabilitação em Araraquara - SP | (16) 99765-4579"
       : `Clínica de Recuperação: ${editorial.name} | Sede Araraquara | (16) 99765-4579`,
-    description: `Orientação para famílias de ${editorial.name}: ${editorial.focus}. Sede própria em Araraquara, acolhimento voluntário. (16) 99765-4579.`,
+    description: `Acolhimento para famílias de ${editorial.name}: ${editorial.focus}. Sede terapêutica em Araraquara, visitas agendadas e orientação 24h. (16) 99765-4579.`,
   };
 }
 
 export function cityEditorialFaqs(slug: string): EditorialFaq[] {
-  return cityEditorial[slug]?.faqs ?? [];
+  return [...regionalAccessFaqs(slug), ...(cityEditorial[slug]?.faqs ?? [])];
 }
