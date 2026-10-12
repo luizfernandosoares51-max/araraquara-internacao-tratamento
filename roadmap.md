@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Adicionar e conferir grade de links regionais na Home, usando destinos ativos, sede única em Araraquara e remoção agendada, sem restaurar Bauru ou anunciar 24h/internação imediata; sem publicação.
+- [x] Adicionar grade regional na Home: onze destinos HTTP 200 e navegação para remoção de São Carlos conferidos; sede única, remoção agendada, URLs existentes e retirada de Bauru preservadas, sem anunciar 24h/internação imediata; sem publicação.
 
 - [x] Adaptar o bloco de metodologia na Home, página pilar e Araraquara, distinguindo TCC educativa, prevenção à recaída confirmada e avaliação externa de comorbidades; 19 testes aprovados e três páginas conferidas com equipe, metadados preservados e navegação para Transparência, sem publicação.
 
