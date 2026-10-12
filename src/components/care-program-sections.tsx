@@ -77,11 +77,16 @@ export function RegionalCare({ cityName }: { cityName?: string }) {
 
 export function FinancialGuidance() {
   return <section className={sectionClass} aria-label="Orientação financeira e requisitos legais">
-    <h2 className={headingClass}>Acolhimento particular e orientação sobre planos de saúde</h2>
-    <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground">A Central oferece acolhimento particular e orientação sobre possibilidades de cobertura e reembolso via planos de saúde. Consulte as opções com a equipe antes de contratar qualquer serviço.</p>
+    <h2 className={headingClass}>Atendimento Particular e Assessoria para Cobertura / Reembolso</h2>
+    <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground">Sabemos que a busca de cuidado exige atenção e clareza. Além do acolhimento particular, a Central oferece orientação à família para consultar possibilidades de cobertura ou reembolso integral ou parcial junto ao plano de saúde, conforme as condições do contrato.</p>
+    <div className="mt-7 border-l-2 border-accent pl-5">
+      <h3 className="font-display text-lg font-semibold">Documentação e consulta à operadora</h3>
+      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">A Central fornece documentação administrativa referente ao acolhimento. Laudos e relatórios médicos, quando exigidos, devem ser solicitados aos profissionais e estabelecimentos médicos responsáveis pelo atendimento externo; não são emitidos pela Central como serviço médico próprio.</p>
+      <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">Se o seu plano é Unimed, Bradesco Saúde, SulAmérica, Amil, Porto Seguro Saúde ou NotreDame Intermédica, consulte diretamente a operadora sobre requisitos, elegibilidade e documentos. A menção a essas operadoras é apenas informativa e não indica convênio, parceria ou atendimento credenciado da Central.</p>
+    </div>
     <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">Essa orientação não significa aceitação de convênios nem garantia de cobertura ou reembolso. As condições dependem do contrato, da operadora e do serviço indicado; solicite a confirmação diretamente ao plano.</p>
     <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">O acolhimento voluntário e o encaminhamento hospitalar são distintos. Os trâmites de internação devem observar as Leis 10.216/2001 e 13.840/2019. A orientação familiar da Central não substitui assessoria jurídica ou avaliação médica, nem garante vaga em serviços externos.</p>
     <div className="mt-4 flex flex-wrap gap-x-6 gap-y-3 text-sm text-secondary">{legalSources.slice(0, 2).map(source => <a key={source.href} href={source.href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">{source.label}</a>)}</div>
-    <Button asChild className="mt-6 h-auto min-h-12 max-w-full whitespace-normal bg-whatsapp py-3 text-whatsapp-foreground hover:bg-whatsapp/90"><a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />Consultar condições de acolhimento</a></Button>
+    <Button asChild className="mt-6 h-auto min-h-12 max-w-full whitespace-normal bg-whatsapp py-3 text-whatsapp-foreground hover:bg-whatsapp/90"><a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />Consultar acolhimento e orientação sobre reembolso</a></Button>
   </section>;
 }
