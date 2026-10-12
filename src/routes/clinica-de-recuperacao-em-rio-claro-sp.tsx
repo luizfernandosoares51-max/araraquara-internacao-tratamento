@@ -176,24 +176,7 @@ export const Route = createFileRoute("/clinica-de-recuperacao-em-rio-claro-sp")(
 function RioClaroPage() {
   return (
     <div className="site-editorial min-h-screen bg-ice font-body text-deep">
-      <header className="border-b border-deep/10 bg-foreground">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-4 sm:px-8 lg:px-12">
-          <Link to="/" className="flex items-center gap-3" aria-label="Central de Acolhimento e Reabilitação — página inicial">
-            <img src={logoAsset.url} alt="Logo da Central de Acolhimento e Reabilitação" width={52} height={52} className="size-13 rounded-full object-contain" />
-            <span className="hidden leading-tight sm:block">
-              <span className="block font-display text-sm font-bold">Central de Acolhimento</span>
-              <span className="block text-xs text-deep/60">e Reabilitação</span>
-            </span>
-          </Link>
-          <div className="flex items-center gap-3 text-right">
-            <span className="hidden text-xs leading-relaxed text-deep/60 md:block">Orientação para famílias<br />de Rio Claro e região</span>
-            <Button asChild size="lg" className="min-h-11 bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90">
-              <a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" /> Falar agora</a>
-            </Button>
-          </div>
-        </div>
-        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12"><Button asChild variant="link" className="h-auto min-h-12 max-w-full whitespace-normal px-0 text-left"><a href={phoneHref}><Phone aria-hidden="true" />{phoneDisplay}</a></Button></div>
-      </header>
+      
 
       <main>
         <section className="relative overflow-hidden bg-deep text-foreground">

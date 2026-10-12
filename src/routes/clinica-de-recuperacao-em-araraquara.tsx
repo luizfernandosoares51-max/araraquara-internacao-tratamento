@@ -1,7 +1,6 @@
 import { cityEditorialFaqs, cityEditorialMetadata } from "@/lib/city-editorial";
 import { CityEditorialSection } from "@/components/city-editorial-section";
 import { AraraquaraSpecialties } from "@/components/araraquara-specialties";
-import { TreatmentNavigationItem } from "@/components/treatment-navigation-item";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
@@ -27,7 +26,6 @@ import {
   emailHref,
   facebookHref,
   instagramHref,
-  mainNav,
   phoneDisplay,
   phoneHref,
   siteUrl,
@@ -209,38 +207,7 @@ function SectionLabel({ children }: { children: ReactNode }) {
 function AraraquaraPage() {
   return (
     <div className="araraquara-editorial min-h-screen overflow-hidden bg-ice font-body text-deep">
-      <header className="border-b border-border bg-background/95 text-foreground backdrop-blur-sm">
-        <div className="mx-auto max-w-6xl px-5 pb-5 pt-5 sm:px-8 lg:px-12">
-          <div className="flex items-center justify-between gap-4">
-            <Link to="/" className="flex items-center gap-3" aria-label="Central de Acolhimento e Reabilitação — página inicial">
-              <img src={logoAsset.url} alt="Logo da Central de Acolhimento e Reabilitação" width={48} height={48} className="size-12 shrink-0 rounded-full object-contain" loading="eager" />
-              <span className="leading-tight">
-                <span className="block font-display text-[13px] font-semibold sm:text-sm">Central de Acolhimento</span>
-                <span className="block text-[11px] text-muted-foreground">e Reabilitação · Araraquara</span>
-              </span>
-            </Link>
-            <div className="hidden items-center gap-2 sm:flex">
-              <a href={facebookHref} target="_blank" rel="noopener noreferrer" aria-label="Facebook da Central em Araraquara" className="grid size-10 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:text-secondary"><SocialIcon network="facebook" /></a>
-              <a href={instagramHref} target="_blank" rel="noopener noreferrer" aria-label="Instagram da Central" className="grid size-10 place-items-center rounded-full border border-border text-muted-foreground transition-colors hover:text-secondary"><SocialIcon network="instagram" /></a>
-              <span className="ml-1 inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-2 text-[10px] font-medium uppercase tracking-[0.14em] text-muted-foreground"><MapPin className="size-3" aria-hidden="true" /> Araraquara/SP</span>
-            </div>
-          </div>
-          <Button asChild variant="link" className="mt-3 h-auto min-h-12 max-w-full whitespace-normal px-0 text-left">
-            <a href={phoneHref}><Phone className="size-4 shrink-0" aria-hidden="true" />Telefone e WhatsApp: {phoneDisplay}</a>
-          </Button>
-          <nav aria-label="Menu principal" className="-mx-5 mt-5 overflow-x-auto px-5 sm:mx-0 sm:px-0">
-            <ul className="flex min-w-max items-center gap-x-5 text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
-              {mainNav.map((item) =>
-                item.label === "Tratamento" ? <TreatmentNavigationItem key={item.label} /> : item.href.includes("#") ? (
-                  <li key={item.label}><a href={item.href.slice(item.href.indexOf("#"))} className="transition-colors hover:text-secondary">{item.label}</a></li>
-                ) : (
-                  <li key={item.label}><Link to={item.href as "/" | "/cidades" | "/blog" | "/videos"} className="transition-colors hover:text-secondary">{item.label}</Link></li>
-                ),
-              )}
-            </ul>
-          </nav>
-        </div>
-      </header>
+      
 
       <main id="inicio">
         <section className="bg-background text-foreground">
