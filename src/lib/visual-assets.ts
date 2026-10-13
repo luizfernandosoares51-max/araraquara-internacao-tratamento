@@ -1,4 +1,16 @@
 import adsWomenSaoCarlos from "@/assets/ads-women-sao-carlos.jpg";
+import mataoCocaine from "@/assets/matao-cocaine.webp";
+import mataoAlcohol from "@/assets/matao-alcohol.webp";
+import mataoVoluntary from "@/assets/matao-voluntary.webp";
+import mataoInvoluntary from "@/assets/matao-involuntary.webp";
+import mataoTransport from "@/assets/matao-transport.webp";
+import mataoWomen from "@/assets/matao-women.webp";
+import mataoMedication from "@/assets/matao-medication.webp";
+import mataoYouth from "@/assets/matao-youth.webp";
+import mataoGambling from "@/assets/matao-gambling.webp";
+import mataoWorkers from "@/assets/matao-workers.webp";
+import mataoCrisis from "@/assets/matao-crisis.webp";
+import mataoElderly from "@/assets/matao-elderly.webp";
 import adsWomenAraraquara from "@/assets/ads-women-araraquara.jpg";
 import adsWomenRibeirao from "@/assets/ads-women-ribeirao.jpg";
 import adsLeme from "@/assets/ads-leme.jpg";
@@ -70,6 +82,20 @@ import rioClaroVoluntary from "@/assets/concept-rio-claro-voluntary.webp";
 import rioClaroTransport from "@/assets/concept-rio-claro-transport.webp";
 
 export const visualAssets = {
+  mataoSpecialties: {
+    cocaine: { src: mataoCocaine, alt: "Adulto cuidando de plantas, representação conceitual de novos hábitos para o artigo de Matão" },
+    alcohol: { src: mataoAlcohol, alt: "Dois adultos conversando à mesa, representação conceitual de apoio diante do uso de álcool" },
+    voluntary: { src: mataoVoluntary, alt: "Adultos caminhando juntos no jardim, representação conceitual de escolha e apoio familiar" },
+    involuntary: { src: mataoInvoluntary, alt: "Familiares conversando sobre documentos, representação conceitual de orientação e direitos" },
+    transport: { src: mataoTransport, alt: "Dois adultos consultando um mapa, representação conceitual de deslocamento planejado" },
+    women: { src: mataoWomen, alt: "Duas mulheres conversando, representação conceitual de escuta com privacidade" },
+    medication: { src: mataoMedication, alt: "Adulto revisando um caderno, representação conceitual de preparação para avaliação" },
+    youth: { src: mataoYouth, alt: "Jovem adulto conversando com uma familiar, representação conceitual de diálogo entre gerações" },
+    gambling: { src: mataoGambling, alt: "Adultos conversando com celular sobre a mesa, representação conceitual de orientação sobre apostas" },
+    workers: { src: mataoWorkers, alt: "Adultos em conversa em casa, representação conceitual de apoio fora do ambiente de trabalho" },
+    crisis: { src: mataoCrisis, alt: "Dois adultos em conversa tranquila, representação conceitual de apoio em saúde mental" },
+    elderly: { src: mataoElderly, alt: "Pessoas idosas conversando com uma familiar, representação conceitual de participação no cuidado" },
+  },
   localCampaigns: {
     "sao-carlos": { src: citySaoCarlos, alt: "Representação conceitual de escuta e apoio familiar para São Carlos; não retrata atendimento real da Central" },
     "sao-carlos-feminina": { src: adsWomenSaoCarlos, alt: "Representação conceitual de escuta e apoio a mulheres e famílias para São Carlos; não retrata atendimento real da Central" },

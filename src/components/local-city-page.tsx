@@ -7,9 +7,10 @@ import { CityEditorialSection } from "@/components/city-editorial-section";
 import { cityEditorialFaqs } from "@/lib/city-editorial";
 import { cityContactLabel, cityWhatsappHref } from "@/lib/regional-city-access";
 import type { LocalCityPage } from "@/lib/local-city-pages";
+import type { ReactNode } from "react";
 import { phoneDisplay, phoneHref, whatsappHref } from "@/lib/site";
 
-export function LocalCityPageView({ city }: { city: LocalCityPage }) {
+export function LocalCityPageView({ city, beforeFaq }: { city: LocalCityPage; beforeFaq?: ReactNode }) {
   const faqs = [...cityEditorialFaqs(city.slug), ...city.faqs];
   return (
     <div className="site-editorial min-h-screen bg-deep font-body text-foreground">
@@ -94,6 +95,7 @@ export function LocalCityPageView({ city }: { city: LocalCityPage }) {
           </section>
 
           <section className="border-b border-border py-14 lg:py-20">
+            {beforeFaq}
             <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">Perguntas de {city.name}</p>
             <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Dúvidas locais respondidas com transparência</h2>
             <div className="mt-8 divide-y divide-border border-y border-border">
