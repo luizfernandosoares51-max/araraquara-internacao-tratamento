@@ -16,7 +16,7 @@ export function VLibrasWidget() {
       if (shadow && !shadow.getElementById("central-vlibras-position")) {
         const style = document.createElement("style");
         style.id = "central-vlibras-position";
-        style.textContent = "#vlibras-access{left:max(1rem,env(safe-area-inset-left,0px));top:auto;bottom:calc(5.5rem + env(safe-area-inset-bottom,0px));height:48px;width:48px;z-index:45}#vlibras-button{width:48px;height:48px}#vlibras-popup{height:48px}@media(max-width:639px){#vlibras-access{bottom:calc(10.5rem + env(safe-area-inset-bottom,0px))}}";
+        style.textContent = "#vlibras-access{left:max(1rem,env(safe-area-inset-left,0px));top:auto;bottom:calc(5.5rem + env(safe-area-inset-bottom,0px));height:48px;width:48px;z-index:45}#vlibras-button{width:48px;height:48px}#vlibras-popup{height:48px}@media(max-width:639px){#vlibras-access{bottom:calc(10.5rem + env(safe-area-inset-bottom,0px))}:host-context(body:has(.campaign-page)) #vlibras-access{bottom:calc(14rem + env(safe-area-inset-bottom,0px))}}";
         shadow.appendChild(style);
       }
     };
