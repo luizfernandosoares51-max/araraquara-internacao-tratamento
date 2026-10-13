@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Unificar os cinco controles na barra inferior do celular; retirar flutuantes laterais, compactar Assistente e verificar leitura, teclado e abertura do VLibras em 320/390px, preservando computador e conteúdo.
+- [x] Unificar acessibilidade, VLibras oficial, Assistente compacto, ligação e WhatsApp na barra inferior móvel, inclusive campanhas; leitura reservada acima da barra, controles e texto ampliado conferidos em 320/390px, gaveta e assistente abrem/fecham e intérprete oficial abre. Computador e conteúdo preservados; sem publicação.
 
 - [x] Integrar VLibras oficial e gaveta global com preferências locais, texto até 20%, contraste, leitura facilitada, links destacados, escala de cinza e restauração; seis testes aprovados, navegação/recarga, teclado, Escape, assistente e contatos conferidos em 1280/390/320. Nove páginas e painel sem violações na checagem automática WCAG A/AA; listas, contraste e áreas principais corrigidos, avatar oficial aberto. Isso não certifica conformidade integral ou desempenho Lighthouse; sem publicação.
 
