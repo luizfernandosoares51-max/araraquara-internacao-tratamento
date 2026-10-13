@@ -89,7 +89,8 @@ export function AcolhimentoAssistant() {
           aria-label="Falar com nosso assistente"
         >
           <MessageCircle className="size-3.5" aria-hidden="true" />
-          <span className="whitespace-normal text-center sm:whitespace-nowrap">Falar com nosso assistente</span>
+          <span className="assistant-mobile-label">Assistente</span>
+          <span className="assistant-desktop-label whitespace-normal text-center sm:whitespace-nowrap">Falar com nosso assistente</span>
         </Button>
       </DialogTrigger>
 
