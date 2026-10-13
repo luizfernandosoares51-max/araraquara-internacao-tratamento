@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Adicionar leitura por voz nativa pt-BR ao painel de acessibilidade, com iniciar, pausar/retomar e parar; cancelar na troca de página e saída, preservar a barra e verificar controles e extração de texto.
+- [x] Adicionar leitura por voz nativa pt-BR ao painel de acessibilidade, com iniciar, pausar/retomar e parar; sete testes aprovados e controles, extração do conteúdo principal, cancelamento na navegação/saída e telas 320/390/1280 verificados com mecanismo de fala simulado. Barra preservada; voz audível depende do navegador e não foi aferida no ambiente sem áudio. Sem publicação.
 
 - [x] Unificar acessibilidade, VLibras oficial, Assistente compacto, ligação e WhatsApp na barra inferior móvel, inclusive campanhas; leitura reservada acima da barra, controles e texto ampliado conferidos em 320/390px, gaveta e assistente abrem/fecham e intérprete oficial abre. Computador e conteúdo preservados; sem publicação.
 
