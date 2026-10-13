@@ -1,3 +1,13 @@
+import americoCocaine from "@/assets/americo-cocaine.webp";
+import americoAlcohol from "@/assets/americo-alcohol.webp";
+import americoInvoluntary from "@/assets/americo-involuntary.webp";
+import americoVoluntary from "@/assets/americo-voluntary.webp";
+import americoTransport from "@/assets/americo-transport.webp";
+import americoWomen from "@/assets/americo-women.webp";
+import americoMedication from "@/assets/americo-medication.webp";
+import americoElderly from "@/assets/americo-elderly.webp";
+import americoYouth from "@/assets/americo-youth.webp";
+import americoGambling from "@/assets/americo-gambling.webp";
 import adsWomenSaoCarlos from "@/assets/ads-women-sao-carlos.jpg";
 import mataoCocaine from "@/assets/matao-cocaine.webp";
 import mataoAlcohol from "@/assets/matao-alcohol.webp";
@@ -82,6 +92,19 @@ import rioClaroVoluntary from "@/assets/concept-rio-claro-voluntary.webp";
 import rioClaroTransport from "@/assets/concept-rio-claro-transport.webp";
 
 export const visualAssets = {
+  americoSpecialties: {
+    cocaine: { src: americoCocaine, alt: "Dois adultos conversando em um jardim, imagem conceitual para orientação em Américo Brasiliense" },
+    alcohol: { src: americoAlcohol, alt: "Casal conversando à mesa com copos de água, imagem conceitual para orientação em Américo Brasiliense" },
+    involuntary: { src: americoInvoluntary, alt: "Família lendo documentos, imagem conceitual para orientação em Américo Brasiliense" },
+    voluntary: { src: americoVoluntary, alt: "Pessoa preparando caderno e bolsa, imagem conceitual para orientação em Américo Brasiliense" },
+    transport: { src: americoTransport, alt: "Adultos consultando mapa junto a um carro, imagem conceitual para orientação em Américo Brasiliense" },
+    women: { src: americoWomen, alt: "Duas mulheres conversando em um banco, imagem conceitual para orientação em Américo Brasiliense" },
+    medication: { src: americoMedication, alt: "Adultos revisando caderno e embalagem fechada, imagem conceitual para orientação em Américo Brasiliense" },
+    elderly: { src: americoElderly, alt: "Pessoa idosa conversando com uma familiar, imagem conceitual para orientação em Américo Brasiliense" },
+    youth: { src: americoYouth, alt: "Jovem adulto conversando com familiares, imagem conceitual para orientação em Américo Brasiliense" },
+    gambling: { src: americoGambling, alt: "Adultos conversando com celular sobre a mesa, imagem conceitual para orientação em Américo Brasiliense" },
+  },
+
   mataoSpecialties: {
     cocaine: { src: mataoCocaine, alt: "Adulto cuidando de plantas, representação conceitual de novos hábitos para o artigo de Matão" },
     alcohol: { src: mataoAlcohol, alt: "Dois adultos conversando à mesa, representação conceitual de apoio diante do uso de álcool" },

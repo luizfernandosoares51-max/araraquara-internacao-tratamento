@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+import { AmericoSpecialties } from "@/components/americo-specialties";
 import { LocalCityPageView } from "@/components/local-city-page";
 import { localCityHead } from "@/lib/local-city-head";
 import { localCityPages } from "@/lib/local-city-pages";
@@ -13,5 +14,5 @@ export const Route = createFileRoute("/clinica-de-recuperacao-em-americo-brasili
 });
 
 function AmericoBrasiliensePage() {
-  return <LocalCityPageView city={city} />;
+  return <LocalCityPageView city={city} beforeFaq={<AmericoSpecialties />} />;
 }
