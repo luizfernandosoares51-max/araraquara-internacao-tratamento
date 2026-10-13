@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Criar dez especialidades de Américo Brasiliense, cartões antes do FAQ, conteúdo original, imagens conceituais, metadados, FAQs e contatos contextualizados; validar sem publicar.
+- [x] Criar dez especialidades de Américo Brasiliense com cartões antes do FAQ, conteúdo original, dez imagens conceituais, metadados e contatos contextualizados; 26 testes aprovados e 30 visitas em 1280/390/320 confirmam páginas, imagens, FAQs iguais ao schema, canonicals, sitemap, navegação pelos cartões e retorno. Orientação 24h distinta de transporte agendado, sede em Araraquara e limites clínicos preservados; sem publicação.
 
 - [x] Criar 12 especialidades de Matão com cartões antes do FAQ, conteúdo educativo próprio, doze imagens conceituais, SEO e contatos contextualizados; 39 testes aprovados e 36 visitas em 1280/390/320 confirmam páginas, imagens, metadados únicos, FAQs iguais ao schema, navegação de retorno e inclusão no sitemap. Limites clínicos, orientação 24h e transporte agendado preservados; sem publicação.
 
