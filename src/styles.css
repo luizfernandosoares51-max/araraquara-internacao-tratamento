@@ -328,6 +328,7 @@
   .vlibras-dock-slot { display: block; flex: 0 0 48px; width: 48px; height: 48px; }
   .vlibras-loading-button { display: inline-flex; width: 48px; height: 48px; }
   .vlibras-dock-slot[data-ready="true"] .vlibras-loading-button { display: none; }
+  .vlibras-dock-slot[data-ready="true"] .central-vlibras-legacy { display: none; }
   .campaign-contact-dock { display: none !important; }
   .campaign-page .campaign-scroll-content { height: calc(100dvh - var(--mobile-contact-bar-height)); }
   .mobile-contact-call { display: inline-flex; }
