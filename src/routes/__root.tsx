@@ -146,7 +146,10 @@ function RootComponent() {
         <InstitutionalFooter />
         <div className="floating-contact-spacer" aria-hidden="true" />
       </div>
-      <div className="floating-contact-bar home-serene" role="region" aria-label="Contatos da Central">
+       </>}
+       <div className={`floating-contact-bar home-serene ${campaignPage ? "campaign-global-dock" : ""}`} role="region" aria-label="Acessibilidade e contatos da Central">
+         <AccessibilityMenu />
+         <VLibrasWidget />
         <AcolhimentoAssistant />
         <Button asChild size="icon" variant="outline" className="mobile-contact-call size-12 shrink-0 rounded-full text-foreground">
           <a href={phoneHref} aria-label={`Ligar para a Central: ${phoneDisplay}`} title="Ligar para a Central">
@@ -155,9 +158,6 @@ function RootComponent() {
         </Button>
         <FloatingWhatsApp />
       </div>
-      </>}
-      <AccessibilityMenu />
-      <VLibrasWidget />
     </QueryClientProvider>
   );
 }
