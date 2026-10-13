@@ -383,3 +383,70 @@ html {
   .global-nav-trigger { width: 100%; justify-content: space-between; }
   .global-nav-panel { position: static; width: 100%; max-width: 100%; margin-block: 0.25rem 0.5rem; }
 }
+
+:root {
+  --a11y-black: #000;
+  --a11y-white: #fff;
+  --a11y-yellow: #ffeb00;
+  --a11y-panel-background: oklch(0.18 0.07 271);
+  --a11y-panel-foreground: oklch(0.98 0.01 250);
+}
+.accessibility-trigger {
+  position: fixed; left: max(1rem, env(safe-area-inset-left, 0px));
+  bottom: max(1.5rem, env(safe-area-inset-bottom, 0px));
+  width: 48px; height: 48px; z-index: 45;
+}
+.accessibility-panel {
+  --background: var(--a11y-panel-background); --foreground: var(--a11y-panel-foreground);
+  --muted-foreground: oklch(0.82 0.02 250); --primary: oklch(0.8 0.12 222);
+  --input: oklch(0.45 0.03 250); max-height: 100dvh;
+}
+.accessibility-switch { width: 48px; height: 44px; padding: 10px 4px; }
+.accessibility-switch > span { width: 20px; height: 20px; }
+.accessibility-switch > span[data-state="checked"] { transform: translateX(16px); }
+.central-vlibras-legacy [vw-access-button] { left: 1rem; right: auto; top: auto; bottom: 5.5rem; }
+.skip-to-content {
+  position: fixed; top: 0.5rem; left: 0.5rem; z-index: 100;
+  padding: 0.75rem 1rem; background: var(--background); color: var(--foreground);
+  border: 2px solid var(--ring); transform: translateY(-200%);
+}
+.skip-to-content:focus { transform: none; }
+:where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
+  outline: 3px solid var(--ring); outline-offset: 3px;
+}
+html.easy-reading body :is(h1,h2,h3,h4,p,a,button,label,li,span,input,textarea,summary,output) {
+  font-family: Arial, Verdana, sans-serif !important;
+  line-height: 1.8 !important; letter-spacing: 0; word-spacing: 0.08em;
+}
+html.highlight-links :is(a[href], button) {
+  text-decoration: underline !important; text-decoration-thickness: 2px !important;
+  text-underline-offset: 4px; outline: 2px solid currentColor; outline-offset: 2px;
+}
+html.highlight-links :is(a[href],button):focus-visible { outline: 3px solid var(--ring); }
+html.monochrome { filter: grayscale(1); }
+html.high-contrast, html.high-contrast body * {
+  --background: var(--a11y-black); --foreground: var(--a11y-white);
+  --card: var(--a11y-black); --card-foreground: var(--a11y-white);
+  --popover: var(--a11y-black); --popover-foreground: var(--a11y-white);
+  --primary: var(--a11y-yellow); --primary-foreground: var(--a11y-black);
+  --secondary: var(--a11y-yellow); --secondary-foreground: var(--a11y-black);
+  --accent: var(--a11y-yellow); --accent-foreground: var(--a11y-black);
+  --muted: var(--a11y-black); --muted-foreground: var(--a11y-white);
+  --border: var(--a11y-yellow); --input: var(--a11y-yellow); --ring: var(--a11y-yellow);
+  --brand: var(--a11y-yellow); --brand-soft: var(--a11y-black); --deep: var(--a11y-black);
+  --ice: var(--a11y-black); --glass: var(--a11y-black); --glass-strong: var(--a11y-black);
+  --whatsapp: var(--a11y-yellow); --whatsapp-foreground: var(--a11y-black);
+}
+html.high-contrast body :is(h1,h2,h3,h4,p,li,span,label,summary,output) { color: var(--a11y-white) !important; opacity: 1 !important; }
+html.high-contrast :is(a,button,button span,a span,svg) { color: var(--a11y-yellow) !important; }
+html.high-contrast :is(a,button,[role="switch"]) { background: var(--a11y-black) !important; border-color: var(--a11y-yellow) !important; }
+html.high-contrast [role="switch"][data-state="checked"] { background: var(--a11y-yellow) !important; }
+html.high-contrast body :is(section,header,footer,main,[role="dialog"],.campaign-hero-shade) { background: var(--a11y-black) !important; }
+html.high-contrast body * { text-shadow: none !important; }
+@media (max-width: 639px) {
+  .accessibility-trigger { bottom: calc(6.5rem + env(safe-area-inset-bottom, 0px)); }
+  .central-vlibras-legacy [vw-access-button] { bottom: calc(10.5rem + env(safe-area-inset-bottom, 0px)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
