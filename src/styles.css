@@ -390,7 +390,19 @@ html {
   --a11y-yellow: #ffeb00;
   --a11y-panel-background: oklch(0.18 0.07 271);
   --a11y-panel-foreground: oklch(0.98 0.01 250);
+  --a11y-primary-surface: oklch(0.46 0.16 260);
 }
+/* Separate readable link color from filled action surfaces on dark pages. */
+:root { --primary: oklch(0.72 0.13 245); }
+.bg-primary { background-color: var(--a11y-primary-surface); }
+.home-serene, .araraquara-editorial {
+  --whatsapp: oklch(0.48 0.12 153);
+  --accent: oklch(0.43 0.09 155);
+  --a11y-primary-surface: var(--primary);
+}
+.floating-whatsapp { --whatsapp: oklch(0.48 0.12 153); }
+.bg-primary :is(h2,.text-secondary,.text-accent) { color: var(--primary-foreground); }
+.bg-primary [class*="text-primary-foreground/"] { color: var(--primary-foreground); }
 .accessibility-trigger {
   position: fixed; left: max(1rem, env(safe-area-inset-left, 0px));
   bottom: max(1.5rem, env(safe-area-inset-bottom, 0px));
@@ -427,6 +439,7 @@ html.highlight-links :is(a[href], button) {
 html.highlight-links :is(a[href],button):focus-visible { outline: 3px solid var(--ring); }
 html.monochrome { filter: grayscale(1); }
 html.high-contrast, html.high-contrast body * {
+  --a11y-primary-surface: var(--a11y-black);
   --background: var(--a11y-black); --foreground: var(--a11y-white);
   --card: var(--a11y-black); --card-foreground: var(--a11y-white);
   --popover: var(--a11y-black); --popover-foreground: var(--a11y-white);
@@ -446,10 +459,13 @@ html.high-contrast [role="switch"][data-state="checked"] { background: var(--a11
 html.high-contrast .accessibility-switch { background: transparent !important; }
 html.high-contrast body :is(section,header,footer,main,[role="dialog"],.campaign-hero-shade) { background: var(--a11y-black) !important; }
 html.high-contrast body * { text-shadow: none !important; }
+body:has(.campaign-page) .accessibility-trigger { bottom: calc(7rem + env(safe-area-inset-bottom, 0px)); }
+body:has(.campaign-page) { --central-vlibras-bottom: calc(11rem + env(safe-area-inset-bottom, 0px)); }
 @media (max-width: 639px) {
   .accessibility-trigger { bottom: calc(6.5rem + env(safe-area-inset-bottom, 0px)); }
   .central-vlibras-legacy [vw-access-button] { bottom: calc(10.5rem + env(safe-area-inset-bottom, 0px)); }
   body:has(.campaign-page) .accessibility-trigger { bottom: calc(10rem + env(safe-area-inset-bottom, 0px)); }
+  body:has(.campaign-page) { --central-vlibras-bottom: calc(14rem + env(safe-area-inset-bottom, 0px)); }
   body:has(.campaign-page) .central-vlibras-legacy [vw-access-button] { bottom: calc(14rem + env(safe-area-inset-bottom, 0px)); }
 }
 @media (prefers-reduced-motion: reduce) {

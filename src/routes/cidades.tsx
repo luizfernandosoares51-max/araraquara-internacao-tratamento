@@ -33,7 +33,7 @@ export const Route = createFileRoute("/cidades")({
 function CidadesPage() {
   return (
     <div className="site-editorial min-h-screen bg-deep font-body text-foreground">
-      <div className="mx-auto max-w-5xl px-5 py-16 sm:px-8">
+      <main className="mx-auto max-w-5xl px-5 py-16 sm:px-8">
         <Link
           to="/"
           className="glass-panel mb-8 inline-flex min-h-11 items-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold transition-colors hover:bg-glass-strong"
@@ -98,7 +98,7 @@ function CidadesPage() {
             <Phone className="size-4" aria-hidden="true" /> Ligar agora · {phoneDisplay}
           </a>
         </div>
-      </div>
+      </main>
     </div>
   );
 }
