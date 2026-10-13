@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Criar 12 especialidades de Matão com cartões antes do FAQ, conteúdo educativo próprio, doze imagens conceituais, SEO e contatos contextualizados; 39 testes aprovados e 36 visitas em 1280/390/320 confirmam páginas, imagens, metadados únicos, FAQs iguais ao schema, navegação de retorno e inclusão no sitemap. Limites clínicos, orientação 24h e transporte agendado preservados; sem publicação.
+
 - [x] Aplicar o destaque regional aprovado nas 23 campanhas e retirar a expressão “sede única”; 79 testes aprovados e 23 páginas conferidas com texto, contatos oficiais e noindex/nofollow, mantendo localização e condições reais. Publicação autorizada pelo usuário e encaminhada nesta entrega.
 
 - [x] Criar 20 páginas hiperlocais de campanhas com contatos diretos e orientação feminina responsável; 79 testes aprovados e 60 visitas em 1280/390/320 confirmam HTTP 200, imagens, metadados próprios, noindex/nofollow, contatos e ausência de overflow. Clique do WhatsApp abre destino oficial com mensagem contextual (envio externo não realizado), Transparência recupera o menu orgânico e sitemap mantém 56 URLs sem campanhas. Sede única e transporte agendado preservados; sem publicação ou garantia de veiculação no Google Ads.

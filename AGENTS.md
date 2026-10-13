@@ -27,6 +27,7 @@
 - Share regional family-orientation facts and FAQs between Home and Araraquara, deriving visible answers and FAQPage from the same route arrays, so confirmed regional access and financial limitations remain consistent without duplicating schema.
 - Keep city articles in city-editorial and arrival, visit, journey estimates and contact data in regional-city-access; derive visible FAQs and metadata from these catalogs to preserve fourteen explicit URLs, local copy and safe service boundaries without changing Home or Blog.
 - Keep specialties explicit with separate typed city catalogs and opt-in shells; derive cards, FAQs and metadata together to preserve URLs and original guidance without implying branches or unconfirmed medical services.
+- Insert local specialty discovery through an optional pre-FAQ content slot in the shared local-city view, so only the requesting city changes and its specialty catalog drives cards, route metadata, FAQs and contextual contact links.
 - Mount typed regional links once in the global footer to avoid duplicate grids and retired URLs.
 - Mount one root public header with typed disclosure links in initial HTML for accessible, indexable navigation; retain only editorial page headers.
 - Render explicit campaign routes through one isolated shared shell selected by typed static data; keep regional and audience-specific copy in a tested local campaign catalog and derive metadata, WhatsApp messages and sitemap exclusion from it, preserving organic pages without a wildcard route.

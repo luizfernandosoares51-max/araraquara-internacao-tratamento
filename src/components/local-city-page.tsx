@@ -7,9 +7,10 @@ import { CityEditorialSection } from "@/components/city-editorial-section";
 import { cityEditorialFaqs } from "@/lib/city-editorial";
 import { cityContactLabel, cityWhatsappHref } from "@/lib/regional-city-access";
 import type { LocalCityPage } from "@/lib/local-city-pages";
+import type { ReactNode } from "react";
 import { phoneDisplay, phoneHref, whatsappHref } from "@/lib/site";
 
-export function LocalCityPageView({ city }: { city: LocalCityPage }) {
+export function LocalCityPageView({ city, beforeFaq }: { city: LocalCityPage; beforeFaq?: ReactNode }) {
   const faqs = [...cityEditorialFaqs(city.slug), ...city.faqs];
   return (
     <div className="site-editorial min-h-screen bg-deep font-body text-foreground">
@@ -92,6 +93,8 @@ export function LocalCityPageView({ city }: { city: LocalCityPage }) {
               <Button asChild variant="outline" className="mt-7 min-h-11 border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"><Link to="/familia">Conhecer a página para famílias <ArrowRight aria-hidden="true" /></Link></Button>
             </div>
           </section>
+
+          {beforeFaq}
 
           <section className="border-b border-border py-14 lg:py-20">
             <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">Perguntas de {city.name}</p>
