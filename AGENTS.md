@@ -11,8 +11,7 @@
 
 - Keep city pages explicit with shared rendering and city-specific data to preserve stable, original URLs.
 - Keep retired public city URLs as redirect-only routes excluded from the city catalog and sitemap, so legacy visits receive a permanent redirect without restoring retired content.
-- Render new editorial articles through the shared blog article shell while keeping route-specific copy and metadata in each route, so presentation stays consistent without homogenizing content.
-- Use opt-in illustrated section rendering for long-form articles without changing the existing article shell, so alternating editorial imagery stays isolated from other published articles.
+- Use the shared blog shell with route-specific copy/metadata and opt-in illustrated sections, preserving original content and isolating long-form imagery.
 - Keep the blog's existing article inventory in one typed editorial catalog and render topic navigation with all article links in initial HTML, so categories improve discovery without empty archives or interaction-only indexing.
 - Keep the global welcome assistant session-only, with its model, safety instructions, and credentials behind the server chat endpoint, so visitor conversations are never persisted or exposed.
 - Keep public-page imagery in the shared visual asset catalog and use conceptual AI imagery rather than documentary facility photos, so visual representation stays consistent and does not imply unverified facts.
@@ -31,3 +30,4 @@
 - Mount typed regional links once in the global footer to avoid duplicate grids and retired URLs.
 - Mount one root public header with typed disclosure links in initial HTML for accessible, indexable navigation; retain only editorial page headers.
 - Render explicit campaign routes through one isolated shared shell selected by typed static data; keep regional and audience-specific copy in a tested local campaign catalog and derive metadata, WhatsApp messages and sitemap exclusion from it, preserving organic pages without a wildcard route.
+- Mount accessibility once outside organic/campaign shells, restore normalized local display preferences after hydration and load official VLibras asynchronously; document-level filters preserve fixed contact placement.

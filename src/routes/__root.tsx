@@ -20,6 +20,8 @@ import { Button } from "../components/ui/button";
 import { Phone } from "lucide-react";
 import { phoneDisplay, phoneHref } from "../lib/site";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { AccessibilityMenu } from "../components/AccessibilityMenu";
+import { VLibrasWidget } from "../components/vlibras-widget";
 
 function NotFoundComponent() {
   return (
@@ -133,14 +135,14 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const campaignPage = useMatches({ select: (matches) => matches.some(match => match.staticData.campaignPage === true) });
 
-  if (campaignPage) return <QueryClientProvider client={queryClient}><Outlet /></QueryClientProvider>;
-
   return (
     <QueryClientProvider client={queryClient}>
+      <a href="#conteudo-principal" className="skip-to-content">Ir para o conteúdo principal</a>
+      {campaignPage ? <div id="conteudo-principal" tabIndex={-1}><Outlet /></div> : <>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <div className="public-page-content">
         <GlobalSiteHeader />
-        <Outlet />
+        <div id="conteudo-principal" tabIndex={-1}><Outlet /></div>
         <InstitutionalFooter />
         <div className="floating-contact-spacer" aria-hidden="true" />
       </div>
@@ -153,6 +155,9 @@ function RootComponent() {
         </Button>
         <FloatingWhatsApp />
       </div>
+      </>}
+      <AccessibilityMenu />
+      <VLibrasWidget />
     </QueryClientProvider>
   );
 }

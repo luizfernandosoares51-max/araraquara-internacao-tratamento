@@ -8,7 +8,7 @@ export function FloatingWhatsApp() {
         href={`https://wa.me/${whatsappNumber}`}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Falar pelo WhatsApp"
+        aria-label="Falar com o plantão de atendimento no WhatsApp 24h"
         title="Falar pelo WhatsApp"
         data-floating-whatsapp
       >

@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Integrar VLibras oficial e gaveta global com preferências locais, texto até 20%, contraste, leitura facilitada, links destacados, escala de cinza e restauração; seis testes aprovados, navegação/recarga, teclado, Escape, assistente e contatos conferidos em 1280/390/320. Nove páginas e painel sem violações na checagem automática WCAG A/AA; listas, contraste e áreas principais corrigidos, avatar oficial aberto. Isso não certifica conformidade integral ou desempenho Lighthouse; sem publicação.
+
 - [x] Criar dez especialidades de Américo Brasiliense com cartões antes do FAQ, conteúdo original, dez imagens conceituais, metadados e contatos contextualizados; 26 testes aprovados e 30 visitas em 1280/390/320 confirmam páginas, imagens, FAQs iguais ao schema, canonicals, sitemap, navegação pelos cartões e retorno. Orientação 24h distinta de transporte agendado, sede em Araraquara e limites clínicos preservados; sem publicação.
 
 - [x] Criar 12 especialidades de Matão com cartões antes do FAQ, conteúdo educativo próprio, doze imagens conceituais, SEO e contatos contextualizados; 39 testes aprovados e 36 visitas em 1280/390/320 confirmam páginas, imagens, metadados únicos, FAQs iguais ao schema, navegação de retorno e inclusão no sitemap. Limites clínicos, orientação 24h e transporte agendado preservados; sem publicação.

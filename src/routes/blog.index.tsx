@@ -33,7 +33,7 @@ export const Route = createFileRoute("/blog/")({
 function BlogPage() {
   return (
     <div className="site-editorial min-h-screen bg-deep font-body text-foreground">
-      <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 lg:px-12">
+      <main className="mx-auto max-w-6xl px-5 py-16 sm:px-8 lg:px-12">
         <figure className="mb-10 overflow-hidden rounded-lg border border-border bg-glass shadow-xl shadow-background/20">
           <img src={visualAssets.blog.src} alt={visualAssets.blog.alt} width={1600} height={1067} fetchPriority="high" decoding="async" className="aspect-[16/7] w-full object-cover" />
           <figcaption className="border-t border-border px-5 py-3 text-xs leading-relaxed text-muted-foreground">{conceptualImageCaption}</figcaption>
@@ -94,7 +94,7 @@ function BlogPage() {
             Voltar para a página inicial
           </Link>
         </div>
-      </div>
+      </main>
     </div>
   );
 }
