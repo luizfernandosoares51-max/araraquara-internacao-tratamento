@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Integrar VLibras oficial e gaveta global de acessibilidade com preferências locais, contraste, texto até 20%, leitura facilitada, links destacados, escala de cinza e restauração; auditar semântica e validar teclado/contatos em computador e celular sem publicar.
+- [x] Integrar VLibras oficial e gaveta global com preferências locais, texto até 20%, contraste, leitura facilitada, links destacados, escala de cinza e restauração; seis testes aprovados, navegação/recarga, teclado, Escape, assistente e contatos conferidos em 1280/390/320. Nove páginas e painel sem violações na checagem automática WCAG A/AA; listas, contraste e áreas principais corrigidos, avatar oficial aberto. Isso não certifica conformidade integral ou desempenho Lighthouse; sem publicação.
 
 - [x] Criar dez especialidades de Américo Brasiliense com cartões antes do FAQ, conteúdo original, dez imagens conceituais, metadados e contatos contextualizados; 26 testes aprovados e 30 visitas em 1280/390/320 confirmam páginas, imagens, FAQs iguais ao schema, canonicals, sitemap, navegação pelos cartões e retorno. Orientação 24h distinta de transporte agendado, sede em Araraquara e limites clínicos preservados; sem publicação.
 
