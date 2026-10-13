@@ -1,8 +1,10 @@
 import { siteUrl, whatsappNumber } from './site';
-import { regionalCityAccess } from './regional-city-access';
-import { specialtySources } from './araraquara-specialties';
+import { specialtySources as sharedSources } from './araraquara-specialties';
 
-export { specialtySources };
+export const specialtySources = [...sharedSources,
+  { label: 'Prefeitura de Américo Brasiliense: mapas municipais', href: 'https://americobrasiliense.sp.gov.br/site/engenharia/' },
+  { label: 'Prefeitura: Departamento de Saúde', href: 'https://americobrasiliense.sp.gov.br/site/departamento/saude/' },
+] as const;
 export const americoParentPath = '/clinica-de-recuperacao-em-americo-brasiliense-sp';
 export const americoScope = {
   physicalUnitCity: 'Araraquara', orientationHours: 24, transportByAppointment: true,
@@ -481,7 +483,7 @@ export function americoSpecialty(key: AmericoSpecialtyKey) {
 export function americoWhatsappHref(key: AmericoSpecialtyKey) {
   return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Olá, sou de Américo Brasiliense e gostaria de orientação sobre ${americoSpecialty(key).label.toLocaleLowerCase('pt-BR')}.`)}`;
 }
-export const americoAccess = regionalCityAccess['americo-brasiliense-sp'];
+export const americoAccess = { route: 'A família pode organizar avaliação e visitas à sede em Araraquara a partir de Américo Brasiliense. Confirme o destino, o ponto de saída e as condições de recepção antes de viajar; a proximidade não garante vaga ou deslocamento imediato.' } as const;
 export function americoSpecialtyHead(key: AmericoSpecialtyKey) {
   const page = americoSpecialty(key);
   const url = `${siteUrl}${page.path}`;
