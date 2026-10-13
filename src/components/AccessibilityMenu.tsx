@@ -1,9 +1,10 @@
-import { Accessibility, Contrast, Type, Link2, Palette, RotateCcw } from "lucide-react";
+import { Accessibility, Contrast, Type, Link2, Palette, RotateCcw, Volume2, Play, Pause, Square } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription, SheetTrigger } from "@/components/ui/sheet";
 import { Switch } from "@/components/ui/switch";
 import { accessibilityStorageKey, defaultAccessibility, normalizeAccessibility, type AccessibilityPreferences } from "@/lib/accessibility";
+import { usePageSpeech } from "@/hooks/use-page-speech";
 const options = [
   { key: "highContrast", label: "Alto contraste", icon: Contrast },
   { key: "easyReading", label: "Leitura facilitada", icon: Type },
@@ -11,6 +12,7 @@ const options = [
   { key: "grayscale", label: "Escala de cinza", icon: Palette },
 ] as const;
 export function AccessibilityMenu() {
+  const speech = usePageSpeech();
   const [preferences, setPreferences] = useState<AccessibilityPreferences>(defaultAccessibility);
   const [ready, setReady] = useState(false);
   useEffect(() => {
@@ -42,6 +44,17 @@ export function AccessibilityMenu() {
         <SheetTitle className="font-body text-xl">Acessibilidade</SheetTitle>
         <SheetDescription className="sr-only">Preferências de leitura e apresentação da página.</SheetDescription>
       </SheetHeader>
+      <section aria-labelledby="page-speech-title" className="mt-6 border-y border-border bg-accent/30 py-5">
+        <h3 id="page-speech-title" className="mb-4 flex items-center gap-3 text-sm font-medium"><Volume2 className="size-5 shrink-0 text-secondary" aria-hidden="true" /> Ouvir conteúdo da página</h3>
+        <Button className="min-h-12 w-full whitespace-normal" disabled={!speech.supported || speech.state !== "idle"} onClick={speech.start}><Play aria-hidden="true" /> Iniciar Leitura</Button>
+        <div className="mt-3 grid grid-cols-2 gap-3">
+          <Button variant="outline" className="min-h-12 whitespace-normal" disabled={speech.state === "idle"} onClick={speech.togglePause}>
+            {speech.state === "paused" ? <Play aria-hidden="true" /> : <Pause aria-hidden="true" />}{speech.state === "paused" ? "Retomar" : "Pausar"}
+          </Button>
+          <Button variant="outline" className="min-h-12" disabled={speech.state === "idle"} onClick={speech.stop}><Square aria-hidden="true" /> Parar</Button>
+        </div>
+        <p role="status" className="mt-3 text-sm text-muted-foreground">{!speech.supported ? "Leitura por voz indisponível neste navegador." : speech.message || (speech.state === "reading" ? "Leitura em andamento." : speech.state === "paused" ? "Leitura pausada." : "")}</p>
+      </section>
       <div className="mt-8 border-y border-border py-5">
         <h3 className="mb-4 flex items-center gap-3 text-sm font-medium"><Type className="size-5 text-secondary" aria-hidden="true" /> Tamanho do texto</h3>
         <div className="grid grid-cols-[3rem_1fr_3rem] items-center gap-3">
