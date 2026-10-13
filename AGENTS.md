@@ -30,4 +30,4 @@
 - Mount typed regional links once in the global footer to avoid duplicate grids and retired URLs.
 - Mount one root public header with typed disclosure links in initial HTML for accessible, indexable navigation; retain only editorial page headers.
 - Render explicit campaign routes through one isolated shared shell selected by typed static data; keep regional and audience-specific copy in a tested local campaign catalog and derive metadata, WhatsApp messages and sitemap exclusion from it, preserving organic pages without a wildcard route.
-- Mount accessibility once outside organic/campaign shells, restore normalized local display preferences after hydration and load official VLibras asynchronously; document-level filters preserve fixed contact placement.
+- Mount accessibility once outside page shells; hydrate display preferences and load official VLibras asynchronously. Keep native speech in a shared hook, extracting ordered main text in short utterances and cancelling on navigation/exit without persistence; filters preserve dock placement.
