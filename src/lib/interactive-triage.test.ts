@@ -20,11 +20,27 @@ test("triage exposes the six individual relationship choices and five educationa
   assert.equal(triageTransportOptions.length, 3);
 });
 
-test("immediate risk never produces an ordinary care recommendation", () => {
+test("immediate risk keeps emergency guidance", () => {
   assert.equal(isEmergencyTriage("risk"), true);
   assert.equal(isEmergencyTriage("voluntary"), false);
   assert.equal(getTriageOrientation("risk").title, "Priorize atendimento de emergência");
   assert.ok(getTriageOrientation("risk").summary.includes("SAMU 192"));
+});
+
+test("intense family crisis can prepare WhatsApp context without replacing emergency care", () => {
+  const url = new URL(buildTriageWhatsAppHref({
+    relationship: "daughter",
+    challenges: ["substances"],
+    readiness: "risk",
+    city: "Campinas",
+    transport: "support",
+  }));
+  const message = url.searchParams.get("text") ?? "";
+  assert.equal(url.origin + url.pathname, "https://wa.me/5516997654579");
+  assert.ok(message.includes("orientação urgente"));
+  assert.ok(message.includes("recusa total ou crise familiar intensa"));
+  assert.ok(message.includes("Campinas"));
+  assert.ok(message.includes("não substitui os serviços públicos de emergência"));
 });
 
 test("WhatsApp summary uses the official number and all selected answers", () => {
@@ -39,7 +55,7 @@ test("WhatsApp summary uses the official number and all selected answers", () =>
   const message = url.searchParams.get("text") ?? "";
   assert.ok(message.includes("para o meu filho"));
   assert.ok(message.includes("álcool, apostas eletrônicas ou jogos online"));
-  assert.ok(message.includes("está relutante em aceitar ajuda"));
+  assert.ok(message.includes("apresenta resistência ao diálogo"));
   assert.ok(message.includes("São Carlos"));
   assert.ok(message.includes("queremos orientação sobre o transporte"));
 });

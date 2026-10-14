@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Manter todas as escolhas da triagem no fluxo completo até cidade e locomoção, reformular a disposição em linguagem acolhedora e disponibilizar o WhatsApp também em crise familiar, sem retirar a orientação prioritária ao SAMU 192 em risco imediato.
+
 - [x] Tornar as cinco escolhas da triagem automáticas, aceitar qualquer município paulista com 645 sugestões e Enter, incluir orientação de locomoção sem prometer transporte imediato e atualizar o resumo do WhatsApp; validar e publicar.
 
 - [x] Compactar a triagem familiar no celular com vínculos em duas colunas, avanço automático nas escolhas únicas, retorno no topo preservando respostas e espaço seguro acima da barra móvel; validar e publicar a atualização.
