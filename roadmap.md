@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Tornar as cinco escolhas da triagem automáticas, aceitar qualquer município paulista com 645 sugestões e Enter, incluir orientação de locomoção sem prometer transporte imediato e atualizar o resumo do WhatsApp; validar e publicar.
+
 - [x] Compactar a triagem familiar no celular com vínculos em duas colunas, avanço automático nas escolhas únicas, retorno no topo preservando respostas e espaço seguro acima da barra móvel; validar e publicar a atualização.
 
 - [x] Implementar a Triagem e Orientação Familiar 360° na Home e em Araraquara com quatro etapas, respostas apenas em memória, emergência direcionada ao SAMU 192 e compartilhamento opcional pelo WhatsApp oficial; sem diagnóstico ou indicação automática.
