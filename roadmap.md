@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Iniciar cada nova página no topo e substituir a lista regional longa do rodapé por nove cidades compactas e acesso ao diretório completo; validar e publicar.
+
 - [x] Corrigir o contraste das escolhas da triagem em qualquer tema e inserir a triagem contextual diretamente na página principal de São Carlos; preservar avanço automático, retorno, cidade editável, WhatsApp e orientação pública de emergência.
 
 - [x] Integrar a triagem contextual nas rotas públicas solicitadas que existem, com município inicial editável nas páginas locais, busca aberta nas páginas gerais, modelos compartilhados e espaço seguro no celular; não criar os endereços ausentes.

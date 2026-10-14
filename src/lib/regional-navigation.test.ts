@@ -13,10 +13,15 @@ describe("regional discovery destinations", () => {
     assert.equal(regionalNavigation.some(item => item.to.includes("bauru")), false);
   });
 
-  it("only points to existing explicit routes", () => {
-    assert.equal(regionalNavigation.length, 11);
+  it("shows the nine compact city destinations and only points to existing explicit routes", () => {
+    assert.equal(regionalNavigation.length, 9);
+    assert.deepEqual(regionalNavigation.map(item => item.label), [
+      "Araraquara", "São Carlos", "Ribeirão Preto", "Rio Claro", "Matão", "Franca",
+      "Taquaritinga", "Ibitinga", "Américo Brasiliense",
+    ]);
     for (const item of regionalNavigation) {
       assert.equal(existsSync(`src/routes${item.to}.tsx`), true);
+      assert.equal(item.to.includes("#"), false);
     }
   });
 });
