@@ -164,9 +164,9 @@ export const cityPages: CityPageData[] = [
     relatedSlugs: ["sao-carlos-sp", "matao-sp"],
     localResource: {
       heading: "Onde consultar a rede de saúde de Américo Brasiliense",
-      text: "A Prefeitura mantém uma página oficial do Departamento de Saúde com informações sobre os equipamentos municipais, incluindo o CAPS Doçura. O serviço é público e não possui parceria com a Central. A família deve confirmar diretamente no canal municipal quais atendimentos são oferecidos e como acessá-los.",
-      sourceLabel: "Consultar o Departamento de Saúde de Américo Brasiliense",
-      sourceUrl: "https://americobrasiliense.sp.gov.br/site/saude/",
+      text: "A Prefeitura mantém um canal institucional de Saúde para consultar os contatos municipais e confirmar a rede pública, incluindo o acesso ao CAPS. O serviço é público e não possui parceria com a Central. A família deve confirmar diretamente no canal municipal quais atendimentos são oferecidos e como acessá-los.",
+      sourceLabel: "Consultar o canal municipal de Saúde de Américo Brasiliense",
+      sourceUrl: "https://americobrasiliense.atende.net/subportal/saude",
     },
     faqs: [
       { question: "A unidade fica em Américo Brasiliense?", answer: "Não. A unidade física da Central fica em Araraquara. Esta página atende à busca de famílias de Américo Brasiliense por orientação." },

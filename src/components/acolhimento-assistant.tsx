@@ -225,7 +225,7 @@ export function AcolhimentoAssistant() {
 
           <div className="mt-3 grid grid-cols-2 gap-2">
             <Button asChild size="sm" className="min-h-12 min-w-0 bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90">
-              <a href={whatsappHref} target="_blank" rel="noreferrer">
+              <a href={whatsappHref} target="_blank" rel="noopener noreferrer">
                 <MessageCircle aria-hidden="true" /> WhatsApp
               </a>
             </Button>

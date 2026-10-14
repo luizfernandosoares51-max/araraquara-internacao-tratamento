@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { americoScope, americoSpecialtyList, americoWhatsappHref } from './americo-specialties';
+import { americoScope, americoSpecialtyList, americoWhatsappHref, specialtySources } from './americo-specialties';
 
 test('preserves ten requested Américo Brasiliense paths', () => assert.deepEqual(americoSpecialtyList.map(p => p.path), [
   '/tratamento-cocaina-crack-americo-brasiliense', '/tratamento-alcoolismo-americo-brasiliense',
@@ -19,6 +19,12 @@ test('female unit is not confirmed', () => assert.equal(americoScope.femaleUnit,
 test('adolescent program is not confirmed', () => assert.equal(americoScope.adolescentProgram, false));
 test('geriatric program is not confirmed', () => assert.equal(americoScope.geriatricProgram, false));
 test('gambling program is not confirmed', () => assert.equal(americoScope.gamblingProgram, false));
+test('municipal specialty references use the official portal and current health channel', () => {
+  assert.deepEqual(specialtySources.slice(-2).map(source => source.href), [
+    'https://www.americobrasiliense.sp.gov.br/',
+    'https://americobrasiliense.atende.net/subportal/saude',
+  ]);
+});
 test('every specialty uses the contextual official WhatsApp', () => {
   for (const page of americoSpecialtyList) {
     const url = new URL(americoWhatsappHref(page.key));

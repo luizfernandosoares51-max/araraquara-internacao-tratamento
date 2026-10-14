@@ -3,7 +3,7 @@ import { createFileRoute, redirect } from "@tanstack/react-router";
 export const Route = createFileRoute("/acolhimento")({
   staticData: { sitemap: false },
   beforeLoad: () => {
-    throw redirect({ to: "/clinica-de-recuperacao-em-araraquara", hash: "acolhimento" });
+    throw redirect({ to: "/clinica-de-recuperacao-em-araraquara", hash: "acolhimento", statusCode: 301 });
   },
   component: () => null,
 });

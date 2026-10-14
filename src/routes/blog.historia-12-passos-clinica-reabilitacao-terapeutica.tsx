@@ -47,10 +47,10 @@ const sections: IllustratedSection[] = [
 ];
 
 const sources = [
-  { title: "Alcoólicos Anônimos — início e crescimento de A.A.", url: "https://www.aa.org/the-start-and-growth-of-aa" },
-  { title: "Alcoólicos Anônimos — o Big Book e os 12 Passos", url: "https://www.aa.org/the-big-book" },
-  { title: "História do Modelo Minnesota — referência indexada na PubMed", url: "https://pubmed.ncbi.nlm.nih.gov/10234566/" },
-  { title: "Cochrane — A.A. e programas de 12 Passos no transtorno por uso de álcool", url: "https://www.cochrane.org/evidence/CD012880_alcoholics-anonymous-aa-and-other-12-step-programs-alcohol-use-disorder" },
+  { title: "Alcoólicos Anônimos — Início e crescimento de A.A. (fonte em inglês)", url: "https://www.aa.org/the-start-and-growth-of-aa" },
+  { title: "A.A. World Services — Big Book Online (fonte em inglês)", url: "https://www.aa.org/the-big-book" },
+  { title: "PubMed — Origens e evolução do Modelo Minnesota (estudo em inglês)", url: "https://pubmed.ncbi.nlm.nih.gov/10234566/" },
+  { title: "Cochrane Library — Eficácia de A.A. e programas de 12 Passos (revisão em inglês)", url: "https://www.cochrane.org/evidence/CD012880_alcoholics-anonymous-aa-and-other-12-step-programs-alcohol-use-disorder" },
   { title: "Lei nº 10.216/2001 — direitos e requisitos de internação", url: "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm" },
   { title: "Lei nº 13.840/2019 — tratamento e acolhimento voluntário", url: "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13840.htm" },
   { title: "Ministério da Saúde — avaliação e conduta nos transtornos por uso de álcool", url: "https://linhasdecuidado.saude.gov.br/portal/transtornos-por-uso-de-alcool-no-adulto/unidade-hospitalar/avaliacao-conduta/" },
