@@ -10,11 +10,11 @@ export const triageRelationships = [
 ] as const;
 
 export const triageChallenges = [
-  { id: "alcohol", label: "Dependência de álcool", detail: "Bebidas frequentes ou crises" },
-  { id: "substances", label: "Uso de substâncias químicas", detail: "Cocaína, crack ou sintéticos" },
-  { id: "medication", label: "Medicamentos controlados", detail: "Calmantes, opioides ou tarja preta" },
-  { id: "gambling", label: "Apostas eletrônicas e jogos online", detail: "Bets ou compulsão financeira" },
-  { id: "emotional", label: "Saúde emocional ou comorbidades", detail: "Questões emocionais que precisam de avaliação profissional" },
+  { id: "alcohol", icon: "🍺", label: "Álcool / Bebidas" },
+  { id: "medication", icon: "💊", label: "Medicamentos Tarja Preta" },
+  { id: "substances", icon: "⚡", label: "Cocaína, Crack ou Sintéticos" },
+  { id: "gambling", icon: "🎰", label: "Apostas Online / Jogos (Bets)" },
+  { id: "emotional", icon: "🧠", label: "Transtornos Emocionais / Outro" },
 ] as const;
 
 export const triageReadiness = [
@@ -23,32 +23,30 @@ export const triageReadiness = [
   { id: "risk", label: "Há risco imediato ou crise aguda", detail: "Agressividade, risco à própria vida ou a terceiros, perda de consciência, convulsão ou dificuldade para respirar." },
 ] as const;
 
-export const triageCities = [
+export const triageCityShortcuts = [
   "Araraquara",
-  "Américo Brasiliense",
-  "São Carlos",
-  "Matão",
-  "Rio Claro",
   "Ribeirão Preto",
-  "Ibaté",
-  "Ribeirão Bonito",
-  "Boa Esperança do Sul",
-  "Franca",
-  "Jaboticabal",
-  "Porto Ferreira",
-  "Taquaritinga",
-  "Outra cidade do interior paulista",
+  "São Carlos",
+  "São Paulo",
+] as const;
+
+export const triageTransportOptions = [
+  { id: "family", icon: "🚗", label: "A família levará por conta própria", messageLabel: "a família levará por conta própria" },
+  { id: "support", icon: "🚑", label: "Precisamos consultar apoio para locomoção", messageLabel: "precisamos de orientação e consulta de disponibilidade para locomoção" },
+  { id: "guidance", icon: "❓", label: "Queremos orientação sobre o transporte", messageLabel: "queremos orientação sobre o transporte" },
 ] as const;
 
 export type TriageRelationshipId = (typeof triageRelationships)[number]["id"];
 export type TriageChallengeId = (typeof triageChallenges)[number]["id"];
 export type TriageReadinessId = (typeof triageReadiness)[number]["id"];
+export type TriageTransportId = (typeof triageTransportOptions)[number]["id"];
 
 export type TriageAnswers = {
   relationship: TriageRelationshipId;
   challenges: TriageChallengeId[];
   readiness: TriageReadinessId;
   city: string;
+  transport: TriageTransportId;
 };
 
 function getRelationshipMessageLabel(id: TriageRelationshipId) {
@@ -96,13 +94,15 @@ export function buildTriageWhatsAppHref(answers: TriageAnswers) {
   const relationship = getRelationshipMessageLabel(answers.relationship);
   const challenges = answers.challenges.map((id) => challengeMessageLabels[id]).filter(Boolean);
   const readiness = readinessMessageLabels[answers.readiness];
-  if (!relationship || challenges.length === 0 || !readiness || !answers.city.trim()) {
+  const transport = triageTransportOptions.find((item) => item.id === answers.transport)?.messageLabel;
+  if (!relationship || challenges.length === 0 || !readiness || !answers.city.trim() || !transport) {
     throw new Error("Triagem incompleta.");
   }
   const message = [
-    `Olá! Estive no site da Central de Acolhimento e gostaria de orientações sobre o acolhimento para o meu ${relationship}.`,
+    `Olá! Gostaria de orientações para o meu ${relationship}.`,
     `A situação envolve problemas com ${challenges.join(", ")} e, no momento, ${readiness}.`,
-    `Estou buscando apoio para a região de ${answers.city.trim()}. Como vocês podem nos orientar?`,
+    `Estamos na cidade de ${answers.city.trim()} e ${transport}.`,
+    "Como a equipe pode nos orientar?",
   ].join("\n");
   return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 }

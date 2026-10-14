@@ -5,9 +5,10 @@ import {
   getTriageOrientation,
   isEmergencyTriage,
   triageChallenges,
-  triageCities,
+  triageCityShortcuts,
   triageReadiness,
   triageRelationships,
+  triageTransportOptions,
 } from "./interactive-triage";
 
 test("triage exposes the six individual relationship choices and five educational topics", () => {
@@ -15,8 +16,8 @@ test("triage exposes the six individual relationship choices and five educationa
   assert.deepEqual(triageRelationships.map((item) => item.label), ["Filho", "Filha", "Esposo", "Esposa", "Para mim", "Outro familiar"]);
   assert.equal(triageChallenges.length, 5);
   assert.equal(triageReadiness.length, 3);
-  assert.ok(triageCities.includes("Araraquara"));
-  assert.ok(triageCities.includes("Ribeirão Preto"));
+  assert.deepEqual([...triageCityShortcuts], ["Araraquara", "Ribeirão Preto", "São Carlos", "São Paulo"]);
+  assert.equal(triageTransportOptions.length, 3);
 });
 
 test("immediate risk never produces an ordinary care recommendation", () => {
@@ -32,6 +33,7 @@ test("WhatsApp summary uses the official number and all selected answers", () =>
     challenges: ["alcohol", "gambling"],
     readiness: "resistant",
     city: "São Carlos",
+    transport: "guidance",
   }));
   assert.equal(url.origin + url.pathname, "https://wa.me/5516997654579");
   const message = url.searchParams.get("text") ?? "";
@@ -39,8 +41,9 @@ test("WhatsApp summary uses the official number and all selected answers", () =>
   assert.ok(message.includes("álcool, apostas eletrônicas ou jogos online"));
   assert.ok(message.includes("está relutante em aceitar ajuda"));
   assert.ok(message.includes("São Carlos"));
+  assert.ok(message.includes("queremos orientação sobre o transporte"));
 });
 
 test("an incomplete triage cannot create an external message", () => {
-  assert.throws(() => buildTriageWhatsAppHref({ relationship: "self", challenges: [], readiness: "voluntary", city: "" }));
+  assert.throws(() => buildTriageWhatsAppHref({ relationship: "self", challenges: [], readiness: "voluntary", city: "", transport: "family" }));
 });
