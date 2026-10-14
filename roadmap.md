@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Animar os quatro quadros aprovados e montar o vídeo institucional 16:9 com cartão final, trilha instrumental suave e pré-visualização.
+
 - [x] Aplicar correções prioritárias de referências municipais, segurança do WhatsApp, idioma das fontes e redirecionamentos 301; 18 testes aprovados, links municipais conferidos na página, compilação sem erros e sitemap da prévia com 79 URLs.
 
 - [x] Criar artigo histórico dos 12 Passos com fontes, cinco links regionais existentes, FAQ e schema consistentes, imagem conceitual e contatos; cartão do Blog, duas regras testadas, navegação, sitemap e telas de computador/celular verificados.
