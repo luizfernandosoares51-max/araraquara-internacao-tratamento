@@ -1,10 +1,12 @@
 import { whatsappNumber } from "./site";
 
 export const triageRelationships = [
-  { id: "child", label: "Para meu filho ou filha" },
-  { id: "partner", label: "Para meu esposo, esposa ou companheiro(a)" },
-  { id: "self", label: "Para mim — busca voluntária de apoio" },
-  { id: "other", label: "Para outro familiar ou amigo próximo" },
+  { id: "son", label: "Para meu Filho", messageLabel: "filho" },
+  { id: "daughter", label: "Para minha Filha", messageLabel: "filha" },
+  { id: "husband", label: "Para meu Esposo", messageLabel: "esposo" },
+  { id: "wife", label: "Para minha Esposa", messageLabel: "esposa" },
+  { id: "self", label: "Para mim mesmo(a)", messageLabel: "próprio cuidado" },
+  { id: "other", label: "Outro familiar", messageLabel: "familiar" },
 ] as const;
 
 export const triageChallenges = [
@@ -49,9 +51,23 @@ export type TriageAnswers = {
   city: string;
 };
 
-function getLabel<T extends { id: string; label: string }>(items: readonly T[], id: string) {
-  return items.find((item) => item.id === id)?.label;
+function getRelationshipMessageLabel(id: TriageRelationshipId) {
+  return triageRelationships.find((item) => item.id === id)?.messageLabel;
 }
+
+const challengeMessageLabels: Record<TriageChallengeId, string> = {
+  alcohol: "álcool",
+  substances: "drogas ou outras substâncias",
+  medication: "medicamentos controlados",
+  gambling: "apostas eletrônicas ou jogos online",
+  emotional: "questões de saúde emocional",
+};
+
+const readinessMessageLabels: Record<TriageReadinessId, string> = {
+  voluntary: "aceita receber ajuda",
+  resistant: "está relutante em aceitar ajuda",
+  risk: "está em uma situação de risco imediato",
+};
 
 export function isEmergencyTriage(readiness: TriageReadinessId) {
   return readiness === "risk";
@@ -77,19 +93,16 @@ export function getTriageOrientation(readiness: TriageReadinessId) {
 }
 
 export function buildTriageWhatsAppHref(answers: TriageAnswers) {
-  const relationship = getLabel(triageRelationships, answers.relationship);
-  const challenges = answers.challenges.map((id) => getLabel(triageChallenges, id)).filter(Boolean);
-  const readiness = getLabel(triageReadiness, answers.readiness);
+  const relationship = getRelationshipMessageLabel(answers.relationship);
+  const challenges = answers.challenges.map((id) => challengeMessageLabels[id]).filter(Boolean);
+  const readiness = readinessMessageLabels[answers.readiness];
   if (!relationship || challenges.length === 0 || !readiness || !answers.city.trim()) {
     throw new Error("Triagem incompleta.");
   }
   const message = [
-    "Olá, realizei a orientação preliminar online na Central de Acolhimento.",
-    `• Perfil: ${relationship}`,
-    `• Tema(s): ${challenges.join(", ")}`,
-    `• Disposição para cuidado: ${readiness}`,
-    `• Região: ${answers.city.trim()}`,
-    "Gostaria de falar com a equipe de Araraquara para entender os próximos passos.",
+    `Olá! Estive no site da Central de Acolhimento e gostaria de orientações sobre o acolhimento para o meu ${relationship}.`,
+    `A situação envolve problemas com ${challenges.join(", ")} e, no momento, ${readiness}.`,
+    `Estou buscando apoio para a região de ${answers.city.trim()}. Como vocês podem nos orientar?`,
   ].join("\n");
   return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 }
