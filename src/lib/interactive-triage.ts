@@ -18,9 +18,9 @@ export const triageChallenges = [
 ] as const;
 
 export const triageReadiness = [
-  { id: "voluntary", label: "Aceita conversar", detail: "A pessoa reconhece a necessidade e está aberta a conhecer possibilidades de cuidado." },
-  { id: "resistant", label: "Apresenta resistência inicial", detail: "A pessoa ainda nega a situação, mas pode existir espaço para diálogo familiar." },
-  { id: "risk", label: "Há risco imediato ou crise aguda", detail: "Agressividade, risco à própria vida ou a terceiros, perda de consciência, convulsão ou dificuldade para respirar." },
+  { id: "voluntary", label: "Aceita ajuda voluntária", detail: "Reconhece a situação e aceita conversar." },
+  { id: "resistant", label: "Resistência ao diálogo", detail: "Nega a situação, mas a família busca orientação." },
+  { id: "risk", label: "Crise familiar intensa ou recusa total", detail: "Situação delicada que requer apoio imediato; risco à vida continua sendo emergência pública." },
 ] as const;
 
 export const triageCityShortcuts = [
@@ -63,8 +63,8 @@ const challengeMessageLabels: Record<TriageChallengeId, string> = {
 
 const readinessMessageLabels: Record<TriageReadinessId, string> = {
   voluntary: "aceita receber ajuda",
-  resistant: "está relutante em aceitar ajuda",
-  risk: "está em uma situação de risco imediato",
+  resistant: "apresenta resistência ao diálogo",
+  risk: "está em recusa total ou crise familiar intensa",
 };
 
 export function isEmergencyTriage(readiness: TriageReadinessId) {
@@ -98,11 +98,18 @@ export function buildTriageWhatsAppHref(answers: TriageAnswers) {
   if (!relationship || challenges.length === 0 || !readiness || !answers.city.trim() || !transport) {
     throw new Error("Triagem incompleta.");
   }
-  const message = [
-    `Olá! Gostaria de orientações para o meu ${relationship}.`,
-    `A situação envolve problemas com ${challenges.join(", ")} e, no momento, ${readiness}.`,
-    `Estamos na cidade de ${answers.city.trim()} e ${transport}.`,
-    "Como a equipe pode nos orientar?",
-  ].join("\n");
+  const message = answers.readiness === "risk"
+    ? [
+        `Olá! Preciso de orientação urgente para o meu ${relationship}.`,
+        `A situação envolve problemas com ${challenges.join(", ")} e está em recusa total ou crise familiar intensa.`,
+        `Estamos na cidade de ${answers.city.trim()} e ${transport}.`,
+        "Como a equipe pode nos orientar? Sei que o WhatsApp não substitui os serviços públicos de emergência.",
+      ].join("\n")
+    : [
+        `Olá! Gostaria de orientações para o meu ${relationship}.`,
+        `A situação envolve problemas com ${challenges.join(", ")} e, no momento, ${readiness}.`,
+        `Estamos na cidade de ${answers.city.trim()} e ${transport}.`,
+        "Como a equipe pode nos orientar?",
+      ].join("\n");
   return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 }
