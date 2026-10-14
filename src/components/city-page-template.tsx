@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import { RegionalCare } from "@/components/care-program-sections";
+import { InteractiveTriage } from "@/components/interactive-triage";
 import type { CityPageData } from "@/lib/city-pages";
 import { cityDirectory } from "@/lib/city-pages";
 import {
@@ -101,6 +102,7 @@ export function CityPageTemplate({ city }: { city: CityPageData }) {
             </div>
           </section>
 
+          <InteractiveTriage defaultCity={city.name} />
           <RegionalCare cityName={city.name} />
           <section className="border-y border-border py-9">
             <h2 className="sr-only">Informações iniciais sobre atendimento e acolhimento</h2>

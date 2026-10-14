@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, ExternalLink, MapPin, MessageCircle, Phone, Shie
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { CityEditorialSection } from "@/components/city-editorial-section";
+import { InteractiveTriage } from "@/components/interactive-triage";
 import { cityEditorialFaqs } from "@/lib/city-editorial";
 import { cityContactLabel, cityWhatsappHref } from "@/lib/regional-city-access";
 import type { LocalCityPage } from "@/lib/local-city-pages";
@@ -50,6 +51,8 @@ export function LocalCityPageView({ city, beforeFaq }: { city: LocalCityPage; be
             </div>
           </div>
         </section>
+
+        <InteractiveTriage defaultCity={city.name} />
 
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
           <CityEditorialSection slug={city.slug} />
