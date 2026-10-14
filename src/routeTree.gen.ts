@@ -118,6 +118,7 @@ import { Route as BlogDependenciaQuimicaEmAraraquaraTratamentoRouteImport } from
 import { Route as BlogDependenciaQuimicaSaoCarlosRouteImport } from './routes/blog.dependencia-quimica-sao-carlos'
 import { Route as BlogDependenciaQuimicaSinaisConsequenciasTratamentoRouteImport } from './routes/blog.dependencia-quimica-sinais-consequencias-tratamento'
 import { Route as BlogDependenciaQuimicaSinaisTratamentoRouteImport } from './routes/blog.dependencia-quimica-sinais-tratamento'
+import { Route as BlogHistoria12PassosClinicaReabilitacaoTerapeuticaRouteImport } from './routes/blog.historia-12-passos-clinica-reabilitacao-terapeutica'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -732,6 +733,12 @@ const BlogDependenciaQuimicaSinaisTratamentoRoute =
     path: '/dependencia-quimica-sinais-tratamento',
     getParentRoute: () => BlogRoute,
   } as any)
+const BlogHistoria12PassosClinicaReabilitacaoTerapeuticaRoute =
+  BlogHistoria12PassosClinicaReabilitacaoTerapeuticaRouteImport.update({
+    id: '/historia-12-passos-clinica-reabilitacao-terapeutica',
+    path: '/historia-12-passos-clinica-reabilitacao-terapeutica',
+    getParentRoute: () => BlogRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -842,6 +849,7 @@ export interface FileRoutesByFullPath {
   '/blog/dependencia-quimica-sao-carlos': typeof BlogDependenciaQuimicaSaoCarlosRoute
   '/blog/dependencia-quimica-sinais-consequencias-tratamento': typeof BlogDependenciaQuimicaSinaisConsequenciasTratamentoRoute
   '/blog/dependencia-quimica-sinais-tratamento': typeof BlogDependenciaQuimicaSinaisTratamentoRoute
+  '/blog/historia-12-passos-clinica-reabilitacao-terapeutica': typeof BlogHistoria12PassosClinicaReabilitacaoTerapeuticaRoute
   '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
@@ -952,6 +960,7 @@ export interface FileRoutesByTo {
   '/blog/dependencia-quimica-sao-carlos': typeof BlogDependenciaQuimicaSaoCarlosRoute
   '/blog/dependencia-quimica-sinais-consequencias-tratamento': typeof BlogDependenciaQuimicaSinaisConsequenciasTratamentoRoute
   '/blog/dependencia-quimica-sinais-tratamento': typeof BlogDependenciaQuimicaSinaisTratamentoRoute
+  '/blog/historia-12-passos-clinica-reabilitacao-terapeutica': typeof BlogHistoria12PassosClinicaReabilitacaoTerapeuticaRoute
   '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
@@ -1064,6 +1073,7 @@ export interface FileRoutesById {
   '/blog/dependencia-quimica-sao-carlos': typeof BlogDependenciaQuimicaSaoCarlosRoute
   '/blog/dependencia-quimica-sinais-consequencias-tratamento': typeof BlogDependenciaQuimicaSinaisConsequenciasTratamentoRoute
   '/blog/dependencia-quimica-sinais-tratamento': typeof BlogDependenciaQuimicaSinaisTratamentoRoute
+  '/blog/historia-12-passos-clinica-reabilitacao-terapeutica': typeof BlogHistoria12PassosClinicaReabilitacaoTerapeuticaRoute
   '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
@@ -1177,6 +1187,7 @@ export interface FileRouteTypes {
     | '/blog/dependencia-quimica-sao-carlos'
     | '/blog/dependencia-quimica-sinais-consequencias-tratamento'
     | '/blog/dependencia-quimica-sinais-tratamento'
+    | '/blog/historia-12-passos-clinica-reabilitacao-terapeutica'
     | '/blog/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -1287,6 +1298,7 @@ export interface FileRouteTypes {
     | '/blog/dependencia-quimica-sao-carlos'
     | '/blog/dependencia-quimica-sinais-consequencias-tratamento'
     | '/blog/dependencia-quimica-sinais-tratamento'
+    | '/blog/historia-12-passos-clinica-reabilitacao-terapeutica'
     | '/blog'
   id:
     | '__root__'
@@ -1398,6 +1410,7 @@ export interface FileRouteTypes {
     | '/blog/dependencia-quimica-sao-carlos'
     | '/blog/dependencia-quimica-sinais-consequencias-tratamento'
     | '/blog/dependencia-quimica-sinais-tratamento'
+    | '/blog/historia-12-passos-clinica-reabilitacao-terapeutica'
     | '/blog/'
   fileRoutesById: FileRoutesById
 }
@@ -2269,6 +2282,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogDependenciaQuimicaSinaisTratamentoRouteImport
       parentRoute: typeof BlogRoute
     }
+    '/blog/historia-12-passos-clinica-reabilitacao-terapeutica': {
+      id: '/blog/historia-12-passos-clinica-reabilitacao-terapeutica'
+      path: '/historia-12-passos-clinica-reabilitacao-terapeutica'
+      fullPath: '/blog/historia-12-passos-clinica-reabilitacao-terapeutica'
+      preLoaderRoute: typeof BlogHistoria12PassosClinicaReabilitacaoTerapeuticaRouteImport
+      parentRoute: typeof BlogRoute
+    }
   }
 }
 
@@ -2281,6 +2301,7 @@ interface BlogRouteChildren {
   BlogDependenciaQuimicaSaoCarlosRoute: typeof BlogDependenciaQuimicaSaoCarlosRoute
   BlogDependenciaQuimicaSinaisConsequenciasTratamentoRoute: typeof BlogDependenciaQuimicaSinaisConsequenciasTratamentoRoute
   BlogDependenciaQuimicaSinaisTratamentoRoute: typeof BlogDependenciaQuimicaSinaisTratamentoRoute
+  BlogHistoria12PassosClinicaReabilitacaoTerapeuticaRoute: typeof BlogHistoria12PassosClinicaReabilitacaoTerapeuticaRoute
   BlogIndexRoute: typeof BlogIndexRoute
 }
 
@@ -2300,6 +2321,8 @@ const BlogRouteChildren: BlogRouteChildren = {
     BlogDependenciaQuimicaSinaisConsequenciasTratamentoRoute,
   BlogDependenciaQuimicaSinaisTratamentoRoute:
     BlogDependenciaQuimicaSinaisTratamentoRoute,
+  BlogHistoria12PassosClinicaReabilitacaoTerapeuticaRoute:
+    BlogHistoria12PassosClinicaReabilitacaoTerapeuticaRoute,
   BlogIndexRoute: BlogIndexRoute,
 }
 
