@@ -11,7 +11,7 @@
 
 - Keep city pages explicit with shared rendering and city-specific data to preserve stable, original URLs.
 - Keep retired public city URLs as redirect-only routes excluded from the city catalog and sitemap, so legacy visits receive a permanent redirect without restoring retired content.
-- Use the shared blog shell with route-specific copy/metadata and opt-in illustrated sections, preserving original content and isolating long-form imagery.
+- Use shared blog shells with route-specific metadata; keep Twelve Steps FAQs, regional links and contacts in a typed catalog so visible answers and schema agree.
 - Keep the blog's existing article inventory in one typed editorial catalog and render topic navigation with all article links in initial HTML, so categories improve discovery without empty archives or interaction-only indexing.
 - Keep the global welcome assistant session-only, with its model, safety instructions, and credentials behind the server chat endpoint, so visitor conversations are never persisted or exposed.
 - Keep public-page imagery in the shared visual asset catalog and use conceptual AI imagery rather than documentary facility photos, so visual representation stays consistent and does not imply unverified facts.
