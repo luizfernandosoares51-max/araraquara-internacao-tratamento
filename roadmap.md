@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Aplicar correções prioritárias de referências municipais, segurança do WhatsApp, idioma das fontes e redirecionamentos 301; validar a prévia e solicitar publicação com o artigo e sitemap de 79 URLs.
+
 - [x] Criar artigo histórico dos 12 Passos com fontes, cinco links regionais existentes, FAQ e schema consistentes, imagem conceitual e contatos; cartão do Blog, duas regras testadas, navegação, sitemap e telas de computador/celular verificados.
 - [ ] Publicar o artigo histórico dos 12 Passos — aguarda aprovação da prévia; revisão técnica identificada não fornecida, sem afirmar execução de remoção ou emergência 24h.
 
