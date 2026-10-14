@@ -1,9 +1,9 @@
 # Roadmap
 
-- [ ] Aplicar correções prioritárias de referências municipais, segurança do WhatsApp, idioma das fontes e redirecionamentos 301; validar a prévia e solicitar publicação com o artigo e sitemap de 79 URLs.
+- [x] Aplicar correções prioritárias de referências municipais, segurança do WhatsApp, idioma das fontes e redirecionamentos 301; 18 testes aprovados, links municipais conferidos na página, compilação sem erros e sitemap da prévia com 79 URLs.
 
 - [x] Criar artigo histórico dos 12 Passos com fontes, cinco links regionais existentes, FAQ e schema consistentes, imagem conceitual e contatos; cartão do Blog, duas regras testadas, navegação, sitemap e telas de computador/celular verificados.
-- [ ] Publicar o artigo histórico dos 12 Passos — aguarda aprovação da prévia; revisão técnica identificada não fornecida, sem afirmar execução de remoção ou emergência 24h.
+- [ ] Publicar a versão corrigida com o artigo histórico dos 12 Passos — publicação solicitada pelo usuário; aguarda conclusão da publicação. Revisão técnica identificada não fornecida, sem afirmar execução de remoção ou emergência 24h.
 
 - [x] Confirmar que Morada do Sol é outra instituição e preservar o site da Central; a criação solicitada deve continuar em um projeto separado, com dados e serviços próprios confirmados, sem transferir os registros da Central.
 
