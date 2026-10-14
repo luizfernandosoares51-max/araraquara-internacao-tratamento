@@ -7,6 +7,7 @@ import articleSignsImage from "@/assets/blog-dependencia-quimica-sinais.jpg";
 import articleCityImage from "@/assets/blog-dependencia-quimica-sao-carlos.jpg";
 import { AraraquaraPhotoGallery, araraquaraPhotos } from "@/components/araraquara-photo-gallery";
 import { FamilyOrientationGuide } from "@/components/family-orientation-guide";
+import { InteractiveTriage } from "@/components/interactive-triage";
 import { CareSpecialties, FinancialGuidance, RegionalCare, TherapeuticRoutine } from "@/components/care-program-sections";
 import { cityDirectory } from "@/lib/city-pages";
 import { araraquaraOrientationFaqs } from "@/lib/araraquara-orientation";
@@ -316,6 +317,7 @@ function HomePage() {
           </section>
 
           <CareSpecialties />
+          <InteractiveTriage />
           <FamilyOrientationGuide />
 
           <section id="acolhimento" className="border-t border-border bg-muted/45 py-16 -mx-5 px-5 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 lg:py-28">
