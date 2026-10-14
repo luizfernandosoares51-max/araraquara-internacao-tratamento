@@ -15,7 +15,7 @@ export function InteractiveTriage() {
   const [city, setCity] = useState("");
   const [cityQuery, setCityQuery] = useState("");
   const headingRef = useRef<HTMLHeadingElement>(null);
-  const advanceTimerRef = useRef<number>();
+  const advanceTimerRef = useRef<number | undefined>(undefined);
   const filteredCities = useMemo(() => {
     const query = cityQuery.trim().toLocaleLowerCase("pt-BR");
     return triageCities.filter((item) => item.toLocaleLowerCase("pt-BR").includes(query));
