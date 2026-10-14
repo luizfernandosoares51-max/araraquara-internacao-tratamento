@@ -26,6 +26,7 @@ export function InteractiveTriage() {
       return () => window.clearTimeout(timer);
     }
     headingRef.current?.focus({ preventScroll: true });
+    return undefined;
   }, [step]);
 
   const progress = step >= 5 ? 100 : step * 25;
@@ -87,4 +88,4 @@ function StepPanel({ title, subtitle, headingRef, children }: { title: string; s
   return <div className="animate-in fade-in slide-in-from-right-2 duration-300 motion-reduce:animate-none"><h2 ref={headingRef} tabIndex={-1} id="triage-title" className="max-w-3xl font-display text-2xl font-semibold leading-tight outline-none sm:text-4xl">{title}</h2><p className="mb-7 mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">{subtitle}</p>{children}</div>;
 }
 function NextButton({ disabled, onClick, label = "Continuar" }: { disabled: boolean; onClick: () => void; label?: string }) { return <Button type="button" className="mt-7 min-h-12 w-full sm:w-auto" disabled={disabled} onClick={onClick}>{label}<ArrowRight aria-hidden="true" /></Button>; }
-function StepActions({ onBack, disabled, onNext, nextLabel }: { onBack: () => void; disabled: boolean; onNext: () => void; nextLabel?: string }) { return <div className="mt-7 flex flex-col-reverse gap-3 sm:flex-row"><Button type="button" variant="outline" className="min-h-12" onClick={onBack}><ArrowLeft aria-hidden="true" /> Voltar</Button><NextButton disabled={disabled} onClick={onNext} label={nextLabel} /></div>; }
+function StepActions({ onBack, disabled, onNext, nextLabel }: { onBack: () => void; disabled: boolean; onNext: () => void; nextLabel?: string }) { return <div className="mt-7 flex flex-col-reverse gap-3 sm:flex-row"><Button type="button" variant="outline" className="min-h-12" onClick={onBack}><ArrowLeft aria-hidden="true" /> Voltar</Button><NextButton disabled={disabled} onClick={onNext} {...(nextLabel ? { label: nextLabel } : {})} /></div>; }
