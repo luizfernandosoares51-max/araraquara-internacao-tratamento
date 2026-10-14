@@ -18,6 +18,7 @@ import {
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { CityEditorialSection } from "@/components/city-editorial-section";
+import { InteractiveTriage } from "@/components/interactive-triage";
 import { SaoCarlosSpecialties } from "@/components/sao-carlos-specialties";
 import {
   emailDisplay,
@@ -186,6 +187,7 @@ function SaoCarlosPage() {
           </figure>
         </section>
 
+        <InteractiveTriage defaultCity="São Carlos" />
 
         <SaoCarlosSpecialties />
 

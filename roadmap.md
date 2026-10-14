@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Corrigir o contraste das escolhas da triagem em qualquer tema e inserir a triagem contextual diretamente na página principal de São Carlos; preservar avanço automático, retorno, cidade editável, WhatsApp e orientação pública de emergência.
+
 - [x] Integrar a triagem contextual nas rotas públicas solicitadas que existem, com município inicial editável nas páginas locais, busca aberta nas páginas gerais, modelos compartilhados e espaço seguro no celular; não criar os endereços ausentes.
 
 - [x] Manter todas as escolhas da triagem no fluxo completo até cidade e locomoção, reformular a disposição em linguagem acolhedora e disponibilizar o WhatsApp também em crise familiar, sem retirar a orientação prioritária ao SAMU 192 em risco imediato.
