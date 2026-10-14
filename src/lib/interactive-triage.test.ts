@@ -12,6 +12,7 @@ import {
 
 test("triage exposes the six individual relationship choices and five educational topics", () => {
   assert.equal(triageRelationships.length, 6);
+  assert.deepEqual(triageRelationships.map((item) => item.label), ["Filho", "Filha", "Esposo", "Esposa", "Para mim", "Outro familiar"]);
   assert.equal(triageChallenges.length, 5);
   assert.equal(triageReadiness.length, 3);
   assert.ok(triageCities.includes("Araraquara"));
