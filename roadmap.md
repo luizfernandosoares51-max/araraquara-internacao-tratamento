@@ -1,5 +1,8 @@
 # Roadmap
 
+- [x] Criar artigo histórico dos 12 Passos com fontes, cinco links regionais existentes, FAQ e schema consistentes, imagem conceitual e contatos; cartão do Blog, duas regras testadas, navegação, sitemap e telas de computador/celular verificados.
+- [ ] Publicar o artigo histórico dos 12 Passos — aguarda aprovação da prévia; revisão técnica identificada não fornecida, sem afirmar execução de remoção ou emergência 24h.
+
 - [x] Confirmar que Morada do Sol é outra instituição e preservar o site da Central; a criação solicitada deve continuar em um projeto separado, com dados e serviços próprios confirmados, sem transferir os registros da Central.
 
 - [x] Adicionar leitura por voz nativa pt-BR ao painel de acessibilidade, com iniciar, pausar/retomar e parar; sete testes aprovados e controles, extração do conteúdo principal, cancelamento na navegação/saída e telas 320/390/1280 verificados com mecanismo de fala simulado. Barra preservada; voz audível depende do navegador e não foi aferida no ambiente sem áudio. Sem publicação.

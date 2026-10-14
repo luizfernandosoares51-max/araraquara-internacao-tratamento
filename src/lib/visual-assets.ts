@@ -1,4 +1,5 @@
 import americoCocaine from "@/assets/americo-cocaine.webp";
+import historyTwelveSteps from "@/assets/blog-history-twelve-steps.jpg";
 import americoAlcohol from "@/assets/americo-alcohol.webp";
 import americoInvoluntary from "@/assets/americo-involuntary.webp";
 import americoVoluntary from "@/assets/americo-voluntary.webp";
@@ -92,6 +93,7 @@ import rioClaroVoluntary from "@/assets/concept-rio-claro-voluntary.webp";
 import rioClaroTransport from "@/assets/concept-rio-claro-transport.webp";
 
 export const visualAssets = {
+  historyTwelveSteps: { src: historyTwelveSteps, alt: "Livro e caderno diante de três adultos em conversa numa biblioteca, representação conceitual de leitura e ajuda mútua" },
   americoSpecialties: {
     cocaine: { src: americoCocaine, alt: "Dois adultos conversando em um jardim, imagem conceitual para orientação em Américo Brasiliense" },
     alcohol: { src: americoAlcohol, alt: "Casal conversando à mesa com copos de água, imagem conceitual para orientação em Américo Brasiliense" },
