@@ -6,6 +6,9 @@ export function ScrollToTop() {
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    document.querySelectorAll<HTMLElement>(".public-page-content, .campaign-scroll-content").forEach((container) => {
+      container.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    });
   }, [pathname]);
 
   return null;
