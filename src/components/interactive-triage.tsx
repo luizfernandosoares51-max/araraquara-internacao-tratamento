@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type FormEvent, type ReactNode, type RefObject } from "react";
 import { ArrowLeft, Check, HeartHandshake, LoaderCircle, MessageCircle, RotateCcw, Search, ShieldCheck, Siren, UserRound, UsersRound } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { buildTriageWhatsAppHref, getTriageOrientation, isEmergencyTriage, triageChallenges, triageCityShortcuts, triageReadiness, triageRelationships, triageTransportOptions, type TriageChallengeId, type TriageReadinessId, type TriageRelationshipId, type TriageTransportId } from "@/lib/interactive-triage";
+import { buildTriageWhatsAppHref, getTriageOrientation, isEmergencyTriage, normalizeDefaultTriageCity, triageChallenges, triageCityShortcuts, triageReadiness, triageRelationships, triageTransportOptions, type TriageChallengeId, type TriageReadinessId, type TriageRelationshipId, type TriageTransportId } from "@/lib/interactive-triage";
 import { spMunicipalities } from "@/lib/sp-municipalities";
 import { cn } from "@/lib/utils";
 
@@ -9,7 +9,7 @@ type Step = 1 | 2 | 3 | 4 | 5 | 6 | 7;
 const relationshipIcons = [UserRound, UserRound, UsersRound, UsersRound, HeartHandshake, UsersRound];
 
 export function InteractiveTriage({ defaultCity }: { defaultCity?: string }) {
-  const initialCity = defaultCity?.trim() ?? "";
+  const initialCity = normalizeDefaultTriageCity(defaultCity);
   const [step, setStep] = useState<Step>(1);
   const [relationship, setRelationship] = useState<TriageRelationshipId>();
   const [challenges, setChallenges] = useState<TriageChallengeId[]>([]);

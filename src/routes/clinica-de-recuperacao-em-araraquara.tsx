@@ -248,7 +248,7 @@ function AraraquaraPage() {
           </div>
         </section>
 
-        <InteractiveTriage />
+        <InteractiveTriage defaultCity="Araraquara" />
 
 
         <AraraquaraSpecialties />

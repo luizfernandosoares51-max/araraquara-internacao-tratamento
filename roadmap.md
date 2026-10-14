@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Integrar a triagem contextual nas rotas públicas solicitadas que existem, com município inicial editável nas páginas locais, busca aberta nas páginas gerais, modelos compartilhados e espaço seguro no celular; não criar os endereços ausentes.
+
 - [x] Manter todas as escolhas da triagem no fluxo completo até cidade e locomoção, reformular a disposição em linguagem acolhedora e disponibilizar o WhatsApp também em crise familiar, sem retirar a orientação prioritária ao SAMU 192 em risco imediato.
 
 - [x] Tornar as cinco escolhas da triagem automáticas, aceitar qualquer município paulista com 645 sugestões e Enter, incluir orientação de locomoção sem prometer transporte imediato e atualizar o resumo do WhatsApp; validar e publicar.

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { gamblingCareScope, gamblingOrientationSections } from "@/lib/gambling-orientation";
 import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
 import { phoneDisplay, phoneHref, siteUrl, whatsappHref } from "@/lib/site";
+import { InteractiveTriage } from "@/components/interactive-triage";
 
 const title = "Orientação sobre Jogos Compulsivos e Apostas | Central";
 const description = "Orientação educativa sobre compulsão em jogos e apostas online, controle de impulsos, apoio familiar e avaliação profissional. Central em Araraquara.";
@@ -55,6 +56,7 @@ function GamblingOrientationPage() {
             <p className="mt-6 max-w-2xl text-xs leading-relaxed">{conceptualImageCaption}</p>
           </div>
         </section>
+        <InteractiveTriage />
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <section className="border-b border-border py-10">
             <h2 className="font-display text-2xl font-semibold">O que esta orientação significa</h2>

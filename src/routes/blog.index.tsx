@@ -4,6 +4,7 @@ import { ArrowRight, MessageCircle } from "lucide-react";
 import { blogPosts, blogTopics } from "@/lib/blog-catalog";
 import { siteUrl, whatsappHref } from "@/lib/site";
 import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
+import { InteractiveTriage } from "@/components/interactive-triage";
 
 export const Route = createFileRoute("/blog/")({
   staticData: { sitemap: true },
@@ -47,6 +48,8 @@ function BlogPage() {
         <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground">
           Informações sobre dependência química, acolhimento, tratamento e apoio às famílias.
         </p>
+
+        <div className="-mx-5 mt-10 sm:-mx-8 lg:-mx-12"><InteractiveTriage /></div>
 
         <p className="mt-5 border-l-2 border-secondary pl-4 text-sm leading-7 text-muted-foreground">
           Para uma visão integrada sobre avaliação, acolhimento e continuidade do cuidado, consulte o{" "}
