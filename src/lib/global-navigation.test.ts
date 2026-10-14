@@ -13,6 +13,13 @@ it("financial guidance has a dedicated Home destination", () => {
   assert.equal(navigationGroups[2].items[1].to, "/");
   assert.equal(navigationGroups[2].items[1].hash, "cobertura-reembolso");
 });
+it("video navigation opens the institutional video section in Araraquara", () => {
+  assert.deepEqual(navigationDirectLinks[1], {
+    label: "Vídeos",
+    to: "/clinica-de-recuperacao-em-araraquara",
+    hash: "videos",
+  });
+});
 it("regional navigation preserves the requested six cities and catalog", () => {
   assert.deepEqual(navigationGroups[3].items.map(item => item.to), [
     "/clinica-de-recuperacao-em-araraquara", "/clinica-de-recuperacao-em-sao-carlos-sp",
