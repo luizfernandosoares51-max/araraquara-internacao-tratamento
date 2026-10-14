@@ -1,6 +1,6 @@
 # Roadmap
 
-- [x] Conectar “Vídeos” no menu principal à seção institucional de Araraquara, com fechamento automático no celular, rolagem suave e âncora estável; publicação solicitada nesta entrega.
+- [x] Restaurar “Vídeos” como página exclusiva em /videos, preservar “Progressão do Colapso” e adicionar o vídeo institucional 16:9 com três pilares e WhatsApp; publicação solicitada nesta entrega.
 
 - [x] Incorporar o vídeo institucional 16:9 à página de Araraquara com player acessível, explicação dos três pilares e contato pelo WhatsApp; linguagem ajustada aos serviços confirmados, sem anunciar desintoxicação hospitalar própria ou transporte 24h.
 

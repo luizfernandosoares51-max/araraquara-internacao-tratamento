@@ -1,14 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeft, Play } from "lucide-react";
+import { ArrowLeft, HeartHandshake, MapPinCheck, MessageCircle, Play, ShieldCheck } from "lucide-react";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
+import institutionalVideo from "@/assets/central-video-institucional-16x9.mp4.asset.json";
 import progressaoVideo from "@/assets/progressao-do-colapso.mp4.asset.json";
-import { siteUrl } from "@/lib/site";
+import { siteUrl, whatsappHref } from "@/lib/site";
 
-const pageTitle = "Vídeos sobre Dependência Química, Alcoolismo e Recuperação | Central";
+const pageTitle = "Nossos Vídeos Institucionais e Terapêuticos | Central";
 const pageDescription =
-  "Assista a Progressão do Colapso, conteúdo educativo da Central sobre dependência química, alcoolismo, prevenção e a importância de buscar acolhimento e tratamento.";
+  "Assista aos vídeos da Central sobre dependência química, acolhimento familiar, cuidado humanizado, prevenção e recuperação.";
 
 const videoSource = progressaoVideo.url;
 
@@ -65,6 +66,24 @@ const stages = [
   },
 ];
 
+const institutionalPillars = [
+  {
+    title: "Acolhimento Familiar sem Julgamentos",
+    text: "Suporte emocional e escuta ativa para a família desde o primeiro contato.",
+    icon: HeartHandshake,
+  },
+  {
+    title: "Cuidado Integrado e Humanizado",
+    text: "Acompanhamento médico, psicológico, enfermagem e 12 Passos com foco na autonomia.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Presença Regional e Segurança Legal",
+    text: "Atendimento sério e transparente em Araraquara e região, em conformidade com a Lei Federal nº 13.840/2019.",
+    icon: MapPinCheck,
+  },
+] as const;
+
 export const Route = createFileRoute("/videos")({
   staticData: { sitemap: true },
   head: () => ({
@@ -87,7 +106,7 @@ function VideosPage() {
 
   return (
     <main className="site-editorial min-h-screen bg-deep font-body text-foreground">
-      <div className="mx-auto max-w-3xl px-5 py-16 sm:px-8">
+      <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 lg:px-12">
         <Button asChild variant="outline" className="mb-8 h-auto min-h-11 px-4 py-3">
           <Link to="/">
             <ArrowLeft aria-hidden="true" />
@@ -98,13 +117,11 @@ function VideosPage() {
           Vídeos
         </p>
         <h1 className="mt-3 font-display text-3xl font-bold leading-tight sm:text-4xl">
-          Vídeos sobre Dependência Química, Alcoolismo e Recuperação
+          Nossos Vídeos Institucionais e Terapêuticos
         </h1>
-        <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground">
+        <p className="mt-5 max-w-3xl text-[15px] leading-relaxed text-muted-foreground">
           Assista ao conteúdo da Central de Acolhimento e Reabilitação sobre dependência química,
-          alcoolismo e prevenção. Em “Progressão do Colapso”, conheça uma narrativa sobre mudanças
-          de comportamento e a importância de buscar ajuda, acolhimento e tratamento, com informações
-          para orientar a família na procura por atendimento responsável.
+          alcoolismo, prevenção, acolhimento familiar e cuidado humanizado.
         </p>
 
         <section aria-labelledby="progressao-title" className="mt-12 border-t border-border pt-10">
@@ -188,6 +205,59 @@ function VideosPage() {
                 </li>
               ))}
             </ol>
+          </div>
+        </section>
+
+        <section aria-labelledby="institucional-title" className="mt-16 border-t border-border pt-10">
+          <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">
+            Mensagem institucional
+          </p>
+          <h2 id="institucional-title" className="mt-3 font-display text-2xl font-bold leading-tight sm:text-3xl">
+            Acolhimento, Conscientização e Esperança
+          </h2>
+          <p id="institucional-description" className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted-foreground">
+            Uma apresentação conceitual dos princípios que orientam o acolhimento, o cuidado e o apoio oferecido às famílias.
+          </p>
+
+          <div className="mt-7 overflow-hidden rounded-lg border border-border bg-card shadow-xl">
+            <video
+              className="aspect-video w-full bg-deep object-contain"
+              controls
+              playsInline
+              preload="metadata"
+              aria-label="Vídeo institucional sobre acolhimento familiar, cuidado humanizado e presença regional"
+              aria-describedby="institucional-description institucional-caption"
+            >
+              <source src={institutionalVideo.url} type="video/mp4" />
+              Seu navegador não oferece suporte à reprodução deste vídeo.
+            </video>
+          </div>
+          <p id="institucional-caption" className="mt-3 max-w-4xl text-xs leading-relaxed text-muted-foreground">
+            Vídeo conceitual institucional. As cenas representam acolhimento, escuta e presença regional; não registram pacientes, atendimentos ou instalações reais.
+          </p>
+
+          <div className="mt-8 grid gap-4 lg:grid-cols-3">
+            {institutionalPillars.map((pillar) => {
+              const Icon = pillar.icon;
+              return (
+                <article key={pillar.title} className="rounded-lg border border-border bg-card p-6 shadow-sm">
+                  <span className="grid size-11 place-items-center rounded-lg bg-primary/10 text-primary" aria-hidden="true">
+                    <Icon className="size-6" />
+                  </span>
+                  <h3 className="mt-5 font-display text-xl font-semibold leading-tight">{pillar.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{pillar.text}</p>
+                </article>
+              );
+            })}
+          </div>
+
+          <div className="mt-8 flex justify-center">
+            <Button asChild size="lg" className="h-auto min-h-14 w-full whitespace-normal bg-whatsapp px-6 py-4 text-center text-whatsapp-foreground shadow-lg sm:w-auto">
+              <a href={whatsappHref} target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="size-5" aria-hidden="true" />
+                Plantão de orientação 24h: (16) 99765-4579
+              </a>
+            </Button>
           </div>
         </section>
       </div>
