@@ -27,6 +27,6 @@ export const navigationGroups = [
 ] as const;
 export const navigationDirectLinks = [
   { label: "Blog", to: "/blog" },
-  { label: "Vídeos", to: "/clinica-de-recuperacao-em-araraquara", hash: "videos" },
+  { label: "Vídeos", to: "/videos" },
   { label: "Contato", to: "/contato" },
 ] as const;
