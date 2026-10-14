@@ -13,7 +13,9 @@ export const Route = createFileRoute("/blog/historia-12-passos-clinica-reabilita
   staticData: { sitemap: true },
   head: () => {
     const head = createArticleHead({ ...article, image: photo.src });
-    const data = JSON.parse(head.scripts[0].children);
+    const script = head.scripts[0];
+    if (!script) return head;
+    const data = JSON.parse(script.children);
     for (const entry of data["@graph"]) {
       if (entry["@type"] === "BlogPosting") delete entry.image;
     }
