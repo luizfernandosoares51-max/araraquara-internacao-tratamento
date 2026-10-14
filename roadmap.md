@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Incorporar o vídeo institucional 16:9 à página de Araraquara com player acessível, explicação dos três pilares e contato pelo WhatsApp; linguagem ajustada aos serviços confirmados, sem anunciar desintoxicação hospitalar própria ou transporte 24h.
+
 - [x] Animar os quatro quadros aprovados e montar o vídeo institucional 16:9 com cartão final, trilha instrumental suave e pré-visualização; exportação 1920×1080 com 34,2 s, áudio -14,2 LUFS e abertura, transições e encerramento inspecionados.
 
 - [x] Aplicar correções prioritárias de referências municipais, segurança do WhatsApp, idioma das fontes e redirecionamentos 301; 18 testes aprovados, links municipais conferidos na página, compilação sem erros e sitemap da prévia com 79 URLs.

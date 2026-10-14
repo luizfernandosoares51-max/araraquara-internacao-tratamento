@@ -2,6 +2,7 @@ import { cityContactLabel, cityWhatsappHref, regionalCityAccess } from "@/lib/re
 import { cityEditorialFaqs, cityEditorialMetadata } from "@/lib/city-editorial";
 import { CityEditorialSection } from "@/components/city-editorial-section";
 import { AraraquaraSpecialties } from "@/components/araraquara-specialties";
+import { AraraquaraInstitutionalVideo } from "@/components/araraquara-institutional-video";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
@@ -248,6 +249,8 @@ function AraraquaraPage() {
 
 
         <AraraquaraSpecialties />
+
+        <AraraquaraInstitutionalVideo />
 
         <div className="bg-background px-5 text-foreground sm:px-8 lg:px-12"><div className="mx-auto max-w-7xl"><CityEditorialSection slug="araraquara" /></div></div>
 

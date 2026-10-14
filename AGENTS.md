@@ -14,7 +14,7 @@
 - Use shared blog shells with route-specific metadata; keep Twelve Steps FAQs, regional links and contacts in a typed catalog so visible answers and schema agree.
 - Keep the blog's existing article inventory in one typed editorial catalog and render topic navigation with all article links in initial HTML, so categories improve discovery without empty archives or interaction-only indexing.
 - Keep the global welcome assistant session-only, with its model, safety instructions, and credentials behind the server chat endpoint, so visitor conversations are never persisted or exposed.
-- Keep public-page imagery in the shared visual asset catalog and use conceptual AI imagery rather than documentary facility photos, so visual representation stays consistent and does not imply unverified facts.
+- Keep public media conceptual and externally served through asset pointers, avoiding documentary facility claims and large repository binaries.
 - Keep infrastructure diagnostic pages as standalone explicit routes excluded from the sitemap, so controlled delivery tests do not change existing city pages or discovery paths.
 - Mount accessibility, the official VLibras trigger, assistant, call and WhatsApp once in a root mobile dock on organic and campaign pages; reserve a separate scroll viewport above its safe-area height and hide campaign-only mobile docks, while preserving desktop placement.
 - Keep the family orientation guide isolated on the Home with typed, deterministic educational journeys and in-memory navigation only; use existing city routes and a verified source catalog, so visitor answers never require external processing or persistence.
