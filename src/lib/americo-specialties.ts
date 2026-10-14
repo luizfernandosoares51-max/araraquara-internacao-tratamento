@@ -2,8 +2,8 @@ import { siteUrl, whatsappNumber } from './site';
 import { specialtySources as sharedSources } from './araraquara-specialties';
 
 export const specialtySources = [...sharedSources,
-  { label: 'Prefeitura de Américo Brasiliense: mapas municipais', href: 'https://americobrasiliense.sp.gov.br/site/engenharia/' },
-  { label: 'Prefeitura: Departamento de Saúde', href: 'https://americobrasiliense.sp.gov.br/site/departamento/saude/' },
+  { label: 'Prefeitura Municipal de Américo Brasiliense — portal oficial', href: 'https://www.americobrasiliense.sp.gov.br/' },
+  { label: 'Prefeitura — canal institucional de Saúde e contatos municipais', href: 'https://americobrasiliense.atende.net/subportal/saude' },
 ] as const;
 export const americoParentPath = '/clinica-de-recuperacao-em-americo-brasiliense-sp';
 export const americoScope = {
