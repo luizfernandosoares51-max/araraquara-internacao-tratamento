@@ -1,29 +1,32 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { regionalNavigation } from "@/lib/regional-navigation";
 
 export function RegionalSeoGrid() {
   return (
-    <section aria-labelledby="regional-seo-title" className="regional-seo-grid border-t border-border py-12 lg:py-16">
-      <h2 id="regional-seo-title" className="font-display text-2xl font-semibold leading-tight sm:text-3xl">
-        Atendimento Regional e Orientação sobre Remoção
-      </h2>
-      <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-        Acolhimento voluntário na única sede da Central, em Araraquara, e orientação às famílias da região.
-        Remoção e translado dependem de avaliação e agendamento; cuidados médicos e internação hospitalar
-        são encaminhados a estabelecimentos habilitados, sem garantia de vaga ou admissão imediata.
-      </p>
-      <nav aria-label="Atendimento regional e orientação sobre remoção" className="links-columns mt-6 grid gap-x-8 sm:grid-cols-2 lg:grid-cols-3">
+    <section aria-labelledby="regional-seo-title" className="regional-seo-grid border-t border-border py-10 lg:py-12">
+      <div className="max-w-3xl">
+        <div className="flex items-center gap-2 text-secondary">
+          <MapPin className="size-5" aria-hidden="true" />
+          <p className="text-sm font-semibold">Orientação regional</p>
+        </div>
+        <h2 id="regional-seo-title" className="mt-2 font-display text-2xl font-semibold leading-tight sm:text-3xl">Regiões Atendidas no Interior de SP</h2>
+        <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
+          A unidade física fica somente em Araraquara. Famílias de outras cidades podem receber orientação
+          sobre acolhimento e deslocamento agendado, conforme avaliação e disponibilidade.
+        </p>
+      </div>
+      <nav aria-label="Páginas de orientação regional" className="mt-6 flex flex-wrap gap-2">
         {regionalNavigation.map((item) => (
-          <Button key={item.to} asChild variant="link" className="h-auto min-h-12 justify-start whitespace-normal border-b border-border px-0 py-3 text-left leading-relaxed text-secondary">
-            <Link to={item.to}>
-              <ArrowUpRight className="size-4 shrink-0" aria-hidden="true" />
-              <span>{item.label}</span>
-            </Link>
+          <Button key={item.to} asChild variant="outline" className="h-auto min-h-11 rounded-full px-4 py-2 text-sm font-medium">
+            <Link to={item.to}>{item.label}</Link>
           </Button>
         ))}
       </nav>
+      <Button asChild className="mt-6 min-h-12 whitespace-normal px-5 py-3 text-center">
+        <Link to="/cidades">Ver todas as 19 cidades atendidas<ArrowRight className="size-4" aria-hidden="true" /></Link>
+      </Button>
     </section>
   );
 }

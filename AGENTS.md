@@ -27,7 +27,7 @@
 - Keep city articles in city-editorial and arrival, visit, journey estimates and contact data in regional-city-access; derive visible FAQs and metadata from these catalogs to preserve fourteen explicit URLs, local copy and safe service boundaries without changing Home or Blog.
 - Keep specialties, including Américo Brasiliense, explicit with isolated typed city catalogs and opt-in shells; derive cards, FAQs and metadata together to preserve URLs and educational scope without implying branches or unconfirmed medical services.
 - Insert local specialty discovery through an optional pre-FAQ content slot in the shared local-city view, so only the requesting city changes and its specialty catalog drives cards, route metadata, FAQs and contextual contact links.
-- Mount typed regional links once in the global footer to avoid duplicate grids and retired URLs.
+- Mount compact regional links once in the footer to canonical routes, avoiding fragments and retired URLs; reset scroll to top on pathname changes.
 - Mount one root public header with typed disclosure links in initial HTML for accessible, indexable navigation; retain only editorial page headers.
 - Render explicit campaign routes through one isolated shared shell selected by typed static data; keep regional and audience-specific copy in a tested local campaign catalog and derive metadata, WhatsApp messages and sitemap exclusion from it, preserving organic pages without a wildcard route.
 - Mount accessibility once outside page shells; hydrate display preferences and load official VLibras asynchronously. Keep native speech in a shared hook, extracting ordered main text in short utterances and cancelling on navigation/exit without persistence; filters preserve dock placement.

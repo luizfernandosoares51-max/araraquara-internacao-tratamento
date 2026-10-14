@@ -22,6 +22,7 @@ import { phoneDisplay, phoneHref } from "../lib/site";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { AccessibilityMenu } from "../components/AccessibilityMenu";
 import { VLibrasWidget } from "../components/vlibras-widget";
+import { ScrollToTop } from "../components/scroll-to-top";
 
 function NotFoundComponent() {
   return (
@@ -137,6 +138,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <ScrollToTop />
       <a href="#conteudo-principal" className="skip-to-content">Ir para o conteúdo principal</a>
       {campaignPage ? <div id="conteudo-principal" tabIndex={-1}><Outlet /></div> : <>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
