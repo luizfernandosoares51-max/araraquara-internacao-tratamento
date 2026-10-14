@@ -10,8 +10,8 @@ import {
   triageRelationships,
 } from "./interactive-triage";
 
-test("triage exposes the four relationship choices and five educational topics", () => {
-  assert.equal(triageRelationships.length, 4);
+test("triage exposes the six individual relationship choices and five educational topics", () => {
+  assert.equal(triageRelationships.length, 6);
   assert.equal(triageChallenges.length, 5);
   assert.equal(triageReadiness.length, 3);
   assert.ok(triageCities.includes("Araraquara"));
@@ -27,15 +27,16 @@ test("immediate risk never produces an ordinary care recommendation", () => {
 
 test("WhatsApp summary uses the official number and all selected answers", () => {
   const url = new URL(buildTriageWhatsAppHref({
-    relationship: "child",
+    relationship: "son",
     challenges: ["alcohol", "gambling"],
     readiness: "resistant",
     city: "São Carlos",
   }));
   assert.equal(url.origin + url.pathname, "https://wa.me/5516997654579");
   const message = url.searchParams.get("text") ?? "";
-  assert.ok(message.includes("Para meu filho ou filha"));
-  assert.ok(message.includes("Dependência de álcool, Apostas eletrônicas e jogos online"));
+  assert.ok(message.includes("para o meu filho"));
+  assert.ok(message.includes("álcool, apostas eletrônicas ou jogos online"));
+  assert.ok(message.includes("está relutante em aceitar ajuda"));
   assert.ok(message.includes("São Carlos"));
 });
 

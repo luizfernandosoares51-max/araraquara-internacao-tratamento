@@ -51,10 +51,6 @@ export type TriageAnswers = {
   city: string;
 };
 
-function getLabel<T extends { id: string; label: string }>(items: readonly T[], id: string) {
-  return items.find((item) => item.id === id)?.label;
-}
-
 function getRelationshipMessageLabel(id: TriageRelationshipId) {
   return triageRelationships.find((item) => item.id === id)?.messageLabel;
 }
