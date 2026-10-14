@@ -1,11 +1,11 @@
 import { whatsappNumber } from "./site";
 
 export const triageRelationships = [
-  { id: "son", label: "Para meu Filho", messageLabel: "filho" },
-  { id: "daughter", label: "Para minha Filha", messageLabel: "filha" },
-  { id: "husband", label: "Para meu Esposo", messageLabel: "esposo" },
-  { id: "wife", label: "Para minha Esposa", messageLabel: "esposa" },
-  { id: "self", label: "Para mim mesmo(a)", messageLabel: "próprio cuidado" },
+  { id: "son", label: "Filho", messageLabel: "filho" },
+  { id: "daughter", label: "Filha", messageLabel: "filha" },
+  { id: "husband", label: "Esposo", messageLabel: "esposo" },
+  { id: "wife", label: "Esposa", messageLabel: "esposa" },
+  { id: "self", label: "Para mim", messageLabel: "próprio cuidado" },
   { id: "other", label: "Outro familiar", messageLabel: "familiar" },
 ] as const;
 

@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Compactar a triagem familiar no celular com vínculos em duas colunas, avanço automático nas escolhas únicas, retorno no topo preservando respostas e espaço seguro acima da barra móvel; validar e publicar a atualização.
+
 - [x] Implementar a Triagem e Orientação Familiar 360° na Home e em Araraquara com quatro etapas, respostas apenas em memória, emergência direcionada ao SAMU 192 e compartilhamento opcional pelo WhatsApp oficial; sem diagnóstico ou indicação automática.
 
 - [x] Restaurar “Vídeos” como página exclusiva em /videos, preservar “Progressão do Colapso” e adicionar o vídeo institucional 16:9 com três pilares e WhatsApp; publicação solicitada nesta entrega.
