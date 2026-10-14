@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { InteractiveTriage } from "@/components/interactive-triage";
 import { SpecialtyIcon } from "./araraquara-specialties";
 import { rioClaroSpecialties, specialtySources } from "@/lib/rio-claro-specialties";
 import type { SpecialtyKey } from "@/lib/araraquara-specialties";
@@ -37,6 +38,7 @@ export function RioClaroSpecialtyPage({ specialty }: { specialty: SpecialtyKey }
           <figcaption className="mt-3 text-xs leading-relaxed text-muted-foreground">{conceptualImageCaption}</figcaption>
         </figure>
       </section>
+      <InteractiveTriage defaultCity="Rio Claro" />
       <aside className="border-b border-border bg-muted px-5 py-7 sm:px-8" aria-label="Limites do atendimento e segurança"><div className="mx-auto flex max-w-6xl items-start gap-3"><ShieldCheck className="mt-1 size-5 shrink-0 text-secondary" aria-hidden="true" /><p className="max-w-4xl text-sm leading-relaxed">{page.notice}</p></div></aside>
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-14 sm:px-8 lg:grid-cols-[minmax(0,1fr)_17rem] lg:gap-16 lg:py-20">
         <article className="min-w-0 space-y-12" data-specialty-content>

@@ -49,6 +49,10 @@ export type TriageAnswers = {
   transport: TriageTransportId;
 };
 
+export function normalizeDefaultTriageCity(defaultCity?: string) {
+  return defaultCity?.trim() ?? "";
+}
+
 function getRelationshipMessageLabel(id: TriageRelationshipId) {
   return triageRelationships.find((item) => item.id === id)?.messageLabel;
 }

@@ -4,6 +4,7 @@ import { ArrowLeft, MessageCircle, Phone } from "lucide-react";
 import { cityDirectory } from "@/lib/city-pages";
 import { phoneDisplay, phoneHref, siteUrl, whatsappHref } from "@/lib/site";
 import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
+import { InteractiveTriage } from "@/components/interactive-triage";
 
 export const Route = createFileRoute("/cidades")({
   staticData: { sitemap: true },
@@ -56,6 +57,8 @@ function CidadesPage() {
           <img src={visualAssets.cities.src} alt={visualAssets.cities.alt} width={1600} height={1067} fetchPriority="high" decoding="async" className="aspect-[16/8] w-full object-cover" />
           <figcaption className="border-t border-border px-5 py-3 text-xs leading-relaxed text-muted-foreground">{conceptualImageCaption}</figcaption>
         </figure>
+
+        <div className="-mx-5 mt-10 sm:-mx-8"><InteractiveTriage /></div>
 
         <h2 className="mt-10 font-display text-xl font-semibold">Páginas disponíveis</h2>
         <ul className="mt-4 grid gap-3 text-sm sm:grid-cols-2">

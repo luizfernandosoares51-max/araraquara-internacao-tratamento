@@ -4,12 +4,18 @@ import {
   buildTriageWhatsAppHref,
   getTriageOrientation,
   isEmergencyTriage,
+  normalizeDefaultTriageCity,
   triageChallenges,
   triageCityShortcuts,
   triageReadiness,
   triageRelationships,
   triageTransportOptions,
 } from "./interactive-triage";
+
+test("local pages can prefill their city while general pages stay open", () => {
+  assert.equal(normalizeDefaultTriageCity(" Ribeirão Preto "), "Ribeirão Preto");
+  assert.equal(normalizeDefaultTriageCity(), "");
+});
 
 test("triage exposes the six individual relationship choices and five educational topics", () => {
   assert.equal(triageRelationships.length, 6);

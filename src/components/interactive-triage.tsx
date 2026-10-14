@@ -1,20 +1,21 @@
 import { useEffect, useMemo, useRef, useState, type FormEvent, type ReactNode, type RefObject } from "react";
 import { ArrowLeft, Check, HeartHandshake, LoaderCircle, MessageCircle, RotateCcw, Search, ShieldCheck, Siren, UserRound, UsersRound } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { buildTriageWhatsAppHref, getTriageOrientation, isEmergencyTriage, triageChallenges, triageCityShortcuts, triageReadiness, triageRelationships, triageTransportOptions, type TriageChallengeId, type TriageReadinessId, type TriageRelationshipId, type TriageTransportId } from "@/lib/interactive-triage";
+import { buildTriageWhatsAppHref, getTriageOrientation, isEmergencyTriage, normalizeDefaultTriageCity, triageChallenges, triageCityShortcuts, triageReadiness, triageRelationships, triageTransportOptions, type TriageChallengeId, type TriageReadinessId, type TriageRelationshipId, type TriageTransportId } from "@/lib/interactive-triage";
 import { spMunicipalities } from "@/lib/sp-municipalities";
 import { cn } from "@/lib/utils";
 
 type Step = 1 | 2 | 3 | 4 | 5 | 6 | 7;
 const relationshipIcons = [UserRound, UserRound, UsersRound, UsersRound, HeartHandshake, UsersRound];
 
-export function InteractiveTriage() {
+export function InteractiveTriage({ defaultCity }: { defaultCity?: string }) {
+  const initialCity = normalizeDefaultTriageCity(defaultCity);
   const [step, setStep] = useState<Step>(1);
   const [relationship, setRelationship] = useState<TriageRelationshipId>();
   const [challenges, setChallenges] = useState<TriageChallengeId[]>([]);
   const [readiness, setReadiness] = useState<TriageReadinessId>();
-  const [city, setCity] = useState("");
-  const [cityQuery, setCityQuery] = useState("");
+  const [city, setCity] = useState(initialCity);
+  const [cityQuery, setCityQuery] = useState(initialCity);
   const [transport, setTransport] = useState<TriageTransportId>();
   const headingRef = useRef<HTMLHeadingElement>(null);
   const advanceTimerRef = useRef<number | undefined>(undefined);
@@ -58,7 +59,7 @@ export function InteractiveTriage() {
   function restart() {
     if (advanceTimerRef.current !== undefined) window.clearTimeout(advanceTimerRef.current);
     advanceTimerRef.current = undefined;
-    setRelationship(undefined); setChallenges([]); setReadiness(undefined); setCity(""); setCityQuery(""); setTransport(undefined); setStep(1);
+    setRelationship(undefined); setChallenges([]); setReadiness(undefined); setCity(initialCity); setCityQuery(initialCity); setTransport(undefined); setStep(1);
   }
   function selectCity(value: string) {
     const normalized = value.trim();
@@ -96,7 +97,8 @@ export function InteractiveTriage() {
               <div className="grid gap-3">{triageReadiness.map((item) => { const selected = readiness === item.id; return <Button key={item.id} type="button" variant="outline" aria-pressed={selected} onClick={() => { setReadiness(item.id); advanceAfterSelection(4); }} className={cn("h-auto min-h-20 justify-start whitespace-normal px-5 py-4 text-left", selected && (item.id === "risk" ? "border-destructive bg-destructive/10" : "border-primary bg-brand-soft text-primary"))}>{item.id === "risk" ? <Siren className="size-5 text-destructive" aria-hidden="true" /> : <HeartHandshake className="size-5" aria-hidden="true" />}<span><strong className="block">{item.label}</strong><span className="mt-1 block text-xs font-normal text-muted-foreground">{item.detail}</span></span></Button>; })}</div>
             </StepPanel>}
             {step === 4 && <StepPanel title="Em qual cidade você está?" subtitle="Orientamos famílias de todo o Estado de São Paulo, com suporte para contato e agendamento 24 horas. A unidade física fica em Araraquara." headingRef={headingRef}>
-              <form onSubmit={submitCity}><label htmlFor="triage-city-search" className="text-sm font-semibold">Digite qualquer município paulista</label><div className="relative mt-2"><Search className="pointer-events-none absolute left-4 top-1/2 size-5 -translate-y-1/2 text-muted-foreground" aria-hidden="true" /><input id="triage-city-search" type="search" autoComplete="address-level2" value={cityQuery} onChange={(event) => setCityQuery(event.target.value)} placeholder="Ex.: Campinas" className="min-h-12 w-full rounded-md border border-input bg-background pl-12 pr-4 text-sm text-foreground outline-none focus-visible:ring-2 focus-visible:ring-ring" /></div></form>
+              {defaultCity && city === initialCity && <p className="mb-4 rounded-md border border-border bg-brand-soft px-4 py-3 text-sm text-foreground"><strong>{initialCity}</strong> foi preenchida a partir desta página. Você pode alterar a cidade abaixo.</p>}
+              <form onSubmit={submitCity}><label htmlFor="triage-city-search" className="text-sm font-semibold">Digite qualquer município paulista</label><div className="relative mt-2"><Search className="pointer-events-none absolute left-4 top-1/2 size-5 -translate-y-1/2 text-muted-foreground" aria-hidden="true" /><input id="triage-city-search" type="search" autoComplete="address-level2" value={cityQuery} onChange={(event) => { setCityQuery(event.target.value); setCity(""); }} placeholder="Ex.: Campinas" className="min-h-12 w-full rounded-md border border-input bg-background pl-12 pr-4 text-sm text-foreground outline-none focus-visible:ring-2 focus-visible:ring-ring" /></div></form>
               {filteredCities.length > 0 && <div className="mt-2 grid gap-1 rounded-md border border-border bg-background p-1" role="listbox" aria-label="Sugestões de municípios">{filteredCities.map((item) => <Button key={item} type="button" variant="ghost" role="option" aria-selected={city === item} onClick={() => selectCity(item)} className="min-h-11 justify-start">{item}</Button>)}</div>}
               <p className="mb-2 mt-5 text-xs font-semibold uppercase text-muted-foreground">Atalhos frequentes</p><div className="grid grid-cols-2 gap-2">{triageCityShortcuts.map((item) => <Button key={item} type="button" variant="outline" onClick={() => selectCity(item)} className="h-auto min-h-12 whitespace-normal px-3 py-2">{item}</Button>)}</div>
             </StepPanel>}
