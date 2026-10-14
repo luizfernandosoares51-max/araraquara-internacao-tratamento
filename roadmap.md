@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Preparar a proposta Morada do Sol — bloqueada pela confirmação de que substitui a Central ou pertence a outra instituição, pelos dados institucionais e serviços confirmados e pela decisão sobre a reinclusão de Bauru; preservar o site atual e não publicar até esclarecimento.
+- [x] Confirmar que Morada do Sol é outra instituição e preservar o site da Central; a criação solicitada deve continuar em um projeto separado, com dados e serviços próprios confirmados, sem transferir os registros da Central.
 
 - [x] Adicionar leitura por voz nativa pt-BR ao painel de acessibilidade, com iniciar, pausar/retomar e parar; sete testes aprovados e controles, extração do conteúdo principal, cancelamento na navegação/saída e telas 320/390/1280 verificados com mecanismo de fala simulado. Barra preservada; voz audível depende do navegador e não foi aferida no ambiente sem áudio. Sem publicação.
 
