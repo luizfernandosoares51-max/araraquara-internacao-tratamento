@@ -248,12 +248,12 @@ function AraraquaraPage() {
           </div>
         </section>
 
+        <InteractiveTriage />
+
 
         <AraraquaraSpecialties />
 
         <AraraquaraInstitutionalVideo />
-
-        <InteractiveTriage />
 
         <div className="bg-background px-5 text-foreground sm:px-8 lg:px-12"><div className="mx-auto max-w-7xl"><CityEditorialSection slug="araraquara" /></div></div>
 

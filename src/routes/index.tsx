@@ -287,6 +287,8 @@ function HomePage() {
             </div>
           </section>
 
+          <InteractiveTriage />
+
           <section className="border-t border-border py-16 lg:py-28">
             <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_.95fr] lg:gap-20">
               <div className="relative overflow-hidden rounded-[2rem] bg-card shadow-xl shadow-brand/10">
@@ -317,7 +319,6 @@ function HomePage() {
           </section>
 
           <CareSpecialties />
-          <InteractiveTriage />
           <FamilyOrientationGuide />
 
           <section id="acolhimento" className="border-t border-border bg-muted/45 py-16 -mx-5 px-5 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 lg:py-28">
