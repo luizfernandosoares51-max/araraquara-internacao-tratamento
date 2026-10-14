@@ -59,7 +59,7 @@ export function GlobalSiteHeader() {
               </li>
             ))}
             {navigationDirectLinks.map(item => (
-              <li key={item.to}><Button asChild variant="ghost" className="global-nav-trigger"><Link to={item.to} onClick={close} activeProps={{ className: "text-primary" }}>{item.label}</Link></Button></li>
+              <li key={item.label}><Button asChild variant="ghost" className="global-nav-trigger"><Link to={item.to} {...("hash" in item ? { hash: item.hash } : {})} onClick={close} activeOptions={{ includeHash: true }} activeProps={{ className: "text-primary" }}>{item.label}</Link></Button></li>
             ))}
           </ul>
           <Button asChild variant="link" className="global-mobile-phone min-h-12 px-3"><a href={phoneHref}><Phone aria-hidden="true" />{phoneDisplay}</a></Button>

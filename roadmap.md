@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Conectar “Vídeos” no menu principal à seção institucional de Araraquara, com fechamento automático no celular, rolagem suave e âncora estável; publicação solicitada nesta entrega.
+
 - [x] Incorporar o vídeo institucional 16:9 à página de Araraquara com player acessível, explicação dos três pilares e contato pelo WhatsApp; linguagem ajustada aos serviços confirmados, sem anunciar desintoxicação hospitalar própria ou transporte 24h.
 
 - [x] Animar os quatro quadros aprovados e montar o vídeo institucional 16:9 com cartão final, trilha instrumental suave e pré-visualização; exportação 1920×1080 com 34,2 s, áudio -14,2 LUFS e abertura, transições e encerramento inspecionados.

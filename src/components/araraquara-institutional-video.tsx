@@ -24,7 +24,7 @@ const purposePillars = [
 
 export function AraraquaraInstitutionalVideo() {
   return (
-    <section aria-labelledby="video-institucional-title" className="border-y border-deep/10 bg-background text-foreground">
+    <section id="videos" aria-labelledby="video-institucional-title" className="scroll-mt-6 border-y border-deep/10 bg-background text-foreground">
       <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
         <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">Mensagem institucional</p>
         <h2 id="video-institucional-title" className="mt-3 max-w-4xl font-display text-2xl font-semibold leading-tight sm:text-4xl">
