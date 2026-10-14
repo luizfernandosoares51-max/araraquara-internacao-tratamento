@@ -74,7 +74,7 @@ export function InteractiveTriage({ defaultCity }: { defaultCity?: string }) {
   }
 
   return (
-    <section id="triagem-familiar" aria-labelledby="triage-title" className="scroll-mt-24 border-y border-border bg-muted/45 py-14 sm:py-20">
+    <section id="triagem-familiar" aria-labelledby="triage-title" className="home-serene scroll-mt-24 border-y border-border bg-muted/45 py-14 text-foreground sm:py-20">
       <div className="mx-auto max-w-5xl px-5 sm:px-8">
         <div className="mb-7 flex flex-wrap items-center justify-between gap-3">
           <p className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-2 text-xs font-semibold text-secondary"><ShieldCheck className="size-4" aria-hidden="true" /> Triagem preliminar ética · não substitui consulta médica</p>
