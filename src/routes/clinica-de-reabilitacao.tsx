@@ -18,8 +18,10 @@ import { emailDisplay, emailHref, phoneDisplay, phoneHref, siteUrl, whatsappHref
 import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
 import { CareSpecialties, FinancialGuidance } from "@/components/care-program-sections";
 
+import { InteractiveTriage } from "@/components/interactive-triage";
+
 const pageUrl = `${siteUrl}/clinica-de-reabilitacao`;
-const imageUrl = `${siteUrl}${visualAssets.clinic.src}`;
+const imageUrl = visualAssets.clinic.src.startsWith("https://") ? visualAssets.clinic.src : undefined;
 const title = "Clínica de Reabilitação | Tratamento e Acolhimento";
 const description =
   "Entenda como funcionam clínica de reabilitação, acolhimento e tratamento para dependência química e alcoolismo, com orientação responsável às famílias.";
@@ -134,12 +136,11 @@ export const Route = createFileRoute("/clinica-de-reabilitacao")({
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
       { property: "og:url", content: pageUrl },
-      { property: "og:image", content: imageUrl },
-      { property: "og:image:alt", content: visualAssets.clinic.alt },
+      ...(imageUrl ? [{ property: "og:image", content: imageUrl }, { property: "og:image:alt", content: visualAssets.clinic.alt }] : []),
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
-      { name: "twitter:image", content: imageUrl },
+      ...(imageUrl ? [{ name: "twitter:image", content: imageUrl }] : []),
     ],
     links: [{ rel: "canonical", href: pageUrl }],
     scripts: [
@@ -161,7 +162,7 @@ export const Route = createFileRoute("/clinica-de-reabilitacao")({
                 { "@type": "Thing", name: "Tratamento da dependência química" },
                 { "@type": "Thing", name: "Tratamento do alcoolismo" },
               ],
-              primaryImageOfPage: { "@type": "ImageObject", url: imageUrl },
+              ...(imageUrl ? { primaryImageOfPage: { "@type": "ImageObject", url: imageUrl } } : {}),
             },
             {
               "@type": "BreadcrumbList",
@@ -229,6 +230,7 @@ function RehabilitationClinicPage() {
           </div>
         </section>
 
+        <InteractiveTriage />
         <section id="entenda" className="bg-ice px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
           <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[.8fr_1.2fr]">
             <div>

@@ -19,6 +19,7 @@ export function InteractiveTriage({ defaultCity }: { defaultCity?: string }) {
   const [transport, setTransport] = useState<TriageTransportId>();
   const headingRef = useRef<HTMLHeadingElement>(null);
   const advanceTimerRef = useRef<number | undefined>(undefined);
+  const previousStepRef = useRef<Step>(1);
   const filteredCities = useMemo(() => {
     const query = cityQuery.trim().toLocaleLowerCase("pt-BR");
     if (query.length < 2) return [];
@@ -26,6 +27,14 @@ export function InteractiveTriage({ defaultCity }: { defaultCity?: string }) {
   }, [cityQuery]);
 
   useEffect(() => {
+    const changed = previousStepRef.current !== step;
+    previousStepRef.current = step;
+    if (changed && headingRef.current) {
+      const rect = headingRef.current.getBoundingClientRect();
+      if (rect.top < 0 || rect.bottom > window.innerHeight - 100) {
+        headingRef.current.scrollIntoView({ block: "start", behavior: "instant" });
+      }
+    }
     if (step === 6) {
       const timer = window.setTimeout(() => setStep(7), 850);
       return () => window.clearTimeout(timer);
@@ -120,5 +129,5 @@ export function InteractiveTriage({ defaultCity }: { defaultCity?: string }) {
 }
 
 function StepPanel({ title, subtitle, headingRef, children }: { title: string; subtitle: string; headingRef: RefObject<HTMLHeadingElement | null>; children: ReactNode }) {
-  return <div className="animate-in fade-in slide-in-from-right-2 duration-300 motion-reduce:animate-none"><h2 ref={headingRef} tabIndex={-1} id="triage-title" className="max-w-3xl font-display text-2xl font-semibold leading-tight outline-none sm:text-4xl">{title}</h2><p className="mb-7 mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">{subtitle}</p>{children}</div>;
+  return <div className="animate-in fade-in slide-in-from-right-2 duration-300 motion-reduce:animate-none"><h2 ref={headingRef} tabIndex={-1} id="triage-title" className="scroll-mt-6 max-w-3xl font-display text-2xl font-semibold leading-tight outline-none sm:text-4xl">{title}</h2><p className="mb-7 mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">{subtitle}</p>{children}</div>;
 }
