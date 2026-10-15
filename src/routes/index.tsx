@@ -5,10 +5,9 @@ import type { ReactNode } from "react";
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import articleSignsImage from "@/assets/blog-dependencia-quimica-sinais.jpg";
 import articleCityImage from "@/assets/blog-dependencia-quimica-sao-carlos.jpg";
-import { AraraquaraPhotoGallery, araraquaraPhotos } from "@/components/araraquara-photo-gallery";
 import { FamilyOrientationGuide } from "@/components/family-orientation-guide";
 import { InteractiveTriage } from "@/components/interactive-triage";
-import { CareSpecialties, FinancialGuidance, RegionalCare, TherapeuticRoutine } from "@/components/care-program-sections";
+import { CareSpecialties, FinancialGuidance } from "@/components/care-program-sections";
 import { cityDirectory } from "@/lib/city-pages";
 import { Button } from "@/components/ui/button";
 import { institutionalIdentity, legalSources } from "@/lib/institutional";
@@ -25,8 +24,8 @@ import {
 import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
 
 const pageUrl = `${siteUrl}/`;
-const pageTitle = "Central de Acolhimento e Reabilitação | Apoio Terapêutico e Familiar em SP";
-const pageDescription = "Portal institucional da Central de Acolhimento e Reabilitação. Orientação familiar 24h para todo o Estado de São Paulo, com sede própria em Araraquara. Fale com nosso plantão.";
+const pageTitle = "Central de Acolhimento e Reabilitação | Orientação e Rede Parceira em SP";
+const pageDescription = "Orientação humanizada para famílias de todo o Estado de São Paulo, com plantão 24h e articulação com rede parceira. Consulte possibilidades de acolhimento e encaminhamento.";
 
 const steps = [
   "Contato com a família",
@@ -36,10 +35,6 @@ const steps = [
   "Definição dos próximos passos",
   "Acolhimento",
 ];
-
-const photoGalleryCities = [
-  { name: "Araraquara", units: ["Unidade de Araraquara"] },
-] as const;
 
 const featuredCityNames = new Set(["São Carlos", "Ribeirão Preto"]);
 const featuredCities = cityDirectory.filter((city) => featuredCityNames.has(city.name));
@@ -70,7 +65,7 @@ const existingArticles = [
 const faqs = [
   {
     question: "Famílias de qualquer cidade de São Paulo podem buscar orientação?",
-    answer: "Sim. Famílias do interior e da capital paulista podem conversar com o plantão de orientação da Central e selecionar sua cidade na triagem. A única sede física fica em Araraquara; as páginas regionais não representam filiais.",
+    answer: "Sim. Famílias do interior e da capital paulista podem conversar com o plantão de orientação da Central e selecionar sua cidade na triagem. A equipe orienta sobre possibilidades de acolhimento e encaminhamento na rede parceira. Disponibilidade, localização e perfil de admissão são confirmados no contato; páginas regionais não comprovam unidades em cada município.",
   },
   {
     question: "O plantão 24 horas inclui remoção imediata?",
@@ -107,9 +102,9 @@ const faqs = [
       "O tempo varia conforme as necessidades, a evolução e o plano de cuidado de cada pessoa. A duração deve ser acompanhada e reavaliada pela equipe, sem promessas de prazo fixo ou garantia de resultados.",
   },
   {
-    question: "Onde fica a unidade física da Central?",
+    question: "Como encontrar uma possibilidade de acolhimento na minha região?",
     answer:
-      "A única unidade física da Central está localizada em Araraquara, SP. Pessoas e famílias de outras cidades podem entrar em contato para receber informações e orientação; as páginas locais não representam filiais ou unidades físicas.",
+      "Informe sua cidade na triagem e converse com o plantão. A Central articula orientação e encaminhamento com uma rede parceira declarada pela instituição. O estabelecimento, sua localização, equipe, autorizações e disponibilidade devem ser esclarecidos antes de qualquer deslocamento ou admissão.",
   },
 ];
 
@@ -255,22 +250,22 @@ function HomePage() {
             <img src={visualAssets.home.hero.src} width={1600} height={1067} decoding="async" fetchPriority="high" alt={visualAssets.home.hero.alt} className="absolute inset-0 h-full w-full object-cover" />
             <div className="absolute inset-0 bg-foreground/80" aria-hidden="true" />
             <div className="relative max-w-4xl text-background">
-              <p className="text-xs font-semibold uppercase leading-relaxed">CENTRAL DE ACOLHIMENTO E REABILITAÇÃO HUMANA</p>
+              <p className="text-xs font-semibold uppercase leading-relaxed">ORIENTAÇÃO ESTADUAL E REDE PARCEIRA DE ACOLHIMENTO</p>
               <h1 id="institucional-titulo" className="mt-5 max-w-4xl font-display text-4xl font-semibold leading-tight text-background sm:text-5xl lg:text-6xl">
-                Acolhimento, Reabilitação e Cuidado Familiar no Estado de São Paulo
+                Central de Acolhimento e Reabilitação em São Paulo
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-background/90 sm:text-lg">
-                Orientação familiar 24 horas sobre dependência química, alcoolismo e necessidades de saúde mental. Nossa sede própria em Araraquara recebe famílias do interior e da capital paulista, com acolhimento voluntário e cuidado individualizado.
+                Orientação humanizada e plantão de apoio familiar 24 horas. Atendemos famílias de todo o Estado de São Paulo e articulamos possibilidades de acolhimento e encaminhamento com uma rede parceira, conforme as necessidades de cuidado e a disponibilidade confirmada pela equipe.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <Button asChild size="lg" className="h-auto min-h-14 whitespace-normal bg-whatsapp px-6 py-4 text-whatsapp-foreground hover:bg-whatsapp/90">
-                  <a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />Falar com o Plantão 24h</a>
+                  <a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />Falar com o Plantão 24h no WhatsApp</a>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="h-auto min-h-14 whitespace-normal px-6 py-4 text-foreground">
-                  <Link to="/clinica-de-recuperacao-em-araraquara"><ArrowRight aria-hidden="true" />Conhecer Nossa Estrutura</Link>
+                  <Link to="/cidades"><MapPin aria-hidden="true" />Encontrar orientação na minha região</Link>
                 </Button>
               </div>
-              <p className="mt-5 flex max-w-2xl items-start gap-2 text-xs leading-relaxed text-background/90"><ShieldCheck className="size-4 shrink-0" aria-hidden="true" />Plantão de orientação e suporte para agendamento. Remoção depende de confirmação e agendamento; risco imediato: SAMU 192.</p>
+              <p className="mt-5 flex max-w-2xl items-start gap-2 text-xs leading-relaxed text-background/90"><ShieldCheck className="size-4 shrink-0" aria-hidden="true" />Orientação familiar 24 horas · Cuidado individualizado · Articulação com rede parceira</p>
               <p className="mt-6 text-xs text-background/75">{conceptualImageCaption}</p>
             </div>
           </section>
@@ -310,7 +305,7 @@ function HomePage() {
                 <SectionLabel>Sobre a Central</SectionLabel>
                 <h2 className="mt-3 font-display text-3xl font-semibold leading-tight sm:text-5xl">Sobre a Central de Acolhimento e Reabilitação</h2>
                 <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground sm:text-base">A Central reúne informação, orientação e acolhimento para pessoas e famílias que procuram compreender possibilidades de cuidado diante da dependência química e do alcoolismo. A conversa inicial ajuda a organizar dúvidas com clareza e responsabilidade.</p>
-                <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground sm:text-base">A unidade física está localizada exclusivamente em Araraquara. As páginas de outras cidades oferecem conteúdo regional e caminhos de orientação, sem representar filiais.</p>
+                <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground sm:text-base">A instituição informa contar com uma rede parceira para articulação de encaminhamentos. A equipe esclarece o serviço indicado, as condições de acesso e a disponibilidade de cada estabelecimento antes da decisão familiar. A Central é uma instituição de acolhimento e orientação, não um órgão público de regulação de vagas.</p>
               </div>
             </div>
           </section>
@@ -382,7 +377,6 @@ function HomePage() {
             </div>
           </section>
 
-          <TherapeuticRoutine />
           <FinancialGuidance />
           <section id="internacao" className="border-t border-border bg-muted/45 py-16 -mx-5 px-5 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 lg:py-24">
             <SectionLabel>Acolhimento e encaminhamento médico</SectionLabel>
@@ -393,14 +387,14 @@ function HomePage() {
                   <span className="grid size-8 place-items-center rounded-full bg-brand text-xs font-bold text-primary-foreground">V</span>
                   <h3 className="font-display text-xl font-semibold">Acolhimento voluntário na Central</h3>
                 </div>
-                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{institutionalIdentity.receptionStatement} O acolhimento psicossocial não equivale a internação hospitalar.</p>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">A Central orienta sobre acolhimento voluntário, suporte psicossocial e participação familiar. O plano de cuidado e as condições de admissão são esclarecidos com a equipe responsável. Acolhimento psicossocial não equivale a internação hospitalar.</p>
               </article>
               <article className="rounded-2xl border border-border bg-card p-5 shadow-sm sm:p-7">
                 <div className="flex items-center gap-3">
                   <span className="grid size-8 place-items-center rounded-full bg-secondary text-xs font-bold text-secondary-foreground">I</span>
                   <h3 className="font-display text-xl font-semibold">Orientação e encaminhamento hospitalar</h3>
                 </div>
-                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{institutionalIdentity.referralStatement}</p>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">Quando há indicação de desintoxicação médica, cuidado hospitalar ou internação involuntária clínica, a Central apoia a família na organização dos trâmites e no encaminhamento. Avaliação, autorização, admissão e comunicações legais são responsabilidades dos profissionais e estabelecimentos médicos receptores. Transporte depende de confirmação e agendamento.</p>
               </article>
             </div>
             <div className="mt-8 border-y border-border py-6">
@@ -439,10 +433,19 @@ function HomePage() {
 
           <section id="atendimento-por-cidade" className="border-t border-border bg-muted/45 py-16 -mx-5 px-5 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 lg:py-24">
             <SectionLabel>Orientação em diferentes regiões</SectionLabel>
-            <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Atendimento Especializado em Todo o Estado de São Paulo</h2>
+            <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Nossa rede parceira e orientação no Estado de São Paulo</h2>
             <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted-foreground sm:text-base">
-              A partir da sede própria em Araraquara, a Central orienta famílias do interior e da capital paulista, incluindo as regiões de Ribeirão Preto, Rio Claro e São Carlos. O suporte de logística e agendamento de resgate ou remoção depende de avaliação e confirmação das condições. Consulte os municípios no diretório: as páginas regionais não representam filiais.
+              Famílias da capital, interior e litoral podem buscar orientação. A rede parceira é uma informação fornecida pela instituição: a localização e a disponibilidade dos estabelecimentos são esclarecidas no contato, sem garantia de unidade em cada região ou de vaga próxima. O plantão 24h orienta e apoia agendamentos; a execução de transporte depende de confirmação.
             </p>
+            <ul className="mt-8 grid gap-3 border-y border-border py-6 sm:grid-cols-2">
+              {['Grande São Paulo e Capital', 'Região Central e Centro-Oeste Paulista', 'Ribeirão Preto e Franca', 'Rio Claro, Campinas e Circuito das Águas', 'Demais municípios do interior e litoral'].map(region => <li key={region} className="flex items-start gap-2 text-sm"><MapPin className="size-4 shrink-0 text-secondary" aria-hidden="true" />{region}</li>)}
+            </ul>
+            <p className="mt-3 text-xs leading-relaxed text-muted-foreground">Regiões de origem das famílias que podem solicitar orientação; esta lista não identifica unidades físicas ou autorizações locais.</p>
+            <div className="mt-8 grid gap-5 md:grid-cols-3">
+              <article className="rounded-lg border border-border bg-card p-5"><ShieldCheck className="size-5 text-secondary" aria-hidden="true" /><h3 className="mt-3 font-display text-lg font-semibold">Documentação e segurança</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Antes da admissão, esclareça a identificação do estabelecimento, sua licença sanitária aplicável, responsabilidade técnica e modalidade de cuidado. Não apresentamos certificação geral da rede.</p></article>
+              <article className="rounded-lg border border-border bg-card p-5"><Users className="size-5 text-secondary" aria-hidden="true" /><h3 className="mt-3 font-display text-lg font-semibold">Equipe e necessidades de cuidado</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Confirme com o estabelecimento receptor os profissionais, a supervisão e os recursos disponíveis para o caso. A composição da equipe não é presumida para todos os parceiros.</p></article>
+              <article className="rounded-lg border border-border bg-card p-5"><HeartHandshake className="size-5 text-secondary" aria-hidden="true" /><h3 className="mt-3 font-display text-lg font-semibold">Logística orientada</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">O plantão oferece orientação e suporte para agendamento 24h. Trajeto, condições e disponibilidade de transporte são confirmados antes do deslocamento, sem promessa de remoção imediata.</p></article>
+            </div>
              <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               <article className="glass-panel flex min-h-52 flex-col rounded-2xl p-5 sm:p-6">
                 <MapPin className="size-5 text-secondary" aria-hidden="true" />
@@ -466,60 +469,6 @@ function HomePage() {
             <Button asChild size="lg" className="mt-6 h-auto min-h-12 whitespace-normal py-3">
               <Link to="/cidades">Conhecer todas as cidades <ArrowRight className="size-4" aria-hidden="true" /></Link>
             </Button>
-          </section>
-
-          <RegionalCare />
-          <section id="galeria-fotos" aria-labelledby="galeria-titulo" className="scroll-mt-6 border-t border-border py-16 lg:py-24">
-            <SectionLabel>Unidade física</SectionLabel>
-             <h2 id="galeria-titulo" className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Nossa estrutura de acolhimento em Araraquara</h2>
-             <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted-foreground">A única unidade física da Central está localizada em Araraquara, SP. Pessoas e famílias de outras cidades da região também podem buscar informação e orientação; as páginas locais não representam filiais. As imagens abaixo são representações conceituais da jornada de acolhimento.</p>
-            <Link to="/clinica-de-recuperacao-em-araraquara" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:underline">Conheça a unidade em Araraquara <ArrowRight className="size-4" aria-hidden="true" /></Link>
-            <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-12">
-              {araraquaraPhotos.slice(2, 5).map((photo, index) => (
-                <figure key={photo.src} className={`overflow-hidden rounded-2xl bg-card shadow-lg shadow-brand/10 ${index === 0 ? "col-span-2 lg:col-span-6" : "col-span-1 lg:col-span-3"}`}>
-                  <img src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} loading="lazy" decoding="async" className="aspect-[4/5] h-full w-full object-cover lg:aspect-auto" />
-                </figure>
-              ))}
-            </div>
-            <details className="group/gallery">
-              <summary className="glass-panel mt-6 flex min-h-16 cursor-pointer list-none items-center justify-between gap-4 rounded-2xl px-5 py-4 marker:content-none sm:px-6">
-                <span className="flex items-center gap-3 font-display text-sm font-semibold uppercase tracking-[0.14em] text-secondary sm:text-base">
-                  <Camera className="size-5 shrink-0" aria-hidden="true" />
-                  Ver galeria
-                </span>
-                <ChevronDown className="size-5 shrink-0 text-muted-foreground transition-transform group-open/gallery:rotate-180" aria-hidden="true" />
-              </summary>
-
-              <div className="pt-8">
-                <h3 className="font-display text-xl font-semibold leading-tight sm:text-2xl">
-                  Representações conceituais de acolhimento
-                </h3>
-
-                <div className="mt-8 grid gap-4 lg:grid-cols-2">
-                  {photoGalleryCities.map((city) => (
-                    <details key={city.name} className="group/city glass-panel rounded-2xl">
-                      <summary className="flex min-h-16 cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 marker:content-none">
-                        <span className="font-display text-base font-semibold uppercase text-foreground">{city.name}</span>
-                        <ChevronDown className="size-5 shrink-0 text-secondary transition-transform group-open/city:rotate-180" aria-hidden="true" />
-                      </summary>
-                      <div className="space-y-3 border-t border-border p-4 sm:p-5">
-                        {city.units.map((unit) => (
-                          <details key={unit} className="group/unit overflow-hidden rounded-xl border border-border bg-glass">
-                            <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 px-4 py-3 marker:content-none">
-                              <span className="text-sm font-semibold">{unit}</span>
-                              <ChevronDown className="size-4 shrink-0 text-muted-foreground transition-transform group-open/unit:rotate-180" aria-hidden="true" />
-                            </summary>
-                            <div className="border-t border-border p-4">
-                              <AraraquaraPhotoGallery />
-                            </div>
-                          </details>
-                        ))}
-                      </div>
-                    </details>
-                  ))}
-                </div>
-              </div>
-            </details>
           </section>
 
           <section id="como-funciona" className="border-t border-border bg-muted/45 py-16 -mx-5 px-5 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 lg:py-28">
