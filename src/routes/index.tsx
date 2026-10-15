@@ -24,8 +24,8 @@ import {
 import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
 
 const pageUrl = `${siteUrl}/`;
-const pageTitle = "Central de Acolhimento e Reabilitação | Orientação e Rede Parceira em SP";
-const pageDescription = "Orientação humanizada para famílias de todo o Estado de São Paulo, com plantão 24h e articulação com rede parceira. Consulte possibilidades de acolhimento e encaminhamento.";
+const pageTitle = "Central de Acolhimento e Reabilitação | Regulação Estadual em SP";
+const pageDescription = "Orientação e direcionamento de famílias para uma rede de clínicas credenciadas e parceiras em São Paulo. Plantão 24h e transporte mediante agendamento e disponibilidade.";
 
 const steps = [
   "Contato com a família",
@@ -69,7 +69,7 @@ const faqs = [
   },
   {
     question: "O plantão 24 horas inclui remoção imediata?",
-    answer: "O plantão 24 horas oferece orientação familiar e suporte para agendamento de resgate ou remoção. O transporte depende de avaliação, confirmação das condições e agendamento, sem garantia de execução imediata ou 24 horas. Em risco imediato à vida, procure o SAMU 192.",
+    answer: "Não. O plantão 24h e o transporte funcionam mediante agendamento e disponibilidade da rede. A equipe confirma as condições de atendimento e deslocamento, sem garantia de resposta ou remoção imediata. Em risco imediato à vida, procure o SAMU 192.",
   },
   {
     question: "O que avaliar ao escolher uma clínica de reabilitação?",
@@ -104,7 +104,7 @@ const faqs = [
   {
     question: "Como encontrar uma possibilidade de acolhimento na minha região?",
     answer:
-      "Informe sua cidade na triagem e converse com o plantão. A Central articula orientação e encaminhamento com uma rede parceira declarada pela instituição. O estabelecimento, sua localização, equipe, autorizações e disponibilidade devem ser esclarecidos antes de qualquer deslocamento ou admissão.",
+      "Informe sua cidade na triagem e converse com o plantão. A Central orienta e direciona famílias para uma rede de clínicas credenciadas e parceiras em São Paulo. Segundo declaração da instituição, todas são regularizadas e autorizadas pela Vigilância Sanitária competente. Identificação, licenças, equipe e disponibilidade devem ser esclarecidas antes do deslocamento ou admissão; essa declaração não equivale à verificação independente das autorizações.",
   },
 ];
 
@@ -165,7 +165,7 @@ export const Route = createFileRoute("/")({
               areaServed: "Estado de São Paulo",
               sameAs: [facebookHref, instagramHref],
               description:
-                "Orientação para pessoas e famílias que buscam acolhimento e tratamento para dependência química e alcoolismo.",
+                pageDescription,
             },
             {
               "@type": "FAQPage",
@@ -250,12 +250,12 @@ function HomePage() {
             <img src={visualAssets.home.hero.src} width={1600} height={1067} decoding="async" fetchPriority="high" alt={visualAssets.home.hero.alt} className="absolute inset-0 h-full w-full object-cover" />
             <div className="absolute inset-0 bg-foreground/80" aria-hidden="true" />
             <div className="relative max-w-4xl text-background">
-              <p className="text-xs font-semibold uppercase leading-relaxed">ORIENTAÇÃO ESTADUAL E REDE PARCEIRA DE ACOLHIMENTO</p>
+              <p className="text-xs font-semibold uppercase leading-relaxed">CENTRAL DE ACOLHIMENTO E REGULAÇÃO ESTADUAL</p>
               <h1 id="institucional-titulo" className="mt-5 max-w-4xl font-display text-4xl font-semibold leading-tight text-background sm:text-5xl lg:text-6xl">
                 Central de Acolhimento e Reabilitação em São Paulo
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-background/90 sm:text-lg">
-                Orientação humanizada e plantão de apoio familiar 24 horas. Atendemos famílias de todo o Estado de São Paulo e articulamos possibilidades de acolhimento e encaminhamento com uma rede parceira, conforme as necessidades de cuidado e a disponibilidade confirmada pela equipe.
+                Orientamos e direcionamos famílias para uma rede de clínicas credenciadas e parceiras em todo o Estado de São Paulo. Escuta humanizada e organização dos próximos passos, conforme as necessidades de cuidado de cada pessoa.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <Button asChild size="lg" className="h-auto min-h-14 whitespace-normal bg-whatsapp px-6 py-4 text-whatsapp-foreground hover:bg-whatsapp/90">
@@ -265,7 +265,7 @@ function HomePage() {
                   <Link to="/cidades"><MapPin aria-hidden="true" />Encontrar orientação na minha região</Link>
                 </Button>
               </div>
-              <p className="mt-5 flex max-w-2xl items-start gap-2 text-xs leading-relaxed text-background/90"><ShieldCheck className="size-4 shrink-0" aria-hidden="true" />Orientação familiar 24 horas · Cuidado individualizado · Articulação com rede parceira</p>
+              <p className="mt-5 flex max-w-2xl items-start gap-2 text-xs leading-relaxed text-background/90"><ShieldCheck className="size-4 shrink-0" aria-hidden="true" />Plantão 24h e transporte mediante agendamento e disponibilidade da rede. Em risco imediato à vida, procure o SAMU 192.</p>
               <p className="mt-6 text-xs text-background/75">{conceptualImageCaption}</p>
             </div>
           </section>
@@ -305,7 +305,7 @@ function HomePage() {
                 <SectionLabel>Sobre a Central</SectionLabel>
                 <h2 className="mt-3 font-display text-3xl font-semibold leading-tight sm:text-5xl">Sobre a Central de Acolhimento e Reabilitação</h2>
                 <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground sm:text-base">A Central reúne informação, orientação e acolhimento para pessoas e famílias que procuram compreender possibilidades de cuidado diante da dependência química e do alcoolismo. A conversa inicial ajuda a organizar dúvidas com clareza e responsabilidade.</p>
-                <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground sm:text-base">A instituição informa contar com uma rede parceira para articulação de encaminhamentos. A equipe esclarece o serviço indicado, as condições de acesso e a disponibilidade de cada estabelecimento antes da decisão familiar. A Central é uma instituição de acolhimento e orientação, não um órgão público de regulação de vagas.</p>
+                <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground sm:text-base">Atuamos como Central de Acolhimento e Regulação Estadual: organizamos a orientação e o direcionamento de famílias para clínicas credenciadas e parceiras. A equipe esclarece o serviço indicado, as condições de acesso e a disponibilidade antes da decisão familiar. Regulação, aqui, significa articulação privada de encaminhamentos; a Central não é um órgão público regulador e não garante vagas.</p>
               </div>
             </div>
           </section>
@@ -433,16 +433,17 @@ function HomePage() {
 
           <section id="atendimento-por-cidade" className="border-t border-border bg-muted/45 py-16 -mx-5 px-5 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 lg:py-24">
             <SectionLabel>Orientação em diferentes regiões</SectionLabel>
-            <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Nossa rede parceira e orientação no Estado de São Paulo</h2>
+            <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Rede de clínicas credenciadas e parceiras em São Paulo</h2>
             <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted-foreground sm:text-base">
-              Famílias da capital, interior e litoral podem buscar orientação. A rede parceira é uma informação fornecida pela instituição: a localização e a disponibilidade dos estabelecimentos são esclarecidas no contato, sem garantia de unidade em cada região ou de vaga próxima. O plantão 24h orienta e apoia agendamentos; a execução de transporte depende de confirmação.
+              Famílias da capital, interior e litoral podem buscar orientação e direcionamento para a rede. Segundo declaração da Central, todas as clínicas credenciadas e parceiras são devidamente regularizadas e autorizadas pela Vigilância Sanitária competente, observadas as normas aplicáveis e as diretrizes da ANVISA. A localização e a disponibilidade de cada estabelecimento são confirmadas no contato, sem garantia de unidade em cada município ou de vaga próxima.
             </p>
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">A regularidade da rede é uma declaração institucional, não uma verificação independente de licenças nem uma certificação geral emitida pela ANVISA. Antes da admissão, solicite a identificação do estabelecimento e sua documentação sanitária. Plantão 24h e transporte funcionam mediante agendamento e disponibilidade da rede.</p>
             <ul className="mt-8 grid gap-3 border-y border-border py-6 sm:grid-cols-2">
               {['Grande São Paulo e Capital', 'Região Central e Centro-Oeste Paulista', 'Ribeirão Preto e Franca', 'Rio Claro, Campinas e Circuito das Águas', 'Demais municípios do interior e litoral'].map(region => <li key={region} className="flex items-start gap-2 text-sm"><MapPin className="size-4 shrink-0 text-secondary" aria-hidden="true" />{region}</li>)}
             </ul>
             <p className="mt-3 text-xs leading-relaxed text-muted-foreground">Regiões de origem das famílias que podem solicitar orientação; esta lista não identifica unidades físicas ou autorizações locais.</p>
             <div className="mt-8 grid gap-5 md:grid-cols-3">
-              <article className="rounded-lg border border-border bg-card p-5"><ShieldCheck className="size-5 text-secondary" aria-hidden="true" /><h3 className="mt-3 font-display text-lg font-semibold">Documentação e segurança</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Antes da admissão, esclareça a identificação do estabelecimento, sua licença sanitária aplicável, responsabilidade técnica e modalidade de cuidado. Não apresentamos certificação geral da rede.</p></article>
+              <article className="rounded-lg border border-border bg-card p-5"><ShieldCheck className="size-5 text-secondary" aria-hidden="true" /><h3 className="mt-3 font-display text-lg font-semibold">Documentação e segurança</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">A instituição declara regularidade sanitária de todas as clínicas da rede. Antes da admissão, confirme a identificação, a licença sanitária aplicável, a responsabilidade técnica e a modalidade de cuidado do estabelecimento receptor.</p></article>
               <article className="rounded-lg border border-border bg-card p-5"><Users className="size-5 text-secondary" aria-hidden="true" /><h3 className="mt-3 font-display text-lg font-semibold">Equipe e necessidades de cuidado</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Confirme com o estabelecimento receptor os profissionais, a supervisão e os recursos disponíveis para o caso. A composição da equipe não é presumida para todos os parceiros.</p></article>
               <article className="rounded-lg border border-border bg-card p-5"><HeartHandshake className="size-5 text-secondary" aria-hidden="true" /><h3 className="mt-3 font-display text-lg font-semibold">Logística orientada</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">O plantão oferece orientação e suporte para agendamento 24h. Trajeto, condições e disponibilidade de transporte são confirmados antes do deslocamento, sem promessa de remoção imediata.</p></article>
             </div>
