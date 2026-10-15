@@ -1,10 +1,16 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { institutionalIdentity, institutionalLocalBusiness, involuntaryHospitalizationSafeguards } from "./institutional";
+import { institutionalIdentity, institutionalLocalBusiness, institutionalNetwork, involuntaryHospitalizationSafeguards } from "./institutional";
 
 test("preserves the exact CNPJ supplied by the institution", () => {
   assert.equal(institutionalIdentity.cnpj, "40.241.645/0001-30");
 });
+
+test("network administrative reception remains in Araraquara", () => assert.equal(institutionalNetwork.administrativeCity, "Araraquara - SP"));
+test("network does not guarantee insurance coverage", () => assert.equal(institutionalNetwork.coverageGuaranteed, false));
+test("insurer mentions do not establish verified partnerships", () => assert.equal(institutionalNetwork.insurerPartnershipsVerified, false));
+test("network declaration does not verify individual sanitary licenses", () => assert.equal(institutionalNetwork.individualSanitaryLicensesVerified, false));
+test("network declaration does not establish physicians available 24h", () => assert.equal(institutionalNetwork.roundTheClockPhysiciansVerified, false));
 
 test("preserves the psychologist and exact CRP confirmed by the institution", () => {
   assert.equal(institutionalIdentity.psychologyResponsible.name, "Margarete Vasques");

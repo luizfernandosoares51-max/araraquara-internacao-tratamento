@@ -17,7 +17,8 @@ export function InstitutionalFooter() {
               <div><dt className="font-semibold">Empresa / Titular</dt><dd className="text-muted-foreground">{institutionalIdentity.legalName}</dd></div>
               <div><dt className="font-semibold">CNPJ</dt><dd className="text-muted-foreground">{institutionalIdentity.cnpj}</dd></div>
             </dl>
-            <p className="mb-3 mt-5 text-sm font-semibold">Unidade física somente em Araraquara/SP</p>
+            <p className="mb-3 mt-5 text-sm font-semibold">Sede administrativa e acolhimento às famílias em Araraquara/SP</p>
+            <p className="mb-3 text-sm leading-relaxed text-muted-foreground">A unidade própria mantém acolhimento voluntário. A articulação da rede parceira não representa filiais próprias nas demais cidades.</p>
             <InstitutionalLocation compact />
           </section>
           <section className="min-w-0">

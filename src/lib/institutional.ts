@@ -78,6 +78,16 @@ export function institutionalHead(path: string, title: string, description: stri
   };
 }
 
+export const institutionalNetwork = {
+  administrativeCity: "Araraquara - SP",
+  coverageGuaranteed: false,
+  insurerPartnershipsVerified: false,
+  individualSanitaryLicensesVerified: false,
+  roundTheClockPhysiciansVerified: false,
+  insurers: ["Bradesco Saúde", "SulAmérica Saúde", "Amil", "Unimed", "NotreDame Intermédica", "Porto Seguro Saúde"],
+  regionalStatement: "Orientação, regulação e direcionamento para clínicas credenciadas e parceiras em todo o Estado de São Paulo, conforme declaração institucional. Nossa sede administrativa de atendimento e acolhimento às famílias localiza-se em Araraquara - SP. Orientamos famílias de Ribeirão Preto, São Carlos, Rio Claro, Campinas, Grande São Paulo e interior; a unidade receptora, suas autorizações e a disponibilidade são confirmadas antes do encaminhamento.",
+} as const;
+
 export const legalSources = [
   { label: "Lei nº 10.216/2001", href: "https://www.planalto.gov.br/ccivil_03/leis/leis_2001/l10216.htm" },
   { label: "Lei nº 13.840/2019", href: "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13840.htm" },
