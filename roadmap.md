@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Tornar a Home e a oferta institucional mais diretas, substituir instruções burocráticas por apoio da equipe, destacar consulta de vagas no WhatsApp e preservar condições reais; quatro destaques, prévia 1280/390, contato oficial, canonical, 32 testes e compilação OK; solicitar publicação com aprovação.
+
 - [x] Atualizar Home e rodapé com sede administrativa, rede estadual, segurança e consulta de seis planos sem garantias não comprovadas; 32 testes, prévia 1280/390, fluxo de crise Campinas até WhatsApp com SAMU preservado e compilação OK; solicitar publicação.
 
 - [x] Reformular somente a Home como Central de Acolhimento e Regulação Estadual, com rede credenciada/parceira e regularidade sanitária declaradas pela instituição; esclarecer agendamento e disponibilidade para transporte e plantão 24h, preservar triagem aberta; prévia, canonical, 27 testes e compilação verificados, sem publicação.

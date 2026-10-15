@@ -85,7 +85,7 @@ export const institutionalNetwork = {
   individualSanitaryLicensesVerified: false,
   roundTheClockPhysiciansVerified: false,
   insurers: ["Bradesco Saúde", "SulAmérica Saúde", "Amil", "Unimed", "NotreDame Intermédica", "Porto Seguro Saúde"],
-  regionalStatement: "Orientação, regulação e direcionamento para clínicas credenciadas e parceiras em todo o Estado de São Paulo, conforme declaração institucional. Nossa sede administrativa de atendimento e acolhimento às famílias localiza-se em Araraquara - SP. Orientamos famílias de Ribeirão Preto, São Carlos, Rio Claro, Campinas, Grande São Paulo e interior; a unidade receptora, suas autorizações e a disponibilidade são confirmadas antes do encaminhamento.",
+  regionalStatement: "Oferecemos acolhimento voluntário e direcionamento para clínicas credenciadas e parceiras em todo o Estado de São Paulo, conforme declaração institucional. Nossa sede administrativa de atendimento e acolhimento às famílias localiza-se em Araraquara - SP. Oferecemos apoio às famílias de Ribeirão Preto, São Carlos, Rio Claro, Campinas, Grande São Paulo e interior; a unidade receptora, suas autorizações e a disponibilidade são confirmadas antes do encaminhamento.",
 } as const;
 
 export const legalSources = [
