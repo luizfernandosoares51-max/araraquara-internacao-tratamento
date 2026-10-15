@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Camera, Check, ChevronDown, HeartHandshake, Users, Mail, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
+import { ArrowRight, Camera, Check, ChevronDown, HeartHandshake, Users, Mail, MapPin, MessageCircle, Phone, ShieldCheck, Truck } from "lucide-react";
 import type { ReactNode } from "react";
 
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
@@ -256,18 +256,39 @@ function HomePage() {
                 Central de Acolhimento e Reabilitação em São Paulo
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-background/90 sm:text-lg">
-                Oferecemos acolhimento voluntário e direcionamento para uma rede de clínicas credenciadas e parceiras em São Paulo. Nossa equipe acolhe sua família e organiza os próximos passos, conforme as necessidades de cuidado e a disponibilidade da rede.
+                Disponibilizamos acolhimento voluntário, apoio para encaminhamento à internação voluntária ou involuntária em estabelecimentos médicos habilitados e suporte para agendamento de remoção 24 horas. Nossa equipe organiza os próximos passos com a família e a rede parceira em São Paulo. Vagas, admissão e transporte dependem de avaliação, confirmação e disponibilidade.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <Button asChild size="lg" className="h-auto min-h-14 whitespace-normal bg-whatsapp px-6 py-4 text-whatsapp-foreground hover:bg-whatsapp/90">
-                  <a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />Consultar Vagas e Falar com o Plantão Agora</a>
+                  <a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />Solicitar Vaga ou Agendar Remoção no Plantão 24h</a>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="h-auto min-h-14 whitespace-normal px-6 py-4 text-foreground">
-                  <Link to="/cidades"><MapPin aria-hidden="true" />Encontrar orientação na minha região</Link>
+                  <a href="#triagem-familiar" onClick={(event) => { const triage = document.getElementById("triagem-familiar"); if (!triage) return; event.preventDefault(); triage.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "start" }); }}><ArrowRight aria-hidden="true" />Iniciar Triagem Rápida</a>
                 </Button>
               </div>
-              <p className="mt-5 flex max-w-2xl items-start gap-2 text-xs leading-relaxed text-background/90"><ShieldCheck className="size-4 shrink-0" aria-hidden="true" />Plantão 24h e transporte mediante agendamento e disponibilidade da rede. Em risco imediato à vida, procure o SAMU 192.</p>
+              <ul className="mt-5 flex flex-wrap gap-x-5 gap-y-3 text-xs leading-relaxed text-background/90" aria-label="Compromissos do atendimento">
+                <li className="flex items-start gap-2"><Check className="size-4 shrink-0" aria-hidden="true" />Encaminhamento médico conforme a Lei 13.840/2019</li>
+                <li className="flex items-start gap-2"><Check className="size-4 shrink-0" aria-hidden="true" />Suporte de agendamento 24h</li>
+                <li className="flex items-start gap-2"><Check className="size-4 shrink-0" aria-hidden="true" />Rede regularizada segundo declaração institucional</li>
+              </ul>
               <p className="mt-6 text-xs text-background/75">{conceptualImageCaption}</p>
+            </div>
+            <div className="relative mt-8 grid gap-4 md:grid-cols-3" aria-label="Acolhimento, encaminhamento e remoção">
+              <article className="rounded-lg border border-border bg-card p-5 text-card-foreground">
+                <HeartHandshake className="size-6 text-secondary" aria-hidden="true" />
+                <h2 className="mt-3 font-display text-xl font-semibold">Acolhimento e internação voluntária</h2>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Oferecemos acolhimento voluntário e suporte psicossocial na Central. Quando há indicação de internação médica com consentimento, apoiamos o encaminhamento a estabelecimento habilitado. Admissão depende de avaliação e disponibilidade.</p>
+              </article>
+              <article className="rounded-lg border border-border bg-card p-5 text-card-foreground">
+                <ShieldCheck className="size-6 text-secondary" aria-hidden="true" />
+                <h2 className="mt-3 font-display text-xl font-semibold">Encaminhamento para internação involuntária</h2>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Apoiamos a família nos trâmites e no encaminhamento a unidades médicas habilitadas. A medida é excepcional e depende de avaliação, autorização médica e requisitos legais; a solicitação familiar, por si só, não autoriza a internação.</p>
+              </article>
+              <article className="rounded-lg border border-border bg-card p-5 text-card-foreground">
+                <Truck className="size-6 text-secondary" aria-hidden="true" />
+                <h2 className="mt-3 font-display text-xl font-semibold">Remoção: suporte de agendamento 24h</h2>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">O plantão apoia a organização do deslocamento com a família. A execução depende de agendamento, avaliação das necessidades, trajeto e disponibilidade da rede, sem garantia de resgate imediato ou transporte 24h.</p>
+              </article>
             </div>
           </section>
 

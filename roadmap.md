@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Destacar acolhimento voluntário, encaminhamento para internação involuntária e suporte de agendamento de remoção 24h na abertura da Home; botão abre a triagem em 1280/390, contato oficial, três destaques, 32 testes e compilação OK; condições médicas e disponibilidade preservadas; solicitar publicação.
+
 - [x] Tornar a Home e a oferta institucional mais diretas, substituir instruções burocráticas por apoio da equipe, destacar consulta de vagas no WhatsApp e preservar condições reais; quatro destaques, prévia 1280/390, contato oficial, canonical, 32 testes e compilação OK; solicitar publicação com aprovação.
 
 - [x] Atualizar Home e rodapé com sede administrativa, rede estadual, segurança e consulta de seis planos sem garantias não comprovadas; 32 testes, prévia 1280/390, fluxo de crise Campinas até WhatsApp com SAMU preservado e compilação OK; solicitar publicação.
