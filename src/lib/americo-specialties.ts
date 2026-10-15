@@ -15,7 +15,7 @@ export const americoScope = {
 
 type Section = { title: string; paragraphs: readonly string[] };
 type Faq = { question: string; answer: string };
-type SpecialtyContent = {
+export type SpecialtyContent = {
   key: string; path: string; label: string; summary: string; title: string;
   description: string; heading: string; intro: string; notice: string;
   sections: readonly Section[]; faqs: readonly Faq[];
@@ -484,8 +484,8 @@ export function americoWhatsappHref(key: AmericoSpecialtyKey) {
   return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Olá, sou de Américo Brasiliense e gostaria de orientação sobre ${americoSpecialty(key).label.toLocaleLowerCase('pt-BR')}.`)}`;
 }
 export const americoAccess = { route: 'A família pode organizar avaliação e visitas à sede em Araraquara a partir de Américo Brasiliense. Confirme o destino, o ponto de saída e as condições de recepção antes de viajar; a proximidade não garante vaga ou deslocamento imediato.' } as const;
-export function americoSpecialtyHead(key: AmericoSpecialtyKey) {
-  const page = americoSpecialty(key);
+export function americoSpecialtyHead(key: AmericoSpecialtyKey, content?: SpecialtyContent) {
+  const page = content ?? americoSpecialty(key);
   const url = `${siteUrl}${page.path}`;
   return {
     meta: [
