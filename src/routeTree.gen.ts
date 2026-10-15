@@ -104,6 +104,7 @@ import { Route as TratamentoDependenciaAlcoolTrabalhadoresMataoRouteImport } fro
 import { Route as TratamentoDependenciaJovensAmericoBrasilienseRouteImport } from './routes/tratamento-dependencia-jovens-americo-brasiliense'
 import { Route as TratamentoDependenciaJovensMataoRouteImport } from './routes/tratamento-dependencia-jovens-matao'
 import { Route as TratamentoDependenciaJovensRibeiraoPretoRouteImport } from './routes/tratamento-dependencia-jovens-ribeirao-preto'
+import { Route as TratamentoDependentesIdososAmericoBrasilienseRouteImport } from './routes/tratamento-dependentes-idosos-americo-brasiliense'
 import { Route as TratamentoJogosCompulsivosApostasRouteImport } from './routes/tratamento-jogos-compulsivos-apostas'
 import { Route as TratamentoJogosCompulsivosApostasAmericoBrasilienseRouteImport } from './routes/tratamento-jogos-compulsivos-apostas-americo-brasiliense'
 import { Route as TratamentoJogosCompulsivosApostasMataoRouteImport } from './routes/tratamento-jogos-compulsivos-apostas-matao'
@@ -652,6 +653,12 @@ const TratamentoDependenciaJovensRibeiraoPretoRoute =
     path: '/tratamento-dependencia-jovens-ribeirao-preto',
     getParentRoute: () => rootRouteImport,
   } as any)
+const TratamentoDependentesIdososAmericoBrasilienseRoute =
+  TratamentoDependentesIdososAmericoBrasilienseRouteImport.update({
+    id: '/tratamento-dependentes-idosos-americo-brasiliense',
+    path: '/tratamento-dependentes-idosos-americo-brasiliense',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const TratamentoJogosCompulsivosApostasRoute =
   TratamentoJogosCompulsivosApostasRouteImport.update({
     id: '/tratamento-jogos-compulsivos-apostas',
@@ -836,6 +843,7 @@ export interface FileRoutesByFullPath {
   '/tratamento-dependencia-jovens-americo-brasiliense': typeof TratamentoDependenciaJovensAmericoBrasilienseRoute
   '/tratamento-dependencia-jovens-matao': typeof TratamentoDependenciaJovensMataoRoute
   '/tratamento-dependencia-jovens-ribeirao-preto': typeof TratamentoDependenciaJovensRibeiraoPretoRoute
+  '/tratamento-dependentes-idosos-americo-brasiliense': typeof TratamentoDependentesIdososAmericoBrasilienseRoute
   '/tratamento-jogos-compulsivos-apostas': typeof TratamentoJogosCompulsivosApostasRoute
   '/tratamento-jogos-compulsivos-apostas-americo-brasiliense': typeof TratamentoJogosCompulsivosApostasAmericoBrasilienseRoute
   '/tratamento-jogos-compulsivos-apostas-matao': typeof TratamentoJogosCompulsivosApostasMataoRoute
@@ -947,6 +955,7 @@ export interface FileRoutesByTo {
   '/tratamento-dependencia-jovens-americo-brasiliense': typeof TratamentoDependenciaJovensAmericoBrasilienseRoute
   '/tratamento-dependencia-jovens-matao': typeof TratamentoDependenciaJovensMataoRoute
   '/tratamento-dependencia-jovens-ribeirao-preto': typeof TratamentoDependenciaJovensRibeiraoPretoRoute
+  '/tratamento-dependentes-idosos-americo-brasiliense': typeof TratamentoDependentesIdososAmericoBrasilienseRoute
   '/tratamento-jogos-compulsivos-apostas': typeof TratamentoJogosCompulsivosApostasRoute
   '/tratamento-jogos-compulsivos-apostas-americo-brasiliense': typeof TratamentoJogosCompulsivosApostasAmericoBrasilienseRoute
   '/tratamento-jogos-compulsivos-apostas-matao': typeof TratamentoJogosCompulsivosApostasMataoRoute
@@ -1060,6 +1069,7 @@ export interface FileRoutesById {
   '/tratamento-dependencia-jovens-americo-brasiliense': typeof TratamentoDependenciaJovensAmericoBrasilienseRoute
   '/tratamento-dependencia-jovens-matao': typeof TratamentoDependenciaJovensMataoRoute
   '/tratamento-dependencia-jovens-ribeirao-preto': typeof TratamentoDependenciaJovensRibeiraoPretoRoute
+  '/tratamento-dependentes-idosos-americo-brasiliense': typeof TratamentoDependentesIdososAmericoBrasilienseRoute
   '/tratamento-jogos-compulsivos-apostas': typeof TratamentoJogosCompulsivosApostasRoute
   '/tratamento-jogos-compulsivos-apostas-americo-brasiliense': typeof TratamentoJogosCompulsivosApostasAmericoBrasilienseRoute
   '/tratamento-jogos-compulsivos-apostas-matao': typeof TratamentoJogosCompulsivosApostasMataoRoute
@@ -1174,6 +1184,7 @@ export interface FileRouteTypes {
     | '/tratamento-dependencia-jovens-americo-brasiliense'
     | '/tratamento-dependencia-jovens-matao'
     | '/tratamento-dependencia-jovens-ribeirao-preto'
+    | '/tratamento-dependentes-idosos-americo-brasiliense'
     | '/tratamento-jogos-compulsivos-apostas'
     | '/tratamento-jogos-compulsivos-apostas-americo-brasiliense'
     | '/tratamento-jogos-compulsivos-apostas-matao'
@@ -1285,6 +1296,7 @@ export interface FileRouteTypes {
     | '/tratamento-dependencia-jovens-americo-brasiliense'
     | '/tratamento-dependencia-jovens-matao'
     | '/tratamento-dependencia-jovens-ribeirao-preto'
+    | '/tratamento-dependentes-idosos-americo-brasiliense'
     | '/tratamento-jogos-compulsivos-apostas'
     | '/tratamento-jogos-compulsivos-apostas-americo-brasiliense'
     | '/tratamento-jogos-compulsivos-apostas-matao'
@@ -1397,6 +1409,7 @@ export interface FileRouteTypes {
     | '/tratamento-dependencia-jovens-americo-brasiliense'
     | '/tratamento-dependencia-jovens-matao'
     | '/tratamento-dependencia-jovens-ribeirao-preto'
+    | '/tratamento-dependentes-idosos-americo-brasiliense'
     | '/tratamento-jogos-compulsivos-apostas'
     | '/tratamento-jogos-compulsivos-apostas-americo-brasiliense'
     | '/tratamento-jogos-compulsivos-apostas-matao'
@@ -1510,6 +1523,7 @@ export interface RootRouteChildren {
   TratamentoDependenciaJovensAmericoBrasilienseRoute: typeof TratamentoDependenciaJovensAmericoBrasilienseRoute
   TratamentoDependenciaJovensMataoRoute: typeof TratamentoDependenciaJovensMataoRoute
   TratamentoDependenciaJovensRibeiraoPretoRoute: typeof TratamentoDependenciaJovensRibeiraoPretoRoute
+  TratamentoDependentesIdososAmericoBrasilienseRoute: typeof TratamentoDependentesIdososAmericoBrasilienseRoute
   TratamentoJogosCompulsivosApostasRoute: typeof TratamentoJogosCompulsivosApostasRoute
   TratamentoJogosCompulsivosApostasAmericoBrasilienseRoute: typeof TratamentoJogosCompulsivosApostasAmericoBrasilienseRoute
   TratamentoJogosCompulsivosApostasMataoRoute: typeof TratamentoJogosCompulsivosApostasMataoRoute
@@ -2184,6 +2198,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TratamentoDependenciaJovensRibeiraoPretoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tratamento-dependentes-idosos-americo-brasiliense': {
+      id: '/tratamento-dependentes-idosos-americo-brasiliense'
+      path: '/tratamento-dependentes-idosos-americo-brasiliense'
+      fullPath: '/tratamento-dependentes-idosos-americo-brasiliense'
+      preLoaderRoute: typeof TratamentoDependentesIdososAmericoBrasilienseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tratamento-jogos-compulsivos-apostas': {
       id: '/tratamento-jogos-compulsivos-apostas'
       path: '/tratamento-jogos-compulsivos-apostas'
@@ -2450,6 +2471,8 @@ const rootRouteChildren: RootRouteChildren = {
   TratamentoDependenciaJovensMataoRoute: TratamentoDependenciaJovensMataoRoute,
   TratamentoDependenciaJovensRibeiraoPretoRoute:
     TratamentoDependenciaJovensRibeiraoPretoRoute,
+  TratamentoDependentesIdososAmericoBrasilienseRoute:
+    TratamentoDependentesIdososAmericoBrasilienseRoute,
   TratamentoJogosCompulsivosApostasRoute:
     TratamentoJogosCompulsivosApostasRoute,
   TratamentoJogosCompulsivosApostasAmericoBrasilienseRoute:

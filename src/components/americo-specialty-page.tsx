@@ -3,13 +3,13 @@ import { ArrowLeft, ArrowRight, MapPin, MessageCircle, Phone, ShieldCheck } from
 import { Button } from '@/components/ui/button';
 import { InteractiveTriage } from '@/components/interactive-triage';
 import { AmericoSpecialtyIcon } from './americo-specialties';
-import { americoSpecialty, americoWhatsappHref, americoAccess, americoParentPath, specialtySources, type AmericoSpecialtyKey } from '@/lib/americo-specialties';
+import { americoSpecialty, americoWhatsappHref, americoAccess, americoParentPath, specialtySources, type AmericoSpecialtyKey, type SpecialtyContent } from '@/lib/americo-specialties';
 import { visualAssets, conceptualImageCaption } from '@/lib/visual-assets';
 import { institutionalIdentity } from '@/lib/institutional';
 import { phoneDisplay, phoneHref } from '@/lib/site';
 
-export function AmericoSpecialtyPage({ specialty }: { specialty: AmericoSpecialtyKey }) {
-  const page = americoSpecialty(specialty);
+export function AmericoSpecialtyPage({ specialty, content }: { specialty: AmericoSpecialtyKey; content?: SpecialtyContent }) {
+  const page = content ?? americoSpecialty(specialty);
   const image = visualAssets.americoSpecialties[specialty];
   const whatsapp = americoWhatsappHref(specialty);
   return <div className="site-editorial min-h-screen bg-deep font-body text-foreground"><main>

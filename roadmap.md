@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Criar o endereço solicitado de idosos em Américo Brasiliense, com orientação educativa, triagem contextual, metadados próprios e sitemap; HTTP 200, endereço antigo preservado, 13 testes aprovados e fluxo completo conferido no celular; solicitar publicação.
+
 - [x] Iniciar cada nova página no topo e substituir a lista regional longa do rodapé por nove cidades compactas e acesso ao diretório completo; validar e publicar.
 
 - [x] Corrigir o contraste das escolhas da triagem em qualquer tema e inserir a triagem contextual diretamente na página principal de São Carlos; preservar avanço automático, retorno, cidade editável, WhatsApp e orientação pública de emergência.
