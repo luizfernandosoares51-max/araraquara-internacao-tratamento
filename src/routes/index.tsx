@@ -26,7 +26,7 @@ import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
 
 const pageUrl = `${siteUrl}/`;
 const pageTitle = "Central de Acolhimento e Reabilitação | Regulação Estadual em SP";
-const pageDescription = "Orientação e direcionamento de famílias para uma rede de clínicas credenciadas e parceiras em São Paulo. Plantão 24h e transporte mediante agendamento e disponibilidade.";
+const pageDescription = "Acolhimento voluntário e direcionamento para a rede parceira em São Paulo. Consulte vagas com o plantão; admissão e transporte sujeitos a avaliação, agendamento e disponibilidade.";
 
 const steps = [
   "Contato com a família",
@@ -73,9 +73,9 @@ const faqs = [
     answer: "Não. O plantão 24h e o transporte funcionam mediante agendamento e disponibilidade da rede. A equipe confirma as condições de atendimento e deslocamento, sem garantia de resposta ou remoção imediata. Em risco imediato à vida, procure o SAMU 192.",
   },
   {
-    question: "O que avaliar ao escolher uma clínica de reabilitação?",
+    question: "Como a Central ajuda a organizar o acolhimento?",
     answer:
-      "A escolha depende das necessidades da pessoa e da família. É importante compreender a proposta de cuidado, verificar a clareza das informações, conhecer a estrutura e perguntar como o acompanhamento é conduzido antes de tomar uma decisão.",
+      "Oferecemos escuta inicial e apoio para organizar o acesso ao cuidado. A equipe esclarece as opções da rede, a modalidade de acolhimento, a documentação do estabelecimento receptor e as condições de admissão conforme as necessidades da pessoa. Vagas e recursos são confirmados no contato, sem garantia de admissão imediata.",
   },
   {
     question: "Como funciona o acolhimento para dependência química?",
@@ -105,7 +105,7 @@ const faqs = [
   {
     question: "Como encontrar uma possibilidade de acolhimento na minha região?",
     answer:
-      "Informe sua cidade na triagem e converse com o plantão. A Central orienta e direciona famílias para uma rede de clínicas credenciadas e parceiras em São Paulo. Segundo declaração da instituição, todas são regularizadas e autorizadas pela Vigilância Sanitária competente. Identificação, licenças, equipe e disponibilidade devem ser esclarecidas antes do deslocamento ou admissão; essa declaração não equivale à verificação independente das autorizações.",
+      "Oferecemos direcionamento para uma rede de clínicas credenciadas e parceiras em São Paulo. A triagem e o plantão ajudam a organizar os próximos passos conforme sua cidade e as necessidades de cuidado. Segundo declaração da instituição, a rede é regularizada pela Vigilância Sanitária competente; a equipe apoia a família no esclarecimento da identificação, documentação, equipe e disponibilidade do estabelecimento receptor. Essa declaração não equivale à verificação independente das autorizações.",
   },
 ];
 
@@ -256,11 +256,11 @@ function HomePage() {
                 Central de Acolhimento e Reabilitação em São Paulo
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-background/90 sm:text-lg">
-                Orientamos e direcionamos famílias para uma rede de clínicas credenciadas e parceiras em todo o Estado de São Paulo. Escuta humanizada e organização dos próximos passos, conforme as necessidades de cuidado de cada pessoa.
+                Oferecemos acolhimento voluntário e direcionamento para uma rede de clínicas credenciadas e parceiras em São Paulo. Nossa equipe acolhe sua família e organiza os próximos passos, conforme as necessidades de cuidado e a disponibilidade da rede.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <Button asChild size="lg" className="h-auto min-h-14 whitespace-normal bg-whatsapp px-6 py-4 text-whatsapp-foreground hover:bg-whatsapp/90">
-                  <a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />Falar com o Plantão 24h no WhatsApp</a>
+                  <a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />Consultar Vagas e Falar com o Plantão Agora</a>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="h-auto min-h-14 whitespace-normal px-6 py-4 text-foreground">
                   <Link to="/cidades"><MapPin aria-hidden="true" />Encontrar orientação na minha região</Link>
@@ -307,15 +307,15 @@ function HomePage() {
               <div>
                 <SectionLabel>Sobre a Central</SectionLabel>
                 <h2 className="mt-3 font-display text-3xl font-semibold leading-tight sm:text-5xl">Sobre a Central de Acolhimento e Reabilitação</h2>
-                <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground sm:text-base">A Central reúne informação, orientação e acolhimento para pessoas e famílias que procuram compreender possibilidades de cuidado diante da dependência química e do alcoolismo. A conversa inicial ajuda a organizar dúvidas com clareza e responsabilidade.</p>
-                <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground sm:text-base">Atuamos como Central de Acolhimento e Regulação Estadual: organizamos a orientação e o direcionamento de famílias para clínicas credenciadas e parceiras. A equipe esclarece o serviço indicado, as condições de acesso e a disponibilidade antes da decisão familiar. Regulação, aqui, significa articulação privada de encaminhamentos; a Central não é um órgão público regulador e não garante vagas.</p>
+                <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground sm:text-base">Oferecemos acolhimento voluntário, suporte psicossocial e apoio à família diante da dependência química e do alcoolismo. Nossa equipe recebe sua demanda e ajuda a organizar o acesso ao cuidado com clareza e responsabilidade.</p>
+                <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground sm:text-base">Atuamos como Central de Acolhimento e Regulação Estadual: articulamos o direcionamento para clínicas credenciadas e parceiras e esclarecemos o serviço indicado, as condições de acesso e a disponibilidade. Regulação, aqui, significa articulação privada de encaminhamentos; a Central não é um órgão público regulador e não garante vagas.</p>
               </div>
             </div>
           </section>
 
           <section className="border-t border-border py-16 lg:py-24">
             <SectionLabel>Informação e caminhos possíveis</SectionLabel>
-            <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Como podemos orientar</h2>
+            <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">O apoio que oferecemos à sua família</h2>
              <div className="mt-10 grid gap-5 md:grid-cols-3">
               {guidanceLinks.map((item) => (
                  <Link key={item.title} to={item.to} className="glass-panel flex min-h-48 flex-col rounded-2xl p-5 transition-all hover:-translate-y-0.5 hover:border-brand/25 sm:p-7">
@@ -390,7 +390,7 @@ function HomePage() {
                   <span className="grid size-8 place-items-center rounded-full bg-brand text-xs font-bold text-primary-foreground">V</span>
                   <h3 className="font-display text-xl font-semibold">Acolhimento voluntário na Central</h3>
                 </div>
-                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">A Central orienta sobre acolhimento voluntário, suporte psicossocial e participação familiar. O plano de cuidado e as condições de admissão são esclarecidos com a equipe responsável. Acolhimento psicossocial não equivale a internação hospitalar.</p>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">Oferecemos acolhimento voluntário, suporte psicossocial e participação familiar. Nossa equipe esclarece o plano de cuidado e as condições de admissão. Acolhimento psicossocial não equivale a internação hospitalar.</p>
               </article>
               <article className="rounded-2xl border border-border bg-card p-5 shadow-sm sm:p-7">
                 <div className="flex items-center gap-3">
@@ -440,14 +440,14 @@ function HomePage() {
             <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted-foreground sm:text-base">
               Famílias da capital, interior e litoral podem buscar orientação e direcionamento para a rede. Segundo declaração da Central, todas as clínicas credenciadas e parceiras são devidamente regularizadas e autorizadas pela Vigilância Sanitária competente, observadas as normas aplicáveis e as diretrizes da ANVISA. A localização e a disponibilidade de cada estabelecimento são confirmadas no contato, sem garantia de unidade em cada município ou de vaga próxima.
             </p>
-            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">A regularidade da rede é uma declaração institucional, não uma verificação independente de licenças nem uma certificação geral emitida pela ANVISA. Antes da admissão, solicite a identificação do estabelecimento e sua documentação sanitária. Plantão 24h e transporte funcionam mediante agendamento e disponibilidade da rede.</p>
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">A equipe apoia a família no esclarecimento da identificação e documentação sanitária do estabelecimento receptor. A regularidade da rede é uma declaração institucional, não uma verificação independente de licenças nem uma certificação geral emitida pela ANVISA. Plantão 24h e transporte funcionam mediante agendamento e disponibilidade da rede.</p>
             <ul className="mt-8 grid gap-3 border-y border-border py-6 sm:grid-cols-2">
               {['Grande São Paulo e Capital', 'Região Central e Centro-Oeste Paulista', 'Ribeirão Preto e Franca', 'Rio Claro, Campinas e Circuito das Águas', 'Demais municípios do interior e litoral'].map(region => <li key={region} className="flex items-start gap-2 text-sm"><MapPin className="size-4 shrink-0 text-secondary" aria-hidden="true" />{region}</li>)}
             </ul>
             <p className="mt-3 text-xs leading-relaxed text-muted-foreground">Regiões de origem das famílias que podem solicitar orientação; esta lista não identifica unidades físicas ou autorizações locais.</p>
             <div className="mt-8 grid gap-5 md:grid-cols-3">
-              <article className="rounded-lg border border-border bg-card p-5"><ShieldCheck className="size-5 text-secondary" aria-hidden="true" /><h3 className="mt-3 font-display text-lg font-semibold">Documentação e segurança</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">A instituição declara regularidade sanitária de todas as clínicas da rede. Antes da admissão, confirme a identificação, a licença sanitária aplicável, a responsabilidade técnica e a modalidade de cuidado do estabelecimento receptor.</p></article>
-              <article className="rounded-lg border border-border bg-card p-5"><Users className="size-5 text-secondary" aria-hidden="true" /><h3 className="mt-3 font-display text-lg font-semibold">Equipe e necessidades de cuidado</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Confirme com o estabelecimento receptor os profissionais, a supervisão e os recursos disponíveis para o caso. A composição da equipe não é presumida para todos os parceiros.</p></article>
+              <article className="rounded-lg border border-border bg-card p-5"><ShieldCheck className="size-5 text-secondary" aria-hidden="true" /><h3 className="mt-3 font-display text-lg font-semibold">Documentação e segurança</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">A instituição declara regularidade sanitária da rede. Oferecemos apoio para esclarecer a identificação, a licença aplicável, a responsabilidade técnica e a modalidade de cuidado do estabelecimento receptor.</p></article>
+              <article className="rounded-lg border border-border bg-card p-5"><Users className="size-5 text-secondary" aria-hidden="true" /><h3 className="mt-3 font-display text-lg font-semibold">Equipe e necessidades de cuidado</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Nossa equipe ajuda a esclarecer com o estabelecimento receptor os profissionais, a supervisão e os recursos adequados ao caso. A composição da equipe varia conforme a unidade e a modalidade.</p></article>
               <article className="rounded-lg border border-border bg-card p-5"><HeartHandshake className="size-5 text-secondary" aria-hidden="true" /><h3 className="mt-3 font-display text-lg font-semibold">Logística orientada</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">O plantão oferece orientação e suporte para agendamento 24h. Trajeto, condições e disponibilidade de transporte são confirmados antes do deslocamento, sem promessa de remoção imediata.</p></article>
             </div>
              <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
