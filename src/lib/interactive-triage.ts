@@ -18,6 +18,7 @@ export const triageChallenges = [
 ] as const;
 
 export const triageReadiness = [
+  
   { id: "voluntary", label: "Aceita ajuda voluntária", detail: "Reconhece a situação e aceita conversar." },
   { id: "resistant", label: "Resistência ao diálogo", detail: "Nega a situação, mas a família busca orientação." },
   { id: "risk", label: "Crise familiar intensa ou recusa total", detail: "Situação delicada que requer apoio imediato; risco à vida continua sendo emergência pública." },
