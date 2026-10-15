@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Reformular somente a Home como Central de Acolhimento e Regulação Estadual, com rede credenciada/parceira e regularidade sanitária declaradas pela instituição; esclarecer agendamento e disponibilidade para transporte e plantão 24h, preservar triagem aberta e validar a prévia sem publicação.
+
 - [x] Apresentar na Home a rede parceira confirmada pelo usuário, concentrar estrutura e rotina próprias na página regional, preservar triagem aberta e segurança, atualizar metadados; prévia 1280/390, Campinas até WhatsApp, diretório, 51 testes e compilação verificados; solicitar publicação sem licenças ou transporte não comprovados.
 
 - [x] Reestruturar a Home institucional estadual, preservar a página regional de Araraquara, manter triagem sem cidade fixa, apresentar pilares confirmados e alcance regional; prévia em 1280/390, fluxo Campinas até WhatsApp, 51 testes e compilação verificados; solicitar publicação.
