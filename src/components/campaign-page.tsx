@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { ArrowUpRight, HeartHandshake, MessageCircle, Phone, ShieldCheck } from "lucide-react";
 import logo from "@/assets/logo-central-optimized.webp.asset.json";
 import { Button } from "@/components/ui/button";
+import { InteractiveTriage } from "@/components/interactive-triage";
 import { adsPages, campaignWhatsappHref, type AdsPageKey, type CampaignDefinition } from "@/lib/ads-pages";
 import { institutionalIdentity } from "@/lib/institutional";
 import { phoneDisplay, phoneHref } from "@/lib/site";
@@ -26,8 +27,8 @@ export function CampaignPage({ pageKey }: { pageKey: AdsPageKey }) {
   return <CampaignLayout page={page} image={image} whatsappHref={campaignWhatsappHref(pageKey)} />;
 }
 
-export function CampaignLayout({ page, image, whatsappHref, callLabel = "Ligar Agora" }: {
-  page: CampaignDefinition; image: { src: string; alt: string }; whatsappHref: string; callLabel?: string;
+export function CampaignLayout({ page, image, whatsappHref, callLabel = "Ligar Agora", defaultCity }: {
+  page: CampaignDefinition; image: { src: string; alt: string }; whatsappHref: string; callLabel?: string; defaultCity?: string;
 }) {
   return <div className="campaign-page home-serene bg-background text-foreground">
     <div className="campaign-scroll-content">
@@ -69,6 +70,7 @@ export function CampaignLayout({ page, image, whatsappHref, callLabel = "Ligar A
             </article>)}
           </div>
         </section>
+        <InteractiveTriage {...(defaultCity ? { defaultCity } : {})} />
         <section className="border-y border-border bg-muted">
           <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8">
             <ShieldCheck className="mb-4 size-8 text-whatsapp" aria-hidden="true" />

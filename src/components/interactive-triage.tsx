@@ -19,6 +19,7 @@ export function InteractiveTriage({ defaultCity }: { defaultCity?: string }) {
   const [transport, setTransport] = useState<TriageTransportId>();
   const headingRef = useRef<HTMLHeadingElement>(null);
   const advanceTimerRef = useRef<number | undefined>(undefined);
+  const previousStepRef = useRef<Step>(1);
   const filteredCities = useMemo(() => {
     const query = cityQuery.trim().toLocaleLowerCase("pt-BR");
     if (query.length < 2) return [];
@@ -26,6 +27,14 @@ export function InteractiveTriage({ defaultCity }: { defaultCity?: string }) {
   }, [cityQuery]);
 
   useEffect(() => {
+    const changed = previousStepRef.current !== step;
+    previousStepRef.current = step;
+    if (changed && headingRef.current) {
+      const rect = headingRef.current.getBoundingClientRect();
+      if (rect.top < 0 || rect.bottom > window.innerHeight - 100) {
+        headingRef.current.scrollIntoView({ block: "start", behavior: "instant" });
+      }
+    }
     if (step === 6) {
       const timer = window.setTimeout(() => setStep(7), 850);
       return () => window.clearTimeout(timer);
@@ -107,7 +116,7 @@ export function InteractiveTriage({ defaultCity }: { defaultCity?: string }) {
             </StepPanel>}
             {step === 6 && <div className="flex min-h-[25rem] flex-col items-center justify-center text-center" role="status" aria-live="polite"><LoaderCircle className="size-10 animate-spin text-primary motion-reduce:animate-none" aria-hidden="true" /><h2 ref={headingRef} tabIndex={-1} id="triage-title" className="mt-5 font-display text-2xl font-semibold outline-none sm:text-3xl">Organizando sua orientação preliminar…</h2><p className="mt-3 max-w-lg text-sm leading-relaxed text-muted-foreground">As respostas permanecem somente nesta página e não são enviadas durante este processamento.</p></div>}
             {step === 7 && orientation && <StepPanel title="Estamos prontos para acolher você e sua família." subtitle="Abra o WhatsApp para compartilhar suas respostas e conversar com a equipe de Araraquara." headingRef={headingRef}>
-               {emergency && <div role="alert" className="mb-5 border-l-4 border-destructive bg-destructive/10 p-5"><p className="font-semibold">Em risco imediato, não espere uma resposta pelo WhatsApp.</p><p className="mt-2 text-sm leading-relaxed text-muted-foreground">Ligue para o SAMU 192 ou procure um serviço de emergência. Em violência em curso, vá para um local seguro e ligue 190.</p><Button asChild variant="outline" className="mt-4 min-h-11"><a href="tel:192"><Siren aria-hidden="true" /> Ligar para o SAMU 192</a></Button></div>}
+               {emergency && <div role="alert" className="mb-5 border-l-4 border-destructive bg-destructive/10 p-5"><p className="font-semibold">Em risco imediato, não espere uma resposta pelo WhatsApp.</p><p className="mt-2 text-sm leading-relaxed text-muted-foreground">Ligue para o SAMU 192 ou procure um serviço de emergência. Em violência em curso, vá para um local seguro e ligue 190.</p><Button asChild variant="outline" className="mt-4 min-h-11 bg-card text-card-foreground hover:bg-brand-soft hover:text-foreground"><a href="tel:192"><Siren aria-hidden="true" /> Ligar para o SAMU 192</a></Button></div>}
                {whatsappHref && <Button asChild className="h-auto min-h-14 w-full whitespace-normal bg-whatsapp px-5 py-4 text-whatsapp-foreground hover:bg-whatsapp/90 sm:w-auto"><a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" /> Conversar com o Plantão no WhatsApp</a></Button>}
                <p className="mt-4 text-xs leading-relaxed text-muted-foreground">Suas respostas só serão compartilhadas se você abrir o WhatsApp e confirmar o envio. O WhatsApp institucional não é um serviço de emergência.</p>
               <Button type="button" variant="outline" className="mt-7 min-h-11" onClick={restart}><RotateCcw aria-hidden="true" /> Fazer nova orientação</Button>
@@ -120,5 +129,5 @@ export function InteractiveTriage({ defaultCity }: { defaultCity?: string }) {
 }
 
 function StepPanel({ title, subtitle, headingRef, children }: { title: string; subtitle: string; headingRef: RefObject<HTMLHeadingElement | null>; children: ReactNode }) {
-  return <div className="animate-in fade-in slide-in-from-right-2 duration-300 motion-reduce:animate-none"><h2 ref={headingRef} tabIndex={-1} id="triage-title" className="max-w-3xl font-display text-2xl font-semibold leading-tight outline-none sm:text-4xl">{title}</h2><p className="mb-7 mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">{subtitle}</p>{children}</div>;
+  return <div className="animate-in fade-in slide-in-from-right-2 duration-300 motion-reduce:animate-none"><h2 ref={headingRef} tabIndex={-1} id="triage-title" className="scroll-mt-6 max-w-3xl font-display text-2xl font-semibold leading-tight outline-none sm:text-4xl">{title}</h2><p className="mb-7 mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">{subtitle}</p>{children}</div>;
 }
