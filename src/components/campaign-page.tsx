@@ -70,7 +70,7 @@ export function CampaignLayout({ page, image, whatsappHref, callLabel = "Ligar A
             </article>)}
           </div>
         </section>
-        <InteractiveTriage defaultCity={defaultCity} />
+        <InteractiveTriage {...(defaultCity ? { defaultCity } : {})} />
         <section className="border-y border-border bg-muted">
           <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8">
             <ShieldCheck className="mb-4 size-8 text-whatsapp" aria-hidden="true" />
