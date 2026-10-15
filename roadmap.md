@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Destacar acolhimento voluntário, encaminhamento para internação involuntária e suporte de agendamento de remoção 24h na abertura da Home; conectar triagem, preservar limites médicos e disponibilidade, validar e solicitar publicação.
+- [x] Destacar acolhimento voluntário, encaminhamento para internação involuntária e suporte de agendamento de remoção 24h na abertura da Home; botão abre a triagem em 1280/390, contato oficial, três destaques, 32 testes e compilação OK; condições médicas e disponibilidade preservadas; solicitar publicação.
 
 - [x] Tornar a Home e a oferta institucional mais diretas, substituir instruções burocráticas por apoio da equipe, destacar consulta de vagas no WhatsApp e preservar condições reais; quatro destaques, prévia 1280/390, contato oficial, canonical, 32 testes e compilação OK; solicitar publicação com aprovação.
 
