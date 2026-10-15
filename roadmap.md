@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Gerar e inserir imagem conceitual humanizada 16:9 no cartão de acolhimento voluntário da Home; conferir celular e computador, preservar condições de admissão e solicitar publicação.
+
 - [x] Revisar textos da Home e seções institucionais para explicitar todas as regiões do Estado de São Paulo; rede, consulta de vagas e suporte de remoção sem garantias não comprovadas; prévia 1280/390, WhatsApp oficial e compilação OK; solicitar publicação.
 
 - [x] Explicitar na abertura da Home a orientação em todo o Estado de São Paulo, incluindo interior, litoral e capital; contato oficial, limites de vagas, habilitações e transporte preservados; prévia 1280/390 e compilação OK; solicitar publicação.

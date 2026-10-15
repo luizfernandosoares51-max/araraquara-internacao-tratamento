@@ -5,6 +5,7 @@ import type { ReactNode } from "react";
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import articleSignsImage from "@/assets/blog-dependencia-quimica-sinais.jpg";
 import articleCityImage from "@/assets/blog-dependencia-quimica-sao-carlos.jpg";
+import voluntaryWelcomeImage from "@/assets/home-voluntary-welcome.jpg";
 import { FamilyOrientationGuide } from "@/components/family-orientation-guide";
 import { InteractiveTriage } from "@/components/interactive-triage";
 import { CareSpecialties } from "@/components/care-program-sections";
@@ -275,10 +276,14 @@ function HomePage() {
               <p className="mt-6 text-xs text-background/75">{conceptualImageCaption}</p>
             </div>
             <div className="relative mt-8 grid gap-4 md:grid-cols-3" aria-label="Acolhimento, encaminhamento e remoção">
-              <article className="rounded-lg border border-border bg-card p-5 text-card-foreground">
-                <HeartHandshake className="size-6 text-secondary" aria-hidden="true" />
-                <h2 className="mt-3 font-display text-xl font-semibold">Acolhimento e internação voluntária</h2>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Oferecemos acolhimento voluntário e suporte psicossocial na Central. Quando há indicação de internação médica com consentimento, apoiamos o encaminhamento a estabelecimento habilitado. Admissão depende de avaliação e disponibilidade.</p>
+              <article className="overflow-hidden rounded-lg border border-border bg-card text-card-foreground shadow-sm">
+                <img src={voluntaryWelcomeImage} alt="Representação conceitual de uma terapeuta conversando com um adulto e sua familiar em ambiente acolhedor" width={1536} height={864} loading="lazy" decoding="async" className="aspect-video w-full rounded-t-lg object-cover" />
+                <div className="p-5">
+                  <HeartHandshake className="size-6 text-secondary" aria-hidden="true" />
+                  <h2 className="mt-3 font-display text-xl font-semibold">Acolhimento e internação voluntária</h2>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Disponibilizamos acolhimento humanizado e suporte psicossocial na Central, com acompanhamento multidisciplinar. Quando há indicação de internação médica com consentimento, apoiamos o encaminhamento à rede de clínicas credenciadas e parceiras em todo o Estado de São Paulo, declarada pela instituição. O início do cuidado depende de avaliação médica e disponibilidade da unidade receptora.</p>
+                  <p className="mt-4 text-xs leading-relaxed text-muted-foreground">{conceptualImageCaption}</p>
+                </div>
               </article>
               <article className="rounded-lg border border-border bg-card p-5 text-card-foreground">
                 <ShieldCheck className="size-6 text-secondary" aria-hidden="true" />
