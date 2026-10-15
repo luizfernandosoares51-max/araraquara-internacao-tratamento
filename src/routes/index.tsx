@@ -7,7 +7,8 @@ import articleSignsImage from "@/assets/blog-dependencia-quimica-sinais.jpg";
 import articleCityImage from "@/assets/blog-dependencia-quimica-sao-carlos.jpg";
 import { FamilyOrientationGuide } from "@/components/family-orientation-guide";
 import { InteractiveTriage } from "@/components/interactive-triage";
-import { CareSpecialties, FinancialGuidance } from "@/components/care-program-sections";
+import { CareSpecialties } from "@/components/care-program-sections";
+import { NetworkPlanGuidance, NetworkSafety } from "@/components/network-guidance-sections";
 import { cityDirectory } from "@/lib/city-pages";
 import { Button } from "@/components/ui/button";
 import { institutionalIdentity, legalSources } from "@/lib/institutional";
@@ -272,6 +273,8 @@ function HomePage() {
 
           <InteractiveTriage />
 
+          <NetworkSafety />
+
           <section aria-labelledby="pilares-titulo" className="border-t border-border py-16 lg:py-24">
             <SectionLabel>Compromisso com pessoas e famílias</SectionLabel>
             <h2 id="pilares-titulo" className="mt-3 font-display text-3xl font-semibold leading-tight sm:text-4xl">Pilares do cuidado institucional</h2>
@@ -377,7 +380,7 @@ function HomePage() {
             </div>
           </section>
 
-          <FinancialGuidance />
+          <NetworkPlanGuidance />
           <section id="internacao" className="border-t border-border bg-muted/45 py-16 -mx-5 px-5 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 lg:py-24">
             <SectionLabel>Acolhimento e encaminhamento médico</SectionLabel>
             <h2 className="mt-3 max-w-2xl font-display text-2xl font-semibold leading-tight sm:text-4xl">Internação para dependência química: decisões com responsabilidade</h2>

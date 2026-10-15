@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { ArrowRight, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { regionalNavigation } from "@/lib/regional-navigation";
+import { institutionalNetwork } from "@/lib/institutional";
 
 export function RegionalSeoGrid() {
   return (
@@ -13,8 +14,7 @@ export function RegionalSeoGrid() {
         </div>
         <h2 id="regional-seo-title" className="mt-2 font-display text-2xl font-semibold leading-tight sm:text-3xl">Regiões Atendidas no Interior de SP</h2>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground sm:text-base">
-          A unidade física fica somente em Araraquara. Famílias de outras cidades podem receber orientação
-          sobre acolhimento e deslocamento agendado, conforme avaliação e disponibilidade.
+          {institutionalNetwork.regionalStatement}
         </p>
       </div>
       <nav aria-label="Páginas de orientação regional" className="mt-6 flex flex-wrap gap-2">
