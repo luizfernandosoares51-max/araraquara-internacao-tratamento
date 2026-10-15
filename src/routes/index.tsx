@@ -285,10 +285,14 @@ function HomePage() {
                   <p className="mt-4 text-xs leading-relaxed text-muted-foreground">{conceptualImageCaption}</p>
                 </div>
               </article>
-              <article className="rounded-lg border border-border bg-card p-5 text-card-foreground">
-                <ShieldCheck className="size-6 text-secondary" aria-hidden="true" />
-                <h2 className="mt-3 font-display text-xl font-semibold">Encaminhamento para internação involuntária</h2>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Apoiamos a família nos trâmites e no encaminhamento a unidades médicas habilitadas. A medida é excepcional e depende de avaliação, autorização médica e requisitos legais; a solicitação familiar, por si só, não autoriza a internação.</p>
+              <article className="overflow-hidden rounded-lg border border-border bg-card text-card-foreground shadow-sm">
+                <img src={visualAssets.specialties.involuntary.src} alt="Imagem conceitual de orientação familiar sobre encaminhamento para internação involuntária e requisitos da Lei 13.840/2019" width={1152} height={768} loading="lazy" decoding="async" className="aspect-video w-full rounded-t-lg object-cover" />
+                <div className="p-5">
+                  <ShieldCheck className="size-6 text-secondary" aria-hidden="true" />
+                  <h2 className="mt-3 font-display text-xl font-semibold">Encaminhamento para internação involuntária</h2>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Apoiamos a família nos trâmites e no encaminhamento a unidades médicas habilitadas. A medida é excepcional e depende de avaliação, autorização médica e requisitos legais; a solicitação familiar, por si só, não autoriza a internação.</p>
+                  <p className="mt-4 text-xs leading-relaxed text-muted-foreground">{conceptualImageCaption}</p>
+                </div>
               </article>
               <article className="rounded-lg border border-border bg-card p-5 text-card-foreground">
                 <Truck className="size-6 text-secondary" aria-hidden="true" />
