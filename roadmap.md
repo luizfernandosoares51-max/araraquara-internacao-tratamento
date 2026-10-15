@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Apresentar na Home a rede parceira confirmada pelo usuário, concentrar detalhes da estrutura própria na página regional, preservar triagem aberta e segurança, atualizar metadados e validar/publicar sem anunciar licenças ou transporte não comprovados.
+
 - [x] Reestruturar a Home institucional estadual, preservar a página regional de Araraquara, manter triagem sem cidade fixa, apresentar pilares confirmados e alcance regional; prévia em 1280/390, fluxo Campinas até WhatsApp, 51 testes e compilação verificados; solicitar publicação.
 - [ ] Publicar a Home institucional estadual — publicação recusada nesta etapa; aguarda nova autorização do usuário.
 
