@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Auditar todas as rotas, links, metadados, sitemap, triagem contextual e rolagem; corrigir inconsistências verificadas, validar a prévia e publicar a atualização solicitada.
+- [x] Auditar 107 caminhos sem destinos internos quebrados, completar triagem nas 23 campanhas e na página pilar, corrigir imagem social relativa e visibilidade das etapas; 108 testes, 12 fluxos completos e seis transições no topo validados, sitemap com 80 URLs sem campanhas; solicitar publicação.
 
 - [x] Criar o endereço solicitado de idosos em Américo Brasiliense, com orientação educativa, triagem contextual, metadados próprios e sitemap; HTTP 200, endereço antigo preservado, 13 testes aprovados e fluxo completo conferido no celular; solicitar publicação.
 
