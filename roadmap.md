@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Revisar textos da Home e seções institucionais para explicitar todas as regiões do Estado de São Paulo; reformular rede, consulta de vagas e suporte de remoção sem garantias não comprovadas; validar no celular e solicitar publicação.
+
 - [x] Explicitar na abertura da Home a orientação em todo o Estado de São Paulo, incluindo interior, litoral e capital; contato oficial, limites de vagas, habilitações e transporte preservados; prévia 1280/390 e compilação OK; solicitar publicação.
 
 - [x] Destacar acolhimento voluntário, encaminhamento para internação involuntária e suporte de agendamento de remoção 24h na abertura da Home; botão abre a triagem em 1280/390, contato oficial, três destaques, 32 testes e compilação OK; condições médicas e disponibilidade preservadas; solicitar publicação.
