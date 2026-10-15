@@ -105,7 +105,7 @@ const faqs = [
   {
     question: "Como encontrar uma possibilidade de acolhimento na minha região?",
     answer:
-      "Oferecemos direcionamento para uma rede de clínicas credenciadas e parceiras em São Paulo. A triagem e o plantão ajudam a organizar os próximos passos conforme sua cidade e as necessidades de cuidado. Segundo declaração da instituição, a rede é regularizada pela Vigilância Sanitária competente; a equipe apoia a família no esclarecimento da identificação, documentação, equipe e disponibilidade do estabelecimento receptor. Essa declaração não equivale à verificação independente das autorizações.",
+      "Oferecemos direcionamento para uma rede de clínicas credenciadas e parceiras em todas as regiões do Estado de São Paulo. A triagem e o plantão ajudam a organizar os próximos passos conforme sua cidade e as necessidades de cuidado. A instituição declara que a rede é regularizada pela Vigilância Sanitária competente; a equipe apoia a família no esclarecimento da identificação, documentação, equipe e disponibilidade do estabelecimento receptor. Essa declaração não equivale à verificação independente das autorizações.",
   },
 ];
 
@@ -458,7 +458,7 @@ function HomePage() {
 
           <section id="atendimento-por-cidade" className="border-t border-border bg-muted/45 py-16 -mx-5 px-5 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12 lg:py-24">
             <SectionLabel>Orientação em diferentes regiões</SectionLabel>
-            <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Rede de clínicas credenciadas e parceiras em São Paulo</h2>
+            <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Rede de clínicas credenciadas e parceiras em todas as regiões do Estado de São Paulo</h2>
             <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-muted-foreground sm:text-base">
               Famílias da capital, interior e litoral podem buscar orientação e direcionamento para a rede. Segundo declaração da Central, todas as clínicas credenciadas e parceiras são devidamente regularizadas e autorizadas pela Vigilância Sanitária competente, observadas as normas aplicáveis e as diretrizes da ANVISA. A localização e a disponibilidade de cada estabelecimento são confirmadas no contato, sem garantia de unidade em cada município ou de vaga próxima.
             </p>

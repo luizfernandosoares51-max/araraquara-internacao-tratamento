@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Revisar textos da Home e seções institucionais para explicitar todas as regiões do Estado de São Paulo; rede, consulta de vagas e suporte de remoção sem garantias não comprovadas; prévia 1280/390, WhatsApp oficial e compilação OK; solicitar publicação.
+
 - [x] Explicitar na abertura da Home a orientação em todo o Estado de São Paulo, incluindo interior, litoral e capital; contato oficial, limites de vagas, habilitações e transporte preservados; prévia 1280/390 e compilação OK; solicitar publicação.
 
 - [x] Destacar acolhimento voluntário, encaminhamento para internação involuntária e suporte de agendamento de remoção 24h na abertura da Home; botão abre a triagem em 1280/390, contato oficial, três destaques, 32 testes e compilação OK; condições médicas e disponibilidade preservadas; solicitar publicação.
@@ -13,7 +15,7 @@
 - [x] Apresentar na Home a rede parceira confirmada pelo usuário, concentrar estrutura e rotina próprias na página regional, preservar triagem aberta e segurança, atualizar metadados; prévia 1280/390, Campinas até WhatsApp, diretório, 51 testes e compilação verificados; solicitar publicação sem licenças ou transporte não comprovados.
 
 - [x] Reestruturar a Home institucional estadual, preservar a página regional de Araraquara, manter triagem sem cidade fixa, apresentar pilares confirmados e alcance regional; prévia em 1280/390, fluxo Campinas até WhatsApp, 51 testes e compilação verificados; solicitar publicação.
-- [ ] Publicar a Home institucional estadual — solicitação renovada em 15/10/2026, mas ferramenta recusada pela preferência de aprovação do usuário; depende de autorização de publicação.
+- [x] Solicitar publicação da Home institucional estadual — autorização renovada em 15/10/2026 e publicação agendada; agendamento não confirma conclusão.
 
 - [x] Auditar 107 caminhos sem destinos internos quebrados, completar triagem nas 23 campanhas e na página pilar, corrigir imagem social relativa e visibilidade das etapas; 108 testes, 12 fluxos completos e seis transições no topo validados, sitemap com 80 URLs sem campanhas; solicitar publicação.
 
