@@ -26,7 +26,7 @@ import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
 
 const pageUrl = `${siteUrl}/`;
 const pageTitle = "Central de Acolhimento e Reabilitação | Regulação Estadual em SP";
-const pageDescription = "Acolhimento voluntário e direcionamento para a rede parceira em São Paulo. Consulte vagas com o plantão; admissão e transporte sujeitos a avaliação, agendamento e disponibilidade.";
+const pageDescription = "Orientação e acolhimento em todo o Estado de São Paulo: interior, litoral e capital. Consulte vagas na rede parceira e agendamento de remoção com o plantão 24h.";
 
 const steps = [
   "Contato com a família",
@@ -253,10 +253,10 @@ function HomePage() {
             <div className="relative max-w-4xl text-background">
               <p className="text-xs font-semibold uppercase leading-relaxed">CENTRAL DE ACOLHIMENTO E REGULAÇÃO ESTADUAL</p>
               <h1 id="institucional-titulo" className="mt-5 max-w-4xl font-display text-4xl font-semibold leading-tight text-background sm:text-5xl lg:text-6xl">
-                Central de Acolhimento e Reabilitação em São Paulo
+                Central de Acolhimento e Reabilitação no Estado de São Paulo
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-background/90 sm:text-lg">
-                Disponibilizamos acolhimento voluntário, apoio para encaminhamento à internação voluntária ou involuntária em estabelecimentos médicos habilitados e suporte para agendamento de remoção 24 horas. Nossa equipe organiza os próximos passos com a família e a rede parceira em São Paulo. Vagas, admissão e transporte dependem de avaliação, confirmação e disponibilidade.
+                Disponibilizamos orientação e apoio ao acolhimento em todo o Estado de São Paulo — incluindo interior, litoral e capital. Oferecemos acolhimento voluntário, apoio para encaminhamento à internação voluntária ou involuntária em estabelecimentos médicos habilitados e plantão 24 horas para orientar a família e organizar o agendamento de remoção com a rede parceira.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <Button asChild size="lg" className="h-auto min-h-14 whitespace-normal bg-whatsapp px-6 py-4 text-whatsapp-foreground hover:bg-whatsapp/90">
@@ -268,9 +268,10 @@ function HomePage() {
               </div>
               <ul className="mt-5 flex flex-wrap gap-x-5 gap-y-3 text-xs leading-relaxed text-background/90" aria-label="Compromissos do atendimento">
                 <li className="flex items-start gap-2"><Check className="size-4 shrink-0" aria-hidden="true" />Encaminhamento médico conforme a Lei 13.840/2019</li>
-                <li className="flex items-start gap-2"><Check className="size-4 shrink-0" aria-hidden="true" />Suporte de agendamento 24h</li>
-                <li className="flex items-start gap-2"><Check className="size-4 shrink-0" aria-hidden="true" />Rede regularizada segundo declaração institucional</li>
+                <li className="flex items-start gap-2"><Check className="size-4 shrink-0" aria-hidden="true" />Orientação 24h para famílias de todas as regiões do Estado de SP</li>
+                <li className="flex items-start gap-2"><Check className="size-4 shrink-0" aria-hidden="true" />Rede autorizada pela Vigilância Sanitária, segundo declaração institucional</li>
               </ul>
+              <p className="mt-4 max-w-2xl text-xs leading-relaxed text-background/90">Nossa equipe consulta vagas e combina as condições de admissão e transporte com a família. A remoção é agendada conforme avaliação e disponibilidade da rede.</p>
               <p className="mt-6 text-xs text-background/75">{conceptualImageCaption}</p>
             </div>
             <div className="relative mt-8 grid gap-4 md:grid-cols-3" aria-label="Acolhimento, encaminhamento e remoção">
