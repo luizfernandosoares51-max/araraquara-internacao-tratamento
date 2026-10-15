@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Tornar a Home e a oferta institucional mais diretas, substituir instruções burocráticas por apoio da equipe, destacar consulta de vagas no WhatsApp, preservar condições reais; validar a prévia e solicitar publicação.
+- [x] Tornar a Home e a oferta institucional mais diretas, substituir instruções burocráticas por apoio da equipe, destacar consulta de vagas no WhatsApp e preservar condições reais; quatro destaques, prévia 1280/390, contato oficial, canonical, 32 testes e compilação OK; solicitar publicação com aprovação.
 
 - [x] Atualizar Home e rodapé com sede administrativa, rede estadual, segurança e consulta de seis planos sem garantias não comprovadas; 32 testes, prévia 1280/390, fluxo de crise Campinas até WhatsApp com SAMU preservado e compilação OK; solicitar publicação.
 
