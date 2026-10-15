@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Reestruturar a Home institucional estadual, preservar a página regional de Araraquara, manter triagem sem cidade fixa, apresentar pilares confirmados e alcance regional; validar a prévia e solicitar publicação.
+- [x] Reestruturar a Home institucional estadual, preservar a página regional de Araraquara, manter triagem sem cidade fixa, apresentar pilares confirmados e alcance regional; prévia em 1280/390, fluxo Campinas até WhatsApp, 51 testes e compilação verificados; solicitar publicação.
 
 - [x] Auditar 107 caminhos sem destinos internos quebrados, completar triagem nas 23 campanhas e na página pilar, corrigir imagem social relativa e visibilidade das etapas; 108 testes, 12 fluxos completos e seis transições no topo validados, sitemap com 80 URLs sem campanhas; solicitar publicação.
 
