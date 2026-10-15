@@ -7,7 +7,7 @@
 - [x] Apresentar na Home a rede parceira confirmada pelo usuário, concentrar estrutura e rotina próprias na página regional, preservar triagem aberta e segurança, atualizar metadados; prévia 1280/390, Campinas até WhatsApp, diretório, 51 testes e compilação verificados; solicitar publicação sem licenças ou transporte não comprovados.
 
 - [x] Reestruturar a Home institucional estadual, preservar a página regional de Araraquara, manter triagem sem cidade fixa, apresentar pilares confirmados e alcance regional; prévia em 1280/390, fluxo Campinas até WhatsApp, 51 testes e compilação verificados; solicitar publicação.
-- [ ] Publicar a Home institucional estadual — solicitação renovada em 15/10/2026; aguarda conclusão da publicação.
+- [ ] Publicar a Home institucional estadual — solicitação renovada em 15/10/2026, mas ferramenta recusada pela preferência de aprovação do usuário; depende de autorização de publicação.
 
 - [x] Auditar 107 caminhos sem destinos internos quebrados, completar triagem nas 23 campanhas e na página pilar, corrigir imagem social relativa e visibilidade das etapas; 108 testes, 12 fluxos completos e seis transições no topo validados, sitemap com 80 URLs sem campanhas; solicitar publicação.
 
