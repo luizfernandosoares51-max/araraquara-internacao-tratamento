@@ -1,6 +1,7 @@
 # Roadmap
 
-- [ ] Criar painel protegido para cadastro de vagas reais com data, local e contato e exibição pública na Home — aguardando definição dos acessos e campos de perfil.
+- [x] Cancelar painel de vagas conforme solicitado; não criar contas, autenticação ou armazenamento de disponibilidade.
+- [ ] Manter consulta de vagas exclusivamente via WhatsApp oficial e triagem educativa; validar SEO e conversão e solicitar publicação autorizada.
 - [ ] Concluir otimização SEO solicitada anteriormente com metadados responsáveis, links regionais e FAQ consistente, sem garantias não confirmadas.
 
 - [x] Ampliar o bloco do mapa para largura total, preservar a imagem inteira sem cortes, simplificar texto sem garantias não confirmadas; imagem e navegação para /cidades verificadas em 1280/390, compilação OK e checagens básicas de segurança sem achados (sem análise profunda); solicitar publicação autorizada.
