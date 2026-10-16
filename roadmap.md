@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Simplificar a abertura global da triagem, retirando o selo e ajustando o subtítulo sem garantir vagas ou proximidade; conferir celular e fluxo até WhatsApp e solicitar publicação.
+- [x] Simplificar a abertura global da triagem, retirando o selo e ajustando o subtítulo sem garantir vagas ou proximidade; telas 1280/390 e fluxo Campinas até WhatsApp conferidos, seis testes aprovados e compilação OK; solicitar publicação autorizada.
 
 - [x] Inserir imagem horizontal no cartão de remoção da Home, harmonizar com os demais cartões e revisar texto preservando orientação 24h, agendamento e disponibilidade; imagem e cartão conferidos em 1280/390 sem rolagem horizontal, compilação OK e checagens básicas sem achados (sem análise profunda); solicitar publicação autorizada.
 
