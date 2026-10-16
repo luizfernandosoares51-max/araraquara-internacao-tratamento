@@ -164,7 +164,7 @@ function HomePage() {
         <section aria-labelledby="home-faq-title" className="border-t border-border py-10 sm:py-12">
           <h2 id="home-faq-title" className="font-display text-2xl font-semibold sm:text-3xl">Dúvidas Frequentes sobre Acolhimento e Internação em SP</h2>
           <Accordion type="single" collapsible className="mt-5">
-            {homeFaqs.map(({ question, answer }, index) => <AccordionItem key={question} value={`faq-${index}`}><AccordionTrigger>{question}</AccordionTrigger><AccordionContent forceMount className="leading-relaxed text-muted-foreground data-[state=closed]:hidden">{answer}</AccordionContent></AccordionItem>)}
+            {homeFaqs.map(({ question, answer }, index) => <AccordionItem key={question} value={`faq-${index}`} className="[&>div[data-state=closed]]:hidden"><AccordionTrigger>{question}</AccordionTrigger><AccordionContent forceMount className="leading-relaxed text-muted-foreground">{answer}</AccordionContent></AccordionItem>)}
           </Accordion>
           <Button asChild size="lg" className="mt-6 h-auto min-h-12 whitespace-normal bg-whatsapp px-6 py-3 text-whatsapp-foreground hover:bg-whatsapp/90"><a href={vacancyConsultationHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />Consultar Disponibilidade pelo WhatsApp</a></Button>
           <nav aria-label="Acesso regional ao final da Home" className="mt-5 flex flex-wrap gap-x-6 gap-y-2">{homeRegionalLinks.map(item => <Link key={item.to} to={item.to} className="inline-flex min-h-11 items-center text-primary underline underline-offset-4">{item.label}</Link>)}</nav>
