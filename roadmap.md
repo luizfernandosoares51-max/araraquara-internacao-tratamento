@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Remover avisos visíveis de imagem conceitual/IA de todos os cartões e seções, preservar imagens e ALT verdadeiro, conferir prévia e solicitar publicação autorizada.
+
 - [x] Inserir imagem conceitual existente no topo do cartão de encaminhamento para internação involuntária; texto legal preservado, imagem carregada em 1280/390 sem rolagem horizontal, compilação OK e checagens básicas de segurança sem achados (sem análise profunda); solicitar publicação autorizada.
 
 - [x] Gerar e inserir imagem conceitual humanizada 16:9 no cartão de acolhimento voluntário da Home; imagem carregada em 1280/390, sem rolagem horizontal, identificação conceitual e condições de admissão preservadas; compilação OK e checagens básicas de segurança sem achados (sem análise profunda); solicitar publicação autorizada.
