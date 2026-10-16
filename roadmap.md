@@ -1,7 +1,8 @@
 # Roadmap
 
-- [ ] Criar painel protegido para cadastro de vagas reais com data, local e contato e exibição pública na Home — aguardando definição dos acessos e campos de perfil.
-- [ ] Concluir otimização SEO solicitada anteriormente com metadados responsáveis, links regionais e FAQ consistente, sem garantias não confirmadas.
+- [x] Cancelar painel de vagas conforme solicitado; não criar contas, autenticação ou armazenamento de disponibilidade.
+- [x] Manter consulta de vagas exclusivamente via WhatsApp oficial e triagem educativa; links com mensagem preparados, sem painel, login ou armazenamento; prévia validada e publicação autorizada solicitada.
+- [x] Otimizar SEO da Home com título até 60 caracteres, descrição até 155, canonical, links canônicos regionais e FAQ consistente no HTML inicial; 29 testes aprovados, computador/celular sem rolagem horizontal e compilação OK. Preservar Organization, sem tipos médicos/emergenciais ou imagens sociais fictícias.
 
 - [x] Ampliar o bloco do mapa para largura total, preservar a imagem inteira sem cortes, simplificar texto sem garantias não confirmadas; imagem e navegação para /cidades verificadas em 1280/390, compilação OK e checagens básicas de segurança sem achados (sem análise profunda); solicitar publicação autorizada.
 
