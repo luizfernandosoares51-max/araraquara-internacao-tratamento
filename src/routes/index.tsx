@@ -23,7 +23,7 @@ import {
   siteUrl,
   whatsappHref,
 } from "@/lib/site";
-import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
+import { visualAssets } from "@/lib/visual-assets";
 
 const pageUrl = `${siteUrl}/`;
 const pageTitle = "Central de Acolhimento e Reabilitação | Regulação Estadual em SP";
@@ -245,7 +245,7 @@ function HomePage() {
   return (
     <div className="home-serene home-editorial min-h-screen overflow-hidden bg-deep font-body text-foreground">
       <div className="mx-auto max-w-7xl px-5 pb-32 sm:px-8 lg:px-12">
-        
+
 
         <main id="inicio">
           <section aria-labelledby="institucional-titulo" className="relative -mx-5 overflow-hidden px-5 py-12 sm:-mx-8 sm:px-8 sm:py-16 lg:-mx-12 lg:px-12 lg:py-20">
@@ -273,7 +273,7 @@ function HomePage() {
                 <li className="flex items-start gap-2"><Check className="size-4 shrink-0" aria-hidden="true" />Rede autorizada pela Vigilância Sanitária, segundo declaração institucional</li>
               </ul>
               <p className="mt-4 max-w-2xl text-xs leading-relaxed text-background/90">Nossa equipe consulta vagas e combina as condições de admissão e transporte com a família. A remoção é agendada conforme avaliação e disponibilidade da rede.</p>
-              <p className="mt-6 text-xs text-background/75">{conceptualImageCaption}</p>
+
             </div>
             <div className="relative mt-8 grid gap-4 md:grid-cols-3" aria-label="Acolhimento, encaminhamento e remoção">
               <article className="overflow-hidden rounded-lg border border-border bg-card text-card-foreground shadow-sm">
@@ -282,7 +282,7 @@ function HomePage() {
                   <HeartHandshake className="size-6 text-secondary" aria-hidden="true" />
                   <h2 className="mt-3 font-display text-xl font-semibold">Acolhimento e internação voluntária</h2>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Disponibilizamos acolhimento humanizado e suporte psicossocial na Central, com acompanhamento multidisciplinar. Quando há indicação de internação médica com consentimento, apoiamos o encaminhamento à rede de clínicas credenciadas e parceiras em todo o Estado de São Paulo, declarada pela instituição. O início do cuidado depende de avaliação médica e disponibilidade da unidade receptora.</p>
-                  <p className="mt-4 text-xs leading-relaxed text-muted-foreground">{conceptualImageCaption}</p>
+
                 </div>
               </article>
               <article className="overflow-hidden rounded-lg border border-border bg-card text-card-foreground shadow-sm">
@@ -291,7 +291,7 @@ function HomePage() {
                   <ShieldCheck className="size-6 text-secondary" aria-hidden="true" />
                   <h2 className="mt-3 font-display text-xl font-semibold">Encaminhamento para internação involuntária</h2>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Apoiamos a família nos trâmites e no encaminhamento a unidades médicas habilitadas. A medida é excepcional e depende de avaliação, autorização médica e requisitos legais; a solicitação familiar, por si só, não autoriza a internação.</p>
-                  <p className="mt-4 text-xs leading-relaxed text-muted-foreground">{conceptualImageCaption}</p>
+
                 </div>
               </article>
               <article className="rounded-lg border border-border bg-card p-5 text-card-foreground">
@@ -333,7 +333,7 @@ function HomePage() {
             <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_.95fr] lg:gap-20">
               <div className="relative overflow-hidden rounded-[2rem] bg-card shadow-xl shadow-brand/10">
                 <img src={visualAssets.home.continuity.src} width={1200} height={1200} loading="lazy" decoding="async" alt={visualAssets.home.continuity.alt} className="aspect-[4/3] w-full object-cover" />
-                <p className="absolute inset-x-0 bottom-0 bg-foreground/80 px-5 py-3 text-xs font-medium text-background backdrop-blur-sm">{conceptualImageCaption}</p>
+
               </div>
               <div>
                 <SectionLabel>Sobre a Central</SectionLabel>
@@ -374,7 +374,7 @@ function HomePage() {
               </div>
               <figure className="overflow-hidden rounded-[2rem] bg-card shadow-xl shadow-brand/10">
                 <img src={visualAssets.home.welcome.src} width={1600} height={1067} loading="lazy" decoding="async" alt={visualAssets.home.welcome.alt} className="aspect-[4/3] w-full object-cover" />
-                <figcaption className="px-5 py-4 text-xs leading-relaxed text-muted-foreground">{conceptualImageCaption}</figcaption>
+
               </figure>
             </div>
           </section>
@@ -383,7 +383,7 @@ function HomePage() {
             <div className="grid items-center gap-10 lg:grid-cols-[1.08fr_.92fr] lg:gap-20">
               <figure className="order-2 overflow-hidden rounded-[2rem] bg-card shadow-xl shadow-brand/10 lg:order-1">
                 <img src={visualAssets.home.routine.src} width={1200} height={1200} loading="lazy" decoding="async" alt={visualAssets.home.routine.alt} className="aspect-[4/3] w-full object-cover" />
-                <figcaption className="px-5 py-4 text-xs leading-relaxed text-muted-foreground">{conceptualImageCaption}</figcaption>
+
               </figure>
               <div className="order-1 lg:order-2">
                 <SectionLabel>Tratamento para dependência química e alcoolismo</SectionLabel>
@@ -593,7 +593,7 @@ function HomePage() {
           </section>
         </main>
 
-        
+
       </div>
 
     </div>

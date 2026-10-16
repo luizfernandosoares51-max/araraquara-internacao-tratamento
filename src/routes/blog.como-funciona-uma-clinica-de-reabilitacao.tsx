@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { MessageCircle } from "lucide-react";
 import { createArticleHead } from "@/components/blog/article-head";
 import { ArticleBreadcrumb, IllustratedSections, type IllustratedSection } from "@/components/blog/illustrated-article-shell";
-import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
+import { visualAssets } from "@/lib/visual-assets";
 import { whatsappHref, phoneDisplay } from "@/lib/site";
 
 const title = "Clínica de Reabilitação: Como Funciona o Tratamento e Como Escolher";
@@ -112,7 +112,7 @@ function RehabilitationArticle() {
         <p className="mt-4 text-sm leading-6 text-muted-foreground">Central de Acolhimento e Reabilitação · Publicado em 2 de outubro de 2026 · Atualizado em 9 de outubro de 2026</p>
         <figure className="mt-8">
           <img src={photos.welcome.src} alt={photos.welcome.alt} width={1440} height={960} fetchPriority="high" decoding="async" className="aspect-[3/2] w-full rounded-lg object-cover sm:aspect-[16/8]" />
-          <figcaption className="mt-3 text-xs leading-5 text-muted-foreground">{conceptualImageCaption}</figcaption>
+
         </figure>
         <p className="mt-6 max-w-3xl border-l-2 border-secondary pl-5 text-sm leading-7 text-muted-foreground">Conteúdo educativo: não substitui diagnóstico, indicação de tratamento ou avaliação individual. As modalidades descritas não constituem uma lista de serviços confirmados da Central.</p>
       </header>

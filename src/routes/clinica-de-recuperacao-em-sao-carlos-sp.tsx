@@ -139,7 +139,7 @@ export const Route = createFileRoute("/clinica-de-recuperacao-em-sao-carlos-sp")
 function SaoCarlosPage() {
   return (
     <div className="site-editorial min-h-screen bg-ice font-body text-deep">
-      
+
 
       <main>
         <div className="mx-auto max-w-6xl px-5 pt-6 sm:px-8 lg:px-12">
@@ -183,7 +183,7 @@ function SaoCarlosPage() {
           </div>
           <figure className="overflow-hidden border border-deep/10 bg-foreground shadow-xl">
             <img src={visualAssets.cityCovers["sao-carlos-sp"].src} width={1600} height={1067} alt={visualAssets.cityCovers["sao-carlos-sp"].alt} className="aspect-[16/10] w-full object-cover" decoding="async" fetchPriority="high" />
-            <figcaption className="border-t border-deep/10 px-5 py-4 text-xs leading-relaxed text-deep/60">Imagem conceitual gerada por IA; não representa uma unidade física em São Carlos.</figcaption>
+
           </figure>
         </section>
 
@@ -330,7 +330,7 @@ function SaoCarlosPage() {
         </section>
       </main>
 
-      
+
 
     </div>
   );

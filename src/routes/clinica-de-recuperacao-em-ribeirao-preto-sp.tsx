@@ -197,7 +197,7 @@ const faqs = [
 function OfficialRibeiraoPretoPage() {
   return (
     <div className="site-editorial min-h-screen bg-foreground font-body text-deep">
-      
+
 
       <main>
         <section className="bg-deep text-foreground">
@@ -244,7 +244,7 @@ function OfficialRibeiraoPretoPage() {
                <div>
                <figure className="overflow-hidden border border-border bg-glass shadow-xl shadow-background/20">
                  <img src={visualAssets.cityCovers["ribeirao-preto-sp"].src} alt={visualAssets.cityCovers["ribeirao-preto-sp"].alt} width={1600} height={1067} fetchPriority="high" decoding="async" className="aspect-[4/3] w-full object-cover" />
-                 <figcaption className="border-t border-border px-4 py-3 text-xs leading-relaxed text-muted-foreground">Imagem conceitual gerada por IA; não representa unidade ou atendimento real em Ribeirão Preto.</figcaption>
+
                </figure>
                <aside className="mt-4 border-t-4 border-secondary bg-glass p-7" aria-label="Transparência sobre a localização">
                 <ShieldCheck className="size-8 text-secondary" aria-hidden="true" />
@@ -465,7 +465,7 @@ function OfficialRibeiraoPretoPage() {
         </section>
       </main>
 
-      
+
 
     </div>
   );

@@ -16,7 +16,7 @@ import {
   phoneHref,
   whatsappHref,
 } from "@/lib/site";
-import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
+import { visualAssets } from "@/lib/visual-assets";
 
 const steps = [
   "A família entra em contato",
@@ -56,7 +56,7 @@ export function CityPageTemplate({ city }: { city: CityPageData }) {
   return (
     <div className="site-editorial relative min-h-screen overflow-hidden bg-deep font-body text-foreground">
       <div className="relative z-10 mx-auto max-w-6xl px-5 pb-32 pt-6 sm:px-8 lg:px-12">
-        
+
 
         <main id="inicio">
           <nav aria-label="Navegação estrutural" className="pt-8 text-xs text-muted-foreground">
@@ -97,7 +97,7 @@ export function CityPageTemplate({ city }: { city: CityPageData }) {
             </div>
               <figure className="overflow-hidden rounded-lg border border-border bg-glass shadow-xl shadow-background/20">
                 <img src={cover.src} alt={cover.alt} width={1600} height={1067} decoding="async" fetchPriority="high" className="aspect-[4/3] w-full object-cover" />
-                <figcaption className="border-t border-border px-4 py-3 text-xs leading-relaxed text-muted-foreground">{conceptualImageCaption}</figcaption>
+
               </figure>
             </div>
           </section>
@@ -195,7 +195,7 @@ export function CityPageTemplate({ city }: { city: CityPageData }) {
           </section>
         </main>
 
-        
+
       </div>
 
     </div>

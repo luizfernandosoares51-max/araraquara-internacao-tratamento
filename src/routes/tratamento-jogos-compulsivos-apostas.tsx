@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, MessageCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { gamblingCareScope, gamblingOrientationSections } from "@/lib/gambling-orientation";
-import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
+import { visualAssets } from "@/lib/visual-assets";
 import { phoneDisplay, phoneHref, siteUrl, whatsappHref } from "@/lib/site";
 import { InteractiveTriage } from "@/components/interactive-triage";
 
@@ -40,7 +40,7 @@ export const Route = createFileRoute("/tratamento-jogos-compulsivos-apostas")({
 function GamblingOrientationPage() {
   return (
     <div className="home-serene site-editorial min-h-screen bg-background text-foreground">
-      
+
       <main>
         <section className="relative isolate overflow-hidden">
           <img src={visualAssets.gambling.src} alt={visualAssets.gambling.alt} width={1440} height={960} fetchPriority="high" className="absolute inset-0 -z-20 h-full w-full object-cover" />
@@ -53,7 +53,7 @@ function GamblingOrientationPage() {
               <Button asChild className="h-auto min-h-12 whitespace-normal"><a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle className="size-4 shrink-0" aria-hidden="true" />Consultar possibilidades de orientação</a></Button>
               <Button asChild variant="secondary" className="min-h-12"><a href={phoneHref}><Phone className="size-4" aria-hidden="true" />{phoneDisplay}</a></Button>
             </div>
-            <p className="mt-6 max-w-2xl text-xs leading-relaxed">{conceptualImageCaption}</p>
+
           </div>
         </section>
         <InteractiveTriage />

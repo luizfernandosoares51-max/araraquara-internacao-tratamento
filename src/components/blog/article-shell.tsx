@@ -65,9 +65,7 @@ export function ArticleShell({
               decoding="async"
               className="aspect-[15/8] w-full object-cover"
             />
-            <figcaption className="border-t border-border px-5 py-3 text-xs leading-relaxed text-muted-foreground">
-              Imagem conceitual gerada por IA; não representa paciente, atendimento ou instalação real da Central.
-            </figcaption>
+
           </figure>
         </header>
 

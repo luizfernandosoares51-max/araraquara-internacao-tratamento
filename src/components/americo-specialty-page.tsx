@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { InteractiveTriage } from '@/components/interactive-triage';
 import { AmericoSpecialtyIcon } from './americo-specialties';
 import { americoSpecialty, americoWhatsappHref, americoAccess, americoParentPath, specialtySources, type AmericoSpecialtyKey, type SpecialtyContent } from '@/lib/americo-specialties';
-import { visualAssets, conceptualImageCaption } from '@/lib/visual-assets';
+import { visualAssets } from '@/lib/visual-assets';
 import { institutionalIdentity } from '@/lib/institutional';
 import { phoneDisplay, phoneHref } from '@/lib/site';
 
@@ -33,7 +33,7 @@ export function AmericoSpecialtyPage({ specialty, content }: { specialty: Americ
       </div>
       <figure className="mx-auto max-w-6xl px-5 pb-10 sm:px-8">
         <img src={image.src} alt={image.alt} width={756} height={628} decoding="async" fetchPriority="high" className="aspect-[4/3] w-full rounded-lg object-cover sm:aspect-[16/7]" />
-        <figcaption className="mt-3 text-xs leading-relaxed text-muted-foreground">{conceptualImageCaption}</figcaption>
+
       </figure>
     </section>
     <InteractiveTriage defaultCity="Américo Brasiliense" />

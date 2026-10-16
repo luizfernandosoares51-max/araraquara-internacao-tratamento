@@ -34,7 +34,6 @@ import {
   siteUrl,
   whatsappHref,
 } from "@/lib/site";
-import { conceptualImageCaption } from "@/lib/visual-assets";
 import { araraquaraOrientationFaqs } from "@/lib/araraquara-orientation";
 import { institutionalIdentity } from "@/lib/institutional";
 import { Button } from "@/components/ui/button";
@@ -210,7 +209,7 @@ function SectionLabel({ children }: { children: ReactNode }) {
 function AraraquaraPage() {
   return (
     <div className="araraquara-editorial min-h-screen overflow-hidden bg-ice font-body text-deep">
-      
+
 
       <main id="inicio">
         <section className="bg-background text-foreground">
@@ -243,7 +242,7 @@ function AraraquaraPage() {
                  <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-primary">Orientação local</p>
                 <p className="mt-1 font-display text-sm font-semibold text-foreground">Araraquara, São Paulo</p>
               </div>
-              <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{conceptualImageCaption}</p>
+
             </div>
           </div>
         </section>
@@ -335,7 +334,7 @@ function AraraquaraPage() {
           <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
              <SectionLabel>Representações institucionais</SectionLabel>
             <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Estrutura Terapêutica Local com Sede Própria em Araraquara</h2>
-             <p className="mt-5 max-w-3xl text-[15px] leading-relaxed text-deep/75">A única sede física da Central fica na R. Alfredo Micelli, 70, Condomínio Satélite, Araraquara - SP, CEP 14808-579. A família pode organizar visitas agendadas e contato direto com a coordenação local. As imagens abaixo são representações conceituais de acolhimento, escuta e orientação; não retratam instalações, pacientes ou atendimentos reais.</p>
+             <p className="mt-5 max-w-3xl text-[15px] leading-relaxed text-deep/75">A única sede física da Central fica na R. Alfredo Micelli, 70, Condomínio Satélite, Araraquara - SP, CEP 14808-579. A família pode organizar visitas agendadas e contato direto com a coordenação local.</p>
             <div className="mt-8">
               <AraraquaraPhotoGallery light />
             </div>
@@ -372,7 +371,7 @@ function AraraquaraPage() {
         </section>
       </main>
 
-      
+
 
     </div>
   );

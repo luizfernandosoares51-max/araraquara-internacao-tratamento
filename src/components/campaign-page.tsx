@@ -6,7 +6,7 @@ import { InteractiveTriage } from "@/components/interactive-triage";
 import { adsPages, campaignWhatsappHref, type AdsPageKey, type CampaignDefinition } from "@/lib/ads-pages";
 import { institutionalIdentity } from "@/lib/institutional";
 import { phoneDisplay, phoneHref } from "@/lib/site";
-import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
+import { visualAssets } from "@/lib/visual-assets";
 
 function CampaignActions({ whatsappHref, callLabel, fixed = false }: { whatsappHref: string; callLabel: string; fixed?: boolean }) {
   return <div className={fixed ? "campaign-fixed-actions" : "campaign-actions"}>
@@ -56,7 +56,7 @@ export function CampaignLayout({ page, image, whatsappHref, callLabel = "Ligar A
             <p className="mt-5 max-w-xl text-sm leading-relaxed">Plantão 24h • Apoio Regional em SP • Acolhimento Humanizado</p>
           </div>
         </section>
-        <p className="mx-auto max-w-7xl px-5 py-3 text-xs leading-relaxed text-muted-foreground sm:px-8">{conceptualImageCaption}</p>
+
         <section className="mx-auto max-w-7xl px-5 py-10 sm:px-8 sm:py-14">
           <div className="mb-10 flex items-start gap-4 border-b border-border pb-8">
             <HeartHandshake className="mt-1 size-8 shrink-0 text-whatsapp" aria-hidden="true" />

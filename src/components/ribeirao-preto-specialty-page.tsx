@@ -7,13 +7,13 @@ import { ribeiraoSpecialty, specialtySources } from "@/lib/ribeirao-preto-specia
 import type { RibeiraoSpecialtyKey } from "@/lib/ribeirao-preto-specialties";
 import { institutionalIdentity } from "@/lib/institutional";
 import { phoneDisplay, phoneHref, whatsappHref } from "@/lib/site";
-import { visualAssets, conceptualImageCaption } from "@/lib/visual-assets";
+import { visualAssets } from "@/lib/visual-assets";
 
 export function RibeiraoPretoSpecialtyPage({ specialty }: { specialty: RibeiraoSpecialtyKey }) {
   const page = ribeiraoSpecialty(specialty);
   const image = visualAssets.ribeiraoSpecialties[specialty];
   return <div className="home-serene site-editorial min-h-screen bg-background font-body text-foreground">
-    
+
     <main>
       <div className="mx-auto max-w-6xl px-5 py-6 sm:px-8">
         <nav aria-label="Navegação estrutural" className="text-xs leading-relaxed text-muted-foreground"><ol className="flex flex-wrap items-center gap-2">
@@ -35,7 +35,7 @@ export function RibeiraoPretoSpecialtyPage({ specialty }: { specialty: RibeiraoS
         </div>
         <figure className="mx-auto max-w-6xl px-5 pb-10 sm:px-8">
           <img src={image.src} alt={image.alt} width={1440} height={960} decoding="async" fetchPriority="high" className="aspect-[3/2] w-full rounded-lg object-cover sm:aspect-[16/7]" />
-          <figcaption className="mt-3 text-xs leading-relaxed text-muted-foreground">{conceptualImageCaption}</figcaption>
+
         </figure>
       </section>
       <InteractiveTriage defaultCity="Ribeirão Preto" />

@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import type { ArticleSection } from "./article-shell";
-import { conceptualImageCaption } from "@/lib/visual-assets";
 
 export type IllustratedSection = ArticleSection & {
   image?: { src: string; alt: string };
@@ -26,7 +25,7 @@ export function IllustratedSections({ sections }: { sections: IllustratedSection
           </div>
           {section.image && <figure className={reversed ? "min-w-0 lg:order-1" : "min-w-0"}>
             <img src={section.image.src} alt={section.image.alt} width={1440} height={960} loading="lazy" decoding="async" className="aspect-[3/2] w-full rounded-lg object-cover" />
-            <figcaption className="mt-3 text-xs leading-5">{section.caption ? `${section.caption} ` : ""}{conceptualImageCaption}</figcaption>
+            {section.caption && <figcaption className="mt-3 text-xs leading-5">{section.caption}</figcaption>}
           </figure>}
         </div>
       </section>;
