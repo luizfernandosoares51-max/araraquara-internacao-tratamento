@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 type Step = 1 | 2 | 3 | 4 | 5 | 6 | 7;
 const relationshipIcons = [UserRound, UserRound, UsersRound, UsersRound, HeartHandshake, UsersRound];
 
-export function InteractiveTriage({ defaultCity }: { defaultCity?: string }) {
+export function InteractiveTriage({ defaultCity, className }: { defaultCity?: string; className?: string }) {
   const initialCity = normalizeDefaultTriageCity(defaultCity);
   const [step, setStep] = useState<Step>(1);
   const [relationship, setRelationship] = useState<TriageRelationshipId>();
@@ -83,7 +83,7 @@ export function InteractiveTriage({ defaultCity }: { defaultCity?: string }) {
   }
 
   return (
-    <section id="triagem-familiar" aria-labelledby="triage-title" className="home-serene scroll-mt-24 border-y border-border bg-muted/45 py-14 text-foreground sm:py-20">
+    <section id="triagem-familiar" aria-labelledby="triage-title" className={cn("home-serene scroll-mt-24 border-y border-border bg-muted/45 py-14 text-foreground sm:py-20", className)}>
       <div className="mx-auto max-w-5xl px-5 sm:px-8">
         {step > 1 && step !== 6 && <div className="mb-4 flex justify-end"><Button type="button" variant="ghost" className="min-h-11" onClick={restart}><RotateCcw aria-hidden="true" /> Reiniciar</Button></div>}
         <div className="overflow-hidden rounded-lg border border-border bg-glass shadow-xl backdrop-blur-xl">
