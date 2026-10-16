@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Inserir a imagem enviada na seção “Acolhimento e Rede Credenciada em Todo o Estado de São Paulo”, preservar título e texto, conferir celular/computador e solicitar publicação autorizada.
+
 - [x] Destacar em todas as etapas da triagem o envio voluntário do resumo ao WhatsApp do plantão 24h, ajustar abertura e botão final com pulso suave; fluxo Campinas até resumo e contato oficial conferido em 1280/390, seis testes aprovados e compilação OK; solicitar publicação autorizada, sem garantir retorno imediato.
 
 - [x] Simplificar a abertura global da triagem, retirando o selo e ajustando o subtítulo sem garantir vagas ou proximidade; telas 1280/390 e fluxo Campinas até WhatsApp conferidos, seis testes aprovados e compilação OK; solicitar publicação autorizada.
