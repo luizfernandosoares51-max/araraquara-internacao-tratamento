@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Inserir imagem horizontal no cartão de remoção da Home, harmonizar com os demais cartões e revisar texto preservando orientação 24h, agendamento e disponibilidade; imagem e cartão conferidos em 1280/390 sem rolagem horizontal, compilação OK e checagens básicas sem achados (sem análise profunda); solicitar publicação autorizada.
+
 - [x] Remover avisos visíveis de imagem conceitual/IA de todos os cartões e seções; imagens e ALT preservados, onze páginas conferidas, compilação OK e checagens básicas de segurança sem achados (sem análise profunda); solicitar publicação autorizada.
 
 - [x] Inserir imagem conceitual existente no topo do cartão de encaminhamento para internação involuntária; texto legal preservado, imagem carregada em 1280/390 sem rolagem horizontal, compilação OK e checagens básicas de segurança sem achados (sem análise profunda); solicitar publicação autorizada.
