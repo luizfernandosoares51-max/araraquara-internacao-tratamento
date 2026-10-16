@@ -2,12 +2,14 @@ import { FileCheck2, HeartHandshake, MessageCircle, ShieldCheck, Truck } from "l
 import { Button } from "@/components/ui/button";
 import { institutionalNetwork } from "@/lib/institutional";
 import { whatsappHref } from "@/lib/site";
+import networkImage from "@/assets/acolhimento-rede-estadual.png.asset.json";
 
 export function NetworkSafety() {
   return (
     <section aria-labelledby="rede-seguranca" className="border-t border-border py-16 lg:py-24">
       <div className="flex items-center gap-2 text-secondary"><ShieldCheck className="size-5" aria-hidden="true" /><p className="text-sm font-semibold">Proteção e cuidado responsável</p></div>
       <h2 id="rede-seguranca" className="mt-3 max-w-3xl font-display text-3xl font-semibold leading-tight sm:text-4xl">Acolhimento e Rede Credenciada em Todo o Estado de São Paulo</h2>
+      <img src={networkImage.url} alt="Acolhimento Familiar e Rede Credenciada no Estado de São Paulo" width={768} height={768} loading="lazy" decoding="async" className="mt-7 h-auto max-h-[420px] w-full max-w-[420px] rounded-2xl object-cover shadow-md" />
       <p className="mt-5 max-w-3xl text-base leading-relaxed text-muted-foreground">Você não precisa buscar ajuda sozinho. Oferecemos acolhimento voluntário e direcionamento para clínicas credenciadas e parceiras em todas as regiões do Estado de São Paulo — incluindo Grande São Paulo, Interior e Litoral. Nossa equipe escuta a família, analisa as necessidades de cuidado, consulta a unidade adequada ao caso e organiza os próximos passos para admissão conforme avaliação e disponibilidade.</p>
       <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted-foreground">A Central declara que sua rede parceira é autorizada pela Vigilância Sanitária competente. Organizamos com o estabelecimento receptor os esclarecimentos sobre licença sanitária, responsabilidade técnica e recursos de cuidado. Quando há indicação de internação médica, o encaminhamento é para estabelecimento habilitado, com avaliação e autorização médicas e respeito aos requisitos legais.</p>
       <ul className="mt-8 grid gap-5 sm:grid-cols-2">
