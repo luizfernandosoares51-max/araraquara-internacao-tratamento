@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Ampliar o mapa da seção regional para a largura do bloco, preservar seus pontos, simplificar texto sem garantias não confirmadas, verificar celular/computador e solicitar publicação autorizada.
+- [x] Ampliar o bloco do mapa para largura total, preservar a imagem inteira sem cortes, simplificar texto sem garantias não confirmadas; imagem e navegação para /cidades verificadas em 1280/390, compilação OK e checagens básicas de segurança sem achados (sem análise profunda); solicitar publicação autorizada.
 
 - [x] Simplificar rodapé e notas correspondentes da transparência; contatos seguidos diretamente por links, declaração sanitária atribuída à instituição, 26 testes aprovados, prévia e navegação à privacidade verificadas, compilação OK; checagens básicas de segurança sem achados (sem análise profunda); solicitar publicação autorizada.
 
