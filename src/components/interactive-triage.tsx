@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState, type FormEvent, type ReactNode, type RefObject } from "react";
-import { ArrowLeft, Check, HeartHandshake, LoaderCircle, MessageCircle, RotateCcw, Search, ShieldCheck, Siren, UserRound, UsersRound } from "lucide-react";
+import { ArrowLeft, Check, HeartHandshake, LoaderCircle, MessageCircle, RotateCcw, Search, Siren, UserRound, UsersRound } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { buildTriageWhatsAppHref, getTriageOrientation, isEmergencyTriage, normalizeDefaultTriageCity, triageChallenges, triageCityShortcuts, triageReadiness, triageRelationships, triageTransportOptions, type TriageChallengeId, type TriageReadinessId, type TriageRelationshipId, type TriageTransportId } from "@/lib/interactive-triage";
 import { spMunicipalities } from "@/lib/sp-municipalities";
@@ -85,10 +85,7 @@ export function InteractiveTriage({ defaultCity }: { defaultCity?: string }) {
   return (
     <section id="triagem-familiar" aria-labelledby="triage-title" className="home-serene scroll-mt-24 border-y border-border bg-muted/45 py-14 text-foreground sm:py-20">
       <div className="mx-auto max-w-5xl px-5 sm:px-8">
-        <div className="mb-7 flex flex-wrap items-center justify-between gap-3">
-          <p className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-2 text-xs font-semibold text-secondary"><ShieldCheck className="size-4" aria-hidden="true" /> Triagem preliminar ética · não substitui consulta médica</p>
-          {step > 1 && step !== 6 && <Button type="button" variant="ghost" className="min-h-11" onClick={restart}><RotateCcw aria-hidden="true" /> Reiniciar</Button>}
-        </div>
+        {step > 1 && step !== 6 && <div className="mb-4 flex justify-end"><Button type="button" variant="ghost" className="min-h-11" onClick={restart}><RotateCcw aria-hidden="true" /> Reiniciar</Button></div>}
         <div className="overflow-hidden rounded-lg border border-border bg-glass shadow-xl backdrop-blur-xl">
           <div className="border-b border-border bg-background/70 px-5 py-5 sm:px-8">
             {step >= 2 && step <= 5 && <Button type="button" variant="ghost" size="sm" className="mb-3 -ml-2 h-9 text-muted-foreground" onClick={() => goBack((step - 1) as Step)}><ArrowLeft className="size-4" aria-hidden="true" /> Voltar</Button>}
@@ -96,7 +93,7 @@ export function InteractiveTriage({ defaultCity }: { defaultCity?: string }) {
             <div className="mt-3 h-2 overflow-hidden rounded-full bg-muted" role="progressbar" aria-label="Progresso da orientação" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progress}><div className="h-full rounded-full bg-primary transition-[width] duration-500 motion-reduce:transition-none" style={{ width: `${progress}%` }} /></div>
           </div>
           <div className="min-h-[32rem] px-5 pb-28 pt-7 sm:px-8 sm:py-10">
-            {step === 1 && <StepPanel title="Para quem você está buscando orientação hoje?" subtitle="Não solicitamos nomes de pacientes nem dados de identificação nesta etapa." headingRef={headingRef}>
+            {step === 1 && <StepPanel title="Para quem você está buscando orientação hoje?" subtitle="Selecione para quem é o atendimento para consultarmos as opções de acolhimento e encaminhamento adequadas." headingRef={headingRef}>
               <div className="grid grid-cols-2 gap-2.5">{triageRelationships.map((item, index) => { const Icon = relationshipIcons[index] ?? UserRound; const selected = relationship === item.id; return <Button key={item.id} type="button" variant="outline" aria-pressed={selected} onClick={() => { setRelationship(item.id); advanceAfterSelection(2); }} className={cn("h-auto min-h-14 justify-start whitespace-normal border border-input bg-card px-3 py-3 text-left text-sm font-medium text-card-foreground shadow-sm hover:border-primary hover:bg-brand-soft hover:text-foreground sm:px-5 [&_svg]:text-primary", selected && "border-2 border-primary bg-brand-soft font-semibold text-foreground")}><Icon className="size-5 shrink-0" aria-hidden="true" /><span className="flex-1">{item.label}</span>{selected && <Check className="size-4 shrink-0" aria-hidden="true" />}</Button>; })}</div>
             </StepPanel>}
             {step === 2 && <StepPanel title="Qual o principal desafio enfrentado no momento?" subtitle="Escolha o tema principal. A resposta organiza a conversa, mas não forma um diagnóstico." headingRef={headingRef}>
