@@ -6,6 +6,7 @@ import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import articleSignsImage from "@/assets/blog-dependencia-quimica-sinais.jpg";
 import articleCityImage from "@/assets/blog-dependencia-quimica-sao-carlos.jpg";
 import voluntaryWelcomeImage from "@/assets/home-voluntary-welcome.jpg";
+import transportSupportImage from "@/assets/home-transport-support.jpg";
 import { FamilyOrientationGuide } from "@/components/family-orientation-guide";
 import { InteractiveTriage } from "@/components/interactive-triage";
 import { CareSpecialties } from "@/components/care-program-sections";
@@ -294,10 +295,13 @@ function HomePage() {
 
                 </div>
               </article>
-              <article className="rounded-lg border border-border bg-card p-5 text-card-foreground">
-                <Truck className="size-6 text-secondary" aria-hidden="true" />
-                <h2 className="mt-3 font-display text-xl font-semibold">Remoção: suporte de agendamento 24h</h2>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">O plantão apoia a organização do deslocamento com a família. A execução depende de agendamento, avaliação das necessidades, trajeto e disponibilidade da rede, sem garantia de resgate imediato ou transporte 24h.</p>
+              <article className="overflow-hidden rounded-lg border border-border bg-card text-card-foreground shadow-sm">
+                <img src={transportSupportImage} alt="Representação conceitual de dois profissionais de apoio junto a uma van executiva prata em uma rua tranquila" width={1536} height={864} loading="lazy" decoding="async" className="aspect-video w-full rounded-t-lg object-cover" />
+                <div className="p-5">
+                  <Truck className="size-6 text-secondary" aria-hidden="true" />
+                  <h2 className="mt-3 font-display text-xl font-semibold">Remoção e transporte: orientação 24 horas</h2>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Disponibilizamos suporte para organizar a remoção e o transporte com a rede parceira em todo o Estado de São Paulo, com atenção à privacidade e ao acolhimento humanizado. O plantão oferece orientação 24 horas; veículo, equipe, trajeto e execução do transporte são confirmados conforme avaliação, agendamento e disponibilidade da rede.</p>
+                </div>
               </article>
             </div>
           </section>
