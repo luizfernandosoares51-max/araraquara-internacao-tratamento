@@ -98,7 +98,7 @@ function HomePage() {
           </div>
         </section>
 
-        <InteractiveTriage />
+        <InteractiveTriage className="py-10 sm:py-12" />
 
         <section id="servicos" aria-label="Serviços de acolhimento e encaminhamento" className="border-t border-border py-10 sm:py-12">
           <div className="grid gap-5 md:grid-cols-3">
