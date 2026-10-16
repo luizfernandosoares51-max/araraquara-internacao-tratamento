@@ -1,4 +1,4 @@
-import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
+import { visualAssets } from "@/lib/visual-assets";
 
 export const araraquaraPhotos = visualAssets.araraquara;
 
@@ -28,7 +28,7 @@ export function AraraquaraPhotoGallery({ light = false }: { light?: boolean }) {
           </span>
         </a>
       ))}
-      <p className={`col-span-full text-xs leading-relaxed ${light ? "text-deep/60" : "text-muted-foreground"}`}>{conceptualImageCaption}</p>
+
     </div>
   );
 }

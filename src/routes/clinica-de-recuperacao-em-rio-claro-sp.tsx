@@ -178,7 +178,7 @@ export const Route = createFileRoute("/clinica-de-recuperacao-em-rio-claro-sp")(
 function RioClaroPage() {
   return (
     <div className="site-editorial min-h-screen bg-ice font-body text-deep">
-      
+
 
       <main>
         <section className="relative overflow-hidden bg-deep text-foreground">
@@ -222,7 +222,7 @@ function RioClaroPage() {
                <div>
                <figure className="overflow-hidden border border-border bg-glass shadow-xl shadow-background/20">
                  <img src={visualAssets.cityCovers["rio-claro-sp"].src} alt={visualAssets.cityCovers["rio-claro-sp"].alt} width={1600} height={1067} fetchPriority="high" decoding="async" className="aspect-[4/3] w-full object-cover" />
-                 <figcaption className="border-t border-border px-4 py-3 text-xs leading-relaxed text-muted-foreground">Imagem conceitual gerada por IA; não representa unidade ou atendimento real em Rio Claro.</figcaption>
+
                </figure>
                <aside className="mt-4 border-l-4 border-secondary bg-glass p-6">
                 <ShieldCheck className="size-7 text-secondary" aria-hidden="true" />
@@ -411,7 +411,7 @@ function RioClaroPage() {
         </section>
       </main>
 
-      
+
 
     </div>
   );

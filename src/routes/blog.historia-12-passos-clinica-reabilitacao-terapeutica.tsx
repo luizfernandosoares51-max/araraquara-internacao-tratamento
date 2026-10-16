@@ -3,7 +3,7 @@ import { MessageCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { createArticleHead } from "@/components/blog/article-head";
 import { ArticleBreadcrumb, IllustratedSections, type IllustratedSection } from "@/components/blog/illustrated-article-shell";
-import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
+import { visualAssets } from "@/lib/visual-assets";
 import { twelveStepsArticle as article } from "@/lib/twelve-steps-article";
 import { phoneDisplay, phoneHref } from "@/lib/site";
 
@@ -65,7 +65,7 @@ function HistoryArticle() {
         <h1 className="mt-4 max-w-4xl font-display text-3xl font-bold leading-tight sm:text-5xl">A História da Reabilitação Terapêutica: Como Surgiram os 12 Passos e o Modelo Moderno de Acolhimento</h1>
         <p className="mt-6 max-w-3xl text-lg leading-8 text-muted-foreground">Da ajuda mútua ao cuidado individualizado: uma história de escuta, dignidade e participação familiar.</p>
         <p className="mt-4 text-sm leading-6 text-muted-foreground">Central de Acolhimento e Reabilitação · <time dateTime={article.published}>14 de outubro de 2026</time> · Tempo de leitura: 5 min</p>
-        <figure className="mt-8"><img src={photo.src} alt={photo.alt} width={1200} height={630} fetchPriority="high" decoding="async" className="aspect-[1200/630] w-full rounded-lg object-cover" /><figcaption className="mt-3 text-xs leading-5 text-muted-foreground">{conceptualImageCaption}</figcaption></figure>
+        <figure className="mt-8"><img src={photo.src} alt={photo.alt} width={1200} height={630} fetchPriority="high" decoding="async" className="aspect-[1200/630] w-full rounded-lg object-cover" /></figure>
         <p className="mt-6 max-w-3xl border-l-2 border-secondary pl-5 text-sm leading-7 text-muted-foreground">Conteúdo educativo com fontes públicas. Não substitui avaliação individual e não promete recuperação. Não há revisão técnica multidisciplinar identificada para este artigo.</p>
       </header>
       <IllustratedSections sections={sections} />

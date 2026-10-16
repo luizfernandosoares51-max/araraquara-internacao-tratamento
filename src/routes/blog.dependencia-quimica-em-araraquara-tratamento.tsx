@@ -474,9 +474,6 @@ function AraraquaraArticlePage() {
               decoding="async"
               className="aspect-[4/3] w-full rounded-2xl object-cover"
             />
-            <figcaption className="mt-3 text-sm leading-6 text-muted-foreground">
-              Imagem conceitual gerada por IA; não representa instalação, paciente ou atendimento real.
-            </figcaption>
           </figure>
 
           <a

@@ -3,7 +3,7 @@ import { ArrowRight, MessageCircle } from "lucide-react";
 
 import { blogPosts, blogTopics } from "@/lib/blog-catalog";
 import { siteUrl, whatsappHref } from "@/lib/site";
-import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
+import { visualAssets } from "@/lib/visual-assets";
 import { InteractiveTriage } from "@/components/interactive-triage";
 
 export const Route = createFileRoute("/blog/")({
@@ -37,7 +37,7 @@ function BlogPage() {
       <main className="mx-auto max-w-6xl px-5 py-16 sm:px-8 lg:px-12">
         <figure className="mb-10 overflow-hidden rounded-lg border border-border bg-glass shadow-xl shadow-background/20">
           <img src={visualAssets.blog.src} alt={visualAssets.blog.alt} width={1600} height={1067} fetchPriority="high" decoding="async" className="aspect-[16/7] w-full object-cover" />
-          <figcaption className="border-t border-border px-5 py-3 text-xs leading-relaxed text-muted-foreground">{conceptualImageCaption}</figcaption>
+
         </figure>
         <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">
           Blog
@@ -79,7 +79,7 @@ function BlogPage() {
             </article>)}
           </div>
         </section>)}
-        <p className="mt-8 text-xs leading-6 text-muted-foreground">{conceptualImageCaption}</p>
+
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <a

@@ -15,7 +15,7 @@ import {
 import type { ReactNode } from "react";
 
 import { emailDisplay, emailHref, phoneDisplay, phoneHref, siteUrl, whatsappHref } from "@/lib/site";
-import { conceptualImageCaption, visualAssets } from "@/lib/visual-assets";
+import { visualAssets } from "@/lib/visual-assets";
 import { CareSpecialties, FinancialGuidance } from "@/components/care-program-sections";
 
 import { InteractiveTriage } from "@/components/interactive-triage";
@@ -194,7 +194,7 @@ function SectionLabel({ children }: { children: ReactNode }) {
 function RehabilitationClinicPage() {
   return (
     <div className="min-h-screen bg-ice font-body text-deep">
-      
+
 
       <main>
         <section className="bg-deep text-foreground">
@@ -225,7 +225,7 @@ function RehabilitationClinicPage() {
             </div>
             <figure className="overflow-hidden rounded-lg border border-border bg-glass">
               <img src={visualAssets.clinic.src} alt={visualAssets.clinic.alt} width={1600} height={1067} className="aspect-[4/3] w-full object-cover" loading="eager" fetchPriority="high" />
-              <figcaption className="px-4 py-3 text-xs leading-relaxed text-muted-foreground">{conceptualImageCaption}</figcaption>
+
             </figure>
           </div>
         </section>
@@ -300,7 +300,7 @@ function RehabilitationClinicPage() {
             <p className="mt-5 max-w-3xl text-base leading-7 text-deep/80">O tratamento não é uma sequência idêntica para todos. Em um cuidado responsável, cada etapa tem finalidade clara e depende das necessidades identificadas na avaliação.</p>
             <figure className="mt-9 overflow-hidden rounded-lg border border-deep/10 bg-foreground shadow-sm">
               <img src={visualAssets.treatment.src} alt={visualAssets.treatment.alt} width={1600} height={1067} loading="lazy" decoding="async" className="aspect-[16/7] w-full object-cover" />
-              <figcaption className="px-5 py-3 text-xs leading-relaxed text-deep/60">{conceptualImageCaption}</figcaption>
+
             </figure>
             <div className="mt-10 grid gap-5 md:grid-cols-2">
               {treatmentStages.map((stage, index) => (
@@ -409,7 +409,7 @@ function RehabilitationClinicPage() {
         </section>
       </main>
 
-      
+
     </div>
   );
 }
