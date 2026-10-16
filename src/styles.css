@@ -182,6 +182,16 @@
   }
 }
 
+@keyframes triage-whatsapp-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.88; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .triage-whatsapp-pulse { animation: triage-whatsapp-pulse 2.8s ease-in-out infinite; }
+  .triage-whatsapp-pulse:hover, .triage-whatsapp-pulse:focus-visible { animation: none; }
+}
+
 @layer base {
   * { border-color: var(--color-border); }
   html { scroll-behavior: smooth; }
