@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Reestruturar a Home com sete seções compactas, preservar triagem, fotos e limites confirmados; conferir celular, fluxo WhatsApp e solicitar publicação autorizada.
+- [x] Reestruturar a Home com sete seções compactas, preservar triagem, fotos e limites confirmados; 32 testes aprovados, compilação OK e fluxo Campinas até WhatsApp conferido em 1280/390 sem rolagem horizontal; solicitar publicação autorizada.
 
 - [x] Reduzir a Home a cinco blocos essenciais, preservar fotos, triagem e contatos globais e apresentar planos apenas para consulta; FAQ e schema correspondente removidos, 32 testes aprovados, compilação OK, fluxo Campinas até WhatsApp e links conferidos em 1280/390. Altura inicial no celular reduzida de 27.393px para 4.222px (85%); checagens básicas de segurança sem achados, sem análise profunda; solicitar publicação autorizada.
 
