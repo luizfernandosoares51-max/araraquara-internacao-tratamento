@@ -24,16 +24,13 @@ export function InstitutionalFooter() {
           <section className="min-w-0">
             <h2 className="text-base font-semibold">Responsabilidade técnica e sanitária</h2>
             <div className="mt-5 text-sm leading-relaxed"><TechnicalResponsibility /></div>
-            <p className="mt-3 text-xs leading-relaxed text-muted-foreground">Dados confirmados pela instituição; ícones não representam certificação independente.</p>
             <p className="mt-4 text-sm font-semibold">Vigilância Sanitária</p>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{institutionalIdentity.sanitaryStatement}</p>
-            <p className="mt-3 text-xs leading-relaxed text-muted-foreground">Número e validade da licença sanitária e responsável médico/CRM não informados. Acolhimento não equivale automaticamente a internação médica.</p>
           </section>
           <section className="min-w-0">
             <h2 className="text-base font-semibold">Contato oficial e transparência</h2>
             <a href={phoneHref} className="mt-4 flex min-h-12 items-center gap-2 text-sm font-medium text-primary"><Phone className="size-4 shrink-0" aria-hidden="true" />{phoneDisplay}</a>
             <a href={emailHref} className="flex min-h-12 items-center gap-2 text-sm text-primary"><Mail className="size-4 shrink-0" aria-hidden="true" /><span className="break-all">{emailDisplay}</span></a>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">Para dúvidas, solicitações e manifestações, utilize os contatos acima. Não há canal exclusivo de ouvidoria confirmado.</p>
             <nav aria-label="Transparência institucional" className="mt-4 flex flex-col">
               {institutionalLinks.map((link) => <Link key={link.href} to={link.href} className="flex min-h-12 items-center py-2 text-sm font-medium text-primary underline-offset-4 hover:underline">{link.label}</Link>)}
               <Link to="/contato" className="flex min-h-12 items-center py-2 text-sm font-medium text-primary hover:underline">Contato e orientações de emergência</Link>

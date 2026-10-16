@@ -25,7 +25,7 @@ export const institutionalIdentity = {
     name: "Adelmo João Antunes",
     role: "Proprietário / Direção",
   },
-  sanitaryStatement: "A instituição declara que a unidade segue os protocolos sanitários e as diretrizes da Vigilância Sanitária local para acolhimento e reabilitação psicossocial, observando as Leis 10.216/2001 e 13.840/2019 conforme o enquadramento aplicável.",
+  sanitaryStatement: "A instituição declara que sua unidade e sua rede parceira seguem os protocolos sanitários e as diretrizes da Vigilância Sanitária local para acolhimento e reabilitação psicossocial, observando as Leis Federais 10.216/2001 e 13.840/2019 conforme o enquadramento aplicável.",
   sanitaryLicense: null,
   dedicatedOmbudsman: null,
   careScope: {
