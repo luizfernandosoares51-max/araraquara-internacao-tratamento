@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Compactar a apresentação da rede estadual em um parágrafo, retirar o segundo texto e posicionar o link de cidades imediatamente antes dos cartões; navegação verificada em 1280/390, compilação OK e checagens básicas de segurança sem achados, sem análise profunda; solicitar publicação autorizada.
+
 - [x] Atualizar os dois parágrafos da rede estadual e incluir link destacado para /cidades, preservando condições de vagas, privacidade, responsabilidade médica e transporte; navegação conferida em 1280/390, compilação OK e checagens básicas de segurança sem achados (sem análise profunda); solicitar publicação autorizada.
 
 - [x] Inserir a imagem enviada na seção “Acolhimento e Rede Credenciada em Todo o Estado de São Paulo”, preservar título e texto; imagem carregada e sem cortes em 1280/390, sem rolagem horizontal, compilação OK e checagens básicas de segurança sem achados; solicitar publicação autorizada.
