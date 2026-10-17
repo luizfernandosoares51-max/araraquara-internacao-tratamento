@@ -3,7 +3,8 @@ import { cityContactLabel, cityWhatsappHref, regionalCityAccess } from "@/lib/re
 import { cityEditorialFaqs, cityEditorialMetadata } from "@/lib/city-editorial";
 import { CityEditorialSection } from "@/components/city-editorial-section";
 import { AraraquaraSpecialties } from "@/components/araraquara-specialties";
-import { AraraquaraInstitutionalVideo } from "@/components/araraquara-institutional-video";
+import { lazy, Suspense } from "react";
+const AraraquaraInstitutionalVideo = lazy(() => import("@/components/araraquara-institutional-video").then((m) => ({ default: m.AraraquaraInstitutionalVideo })));
 import { InteractiveTriage } from "@/components/interactive-triage";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
@@ -253,7 +254,7 @@ function AraraquaraPage() {
 
         <AraraquaraSpecialties />
 
-        <AraraquaraInstitutionalVideo />
+        <Suspense fallback={<div id="videos" className="min-h-[400px]" />}><AraraquaraInstitutionalVideo /></Suspense>
 
         <div className="bg-background px-5 text-foreground sm:px-8 lg:px-12"><div className="mx-auto max-w-7xl"><CityEditorialSection slug="araraquara" /></div></div>
 
