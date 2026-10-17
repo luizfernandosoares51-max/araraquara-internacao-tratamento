@@ -74,7 +74,7 @@ const institutionalPillars = [
   },
   {
     title: "Cuidado Integrado e Humanizado",
-    text: "Acompanhamento médico, psicológico, enfermagem e 12 Passos com foco na autonomia.",
+    text: "Articulação médica com parceiros, apoio psicológico, equipe multidisciplinar e 12 Passos com foco na autonomia.",
     icon: ShieldCheck,
   },
   {
