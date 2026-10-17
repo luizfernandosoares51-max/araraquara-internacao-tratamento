@@ -175,7 +175,7 @@ export const saoCarlosSpecialties: Record<SaoCarlosSpecialtyKey, Specialty> = {
       { question: 'A Central realiza resgate 24h ou atendimento noturno em São Carlos?', answer: 'A orientação e o suporte para agendamento funcionam 24 horas. A remoção regional é combinada com a coordenação operacional de Luiz Fernando Soares conforme agenda, condições e disponibilidade. Em emergência, acione o SAMU 192.' },
       { question: 'Como a família deve organizar o embarque?', answer: 'Esclareça previamente destino, documentação, acompanhamento e condições com a coordenação e o serviço responsável. Não improvise força, sedação ou contenção; recusa não autoriza remoção coercitiva informal. Não são prometidos veículos ou protocolos não confirmados.' }
     ]
-  }
+  },
   women: {
     key: 'women', path: '/clinica-recuperacao-feminina-sao-carlos', label: "Clínica de Recuperação Feminina", summary: "Privacidade, individualidade e suporte psicossocial.",
     title: "Clínica de Recuperação Feminina para São Carlos - SP | Acolhimento em Araraquara", description: "Orientação reservada para mulheres de São Carlos e suas famílias: suporte psicossocial, equipe multidisciplinar e acolhimento voluntário na sede em Araraquara.",
