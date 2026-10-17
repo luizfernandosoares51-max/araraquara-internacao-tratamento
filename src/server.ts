@@ -44,12 +44,35 @@ function isH3SwallowedErrorBody(body: string): boolean {
   }
 }
 
+const productionHosts = new Set([
+  "centraldeacolhimentoereabilitacao.com",
+  "www.centraldeacolhimentoereabilitacao.com",
+  "araraquara-internacao-tratamento.lovable.app",
+]);
+
+// Security headers only on published hosts so the editor preview iframe keeps working.
+function withSecurityHeaders(request: Request, response: Response): Response {
+  const host = new URL(request.url).hostname;
+  if (!productionHosts.has(host)) return response;
+  const headers = new Headers(response.headers);
+  headers.set("X-Content-Type-Options", "nosniff");
+  headers.set("X-Frame-Options", "SAMEORIGIN");
+  headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
+  headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=(), payment=(), usb=()");
+  headers.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
+  headers.set(
+    "Content-Security-Policy",
+    "frame-ancestors 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me https://api.whatsapp.com; upgrade-insecure-requests",
+  );
+  return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
+}
+
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
-      return await normalizeCatastrophicSsrResponse(response);
+      return withSecurityHeaders(request, await normalizeCatastrophicSsrResponse(response));
     } catch (error) {
       console.error(error);
       return new Response(renderErrorPage(), {
