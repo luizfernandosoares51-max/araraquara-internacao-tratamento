@@ -13,30 +13,30 @@ export function CareSpecialties() {
     <p className="mb-3 text-xs font-semibold uppercase text-secondary">Modalidades e necessidades de cuidado</p>
     <h2 className={headingClass}>Acolhimento psicossocial e caminhos de tratamento</h2>
     <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground">A unidade própria oferece acolhimento voluntário contínuo e suporte psicossocial. O plano reúne psicologia, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar com supervisão diária e cuidados contínuos, conforme as necessidades da pessoa.</p>
-    <div className="mt-8 grid gap-4 md:grid-cols-2">
-      <article className="rounded-lg border border-border bg-card p-6">
+    <div className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
+      <article className="min-w-0 rounded-lg border border-border bg-card p-3 sm:p-6">
         <HeartHandshake className="size-6 text-secondary" aria-hidden="true" />
-        <h3 className="mt-4 font-display text-xl font-semibold">Álcool, cocaína, crack e múltiplas substâncias</h3>
-        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">A busca de ajuda começa com escuta e triagem sobre o uso de substâncias, a saúde e a situação familiar. A indicação de cuidado depende de avaliação individual, não apenas da substância utilizada.</p>
-        <Button asChild variant="link" className="mt-4 h-auto min-h-12 whitespace-normal px-0 text-left"><Link to="/blog/dependencia-quimica-sinais-consequencias-tratamento">Entender a dependência química <ArrowRight aria-hidden="true" /></Link></Button>
+        <h3 className="mt-3 font-display text-sm font-semibold leading-snug sm:text-xl">Álcool, cocaína, crack e múltiplas substâncias</h3>
+        <p className="mt-2 text-xs leading-snug text-muted-foreground sm:text-sm sm:leading-relaxed">A busca de ajuda começa com escuta e triagem sobre o uso de substâncias, a saúde e a situação familiar. A indicação de cuidado depende de avaliação individual, não apenas da substância utilizada.</p>
+        <Button asChild variant="link" className="mt-2 h-auto min-h-12 whitespace-normal px-0 text-left text-xs sm:text-sm"><Link to="/blog/dependencia-quimica-sinais-consequencias-tratamento">Entender a dependência química <ArrowRight aria-hidden="true" /></Link></Button>
       </article>
-      <article className="rounded-lg border border-border bg-card p-6">
+      <article className="min-w-0 rounded-lg border border-border bg-card p-3 sm:p-6">
         <Sprout className="size-6 text-secondary" aria-hidden="true" />
-        <h3 className="mt-4 font-display text-xl font-semibold">Reabilitação psicossocial na unidade</h3>
-        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Suporte psicológico com Margarete Vasques (CRP 06/130268), conscientização em 12 Passos, laborterapia, convivência terapêutica e plano de prevenção à recaída integram a proposta confirmada pela instituição.</p>
-        <Button asChild variant="link" className="mt-4 h-auto min-h-12 whitespace-normal px-0 text-left"><Link to="/transparencia">Conhecer a responsabilidade técnica <ArrowRight aria-hidden="true" /></Link></Button>
+        <h3 className="mt-3 font-display text-sm font-semibold leading-snug sm:text-xl">Reabilitação psicossocial na unidade</h3>
+        <p className="mt-2 text-xs leading-snug text-muted-foreground sm:text-sm sm:leading-relaxed">Suporte psicológico com Margarete Vasques (CRP 06/130268), conscientização em 12 Passos, laborterapia, convivência terapêutica e plano de prevenção à recaída integram a proposta confirmada pela instituição.</p>
+        <Button asChild variant="link" className="mt-2 h-auto min-h-12 whitespace-normal px-0 text-left text-xs sm:text-sm"><Link to="/transparencia">Conhecer a responsabilidade técnica <ArrowRight aria-hidden="true" /></Link></Button>
       </article>
-      <article className="rounded-lg border border-border bg-card p-6">
+      <article className="min-w-0 rounded-lg border border-border bg-card p-3 sm:p-6">
         <ShieldCheck className="size-6 text-secondary" aria-hidden="true" />
-        <h3 className="mt-4 font-display text-xl font-semibold">Avaliação clínica e encaminhamento para desintoxicação</h3>
-        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">A avaliação médica orienta o cuidado adequado. Quando há indicação de desintoxicação médica ou assistência hospitalar, a Central apoia a família no encaminhamento a estabelecimentos habilitados, com protocolos e condutas definidos pela equipe responsável.</p>
-        <Button asChild variant="link" className="mt-4 h-auto min-h-12 whitespace-normal px-0 text-left"><Link to="/clinica-de-reabilitacao">Compreender as etapas do cuidado <ArrowRight aria-hidden="true" /></Link></Button>
+        <h3 className="mt-3 font-display text-sm font-semibold leading-snug sm:text-xl">Avaliação clínica e encaminhamento para desintoxicação</h3>
+        <p className="mt-2 text-xs leading-snug text-muted-foreground sm:text-sm sm:leading-relaxed">A avaliação médica orienta o cuidado adequado. Quando há indicação de desintoxicação médica ou assistência hospitalar, a Central apoia a família no encaminhamento a estabelecimentos habilitados, com protocolos e condutas definidos pela equipe responsável.</p>
+        <Button asChild variant="link" className="mt-2 h-auto min-h-12 whitespace-normal px-0 text-left text-xs sm:text-sm"><Link to="/clinica-de-reabilitacao">Compreender as etapas do cuidado <ArrowRight aria-hidden="true" /></Link></Button>
       </article>
-      <article className="rounded-lg border border-border bg-card p-6">
+      <article className="min-w-0 rounded-lg border border-border bg-card p-3 sm:p-6">
         <HeartHandshake className="size-6 text-secondary" aria-hidden="true" />
-        <h3 className="mt-4 font-display text-xl font-semibold">Acolhimento voluntário e orientação em internação involuntária</h3>
-        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">Acolhimento voluntário psicossocial não equivale a internação hospitalar. Situações que requerem internação involuntária clínica são encaminhadas a unidades habilitadas, com orientação familiar sobre os trâmites; a decisão e a autorização são médicas, conforme os requisitos legais.</p>
-        <Button asChild variant="link" className="mt-4 h-auto min-h-12 whitespace-normal px-0 text-left"><Link to="/termos-de-acolhimento">Consultar os termos de atendimento <ArrowRight aria-hidden="true" /></Link></Button>
+        <h3 className="mt-3 font-display text-sm font-semibold leading-snug sm:text-xl">Acolhimento voluntário e orientação em internação involuntária</h3>
+        <p className="mt-2 text-xs leading-snug text-muted-foreground sm:text-sm sm:leading-relaxed">Acolhimento voluntário psicossocial não equivale a internação hospitalar. Situações que requerem internação involuntária clínica são encaminhadas a unidades habilitadas, com orientação familiar sobre os trâmites; a decisão e a autorização são médicas, conforme os requisitos legais.</p>
+        <Button asChild variant="link" className="mt-2 h-auto min-h-12 whitespace-normal px-0 text-left text-xs sm:text-sm"><Link to="/termos-de-acolhimento">Consultar os termos de atendimento <ArrowRight aria-hidden="true" /></Link></Button>
       </article>
     </div>
     <p className="mt-6 max-w-3xl text-sm leading-relaxed text-muted-foreground">Para necessidades de acolhimento masculino ou feminino, consulte a equipe sobre perfil de admissão e possibilidades de encaminhamento. A organização dos ambientes e a compatibilidade de admissão devem ser esclarecidas diretamente antes do ingresso.</p>
@@ -49,11 +49,11 @@ function CareMethodology() {
     <p className="mb-3 text-xs font-semibold uppercase text-secondary">Equipe multidisciplinar e cuidado individualizado</p>
     <h2 className={headingClass}>Metodologia Terapêutica e Equipe Multidisciplinar</h2>
     <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground">O acolhimento voluntário da Central reúne suporte psicológico, conscientização em 12 Passos, laborterapia, convivência terapêutica e prevenção à recaída. Articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar com supervisão diária e cuidados contínuos complementam essa estrutura. O plano individual orienta as prioridades e eventuais encaminhamentos hospitalares.</p>
-    <div className="mt-8 grid gap-4 lg:grid-cols-3">
-      {careMethodology.map(method => <article key={method.title} className="rounded-lg border border-border bg-card p-6">
+    <div className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-3">
+      {careMethodology.map(method => <article key={method.title} className="min-w-0 rounded-lg border border-border bg-card p-3 sm:p-6">
         <ShieldCheck className="size-6 text-secondary" aria-hidden="true" />
-        <h3 className="mt-4 font-display text-xl font-semibold">{method.title}</h3>
-        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{method.description}</p>
+        <h3 className="mt-3 font-display text-sm font-semibold leading-snug sm:text-xl">{method.title}</h3>
+        <p className="mt-2 text-xs leading-snug text-muted-foreground sm:text-sm sm:leading-relaxed">{method.description}</p>
       </article>)}
     </div>
     <div className="mt-7 border-l-2 border-accent pl-5">
@@ -69,11 +69,12 @@ export function TherapeuticRoutine() {
     <p className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase text-secondary"><Clock className="size-4" aria-hidden="true" />Rotina na unidade própria</p>
     <h2 className={headingClass}>Um dia de acolhimento em Araraquara</h2>
     <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground">Cronograma informado e confirmado pela instituição. A participação nas atividades considera o plano de cuidado e a avaliação da equipe, sem garantir resultados terapêuticos.</p>
-    <ol className="mt-8 divide-y divide-border border-y border-border">
-      {therapeuticSchedule.map(item => <li key={item.start} className="grid gap-3 py-6 sm:grid-cols-[10rem_1fr] sm:gap-8">
-        <div className="flex items-center gap-2 text-sm font-semibold text-secondary"><span className="size-2 shrink-0 rounded-full bg-accent" aria-hidden="true" /><time dateTime={item.start}>{item.start.replace(":", "h")}</time><span>às</span><time dateTime={item.end}>{item.end.replace(":", "h")}</time></div>
-        <div><h3 className="font-display text-lg font-semibold">{item.title}</h3><p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">{item.activities}</p></div>
-      </li>)}
+    <ol className="mt-6 grid grid-cols-2 gap-2 rounded-lg border border-border bg-card p-3 sm:gap-3 sm:p-5 md:grid-cols-3">
+      {therapeuticSchedule.map(item => { const h = Number(item.start.slice(0, 2)); const period = h < 11 ? "Manhã" : h < 18 ? "Tarde" : "Noite"; return <li key={item.start} className="min-w-0 rounded-md bg-background p-2.5 sm:p-4">
+        <p className="text-[10px] font-semibold uppercase text-muted-foreground">{period}</p>
+        <div className="mt-1 flex flex-wrap items-center gap-1 text-xs font-semibold text-secondary"><time dateTime={item.start}>{item.start.replace(":", "h")}</time><span>às</span><time dateTime={item.end}>{item.end.replace(":", "h")}</time></div>
+        <h3 className="mt-1 font-display text-sm font-semibold leading-snug">{item.title}</h3><p className="mt-1 text-xs leading-snug text-muted-foreground">{item.activities}</p>
+      </li>; })}
     </ol>
   </section>;
 }
