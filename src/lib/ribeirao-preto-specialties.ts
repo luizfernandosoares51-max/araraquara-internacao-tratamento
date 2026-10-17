@@ -386,7 +386,7 @@ export const ribeiraoSpecialtyList = [
     "label": "Diagnóstico Duplo (Saúde Mental)",
     "summary": "Avaliação integrada e limites do acolhimento.",
     "title": "Diagnóstico Duplo e Saúde Mental em Ribeirão Preto - SP",
-    "description": "Informação sobre dependência e condições de saúde mental para Ribeirão Preto. Articulação médica e psiquiátrica com serviços parceiros credenciados, psicologia e enfermagem na sede em Araraquara.",
+    "description": "Informação sobre dependência e condições de saúde mental para Ribeirão Preto. Articulação médica e psiquiátrica com serviços parceiros credenciados, psicologia e equipe multidisciplinar na sede em Araraquara.",
     "heading": "Diagnóstico duplo e saúde mental: orientação em Ribeirão Preto",
     "intro": "Quando o uso de substâncias convive com ansiedade, alterações de humor ou outros sintomas, a família pode ter dúvidas sobre por onde começar. Em Ribeirão Preto, a busca exige avaliação integrada; a Central reúne suporte psicológico, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar na sede em Araraquara, com avaliação individual pelos profissionais responsáveis.",
     "notice": "Risco de suicídio, surto com risco imediato ou alteração de consciência exige urgência ou SAMU 192. Em crises agudas, priorize avaliação no serviço de urgência.",
@@ -403,7 +403,7 @@ export const ribeiraoSpecialtyList = [
         "title": "Equipe multidisciplinar e coordenação do cuidado",
         "paragraphs": [
           "Quando existem necessidades clínicas, os profissionais responsáveis podem discutir acompanhamento integrado e continuidade. O manejo de medicamentos pertence ao médico prescritor; familiares não devem aumentar, suspender ou combinar remédios por iniciativa própria.",
-          "A Central informa suporte psicológico com Margarete Vasques, CRP 06/130268, em acolhimento voluntário psicossocial. A equipe inclui articulação médica e psiquiátrica com serviços parceiros credenciados para avaliação clínica, estabilização e manejo de comorbidades, além de enfermagem com supervisão diária e cuidados contínuos. Necessidades hospitalares recebem encaminhamento adequado, conforme avaliação."
+          "A Central informa suporte psicológico com Margarete Vasques, CRP 06/130268, em acolhimento voluntário psicossocial. A equipe inclui articulação médica e psiquiátrica com serviços parceiros credenciados para avaliação clínica, estabilização e manejo de comorbidades, além de equipe multidisciplinar com supervisão diária e cuidados contínuos. Necessidades hospitalares recebem encaminhamento adequado, conforme avaliação."
         ]
       },
       {
@@ -435,7 +435,7 @@ export const ribeiraoSpecialtyList = [
       },
       {
         "question": "A Central oferece acompanhamento psiquiátrico próprio?",
-        "answer": "Sim. A instituição confirma articulação médica e psiquiátrica com serviços parceiros credenciados na unidade de Araraquara para avaliação clínica, estabilização e manejo de comorbidades, em conjunto com psicologia e enfermagem. Necessidades hospitalares seguem encaminhamento conforme avaliação."
+        "answer": "Sim. A instituição confirma articulação médica e psiquiátrica com serviços parceiros credenciados na unidade de Araraquara para avaliação clínica, estabilização e manejo de comorbidades, em conjunto com psicologia e equipe multidisciplinar. Necessidades hospitalares seguem encaminhamento conforme avaliação."
       },
       {
         "question": "Quem pode ajustar os medicamentos de uma comorbidade?",
@@ -466,7 +466,7 @@ export const ribeiraoSpecialtyList = [
         "title": "Redução e interrupção pertencem ao médico",
         "paragraphs": [
           "Alguns medicamentos podem provocar abstinência ou agravamento de sintomas quando interrompidos abruptamente. A necessidade de redução gradual e seu planejamento dependem da substância, do histórico e das condições de saúde. Esta página não estabelece doses, prazos ou substituições.",
-          "O articulação médica e psiquiátrica com serviços parceiros credenciados da Central pode avaliar as necessidades clínicas, com apoio da enfermagem. Um programa próprio de desmame não está confirmado, e a desintoxicação médica segue encaminhamento externo. A avaliação considera também as razões do uso, como ansiedade, insônia ou dor, sem presumir uma origem única."
+          "O articulação médica e psiquiátrica com serviços parceiros credenciados da Central pode avaliar as necessidades clínicas, com apoio da equipe multidisciplinar. Um programa próprio de desmame não está confirmado, e a desintoxicação médica segue encaminhamento externo. A avaliação considera também as razões do uso, como ansiedade, insônia ou dor, sem presumir uma origem única."
         ]
       },
       {

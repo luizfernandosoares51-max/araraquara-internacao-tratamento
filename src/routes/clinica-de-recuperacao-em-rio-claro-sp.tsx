@@ -72,7 +72,7 @@ const processSteps = [
   { title: "Entendimento da situação", text: "São considerados histórico, momento atual, riscos e rede de apoio." },
   { title: "Orientação sobre possibilidades", text: "A equipe explica caminhos que podem ser analisados para o cuidado." },
   { title: "Avaliação da necessidade", text: "A indicação de tratamento depende de análise individual; internação não é automática." },
-  { title: "Definição da unidade adequada", text: "Avalia-se a sede própria em Araraquara para acolhimento voluntário; o articulação médica e psiquiátrica com serviços parceiros credenciados e a enfermagem compõem o cuidado, com encaminhamento hospitalar conforme indicação." },
+  { title: "Definição da unidade adequada", text: "Avalia-se a sede própria em Araraquara para acolhimento voluntário; o articulação médica e psiquiátrica com serviços parceiros credenciados e a equipe multidisciplinar compõem o cuidado, com encaminhamento hospitalar conforme indicação." },
   { title: "Preparação para o acolhimento", text: "A família recebe informações sobre documentos, condições e próximos passos." },
 ];
 
