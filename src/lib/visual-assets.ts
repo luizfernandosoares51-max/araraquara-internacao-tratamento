@@ -180,6 +180,9 @@ export const visualAssets = {
     involuntary: { src: specialtyInvoluntary, alt: "Dois adultos conversando junto a pastas, representação conceitual de orientação familiar" },
     voluntary: { src: specialtyVoluntary, alt: "Pessoa diante de um portão aberto para um jardim, representação conceitual de uma escolha voluntária" },
     transport: { src: specialtyTransport, alt: "Mapa, caderno e chaves sobre uma mesa, representação conceitual de planejamento do transporte" },
+    women: { src: adsWomenAraraquara, alt: "Mulheres em conversa acolhedora, representação conceitual de escuta e apoio" },
+    gambling: { src: mataoGambling, alt: "Pessoa afastando o celular, representação conceitual da pausa nas apostas" },
+    insurance: { src: araraquaraEvaluation, alt: "Documentos organizados sobre a mesa, representação conceitual da consulta ao plano de saúde" },
   },
   home: {
     hero: { src: homeRenewal, alt: "Caminho arborizado com duas pessoas caminhando juntas ao amanhecer" },
