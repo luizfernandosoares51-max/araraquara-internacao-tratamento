@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
+import { TreatmentStandardBlocks, treatmentHeading } from '@/components/treatment-standard-blocks';
 import { Button } from "@/components/ui/button";
 import { InteractiveTriage } from "@/components/interactive-triage";
 import { SpecialtyIcon } from "./araraquara-specialties";
@@ -26,11 +27,12 @@ export function SaoCarlosSpecialtyPage({ specialty }: { specialty: SpecialtyKey 
       <section className="border-b border-border">
         <div className="mx-auto max-w-6xl px-5 pb-10 pt-6 sm:px-8 sm:pt-10">
           <div className="flex items-center gap-3"><SpecialtyIcon name={page.key} /><p className="text-xs font-semibold uppercase text-secondary">São Carlos · Sede em Araraquara</p></div>
-          <h1 className="mt-5 max-w-4xl font-display text-3xl font-semibold leading-tight sm:text-5xl">{page.heading}</h1>
+          <h1 className="mt-5 max-w-4xl font-display text-3xl font-semibold leading-tight sm:text-5xl">{treatmentHeading(page.label, "São Carlos")}</h1>
+<p className="mt-4 max-w-3xl font-display text-xl font-semibold leading-snug sm:text-2xl">{page.heading}</p>
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg">{page.intro}</p>
           <div className="mt-7 flex flex-wrap gap-3">
-            <Button asChild className="h-auto min-h-12 max-w-full whitespace-normal bg-whatsapp py-3 text-whatsapp-foreground hover:bg-whatsapp/90"><a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />Conversar com a equipe</a></Button>
-            <Button asChild variant="outline" className="h-auto min-h-12 whitespace-normal py-3"><Link to="/contato">Solicitar orientação <ArrowRight aria-hidden="true" /></Link></Button>
+            <Button asChild className="h-auto min-h-12 max-w-full whitespace-normal bg-whatsapp py-3 text-whatsapp-foreground hover:bg-whatsapp/90"><a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />Falar com Plantão de Atendimento 24h via WhatsApp</a></Button>
+            <Button asChild variant="outline" className="h-auto min-h-12 whitespace-normal py-3"><a href={phoneHref}><Phone aria-hidden="true" />{phoneDisplay}</a></Button>
           </div>
         </div>
         <figure className="mx-auto max-w-6xl px-5 pb-10 sm:px-8">
@@ -67,6 +69,7 @@ export function SaoCarlosSpecialtyPage({ specialty }: { specialty: SpecialtyKey 
         <div className="mt-6 flex flex-wrap gap-3"><Button asChild className="h-auto min-h-12 max-w-full whitespace-normal bg-whatsapp py-3 text-whatsapp-foreground hover:bg-whatsapp/90"><a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />Falar pelo WhatsApp</a></Button><Button asChild variant="outline" className="h-auto min-h-12 whitespace-normal py-3"><a href={phoneHref}><Phone aria-hidden="true" />{phoneDisplay}</a></Button></div>
         <Button asChild variant="link" className="mt-7 h-auto min-h-12 max-w-full whitespace-normal px-0 text-left"><Link to="/clinica-de-recuperacao-em-sao-carlos-sp"><ArrowLeft className="shrink-0" aria-hidden="true" />Conhecer o acolhimento em Araraquara para famílias de São Carlos</Link></Button>
       </div></section>
-    </main>
+    <TreatmentStandardBlocks cityName="São Carlos" cityPath="/clinica-de-recuperacao-em-sao-carlos-sp" />
+</main>
   </div>;
 }

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { gamblingCareScope, gamblingOrientationSections } from "@/lib/gambling-orientation";
 import { visualAssets } from "@/lib/visual-assets";
 import { phoneDisplay, phoneHref, siteUrl, whatsappHref } from "@/lib/site";
+import { TreatmentStandardBlocks } from "@/components/treatment-standard-blocks";
 import { InteractiveTriage } from "@/components/interactive-triage";
 
 const title = "Orientação sobre Jogos Compulsivos e Apostas | Central";
@@ -50,7 +51,7 @@ function GamblingOrientationPage() {
             <h1 className="mt-5 max-w-3xl font-display text-3xl font-semibold leading-tight sm:text-5xl">{heading}</h1>
             <p className="mt-6 max-w-2xl text-base leading-relaxed">Quando as apostas passam a afetar a rotina, as relações ou o orçamento, pedir ajuda é um passo possível. Conheça caminhos educativos e possibilidades de avaliação, sem julgamentos ou promessas de resultado.</p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild className="h-auto min-h-12 whitespace-normal"><a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle className="size-4 shrink-0" aria-hidden="true" />Consultar possibilidades de orientação</a></Button>
+              <Button asChild className="h-auto min-h-12 whitespace-normal"><a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle className="size-4 shrink-0" aria-hidden="true" />Falar com Plantão de Atendimento 24h via WhatsApp</a></Button>
               <Button asChild variant="secondary" className="min-h-12"><a href={phoneHref}><Phone className="size-4" aria-hidden="true" />{phoneDisplay}</a></Button>
             </div>
 
@@ -79,7 +80,8 @@ function GamblingOrientationPage() {
             <p className="mt-6 text-sm leading-relaxed text-muted-foreground">Referências públicas: <a href="https://www.gov.br/saude/pt-br/composicao/saes/desmad/raps" target="_blank" rel="noopener noreferrer" className="font-medium text-primary underline">Rede de Atenção Psicossocial — Ministério da Saúde</a> e <a href="https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192" target="_blank" rel="noopener noreferrer" className="font-medium text-primary underline">SAMU 192 — Ministério da Saúde</a>. Confirme o acesso aos serviços com a rede municipal.</p>
           </section>
         </div>
-      </main>
+      <TreatmentStandardBlocks cityName="Araraquara" cityPath="/clinica-de-recuperacao-em-araraquara" />
+</main>
     </div>
   );
 }
