@@ -1,3 +1,4 @@
+import { CityStandardBlocks } from "@/components/city-standard-blocks";
 import { cityContactLabel, cityWhatsappHref, regionalCityAccess } from "@/lib/regional-city-access";
 import { cityEditorialFaqs, cityEditorialMetadata } from "@/lib/city-editorial";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -163,7 +164,7 @@ function SaoCarlosPage() {
               Orientação local para São Carlos
             </p>
             <h1 className="mt-5 max-w-3xl font-display text-[2.35rem] font-bold leading-[1.06] sm:text-5xl lg:text-[3.6rem]">
-              Clínica de Recuperação em São Carlos – Tratamento e Acolhimento
+              Clínica de Recuperação e Reabilitação em São Carlos - SP | Orientação de Vagas e Acolhimento 24h
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-deep/70 sm:text-lg">
               {regionalCityAccess["sao-carlos-sp"].welcome}
@@ -328,6 +329,7 @@ function SaoCarlosPage() {
             </div>
           </div>
         </section>
+      <CityStandardBlocks cityName="São Carlos" />
       </main>
 
 

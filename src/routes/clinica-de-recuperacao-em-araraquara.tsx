@@ -1,3 +1,4 @@
+import { CityStandardBlocks } from "@/components/city-standard-blocks";
 import { cityContactLabel, cityWhatsappHref, regionalCityAccess } from "@/lib/regional-city-access";
 import { cityEditorialFaqs, cityEditorialMetadata } from "@/lib/city-editorial";
 import { CityEditorialSection } from "@/components/city-editorial-section";
@@ -222,7 +223,7 @@ function AraraquaraPage() {
                 <ArrowLeft className="size-4" aria-hidden="true" /> Voltar para a página inicial
               </Link>
               <div className="inline-flex items-center gap-2 rounded-full border border-border bg-glass px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-secondary"><span className="size-1.5 rounded-full bg-accent" /> Informação local e orientação</div>
-              <h1 className="mt-5 max-w-3xl font-display text-[2.25rem] font-bold leading-[1.05] sm:text-5xl lg:text-[3.75rem]">Clínica de Recuperação e Reabilitação em <span className="text-secondary">Araraquara - SP</span></h1>
+              <h1 className="mt-5 max-w-3xl font-display text-[2.25rem] font-bold leading-[1.05] sm:text-5xl lg:text-[3.75rem]">Clínica de Recuperação e Reabilitação em Araraquara - SP | Orientação de Vagas e Acolhimento 24h</h1>
               <p className="mt-5 max-w-2xl text-[16px] leading-relaxed text-muted-foreground sm:text-lg">{regionalCityAccess.araraquara.welcome}</p>
               <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">O plantão de orientação 24h acolhe famílias dos bairros de Araraquara e da região, com apoio para organizar avaliação, recepção e visitas à sede local.</p>
               <div className="mt-7 grid gap-3 sm:grid-cols-2">
@@ -369,6 +370,7 @@ function AraraquaraPage() {
             <div className="max-w-4xl"><p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">Orientação em Araraquara</p><h2 className="mt-3 font-display text-3xl font-bold leading-tight sm:text-5xl">Precisa conversar sobre uma situação de dependência química ou alcoolismo?</h2><p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-primary-foreground/70">A equipe pode ouvir sua dúvida e explicar possibilidades de acolhimento e tratamento. Cada caso é analisado individualmente, sem garantia de resultado e sem afirmar que internação seja sempre necessária.</p><div className="mt-7 flex flex-col gap-3 sm:flex-row"><WhatsAppLink className="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg bg-whatsapp px-6 py-4 text-sm font-semibold text-whatsapp-foreground"><MessageCircle className="size-5" aria-hidden="true" /> {cityContactLabel("Araraquara")}</WhatsAppLink><a href={phoneHref} className="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg border border-primary-foreground/30 px-6 py-4 text-sm font-semibold"><Phone className="size-4" aria-hidden="true" /> Ligar agora · {phoneDisplay}</a></div><a href={emailHref} className="mt-5 inline-flex items-center gap-2 break-all text-sm font-semibold text-secondary hover:underline"><Mail className="size-4 shrink-0" aria-hidden="true" /> {emailDisplay}</a></div>
           </div>
         </section>
+      <CityStandardBlocks cityName="Araraquara" />
       </main>
 
 

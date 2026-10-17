@@ -1,3 +1,4 @@
+import { CityStandardBlocks } from "@/components/city-standard-blocks";
 import { cityContactLabel, cityWhatsappHref, regionalCityAccess } from "@/lib/regional-city-access";
 import { cityEditorialFaqs, cityEditorialMetadata } from "@/lib/city-editorial";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -224,7 +225,7 @@ function OfficialRibeiraoPretoPage() {
                   <MapPin className="size-4" aria-hidden="true" /> Orientação para Ribeirão Preto e região
                 </p>
                 <h1 className="mt-5 max-w-4xl font-display text-4xl font-bold leading-[1.08] sm:text-5xl lg:text-6xl">
-                  Clínica de Reabilitação em Ribeirão Preto – SP
+                  Clínica de Recuperação e Reabilitação em Ribeirão Preto - SP | Orientação de Vagas e Acolhimento 24h
                 </h1>
                 <p className="mt-6 max-w-3xl text-base leading-8 text-muted-foreground sm:text-lg">
                   {regionalCityAccess["ribeirao-preto-sp"].welcome}
@@ -463,6 +464,7 @@ function OfficialRibeiraoPretoPage() {
             </nav>
           </div>
         </section>
+      <CityStandardBlocks cityName="Ribeirão Preto" />
       </main>
 
 
