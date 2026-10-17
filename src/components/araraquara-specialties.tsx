@@ -10,7 +10,7 @@ export function SpecialtyIcon({ name }: { name: AraraquaraSpecialtyKey }) {
 }
 
 export function AraraquaraSpecialties() {
-  return <section data-specialty-cards className="border-y border-border bg-background px-5 py-14 text-foreground sm:px-8 lg:px-12 lg:py-16" aria-labelledby="specialty-heading">
+  return <section id="especialidades" data-specialty-cards className="border-y border-border bg-background px-5 py-14 text-foreground sm:px-8 lg:px-12 lg:py-16" aria-labelledby="specialty-heading">
     <div className="mx-auto max-w-6xl">
       <p className="mb-3 text-xs font-semibold uppercase text-secondary">Informação para cada necessidade</p>
       <h2 id="specialty-heading" className="max-w-4xl font-display text-2xl font-semibold leading-tight sm:text-4xl">Especialidades e Modalidades de Atendimento em Araraquara</h2>
