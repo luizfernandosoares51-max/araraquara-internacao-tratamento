@@ -1,5 +1,6 @@
 import { Link } from '@tanstack/react-router';
 import { ArrowLeft, ArrowRight, MapPin, MessageCircle, Phone, ShieldCheck } from 'lucide-react';
+import { TreatmentStandardBlocks, treatmentHeading } from '@/components/treatment-standard-blocks';
 import { Button } from '@/components/ui/button';
 import { InteractiveTriage } from '@/components/interactive-triage';
 import { MataoSpecialtyIcon } from './matao-specialties';
@@ -23,10 +24,11 @@ export function MataoSpecialtyPage({ specialty }: { specialty: MataoSpecialtyKey
     <section className="border-b border-border">
       <div className="mx-auto max-w-6xl px-5 pb-10 pt-6 sm:px-8 sm:pt-10">
         <div className="flex items-center gap-3"><MataoSpecialtyIcon name={specialty} /><p className="text-xs font-semibold uppercase text-secondary">Matão · Apoio regional a partir de Araraquara</p></div>
-        <h1 className="mt-5 max-w-4xl font-display text-3xl font-semibold leading-tight sm:text-5xl">{page.heading}</h1>
+        <h1 className="mt-5 max-w-4xl font-display text-3xl font-semibold leading-tight sm:text-5xl">{treatmentHeading(page.label, "Matão")}</h1>
+<p className="mt-4 max-w-3xl font-display text-xl font-semibold leading-snug sm:text-2xl">{page.heading}</p>
         <p className="mt-6 max-w-3xl leading-relaxed text-muted-foreground sm:text-lg">{page.intro}</p>
         <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-          <Button asChild className="h-auto min-h-12 max-w-full whitespace-normal bg-whatsapp py-3 text-whatsapp-foreground hover:bg-whatsapp/90"><a href={whatsapp} target="_blank" rel="noopener noreferrer"><MessageCircle className="shrink-0" aria-hidden="true" />Falar com o plantão para Matão</a></Button>
+          <Button asChild className="h-auto min-h-12 max-w-full whitespace-normal bg-whatsapp py-3 text-whatsapp-foreground hover:bg-whatsapp/90"><a href={whatsapp} target="_blank" rel="noopener noreferrer"><MessageCircle className="shrink-0" aria-hidden="true" />Falar com Plantão de Atendimento 24h via WhatsApp</a></Button>
           <Button asChild variant="outline" className="h-auto min-h-12 whitespace-normal border-border bg-glass py-3 text-foreground hover:bg-glass-strong"><a href={phoneHref}><Phone aria-hidden="true" />{phoneDisplay}</a></Button>
         </div>
         <p className="mt-4 text-xs text-muted-foreground">Orientação e suporte para agendamento 24h; não é serviço de emergência.</p>
@@ -64,5 +66,6 @@ export function MataoSpecialtyPage({ specialty }: { specialty: MataoSpecialtyKey
       <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap"><Button asChild className="h-auto min-h-12 max-w-full whitespace-normal bg-whatsapp py-3 text-whatsapp-foreground hover:bg-whatsapp/90"><a href={whatsapp} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />Falar pelo WhatsApp</a></Button><Button asChild variant="outline" className="h-auto min-h-12 whitespace-normal border-border bg-glass py-3"><Link to="/contato">Solicitar orientação <ArrowRight aria-hidden="true" /></Link></Button></div>
       <Button asChild variant="link" className="mt-7 h-auto min-h-12 max-w-full whitespace-normal px-0 text-left text-secondary"><Link to={mataoParentPath}><ArrowLeft className="shrink-0" aria-hidden="true" />Voltar à página de Matão</Link></Button>
     </div></section>
-  </main></div>;
+  <TreatmentStandardBlocks cityName="Matão" cityPath="/clinica-de-recuperacao-em-matao-sp" />
+</main></div>;
 }
