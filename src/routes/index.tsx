@@ -109,7 +109,7 @@ function HomePage() {
         <section aria-labelledby="pilares-titulo" className="py-10 sm:py-12">
           <p className="text-xs font-semibold uppercase text-secondary">Missão, visão e valores</p>
           <h2 id="pilares-titulo" className="mt-3 font-display text-2xl font-semibold sm:text-3xl">Dignidade em cada etapa do cuidado</h2>
-          <div className="mt-6 grid gap-5 md:grid-cols-3">
+          <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
             {[
               { label: "Missão", title: "Resgate e Dignidade Humana", text: "Acolher famílias com escuta respeitosa e facilitar o acesso ao cuidado adequado, preservando a dignidade, os direitos e a participação da pessoa em cada etapa.", icon: HeartHandshake },
               { label: "Visão", title: "Referência Estadual em Orientação", text: "Construir uma relação de confiança com famílias de todo o Estado de São Paulo, articulando encaminhamentos privados e valorizando práticas humanizadas e responsáveis.", icon: Compass },
@@ -121,7 +121,7 @@ function HomePage() {
 
         <section id="servicos" aria-label="Serviços de acolhimento e encaminhamento" className="border-t border-border py-10 sm:py-12">
           <h2 className="mb-6 font-display text-2xl font-semibold sm:text-3xl">Acolhimento, encaminhamento e transporte</h2>
-          <div className="grid gap-5 md:grid-cols-3">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
             <article className="overflow-hidden rounded-lg border border-border bg-card text-card-foreground shadow-sm">
               <img src={voluntaryWelcomeImage} alt="Representação de escuta acolhedora de um adulto e sua familiar" width={1536} height={864} loading="lazy" decoding="async" className="aspect-video w-full object-cover" />
               <div className="p-5"><HeartHandshake className="size-6 text-secondary" aria-hidden="true" /><h3 className="mt-3 font-display text-xl font-semibold">Internação Voluntária Humanizada em São Paulo</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Acolhimento humanizado e suporte psicossocial na sede de Araraquara, com adesão da pessoa. Quando indicada, a internação médica com consentimento ocorre por encaminhamento à unidade habilitada, conforme avaliação e disponibilidade.</p></div>

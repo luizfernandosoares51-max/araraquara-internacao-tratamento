@@ -78,7 +78,7 @@ export function LocalCityPageView({ city, beforeFaq }: { city: LocalCityPage; be
               <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">{city.resourcesHeading}</h2>
               <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground">{city.resourcesIntro}</p>
             </div>
-            <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-2 xl:grid-cols-3">
               {city.resources.map((resource) => (
                 <article key={resource.href} className="rounded-lg border border-border bg-glass p-5 sm:p-6">
                   <div className="flex items-start gap-3"><MapPin className="mt-0.5 size-5 shrink-0 text-secondary" aria-hidden="true" /><h3 className="font-display text-lg font-semibold">{resource.name}</h3></div>
@@ -90,7 +90,7 @@ export function LocalCityPageView({ city, beforeFaq }: { city: LocalCityPage; be
           </section>
 
           <section className="border-b border-border py-14 lg:py-20">
-            <div className="rounded-lg bg-primary p-6 text-primary-foreground sm:p-10 lg:p-12">
+            <div className="rounded-lg bg-primary p-3 sm:p-6 text-primary-foreground sm:p-10 lg:p-12">
               <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">Orientação familiar</p>
               <h2 className="mt-3 max-w-3xl font-display text-2xl font-semibold leading-tight sm:text-4xl">{city.familyHeading}</h2>
               <div className="mt-5 max-w-4xl space-y-4 text-[15px] leading-relaxed text-primary-foreground/75">{city.familyText.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
@@ -112,7 +112,7 @@ export function LocalCityPageView({ city, beforeFaq }: { city: LocalCityPage; be
           <section className="py-14 lg:py-20">
             <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">Continue com informação</p>
             <h2 className="mt-3 font-display text-2xl font-semibold sm:text-3xl">Leituras relacionadas ao seu próximo passo</h2>
-            <div className="mt-7 grid gap-4 md:grid-cols-3">
+            <div className="mt-7 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
               {city.relatedLinks.map((link) => <Link key={link.to} to={link.to} className="rounded-lg border border-border bg-glass p-5 transition-colors hover:bg-glass-strong"><span className="flex items-center justify-between gap-3 font-display font-semibold">{link.label}<ArrowRight className="size-4 text-secondary" aria-hidden="true" /></span><span className="mt-2 block text-sm leading-relaxed text-muted-foreground">{link.description}</span></Link>)}
             </div>
           </section>

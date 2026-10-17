@@ -253,7 +253,7 @@ function RehabilitationClinicPage() {
                 <h2 className="font-display text-3xl font-bold leading-tight sm:text-4xl">Quando procurar uma clínica de reabilitação?</h2>
                 <p className="mt-5 text-base leading-7 text-muted-foreground">Buscar informação pode ser adequado antes de uma crise. Mudanças persistentes e prejuízos associados ao consumo merecem atenção, mas somente uma avaliação profissional pode orientar a modalidade de cuidado.</p>
               </div>
-              <ul className="grid gap-3 sm:grid-cols-2">
+              <ul className="grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-2">
                 {[
                   "Riscos à saúde ou à segurança",
                   "Dificuldade de reduzir ou interromper o uso",
@@ -280,7 +280,7 @@ function RehabilitationClinicPage() {
                 <p className="mt-5 max-w-xl text-base leading-7 text-muted-foreground">Aprofunde dúvidas sobre sinais de atenção, possibilidades de cuidado e critérios para uma decisão informada.</p>
                 <Link to="/blog" className="mt-6 inline-flex items-center gap-2 font-semibold text-secondary hover:text-foreground">Ver todos os conteúdos <ArrowRight className="size-4" aria-hidden="true" /></Link>
               </div>
-              <div className="grid gap-4 sm:grid-cols-2">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-2">
                 {relatedArticles.map((article) => (
                   <article key={article.to} className="rounded-lg border border-border bg-glass p-5 sm:p-6">
                     <h3 className="font-display text-lg font-bold leading-snug">{article.title}</h3>
@@ -302,9 +302,9 @@ function RehabilitationClinicPage() {
               <img src={visualAssets.treatment.src} alt={visualAssets.treatment.alt} width={1600} height={1067} loading="lazy" decoding="async" className="aspect-[16/7] w-full object-cover" />
 
             </figure>
-            <div className="mt-10 grid gap-5 md:grid-cols-2">
+            <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-2">
               {treatmentStages.map((stage, index) => (
-                <article key={stage.title} className="rounded-lg border border-deep/10 bg-foreground p-6 shadow-sm sm:p-7">
+                <article key={stage.title} className="rounded-lg border border-deep/10 bg-foreground p-3 sm:p-6 shadow-sm sm:p-7">
                   <span className="grid size-9 place-items-center rounded-full bg-primary font-display text-sm font-bold text-primary-foreground">{index + 1}</span>
                   <h3 className="mt-5 font-display text-xl font-bold">{stage.title}</h3>
                   <p className="mt-3 text-sm leading-6 text-deep/75">{stage.text}</p>
@@ -320,13 +320,13 @@ function RehabilitationClinicPage() {
 
         <section className="bg-background px-5 py-16 text-foreground sm:px-8 lg:px-12 lg:py-24">
           <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-2">
-            <article className="rounded-lg border border-border bg-glass p-6 sm:p-8">
+            <article className="rounded-lg border border-border bg-glass p-3 sm:p-6 sm:p-8">
               <ClipboardCheck className="size-7 text-secondary" aria-hidden="true" />
               <h2 className="mt-5 font-display text-2xl font-bold sm:text-3xl">Tratamento para dependência química</h2>
               <p className="mt-4 text-sm leading-7 text-muted-foreground">Dependência química envolve uma relação complexa com substâncias e pode afetar saúde, escolhas, vínculos e rotina. O cuidado pode reunir abordagens psicológicas, médicas e sociais, conforme avaliação. Mais do que interromper o uso, é importante compreender gatilhos, desenvolver recursos para lidar com dificuldades e reconstruir formas de apoio.</p>
               <Link to="/blog/dependencia-quimica-sinais-tratamento" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:text-foreground">Ler sobre sinais e busca de ajuda <ArrowRight className="size-4" aria-hidden="true" /></Link>
             </article>
-            <article className="rounded-lg border border-border bg-glass p-6 sm:p-8">
+            <article className="rounded-lg border border-border bg-glass p-3 sm:p-6 sm:p-8">
               <HeartHandshake className="size-7 text-secondary" aria-hidden="true" />
               <h2 className="mt-5 font-display text-2xl font-bold sm:text-3xl">Tratamento para alcoolismo</h2>
               <p className="mt-4 text-sm leading-7 text-muted-foreground">O álcool é socialmente aceito, mas seu uso pode causar dependência e consequências graves. A avaliação deve considerar frequência, quantidade, sintomas de abstinência, condições de saúde e impactos cotidianos. Em alguns casos, parar abruptamente sem acompanhamento pode trazer riscos; a orientação de profissionais de saúde é essencial.</p>
@@ -367,7 +367,7 @@ function RehabilitationClinicPage() {
         </section>
 
         <section className="bg-ice px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
-          <div className="mx-auto grid max-w-6xl gap-8 rounded-lg border border-deep/10 bg-foreground p-7 sm:p-10 lg:grid-cols-[1fr_auto] lg:items-center">
+          <div className="mx-auto grid max-w-6xl gap-8 rounded-lg border border-deep/10 bg-foreground p-3 sm:p-7 sm:p-10 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
               <MapPin className="size-7 text-primary" aria-hidden="true" />
               <h2 className="mt-4 font-display text-3xl font-bold">Encontre atendimento por cidade</h2>
