@@ -34,7 +34,7 @@ export function LocalCityPageView({ city, beforeFaq }: { city: LocalCityPage; be
             <div className="mt-10 grid gap-10 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:gap-16">
               <div>
                 <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">Orientação local · {city.name}/SP</p>
-                <h1 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">{city.h1}</h1>
+                <h1 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">Clínica de Recuperação e Reabilitação em {city.name} - SP | Orientação de Vagas e Acolhimento 24h</h1>
                 <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">{city.lead}</p>
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                   <Button asChild size="lg" className="h-auto min-h-14 whitespace-normal py-4 bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90"><a href={cityWhatsappHref(city.name)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />{cityContactLabel(city.name)}</a></Button>
@@ -97,6 +97,15 @@ export function LocalCityPageView({ city, beforeFaq }: { city: LocalCityPage; be
             </div>
           </section>
 
+          <section aria-labelledby="modalidades-titulo" className="border-b border-border py-10 sm:py-12">
+            <h2 id="modalidades-titulo" className="font-display text-2xl font-semibold leading-tight sm:text-3xl">Internação Voluntária e Involuntária (Lei 13.840) para {city.name} e Região</h2>
+            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">O acolhimento voluntário ocorre com adesão da pessoa na sede própria em Araraquara. A internação involuntária é excepcional, exige avaliação e autorização médica e acontece somente em unidade médica habilitada; a Central orienta a família no encaminhamento.</p>
+            <h2 className="mt-8 font-display text-2xl font-semibold leading-tight sm:text-3xl">Atendimento Psiquiátrico, Apoio em Dependência Química e Saúde Mental</h2>
+            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">A Central oferece suporte psicossocial e orientação; avaliação e acompanhamento psiquiátrico são realizados por profissionais e serviços médicos externos, para os quais a família é orientada conforme cada caso.</p>
+            <h2 className="mt-8 font-display text-2xl font-semibold leading-tight sm:text-3xl">Orientações sobre Encaminhamento e Apoio Complementar à Rede Pública (CAPS e SAMU 192)</h2>
+            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">O CAPS de {city.name} segue como porta pública de cuidado em saúde mental. Em risco imediato à vida, ligue para o SAMU 192 antes de qualquer contato com a Central.</p>
+          </section>
+
           {beforeFaq}
 
           <section className="border-b border-border py-14 lg:py-20">
@@ -114,6 +123,17 @@ export function LocalCityPageView({ city, beforeFaq }: { city: LocalCityPage; be
               {city.relatedLinks.map((link) => <Link key={link.to} to={link.to} className="rounded-lg border border-border bg-glass p-5 transition-colors hover:bg-glass-strong"><span className="flex items-center justify-between gap-3 font-display font-semibold">{link.label}<ArrowRight className="size-4 text-secondary" aria-hidden="true" /></span><span className="mt-2 block text-sm leading-relaxed text-muted-foreground">{link.description}</span></Link>)}
             </div>
           </section>
+
+          <nav aria-labelledby="servicos-conectados" className="border-t border-border py-10">
+            <h2 id="servicos-conectados" className="font-display text-xl font-semibold">Navegação e Serviços Conectados</h2>
+            <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+              <li><Link to="/" className="inline-flex min-h-11 items-center font-semibold text-primary underline underline-offset-4">Central de Acolhimento e Regulação SP</Link></li>
+              <li><Link to="/cidades" className="inline-flex min-h-11 items-center font-semibold text-primary underline underline-offset-4">Ver Todas as Cidades Atendidas</Link></li>
+              <li><Link to="/clinica-de-recuperacao-em-araraquara" className="inline-flex min-h-11 items-center font-semibold text-primary underline underline-offset-4">Sede em Araraquara</Link></li>
+              <li><Link to="/clinica-de-recuperacao-em-sao-carlos-sp" className="inline-flex min-h-11 items-center font-semibold text-primary underline underline-offset-4">São Carlos</Link></li>
+              <li><Link to="/clinica-de-reabilitacao" className="inline-flex min-h-11 items-center font-semibold text-primary underline underline-offset-4">Clínica de reabilitação: como funciona</Link></li>
+            </ul>
+          </nav>
         </div>
 
         <section className="border-t border-border bg-primary text-primary-foreground">
