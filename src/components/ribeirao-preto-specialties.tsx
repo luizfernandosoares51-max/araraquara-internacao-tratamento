@@ -1,8 +1,8 @@
 import { Link } from '@tanstack/react-router';
-import { ArrowRight, Brain, HeartHandshake, Route, ShieldCheck, WineOff, Users, Pill, BookOpen, Heart } from 'lucide-react';
+import { ArrowRight, Brain, HeartHandshake, Route, ShieldCheck, WineOff, Users, Pill, BookOpen, Heart, Dices, FileText, HandHeart, UsersRound, Briefcase } from 'lucide-react';
 import { ribeiraoSpecialtyList, type RibeiraoSpecialtyKey } from '@/lib/ribeirao-preto-specialties';
 
-const icons = { alcohol: WineOff, cocaine: Brain, involuntary: ShieldCheck, voluntary: HeartHandshake, transport: Route, women: Heart, dual: Users, medication: Pill, youth: BookOpen };
+const icons = { alcohol: WineOff, cocaine: Brain, involuntary: ShieldCheck, voluntary: HeartHandshake, transport: Route, women: Heart, dual: Users, medication: Pill, youth: BookOpen, gambling: Dices, insurance: FileText, elderly: HandHeart, men: UsersRound, workers: Briefcase };
 export function RibeiraoSpecialtyIcon({ name }: { name: RibeiraoSpecialtyKey }) {
   const Icon = icons[name];
   return <Icon className="size-6 text-secondary" aria-hidden="true" />;
