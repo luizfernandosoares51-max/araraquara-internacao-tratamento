@@ -1,10 +1,10 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Brain, HeartHandshake, Route as RouteIcon, ShieldCheck, WineOff } from "lucide-react";
-import { specialtyList, type SpecialtyKey } from "@/lib/araraquara-specialties";
+import { ArrowRight, Brain, HeartHandshake, Route as RouteIcon, ShieldCheck, WineOff, Flower2, Dices, FileText } from "lucide-react";
+import { specialtyList, type AraraquaraSpecialtyKey } from "@/lib/araraquara-specialties";
 
-const specialtyIcons = { alcohol: WineOff, cocaine: Brain, involuntary: ShieldCheck, voluntary: HeartHandshake, transport: RouteIcon };
+const specialtyIcons = { alcohol: WineOff, cocaine: Brain, involuntary: ShieldCheck, voluntary: HeartHandshake, transport: RouteIcon, women: Flower2, gambling: Dices, insurance: FileText };
 
-export function SpecialtyIcon({ name }: { name: SpecialtyKey }) {
+export function SpecialtyIcon({ name }: { name: AraraquaraSpecialtyKey }) {
   const Icon = specialtyIcons[name];
   return <Icon className="size-6 text-secondary" aria-hidden="true" />;
 }

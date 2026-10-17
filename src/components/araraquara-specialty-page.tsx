@@ -4,12 +4,12 @@ import { TreatmentStandardBlocks, treatmentHeading } from '@/components/treatmen
 import { Button } from "@/components/ui/button";
 import { InteractiveTriage } from "@/components/interactive-triage";
 import { SpecialtyIcon } from "./araraquara-specialties";
-import { araraquaraSpecialties, specialtySources, type SpecialtyKey } from "@/lib/araraquara-specialties";
+import { araraquaraSpecialties, specialtySources, type AraraquaraSpecialtyKey } from "@/lib/araraquara-specialties";
 import { institutionalIdentity } from "@/lib/institutional";
 import { phoneDisplay, phoneHref, whatsappHref } from "@/lib/site";
 import { visualAssets } from "@/lib/visual-assets";
 
-export function AraraquaraSpecialtyPage({ specialty }: { specialty: SpecialtyKey }) {
+export function AraraquaraSpecialtyPage({ specialty }: { specialty: AraraquaraSpecialtyKey }) {
   const page = araraquaraSpecialties[specialty];
   const image = visualAssets.specialties[specialty];
   return <div className="home-serene site-editorial min-h-screen bg-background font-body text-foreground">

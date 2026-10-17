@@ -12,8 +12,9 @@ test("psychology registration remains linked to Margarete", () => {
   assert.equal(specialtyScope.psychology.registration, "CRP 06/130268");
 });
 test("regional transport retains Luiz Fernando Soares as coordinator", () => assert.equal(specialtyScope.coordination.name, "Luiz Fernando Soares"));
-test("five specialty routes use the requested stable paths", () => assert.deepEqual(specialtyList.map(page => page.path), [
+test("eight specialty routes use the requested stable paths", () => assert.deepEqual(specialtyList.map(page => page.path), [
   "/tratamento-alcoolismo-araraquara", "/tratamento-cocaina-crack-araraquara", "/internacao-involuntaria-araraquara", "/internacao-voluntaria-araraquara", "/resgate-remocao-araraquara",
+  "/clinica-recuperacao-feminina-araraquara", "/tratamento-jogos-compulsivos-apostas-araraquara", "/clinica-recuperacao-convenio-araraquara",
 ]));
 test("structured business identity does not imply an own-unit medical business", () => {
   for (const page of specialtyList) {
