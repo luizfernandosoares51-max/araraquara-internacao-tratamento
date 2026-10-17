@@ -2,10 +2,12 @@ import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { saoCarlosSpecialtyHead, saoCarlosSpecialtyList, specialtyScope } from './sao-carlos-specialties';
 
-test('São Carlos has the five requested stable specialty URLs', () => {
+test('São Carlos has the ten requested stable specialty URLs', () => {
   assert.deepEqual(saoCarlosSpecialtyList.map(page => page.path), [
     '/tratamento-alcoolismo-sao-carlos', '/tratamento-cocaina-crack-sao-carlos',
-    '/internacao-involuntaria-sao-carlos', '/internacao-voluntaria-sao-carlos', '/resgate-remocao-sao-carlos'
+    '/internacao-involuntaria-sao-carlos', '/internacao-voluntaria-sao-carlos', '/resgate-remocao-sao-carlos',
+    '/clinica-recuperacao-feminina-sao-carlos', '/tratamento-jogos-compulsivos-apostas-sao-carlos', '/clinica-recuperacao-convenio-sao-carlos',
+    '/tratamento-dependencia-jovens-sao-carlos', '/dependencia-medicamentos-tarja-preta-sao-carlos'
   ]);
 });
 test('medical detox remains outside the own unit', () => assert.equal(specialtyScope.ownUnitMedicalDetox, false));
