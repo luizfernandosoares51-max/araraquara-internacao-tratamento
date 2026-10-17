@@ -2,9 +2,10 @@ import { careProgram } from "./care-program";
 import { institutionalIdentity, institutionalLocalBusiness, legalSources } from "./institutional";
 import { siteUrl } from "./site";
 
-export type SpecialtyKey = "alcohol" | "cocaine" | "involuntary" | "voluntary" | "transport" | "women" | "gambling" | "insurance";
+export type SpecialtyKey = "alcohol" | "cocaine" | "involuntary" | "voluntary" | "transport";
+export type AraraquaraSpecialtyKey = SpecialtyKey | "women" | "gambling" | "insurance";
 type Specialty = {
-  key: SpecialtyKey;
+  key: AraraquaraSpecialtyKey;
   path: "/tratamento-alcoolismo-araraquara" | "/tratamento-cocaina-crack-araraquara" | "/internacao-involuntaria-araraquara" | "/internacao-voluntaria-araraquara" | "/resgate-remocao-araraquara" | "/clinica-recuperacao-feminina-araraquara" | "/tratamento-jogos-compulsivos-apostas-araraquara" | "/clinica-recuperacao-convenio-araraquara";
   label: string;
   summary: string;
@@ -27,7 +28,7 @@ export const specialtyScope = {
   coordination: institutionalIdentity.generalCoordination,
 } as const;
 
-export const araraquaraSpecialties: Record<SpecialtyKey, Specialty> = {
+export const araraquaraSpecialties: Record<AraraquaraSpecialtyKey, Specialty> = {
   alcohol: {
     key: "alcohol", path: "/tratamento-alcoolismo-araraquara", label: "Tratamento do Alcoolismo",
     summary: "Uso de álcool, avaliação e reconstrução de vínculos.",
@@ -313,7 +314,7 @@ export const specialtySources = [
   ...legalSources.slice(0, 2),
 ];
 
-export function specialtyHead(key: SpecialtyKey) {
+export function specialtyHead(key: AraraquaraSpecialtyKey) {
   const page = araraquaraSpecialties[key];
   const url = `${siteUrl}${page.path}`;
   const graph: object[] = [
