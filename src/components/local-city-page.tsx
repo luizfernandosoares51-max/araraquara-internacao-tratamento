@@ -90,7 +90,7 @@ export function LocalCityPageView({ city, beforeFaq }: { city: LocalCityPage; be
           </section>
 
           <section className="border-b border-border py-14 lg:py-20">
-            <div className="rounded-lg bg-primary p-6 text-primary-foreground sm:p-10 lg:p-12">
+            <div className="rounded-lg bg-primary p-3 sm:p-6 text-primary-foreground sm:p-10 lg:p-12">
               <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">Orientação familiar</p>
               <h2 className="mt-3 max-w-3xl font-display text-2xl font-semibold leading-tight sm:text-4xl">{city.familyHeading}</h2>
               <div className="mt-5 max-w-4xl space-y-4 text-[15px] leading-relaxed text-primary-foreground/75">{city.familyText.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>

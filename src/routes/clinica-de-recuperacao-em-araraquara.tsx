@@ -301,7 +301,7 @@ function AraraquaraPage() {
                 <img src={araraquaraPhotos[3].src} width={araraquaraPhotos[3].width} height={araraquaraPhotos[3].height} loading="lazy" decoding="async" alt={araraquaraPhotos[3].alt} className="aspect-[4/5] w-full object-cover" />
               </figure>
             </div>
-            <aside id="familia" className="mt-10 grid scroll-mt-6 gap-6 rounded-lg bg-primary p-6 text-primary-foreground shadow-lg sm:p-8 lg:grid-cols-[auto_1fr_auto] lg:items-center">
+            <aside id="familia" className="mt-10 grid scroll-mt-6 gap-6 rounded-lg bg-primary p-3 sm:p-6 text-primary-foreground shadow-lg sm:p-8 lg:grid-cols-[auto_1fr_auto] lg:items-center">
               <Users className="size-8 text-secondary" aria-hidden="true" />
               <div><h3 className="font-display text-2xl font-semibold">Orientação para famílias de Araraquara</h3><p className="mt-3 text-sm leading-relaxed text-primary-foreground/75">Quando há preocupação com mudanças de comportamento, conflitos frequentes, riscos à saúde ou prejuízos na vida cotidiana. A orientação pode ajudar a família a organizar uma conversa e procurar avaliação adequada.</p></div>
               <WhatsAppLink className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-whatsapp px-5 py-3 text-sm font-semibold text-whatsapp-foreground"><MessageCircle className="size-4" aria-hidden="true" /> {cityContactLabel("Araraquara")}</WhatsAppLink>
