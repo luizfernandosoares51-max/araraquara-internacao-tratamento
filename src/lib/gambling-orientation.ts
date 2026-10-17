@@ -32,7 +32,7 @@ export const gamblingOrientationSections = [
     title: "Avaliação médica e caminhos na rede de saúde",
     paragraphs: [
       "Procure a UBS do seu município para uma avaliação inicial e orientação sobre a rede de saúde mental, incluindo CAPS conforme a organização local. Alterações importantes de humor, sofrimento intenso, uso de substâncias ou outras necessidades de saúde devem ser avaliados por profissionais.",
-      "A Central dispõe de acompanhamento médico e psiquiátrico integrado e suporte psicológico, conforme avaliação individual. A equipe pode orientar necessidades de encaminhamento hospitalar; um programa específico para apostas deve ser consultado, pois permanece não confirmado. Não inicie, interrompa ou altere medicamentos por conta própria. Apostar não determina automaticamente indicação de internação.",
+      "A Central dispõe de articulação médica e psiquiátrica com serviços parceiros credenciados e suporte psicológico, conforme avaliação individual. A equipe pode orientar necessidades de encaminhamento hospitalar; um programa específico para apostas deve ser consultado, pois permanece não confirmado. Não inicie, interrompa ou altere medicamentos por conta própria. Apostar não determina automaticamente indicação de internação.",
     ],
   },
 ] as const;

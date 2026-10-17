@@ -23,7 +23,7 @@ export function AraraquaraSpecialties() {
           <span className="mt-auto inline-flex min-h-12 items-center gap-2 text-sm font-semibold text-secondary">Saiba mais <ArrowRight className="size-4 transition-transform motion-safe:group-hover:translate-x-1" aria-hidden="true" /></span>
         </Link>)}
       </div>
-      <p className="mt-6 max-w-3xl text-xs leading-relaxed text-muted-foreground">Acolhimento voluntário na sede própria com equipe multidisciplinar, acompanhamento médico e psiquiátrico integrado e enfermagem. Orientação e suporte para agendamento 24h; remoções mediante agendamento. Necessidades hospitalares e internação involuntária clínica seguem encaminhamento a unidades habilitadas.</p>
+      <p className="mt-6 max-w-3xl text-xs leading-relaxed text-muted-foreground">Acolhimento voluntário na sede própria com equipe multidisciplinar, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar. Orientação e suporte para agendamento 24h; remoções mediante agendamento. Necessidades hospitalares e internação involuntária clínica seguem encaminhamento a unidades habilitadas.</p>
     </div>
   </section>;
 }

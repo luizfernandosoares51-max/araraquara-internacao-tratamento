@@ -147,7 +147,7 @@ const orientationSteps = [
   "Informações iniciais ajudam a identificar dúvidas, riscos e necessidades.",
   "A família recebe orientação sobre os caminhos que podem ser considerados.",
   "Possibilidades de tratamento são apresentadas conforme o caso, sem resposta pronta.",
-  "Se houver indicação e disponibilidade, pode ser considerado acolhimento voluntário na sede própria em Araraquara; a equipe multidisciplinar reúne acompanhamento médico e psiquiátrico integrado e enfermagem, com encaminhamento hospitalar quando indicado.",
+  "Se houver indicação e disponibilidade, pode ser considerado acolhimento voluntário na sede própria em Araraquara; a equipe multidisciplinar reúne articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar, com encaminhamento hospitalar quando indicado.",
   "Os próximos passos, condições e preparativos são explicados com clareza.",
 ];
 
@@ -186,7 +186,7 @@ const faqs = [
   {
     question: "A Central possui unidade em Ribeirão Preto?",
     answer:
-      "Famílias de Ribeirão Preto são orientadas pela Central a partir da única sede própria em Araraquara, na R. Alfredo Micelli, 70, com acolhimento voluntário conforme avaliação e disponibilidade. O acolhimento reúne suporte psicológico, acompanhamento médico e psiquiátrico integrado e enfermagem. Necessidades hospitalares recebem encaminhamento ao serviço habilitado adequado.",
+      "Famílias de Ribeirão Preto são orientadas pela Central a partir da única sede própria em Araraquara, na R. Alfredo Micelli, 70, com acolhimento voluntário conforme avaliação e disponibilidade. O acolhimento reúne suporte psicológico, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar. Necessidades hospitalares recebem encaminhamento ao serviço habilitado adequado.",
   },
   {
     question: "Como entrar em contato com a Central de Acolhimento e Reabilitação?",

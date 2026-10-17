@@ -271,7 +271,7 @@ function AraraquaraPage() {
               <div className="space-y-4 text-[15px] leading-relaxed text-deep/75 sm:text-base">
                 <p>A dependência química é uma condição complexa relacionada ao uso persistente de substâncias, mesmo quando surgem prejuízos à saúde, à rotina ou aos vínculos. Uma página na internet não substitui avaliação e não deve ser usada para diagnosticar alguém.</p>
                 <p>Famílias de Araraquara podem procurar orientação quando o consumo de álcool ou outras drogas começa a provocar preocupação, conflitos, perda de autonomia ou riscos. Buscar informação é diferente de iniciar acolhimento, e acolhimento não significa necessariamente internação.</p>
-                <p>A proposta confirmada da Central inclui conscientização em 12 Passos, suporte psicológico com Margarete Vasques (CRP 06/130268), laborterapia, convivência terapêutica e prevenção à recaída. Cada situação precisa ser analisada individualmente; o acompanhamento médico e psiquiátrico integrado e a equipe de enfermagem participam do cuidado na unidade, com encaminhamento a estabelecimentos habilitados quando há necessidade hospitalar.</p>
+                <p>A proposta confirmada da Central inclui conscientização em 12 Passos, suporte psicológico com Margarete Vasques (CRP 06/130268), laborterapia, convivência terapêutica e prevenção à recaída. Cada situação precisa ser analisada individualmente; o articulação médica e psiquiátrica com serviços parceiros credenciados e a equipe multidisciplinar participam do cuidado na unidade, com encaminhamento a estabelecimentos habilitados quando há necessidade hospitalar.</p>
               </div>
             </div>
             <div className="mt-10 grid gap-4 md:grid-cols-3">

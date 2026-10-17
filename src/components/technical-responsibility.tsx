@@ -15,10 +15,10 @@ export function TechnicalResponsibility() {
         <dt className="flex items-start gap-3 font-semibold"><CircleCheck className="mt-1 size-5 shrink-0 text-whatsapp" aria-hidden="true" />{generalCoordination.role}</dt><dd className="ml-8 mt-1 text-muted-foreground">{generalCoordination.name}</dd>
       </div>
       <div className="min-w-0">
-        <dt className="flex items-start gap-3 font-semibold"><CircleCheck className="mt-1 size-5 shrink-0 text-whatsapp" aria-hidden="true" />Acompanhamento médico e psiquiátrico integrado</dt><dd className="ml-8 mt-1 text-muted-foreground">Avaliação clínica, estabilização e manejo de comorbidades conforme o plano individual.</dd>
+        <dt className="flex items-start gap-3 font-semibold"><CircleCheck className="mt-1 size-5 shrink-0 text-whatsapp" aria-hidden="true" />Articulação Médica e Psiquiátrica Especializada</dt><dd className="ml-8 mt-1 text-muted-foreground">Encaminhamento, avaliação clínica e acompanhamento com profissionais e serviços parceiros credenciados, conforme o plano terapêutico individual.</dd>
       </div>
       <div className="min-w-0">
-        <dt className="flex items-start gap-3 font-semibold"><CircleCheck className="mt-1 size-5 shrink-0 text-whatsapp" aria-hidden="true" />Monitoramento e cuidados de enfermagem</dt><dd className="ml-8 mt-1 text-muted-foreground">Equipe na unidade para supervisão diária e cuidados contínuos dos acolhidos.</dd>
+        <dt className="flex items-start gap-3 font-semibold"><CircleCheck className="mt-1 size-5 shrink-0 text-whatsapp" aria-hidden="true" />Supervisão e Cuidados Contínuos</dt><dd className="ml-8 mt-1 text-muted-foreground">Equipe multidisciplinar para suporte diário na rotina de acolhimento, estabilização e bem-estar dos acolhidos.</dd>
       </div>
     </dl>
   );

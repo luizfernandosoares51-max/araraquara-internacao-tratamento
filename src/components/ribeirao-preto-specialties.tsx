@@ -21,7 +21,7 @@ export function RibeiraoPretoSpecialties() {
           <span className="mt-auto inline-flex min-h-12 items-center gap-2 text-sm font-semibold text-secondary">Saiba mais <ArrowRight className="size-4 transition-transform motion-safe:group-hover:translate-x-1" aria-hidden="true" /></span>
         </Link>)}
       </div>
-      <p className="mt-6 max-w-4xl text-xs leading-relaxed text-muted-foreground">A única sede em Araraquara reúne acolhimento voluntário, psicologia, acompanhamento médico e psiquiátrico integrado e enfermagem. Orientação e suporte para agendamento 24h; transporte conforme agenda e disponibilidade. Consulte o perfil de admissão para mulheres e jovens; a página não confirma ala feminina, programa para adolescentes ou desmame médico na sede.</p>
+      <p className="mt-6 max-w-4xl text-xs leading-relaxed text-muted-foreground">A única sede em Araraquara reúne acolhimento voluntário, psicologia, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar. Orientação e suporte para agendamento 24h; transporte conforme agenda e disponibilidade. Consulte o perfil de admissão para mulheres e jovens; a página não confirma ala feminina, programa para adolescentes ou desmame médico na sede.</p>
     </div>
   </section>;
 }

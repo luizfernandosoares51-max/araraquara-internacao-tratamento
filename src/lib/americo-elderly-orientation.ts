@@ -18,7 +18,7 @@ export const americoElderlyOrientation = {
     },
     {
       title: 'Acompanhamento e participação familiar',
-      paragraphs: ['A instituição informa suporte psicológico com Margarete Vasques (CRP 06/130268), acompanhamento médico e psiquiátrico integrado e enfermagem com supervisão diária e cuidados contínuos. Essas funções não equivalem a hospital próprio, enfermagem 24h ou programa geriátrico confirmado.', 'O acolhimento voluntário inclui convivência terapêutica, 12 Passos, laborterapia e prevenção à recaída, conforme avaliação de compatibilidade. Famílias de Américo Brasiliense podem esclarecer condições de ingresso, visitas agendadas e continuidade do cuidado próximo de casa.'],
+      paragraphs: ['A instituição informa suporte psicológico com Margarete Vasques (CRP 06/130268), articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar com supervisão diária e cuidados contínuos. Essas funções não equivalem a hospital próprio, enfermagem 24h ou programa geriátrico confirmado.', 'O acolhimento voluntário inclui convivência terapêutica, 12 Passos, laborterapia e prevenção à recaída, conforme avaliação de compatibilidade. Famílias de Américo Brasiliense podem esclarecer condições de ingresso, visitas agendadas e continuidade do cuidado próximo de casa.'],
     },
     {
       title: 'Orientação 24 horas, com o destino do cuidado esclarecido',
