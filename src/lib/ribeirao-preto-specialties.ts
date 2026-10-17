@@ -14,7 +14,7 @@ export const ribeiraoSpecialtyList = [
     "title": "Tratamento do Alcoolismo para Ribeirão Preto - SP | Acolhimento",
     "description": "Orientação sobre alcoolismo para Ribeirão Preto. Acolhimento voluntário em Araraquara; equipe multidisciplinar, avaliação médica e orientação à família 24h.",
     "heading": "Tratamento do alcoolismo para famílias de Ribeirão Preto",
-    "intro": "O álcool pode ocupar cada vez mais espaço na rotina sem que a família perceba uma ruptura imediata. Para quem procura ajuda em Ribeirão Preto, a Central oferece escuta e orientação sobre acolhimento voluntário psicossocial em Araraquara, na única sede em Araraquara, com suporte psicológico, acompanhamento médico e psiquiátrico integrado e enfermagem com supervisão diária e cuidados contínuos.",
+    "intro": "O álcool pode ocupar cada vez mais espaço na rotina sem que a família perceba uma ruptura imediata. Para quem procura ajuda em Ribeirão Preto, a Central oferece escuta e orientação sobre acolhimento voluntário psicossocial em Araraquara, na única sede em Araraquara, com suporte psicológico, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar com supervisão diária e cuidados contínuos.",
     "notice": "Tremores após reduzir o álcool merecem avaliação médica. Convulsões, confusão intensa ou alteração de consciência exigem urgência ou SAMU 192.",
     "condition": "Dependência de álcool",
     "sections": [
@@ -29,7 +29,7 @@ export const ribeiraoSpecialtyList = [
         "title": "Desintoxicação é uma decisão clínica",
         "paragraphs": [
           "Após consumo intenso ou prolongado, interromper o álcool abruptamente pode provocar abstinência e complicações. Não improvise desintoxicação em casa ou medicamentos emprestados. Cabe ao serviço médico definir se há necessidade de observação, monitoramento ou atendimento hospitalar.",
-          "A sede da Central em Araraquara reúne acompanhamento médico e psiquiátrico integrado e enfermagem. A desintoxicação médica e as necessidades hospitalares seguem encaminhamento a estabelecimentos habilitados. Organizar uma viagem a partir de Ribeirão Preto não deve adiar uma avaliação urgente na cidade de origem."
+          "A sede da Central em Araraquara reúne articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar. A desintoxicação médica e as necessidades hospitalares seguem encaminhamento a estabelecimentos habilitados. Organizar uma viagem a partir de Ribeirão Preto não deve adiar uma avaliação urgente na cidade de origem."
         ]
       },
       {
@@ -85,14 +85,14 @@ export const ribeiraoSpecialtyList = [
         "title": "Reconhecer mudanças sem concluir um diagnóstico",
         "paragraphs": [
           "Os estimulantes podem afetar sono, apetite, humor e decisões, mas relatos familiares não bastam para estabelecer diagnóstico ou indicar medicação. Intensidade e riscos dependem do padrão de uso, de outras substâncias e das condições de saúde. Evite reduzir a pessoa ao consumo.",
-          "Para organizar a avaliação em Ribeirão Preto, descreva acontecimentos concretos e tentativas anteriores de ajuda. A rede de saúde local permanece uma porta de entrada. A Central oferece acompanhamento médico e psiquiátrico integrado para avaliação clínica, estabilização e manejo de comorbidades, conforme as necessidades individuais. Sintomas graves ou risco imediato exigem atendimento de urgência."
+          "Para organizar a avaliação em Ribeirão Preto, descreva acontecimentos concretos e tentativas anteriores de ajuda. A rede de saúde local permanece uma porta de entrada. A Central oferece articulação médica e psiquiátrica com serviços parceiros credenciados para avaliação clínica, estabilização e manejo de comorbidades, conforme as necessidades individuais. Sintomas graves ou risco imediato exigem atendimento de urgência."
         ]
       },
       {
         "title": "Fissura e contextos associados ao consumo",
         "paragraphs": [
           "O desejo intenso de usar pode variar e reaparecer. Relações, emoções e situações do cotidiano podem estar associadas a ele; reconhecê-las com apoio profissional ajuda a discutir respostas. Não há prazo fixo para eliminar a fissura nem garantia de controle pela mudança de cidade.",
-          "Suporte psicológico, 12 Passos, convivência e prevenção à recaída fazem parte da proposta confirmada. Não são anunciadas terapia cognitiva específica ou reabilitação neuropsicológica não confirmadas. O acompanhamento médico e psiquiátrico integrado e a enfermagem complementam o cuidado; prescrições e condutas cabem aos profissionais responsáveis."
+          "Suporte psicológico, 12 Passos, convivência e prevenção à recaída fazem parte da proposta confirmada. Não são anunciadas terapia cognitiva específica ou reabilitação neuropsicológica não confirmadas. O articulação médica e psiquiátrica com serviços parceiros credenciados e a enfermagem complementam o cuidado; prescrições e condutas cabem aos profissionais responsáveis."
         ]
       },
       {
@@ -216,7 +216,7 @@ export const ribeiraoSpecialtyList = [
         "title": "Rotina com objetivos possíveis",
         "paragraphs": [
           "O cronograma informado vai das 07h às 22h e combina organização, alimentação, apoio psicológico, 12 Passos, laborterapia, atividades ao ar livre, convivência e repouso. A participação considera as necessidades individuais, sem exigir que todos alcancem metas idênticas no mesmo tempo.",
-          "O suporte psicológico confirmado é de Margarete Vasques, CRP 06/130268. Metas podem envolver hábitos, relações e estratégias de prevenção à recaída. A sede reúne acompanhamento médico e psiquiátrico integrado e enfermagem para supervisão diária e cuidados contínuos. A desintoxicação médica e as necessidades hospitalares recebem encaminhamento conforme avaliação."
+          "O suporte psicológico confirmado é de Margarete Vasques, CRP 06/130268. Metas podem envolver hábitos, relações e estratégias de prevenção à recaída. A sede reúne articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar com supervisão diária e cuidados contínuos. A desintoxicação médica e as necessidades hospitalares recebem encaminhamento conforme avaliação."
         ]
       },
       {
@@ -340,7 +340,7 @@ export const ribeiraoSpecialtyList = [
         "title": "Perguntas sobre privacidade antes de escolher",
         "paragraphs": [
           "Pergunte ao serviço considerado como são organizados alojamento, convivência, participação familiar e proteção de informações pessoais. Não presuma que uma página sobre acolhimento feminino confirma ambiente exclusivo. Essas condições precisam ser verificadas antes de uma decisão ou viagem.",
-          "Na Central, não foi confirmado atendimento feminino nem separação de ambientes por gênero. A família deve consultar a compatibilidade do caso sem garantia de admissão. A sede em Araraquara reúne suporte psicológico, acompanhamento médico e psiquiátrico integrado e enfermagem; necessidades hospitalares recebem encaminhamento ao serviço adequado."
+          "Na Central, não foi confirmado atendimento feminino nem separação de ambientes por gênero. A família deve consultar a compatibilidade do caso sem garantia de admissão. A sede em Araraquara reúne suporte psicológico, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar; necessidades hospitalares recebem encaminhamento ao serviço adequado."
         ]
       },
       {
@@ -386,9 +386,9 @@ export const ribeiraoSpecialtyList = [
     "label": "Diagnóstico Duplo (Saúde Mental)",
     "summary": "Avaliação integrada e limites do acolhimento.",
     "title": "Diagnóstico Duplo e Saúde Mental em Ribeirão Preto - SP",
-    "description": "Informação sobre dependência e condições de saúde mental para Ribeirão Preto. Acompanhamento médico e psiquiátrico integrado, psicologia e enfermagem na sede em Araraquara.",
+    "description": "Informação sobre dependência e condições de saúde mental para Ribeirão Preto. Articulação médica e psiquiátrica com serviços parceiros credenciados, psicologia e enfermagem na sede em Araraquara.",
     "heading": "Diagnóstico duplo e saúde mental: orientação em Ribeirão Preto",
-    "intro": "Quando o uso de substâncias convive com ansiedade, alterações de humor ou outros sintomas, a família pode ter dúvidas sobre por onde começar. Em Ribeirão Preto, a busca exige avaliação integrada; a Central reúne suporte psicológico, acompanhamento médico e psiquiátrico integrado e enfermagem na sede em Araraquara, com avaliação individual pelos profissionais responsáveis.",
+    "intro": "Quando o uso de substâncias convive com ansiedade, alterações de humor ou outros sintomas, a família pode ter dúvidas sobre por onde começar. Em Ribeirão Preto, a busca exige avaliação integrada; a Central reúne suporte psicológico, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar na sede em Araraquara, com avaliação individual pelos profissionais responsáveis.",
     "notice": "Risco de suicídio, surto com risco imediato ou alteração de consciência exige urgência ou SAMU 192. Em crises agudas, priorize avaliação no serviço de urgência.",
     "condition": "Transtornos coexistentes relacionados à saúde mental e ao uso de substâncias",
     "sections": [
@@ -403,7 +403,7 @@ export const ribeiraoSpecialtyList = [
         "title": "Equipe multidisciplinar e coordenação do cuidado",
         "paragraphs": [
           "Quando existem necessidades clínicas, os profissionais responsáveis podem discutir acompanhamento integrado e continuidade. O manejo de medicamentos pertence ao médico prescritor; familiares não devem aumentar, suspender ou combinar remédios por iniciativa própria.",
-          "A Central informa suporte psicológico com Margarete Vasques, CRP 06/130268, em acolhimento voluntário psicossocial. A equipe inclui acompanhamento médico e psiquiátrico integrado para avaliação clínica, estabilização e manejo de comorbidades, além de enfermagem com supervisão diária e cuidados contínuos. Necessidades hospitalares recebem encaminhamento adequado, conforme avaliação."
+          "A Central informa suporte psicológico com Margarete Vasques, CRP 06/130268, em acolhimento voluntário psicossocial. A equipe inclui articulação médica e psiquiátrica com serviços parceiros credenciados para avaliação clínica, estabilização e manejo de comorbidades, além de enfermagem com supervisão diária e cuidados contínuos. Necessidades hospitalares recebem encaminhamento adequado, conforme avaliação."
         ]
       },
       {
@@ -435,7 +435,7 @@ export const ribeiraoSpecialtyList = [
       },
       {
         "question": "A Central oferece acompanhamento psiquiátrico próprio?",
-        "answer": "Sim. A instituição confirma acompanhamento médico e psiquiátrico integrado na unidade de Araraquara para avaliação clínica, estabilização e manejo de comorbidades, em conjunto com psicologia e enfermagem. Necessidades hospitalares seguem encaminhamento conforme avaliação."
+        "answer": "Sim. A instituição confirma articulação médica e psiquiátrica com serviços parceiros credenciados na unidade de Araraquara para avaliação clínica, estabilização e manejo de comorbidades, em conjunto com psicologia e enfermagem. Necessidades hospitalares seguem encaminhamento conforme avaliação."
       },
       {
         "question": "Quem pode ajustar os medicamentos de uma comorbidade?",
@@ -466,7 +466,7 @@ export const ribeiraoSpecialtyList = [
         "title": "Redução e interrupção pertencem ao médico",
         "paragraphs": [
           "Alguns medicamentos podem provocar abstinência ou agravamento de sintomas quando interrompidos abruptamente. A necessidade de redução gradual e seu planejamento dependem da substância, do histórico e das condições de saúde. Esta página não estabelece doses, prazos ou substituições.",
-          "O acompanhamento médico e psiquiátrico integrado da Central pode avaliar as necessidades clínicas, com apoio da enfermagem. Um programa próprio de desmame não está confirmado, e a desintoxicação médica segue encaminhamento externo. A avaliação considera também as razões do uso, como ansiedade, insônia ou dor, sem presumir uma origem única."
+          "O articulação médica e psiquiátrica com serviços parceiros credenciados da Central pode avaliar as necessidades clínicas, com apoio da enfermagem. Um programa próprio de desmame não está confirmado, e a desintoxicação médica segue encaminhamento externo. A avaliação considera também as razões do uso, como ansiedade, insônia ou dor, sem presumir uma origem única."
         ]
       },
       {
@@ -502,7 +502,7 @@ export const ribeiraoSpecialtyList = [
       },
       {
         "question": "A Central faz desmame gradual de medicamentos?",
-        "answer": "Não na sede própria. Planos de redução ou substituição devem ser definidos pelo médico responsável. O acompanhamento médico e psiquiátrico integrado orienta a avaliação; um programa próprio de desmame não está confirmado. O acolhimento psicossocial não substitui essa responsabilidade."
+        "answer": "Não na sede própria. Planos de redução ou substituição devem ser definidos pelo médico responsável. O articulação médica e psiquiátrica com serviços parceiros credenciados orienta a avaliação; um programa próprio de desmame não está confirmado. O acolhimento psicossocial não substitui essa responsabilidade."
       }
     ]
   },
@@ -528,7 +528,7 @@ export const ribeiraoSpecialtyList = [
         "title": "Faixa etária e serviço apropriado",
         "paragraphs": [
           "Jovens adultos e adolescentes não têm necessariamente as mesmas necessidades ou condições legais de atendimento. Para menores, a família deve procurar serviços habilitados e adequados à idade, respeitando direitos e participação do adolescente. Não foi confirmado programa de acolhimento de menores na Central.",
-          "A única sede própria da instituição fica em Araraquara e oferece acolhimento voluntário psicossocial conforme compatibilidade e disponibilidade. Uma página sobre jovens é informação educativa, não confirmação de admissão para qualquer idade. O acompanhamento médico e psiquiátrico integrado e a enfermagem complementam o cuidado; necessidades hospitalares recebem encaminhamento adequado."
+          "A única sede própria da instituição fica em Araraquara e oferece acolhimento voluntário psicossocial conforme compatibilidade e disponibilidade. Uma página sobre jovens é informação educativa, não confirmação de admissão para qualquer idade. O articulação médica e psiquiátrica com serviços parceiros credenciados e a enfermagem complementam o cuidado; necessidades hospitalares recebem encaminhamento adequado."
         ]
       },
       {

@@ -177,7 +177,7 @@ export const americoSpecialtyList = [
       {
         "title": "Uma rotina com acompanhamento",
         "paragraphs": [
-          "A instituição informa atividades entre 07h e 22h, psicologia, 12 Passos, laborterapia, convivência e prevenção à recaída. Há acompanhamento médico e psiquiátrico integrado e enfermagem com supervisão diária, sem transformar a sede em hospital."
+          "A instituição informa atividades entre 07h e 22h, psicologia, 12 Passos, laborterapia, convivência e prevenção à recaída. Há articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar com supervisão diária, sem transformar a sede em hospital."
         ]
       },
       {

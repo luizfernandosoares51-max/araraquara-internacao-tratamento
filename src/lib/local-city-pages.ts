@@ -80,7 +80,7 @@ export const localCityPages = {
         heading: "Apoio para famílias de Matão na sede terapêutica em Araraquara",
         paragraphs: [
           regionalCityAccess["matao-sp"].route,
-          "A equipe acolhe o relato, esclarece as necessidades e ajuda a organizar avaliação, recepção e condições do acolhimento voluntário. Apoio psicológico, acompanhamento médico e psiquiátrico integrado e enfermagem participam do cuidado; necessidades hospitalares recebem encaminhamento a estabelecimentos habilitados.",
+          "A equipe acolhe o relato, esclarece as necessidades e ajuda a organizar avaliação, recepção e condições do acolhimento voluntário. Apoio psicológico, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar participam do cuidado; necessidades hospitalares recebem encaminhamento a estabelecimentos habilitados.",
           regionalCityAccess["matao-sp"].visits,
         ],
       },
@@ -140,7 +140,7 @@ export const localCityPages = {
         heading: "Apoio para famílias de Américo Brasiliense na sede terapêutica em Araraquara",
         paragraphs: [
           regionalCityAccess["americo-brasiliense-sp"].route,
-          "A equipe acolhe o relato, esclarece as necessidades e ajuda a organizar avaliação, recepção e condições do acolhimento voluntário. Apoio psicológico, acompanhamento médico e psiquiátrico integrado e enfermagem participam do cuidado; necessidades hospitalares recebem encaminhamento a estabelecimentos habilitados.",
+          "A equipe acolhe o relato, esclarece as necessidades e ajuda a organizar avaliação, recepção e condições do acolhimento voluntário. Apoio psicológico, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar participam do cuidado; necessidades hospitalares recebem encaminhamento a estabelecimentos habilitados.",
           regionalCityAccess["americo-brasiliense-sp"].visits,
         ],
       },
@@ -199,7 +199,7 @@ export const localCityPages = {
         heading: "Apoio para famílias de Taquaritinga na sede terapêutica em Araraquara",
         paragraphs: [
           regionalCityAccess["taquaritinga-sp"].route,
-          "A equipe acolhe o relato, esclarece as necessidades e ajuda a organizar avaliação, recepção e condições do acolhimento voluntário. Apoio psicológico, acompanhamento médico e psiquiátrico integrado e enfermagem participam do cuidado; necessidades hospitalares recebem encaminhamento a estabelecimentos habilitados.",
+          "A equipe acolhe o relato, esclarece as necessidades e ajuda a organizar avaliação, recepção e condições do acolhimento voluntário. Apoio psicológico, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar participam do cuidado; necessidades hospitalares recebem encaminhamento a estabelecimentos habilitados.",
           regionalCityAccess["taquaritinga-sp"].visits,
         ],
       },
@@ -259,7 +259,7 @@ export const localCityPages = {
         heading: "Apoio para famílias de Ibitinga na sede terapêutica em Araraquara",
         paragraphs: [
           regionalCityAccess["ibitinga-sp"].route,
-          "A equipe acolhe o relato, esclarece as necessidades e ajuda a organizar avaliação, recepção e condições do acolhimento voluntário. Apoio psicológico, acompanhamento médico e psiquiátrico integrado e enfermagem participam do cuidado; necessidades hospitalares recebem encaminhamento a estabelecimentos habilitados.",
+          "A equipe acolhe o relato, esclarece as necessidades e ajuda a organizar avaliação, recepção e condições do acolhimento voluntário. Apoio psicológico, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar participam do cuidado; necessidades hospitalares recebem encaminhamento a estabelecimentos habilitados.",
           regionalCityAccess["ibitinga-sp"].visits,
         ],
       },
@@ -319,7 +319,7 @@ export const localCityPages = {
         heading: "Apoio para famílias de Itápolis na sede terapêutica em Araraquara",
         paragraphs: [
           regionalCityAccess["itapolis-sp"].route,
-          "A equipe acolhe o relato, esclarece as necessidades e ajuda a organizar avaliação, recepção e condições do acolhimento voluntário. Apoio psicológico, acompanhamento médico e psiquiátrico integrado e enfermagem participam do cuidado; necessidades hospitalares recebem encaminhamento a estabelecimentos habilitados.",
+          "A equipe acolhe o relato, esclarece as necessidades e ajuda a organizar avaliação, recepção e condições do acolhimento voluntário. Apoio psicológico, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar participam do cuidado; necessidades hospitalares recebem encaminhamento a estabelecimentos habilitados.",
           regionalCityAccess["itapolis-sp"].visits,
         ],
       },
@@ -379,7 +379,7 @@ export const localCityPages = {
         heading: "Apoio para famílias de Ibaté na sede terapêutica em Araraquara",
         paragraphs: [
           regionalCityAccess["ibate-sp"].route,
-          "A equipe acolhe o relato, esclarece as necessidades e ajuda a organizar avaliação, recepção e condições do acolhimento voluntário. Apoio psicológico, acompanhamento médico e psiquiátrico integrado e enfermagem participam do cuidado; necessidades hospitalares recebem encaminhamento a estabelecimentos habilitados.",
+          "A equipe acolhe o relato, esclarece as necessidades e ajuda a organizar avaliação, recepção e condições do acolhimento voluntário. Apoio psicológico, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar participam do cuidado; necessidades hospitalares recebem encaminhamento a estabelecimentos habilitados.",
           regionalCityAccess["ibate-sp"].visits,
         ],
       },
@@ -439,7 +439,7 @@ export const localCityPages = {
         heading: "Apoio para famílias de Descalvado na sede terapêutica em Araraquara",
         paragraphs: [
           regionalCityAccess["descalvado-sp"].route,
-          "A equipe acolhe o relato, esclarece as necessidades e ajuda a organizar avaliação, recepção e condições do acolhimento voluntário. Apoio psicológico, acompanhamento médico e psiquiátrico integrado e enfermagem participam do cuidado; necessidades hospitalares recebem encaminhamento a estabelecimentos habilitados.",
+          "A equipe acolhe o relato, esclarece as necessidades e ajuda a organizar avaliação, recepção e condições do acolhimento voluntário. Apoio psicológico, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar participam do cuidado; necessidades hospitalares recebem encaminhamento a estabelecimentos habilitados.",
           regionalCityAccess["descalvado-sp"].visits,
         ],
       },
@@ -498,7 +498,7 @@ export const localCityPages = {
         heading: "Apoio para famílias de Porto Ferreira na sede terapêutica em Araraquara",
         paragraphs: [
           regionalCityAccess["porto-ferreira-sp"].route,
-          "A equipe acolhe o relato, esclarece as necessidades e ajuda a organizar avaliação, recepção e condições do acolhimento voluntário. Apoio psicológico, acompanhamento médico e psiquiátrico integrado e enfermagem participam do cuidado; necessidades hospitalares recebem encaminhamento a estabelecimentos habilitados.",
+          "A equipe acolhe o relato, esclarece as necessidades e ajuda a organizar avaliação, recepção e condições do acolhimento voluntário. Apoio psicológico, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar participam do cuidado; necessidades hospitalares recebem encaminhamento a estabelecimentos habilitados.",
           regionalCityAccess["porto-ferreira-sp"].visits,
         ],
       },
@@ -558,7 +558,7 @@ export const localCityPages = {
         heading: "Apoio para famílias de Jaboticabal na sede terapêutica em Araraquara",
         paragraphs: [
           regionalCityAccess["jaboticabal-sp"].route,
-          "A equipe acolhe o relato, esclarece as necessidades e ajuda a organizar avaliação, recepção e condições do acolhimento voluntário. Apoio psicológico, acompanhamento médico e psiquiátrico integrado e enfermagem participam do cuidado; necessidades hospitalares recebem encaminhamento a estabelecimentos habilitados.",
+          "A equipe acolhe o relato, esclarece as necessidades e ajuda a organizar avaliação, recepção e condições do acolhimento voluntário. Apoio psicológico, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar participam do cuidado; necessidades hospitalares recebem encaminhamento a estabelecimentos habilitados.",
           regionalCityAccess["jaboticabal-sp"].visits,
         ],
       },
@@ -618,7 +618,7 @@ export const localCityPages = {
         heading: "Apoio para famílias de Franca na sede terapêutica em Araraquara",
         paragraphs: [
           regionalCityAccess["franca-sp"].route,
-          "A equipe acolhe o relato, esclarece as necessidades e ajuda a organizar avaliação, recepção e condições do acolhimento voluntário. Apoio psicológico, acompanhamento médico e psiquiátrico integrado e enfermagem participam do cuidado; necessidades hospitalares recebem encaminhamento a estabelecimentos habilitados.",
+          "A equipe acolhe o relato, esclarece as necessidades e ajuda a organizar avaliação, recepção e condições do acolhimento voluntário. Apoio psicológico, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar participam do cuidado; necessidades hospitalares recebem encaminhamento a estabelecimentos habilitados.",
           regionalCityAccess["franca-sp"].visits,
         ],
       },

@@ -12,7 +12,7 @@ export function CareSpecialties() {
   return <><section className={sectionClass} aria-label="Modalidades de acolhimento e orientação">
     <p className="mb-3 text-xs font-semibold uppercase text-secondary">Modalidades e necessidades de cuidado</p>
     <h2 className={headingClass}>Acolhimento psicossocial e caminhos de tratamento</h2>
-    <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground">A unidade própria oferece acolhimento voluntário contínuo e suporte psicossocial. O plano reúne psicologia, acompanhamento médico e psiquiátrico integrado e enfermagem para supervisão diária e cuidados contínuos, conforme as necessidades da pessoa.</p>
+    <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground">A unidade própria oferece acolhimento voluntário contínuo e suporte psicossocial. O plano reúne psicologia, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar com supervisão diária e cuidados contínuos, conforme as necessidades da pessoa.</p>
     <div className="mt-8 grid gap-4 md:grid-cols-2">
       <article className="rounded-lg border border-border bg-card p-6">
         <HeartHandshake className="size-6 text-secondary" aria-hidden="true" />
@@ -48,7 +48,7 @@ function CareMethodology() {
   return <section className={sectionClass} aria-label="Metodologia e equipe multidisciplinar">
     <p className="mb-3 text-xs font-semibold uppercase text-secondary">Equipe multidisciplinar e cuidado individualizado</p>
     <h2 className={headingClass}>Metodologia Terapêutica e Equipe Multidisciplinar</h2>
-    <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground">O acolhimento voluntário da Central reúne suporte psicológico, conscientização em 12 Passos, laborterapia, convivência terapêutica e prevenção à recaída. Acompanhamento médico e psiquiátrico integrado e enfermagem com supervisão diária e cuidados contínuos complementam essa estrutura. O plano individual orienta as prioridades e eventuais encaminhamentos hospitalares.</p>
+    <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted-foreground">O acolhimento voluntário da Central reúne suporte psicológico, conscientização em 12 Passos, laborterapia, convivência terapêutica e prevenção à recaída. Articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar com supervisão diária e cuidados contínuos complementam essa estrutura. O plano individual orienta as prioridades e eventuais encaminhamentos hospitalares.</p>
     <div className="mt-8 grid gap-4 lg:grid-cols-3">
       {careMethodology.map(method => <article key={method.title} className="rounded-lg border border-border bg-card p-6">
         <ShieldCheck className="size-6 text-secondary" aria-hidden="true" />
@@ -58,7 +58,7 @@ function CareMethodology() {
     </div>
     <div className="mt-7 border-l-2 border-accent pl-5">
       <h3 className="font-display text-lg font-semibold">Estrutura de acolhimento multidisciplinar</h3>
-      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">O suporte psicológico especializado é conduzido por Margarete Vasques (CRP 06/130268), com foco em suporte emocional, manejo comportamental e acolhimento. Luiz Fernando Soares lidera a coordenação operacional, a organização da rotina terapêutica e o apoio às famílias. O acompanhamento médico e psiquiátrico integrado contempla avaliação clínica, estabilização e manejo de comorbidades. A equipe de enfermagem na unidade realiza supervisão diária e cuidados contínuos dos acolhidos. Conscientização em 12 Passos, PPR, laborterapia e convivência terapêutica integram o planejamento de autonomia e reinserção social.</p>
+      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">O suporte psicológico especializado é conduzido por Margarete Vasques (CRP 06/130268), com foco em suporte emocional, manejo comportamental e acolhimento. Luiz Fernando Soares lidera a coordenação operacional, a organização da rotina terapêutica e o apoio às famílias. O articulação médica e psiquiátrica com serviços parceiros credenciados contempla avaliação clínica, estabilização e manejo de comorbidades. A equipe de enfermagem na unidade realiza supervisão diária e cuidados contínuos dos acolhidos. Conscientização em 12 Passos, PPR, laborterapia e convivência terapêutica integram o planejamento de autonomia e reinserção social.</p>
     </div>
     <Button asChild variant="link" className="mt-5 h-auto min-h-12 max-w-full whitespace-normal px-0 text-left"><Link to="/transparencia">Conhecer a equipe e a responsabilidade pelo cuidado <ArrowRight aria-hidden="true" /></Link></Button>
   </section>;

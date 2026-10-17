@@ -20,6 +20,6 @@ export function MataoSpecialties() {
         <span className="mt-auto inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-secondary">Saiba mais <ArrowRight className="size-4 motion-safe:transition-transform motion-safe:group-hover:translate-x-1" aria-hidden="true" /></span>
       </Link>)}
     </div>
-    <p className="mt-6 max-w-4xl text-xs leading-relaxed text-muted-foreground">Acolhimento voluntário na sede em Araraquara, com psicologia, acompanhamento médico e psiquiátrico integrado e enfermagem diária. Temas específicos também incluem orientação educativa e encaminhamento, sem confirmar programas próprios. Orientação 24h; transporte por agendamento. Em risco imediato, SAMU 192.</p>
+    <p className="mt-6 max-w-4xl text-xs leading-relaxed text-muted-foreground">Acolhimento voluntário na sede em Araraquara, com psicologia, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar com supervisão diária. Temas específicos também incluem orientação educativa e encaminhamento, sem confirmar programas próprios. Orientação 24h; transporte por agendamento. Em risco imediato, SAMU 192.</p>
   </section>;
 }

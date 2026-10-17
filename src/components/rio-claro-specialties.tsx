@@ -24,7 +24,7 @@ export function RioClaroSpecialties() {
           <span className="mt-auto inline-flex min-h-12 items-center gap-2 text-sm font-semibold text-secondary">Saiba mais <ArrowRight className="size-4 transition-transform motion-safe:group-hover:translate-x-1" aria-hidden="true" /></span>
         </Link>)}
       </div>
-      <p className="mt-6 max-w-3xl text-xs leading-relaxed text-muted-foreground">Famílias de Rio Claro contam com orientação e suporte para agendamento 24h, a partir da única sede em Araraquara. Acolhimento voluntário com psicologia, acompanhamento médico e psiquiátrico integrado e enfermagem; transporte agendado e encaminhamento hospitalar conforme avaliação.</p>
+      <p className="mt-6 max-w-3xl text-xs leading-relaxed text-muted-foreground">Famílias de Rio Claro contam com orientação e suporte para agendamento 24h, a partir da única sede em Araraquara. Acolhimento voluntário com psicologia, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar; transporte agendado e encaminhamento hospitalar conforme avaliação.</p>
     </div>
   </section>;
 }

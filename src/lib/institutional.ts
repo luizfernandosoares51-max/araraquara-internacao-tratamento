@@ -39,7 +39,7 @@ export const institutionalIdentity = {
     orientation24Hours: true,
     transportScheduling24Hours: true,
   },
-  receptionStatement: "A Central oferece acolhimento voluntário em sua unidade própria em Araraquara, com suporte psicológico especializado, coordenação operacional, acompanhamento médico e psiquiátrico integrado e enfermagem para supervisão diária e cuidados contínuos. A família conta com plantão de orientação e suporte para agendamento de resgate/remoção 24 horas, além de orientação sobre os trâmites legais da internação involuntária, conforme as Leis 10.216/2001 e 13.840/2019.",
+  receptionStatement: "A Central oferece acolhimento voluntário em sua unidade própria em Araraquara, com suporte psicológico especializado, coordenação operacional, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar com supervisão diária e cuidados contínuos. A família conta com plantão de orientação e suporte para agendamento de resgate/remoção 24 horas, além de orientação sobre os trâmites legais da internação involuntária, conforme as Leis 10.216/2001 e 13.840/2019.",
   referralStatement: "Quando a avaliação indica desintoxicação médica, cuidado hospitalar ou internação involuntária clínica, a Central apoia a família na triagem, organização dos trâmites e encaminhamento para estabelecimentos médicos habilitados. A decisão clínica, a admissão hospitalar e as comunicações legais são conduzidas pelos profissionais e estabelecimentos responsáveis. A sede própria mantém acolhimento voluntário; remoções são organizadas mediante agendamento e confirmação das condições.",
 } as const;
 

@@ -34,7 +34,7 @@ export const careMethodology = [
   },
   {
     title: "Diagnóstico duplo e comorbidades: acompanhamento integrado",
-    description: "O uso de substâncias pode coexistir com ansiedade, depressão ou transtorno bipolar. A Central reúne suporte psicológico e acompanhamento médico e psiquiátrico integrado para avaliação clínica, estabilização e manejo de comorbidades, conforme as necessidades individuais. Diagnósticos e condutas são definidos pelos profissionais responsáveis em avaliação, e necessidades hospitalares seguem encaminhamento ao serviço adequado.",
+    description: "O uso de substâncias pode coexistir com ansiedade, depressão ou transtorno bipolar. A Central reúne suporte psicológico e articulação médica e psiquiátrica com serviços parceiros credenciados para avaliação clínica, estabilização e manejo de comorbidades, conforme as necessidades individuais. Diagnósticos e condutas são definidos pelos profissionais responsáveis em avaliação, e necessidades hospitalares seguem encaminhamento ao serviço adequado.",
   },
 ] as const;
 
