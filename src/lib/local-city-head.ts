@@ -32,6 +32,7 @@ export function localCityHead(city: LocalCityPage) {
             { "@type": "ListItem", position: 3, name: city.name, item: pageUrl },
           ] },
           { "@type": "FAQPage", mainEntity: faqs.map((faq) => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) },
+          { "@type": "LocalBusiness", "@id": `${siteUrl}/#organization`, name: "Central de Acolhimento e Reabilitação", url: siteUrl, telephone: "+5516997654579", description: "Central de orientação, triagem e encaminhamento para vagas em clínicas de recuperação e comunidades terapêuticas credenciadas, com plantão 24h via WhatsApp.", areaServed: [{ "@type": "City", name: `${city.name}, SP` }, { "@type": "State", name: "São Paulo" }] },
         ],
       }),
     }],
