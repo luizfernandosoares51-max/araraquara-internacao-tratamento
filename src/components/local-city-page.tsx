@@ -35,7 +35,7 @@ export function LocalCityPageView({ city, beforeFaq }: { city: LocalCityPage; be
             <div className="mt-10 grid gap-10 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:gap-16">
               <div>
                 <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">Orientação local · {city.name}/SP</p>
-                <h1 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">Clínica de Recuperação e Reabilitação em {city.name} - SP | Orientação de Vagas e Acolhimento 24h</h1>
+                <h1 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">Clínica de Recuperação e Reabilitação em {city.name} - SP | Acolhimento e Consulta de Vagas 24h</h1>
                 <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">{city.lead}</p>
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                   <Button asChild size="lg" className="h-auto min-h-14 whitespace-normal py-4 bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90"><a href={cityWhatsappHref(city.name)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />{cityContactLabel(city.name)}</a></Button>

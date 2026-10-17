@@ -223,7 +223,7 @@ function AraraquaraPage() {
                 <ArrowLeft className="size-4" aria-hidden="true" /> Voltar para a página inicial
               </Link>
               <div className="inline-flex items-center gap-2 rounded-full border border-border bg-glass px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-secondary"><span className="size-1.5 rounded-full bg-accent" /> Informação local e orientação</div>
-              <h1 className="mt-5 max-w-3xl font-display text-[2.25rem] font-bold leading-[1.05] sm:text-5xl lg:text-[3.75rem]">Clínica de Recuperação e Reabilitação em Araraquara - SP | Orientação de Vagas e Acolhimento 24h</h1>
+              <h1 className="mt-5 max-w-3xl font-display text-[2.25rem] font-bold leading-[1.05] sm:text-5xl lg:text-[3.75rem]">Clínica de Recuperação e Reabilitação em Araraquara - SP | Acolhimento e Consulta de Vagas 24h</h1>
               <p className="mt-5 max-w-2xl text-[16px] leading-relaxed text-muted-foreground sm:text-lg">{regionalCityAccess.araraquara.welcome}</p>
               <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">O plantão de orientação 24h acolhe famílias dos bairros de Araraquara e da região, com apoio para organizar avaliação, recepção e visitas à sede local.</p>
               <div className="mt-7 grid gap-3 sm:grid-cols-2">
