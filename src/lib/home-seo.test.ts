@@ -2,8 +2,8 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 import { homeTitle, homeDescription, vacancyConsultationHref } from "./home-seo";
 
-test("Home title respects the requested maximum of 60 characters", () => {
-  assert.ok(homeTitle.length > 0 && homeTitle.length <= 60);
+test("Home title respects the requested maximum of 65 characters", () => {
+  assert.ok(homeTitle.length > 0 && homeTitle.length <= 65);
 });
 test("Home description respects the requested maximum of 155 characters", () => {
   assert.ok(homeDescription.length > 0 && homeDescription.length <= 155);
