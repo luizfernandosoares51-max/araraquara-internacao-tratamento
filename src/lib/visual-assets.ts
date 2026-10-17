@@ -173,6 +173,11 @@ export const visualAssets = {
     involuntary: { src: saoCarlosInvoluntary, alt: "Familiares conversando junto a documentos, imagem conceitual de orientação e direitos" },
     voluntary: { src: saoCarlosVoluntary, alt: "Dois adultos caminhando por um parque, imagem conceitual de escolha e continuidade" },
     transport: { src: saoCarlosTransport, alt: "Mapa e bolsa junto à porta, imagem conceitual de planejamento do deslocamento" },
+    women: { src: mataoWomen, alt: "Mulher em conversa reservada, imagem conceitual de acolhimento" },
+    gambling: { src: mataoGambling, alt: "Celular sobre a mesa ao lado de família conversando, imagem conceitual sobre apostas" },
+    insurance: { src: americoTransport, alt: "Família organizando documentos, imagem conceitual de orientação" },
+    youth: { src: mataoYouth, alt: "Jovem conversando com familiar, imagem conceitual de apoio" },
+    medication: { src: mataoMedication, alt: "Cartela de comprimidos sobre a mesa, imagem conceitual de uso de medicamentos" },
   },
   specialties: {
     alcohol: { src: specialtyAlcohol, alt: "Água e caderno junto a um jardim com duas pessoas caminhando, representação conceitual de apoio" },

@@ -3,9 +3,9 @@ import { ArrowLeft, ArrowRight, MapPin, MessageCircle, Phone, ShieldCheck } from
 import { TreatmentStandardBlocks, treatmentHeading } from '@/components/treatment-standard-blocks';
 import { Button } from "@/components/ui/button";
 import { InteractiveTriage } from "@/components/interactive-triage";
-import { SpecialtyIcon } from "./araraquara-specialties";
+import { SpecialtyIcon } from "./sao-carlos-specialties";
 import { saoCarlosSpecialties, specialtySources } from "@/lib/sao-carlos-specialties";
-import type { SpecialtyKey } from "@/lib/araraquara-specialties";
+import type { SaoCarlosSpecialtyKey as SpecialtyKey } from "@/lib/sao-carlos-specialties";
 import { institutionalIdentity } from "@/lib/institutional";
 import { phoneDisplay, phoneHref, whatsappHref } from "@/lib/site";
 import { visualAssets } from "@/lib/visual-assets";
