@@ -125,7 +125,7 @@ export const saoCarlosSpecialties: Record<SpecialtyKey, Specialty> = {
       ] },
       { title: 'Um plano construído com a pessoa', paragraphs: [
         'O suporte psicológico informado é realizado com Margarete Vasques, CRP 06/130268. História de uso, vínculos, dificuldades e recursos ajudam a discutir objetivos individuais. O plano pode abordar organização cotidiana, consciência dos prejuízos e estratégias de continuidade, sem pressupor a mesma evolução para todos.',
-        'A proposta institucional reúne 12 Passos, laborterapia, convivência terapêutica e prevenção à recaída. Não se anuncia uma técnica clínica específica não confirmada nem resultados atribuídos a uma atividade isolada. O articulação médica e psiquiátrica com serviços parceiros credenciados e a enfermagem complementam o cuidado na sede. Necessidades hospitalares seguem encaminhamento conforme avaliação.'
+        'A proposta institucional reúne 12 Passos, laborterapia, convivência terapêutica e prevenção à recaída. Não se anuncia uma técnica clínica específica não confirmada nem resultados atribuídos a uma atividade isolada. O articulação médica e psiquiátrica com serviços parceiros credenciados e a equipe multidisciplinar complementam o cuidado na sede. Necessidades hospitalares seguem encaminhamento conforme avaliação.'
       ] },
       { title: 'Rotina e convivência sem perder a autonomia', paragraphs: [
         'A rotina informada vai das 07h às 22h, com períodos de organização, alimentação, apoio psicológico, atividades ao ar livre, reuniões temáticas e repouso. A participação considera o plano individual; convivência não deve ser apresentada como punição ou imposição de desempenho uniforme.',

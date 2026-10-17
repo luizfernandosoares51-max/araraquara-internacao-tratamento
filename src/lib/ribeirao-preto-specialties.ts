@@ -92,7 +92,7 @@ export const ribeiraoSpecialtyList = [
         "title": "Fissura e contextos associados ao consumo",
         "paragraphs": [
           "O desejo intenso de usar pode variar e reaparecer. Relações, emoções e situações do cotidiano podem estar associadas a ele; reconhecê-las com apoio profissional ajuda a discutir respostas. Não há prazo fixo para eliminar a fissura nem garantia de controle pela mudança de cidade.",
-          "Suporte psicológico, 12 Passos, convivência e prevenção à recaída fazem parte da proposta confirmada. Não são anunciadas terapia cognitiva específica ou reabilitação neuropsicológica não confirmadas. O articulação médica e psiquiátrica com serviços parceiros credenciados e a enfermagem complementam o cuidado; prescrições e condutas cabem aos profissionais responsáveis."
+          "Suporte psicológico, 12 Passos, convivência e prevenção à recaída fazem parte da proposta confirmada. Não são anunciadas terapia cognitiva específica ou reabilitação neuropsicológica não confirmadas. O articulação médica e psiquiátrica com serviços parceiros credenciados e a equipe multidisciplinar complementam o cuidado; prescrições e condutas cabem aos profissionais responsáveis."
         ]
       },
       {
@@ -528,7 +528,7 @@ export const ribeiraoSpecialtyList = [
         "title": "Faixa etária e serviço apropriado",
         "paragraphs": [
           "Jovens adultos e adolescentes não têm necessariamente as mesmas necessidades ou condições legais de atendimento. Para menores, a família deve procurar serviços habilitados e adequados à idade, respeitando direitos e participação do adolescente. Não foi confirmado programa de acolhimento de menores na Central.",
-          "A única sede própria da instituição fica em Araraquara e oferece acolhimento voluntário psicossocial conforme compatibilidade e disponibilidade. Uma página sobre jovens é informação educativa, não confirmação de admissão para qualquer idade. O articulação médica e psiquiátrica com serviços parceiros credenciados e a enfermagem complementam o cuidado; necessidades hospitalares recebem encaminhamento adequado."
+          "A única sede própria da instituição fica em Araraquara e oferece acolhimento voluntário psicossocial conforme compatibilidade e disponibilidade. Uma página sobre jovens é informação educativa, não confirmação de admissão para qualquer idade. O articulação médica e psiquiátrica com serviços parceiros credenciados e a equipe multidisciplinar complementam o cuidado; necessidades hospitalares recebem encaminhamento adequado."
         ]
       },
       {

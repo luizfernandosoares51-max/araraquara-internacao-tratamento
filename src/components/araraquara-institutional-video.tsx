@@ -12,7 +12,7 @@ const purposePillars = [
   },
   {
     title: "Cuidado Integrado e Humanizado",
-    text: "Apresentamos uma abordagem multidisciplinar estruturada, reunindo apoio psicológico, supervisão diária de enfermagem, laborterapia, convivência terapêutica, prevenção à recaída e o programa de 12 Passos. Quando há necessidade de desintoxicação médica ou internação hospitalar, a família recebe orientação para encaminhamento a um estabelecimento habilitado.",
+    text: "Apresentamos uma abordagem multidisciplinar estruturada, reunindo apoio psicológico, supervisão diária da equipe multidisciplinar, laborterapia, convivência terapêutica, prevenção à recaída e o programa de 12 Passos. Quando há necessidade de desintoxicação médica ou internação hospitalar, a família recebe orientação para encaminhamento a um estabelecimento habilitado.",
     icon: ShieldCheck,
   },
   {
