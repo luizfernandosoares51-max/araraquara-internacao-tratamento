@@ -1,8 +1,8 @@
 import alcoholImage from "@/assets/blog-alcoolismo-consumo-problema.webp";
 import chooseImage from "@/assets/blog-como-escolher-clinica.webp";
 import needsImage from "@/assets/blog-como-saber-clinica-reabilitacao.webp";
-import saoCarlosImage from "@/assets/blog-dependencia-quimica-sao-carlos.jpg";
-import signsImage from "@/assets/blog-dependencia-quimica-sinais.jpg";
+import saoCarlosImage from "@/assets/blog-dependencia-quimica-sao-carlos.webp";
+import signsImage from "@/assets/blog-dependencia-quimica-sinais.webp";
 import consequencesImage from "@/assets/blog-dependencia-sinais-consequencias.webp";
 import araraquaraCover from "@/assets/blog-araraquara-capa.webp.asset.json";
 import { visualAssets } from "@/lib/visual-assets";

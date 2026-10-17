@@ -1,14 +1,14 @@
 import { regionalCityAccess } from "./regional-city-access";
-import americoImage from "@/assets/local-americo-access.jpg";
-import descalvadoImage from "@/assets/local-descalvado-prepare.jpg";
-import francaImage from "@/assets/local-franca-raps.jpg";
-import ibateImage from "@/assets/local-ibate-ambulatory.jpg";
-import ibitingaImage from "@/assets/local-ibitinga-support.jpg";
-import itapolisImage from "@/assets/local-itapolis-path.jpg";
-import jaboticabalImage from "@/assets/local-jaboticabal-care.jpg";
-import mataoImage from "@/assets/local-matao-family.jpg";
-import portoFerreiraImage from "@/assets/local-porto-ferreira-network.jpg";
-import taquaritingaImage from "@/assets/local-taquaritinga-guidance.jpg";
+import americoImage from "@/assets/local-americo-access.webp";
+import descalvadoImage from "@/assets/local-descalvado-prepare.webp";
+import francaImage from "@/assets/local-franca-raps.webp";
+import ibateImage from "@/assets/local-ibate-ambulatory.webp";
+import ibitingaImage from "@/assets/local-ibitinga-support.webp";
+import itapolisImage from "@/assets/local-itapolis-path.webp";
+import jaboticabalImage from "@/assets/local-jaboticabal-care.webp";
+import mataoImage from "@/assets/local-matao-family.webp";
+import portoFerreiraImage from "@/assets/local-porto-ferreira-network.webp";
+import taquaritingaImage from "@/assets/local-taquaritinga-guidance.webp";
 
 export type LocalCitySection = {
   eyebrow: string;

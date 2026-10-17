@@ -142,7 +142,7 @@ function VideosPage() {
                 <video
                   className="aspect-video w-full bg-background object-contain"
                   controls
-                  preload="metadata"
+                  preload="none"
                   aria-label="Vídeo Progressão do Colapso sobre mudanças de comportamento, dependência química, compulsão e busca por tratamento"
                 >
                   <source src={videoSource} type="video/mp4" />
@@ -224,7 +224,7 @@ function VideosPage() {
               className="aspect-video w-full bg-deep object-contain"
               controls
               playsInline
-              preload="metadata"
+              preload="none"
               aria-label="Vídeo institucional sobre acolhimento familiar, cuidado humanizado e presença regional"
               aria-describedby="institucional-description institucional-caption"
             >

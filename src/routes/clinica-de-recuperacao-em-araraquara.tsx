@@ -234,10 +234,10 @@ function AraraquaraPage() {
             </div>
             <div className="relative mx-auto w-full max-w-xl pb-12 sm:pb-16">
               <figure className="overflow-hidden rounded-lg border border-border bg-card shadow-xl">
-                <img src={araraquaraPhotos[0].src} width={araraquaraPhotos[0].width} height={araraquaraPhotos[0].height} decoding="async" alt={araraquaraPhotos[0].alt} className="aspect-[5/4] w-full object-cover" />
+                <img src={araraquaraPhotos[0].src} width={araraquaraPhotos[0].width} height={araraquaraPhotos[0].height} fetchPriority="high" decoding="async" alt={araraquaraPhotos[0].alt} className="aspect-[5/4] w-full object-cover" />
               </figure>
               <figure className="absolute -bottom-1 right-3 w-[42%] overflow-hidden rounded-lg border-4 border-background bg-card shadow-xl sm:-right-5 sm:w-[46%]">
-                <img src={araraquaraPhotos[3].src} width={araraquaraPhotos[3].width} height={araraquaraPhotos[3].height} decoding="async" alt={araraquaraPhotos[3].alt} className="aspect-[4/5] w-full object-cover" />
+                <img src={araraquaraPhotos[3].src} width={araraquaraPhotos[3].width} height={araraquaraPhotos[3].height} loading="lazy" decoding="async" alt={araraquaraPhotos[3].alt} className="aspect-[4/5] w-full object-cover" />
               </figure>
               <div className="absolute bottom-3 left-3 max-w-[52%] rounded-md bg-background/95 px-4 py-3 shadow-lg sm:bottom-5 sm:left-5">
                  <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-primary">Orientação local</p>
