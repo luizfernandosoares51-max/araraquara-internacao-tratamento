@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, ExternalLink, MapPin, MessageCircle, Phone, Shie
 import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
 import { Button } from "@/components/ui/button";
 import { CityEditorialSection } from "@/components/city-editorial-section";
+import { CityStandardBlocks } from "@/components/city-standard-blocks";
 import { InteractiveTriage } from "@/components/interactive-triage";
 import { cityEditorialFaqs } from "@/lib/city-editorial";
 import { cityContactLabel, cityWhatsappHref } from "@/lib/regional-city-access";
@@ -97,14 +98,6 @@ export function LocalCityPageView({ city, beforeFaq }: { city: LocalCityPage; be
             </div>
           </section>
 
-          <section aria-labelledby="modalidades-titulo" className="border-b border-border py-10 sm:py-12">
-            <h2 id="modalidades-titulo" className="font-display text-2xl font-semibold leading-tight sm:text-3xl">Internação Voluntária e Involuntária (Lei 13.840) para {city.name} e Região</h2>
-            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">O acolhimento voluntário ocorre com adesão da pessoa na sede própria em Araraquara. A internação involuntária é excepcional, exige avaliação e autorização médica e acontece somente em unidade médica habilitada; a Central orienta a família no encaminhamento.</p>
-            <h2 className="mt-8 font-display text-2xl font-semibold leading-tight sm:text-3xl">Atendimento Psiquiátrico, Apoio em Dependência Química e Saúde Mental</h2>
-            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">A Central oferece suporte psicossocial e orientação; avaliação e acompanhamento psiquiátrico são realizados por profissionais e serviços médicos externos, para os quais a família é orientada conforme cada caso.</p>
-            <h2 className="mt-8 font-display text-2xl font-semibold leading-tight sm:text-3xl">Orientações sobre Encaminhamento e Apoio Complementar à Rede Pública (CAPS e SAMU 192)</h2>
-            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">O CAPS de {city.name} segue como porta pública de cuidado em saúde mental. Em risco imediato à vida, ligue para o SAMU 192 antes de qualquer contato com a Central.</p>
-          </section>
 
           {beforeFaq}
 
@@ -124,17 +117,9 @@ export function LocalCityPageView({ city, beforeFaq }: { city: LocalCityPage; be
             </div>
           </section>
 
-          <nav aria-labelledby="servicos-conectados" className="border-t border-border py-10">
-            <h2 id="servicos-conectados" className="font-display text-xl font-semibold">Navegação e Serviços Conectados</h2>
-            <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
-              <li><Link to="/" className="inline-flex min-h-11 items-center font-semibold text-primary underline underline-offset-4">Central de Acolhimento e Regulação SP</Link></li>
-              <li><Link to="/cidades" className="inline-flex min-h-11 items-center font-semibold text-primary underline underline-offset-4">Ver Todas as Cidades Atendidas</Link></li>
-              <li><Link to="/clinica-de-recuperacao-em-araraquara" className="inline-flex min-h-11 items-center font-semibold text-primary underline underline-offset-4">Sede em Araraquara</Link></li>
-              <li><Link to="/clinica-de-recuperacao-em-sao-carlos-sp" className="inline-flex min-h-11 items-center font-semibold text-primary underline underline-offset-4">São Carlos</Link></li>
-              <li><Link to="/clinica-de-reabilitacao" className="inline-flex min-h-11 items-center font-semibold text-primary underline underline-offset-4">Clínica de reabilitação: como funciona</Link></li>
-            </ul>
-          </nav>
         </div>
+
+        <CityStandardBlocks cityName={city.name} />
 
         <section className="border-t border-border bg-primary text-primary-foreground">
           <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
