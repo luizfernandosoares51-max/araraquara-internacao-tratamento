@@ -244,7 +244,7 @@ export function cityEditorialMetadata(slug: string) {
   if (!editorial) throw new Error("City editorial not registered");
   return {
     title: slug === "araraquara"
-      ? "Clínica de Recuperação e Reabilitação em Araraquara - SP | (16) 99765-4579"
+      ? "Clínica de Recuperação em Araraquara - SP | Acolhimento e Vagas 24h"
       : `Clínica de Recuperação: ${editorial.name} | Sede Araraquara | (16) 99765-4579`,
     description: `Acolhimento para famílias de ${editorial.name}: ${editorial.focus}. Sede terapêutica em Araraquara, visitas agendadas e orientação 24h. (16) 99765-4579.`,
   };
