@@ -6,7 +6,7 @@ const linkClass = "inline-flex min-h-11 items-center font-semibold text-primary 
 
 /** H1 padronizado das páginas de tratamento. */
 export function treatmentHeading(label: string, cityName: string) {
-  return `${label} em ${cityName} - SP | Orientação de Vagas e Acolhimento 24h`;
+  return `${label} em ${cityName} - SP | Acolhimento e Consulta de Vagas 24h`;
 }
 
 /** Blocos padronizados das páginas de tratamento: critérios, rede pública, transparência e malha de links. */
