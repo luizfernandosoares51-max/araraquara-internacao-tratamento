@@ -1,7 +1,7 @@
 import { whatsappNumber } from "./site";
 
-export const homeTitle = "Clínica de Recuperação e Internação em SP | Central 24h";
-export const homeDescription = "Busca apoio em saúde mental ou vaga em clínica ou casa de recuperação em SP? Triagem sigilosa, internação voluntária e involuntária e orientação 24h.";
+export const homeTitle = "Central de Acolhimento e Reabilitação SP | Plantão e Vagas 24h";
+export const homeDescription = "Apoio e acolhimento para dependência química e saúde mental no Estado de São Paulo. Consulta de vagas, acolhimento voluntário e articulação clínica 24h.";
 export const vacancyConsultationHref = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Olá! Gostaria de consultar a disponibilidade atual para acolhimento e receber orientação sobre encaminhamento à internação no Estado de São Paulo.")}`;
 
 export const homeRegionalLinks = [
