@@ -12,11 +12,11 @@ export function MataoSpecialties() {
     <p className="text-xs font-semibold uppercase text-secondary">Orientação para cada necessidade</p>
     <h2 id="matao-specialty-heading" className="mt-3 max-w-4xl font-display text-2xl font-semibold leading-tight sm:text-4xl">Modalidades de Tratamento e Acolhimento em Matão e Região</h2>
     <p className="mt-5 max-w-3xl leading-relaxed text-muted-foreground">Orientação para diferentes necessidades da nossa comunidade, com respeito à privacidade e acolhimento humanizado. Conheça os caminhos de cuidado e as condições de cada modalidade.</p>
-    <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {mataoSpecialtyList.map(page => <Link key={page.key} to={page.path} className="group flex min-w-0 flex-col rounded-lg border border-border bg-glass p-6 backdrop-blur-sm transition-colors hover:bg-glass-strong focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring">
+    <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
+      {mataoSpecialtyList.map(page => <Link key={page.key} to={page.path} className="group flex min-w-0 flex-col rounded-lg border border-border bg-glass min-w-0 p-3 sm:p-6 backdrop-blur-sm transition-colors hover:bg-glass-strong focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring">
         <MataoSpecialtyIcon name={page.key} />
-        <h3 className="mt-5 font-display text-xl font-semibold leading-snug">{page.label}</h3>
-        <p className="mb-6 mt-3 text-sm leading-relaxed text-muted-foreground">{page.summary}</p>
+        <h3 className="mt-3 font-display text-base font-semibold leading-snug sm:mt-5 sm:text-xl leading-snug">{page.label}</h3>
+        <p className="mb-3 mt-2 text-xs leading-snug sm:mb-6 sm:mt-3 sm:text-sm sm:leading-relaxed text-muted-foreground">{page.summary}</p>
         <span className="mt-auto inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-secondary">Saiba mais <ArrowRight className="size-4 motion-safe:transition-transform motion-safe:group-hover:translate-x-1" aria-hidden="true" /></span>
       </Link>)}
     </div>
