@@ -41,7 +41,7 @@ export function FamilyOrientationGuide() {
       <h2 ref={titleRef} tabIndex={-1} id="family-guide-title" className="mt-5 max-w-3xl font-display text-3xl font-semibold leading-tight focus:outline-none sm:text-4xl">{title}</h2>
       {state.stage === "start" && <>
         <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">Informação para começar com mais clareza, no seu tempo. Nenhuma resposta define um diagnóstico ou a necessidade de internação.</p>
-        <div className="mt-8 grid gap-3 md:grid-cols-2">
+        <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-2">
           {guideJourneys.map((item) => { const Icon = icons[item.id]; return <Button key={item.id} variant="outline" className="h-auto min-h-20 justify-start gap-4 whitespace-normal rounded-lg px-5 py-4 text-left leading-relaxed hover:bg-brand-soft" onClick={() => advance({ stage: "safety", path: item.id })}>
             <Icon className="size-5 shrink-0 text-secondary" aria-hidden="true" /><span className="flex-1">{item.label}</span><ArrowRight aria-hidden="true" />
           </Button>; })}

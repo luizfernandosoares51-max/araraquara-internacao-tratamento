@@ -253,7 +253,7 @@ function RehabilitationClinicPage() {
                 <h2 className="font-display text-3xl font-bold leading-tight sm:text-4xl">Quando procurar uma clínica de reabilitação?</h2>
                 <p className="mt-5 text-base leading-7 text-muted-foreground">Buscar informação pode ser adequado antes de uma crise. Mudanças persistentes e prejuízos associados ao consumo merecem atenção, mas somente uma avaliação profissional pode orientar a modalidade de cuidado.</p>
               </div>
-              <ul className="grid gap-3 sm:grid-cols-2">
+              <ul className="grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-2">
                 {[
                   "Riscos à saúde ou à segurança",
                   "Dificuldade de reduzir ou interromper o uso",
@@ -280,7 +280,7 @@ function RehabilitationClinicPage() {
                 <p className="mt-5 max-w-xl text-base leading-7 text-muted-foreground">Aprofunde dúvidas sobre sinais de atenção, possibilidades de cuidado e critérios para uma decisão informada.</p>
                 <Link to="/blog" className="mt-6 inline-flex items-center gap-2 font-semibold text-secondary hover:text-foreground">Ver todos os conteúdos <ArrowRight className="size-4" aria-hidden="true" /></Link>
               </div>
-              <div className="grid gap-4 sm:grid-cols-2">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-2">
                 {relatedArticles.map((article) => (
                   <article key={article.to} className="rounded-lg border border-border bg-glass p-5 sm:p-6">
                     <h3 className="font-display text-lg font-bold leading-snug">{article.title}</h3>
@@ -302,7 +302,7 @@ function RehabilitationClinicPage() {
               <img src={visualAssets.treatment.src} alt={visualAssets.treatment.alt} width={1600} height={1067} loading="lazy" decoding="async" className="aspect-[16/7] w-full object-cover" />
 
             </figure>
-            <div className="mt-10 grid gap-5 md:grid-cols-2">
+            <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-2">
               {treatmentStages.map((stage, index) => (
                 <article key={stage.title} className="rounded-lg border border-deep/10 bg-foreground p-6 shadow-sm sm:p-7">
                   <span className="grid size-9 place-items-center rounded-full bg-primary font-display text-sm font-bold text-primary-foreground">{index + 1}</span>

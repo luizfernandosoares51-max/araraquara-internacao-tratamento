@@ -329,7 +329,7 @@ function OfficialRibeiraoPretoPage() {
               <h2 className="mt-3 font-display text-3xl font-bold leading-tight sm:text-4xl">Quais caminhos existem para quem procura tratamento em Ribeirão Preto?</h2>
               <p className="mt-5 leading-8 text-deep/70">Não existe um caminho melhor para todas as pessoas. A escolha depende da situação, da avaliação responsável e das necessidades identificadas.</p>
             </div>
-            <div className="mt-10 grid gap-5 md:grid-cols-2">
+            <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-2">
               {carePaths.map((path, index) => (
                 <article key={path.title} className="grid grid-cols-[auto_1fr] gap-5 border-b border-deep/10 pb-7">
                   <span className="grid size-10 place-items-center bg-deep font-display text-sm font-bold text-foreground">{index + 1}</span>

@@ -237,7 +237,7 @@ function SaoCarlosPage() {
             <p className="text-xs font-semibold uppercase text-brand">Serviços públicos oficiais</p>
             <h2 className="mt-3 max-w-4xl font-display text-3xl font-semibold leading-tight sm:text-4xl">Rede de Atendimento em Saúde Mental e Álcool e Drogas em São Carlos</h2>
             <p className="mt-5 max-w-4xl text-[15px] leading-relaxed text-deep/70">São Carlos possui serviços públicos de atenção psicossocial, incluindo o CAPS Álcool e Drogas e outros serviços de saúde mental. A Central não pertence ao SUS e não mantém parceria declarada com esses órgãos; os links abaixo servem somente para facilitar o acesso às informações oficiais.</p>
-            <div className="mt-9 grid gap-5 md:grid-cols-3">
+            <div className="mt-9 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
               <a href="http://saocarlos.sp.gov.br/index.php/saude/153937-centro-de-atencao-psicossocial-caps-alcool-e-drogas.html" target="_blank" rel="noopener noreferrer" className="group border border-deep/10 bg-ice p-6 transition-colors hover:border-brand">
                 <Building2 className="size-7 text-brand" aria-hidden="true" />
                 <h3 className="mt-5 font-display text-xl font-semibold">CAPS Álcool e Drogas</h3>
@@ -269,7 +269,7 @@ function SaoCarlosPage() {
                 <h2 className="mt-3 font-display text-3xl font-semibold leading-tight sm:text-4xl">Quando procurar ajuda?</h2>
                 <p className="mt-5 text-[15px] leading-relaxed text-deep/70">Não é necessário esperar que a situação se agrave para buscar informação. Os sinais abaixo não definem um diagnóstico, mas podem indicar que é importante conversar com um serviço de saúde ou pedir orientação.</p>
               </div>
-              <ul className="grid gap-3 sm:grid-cols-2">
+              <ul className="grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-2">
                 {supportSignals.map((signal) => (
                   <li key={signal} className="flex items-start gap-3 border border-deep/10 bg-foreground p-4 text-sm leading-relaxed text-deep/75">
                     <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-brand" aria-hidden="true" /> {signal}

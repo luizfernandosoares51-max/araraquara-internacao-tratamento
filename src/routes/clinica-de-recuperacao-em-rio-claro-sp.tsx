@@ -303,7 +303,7 @@ function RioClaroPage() {
                 <p>A Central de Acolhimento e Reabilitação não pertence à Prefeitura, ao CAPS ou ao SUS e não afirma manter parceria com esses serviços. As referências abaixo são informativas e permitem consultar diretamente os canais oficiais antes de buscar atendimento.</p>
               </div>
             </div>
-            <div className="mt-10 grid gap-4 md:grid-cols-2">
+            <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-2">
               <a href="https://www.saude-rioclaro.org.br/uac/sistema%20municipal%20de%20saude.htm" target="_blank" rel="noopener noreferrer" className="group border border-border bg-glass p-6 transition-colors hover:bg-glass-strong">
                 <HeartHandshake className="size-7 text-secondary" aria-hidden="true" />
                 <h3 className="mt-5 font-display text-xl font-bold">CAPS AD de Rio Claro</h3>
@@ -328,7 +328,7 @@ function RioClaroPage() {
               <p className="mt-5 text-[15px] leading-relaxed text-deep/70">A orientação começa pela situação real, não por uma resposta pronta. A Central ajuda a família a entender possibilidades, limites e informações necessárias, sem afirmar que toda pessoa precisa de internação.</p>
               <p className="mt-4 text-[15px] leading-relaxed text-deep/70">Na página de <Link to="/familia" className="font-semibold text-brand underline underline-offset-4">orientação para famílias</Link>, você encontra informações complementares para organizar essa conversa.</p>
             </div>
-            <ul className="grid gap-3 sm:grid-cols-2">
+            <ul className="grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-2">
               {supportSteps.map((step) => (
                 <li key={step} className="flex items-start gap-3 border border-deep/10 bg-foreground p-4 text-sm leading-relaxed text-deep/70">
                   <Check className="mt-0.5 size-5 shrink-0 text-brand" aria-hidden="true" /> {step}
@@ -345,7 +345,7 @@ function RioClaroPage() {
               <h2 className="mt-3 font-display text-3xl font-bold leading-tight sm:text-4xl">Como funciona o processo de acolhimento</h2>
               <p className="mt-5 text-[15px] leading-relaxed text-deep/70">Estas etapas apresentam um caminho geral. A ordem e os procedimentos podem variar conforme a situação, a avaliação, a disponibilidade e as condições aplicáveis.</p>
             </div>
-            <ol className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <ol className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-2 lg:grid-cols-4">
               {processSteps.map((step, index) => (
                 <li key={step.title} className="border border-deep/10 bg-ice p-5">
                   <span className="grid size-9 place-items-center rounded-full bg-deep font-display text-sm font-bold text-foreground">{index + 1}</span>

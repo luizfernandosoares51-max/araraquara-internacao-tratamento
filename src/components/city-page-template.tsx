@@ -144,7 +144,7 @@ export function CityPageTemplate({ city }: { city: CityPageData }) {
 
           <section id="tratamento" className="border-b border-border py-14 lg:py-20">
             <SectionLabel>Dependência química e alcoolismo</SectionLabel>
-            <div className="mt-7 grid gap-4 md:grid-cols-2">
+            <div className="mt-7 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-2">
               <article className="glass-panel rounded-2xl p-5 sm:p-7"><h2 className="font-display text-xl font-semibold">{city.dependencyHeading}</h2><p className="mt-4 text-sm leading-relaxed text-muted-foreground">{city.dependencyText}</p></article>
               <article className="glass-panel rounded-2xl p-5 sm:p-7"><h2 className="font-display text-xl font-semibold">{city.alcoholHeading}</h2><p className="mt-4 text-sm leading-relaxed text-muted-foreground">{city.alcoholText}</p></article>
             </div>
