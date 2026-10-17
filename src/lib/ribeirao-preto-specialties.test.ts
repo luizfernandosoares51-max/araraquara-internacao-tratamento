@@ -2,8 +2,8 @@ import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { ribeiraoSpecialtyList, ribeiraoSpecialtyHead, ribeiraoSpecialtyScope, specialtyScope } from './ribeirao-preto-specialties';
 
-test('Ribeirão Preto preserves all nine requested public paths', () => assert.deepEqual(ribeiraoSpecialtyList.map(page => page.path), [
-  '/tratamento-alcoolismo-ribeirao-preto', '/tratamento-cocaina-crack-ribeirao-preto', '/internacao-involuntaria-ribeirao-preto', '/internacao-voluntaria-ribeirao-preto', '/resgate-remocao-ribeirao-preto', '/clinica-recuperacao-feminina-ribeirao-preto', '/diagnostico-duplo-saude-mental-ribeirao-preto', '/dependencia-medicamentos-tarja-preta-ribeirao-preto', '/tratamento-dependencia-jovens-ribeirao-preto',
+test('Ribeirão Preto preserves all requested public paths', () => assert.deepEqual(ribeiraoSpecialtyList.map(page => page.path), [
+  '/tratamento-alcoolismo-ribeirao-preto', '/tratamento-cocaina-crack-ribeirao-preto', '/internacao-involuntaria-ribeirao-preto', '/internacao-voluntaria-ribeirao-preto', '/resgate-remocao-ribeirao-preto', '/clinica-recuperacao-feminina-ribeirao-preto', '/diagnostico-duplo-saude-mental-ribeirao-preto', '/dependencia-medicamentos-tarja-preta-ribeirao-preto', '/tratamento-dependencia-jovens-ribeirao-preto', '/tratamento-jogos-compulsivos-apostas-ribeirao-preto', '/clinica-recuperacao-convenio-ribeirao-preto', '/clinica-recuperacao-idosos-ribeirao-preto', '/comunidade-terapeutica-masculina-ribeirao-preto', '/tratamento-dependencia-trabalhadores-ribeirao-preto',
 ]));
 test('own seat does not provide medical detox', () => assert.equal(specialtyScope.ownUnitMedicalDetox, false));
 test('own seat does not provide involuntary hospitalization', () => assert.equal(specialtyScope.ownUnitInvoluntaryHospitalization, false));

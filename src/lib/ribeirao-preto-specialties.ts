@@ -2,7 +2,7 @@ import { specialtyScope, specialtySources } from './araraquara-specialties';
 import { institutionalLocalBusiness } from './institutional';
 import { siteUrl } from './site';
 export { specialtyScope, specialtySources };
-export type RibeiraoSpecialtyKey = 'alcohol' | 'cocaine' | 'involuntary' | 'voluntary' | 'transport' | 'women' | 'dual' | 'medication' | 'youth';
+export type RibeiraoSpecialtyKey = 'alcohol' | 'cocaine' | 'involuntary' | 'voluntary' | 'transport' | 'women' | 'dual' | 'medication' | 'youth' | 'gambling' | 'insurance' | 'elderly' | 'men' | 'workers';
 export const ribeiraoSpecialtyScope = { femaleUnitConfirmed: false, adolescentProgramConfirmed: false, ownPsychiatryConfirmed: true, ownMedicationDetox: false } as const;
 export const ribeiraoParentPath = '/clinica-de-recuperacao-em-ribeirao-preto-sp';
 export const ribeiraoSpecialtyList = [
@@ -567,7 +567,287 @@ export const ribeiraoSpecialtyList = [
         "answer": "Converse a partir de fatos, combine limites respeitosos e procure avaliação apropriada à idade. Evite ameaças, exposição pública e contenção improvisada; risco imediato exige urgência."
       }
     ]
-  }
+  },
+{
+  "key": "gambling",
+  "path": "/tratamento-jogos-compulsivos-apostas-ribeirao-preto",
+  "label": "Tratamento de Jogos Compulsivos e Apostas",
+  "summary": "Apostas esportivas, jogos online e família.",
+  "title": "Tratamento de Jogos Compulsivos e Apostas em Ribeirão Preto - SP | Acolhimento",
+  "description": "Orientação sobre apostas esportivas e jogos online para Ribeirão Preto. Triagem sigilosa, apoio familiar e acolhimento voluntário em Araraquara; consulta de vagas 24h.",
+  "heading": "Quando as apostas online passam a controlar a rotina",
+  "intro": "Apostas esportivas, cassinos digitais e jogos no celular podem gerar dívidas, segredos e conflitos antes que a família perceba a dimensão do problema. A Central oferece escuta e orientação a famílias de Ribeirão Preto sobre acolhimento voluntário psicossocial na única sede própria, em Araraquara, com suporte psicológico, equipe multidisciplinar e articulação médica e psiquiátrica com serviços parceiros credenciados.",
+  "notice": "Pensamentos de morte ligados a dívidas exigem ajuda imediata: CVV 188 ou SAMU 192. A Central não negocia dívidas nem oferece orientação jurídica ou financeira.",
+  "sections": [
+    {
+      "title": "Sinais que merecem conversa",
+      "paragraphs": [
+        "Pedidos frequentes de dinheiro, uso escondido do celular, tentativas de recuperar perdas e irritação ao tentar parar são sinais úteis para relatar. Não se trata de julgar caráter, e sim de observar prejuízos.",
+        "A triagem é sigilosa e pode ser iniciada pela própria pessoa ou pela família, sem compromisso de admissão."
+      ]
+    },
+    {
+      "title": "Cuidado psicossocial e apoio médico",
+      "paragraphs": [
+        "A rotina proposta na sede inclui suporte psicológico com Margarete Vasques, CRP 06/130268, convivência, 12 Passos e prevenção à recaída. Quando há indicação de avaliação psiquiátrica, ela é articulada com profissionais parceiros credenciados.",
+        "Não há promessa de cura; o plano depende de avaliação individual."
+      ]
+    },
+    {
+      "title": "Proteger a família sem romper vínculos",
+      "paragraphs": [
+        "Medidas práticas, como separar contas e limitar acesso a cartões, podem reduzir danos enquanto se busca orientação. Combine limites com respeito, evitando exposição pública."
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Identificar a necessidade",
+      "text": "Organize dúvidas e riscos antes de decidir o próximo passo."
+    },
+    {
+      "title": "Consultar o cuidado adequado",
+      "text": "Avaliação individual define compatibilidade e encaminhamento."
+    },
+    {
+      "title": "Confirmar as condições",
+      "text": "Consulte disponibilidade, destino e continuidade em Ribeirão Preto."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "A triagem sobre apostas é sigilosa?",
+      "answer": "Sim. A conversa inicial pelo WhatsApp ou telefone é reservada e não gera compromisso de admissão nem reserva de vaga."
+    },
+    {
+      "question": "Quais leis orientam acolhimento e internação?",
+      "answer": "A Lei 10.216/2001 protege os direitos das pessoas com transtornos mentais e a Lei 13.840/2019 trata do acolhimento e da internação de dependentes. Internação involuntária exige avaliação médica e ocorre apenas em unidade de saúde habilitada; a sede da Central realiza acolhimento voluntário."
+    },
+    {
+      "question": "O CAPS de Ribeirão Preto e o SAMU 192 continuam sendo opções?",
+      "answer": "Sim. O CAPS de Ribeirão Preto é a porta pública de cuidado em saúde mental e a orientação da Central não o substitui. Em risco imediato à vida, ligue para o SAMU 192 antes de qualquer contato."
+    }
+  ]
+},
+{
+  "key": "insurance",
+  "path": "/clinica-recuperacao-convenio-ribeirao-preto",
+  "label": "Clínica de Recuperação por Convênio",
+  "summary": "Particular, reembolso e plano de saúde.",
+  "title": "Clínica de Recuperação por Convênio em Ribeirão Preto - SP | Acolhimento",
+  "description": "Atendimento particular para famílias de Ribeirão Preto, com orientação sobre reembolso ou autorização do plano mediante laudo médico externo, sem garantia de cobertura.",
+  "heading": "Atendimento particular com orientação clara sobre o plano de saúde",
+  "intro": "Muitas famílias perguntam se o plano de saúde pode participar do custo. A Central oferece escuta e orientação a famílias de Ribeirão Preto sobre acolhimento voluntário psicossocial na única sede própria, em Araraquara, com suporte psicológico, equipe multidisciplinar e articulação médica e psiquiátrica com serviços parceiros credenciados. O atendimento é particular; a Central não é credenciada como prestadora de convênios.",
+  "notice": "A cobertura ou o reembolso dependem exclusivamente da operadora e do contrato. A Central não garante autorização nem emite laudo médico próprio.",
+  "sections": [
+    {
+      "title": "Como funciona a consulta ao plano",
+      "paragraphs": [
+        "A família pode consultar a operadora sobre reembolso ou autorização, normalmente com laudo e relatório emitidos por médico externo responsável pelo caso. Cada contrato tem regras próprias.",
+        "Operadoras como Unimed, Bradesco Saúde, SulAmérica, Amil, Porto Seguro Saúde e NotreDame Intermédica são citadas apenas como exemplos para consulta direta, não como convênios firmados."
+      ]
+    },
+    {
+      "title": "Transparência sobre custos",
+      "paragraphs": [
+        "Valores, permanência e condições são informados individualmente. Peça tudo por escrito antes de decidir e guarde comprovantes e notas fiscais."
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Identificar a necessidade",
+      "text": "Organize dúvidas e riscos antes de decidir o próximo passo."
+    },
+    {
+      "title": "Consultar o cuidado adequado",
+      "text": "Avaliação individual define compatibilidade e encaminhamento."
+    },
+    {
+      "title": "Confirmar as condições",
+      "text": "Consulte disponibilidade, destino e continuidade em Ribeirão Preto."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "O plano de saúde é obrigado a pagar o acolhimento?",
+      "answer": "Não há garantia. A decisão é da operadora conforme o contrato e a documentação médica externa. A Central orienta sobre os documentos, mas não promete cobertura."
+    },
+    {
+      "question": "Quais leis orientam acolhimento e internação?",
+      "answer": "A Lei 10.216/2001 protege os direitos das pessoas com transtornos mentais e a Lei 13.840/2019 trata do acolhimento e da internação de dependentes. Internação involuntária exige avaliação médica e ocorre apenas em unidade de saúde habilitada; a sede da Central realiza acolhimento voluntário."
+    },
+    {
+      "question": "O CAPS de Ribeirão Preto e o SAMU 192 continuam sendo opções?",
+      "answer": "Sim. O CAPS de Ribeirão Preto é a porta pública de cuidado em saúde mental e a orientação da Central não o substitui. Em risco imediato à vida, ligue para o SAMU 192 antes de qualquer contato."
+    }
+  ]
+},
+{
+  "key": "elderly",
+  "path": "/clinica-recuperacao-idosos-ribeirao-preto",
+  "label": "Clínica de Recuperação para Idosos",
+  "summary": "Cuidado adaptado para a terceira idade.",
+  "title": "Clínica de Recuperação para Idosos em Ribeirão Preto - SP | Acolhimento",
+  "description": "Orientação para famílias de Ribeirão Preto sobre dependência na terceira idade: ambiente seguro, rotina multidisciplinar e suporte médico via rede credenciada.",
+  "heading": "Dependência na terceira idade exige atenção redobrada",
+  "intro": "Na pessoa idosa, álcool e medicamentos interagem com doenças crônicas e aumentam o risco de quedas e confusão. A Central oferece escuta e orientação a famílias de Ribeirão Preto sobre acolhimento voluntário psicossocial na única sede própria, em Araraquara, com suporte psicológico, equipe multidisciplinar e articulação médica e psiquiátrica com serviços parceiros credenciados.",
+  "notice": "Confusão súbita, quedas, falta de ar ou dor no peito exigem SAMU 192. A compatibilidade com o acolhimento depende de avaliação clínica e de autonomia; a sede não substitui instituição de longa permanência nem hospital.",
+  "sections": [
+    {
+      "title": "Avaliação clínica antes de tudo",
+      "paragraphs": [
+        "Doenças crônicas, uso de vários medicamentos e mobilidade precisam ser avaliados por médico. O suporte médico especializado é articulado com a rede credenciada parceira, e não pela equipe própria da Central."
+      ]
+    },
+    {
+      "title": "Rotina com respeito e participação",
+      "paragraphs": [
+        "A proposta inclui convivência, suporte psicológico e atividades adaptadas ao ritmo de cada pessoa, sempre com participação da família e visitas agendadas."
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Identificar a necessidade",
+      "text": "Organize dúvidas e riscos antes de decidir o próximo passo."
+    },
+    {
+      "title": "Consultar o cuidado adequado",
+      "text": "Avaliação individual define compatibilidade e encaminhamento."
+    },
+    {
+      "title": "Confirmar as condições",
+      "text": "Consulte disponibilidade, destino e continuidade em Ribeirão Preto."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Toda pessoa idosa pode ser acolhida?",
+      "answer": "Não necessariamente. É preciso avaliar condição clínica, autonomia e necessidades de cuidado. Casos que exigem assistência de enfermagem ou hospitalar são orientados a serviços adequados."
+    },
+    {
+      "question": "Quais leis orientam acolhimento e internação?",
+      "answer": "A Lei 10.216/2001 protege os direitos das pessoas com transtornos mentais e a Lei 13.840/2019 trata do acolhimento e da internação de dependentes. Internação involuntária exige avaliação médica e ocorre apenas em unidade de saúde habilitada; a sede da Central realiza acolhimento voluntário."
+    },
+    {
+      "question": "O CAPS de Ribeirão Preto e o SAMU 192 continuam sendo opções?",
+      "answer": "Sim. O CAPS de Ribeirão Preto é a porta pública de cuidado em saúde mental e a orientação da Central não o substitui. Em risco imediato à vida, ligue para o SAMU 192 antes de qualquer contato."
+    }
+  ]
+},
+{
+  "key": "men",
+  "path": "/comunidade-terapeutica-masculina-ribeirao-preto",
+  "label": "Comunidade Terapêutica Masculina",
+  "summary": "Convivência entre pares e reinserção.",
+  "title": "Comunidade Terapêutica Masculina em Ribeirão Preto - SP | Acolhimento",
+  "description": "Orientação para homens de Ribeirão Preto sobre recuperação voluntária: convivência entre pares, rotina terapêutica, 12 Passos e reinserção social na sede de Araraquara.",
+  "heading": "Convivência, rotina e recuperação voluntária entre pares",
+  "intro": "O modelo de convivência terapêutica valoriza rotina, responsabilidade e apoio mútuo. A Central oferece escuta e orientação a famílias de Ribeirão Preto sobre acolhimento voluntário psicossocial na única sede própria, em Araraquara, com suporte psicológico, equipe multidisciplinar e articulação médica e psiquiátrica com serviços parceiros credenciados.",
+  "notice": "O acolhimento é voluntário: ninguém deve ser levado contra a vontade para a sede. Consulte o perfil de admissão antes de qualquer decisão.",
+  "sections": [
+    {
+      "title": "Rotina terapêutica com disciplina e respeito",
+      "paragraphs": [
+        "O cronograma diário, das 07h às 22h, reúne laborterapia, convivência, grupos de 12 Passos e prevenção à recaída. A disciplina é pensada como cuidado, não como punição."
+      ]
+    },
+    {
+      "title": "Espiritualidade e reinserção social",
+      "paragraphs": [
+        "A espiritualidade pode ser vivida de forma ecumênica, por meio dos princípios dos 12 Passos, sem imposição religiosa. O planejamento da saída inclui família, trabalho e apoios perto de casa em Ribeirão Preto."
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Identificar a necessidade",
+      "text": "Organize dúvidas e riscos antes de decidir o próximo passo."
+    },
+    {
+      "title": "Consultar o cuidado adequado",
+      "text": "Avaliação individual define compatibilidade e encaminhamento."
+    },
+    {
+      "title": "Confirmar as condições",
+      "text": "Consulte disponibilidade, destino e continuidade em Ribeirão Preto."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "A participação na espiritualidade é obrigatória?",
+      "answer": "A abordagem dos 12 Passos é ecumênica e respeita a crença de cada pessoa. Esclareça dúvidas sobre a rotina antes da admissão."
+    },
+    {
+      "question": "Quais leis orientam acolhimento e internação?",
+      "answer": "A Lei 10.216/2001 protege os direitos das pessoas com transtornos mentais e a Lei 13.840/2019 trata do acolhimento e da internação de dependentes. Internação involuntária exige avaliação médica e ocorre apenas em unidade de saúde habilitada; a sede da Central realiza acolhimento voluntário."
+    },
+    {
+      "question": "O CAPS de Ribeirão Preto e o SAMU 192 continuam sendo opções?",
+      "answer": "Sim. O CAPS de Ribeirão Preto é a porta pública de cuidado em saúde mental e a orientação da Central não o substitui. Em risco imediato à vida, ligue para o SAMU 192 antes de qualquer contato."
+    }
+  ]
+},
+{
+  "key": "workers",
+  "path": "/tratamento-dependencia-trabalhadores-ribeirao-preto",
+  "label": "Tratamento de Dependência para Trabalhadores e Executivos",
+  "summary": "Sigilo, estresse laboral e carreira.",
+  "title": "Tratamento de Dependência para Trabalhadores e Executivos em Ribeirão Preto - SP | Acolhimento",
+  "description": "Acolhimento confidencial para profissionais de Ribeirão Preto: estresse laboral, burnout associado ao consumo de substâncias e preservação da trajetória profissional.",
+  "heading": "Cuidado confidencial para quem não pode parar a vida",
+  "intro": "Pressão por resultados, jornadas longas e esgotamento podem se misturar ao uso de álcool e outras substâncias. A Central oferece escuta e orientação a famílias de Ribeirão Preto sobre acolhimento voluntário psicossocial na única sede própria, em Araraquara, com suporte psicológico, equipe multidisciplinar e articulação médica e psiquiátrica com serviços parceiros credenciados.",
+  "notice": "Burnout e depressão exigem avaliação profissional. Pensamentos suicidas: CVV 188 ou SAMU 192. A Central não emite atestados nem laudos trabalhistas.",
+  "sections": [
+    {
+      "title": "Sigilo desde o primeiro contato",
+      "paragraphs": [
+        "A conversa inicial é reservada. Informações só são compartilhadas com autorização, e a família ou a própria pessoa decide o que comunicar ao trabalho."
+      ]
+    },
+    {
+      "title": "Esgotamento e consumo",
+      "paragraphs": [
+        "Quando o estresse laboral e o burnout aparecem junto ao consumo, a avaliação de saúde mental é articulada com profissionais parceiros credenciados. O suporte psicológico ajuda a reconhecer gatilhos e organizar limites."
+      ]
+    },
+    {
+      "title": "Preservar a trajetória profissional",
+      "paragraphs": [
+        "Afastamentos, benefícios e direitos trabalhistas devem ser verificados com médico assistente, empresa e orientação especializada. O planejamento do retorno inclui prevenção à recaída."
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "title": "Identificar a necessidade",
+      "text": "Organize dúvidas e riscos antes de decidir o próximo passo."
+    },
+    {
+      "title": "Consultar o cuidado adequado",
+      "text": "Avaliação individual define compatibilidade e encaminhamento."
+    },
+    {
+      "title": "Confirmar as condições",
+      "text": "Consulte disponibilidade, destino e continuidade em Ribeirão Preto."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Minha empresa vai saber do acolhimento?",
+      "answer": "Não pela Central. O contato é confidencial; documentos para afastamento devem ser emitidos por médico responsável e entregues por decisão da própria pessoa."
+    },
+    {
+      "question": "Quais leis orientam acolhimento e internação?",
+      "answer": "A Lei 10.216/2001 protege os direitos das pessoas com transtornos mentais e a Lei 13.840/2019 trata do acolhimento e da internação de dependentes. Internação involuntária exige avaliação médica e ocorre apenas em unidade de saúde habilitada; a sede da Central realiza acolhimento voluntário."
+    },
+    {
+      "question": "O CAPS de Ribeirão Preto e o SAMU 192 continuam sendo opções?",
+      "answer": "Sim. O CAPS de Ribeirão Preto é a porta pública de cuidado em saúde mental e a orientação da Central não o substitui. Em risco imediato à vida, ligue para o SAMU 192 antes de qualquer contato."
+    }
+  ]
+}
 ] as const;
 export function ribeiraoSpecialty(key: RibeiraoSpecialtyKey) {
   const page = ribeiraoSpecialtyList.find(page => page.key === key);

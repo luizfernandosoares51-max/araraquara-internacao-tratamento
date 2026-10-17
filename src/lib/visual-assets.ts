@@ -159,6 +159,11 @@ export const visualAssets = {
     dual: { src: ribeiraoDual, alt: "Adulto com caderno junto à janela, imagem conceitual de planejamento do cuidado" },
     medication: { src: ribeiraoMedication, alt: "Mulher organizando um caderno, imagem conceitual de avaliação e acompanhamento" },
     youth: { src: ribeiraoYouth, alt: "Jovem adulto conversando com familiares, imagem conceitual de diálogo e conscientização" },
+    gambling: { src: mataoGambling, alt: "Celular sobre a mesa ao lado de família conversando, imagem conceitual sobre apostas" },
+    insurance: { src: araraquaraEvaluation, alt: "Documentos organizados sobre a mesa, imagem conceitual da consulta ao plano de saúde" },
+    elderly: { src: mataoElderly, alt: "Pessoas idosas conversando com uma familiar, imagem conceitual de participação no cuidado" },
+    men: { src: ribeiraoVoluntary, alt: "Dois adultos caminhando juntos, imagem conceitual de convivência e apoio mútuo" },
+    workers: { src: mataoWorkers, alt: "Adultos em conversa em casa, imagem conceitual de apoio fora do ambiente de trabalho" },
   },
   rioClaroSpecialties: {
     alcohol: { src: rioClaroAlcohol, alt: "Dois familiares conversando em um jardim, imagem conceitual de apoio e escuta" },
