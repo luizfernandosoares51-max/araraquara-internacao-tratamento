@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, MessageCircle } from "lucide-react";
 
-import articleImage from "@/assets/blog-dependencia-quimica-sinais.jpg";
+import articleImage from "@/assets/blog-dependencia-quimica-sinais.webp";
 import { siteUrl, whatsappHref } from "@/lib/site";
 
 const articleTitle = "Dependência Química: Entenda os Sinais e a Importância do Tratamento";

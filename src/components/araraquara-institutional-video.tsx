@@ -39,7 +39,7 @@ export function AraraquaraInstitutionalVideo() {
             className="aspect-video w-full bg-deep object-contain"
             controls
             playsInline
-            preload="metadata"
+            preload="none"
             aria-label="Vídeo institucional sobre acolhimento humanizado, cuidado integrado e orientação familiar"
             aria-describedby="video-institucional-description video-institucional-caption"
           >

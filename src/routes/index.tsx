@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, FileCheck2, HeartHandshake, MapPin, MessageCircle, ShieldCheck, Truck, Compass, Check } from "lucide-react";
-import voluntaryWelcomeImage from "@/assets/home-voluntary-welcome.jpg";
-import transportSupportImage from "@/assets/home-transport-support.jpg";
+import voluntaryWelcomeImage from "@/assets/home-voluntary-welcome.webp";
+import transportSupportImage from "@/assets/home-transport-support.webp";
 import networkImage from "@/assets/acolhimento-rede-estadual.png.asset.json";
 import { InteractiveTriage } from "@/components/interactive-triage";
 import { Button } from "@/components/ui/button";
