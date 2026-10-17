@@ -2,10 +2,10 @@ import { careProgram } from "./care-program";
 import { institutionalIdentity, institutionalLocalBusiness, legalSources } from "./institutional";
 import { siteUrl } from "./site";
 
-export type SpecialtyKey = "alcohol" | "cocaine" | "involuntary" | "voluntary" | "transport";
+export type SpecialtyKey = "alcohol" | "cocaine" | "involuntary" | "voluntary" | "transport" | "women" | "gambling" | "insurance";
 type Specialty = {
   key: SpecialtyKey;
-  path: "/tratamento-alcoolismo-araraquara" | "/tratamento-cocaina-crack-araraquara" | "/internacao-involuntaria-araraquara" | "/internacao-voluntaria-araraquara" | "/resgate-remocao-araraquara";
+  path: "/tratamento-alcoolismo-araraquara" | "/tratamento-cocaina-crack-araraquara" | "/internacao-involuntaria-araraquara" | "/internacao-voluntaria-araraquara" | "/resgate-remocao-araraquara" | "/clinica-recuperacao-feminina-araraquara" | "/tratamento-jogos-compulsivos-apostas-araraquara" | "/clinica-recuperacao-convenio-araraquara";
   label: string;
   summary: string;
   title: string;
@@ -213,6 +213,96 @@ export const araraquaraSpecialties: Record<SpecialtyKey, Specialty> = {
       { question: "Qual é a região atendida pelo transporte?", answer: "A instituição informa remoção e translado especializado para Araraquara e municípios vizinhos mediante agendamento. Não foi confirmado um raio fixo em quilômetros; consulte a coordenação sobre sua origem, destino e disponibilidade." },
       { question: "A remoção funciona à noite ou 24 horas?", answer: "A orientação e o suporte para agendamento funcionam 24 horas. A execução da remoção depende de agendamento, condições e disponibilidade confirmadas com a coordenação. Em urgência ou risco imediato, procure atendimento de emergência ou ligue para o SAMU 192." },
       { question: "O transporte garante sigilo absoluto ou veículo sem identificação?", answer: "Não são prometidos sigilo absoluto ou características de veículo não confirmadas. A orientação deve respeitar a privacidade e as obrigações legais. Consulte diretamente a coordenação sobre as condições efetivas do deslocamento." },
+    ],
+  },
+  women: {
+    key: "women", path: "/clinica-recuperacao-feminina-araraquara", label: "Clínica de Recuperação Feminina",
+    summary: "Privacidade, escuta e cuidado atento às mulheres.",
+    title: "Clínica de Recuperação Feminina em Araraquara | Tratamento Humanizado",
+    description: "Acolhimento e reabilitação feminina em Araraquara: privacidade, suporte multidisciplinar e orientação sobre dependência química e saúde mental para mulheres e famílias.",
+    heading: "Acolhimento feminino humanizado em Araraquara",
+    intro: "Mulheres que enfrentam dependência química costumam carregar culpa, estigma e responsabilidades familiares que dificultam pedir ajuda. A Central oferece escuta reservada, orientação à família e acolhimento voluntário na sede própria em Araraquara, conforme avaliação de cada caso e disponibilidade consultada no WhatsApp oficial.",
+    notice: "Gestação, risco de violência, ideação suicida ou sintomas graves de abstinência exigem atendimento de urgência: SAMU 192, CVV 188 ou Central de Atendimento à Mulher 180.",
+    sections: [
+      { title: "Privacidade e segurança como ponto de partida", paragraphs: [
+        "O primeiro contato pode ser feito pela própria mulher ou por alguém de confiança, com sigilo sobre as informações compartilhadas. As condições de acomodação, rotina e admissão são explicadas pela coordenação antes de qualquer decisão, sem compromisso de vaga.",
+        "Situações de violência doméstica, ameaça ou risco à integridade são tratadas como prioridade de proteção, com orientação para a rede pública especializada, como o Disque 180 e a Delegacia de Defesa da Mulher.",
+      ] },
+      { title: "Suporte multidisciplinar e emocional", paragraphs: [
+        "O acolhimento conta com equipe multidisciplinar e suporte psicológico com Margarete Vasques (CRP 06/130268). Temas como maternidade, culpa, luto e experiências traumáticas podem ser acolhidos em escuta respeitosa; quando há necessidade de tratamento médico ou psiquiátrico, a Central articula o encaminhamento a profissionais e serviços parceiros credenciados.",
+        "Rotinas estruturadas, conscientização em 12 Passos, laborterapia, convivência terapêutica e um plano de prevenção à recaída compõem a proposta informada pela Central. Abordagens inspiradas em princípios cognitivo-comportamentais são apresentadas com caráter educativo, sem substituir psicoterapia individual com profissional habilitado.",
+      ] },
+      { title: "Família, filhos e reinserção", paragraphs: [
+        "A família recebe orientação sobre como conversar, apoiar sem vigiar e organizar a rotina dos filhos durante o cuidado. Visitas são agendadas conforme a rotina terapêutica. A reinserção social é pensada desde o início, com atenção a trabalho, vínculos e rede de apoio após o acolhimento.",
+      ] },
+    ],
+    steps: [
+      { title: "Contato reservado", text: "Relate a situação pelo WhatsApp oficial ou telefone, no seu tempo." },
+      { title: "Triagem confidencial", text: "A equipe orienta sobre segurança, modalidades e documentos necessários." },
+      { title: "Plano individual", text: "Acolhimento voluntário e encaminhamentos dependem da avaliação de cada caso." },
+    ],
+    faqs: [
+      { question: "O acolhimento feminino é sigiloso?", answer: "Sim. As informações compartilhadas na triagem são tratadas com reserva e usadas apenas para orientar o caso. Condições de acomodação e rotina são explicadas pela coordenação antes da admissão." },
+      { question: "A mulher precisa aceitar o acolhimento?", answer: "Sim. O acolhimento na sede de Araraquara é voluntário. Situações que exigem internação involuntária seguem avaliação e autorização médica em unidade habilitada, conforme a Lei 10.216/2001." },
+      { question: "Há médico ou enfermagem próprios para mulheres?", answer: "Não. A Central conta com equipe multidisciplinar e suporte psicológico; cuidados médicos e psiquiátricos são articulados com profissionais e serviços parceiros credenciados." },
+    ],
+  },
+  gambling: {
+    key: "gambling", path: "/tratamento-jogos-compulsivos-apostas-araraquara", label: "Jogos Compulsivos e Apostas",
+    summary: "Bets, cassinos online e reorganização financeira.",
+    title: "Tratamento para Vício em Jogos e Apostas em Araraquara | Ajuda Especializada",
+    description: "Orientação sobre vício em apostas online, cassinos digitais e jogos compulsivos em Araraquara, com apoio psicológico, acolhimento à família e encaminhamento médico quando indicado.",
+    heading: "Recuperação do vício em apostas digitais em Araraquara: bets, cassinos online e caça-níqueis",
+    intro: "Apostas online e cassinos digitais estão no celular, disponíveis a qualquer hora. Quando o jogo passa a comprometer dinheiro, sono, trabalho e relações, buscar ajuda é um passo de cuidado. Em Araraquara, a Central orienta a pessoa e a família sobre caminhos possíveis, sem promessa de cura.",
+    notice: "Pensamentos de morte por dívidas ou perdas exigem ajuda imediata: CVV 188 (24h, gratuito) ou SAMU 192.",
+    condition: "Transtorno do jogo",
+    sections: [
+      { title: "Ludopatia é um transtorno comportamental", paragraphs: [
+        "O transtorno do jogo é reconhecido na CID-11 como condição de saúde. A expectativa de ganho e a recompensa imprevisível envolvem circuitos cerebrais de recompensa associados à dopamina, o que ajuda a entender por que parar exige mais que força de vontade. Perseguir perdas, esconder apostas e pedir dinheiro emprestado são sinais frequentes.",
+        "Somente avaliação profissional define diagnóstico e gravidade. Quando há indicação, a Central articula avaliação médica ou psiquiátrica com profissionais e serviços parceiros credenciados; o CAPS também é porta pública de cuidado.",
+      ] },
+      { title: "Pilares do cuidado", paragraphs: [
+        "Avaliação inicial das necessidades por profissionais habilitados; suporte psicológico com Margarete Vasques (CRP 06/130268), com conteúdos educativos inspirados na abordagem cognitivo-comportamental sobre crenças de sorte, controle e recuperação de perdas; e redução do acesso digital, com bloqueio de aplicativos, sites e meios de pagamento.",
+        "Acolhimento familiar com reorganização financeira: controle compartilhado de cartões, renegociação de dívidas com orientação adequada e acordos de transparência. Quando há uso associado de álcool ou outras drogas, o acolhimento voluntário na sede de Araraquara pode ser avaliado.",
+      ] },
+    ],
+    steps: [
+      { title: "Reconhecer", text: "Liste apostas, perdas e prejuízos sem julgamentos." },
+      { title: "Proteger", text: "Bloqueie aplicativos e meios de pagamento e proteja a renda da família." },
+      { title: "Buscar cuidado", text: "Converse com a Central para entender os caminhos de acompanhamento." },
+    ],
+    faqs: [
+      { question: "Existe internação para vício em jogos?", answer: "A maioria dos casos é acompanhada sem internação. O acolhimento voluntário pode ser avaliado quando há prejuízos graves ou uso associado de substâncias; internação médica só ocorre por indicação e em unidade habilitada." },
+      { question: "A família deve pagar as dívidas de apostas?", answer: "Pagar dívidas sem um plano pode manter o ciclo. O mais indicado é organizar as finanças com transparência, limitar o acesso a dinheiro e buscar orientação financeira e jurídica adequada." },
+      { question: "Quanto tempo dura o tratamento da ludopatia?", answer: "Não há prazo único. A duração depende da avaliação individual, da rede de apoio e da evolução; recaídas exigem reavaliação, não abandono do cuidado." },
+    ],
+  },
+  insurance: {
+    key: "insurance", path: "/clinica-recuperacao-convenio-araraquara", label: "Planos de Saúde e Convênios",
+    summary: "Reembolso, documentos e consulta ao plano.",
+    title: "Clínica de Recuperação com Convênio em Araraquara | Cobertura e Reembolso",
+    description: "Entenda como consultar seu plano de saúde sobre cobertura ou reembolso para tratamento de dependência química em Araraquara, com orientação documental e sem garantia de cobertura.",
+    heading: "Plano de saúde, cobertura e reembolso para tratamento em Araraquara",
+    intro: "Muitas famílias querem saber se o plano de saúde pode ajudar no tratamento. A Lei 9.656/1998 e as normas da ANS tratam da cobertura de transtornos mentais, inclusive dependência química, mas o que cada plano cobre depende do contrato, da segmentação e da indicação médica. A Central orienta a organização da consulta sem garantir aprovação.",
+    notice: "A Central não é credenciada como convênio. O atendimento é particular e a cobertura ou o reembolso dependem exclusivamente da análise da operadora.",
+    sections: [
+      { title: "Passo a passo da documentação", paragraphs: [
+        "1. Relatório ou laudo médico circunstanciado, emitido por médico responsável externo, descrevendo a condição e a indicação de tratamento. 2. Análise do contrato: segmentação, carências, rede credenciada e cláusulas de reembolso. 3. Solicitação formal à operadora, com protocolo, e organização de notas e comprovantes para eventual pedido de reembolso.",
+        "Negativas podem ser questionadas pela Ouvidoria da operadora, pela ANS (0800 701 9656) ou com orientação jurídica independente. A Central não emite laudos nem presta assessoria jurídica.",
+      ] },
+      { title: "Como a Central apoia a família", paragraphs: [
+        "Orientação sobre quais documentos reunir, explicação das condições do acolhimento particular e emissão dos comprovantes do serviço prestado, com confidencialidade. Operadoras como Unimed, Bradesco Saúde, SulAmérica, Amil, Porto Seguro Saúde e NotreDame Intermédica são apenas exemplos de consulta direta pela família, não convênios aceitos.",
+      ] },
+    ],
+    steps: [
+      { title: "Reunir documentos", text: "Contrato do plano, carteirinha e relatório médico externo." },
+      { title: "Consultar a operadora", text: "Peça a resposta por escrito, com número de protocolo." },
+      { title: "Planejar com a Central", text: "Conheça as condições do acolhimento particular antes da decisão." },
+    ],
+    faqs: [
+      { question: "O plano de saúde é obrigado a pagar a clínica?", answer: "Não automaticamente. A cobertura depende do contrato, da rede credenciada e da indicação médica; o reembolso de serviço particular segue as regras de cada plano. Somente a operadora pode confirmar." },
+      { question: "A Central aceita convênio?", answer: "Não. O atendimento é particular. A Central orienta a família sobre documentos para consultar a operadora sobre eventual reembolso." },
+      { question: "Quem emite o laudo médico?", answer: "Um médico responsável externo à Central, após avaliação. A Central não emite laudos médicos." },
     ],
   },
 };
