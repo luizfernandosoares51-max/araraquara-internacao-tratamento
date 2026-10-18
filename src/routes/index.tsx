@@ -37,7 +37,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:title", content: pageTitle },
       { name: "twitter:description", content: pageDescription },
     ],
-    links: [{ rel: "canonical", href: pageUrl }],
+    links: [{ rel: "canonical", href: pageUrl }, { rel: "preload", as: "image", href: visualAssets.home.hero.mobileSrc, imageSrcSet: `${visualAssets.home.hero.mobileSrc} 600w, ${visualAssets.home.hero.src} 720w`, imageSizes: "(max-width: 640px) 100vw, 720px", fetchPriority: "high" }],
     scripts: [
       {
         type: "application/ld+json",
