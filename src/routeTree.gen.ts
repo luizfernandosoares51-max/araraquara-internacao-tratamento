@@ -32,11 +32,13 @@ import { Route as ClinicaDeRecuperacaoEmSaoCarlosSpRouteImport } from './routes/
 import { Route as ClinicaDeRecuperacaoEmTaquaritingaSpRouteImport } from './routes/clinica-de-recuperacao-em-taquaritinga-sp'
 import { Route as ClinicaRecuperacaoConvenioAraraquaraRouteImport } from './routes/clinica-recuperacao-convenio-araraquara'
 import { Route as ClinicaRecuperacaoConvenioRibeiraoPretoRouteImport } from './routes/clinica-recuperacao-convenio-ribeirao-preto'
+import { Route as ClinicaRecuperacaoConvenioRioClaroRouteImport } from './routes/clinica-recuperacao-convenio-rio-claro'
 import { Route as ClinicaRecuperacaoConvenioSaoCarlosRouteImport } from './routes/clinica-recuperacao-convenio-sao-carlos'
 import { Route as ClinicaRecuperacaoFemininaAmericoBrasilienseRouteImport } from './routes/clinica-recuperacao-feminina-americo-brasiliense'
 import { Route as ClinicaRecuperacaoFemininaAraraquaraRouteImport } from './routes/clinica-recuperacao-feminina-araraquara'
 import { Route as ClinicaRecuperacaoFemininaMataoRouteImport } from './routes/clinica-recuperacao-feminina-matao'
 import { Route as ClinicaRecuperacaoFemininaRibeiraoPretoRouteImport } from './routes/clinica-recuperacao-feminina-ribeirao-preto'
+import { Route as ClinicaRecuperacaoFemininaRioClaroRouteImport } from './routes/clinica-recuperacao-feminina-rio-claro'
 import { Route as ClinicaRecuperacaoFemininaSaoCarlosRouteImport } from './routes/clinica-recuperacao-feminina-sao-carlos'
 import { Route as ClinicaRecuperacaoIdososAmericoBrasilienseRouteImport } from './routes/clinica-recuperacao-idosos-americo-brasiliense'
 import { Route as ClinicaRecuperacaoIdososMataoRouteImport } from './routes/clinica-recuperacao-idosos-matao'
@@ -46,6 +48,7 @@ import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as DependenciaMedicamentosTarjaPretaAmericoBrasilienseRouteImport } from './routes/dependencia-medicamentos-tarja-preta-americo-brasiliense'
 import { Route as DependenciaMedicamentosTarjaPretaMataoRouteImport } from './routes/dependencia-medicamentos-tarja-preta-matao'
 import { Route as DependenciaMedicamentosTarjaPretaRibeiraoPretoRouteImport } from './routes/dependencia-medicamentos-tarja-preta-ribeirao-preto'
+import { Route as DependenciaMedicamentosTarjaPretaRioClaroRouteImport } from './routes/dependencia-medicamentos-tarja-preta-rio-claro'
 import { Route as DependenciaMedicamentosTarjaPretaSaoCarlosRouteImport } from './routes/dependencia-medicamentos-tarja-preta-sao-carlos'
 import { Route as DiagnosticoDuploSaudeMentalRibeiraoPretoRouteImport } from './routes/diagnostico-duplo-saude-mental-ribeirao-preto'
 import { Route as FamiliaRouteImport } from './routes/familia'
@@ -112,6 +115,7 @@ import { Route as TratamentoDependenciaAlcoolTrabalhadoresMataoRouteImport } fro
 import { Route as TratamentoDependenciaJovensAmericoBrasilienseRouteImport } from './routes/tratamento-dependencia-jovens-americo-brasiliense'
 import { Route as TratamentoDependenciaJovensMataoRouteImport } from './routes/tratamento-dependencia-jovens-matao'
 import { Route as TratamentoDependenciaJovensRibeiraoPretoRouteImport } from './routes/tratamento-dependencia-jovens-ribeirao-preto'
+import { Route as TratamentoDependenciaJovensRioClaroRouteImport } from './routes/tratamento-dependencia-jovens-rio-claro'
 import { Route as TratamentoDependenciaJovensSaoCarlosRouteImport } from './routes/tratamento-dependencia-jovens-sao-carlos'
 import { Route as TratamentoDependenciaTrabalhadoresRibeiraoPretoRouteImport } from './routes/tratamento-dependencia-trabalhadores-ribeirao-preto'
 import { Route as TratamentoDependentesIdososAmericoBrasilienseRouteImport } from './routes/tratamento-dependentes-idosos-americo-brasiliense'
@@ -120,6 +124,7 @@ import { Route as TratamentoJogosCompulsivosApostasAmericoBrasilienseRouteImport
 import { Route as TratamentoJogosCompulsivosApostasAraraquaraRouteImport } from './routes/tratamento-jogos-compulsivos-apostas-araraquara'
 import { Route as TratamentoJogosCompulsivosApostasMataoRouteImport } from './routes/tratamento-jogos-compulsivos-apostas-matao'
 import { Route as TratamentoJogosCompulsivosApostasRibeiraoPretoRouteImport } from './routes/tratamento-jogos-compulsivos-apostas-ribeirao-preto'
+import { Route as TratamentoJogosCompulsivosApostasRioClaroRouteImport } from './routes/tratamento-jogos-compulsivos-apostas-rio-claro'
 import { Route as TratamentoJogosCompulsivosApostasSaoCarlosRouteImport } from './routes/tratamento-jogos-compulsivos-apostas-sao-carlos'
 import { Route as VideosRouteImport } from './routes/videos'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
@@ -266,6 +271,12 @@ const ClinicaRecuperacaoConvenioRibeiraoPretoRoute =
     path: '/clinica-recuperacao-convenio-ribeirao-preto',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ClinicaRecuperacaoConvenioRioClaroRoute =
+  ClinicaRecuperacaoConvenioRioClaroRouteImport.update({
+    id: '/clinica-recuperacao-convenio-rio-claro',
+    path: '/clinica-recuperacao-convenio-rio-claro',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ClinicaRecuperacaoConvenioSaoCarlosRoute =
   ClinicaRecuperacaoConvenioSaoCarlosRouteImport.update({
     id: '/clinica-recuperacao-convenio-sao-carlos',
@@ -294,6 +305,12 @@ const ClinicaRecuperacaoFemininaRibeiraoPretoRoute =
   ClinicaRecuperacaoFemininaRibeiraoPretoRouteImport.update({
     id: '/clinica-recuperacao-feminina-ribeirao-preto',
     path: '/clinica-recuperacao-feminina-ribeirao-preto',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ClinicaRecuperacaoFemininaRioClaroRoute =
+  ClinicaRecuperacaoFemininaRioClaroRouteImport.update({
+    id: '/clinica-recuperacao-feminina-rio-claro',
+    path: '/clinica-recuperacao-feminina-rio-claro',
     getParentRoute: () => rootRouteImport,
   } as any)
 const ClinicaRecuperacaoFemininaSaoCarlosRoute =
@@ -347,6 +364,12 @@ const DependenciaMedicamentosTarjaPretaRibeiraoPretoRoute =
   DependenciaMedicamentosTarjaPretaRibeiraoPretoRouteImport.update({
     id: '/dependencia-medicamentos-tarja-preta-ribeirao-preto',
     path: '/dependencia-medicamentos-tarja-preta-ribeirao-preto',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const DependenciaMedicamentosTarjaPretaRioClaroRoute =
+  DependenciaMedicamentosTarjaPretaRioClaroRouteImport.update({
+    id: '/dependencia-medicamentos-tarja-preta-rio-claro',
+    path: '/dependencia-medicamentos-tarja-preta-rio-claro',
     getParentRoute: () => rootRouteImport,
   } as any)
 const DependenciaMedicamentosTarjaPretaSaoCarlosRoute =
@@ -714,6 +737,12 @@ const TratamentoDependenciaJovensRibeiraoPretoRoute =
     path: '/tratamento-dependencia-jovens-ribeirao-preto',
     getParentRoute: () => rootRouteImport,
   } as any)
+const TratamentoDependenciaJovensRioClaroRoute =
+  TratamentoDependenciaJovensRioClaroRouteImport.update({
+    id: '/tratamento-dependencia-jovens-rio-claro',
+    path: '/tratamento-dependencia-jovens-rio-claro',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const TratamentoDependenciaJovensSaoCarlosRoute =
   TratamentoDependenciaJovensSaoCarlosRouteImport.update({
     id: '/tratamento-dependencia-jovens-sao-carlos',
@@ -760,6 +789,12 @@ const TratamentoJogosCompulsivosApostasRibeiraoPretoRoute =
   TratamentoJogosCompulsivosApostasRibeiraoPretoRouteImport.update({
     id: '/tratamento-jogos-compulsivos-apostas-ribeirao-preto',
     path: '/tratamento-jogos-compulsivos-apostas-ribeirao-preto',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const TratamentoJogosCompulsivosApostasRioClaroRoute =
+  TratamentoJogosCompulsivosApostasRioClaroRouteImport.update({
+    id: '/tratamento-jogos-compulsivos-apostas-rio-claro',
+    path: '/tratamento-jogos-compulsivos-apostas-rio-claro',
     getParentRoute: () => rootRouteImport,
   } as any)
 const TratamentoJogosCompulsivosApostasSaoCarlosRoute =
@@ -862,11 +897,13 @@ export interface FileRoutesByFullPath {
   '/clinica-de-recuperacao-em-taquaritinga-sp': typeof ClinicaDeRecuperacaoEmTaquaritingaSpRoute
   '/clinica-recuperacao-convenio-araraquara': typeof ClinicaRecuperacaoConvenioAraraquaraRoute
   '/clinica-recuperacao-convenio-ribeirao-preto': typeof ClinicaRecuperacaoConvenioRibeiraoPretoRoute
+  '/clinica-recuperacao-convenio-rio-claro': typeof ClinicaRecuperacaoConvenioRioClaroRoute
   '/clinica-recuperacao-convenio-sao-carlos': typeof ClinicaRecuperacaoConvenioSaoCarlosRoute
   '/clinica-recuperacao-feminina-americo-brasiliense': typeof ClinicaRecuperacaoFemininaAmericoBrasilienseRoute
   '/clinica-recuperacao-feminina-araraquara': typeof ClinicaRecuperacaoFemininaAraraquaraRoute
   '/clinica-recuperacao-feminina-matao': typeof ClinicaRecuperacaoFemininaMataoRoute
   '/clinica-recuperacao-feminina-ribeirao-preto': typeof ClinicaRecuperacaoFemininaRibeiraoPretoRoute
+  '/clinica-recuperacao-feminina-rio-claro': typeof ClinicaRecuperacaoFemininaRioClaroRoute
   '/clinica-recuperacao-feminina-sao-carlos': typeof ClinicaRecuperacaoFemininaSaoCarlosRoute
   '/clinica-recuperacao-idosos-americo-brasiliense': typeof ClinicaRecuperacaoIdososAmericoBrasilienseRoute
   '/clinica-recuperacao-idosos-matao': typeof ClinicaRecuperacaoIdososMataoRoute
@@ -876,6 +913,7 @@ export interface FileRoutesByFullPath {
   '/dependencia-medicamentos-tarja-preta-americo-brasiliense': typeof DependenciaMedicamentosTarjaPretaAmericoBrasilienseRoute
   '/dependencia-medicamentos-tarja-preta-matao': typeof DependenciaMedicamentosTarjaPretaMataoRoute
   '/dependencia-medicamentos-tarja-preta-ribeirao-preto': typeof DependenciaMedicamentosTarjaPretaRibeiraoPretoRoute
+  '/dependencia-medicamentos-tarja-preta-rio-claro': typeof DependenciaMedicamentosTarjaPretaRioClaroRoute
   '/dependencia-medicamentos-tarja-preta-sao-carlos': typeof DependenciaMedicamentosTarjaPretaSaoCarlosRoute
   '/diagnostico-duplo-saude-mental-ribeirao-preto': typeof DiagnosticoDuploSaudeMentalRibeiraoPretoRoute
   '/familia': typeof FamiliaRoute
@@ -942,6 +980,7 @@ export interface FileRoutesByFullPath {
   '/tratamento-dependencia-jovens-americo-brasiliense': typeof TratamentoDependenciaJovensAmericoBrasilienseRoute
   '/tratamento-dependencia-jovens-matao': typeof TratamentoDependenciaJovensMataoRoute
   '/tratamento-dependencia-jovens-ribeirao-preto': typeof TratamentoDependenciaJovensRibeiraoPretoRoute
+  '/tratamento-dependencia-jovens-rio-claro': typeof TratamentoDependenciaJovensRioClaroRoute
   '/tratamento-dependencia-jovens-sao-carlos': typeof TratamentoDependenciaJovensSaoCarlosRoute
   '/tratamento-dependencia-trabalhadores-ribeirao-preto': typeof TratamentoDependenciaTrabalhadoresRibeiraoPretoRoute
   '/tratamento-dependentes-idosos-americo-brasiliense': typeof TratamentoDependentesIdososAmericoBrasilienseRoute
@@ -950,6 +989,7 @@ export interface FileRoutesByFullPath {
   '/tratamento-jogos-compulsivos-apostas-araraquara': typeof TratamentoJogosCompulsivosApostasAraraquaraRoute
   '/tratamento-jogos-compulsivos-apostas-matao': typeof TratamentoJogosCompulsivosApostasMataoRoute
   '/tratamento-jogos-compulsivos-apostas-ribeirao-preto': typeof TratamentoJogosCompulsivosApostasRibeiraoPretoRoute
+  '/tratamento-jogos-compulsivos-apostas-rio-claro': typeof TratamentoJogosCompulsivosApostasRioClaroRoute
   '/tratamento-jogos-compulsivos-apostas-sao-carlos': typeof TratamentoJogosCompulsivosApostasSaoCarlosRoute
   '/videos': typeof VideosRoute
   '/api/chat': typeof ApiChatRoute
@@ -987,11 +1027,13 @@ export interface FileRoutesByTo {
   '/clinica-de-recuperacao-em-taquaritinga-sp': typeof ClinicaDeRecuperacaoEmTaquaritingaSpRoute
   '/clinica-recuperacao-convenio-araraquara': typeof ClinicaRecuperacaoConvenioAraraquaraRoute
   '/clinica-recuperacao-convenio-ribeirao-preto': typeof ClinicaRecuperacaoConvenioRibeiraoPretoRoute
+  '/clinica-recuperacao-convenio-rio-claro': typeof ClinicaRecuperacaoConvenioRioClaroRoute
   '/clinica-recuperacao-convenio-sao-carlos': typeof ClinicaRecuperacaoConvenioSaoCarlosRoute
   '/clinica-recuperacao-feminina-americo-brasiliense': typeof ClinicaRecuperacaoFemininaAmericoBrasilienseRoute
   '/clinica-recuperacao-feminina-araraquara': typeof ClinicaRecuperacaoFemininaAraraquaraRoute
   '/clinica-recuperacao-feminina-matao': typeof ClinicaRecuperacaoFemininaMataoRoute
   '/clinica-recuperacao-feminina-ribeirao-preto': typeof ClinicaRecuperacaoFemininaRibeiraoPretoRoute
+  '/clinica-recuperacao-feminina-rio-claro': typeof ClinicaRecuperacaoFemininaRioClaroRoute
   '/clinica-recuperacao-feminina-sao-carlos': typeof ClinicaRecuperacaoFemininaSaoCarlosRoute
   '/clinica-recuperacao-idosos-americo-brasiliense': typeof ClinicaRecuperacaoIdososAmericoBrasilienseRoute
   '/clinica-recuperacao-idosos-matao': typeof ClinicaRecuperacaoIdososMataoRoute
@@ -1001,6 +1043,7 @@ export interface FileRoutesByTo {
   '/dependencia-medicamentos-tarja-preta-americo-brasiliense': typeof DependenciaMedicamentosTarjaPretaAmericoBrasilienseRoute
   '/dependencia-medicamentos-tarja-preta-matao': typeof DependenciaMedicamentosTarjaPretaMataoRoute
   '/dependencia-medicamentos-tarja-preta-ribeirao-preto': typeof DependenciaMedicamentosTarjaPretaRibeiraoPretoRoute
+  '/dependencia-medicamentos-tarja-preta-rio-claro': typeof DependenciaMedicamentosTarjaPretaRioClaroRoute
   '/dependencia-medicamentos-tarja-preta-sao-carlos': typeof DependenciaMedicamentosTarjaPretaSaoCarlosRoute
   '/diagnostico-duplo-saude-mental-ribeirao-preto': typeof DiagnosticoDuploSaudeMentalRibeiraoPretoRoute
   '/familia': typeof FamiliaRoute
@@ -1067,6 +1110,7 @@ export interface FileRoutesByTo {
   '/tratamento-dependencia-jovens-americo-brasiliense': typeof TratamentoDependenciaJovensAmericoBrasilienseRoute
   '/tratamento-dependencia-jovens-matao': typeof TratamentoDependenciaJovensMataoRoute
   '/tratamento-dependencia-jovens-ribeirao-preto': typeof TratamentoDependenciaJovensRibeiraoPretoRoute
+  '/tratamento-dependencia-jovens-rio-claro': typeof TratamentoDependenciaJovensRioClaroRoute
   '/tratamento-dependencia-jovens-sao-carlos': typeof TratamentoDependenciaJovensSaoCarlosRoute
   '/tratamento-dependencia-trabalhadores-ribeirao-preto': typeof TratamentoDependenciaTrabalhadoresRibeiraoPretoRoute
   '/tratamento-dependentes-idosos-americo-brasiliense': typeof TratamentoDependentesIdososAmericoBrasilienseRoute
@@ -1075,6 +1119,7 @@ export interface FileRoutesByTo {
   '/tratamento-jogos-compulsivos-apostas-araraquara': typeof TratamentoJogosCompulsivosApostasAraraquaraRoute
   '/tratamento-jogos-compulsivos-apostas-matao': typeof TratamentoJogosCompulsivosApostasMataoRoute
   '/tratamento-jogos-compulsivos-apostas-ribeirao-preto': typeof TratamentoJogosCompulsivosApostasRibeiraoPretoRoute
+  '/tratamento-jogos-compulsivos-apostas-rio-claro': typeof TratamentoJogosCompulsivosApostasRioClaroRoute
   '/tratamento-jogos-compulsivos-apostas-sao-carlos': typeof TratamentoJogosCompulsivosApostasSaoCarlosRoute
   '/videos': typeof VideosRoute
   '/api/chat': typeof ApiChatRoute
@@ -1114,11 +1159,13 @@ export interface FileRoutesById {
   '/clinica-de-recuperacao-em-taquaritinga-sp': typeof ClinicaDeRecuperacaoEmTaquaritingaSpRoute
   '/clinica-recuperacao-convenio-araraquara': typeof ClinicaRecuperacaoConvenioAraraquaraRoute
   '/clinica-recuperacao-convenio-ribeirao-preto': typeof ClinicaRecuperacaoConvenioRibeiraoPretoRoute
+  '/clinica-recuperacao-convenio-rio-claro': typeof ClinicaRecuperacaoConvenioRioClaroRoute
   '/clinica-recuperacao-convenio-sao-carlos': typeof ClinicaRecuperacaoConvenioSaoCarlosRoute
   '/clinica-recuperacao-feminina-americo-brasiliense': typeof ClinicaRecuperacaoFemininaAmericoBrasilienseRoute
   '/clinica-recuperacao-feminina-araraquara': typeof ClinicaRecuperacaoFemininaAraraquaraRoute
   '/clinica-recuperacao-feminina-matao': typeof ClinicaRecuperacaoFemininaMataoRoute
   '/clinica-recuperacao-feminina-ribeirao-preto': typeof ClinicaRecuperacaoFemininaRibeiraoPretoRoute
+  '/clinica-recuperacao-feminina-rio-claro': typeof ClinicaRecuperacaoFemininaRioClaroRoute
   '/clinica-recuperacao-feminina-sao-carlos': typeof ClinicaRecuperacaoFemininaSaoCarlosRoute
   '/clinica-recuperacao-idosos-americo-brasiliense': typeof ClinicaRecuperacaoIdososAmericoBrasilienseRoute
   '/clinica-recuperacao-idosos-matao': typeof ClinicaRecuperacaoIdososMataoRoute
@@ -1128,6 +1175,7 @@ export interface FileRoutesById {
   '/dependencia-medicamentos-tarja-preta-americo-brasiliense': typeof DependenciaMedicamentosTarjaPretaAmericoBrasilienseRoute
   '/dependencia-medicamentos-tarja-preta-matao': typeof DependenciaMedicamentosTarjaPretaMataoRoute
   '/dependencia-medicamentos-tarja-preta-ribeirao-preto': typeof DependenciaMedicamentosTarjaPretaRibeiraoPretoRoute
+  '/dependencia-medicamentos-tarja-preta-rio-claro': typeof DependenciaMedicamentosTarjaPretaRioClaroRoute
   '/dependencia-medicamentos-tarja-preta-sao-carlos': typeof DependenciaMedicamentosTarjaPretaSaoCarlosRoute
   '/diagnostico-duplo-saude-mental-ribeirao-preto': typeof DiagnosticoDuploSaudeMentalRibeiraoPretoRoute
   '/familia': typeof FamiliaRoute
@@ -1194,6 +1242,7 @@ export interface FileRoutesById {
   '/tratamento-dependencia-jovens-americo-brasiliense': typeof TratamentoDependenciaJovensAmericoBrasilienseRoute
   '/tratamento-dependencia-jovens-matao': typeof TratamentoDependenciaJovensMataoRoute
   '/tratamento-dependencia-jovens-ribeirao-preto': typeof TratamentoDependenciaJovensRibeiraoPretoRoute
+  '/tratamento-dependencia-jovens-rio-claro': typeof TratamentoDependenciaJovensRioClaroRoute
   '/tratamento-dependencia-jovens-sao-carlos': typeof TratamentoDependenciaJovensSaoCarlosRoute
   '/tratamento-dependencia-trabalhadores-ribeirao-preto': typeof TratamentoDependenciaTrabalhadoresRibeiraoPretoRoute
   '/tratamento-dependentes-idosos-americo-brasiliense': typeof TratamentoDependentesIdososAmericoBrasilienseRoute
@@ -1202,6 +1251,7 @@ export interface FileRoutesById {
   '/tratamento-jogos-compulsivos-apostas-araraquara': typeof TratamentoJogosCompulsivosApostasAraraquaraRoute
   '/tratamento-jogos-compulsivos-apostas-matao': typeof TratamentoJogosCompulsivosApostasMataoRoute
   '/tratamento-jogos-compulsivos-apostas-ribeirao-preto': typeof TratamentoJogosCompulsivosApostasRibeiraoPretoRoute
+  '/tratamento-jogos-compulsivos-apostas-rio-claro': typeof TratamentoJogosCompulsivosApostasRioClaroRoute
   '/tratamento-jogos-compulsivos-apostas-sao-carlos': typeof TratamentoJogosCompulsivosApostasSaoCarlosRoute
   '/videos': typeof VideosRoute
   '/api/chat': typeof ApiChatRoute
@@ -1242,11 +1292,13 @@ export interface FileRouteTypes {
     | '/clinica-de-recuperacao-em-taquaritinga-sp'
     | '/clinica-recuperacao-convenio-araraquara'
     | '/clinica-recuperacao-convenio-ribeirao-preto'
+    | '/clinica-recuperacao-convenio-rio-claro'
     | '/clinica-recuperacao-convenio-sao-carlos'
     | '/clinica-recuperacao-feminina-americo-brasiliense'
     | '/clinica-recuperacao-feminina-araraquara'
     | '/clinica-recuperacao-feminina-matao'
     | '/clinica-recuperacao-feminina-ribeirao-preto'
+    | '/clinica-recuperacao-feminina-rio-claro'
     | '/clinica-recuperacao-feminina-sao-carlos'
     | '/clinica-recuperacao-idosos-americo-brasiliense'
     | '/clinica-recuperacao-idosos-matao'
@@ -1256,6 +1308,7 @@ export interface FileRouteTypes {
     | '/dependencia-medicamentos-tarja-preta-americo-brasiliense'
     | '/dependencia-medicamentos-tarja-preta-matao'
     | '/dependencia-medicamentos-tarja-preta-ribeirao-preto'
+    | '/dependencia-medicamentos-tarja-preta-rio-claro'
     | '/dependencia-medicamentos-tarja-preta-sao-carlos'
     | '/diagnostico-duplo-saude-mental-ribeirao-preto'
     | '/familia'
@@ -1322,6 +1375,7 @@ export interface FileRouteTypes {
     | '/tratamento-dependencia-jovens-americo-brasiliense'
     | '/tratamento-dependencia-jovens-matao'
     | '/tratamento-dependencia-jovens-ribeirao-preto'
+    | '/tratamento-dependencia-jovens-rio-claro'
     | '/tratamento-dependencia-jovens-sao-carlos'
     | '/tratamento-dependencia-trabalhadores-ribeirao-preto'
     | '/tratamento-dependentes-idosos-americo-brasiliense'
@@ -1330,6 +1384,7 @@ export interface FileRouteTypes {
     | '/tratamento-jogos-compulsivos-apostas-araraquara'
     | '/tratamento-jogos-compulsivos-apostas-matao'
     | '/tratamento-jogos-compulsivos-apostas-ribeirao-preto'
+    | '/tratamento-jogos-compulsivos-apostas-rio-claro'
     | '/tratamento-jogos-compulsivos-apostas-sao-carlos'
     | '/videos'
     | '/api/chat'
@@ -1367,11 +1422,13 @@ export interface FileRouteTypes {
     | '/clinica-de-recuperacao-em-taquaritinga-sp'
     | '/clinica-recuperacao-convenio-araraquara'
     | '/clinica-recuperacao-convenio-ribeirao-preto'
+    | '/clinica-recuperacao-convenio-rio-claro'
     | '/clinica-recuperacao-convenio-sao-carlos'
     | '/clinica-recuperacao-feminina-americo-brasiliense'
     | '/clinica-recuperacao-feminina-araraquara'
     | '/clinica-recuperacao-feminina-matao'
     | '/clinica-recuperacao-feminina-ribeirao-preto'
+    | '/clinica-recuperacao-feminina-rio-claro'
     | '/clinica-recuperacao-feminina-sao-carlos'
     | '/clinica-recuperacao-idosos-americo-brasiliense'
     | '/clinica-recuperacao-idosos-matao'
@@ -1381,6 +1438,7 @@ export interface FileRouteTypes {
     | '/dependencia-medicamentos-tarja-preta-americo-brasiliense'
     | '/dependencia-medicamentos-tarja-preta-matao'
     | '/dependencia-medicamentos-tarja-preta-ribeirao-preto'
+    | '/dependencia-medicamentos-tarja-preta-rio-claro'
     | '/dependencia-medicamentos-tarja-preta-sao-carlos'
     | '/diagnostico-duplo-saude-mental-ribeirao-preto'
     | '/familia'
@@ -1447,6 +1505,7 @@ export interface FileRouteTypes {
     | '/tratamento-dependencia-jovens-americo-brasiliense'
     | '/tratamento-dependencia-jovens-matao'
     | '/tratamento-dependencia-jovens-ribeirao-preto'
+    | '/tratamento-dependencia-jovens-rio-claro'
     | '/tratamento-dependencia-jovens-sao-carlos'
     | '/tratamento-dependencia-trabalhadores-ribeirao-preto'
     | '/tratamento-dependentes-idosos-americo-brasiliense'
@@ -1455,6 +1514,7 @@ export interface FileRouteTypes {
     | '/tratamento-jogos-compulsivos-apostas-araraquara'
     | '/tratamento-jogos-compulsivos-apostas-matao'
     | '/tratamento-jogos-compulsivos-apostas-ribeirao-preto'
+    | '/tratamento-jogos-compulsivos-apostas-rio-claro'
     | '/tratamento-jogos-compulsivos-apostas-sao-carlos'
     | '/videos'
     | '/api/chat'
@@ -1493,11 +1553,13 @@ export interface FileRouteTypes {
     | '/clinica-de-recuperacao-em-taquaritinga-sp'
     | '/clinica-recuperacao-convenio-araraquara'
     | '/clinica-recuperacao-convenio-ribeirao-preto'
+    | '/clinica-recuperacao-convenio-rio-claro'
     | '/clinica-recuperacao-convenio-sao-carlos'
     | '/clinica-recuperacao-feminina-americo-brasiliense'
     | '/clinica-recuperacao-feminina-araraquara'
     | '/clinica-recuperacao-feminina-matao'
     | '/clinica-recuperacao-feminina-ribeirao-preto'
+    | '/clinica-recuperacao-feminina-rio-claro'
     | '/clinica-recuperacao-feminina-sao-carlos'
     | '/clinica-recuperacao-idosos-americo-brasiliense'
     | '/clinica-recuperacao-idosos-matao'
@@ -1507,6 +1569,7 @@ export interface FileRouteTypes {
     | '/dependencia-medicamentos-tarja-preta-americo-brasiliense'
     | '/dependencia-medicamentos-tarja-preta-matao'
     | '/dependencia-medicamentos-tarja-preta-ribeirao-preto'
+    | '/dependencia-medicamentos-tarja-preta-rio-claro'
     | '/dependencia-medicamentos-tarja-preta-sao-carlos'
     | '/diagnostico-duplo-saude-mental-ribeirao-preto'
     | '/familia'
@@ -1573,6 +1636,7 @@ export interface FileRouteTypes {
     | '/tratamento-dependencia-jovens-americo-brasiliense'
     | '/tratamento-dependencia-jovens-matao'
     | '/tratamento-dependencia-jovens-ribeirao-preto'
+    | '/tratamento-dependencia-jovens-rio-claro'
     | '/tratamento-dependencia-jovens-sao-carlos'
     | '/tratamento-dependencia-trabalhadores-ribeirao-preto'
     | '/tratamento-dependentes-idosos-americo-brasiliense'
@@ -1581,6 +1645,7 @@ export interface FileRouteTypes {
     | '/tratamento-jogos-compulsivos-apostas-araraquara'
     | '/tratamento-jogos-compulsivos-apostas-matao'
     | '/tratamento-jogos-compulsivos-apostas-ribeirao-preto'
+    | '/tratamento-jogos-compulsivos-apostas-rio-claro'
     | '/tratamento-jogos-compulsivos-apostas-sao-carlos'
     | '/videos'
     | '/api/chat'
@@ -1620,11 +1685,13 @@ export interface RootRouteChildren {
   ClinicaDeRecuperacaoEmTaquaritingaSpRoute: typeof ClinicaDeRecuperacaoEmTaquaritingaSpRoute
   ClinicaRecuperacaoConvenioAraraquaraRoute: typeof ClinicaRecuperacaoConvenioAraraquaraRoute
   ClinicaRecuperacaoConvenioRibeiraoPretoRoute: typeof ClinicaRecuperacaoConvenioRibeiraoPretoRoute
+  ClinicaRecuperacaoConvenioRioClaroRoute: typeof ClinicaRecuperacaoConvenioRioClaroRoute
   ClinicaRecuperacaoConvenioSaoCarlosRoute: typeof ClinicaRecuperacaoConvenioSaoCarlosRoute
   ClinicaRecuperacaoFemininaAmericoBrasilienseRoute: typeof ClinicaRecuperacaoFemininaAmericoBrasilienseRoute
   ClinicaRecuperacaoFemininaAraraquaraRoute: typeof ClinicaRecuperacaoFemininaAraraquaraRoute
   ClinicaRecuperacaoFemininaMataoRoute: typeof ClinicaRecuperacaoFemininaMataoRoute
   ClinicaRecuperacaoFemininaRibeiraoPretoRoute: typeof ClinicaRecuperacaoFemininaRibeiraoPretoRoute
+  ClinicaRecuperacaoFemininaRioClaroRoute: typeof ClinicaRecuperacaoFemininaRioClaroRoute
   ClinicaRecuperacaoFemininaSaoCarlosRoute: typeof ClinicaRecuperacaoFemininaSaoCarlosRoute
   ClinicaRecuperacaoIdososAmericoBrasilienseRoute: typeof ClinicaRecuperacaoIdososAmericoBrasilienseRoute
   ClinicaRecuperacaoIdososMataoRoute: typeof ClinicaRecuperacaoIdososMataoRoute
@@ -1634,6 +1701,7 @@ export interface RootRouteChildren {
   DependenciaMedicamentosTarjaPretaAmericoBrasilienseRoute: typeof DependenciaMedicamentosTarjaPretaAmericoBrasilienseRoute
   DependenciaMedicamentosTarjaPretaMataoRoute: typeof DependenciaMedicamentosTarjaPretaMataoRoute
   DependenciaMedicamentosTarjaPretaRibeiraoPretoRoute: typeof DependenciaMedicamentosTarjaPretaRibeiraoPretoRoute
+  DependenciaMedicamentosTarjaPretaRioClaroRoute: typeof DependenciaMedicamentosTarjaPretaRioClaroRoute
   DependenciaMedicamentosTarjaPretaSaoCarlosRoute: typeof DependenciaMedicamentosTarjaPretaSaoCarlosRoute
   DiagnosticoDuploSaudeMentalRibeiraoPretoRoute: typeof DiagnosticoDuploSaudeMentalRibeiraoPretoRoute
   FamiliaRoute: typeof FamiliaRoute
@@ -1700,6 +1768,7 @@ export interface RootRouteChildren {
   TratamentoDependenciaJovensAmericoBrasilienseRoute: typeof TratamentoDependenciaJovensAmericoBrasilienseRoute
   TratamentoDependenciaJovensMataoRoute: typeof TratamentoDependenciaJovensMataoRoute
   TratamentoDependenciaJovensRibeiraoPretoRoute: typeof TratamentoDependenciaJovensRibeiraoPretoRoute
+  TratamentoDependenciaJovensRioClaroRoute: typeof TratamentoDependenciaJovensRioClaroRoute
   TratamentoDependenciaJovensSaoCarlosRoute: typeof TratamentoDependenciaJovensSaoCarlosRoute
   TratamentoDependenciaTrabalhadoresRibeiraoPretoRoute: typeof TratamentoDependenciaTrabalhadoresRibeiraoPretoRoute
   TratamentoDependentesIdososAmericoBrasilienseRoute: typeof TratamentoDependentesIdososAmericoBrasilienseRoute
@@ -1708,6 +1777,7 @@ export interface RootRouteChildren {
   TratamentoJogosCompulsivosApostasAraraquaraRoute: typeof TratamentoJogosCompulsivosApostasAraraquaraRoute
   TratamentoJogosCompulsivosApostasMataoRoute: typeof TratamentoJogosCompulsivosApostasMataoRoute
   TratamentoJogosCompulsivosApostasRibeiraoPretoRoute: typeof TratamentoJogosCompulsivosApostasRibeiraoPretoRoute
+  TratamentoJogosCompulsivosApostasRioClaroRoute: typeof TratamentoJogosCompulsivosApostasRioClaroRoute
   TratamentoJogosCompulsivosApostasSaoCarlosRoute: typeof TratamentoJogosCompulsivosApostasSaoCarlosRoute
   VideosRoute: typeof VideosRoute
   ApiChatRoute: typeof ApiChatRoute
@@ -1876,6 +1946,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ClinicaRecuperacaoConvenioRibeiraoPretoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/clinica-recuperacao-convenio-rio-claro': {
+      id: '/clinica-recuperacao-convenio-rio-claro'
+      path: '/clinica-recuperacao-convenio-rio-claro'
+      fullPath: '/clinica-recuperacao-convenio-rio-claro'
+      preLoaderRoute: typeof ClinicaRecuperacaoConvenioRioClaroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/clinica-recuperacao-convenio-sao-carlos': {
       id: '/clinica-recuperacao-convenio-sao-carlos'
       path: '/clinica-recuperacao-convenio-sao-carlos'
@@ -1909,6 +1986,13 @@ declare module '@tanstack/react-router' {
       path: '/clinica-recuperacao-feminina-ribeirao-preto'
       fullPath: '/clinica-recuperacao-feminina-ribeirao-preto'
       preLoaderRoute: typeof ClinicaRecuperacaoFemininaRibeiraoPretoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/clinica-recuperacao-feminina-rio-claro': {
+      id: '/clinica-recuperacao-feminina-rio-claro'
+      path: '/clinica-recuperacao-feminina-rio-claro'
+      fullPath: '/clinica-recuperacao-feminina-rio-claro'
+      preLoaderRoute: typeof ClinicaRecuperacaoFemininaRioClaroRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/clinica-recuperacao-feminina-sao-carlos': {
@@ -1972,6 +2056,13 @@ declare module '@tanstack/react-router' {
       path: '/dependencia-medicamentos-tarja-preta-ribeirao-preto'
       fullPath: '/dependencia-medicamentos-tarja-preta-ribeirao-preto'
       preLoaderRoute: typeof DependenciaMedicamentosTarjaPretaRibeiraoPretoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dependencia-medicamentos-tarja-preta-rio-claro': {
+      id: '/dependencia-medicamentos-tarja-preta-rio-claro'
+      path: '/dependencia-medicamentos-tarja-preta-rio-claro'
+      fullPath: '/dependencia-medicamentos-tarja-preta-rio-claro'
+      preLoaderRoute: typeof DependenciaMedicamentosTarjaPretaRioClaroRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/dependencia-medicamentos-tarja-preta-sao-carlos': {
@@ -2436,6 +2527,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TratamentoDependenciaJovensRibeiraoPretoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/tratamento-dependencia-jovens-rio-claro': {
+      id: '/tratamento-dependencia-jovens-rio-claro'
+      path: '/tratamento-dependencia-jovens-rio-claro'
+      fullPath: '/tratamento-dependencia-jovens-rio-claro'
+      preLoaderRoute: typeof TratamentoDependenciaJovensRioClaroRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/tratamento-dependencia-jovens-sao-carlos': {
       id: '/tratamento-dependencia-jovens-sao-carlos'
       path: '/tratamento-dependencia-jovens-sao-carlos'
@@ -2490,6 +2588,13 @@ declare module '@tanstack/react-router' {
       path: '/tratamento-jogos-compulsivos-apostas-ribeirao-preto'
       fullPath: '/tratamento-jogos-compulsivos-apostas-ribeirao-preto'
       preLoaderRoute: typeof TratamentoJogosCompulsivosApostasRibeiraoPretoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tratamento-jogos-compulsivos-apostas-rio-claro': {
+      id: '/tratamento-jogos-compulsivos-apostas-rio-claro'
+      path: '/tratamento-jogos-compulsivos-apostas-rio-claro'
+      fullPath: '/tratamento-jogos-compulsivos-apostas-rio-claro'
+      preLoaderRoute: typeof TratamentoJogosCompulsivosApostasRioClaroRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tratamento-jogos-compulsivos-apostas-sao-carlos': {
@@ -2655,6 +2760,8 @@ const rootRouteChildren: RootRouteChildren = {
     ClinicaRecuperacaoConvenioAraraquaraRoute,
   ClinicaRecuperacaoConvenioRibeiraoPretoRoute:
     ClinicaRecuperacaoConvenioRibeiraoPretoRoute,
+  ClinicaRecuperacaoConvenioRioClaroRoute:
+    ClinicaRecuperacaoConvenioRioClaroRoute,
   ClinicaRecuperacaoConvenioSaoCarlosRoute:
     ClinicaRecuperacaoConvenioSaoCarlosRoute,
   ClinicaRecuperacaoFemininaAmericoBrasilienseRoute:
@@ -2664,6 +2771,8 @@ const rootRouteChildren: RootRouteChildren = {
   ClinicaRecuperacaoFemininaMataoRoute: ClinicaRecuperacaoFemininaMataoRoute,
   ClinicaRecuperacaoFemininaRibeiraoPretoRoute:
     ClinicaRecuperacaoFemininaRibeiraoPretoRoute,
+  ClinicaRecuperacaoFemininaRioClaroRoute:
+    ClinicaRecuperacaoFemininaRioClaroRoute,
   ClinicaRecuperacaoFemininaSaoCarlosRoute:
     ClinicaRecuperacaoFemininaSaoCarlosRoute,
   ClinicaRecuperacaoIdososAmericoBrasilienseRoute:
@@ -2680,6 +2789,8 @@ const rootRouteChildren: RootRouteChildren = {
     DependenciaMedicamentosTarjaPretaMataoRoute,
   DependenciaMedicamentosTarjaPretaRibeiraoPretoRoute:
     DependenciaMedicamentosTarjaPretaRibeiraoPretoRoute,
+  DependenciaMedicamentosTarjaPretaRioClaroRoute:
+    DependenciaMedicamentosTarjaPretaRioClaroRoute,
   DependenciaMedicamentosTarjaPretaSaoCarlosRoute:
     DependenciaMedicamentosTarjaPretaSaoCarlosRoute,
   DiagnosticoDuploSaudeMentalRibeiraoPretoRoute:
@@ -2760,6 +2871,8 @@ const rootRouteChildren: RootRouteChildren = {
   TratamentoDependenciaJovensMataoRoute: TratamentoDependenciaJovensMataoRoute,
   TratamentoDependenciaJovensRibeiraoPretoRoute:
     TratamentoDependenciaJovensRibeiraoPretoRoute,
+  TratamentoDependenciaJovensRioClaroRoute:
+    TratamentoDependenciaJovensRioClaroRoute,
   TratamentoDependenciaJovensSaoCarlosRoute:
     TratamentoDependenciaJovensSaoCarlosRoute,
   TratamentoDependenciaTrabalhadoresRibeiraoPretoRoute:
@@ -2776,6 +2889,8 @@ const rootRouteChildren: RootRouteChildren = {
     TratamentoJogosCompulsivosApostasMataoRoute,
   TratamentoJogosCompulsivosApostasRibeiraoPretoRoute:
     TratamentoJogosCompulsivosApostasRibeiraoPretoRoute,
+  TratamentoJogosCompulsivosApostasRioClaroRoute:
+    TratamentoJogosCompulsivosApostasRioClaroRoute,
   TratamentoJogosCompulsivosApostasSaoCarlosRoute:
     TratamentoJogosCompulsivosApostasSaoCarlosRoute,
   VideosRoute: VideosRoute,
