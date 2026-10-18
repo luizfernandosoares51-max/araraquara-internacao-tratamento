@@ -16,7 +16,7 @@ import {
   Users,
 } from "lucide-react";
 
-import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
+import logoAsset from "@/assets/logo-central-optimized.webp.asset.json";
 import { Button } from "@/components/ui/button";
 import { CityEditorialSection } from "@/components/city-editorial-section";
 import { RioClaroSpecialties } from "@/components/rio-claro-specialties";

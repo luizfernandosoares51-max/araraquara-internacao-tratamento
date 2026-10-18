@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ChevronDown, Menu, Phone, X } from "lucide-react";
 import { useEffect, useId, useRef, useState } from "react";
-import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
+import logoAsset from "@/assets/logo-central-optimized.webp.asset.json";
 import { Button } from "@/components/ui/button";
 import { navigationDirectLinks, navigationGroups } from "@/lib/global-navigation";
 import { phoneDisplay, phoneHref } from "@/lib/site";

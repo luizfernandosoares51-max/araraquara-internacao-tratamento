@@ -23,7 +23,7 @@ import {
 } from "lucide-react";
 import type { ReactNode } from "react";
 
-import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
+import logoAsset from "@/assets/logo-central-optimized.webp.asset.json";
 import { AraraquaraPhotoGallery, araraquaraPhotos } from "@/components/araraquara-photo-gallery";
 import { CareSpecialties, FinancialGuidance, TherapeuticRoutine } from "@/components/care-program-sections";
 import {
