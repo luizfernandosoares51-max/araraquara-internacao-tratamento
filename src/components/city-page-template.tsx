@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, Check, ExternalLink, Mail, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
 import type { ReactNode } from "react";
 
-import logoAsset from "@/assets/logo-central-acolhimento.png.asset.json";
+import logoAsset from "@/assets/logo-central-optimized.webp.asset.json";
 import { RegionalCare } from "@/components/care-program-sections";
 import { InteractiveTriage } from "@/components/interactive-triage";
 import type { CityPageData } from "@/lib/city-pages";
