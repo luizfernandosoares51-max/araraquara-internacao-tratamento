@@ -3,7 +3,8 @@ import { test } from 'node:test';
 import { rioClaroSpecialtyList, rioClaroSpecialtyHead, specialtyScope } from './rio-claro-specialties';
 
 test('Rio Claro specialty URLs preserve the five requested paths', () => assert.deepEqual(rioClaroSpecialtyList.map(page => page.path), [
-  '/tratamento-alcoolismo-rio-claro', '/tratamento-cocaina-crack-rio-claro', '/internacao-involuntaria-rio-claro', '/internacao-voluntaria-rio-claro', '/resgate-remocao-rio-claro'
+  '/tratamento-alcoolismo-rio-claro', '/tratamento-cocaina-crack-rio-claro', '/internacao-involuntaria-rio-claro', '/internacao-voluntaria-rio-claro', '/resgate-remocao-rio-claro',
+  '/clinica-recuperacao-feminina-rio-claro', '/tratamento-jogos-compulsivos-apostas-rio-claro', '/clinica-recuperacao-convenio-rio-claro', '/dependencia-medicamentos-tarja-preta-rio-claro', '/tratamento-dependencia-jovens-rio-claro'
 ]));
 test('own seat does not provide medical detox', () => assert.equal(specialtyScope.ownUnitMedicalDetox, false));
 test('own seat does not provide involuntary clinical hospitalization', () => assert.equal(specialtyScope.ownUnitInvoluntaryHospitalization, false));

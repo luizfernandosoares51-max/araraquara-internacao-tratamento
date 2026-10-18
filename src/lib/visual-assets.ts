@@ -172,6 +172,11 @@ export const visualAssets = {
     involuntary: { src: rioClaroInvoluntary, alt: "Duas mulheres lendo documentos, imagem conceitual de orientação familiar" },
     voluntary: { src: rioClaroVoluntary, alt: "Pessoa organizando um caderno pela manhã, imagem conceitual de escolha e rotina" },
     transport: { src: rioClaroTransport, alt: "Familiares preparando uma bolsa, imagem conceitual de viagem planejada" },
+    women: { src: ribeiraoWomen, alt: "Duas mulheres conversando, imagem conceitual de escuta e privacidade" },
+    gambling: { src: gamblingSupport, alt: "Adulto com celular conversando com familiar, imagem conceitual de apoio diante das apostas" },
+    insurance: { src: araraquaraEvaluation, alt: "Documentos organizados sobre a mesa, imagem conceitual da consulta ao plano de saúde" },
+    medication: { src: ribeiraoMedication, alt: "Mulher organizando um caderno, imagem conceitual de acompanhamento cuidadoso" },
+    youth: { src: ribeiraoYouth, alt: "Jovem conversando com familiar, imagem conceitual de diálogo e apoio" },
   },
   saoCarlosSpecialties: {
     alcohol: { src: saoCarlosAlcohol, alt: "Dois adultos conversando à mesa, imagem conceitual de reconstrução de vínculos" },

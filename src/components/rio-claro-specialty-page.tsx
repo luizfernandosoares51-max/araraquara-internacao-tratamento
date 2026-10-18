@@ -3,9 +3,9 @@ import { ArrowLeft, ArrowRight, MapPin, MessageCircle, Phone, ShieldCheck } from
 import { TreatmentStandardBlocks, treatmentHeading } from '@/components/treatment-standard-blocks';
 import { Button } from "@/components/ui/button";
 import { InteractiveTriage } from "@/components/interactive-triage";
-import { SpecialtyIcon } from "./araraquara-specialties";
+import { SpecialtyIcon } from "./rio-claro-specialties";
 import { rioClaroSpecialties, specialtySources } from "@/lib/rio-claro-specialties";
-import type { SpecialtyKey } from "@/lib/araraquara-specialties";
+import type { RioClaroSpecialtyKey as SpecialtyKey } from "@/lib/rio-claro-specialties";
 import { institutionalIdentity } from "@/lib/institutional";
 import { phoneDisplay, phoneHref, whatsappHref } from "@/lib/site";
 import { visualAssets } from "@/lib/visual-assets";
@@ -33,6 +33,7 @@ export function RioClaroSpecialtyPage({ specialty }: { specialty: SpecialtyKey }
           <div className="mt-7 flex flex-wrap gap-3">
             <Button asChild className="h-auto min-h-12 max-w-full whitespace-normal bg-whatsapp py-3 text-whatsapp-foreground hover:bg-whatsapp/90"><a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />Falar com Plantão de Atendimento 24h via WhatsApp</a></Button>
             <Button asChild variant="outline" className="h-auto min-h-12 whitespace-normal py-3"><a href={phoneHref}><Phone aria-hidden="true" />{phoneDisplay}</a></Button>
+            <Button asChild variant="link" className="h-auto min-h-12 whitespace-normal px-0 py-3"><a href="#especialidades">Conhecer o tratamento <ArrowRight aria-hidden="true" /></a></Button>
           </div>
         </div>
         <figure className="mx-auto max-w-6xl px-5 pb-10 sm:px-8">
@@ -43,7 +44,7 @@ export function RioClaroSpecialtyPage({ specialty }: { specialty: SpecialtyKey }
       <InteractiveTriage defaultCity="Rio Claro" />
       <aside className="border-b border-border bg-muted px-5 py-7 sm:px-8" aria-label="Limites do atendimento e segurança"><div className="mx-auto flex max-w-6xl items-start gap-3"><ShieldCheck className="mt-1 size-5 shrink-0 text-secondary" aria-hidden="true" /><p className="max-w-4xl text-sm leading-relaxed">{page.notice}</p></div></aside>
       <div className="mx-auto grid max-w-6xl gap-12 px-5 py-14 sm:px-8 lg:grid-cols-[minmax(0,1fr)_17rem] lg:gap-16 lg:py-20">
-        <article className="min-w-0 space-y-12" data-specialty-content>
+        <article id="especialidades" className="min-w-0 scroll-mt-24 space-y-12" data-specialty-content>
           {page.sections.map(section => <section key={section.title}><h2 className="font-display text-2xl font-semibold leading-tight sm:text-3xl">{section.title}</h2><div className="mt-5 space-y-4 text-base leading-relaxed text-muted-foreground">{section.paragraphs.map(text => <p key={text}>{text}</p>)}</div></section>)}
         </article>
         <aside className="self-start border-l-2 border-accent pl-5" aria-label="Organizar os próximos passos">
