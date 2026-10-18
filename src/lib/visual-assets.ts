@@ -66,6 +66,7 @@ import homeContinuity from "@/assets/concept-home-continuity.webp";
 import homeConversation from "@/assets/concept-home-conversation.webp";
 import homeFamily from "@/assets/concept-home-family.webp";
 import homeRenewal from "@/assets/concept-home-renewal.webp";
+import homeRenewalMobile from "@/assets/concept-home-renewal-600.webp";
 import homeRoutine from "@/assets/concept-home-routine.webp";
 import treatmentRoutine from "@/assets/concept-treatment-routine.webp";
 import videosProgression from "@/assets/concept-videos-progression.webp";
@@ -195,7 +196,7 @@ export const visualAssets = {
     insurance: { src: araraquaraEvaluation, alt: "Documentos organizados sobre a mesa, representação conceitual da consulta ao plano de saúde" },
   },
   home: {
-    hero: { src: homeRenewal, alt: "Caminho arborizado com duas pessoas caminhando juntas ao amanhecer" },
+    hero: { src: homeRenewal, mobileSrc: homeRenewalMobile, alt: "Caminho arborizado com duas pessoas caminhando juntas ao amanhecer" },
     conversation: { src: homeConversation, alt: "Conversa acolhedora representada por duas pessoas junto a uma mesa" },
     welcome: { src: welcomeListening, alt: "Duas pessoas em uma conversa de escuta e acolhimento" },
     routine: { src: homeRoutine, alt: "Caderno e água próximos a uma porta aberta para um jardim" },

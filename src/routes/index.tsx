@@ -88,7 +88,7 @@ function HomePage() {
     <div className="home-serene home-editorial min-h-screen bg-deep font-body text-foreground">
       <main id="inicio" className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
         <section aria-labelledby="institucional-titulo" className="relative -mx-5 overflow-hidden px-5 py-10 sm:-mx-8 sm:px-8 sm:py-12 lg:-mx-12 lg:px-12">
-          <img src={visualAssets.home.hero.src} width={1600} height={1067} decoding="async" fetchPriority="high" alt={visualAssets.home.hero.alt} className="absolute inset-0 h-full w-full object-cover" />
+          <img src={visualAssets.home.hero.src} srcSet={`${visualAssets.home.hero.mobileSrc} 600w, ${visualAssets.home.hero.src} 720w`} sizes="(max-width: 640px) 100vw, 720px" width={720} height={482} decoding="async" fetchPriority="high" alt={visualAssets.home.hero.alt} className="absolute inset-0 h-full w-full object-cover" />
           <div className="absolute inset-0 bg-foreground/80" aria-hidden="true" />
           <div className="relative max-w-4xl text-background">
             <a href={vacancyConsultationHref} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center gap-2 rounded-full bg-whatsapp px-4 py-2 text-xs font-semibold text-whatsapp-foreground"><MessageCircle className="size-4 shrink-0" aria-hidden="true" />Plantão de Orientação em Saúde Mental e Acolhimento 24h: fale no WhatsApp</a>
