@@ -123,7 +123,7 @@ function HomePage() {
           <h2 className="mb-6 font-display text-2xl font-semibold sm:text-3xl">Acolhimento, encaminhamento e transporte</h2>
           <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
             <article className="overflow-hidden rounded-lg border border-border bg-card text-card-foreground shadow-sm">
-              <img src={voluntaryWelcomeImage} alt="Representação de escuta acolhedora de um adulto e sua familiar" width={1536} height={864} loading="lazy" decoding="async" className="aspect-video w-full object-cover" />
+              <img src={voluntaryWelcomeImage} alt="Representação de escuta acolhedora de um adulto e sua familiar" width={640} height={360} loading="lazy" decoding="async" className="aspect-video w-full object-cover" />
               <div className="p-5"><HeartHandshake className="size-6 text-secondary" aria-hidden="true" /><h3 className="mt-3 font-display text-xl font-semibold">Internação Voluntária Humanizada em São Paulo</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Acolhimento humanizado e suporte psicossocial na sede de Araraquara, com adesão da pessoa. Quando indicada, a internação médica com consentimento ocorre por encaminhamento à unidade habilitada, conforme avaliação e disponibilidade.</p></div>
             </article>
             <article className="overflow-hidden rounded-lg border border-border bg-card text-card-foreground shadow-sm">
@@ -131,7 +131,7 @@ function HomePage() {
               <div className="p-5"><ShieldCheck className="size-6 text-secondary" aria-hidden="true" /><h3 className="mt-3 font-display text-xl font-semibold">Encaminhamento para Internação Involuntária (Lei 13.840/2019)</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Apoio à família para encaminhamento a estabelecimentos médicos habilitados. A medida é excepcional e exige avaliação, autorização médica e os requisitos da Lei Federal 13.840/2019; o pedido familiar não basta para autorizá-la.</p></div>
             </article>
             <article className="overflow-hidden rounded-lg border border-border bg-card text-card-foreground shadow-sm">
-              <img src={transportSupportImage} alt="Representação de profissionais de apoio junto a uma van executiva discreta" width={1536} height={864} loading="lazy" decoding="async" className="aspect-video w-full object-cover" />
+              <img src={transportSupportImage} alt="Representação de profissionais de apoio junto a uma van executiva discreta" width={640} height={360} loading="lazy" decoding="async" className="aspect-video w-full object-cover" />
               <div className="p-5"><Truck className="size-6 text-secondary" aria-hidden="true" /><h3 className="mt-3 font-display text-xl font-semibold">Remoção Especializada em SP: Orientação 24h</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Plantão para organizar transporte especializado com a rede, com atenção à privacidade. Equipe, veículo e trajeto dependem de avaliação, agendamento e disponibilidade, sem resgate imediato. Em risco à vida, procure o SAMU 192.</p></div>
             </article>
           </div>
