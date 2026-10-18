@@ -114,6 +114,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
+    scripts: [
+      { children: "(function(){var l=document.getElementById('async-web-fonts');if(!l)return;function on(){l.media='all'}if(l.sheet){on()}else{l.addEventListener('load',on)}})();" },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
