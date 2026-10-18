@@ -1,8 +1,10 @@
-import { specialtyScope, specialtySources, type SpecialtyKey } from './araraquara-specialties';
+import { specialtyScope, specialtySources, type SpecialtyKey as BaseSpecialtyKey } from './araraquara-specialties';
 import { institutionalLocalBusiness } from './institutional';
 import { siteUrl } from './site';
 export { specialtyScope, specialtySources };
-type SpecialtyPath = '/tratamento-alcoolismo-rio-claro' | '/tratamento-cocaina-crack-rio-claro' | '/internacao-involuntaria-rio-claro' | '/internacao-voluntaria-rio-claro' | '/resgate-remocao-rio-claro';
+export type RioClaroSpecialtyKey = BaseSpecialtyKey | 'women' | 'gambling' | 'insurance' | 'medication' | 'youth';
+type SpecialtyKey = RioClaroSpecialtyKey;
+type SpecialtyPath = '/clinica-recuperacao-feminina-rio-claro' | '/tratamento-jogos-compulsivos-apostas-rio-claro' | '/clinica-recuperacao-convenio-rio-claro' | '/dependencia-medicamentos-tarja-preta-rio-claro' | '/tratamento-dependencia-jovens-rio-claro' | '/tratamento-alcoolismo-rio-claro' | '/tratamento-cocaina-crack-rio-claro' | '/internacao-involuntaria-rio-claro' | '/internacao-voluntaria-rio-claro' | '/resgate-remocao-rio-claro';
 type Specialty = {
   key: SpecialtyKey; path: SpecialtyPath; label: string; summary: string; title: string; description: string;
   heading: string; intro: string; notice: string; condition?: string;
@@ -171,6 +173,148 @@ export const rioClaroSpecialties: Record<SpecialtyKey, Specialty> = {
       { question: 'Qual é o tempo de deslocamento de Rio Claro até a sede?', answer: 'Não há tempo garantido nesta página. O trajeto depende de origem, condições da viagem e planejamento; confirme rota e destino antes de sair. A existência da página não garante transporte disponível.' },
       { question: 'A Central realiza resgate 24h em Rio Claro?', answer: 'O plantão de orientação e o suporte para agendamento funcionam 24 horas. Remoção e translado são executados conforme agenda, condições e disponibilidade confirmadas com a coordenação operacional. Emergências devem ser dirigidas à rede de urgência ou SAMU 192.' },
       { question: 'Como organizar o embarque e o acompanhamento?', answer: 'Combine documentação, custos, acompanhamento e destino com a coordenação e o serviço responsável. Não improvise força, sedação ou contenção. Não são prometidos veículos específicos, protocolo de crise ou discrição absoluta não confirmados.' }
+    ]
+  },
+  women: {
+    key: 'women', path: '/clinica-recuperacao-feminina-rio-claro', label: 'Clínica de Recuperação Feminina', summary: 'Privacidade, escuta qualificada e cuidado atento.',
+    title: 'Clínica de Recuperação Feminina em Rio Claro - SP | Orientação 24h',
+    description: 'Orientação para mulheres de Rio Claro e suas famílias: escuta qualificada, privacidade, suporte psicossocial e articulação com serviços médicos parceiros, a partir da sede em Araraquara.',
+    heading: 'Acolhimento com escuta e privacidade para mulheres de Rio Claro',
+    intro: 'Mulheres que enfrentam dependência química costumam carregar culpa, medo de julgamento e responsabilidades com filhos e trabalho. A Central orienta mulheres de Rio Claro e suas famílias a partir da única sede própria em Araraquara, com escuta qualificada, suporte psicossocial e articulação com serviços médicos parceiros quando necessário.',
+    notice: 'A compatibilidade do acolhimento com cada mulher é avaliada individualmente. Gestação, violência doméstica ou sintomas clínicos graves exigem atendimento de saúde ou proteção específico; em risco imediato, ligue 190 ou SAMU 192.',
+    sections: [
+      { title: 'Particularidades que merecem atenção desde o primeiro contato', paragraphs: [
+        'O uso de álcool, medicamentos ou outras drogas entre mulheres muitas vezes permanece oculto por mais tempo, por receio de estigma ou de perder a guarda dos filhos. Reconhecer essas barreiras ajuda a família de Rio Claro a conversar sem acusação e a buscar orientação antes que a situação se agrave.',
+        'Questões como saúde reprodutiva, gestação, ansiedade, depressão e histórico de violência pedem avaliação por profissionais habilitados. A Central não realiza atendimento médico próprio; essas necessidades são encaminhadas a serviços parceiros credenciados ou à rede pública conforme cada caso.'
+      ] },
+      { title: 'Privacidade e escuta qualificada', paragraphs: [
+        'Compartilhe no contato oficial somente as informações necessárias. A conversa inicial serve para entender a situação e as condições do acolhimento, sem exposição pública. O suporte psicológico informado pela instituição é de Margarete Vasques, CRP 06/130268, integrado à equipe multidisciplinar.',
+        'Pergunte diretamente como são organizados os espaços, a convivência e a rotina. Não se anunciam alas, estruturas ou equipes exclusivas não confirmadas; a coordenação esclarece o que é compatível antes de qualquer decisão.'
+      ] },
+      { title: 'Filhos, trabalho e vínculos durante o cuidado', paragraphs: [
+        'Organizar quem cuidará dos filhos e das responsabilidades em Rio Claro é parte da preparação. A família pode ajudar a construir esse plano para que a mulher não sinta que precisa escolher entre cuidar de si e dos outros.',
+        'Visitas são agendadas conforme o cronograma terapêutico. O retorno à rotina considera apoio familiar, acompanhamento indicado e recursos de saúde em Rio Claro, sem prazo universal ou garantia de resultado.'
+      ] }
+    ],
+    steps: [ { title: 'Conversar sem julgamento', text: 'Acolha a preocupação e evite acusações.' }, { title: 'Organizar responsabilidades', text: 'Planeje cuidados com filhos e trabalho.' }, { title: 'Consultar condições', text: 'Esclareça rotina, privacidade e encaminhamentos.' } ],
+    faqs: [
+      { question: 'Existe acolhimento específico para mulheres de Rio Claro?', answer: 'A Central orienta mulheres de Rio Claro a partir da sede em Araraquara e avalia individualmente a compatibilidade do acolhimento. Consulte as condições pelo WhatsApp oficial; não há garantia de vaga.' },
+      { question: 'Como fica a privacidade da mulher durante o contato?', answer: 'Compartilhe apenas o necessário no canal oficial. As informações são tratadas com responsabilidade, mas não se promete sigilo absoluto em todos os contextos.' },
+      { question: 'E se houver gestação ou violência doméstica?', answer: 'Essas situações exigem avaliação de saúde e, quando houver violência, a rede de proteção. Em risco imediato, ligue 190 ou SAMU 192. A Central orienta e encaminha, sem substituir esses serviços.' }
+    ]
+  },
+  gambling: {
+    key: 'gambling', path: '/tratamento-jogos-compulsivos-apostas-rio-claro', label: 'Tratamento de Jogos Compulsivos e Apostas', summary: 'Apostas online, triagem sigilosa e rotina.',
+    title: 'Jogos Compulsivos e Apostas em Rio Claro - SP | Orientação 24h',
+    description: 'Orientação para famílias de Rio Claro diante de apostas esportivas, caça-níqueis digitais e jogos online: triagem sigilosa, reorganização da rotina e apoio familiar.',
+    heading: 'Quando as apostas passam a controlar a rotina em Rio Claro',
+    intro: 'Apostas esportivas, caça-níqueis digitais e jogos online estão a um toque no celular. Quando o jogo passa a provocar dívidas, mentiras e conflitos, a família de Rio Claro pode buscar orientação. A Central oferece triagem sigilosa e suporte psicossocial a partir da sede em Araraquara.',
+    notice: 'Pensamentos de suicídio associados a dívidas ou perdas exigem ajuda imediata: CVV 188, SAMU 192 ou pronto atendimento. A orientação da Central não substitui avaliação em saúde mental.',
+    condition: 'Transtorno do jogo',
+    sections: [
+      { title: 'Sinais de que o jogo deixou de ser lazer', paragraphs: [
+        'Apostar valores cada vez maiores para recuperar perdas, esconder extratos, pedir empréstimos e ficar irritado quando não pode jogar são sinais de atenção. O transtorno do jogo é reconhecido como condição de saúde e não deve ser tratado apenas como falta de caráter.',
+        'Em Rio Claro, como em outras cidades, o acesso a plataformas online facilita apostas a qualquer hora. Observe mudanças no sono, no trabalho e nas relações, e converse em um momento calmo, sem humilhação.'
+      ] },
+      { title: 'Triagem sigilosa e reorganização da rotina', paragraphs: [
+        'A conversa inicial ajuda a entender frequência, prejuízos e riscos associados, como uso de álcool ou sintomas de ansiedade e depressão. Comorbidades são encaminhadas a profissionais habilitados parceiros ou à rede pública.',
+        'O suporte psicossocial pode trabalhar gatilhos, controle do dinheiro, novos hábitos e prevenção à recaída. Não há promessa de cura nem de prazo definido; o plano é revisado conforme a evolução.'
+      ] },
+      { title: 'Dívidas e apoio familiar', paragraphs: [
+        'Pagar dívidas sem um plano pode manter o ciclo. A família pode combinar limites, proteger contas e buscar orientação financeira e jurídica própria, sem assumir sozinha toda a responsabilidade.',
+        'Grupos de apoio e o CAPS de Rio Claro integram a rede de cuidado. A Central orienta sobre o acolhimento voluntário em Araraquara quando compatível com a avaliação.'
+      ] }
+    ],
+    steps: [ { title: 'Reconhecer prejuízos', text: 'Observe dívidas, segredos e conflitos.' }, { title: 'Proteger as finanças', text: 'Combine limites sem humilhação.' }, { title: 'Buscar triagem', text: 'Converse com o plantão de orientação.' } ],
+    faqs: [
+      { question: 'Vício em apostas online tem tratamento?', answer: 'Sim, o transtorno do jogo pode ser acompanhado por profissionais de saúde mental e suporte psicossocial. Os resultados variam e não há garantia de cura.' },
+      { question: 'A Central atende pessoas de Rio Claro com problema de jogo?', answer: 'A Central orienta famílias de Rio Claro e avalia a compatibilidade do acolhimento voluntário na sede em Araraquara. Consulte as condições pelo WhatsApp oficial.' },
+      { question: 'A família deve pagar as dívidas de jogo?', answer: 'Cada caso pede cautela. Pagar sem um plano pode manter o ciclo; busque orientação financeira e jurídica própria e combine limites claros.' }
+    ]
+  },
+  insurance: {
+    key: 'insurance', path: '/clinica-recuperacao-convenio-rio-claro', label: 'Clínica de Recuperação por Convênio', summary: 'Atendimento particular e orientação sobre reembolso.',
+    title: 'Clínica de Recuperação por Convênio em Rio Claro - SP | Reembolso',
+    description: 'Atendimento particular para famílias de Rio Claro com orientação transparente sobre reembolso ou autorização do plano de saúde mediante laudo de médico externo, sem cobertura garantida.',
+    heading: 'Plano de saúde e reembolso: orientação transparente para Rio Claro',
+    intro: 'Muitas famílias de Rio Claro perguntam se o plano de saúde cobre o acolhimento. O atendimento da Central é particular. A equipe orienta sobre documentos que podem apoiar um pedido de reembolso ou autorização, mas a decisão cabe exclusivamente à operadora.',
+    notice: 'Não há convênio direto nem garantia de cobertura ou reembolso. Laudos são emitidos por médicos externos responsáveis pelo caso; a Central não emite laudos médicos.',
+    sections: [
+      { title: 'Como funciona o atendimento particular', paragraphs: [
+        'Valores, condições e forma de pagamento são esclarecidos antes do ingresso, pelo contato oficial. Nenhuma página do site confirma vaga ou preço; a admissão depende de avaliação e disponibilidade.',
+        'Planos como Unimed, Bradesco Saúde, SulAmérica, Amil, Porto Seguro Saúde e NotreDame Intermédica são citados apenas como exemplos de operadoras que a família pode consultar diretamente. Não representam convênio ou parceria.'
+      ] },
+      { title: 'Laudo médico externo e pedido à operadora', paragraphs: [
+        'Para solicitar reembolso ou autorização, a operadora costuma exigir relatório ou laudo de médico responsável, além de notas e documentos administrativos. O laudo é emitido por profissional externo que avaliou a pessoa.',
+        'A Central pode fornecer documentação administrativa do acolhimento e orientar a organização do pedido. Leia o contrato do plano e pergunte à operadora sobre regras, prazos e limites antes de decidir.'
+      ] },
+      { title: 'Direitos e canais de consulta', paragraphs: [
+        'Em caso de negativa, a família pode solicitar a justificativa por escrito e consultar os canais da operadora e da ANS. Orientação jurídica deve ser buscada com profissional habilitado.',
+        'Famílias de Rio Claro sem plano também podem buscar o CAPS e a rede pública municipal, que oferecem cuidado gratuito em saúde mental.'
+      ] }
+    ],
+    steps: [ { title: 'Consultar a operadora', text: 'Verifique regras, documentos e prazos.' }, { title: 'Obter laudo externo', text: 'Com o médico responsável pelo caso.' }, { title: 'Esclarecer condições', text: 'Pergunte valores e documentos à Central.' } ],
+    faqs: [
+      { question: 'A Central aceita convênio em Rio Claro?', answer: 'Não há convênio direto. O atendimento é particular, com orientação sobre documentos para pedido de reembolso ou autorização junto à operadora, sem garantia de cobertura.' },
+      { question: 'Quem emite o laudo para o plano de saúde?', answer: 'Um médico externo responsável pela avaliação da pessoa. A Central não emite laudos médicos; fornece documentação administrativa do acolhimento.' },
+      { question: 'O que fazer se o plano negar o reembolso?', answer: 'Peça a justificativa por escrito, consulte os canais da operadora e da ANS e, se necessário, um profissional jurídico habilitado.' }
+    ]
+  },
+  medication: {
+    key: 'medication', path: '/dependencia-medicamentos-tarja-preta-rio-claro', label: 'Tratamento de Dependência de Medicamentos Tarja Preta', summary: 'Ansiolíticos, hipnóticos e desmame supervisionado.',
+    title: 'Dependência de Medicamentos Tarja Preta em Rio Claro - SP | Orientação',
+    description: 'Orientação para famílias de Rio Claro diante do uso abusivo de ansiolíticos, calmantes, benzodiazepínicos e zolpidem: desmame gradual supervisionado por médico e acompanhamento em rede credenciada.',
+    heading: 'Uso abusivo de calmantes e remédios para dormir em Rio Claro',
+    intro: 'Ansiolíticos, calmantes e hipnóticos, como benzodiazepínicos e zolpidem, podem gerar dependência quando usados por longos períodos ou acima da prescrição. A Central orienta famílias de Rio Claro sobre caminhos seguros, com desmame supervisionado por médico e suporte psicossocial.',
+    notice: 'Nunca interrompa medicamentos controlados de forma abrupta: a retirada pode causar convulsões e outros riscos. O desmame é definido e supervisionado por médico. A sede da Central não realiza desintoxicação medicamentosa.',
+    condition: 'Dependência de benzodiazepínicos',
+    sections: [
+      { title: 'Quando o remédio passa a ser um problema', paragraphs: [
+        'Aumentar a dose por conta própria, buscar várias receitas, misturar com álcool ou não conseguir dormir sem o medicamento são sinais de atenção. A dependência pode começar com uma prescrição legítima e evoluir de forma silenciosa.',
+        'Sonolência diurna, quedas, falhas de memória e mudanças de humor merecem avaliação, especialmente em idosos. A família de Rio Claro pode registrar o que observa para levar ao médico.'
+      ] },
+      { title: 'Desmame gradual supervisionado', paragraphs: [
+        'A redução de benzodiazepínicos e hipnóticos costuma ser gradual e individualizada, definida por médico. Esse acompanhamento clínico ocorre com profissionais e serviços credenciados parceiros ou na rede pública, não na sede da Central.',
+        'Durante e após o desmame, o suporte psicossocial pode trabalhar ansiedade, sono, rotina e prevenção à recaída. Não há prazo universal nem garantia de resultado.'
+      ] },
+      { title: 'Rede de cuidado em Rio Claro', paragraphs: [
+        'O CAPS e as unidades de saúde de Rio Claro integram a rede pública de cuidado. A Central orienta a família sobre o acolhimento voluntário em Araraquara quando compatível, após avaliação.',
+        'Leve receitas e a lista de medicamentos em uso a qualquer consulta. Em sinais de intoxicação, confusão intensa ou convulsão, ligue imediatamente para o SAMU 192.'
+      ] }
+    ],
+    steps: [ { title: 'Não suspender sozinho', text: 'A retirada abrupta é perigosa.' }, { title: 'Buscar avaliação médica', text: 'Com profissional ou rede credenciada.' }, { title: 'Planejar o suporte', text: 'Consulte o acolhimento psicossocial.' } ],
+    faqs: [
+      { question: 'Posso parar o calmante de uma vez?', answer: 'Não. A interrupção abrupta de benzodiazepínicos pode causar convulsões e outros riscos. O desmame deve ser gradual e supervisionado por médico.' },
+      { question: 'A Central faz o desmame de medicamentos?', answer: 'Não na sede. O desmame é conduzido por médico em serviço credenciado parceiro ou na rede pública; a Central oferece orientação e suporte psicossocial.' },
+      { question: 'Zolpidem também pode causar dependência?', answer: 'Sim, o uso prolongado ou acima da prescrição pode levar à dependência. Converse com o médico responsável antes de qualquer mudança.' }
+    ]
+  },
+  youth: {
+    key: 'youth', path: '/tratamento-dependencia-jovens-rio-claro', label: 'Tratamento de Dependência Química para Jovens', summary: 'Família, prevenção à recaída e estudos.',
+    title: 'Dependência Química em Jovens em Rio Claro - SP | Orientação 24h',
+    description: 'Orientação para famílias de jovens de Rio Claro: acolhimento da família, suporte psicossocial, prevenção à recaída e planejamento de reinserção social e retomada dos estudos.',
+    heading: 'Apoio à família de jovens em Rio Claro',
+    intro: 'O uso de álcool e drogas na juventude afeta estudos, sono, amizades e a convivência em casa. A Central orienta famílias de Rio Claro a partir da sede em Araraquara, com acolhimento da família, suporte psicossocial e planejamento de reinserção social e retomada dos estudos.',
+    notice: 'Crianças e adolescentes têm proteção legal específica (ECA) e devem ser atendidos pela rede habilitada, como o CAPS e serviços de saúde. A compatibilidade do acolhimento é avaliada individualmente, inclusive quanto à idade.',
+    sections: [
+      { title: 'Sinais de alerta na juventude', paragraphs: [
+        'Queda no desempenho escolar, isolamento, mudança brusca de amizades, irritabilidade e sumiço de dinheiro podem indicar uso problemático. Nem toda mudança é dependência, mas vale observar e conversar.',
+        'Procure um momento tranquilo, ouça mais do que fale e evite ameaças. O vínculo com o jovem é um dos recursos mais importantes da família.'
+      ] },
+      { title: 'Acolhimento da família e suporte psicossocial', paragraphs: [
+        'Pais e responsáveis também precisam de orientação para combinar limites, cuidar de si e evitar culpa excessiva. O suporte psicológico informado pela instituição é de Margarete Vasques, CRP 06/130268.',
+        'Quando houver sintomas de ansiedade, depressão ou outras condições, a avaliação é feita por profissionais habilitados parceiros ou pela rede pública de Rio Claro.'
+      ] },
+      { title: 'Prevenção à recaída, estudos e reinserção', paragraphs: [
+        'O plano pode incluir identificação de gatilhos, nova rotina, retomada gradual dos estudos e atividades que façam sentido para o jovem. A reinserção social é construída com a família e a rede local.',
+        'Não há prazo universal nem garantia de resultado. Recaídas pedem reavaliação, não punição.'
+      ] }
+    ],
+    steps: [ { title: 'Observar e ouvir', text: 'Converse sem ameaças nem rótulos.' }, { title: 'Envolver a rede', text: 'Escola, CAPS e serviços de saúde.' }, { title: 'Consultar orientação', text: 'Fale com o plantão de atendimento.' } ],
+    faqs: [
+      { question: 'A Central acolhe adolescentes de Rio Claro?', answer: 'Crianças e adolescentes têm proteção legal específica e devem ser atendidos pela rede habilitada. A compatibilidade, inclusive por idade, é avaliada individualmente; consulte pelo WhatsApp oficial.' },
+      { question: 'Como a família pode ajudar um jovem que usa drogas?', answer: 'Mantendo o diálogo, combinando limites claros, cuidando de si e buscando orientação profissional e da rede pública, como o CAPS de Rio Claro.' },
+      { question: 'O jovem poderá retomar os estudos?', answer: 'O planejamento de reinserção pode incluir a retomada gradual dos estudos, conforme a avaliação e as condições de cada caso, sem garantia de prazo.' }
     ]
   }
 };

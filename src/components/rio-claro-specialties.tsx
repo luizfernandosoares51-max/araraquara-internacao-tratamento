@@ -1,9 +1,9 @@
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, Brain, HeartHandshake, Route as RouteIcon, ShieldCheck, WineOff } from "lucide-react";
+import { ArrowRight, Brain, HeartHandshake, Route as RouteIcon, ShieldCheck, WineOff, Heart, Dices, FileText, Pill, BookOpen } from "lucide-react";
 import { rioClaroSpecialtyList } from "@/lib/rio-claro-specialties";
-import type { SpecialtyKey } from "@/lib/araraquara-specialties";
+import type { RioClaroSpecialtyKey as SpecialtyKey } from "@/lib/rio-claro-specialties";
 
-const specialtyIcons = { alcohol: WineOff, cocaine: Brain, involuntary: ShieldCheck, voluntary: HeartHandshake, transport: RouteIcon };
+const specialtyIcons = { alcohol: WineOff, cocaine: Brain, involuntary: ShieldCheck, voluntary: HeartHandshake, transport: RouteIcon, women: Heart, gambling: Dices, insurance: FileText, medication: Pill, youth: BookOpen };
 
 export function SpecialtyIcon({ name }: { name: SpecialtyKey }) {
   const Icon = specialtyIcons[name];
