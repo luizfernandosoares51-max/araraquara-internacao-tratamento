@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight, MapPin, MessageCircle, Phone, ShieldCheck } from
 import { TreatmentStandardBlocks, treatmentHeading } from '@/components/treatment-standard-blocks';
 import { Button } from "@/components/ui/button";
 import { InteractiveTriage } from "@/components/interactive-triage";
-import { SpecialtyIcon } from "./franca-specialties";
+import { SpecialtyIcon, FrancaSpecialties } from "./franca-specialties";
 import { francaSpecialties, specialtySources } from "@/lib/franca-specialties";
 import type { FrancaSpecialtyKey as SpecialtyKey } from "@/lib/franca-specialties";
 import { institutionalIdentity } from "@/lib/institutional";
@@ -70,6 +70,7 @@ export function FrancaSpecialtyPage({ specialty }: { specialty: SpecialtyKey }) 
         <div className="mt-6 flex flex-wrap gap-3"><Button asChild className="h-auto min-h-12 max-w-full whitespace-normal bg-whatsapp py-3 text-whatsapp-foreground hover:bg-whatsapp/90"><a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />Falar pelo WhatsApp</a></Button><Button asChild variant="outline" className="h-auto min-h-12 whitespace-normal py-3"><a href={phoneHref}><Phone aria-hidden="true" />{phoneDisplay}</a></Button></div>
         <Button asChild variant="link" className="mt-7 h-auto min-h-12 max-w-full whitespace-normal px-0 text-left"><Link to="/clinica-de-recuperacao-em-franca-sp"><ArrowLeft className="shrink-0" aria-hidden="true" />Conhecer o acolhimento em Araraquara para famílias de Franca</Link></Button>
       </div></section>
+      <FrancaSpecialties />
     <TreatmentStandardBlocks cityName="Franca" cityPath="/clinica-de-recuperacao-em-franca-sp" />
 </main>
   </div>;
