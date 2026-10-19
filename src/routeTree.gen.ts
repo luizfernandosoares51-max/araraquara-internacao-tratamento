@@ -140,6 +140,7 @@ import { Route as VideosRouteImport } from './routes/videos'
 import { Route as ApiChatRouteImport } from './routes/api/chat'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRouteImport } from './routes/blog.alcoolismo-quando-o-consumo-se-torna-um-problema'
+import { Route as BlogComoAjudarFilhoDependenteQuimicoRouteImport } from './routes/blog.como-ajudar-filho-dependente-quimico'
 import { Route as BlogComoEscolherUmaClinicaDeReabilitacaoRouteImport } from './routes/blog.como-escolher-uma-clinica-de-reabilitacao'
 import { Route as BlogComoFuncionaUmaClinicaDeReabilitacaoRouteImport } from './routes/blog.como-funciona-uma-clinica-de-reabilitacao'
 import { Route as BlogComoInternarDependenteQuimicoRouteImport } from './routes/blog.como-internar-dependente-quimico'
@@ -894,6 +895,12 @@ const BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute =
     path: '/alcoolismo-quando-o-consumo-se-torna-um-problema',
     getParentRoute: () => BlogRoute,
   } as any)
+const BlogComoAjudarFilhoDependenteQuimicoRoute =
+  BlogComoAjudarFilhoDependenteQuimicoRouteImport.update({
+    id: '/como-ajudar-filho-dependente-quimico',
+    path: '/como-ajudar-filho-dependente-quimico',
+    getParentRoute: () => BlogRoute,
+  } as any)
 const BlogComoEscolherUmaClinicaDeReabilitacaoRoute =
   BlogComoEscolherUmaClinicaDeReabilitacaoRouteImport.update({
     id: '/como-escolher-uma-clinica-de-reabilitacao',
@@ -1080,6 +1087,7 @@ export interface FileRoutesByFullPath {
   '/videos': typeof VideosRoute
   '/api/chat': typeof ApiChatRoute
   '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema': typeof BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute
+  '/blog/como-ajudar-filho-dependente-quimico': typeof BlogComoAjudarFilhoDependenteQuimicoRoute
   '/blog/como-escolher-uma-clinica-de-reabilitacao': typeof BlogComoEscolherUmaClinicaDeReabilitacaoRoute
   '/blog/como-funciona-uma-clinica-de-reabilitacao': typeof BlogComoFuncionaUmaClinicaDeReabilitacaoRoute
   '/blog/como-internar-dependente-quimico': typeof BlogComoInternarDependenteQuimicoRoute
@@ -1221,6 +1229,7 @@ export interface FileRoutesByTo {
   '/videos': typeof VideosRoute
   '/api/chat': typeof ApiChatRoute
   '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema': typeof BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute
+  '/blog/como-ajudar-filho-dependente-quimico': typeof BlogComoAjudarFilhoDependenteQuimicoRoute
   '/blog/como-escolher-uma-clinica-de-reabilitacao': typeof BlogComoEscolherUmaClinicaDeReabilitacaoRoute
   '/blog/como-funciona-uma-clinica-de-reabilitacao': typeof BlogComoFuncionaUmaClinicaDeReabilitacaoRoute
   '/blog/como-internar-dependente-quimico': typeof BlogComoInternarDependenteQuimicoRoute
@@ -1364,6 +1373,7 @@ export interface FileRoutesById {
   '/videos': typeof VideosRoute
   '/api/chat': typeof ApiChatRoute
   '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema': typeof BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute
+  '/blog/como-ajudar-filho-dependente-quimico': typeof BlogComoAjudarFilhoDependenteQuimicoRoute
   '/blog/como-escolher-uma-clinica-de-reabilitacao': typeof BlogComoEscolherUmaClinicaDeReabilitacaoRoute
   '/blog/como-funciona-uma-clinica-de-reabilitacao': typeof BlogComoFuncionaUmaClinicaDeReabilitacaoRoute
   '/blog/como-internar-dependente-quimico': typeof BlogComoInternarDependenteQuimicoRoute
@@ -1508,6 +1518,7 @@ export interface FileRouteTypes {
     | '/videos'
     | '/api/chat'
     | '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema'
+    | '/blog/como-ajudar-filho-dependente-quimico'
     | '/blog/como-escolher-uma-clinica-de-reabilitacao'
     | '/blog/como-funciona-uma-clinica-de-reabilitacao'
     | '/blog/como-internar-dependente-quimico'
@@ -1649,6 +1660,7 @@ export interface FileRouteTypes {
     | '/videos'
     | '/api/chat'
     | '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema'
+    | '/blog/como-ajudar-filho-dependente-quimico'
     | '/blog/como-escolher-uma-clinica-de-reabilitacao'
     | '/blog/como-funciona-uma-clinica-de-reabilitacao'
     | '/blog/como-internar-dependente-quimico'
@@ -1791,6 +1803,7 @@ export interface FileRouteTypes {
     | '/videos'
     | '/api/chat'
     | '/blog/alcoolismo-quando-o-consumo-se-torna-um-problema'
+    | '/blog/como-ajudar-filho-dependente-quimico'
     | '/blog/como-escolher-uma-clinica-de-reabilitacao'
     | '/blog/como-funciona-uma-clinica-de-reabilitacao'
     | '/blog/como-internar-dependente-quimico'
@@ -2854,6 +2867,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRouteImport
       parentRoute: typeof BlogRoute
     }
+    '/blog/como-ajudar-filho-dependente-quimico': {
+      id: '/blog/como-ajudar-filho-dependente-quimico'
+      path: '/como-ajudar-filho-dependente-quimico'
+      fullPath: '/blog/como-ajudar-filho-dependente-quimico'
+      preLoaderRoute: typeof BlogComoAjudarFilhoDependenteQuimicoRouteImport
+      parentRoute: typeof BlogRoute
+    }
     '/blog/como-escolher-uma-clinica-de-reabilitacao': {
       id: '/blog/como-escolher-uma-clinica-de-reabilitacao'
       path: '/como-escolher-uma-clinica-de-reabilitacao'
@@ -2922,6 +2942,7 @@ declare module '@tanstack/react-router' {
 
 interface BlogRouteChildren {
   BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute: typeof BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute
+  BlogComoAjudarFilhoDependenteQuimicoRoute: typeof BlogComoAjudarFilhoDependenteQuimicoRoute
   BlogComoEscolherUmaClinicaDeReabilitacaoRoute: typeof BlogComoEscolherUmaClinicaDeReabilitacaoRoute
   BlogComoFuncionaUmaClinicaDeReabilitacaoRoute: typeof BlogComoFuncionaUmaClinicaDeReabilitacaoRoute
   BlogComoInternarDependenteQuimicoRoute: typeof BlogComoInternarDependenteQuimicoRoute
@@ -2937,6 +2958,8 @@ interface BlogRouteChildren {
 const BlogRouteChildren: BlogRouteChildren = {
   BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute:
     BlogAlcoolismoQuandoOConsumoSeTornaUmProblemaRoute,
+  BlogComoAjudarFilhoDependenteQuimicoRoute:
+    BlogComoAjudarFilhoDependenteQuimicoRoute,
   BlogComoEscolherUmaClinicaDeReabilitacaoRoute:
     BlogComoEscolherUmaClinicaDeReabilitacaoRoute,
   BlogComoFuncionaUmaClinicaDeReabilitacaoRoute:
