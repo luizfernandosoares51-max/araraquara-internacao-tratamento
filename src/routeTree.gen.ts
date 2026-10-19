@@ -152,6 +152,7 @@ import { Route as BlogDependenciaQuimicaSinaisTratamentoRouteImport } from './ro
 import { Route as BlogDiferencaInternacaoVoluntariaInvoluntariaRouteImport } from './routes/blog.diferenca-internacao-voluntaria-involuntaria'
 import { Route as BlogHistoria12PassosClinicaReabilitacaoTerapeuticaRouteImport } from './routes/blog.historia-12-passos-clinica-reabilitacao-terapeutica'
 import { Route as BlogQuantoCustaClinicaDeRecuperacaoRouteImport } from './routes/blog.quanto-custa-clinica-de-recuperacao'
+import { Route as BlogTempoTratamentoDependenciaQuimicaRouteImport } from './routes/blog.tempo-tratamento-dependencia-quimica'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -969,6 +970,12 @@ const BlogQuantoCustaClinicaDeRecuperacaoRoute =
     path: '/quanto-custa-clinica-de-recuperacao',
     getParentRoute: () => BlogRoute,
   } as any)
+const BlogTempoTratamentoDependenciaQuimicaRoute =
+  BlogTempoTratamentoDependenciaQuimicaRouteImport.update({
+    id: '/tempo-tratamento-dependencia-quimica',
+    path: '/tempo-tratamento-dependencia-quimica',
+    getParentRoute: () => BlogRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -1113,6 +1120,7 @@ export interface FileRoutesByFullPath {
   '/blog/diferenca-internacao-voluntaria-involuntaria': typeof BlogDiferencaInternacaoVoluntariaInvoluntariaRoute
   '/blog/historia-12-passos-clinica-reabilitacao-terapeutica': typeof BlogHistoria12PassosClinicaReabilitacaoTerapeuticaRoute
   '/blog/quanto-custa-clinica-de-recuperacao': typeof BlogQuantoCustaClinicaDeRecuperacaoRoute
+  '/blog/tempo-tratamento-dependencia-quimica': typeof BlogTempoTratamentoDependenciaQuimicaRoute
   '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
@@ -1257,6 +1265,7 @@ export interface FileRoutesByTo {
   '/blog/diferenca-internacao-voluntaria-involuntaria': typeof BlogDiferencaInternacaoVoluntariaInvoluntariaRoute
   '/blog/historia-12-passos-clinica-reabilitacao-terapeutica': typeof BlogHistoria12PassosClinicaReabilitacaoTerapeuticaRoute
   '/blog/quanto-custa-clinica-de-recuperacao': typeof BlogQuantoCustaClinicaDeRecuperacaoRoute
+  '/blog/tempo-tratamento-dependencia-quimica': typeof BlogTempoTratamentoDependenciaQuimicaRoute
   '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
@@ -1403,6 +1412,7 @@ export interface FileRoutesById {
   '/blog/diferenca-internacao-voluntaria-involuntaria': typeof BlogDiferencaInternacaoVoluntariaInvoluntariaRoute
   '/blog/historia-12-passos-clinica-reabilitacao-terapeutica': typeof BlogHistoria12PassosClinicaReabilitacaoTerapeuticaRoute
   '/blog/quanto-custa-clinica-de-recuperacao': typeof BlogQuantoCustaClinicaDeRecuperacaoRoute
+  '/blog/tempo-tratamento-dependencia-quimica': typeof BlogTempoTratamentoDependenciaQuimicaRoute
   '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
@@ -1550,6 +1560,7 @@ export interface FileRouteTypes {
     | '/blog/diferenca-internacao-voluntaria-involuntaria'
     | '/blog/historia-12-passos-clinica-reabilitacao-terapeutica'
     | '/blog/quanto-custa-clinica-de-recuperacao'
+    | '/blog/tempo-tratamento-dependencia-quimica'
     | '/blog/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -1694,6 +1705,7 @@ export interface FileRouteTypes {
     | '/blog/diferenca-internacao-voluntaria-involuntaria'
     | '/blog/historia-12-passos-clinica-reabilitacao-terapeutica'
     | '/blog/quanto-custa-clinica-de-recuperacao'
+    | '/blog/tempo-tratamento-dependencia-quimica'
     | '/blog'
   id:
     | '__root__'
@@ -1839,6 +1851,7 @@ export interface FileRouteTypes {
     | '/blog/diferenca-internacao-voluntaria-involuntaria'
     | '/blog/historia-12-passos-clinica-reabilitacao-terapeutica'
     | '/blog/quanto-custa-clinica-de-recuperacao'
+    | '/blog/tempo-tratamento-dependencia-quimica'
     | '/blog/'
   fileRoutesById: FileRoutesById
 }
@@ -2977,6 +2990,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogQuantoCustaClinicaDeRecuperacaoRouteImport
       parentRoute: typeof BlogRoute
     }
+    '/blog/tempo-tratamento-dependencia-quimica': {
+      id: '/blog/tempo-tratamento-dependencia-quimica'
+      path: '/tempo-tratamento-dependencia-quimica'
+      fullPath: '/blog/tempo-tratamento-dependencia-quimica'
+      preLoaderRoute: typeof BlogTempoTratamentoDependenciaQuimicaRouteImport
+      parentRoute: typeof BlogRoute
+    }
   }
 }
 
@@ -2994,6 +3014,7 @@ interface BlogRouteChildren {
   BlogDiferencaInternacaoVoluntariaInvoluntariaRoute: typeof BlogDiferencaInternacaoVoluntariaInvoluntariaRoute
   BlogHistoria12PassosClinicaReabilitacaoTerapeuticaRoute: typeof BlogHistoria12PassosClinicaReabilitacaoTerapeuticaRoute
   BlogQuantoCustaClinicaDeRecuperacaoRoute: typeof BlogQuantoCustaClinicaDeRecuperacaoRoute
+  BlogTempoTratamentoDependenciaQuimicaRoute: typeof BlogTempoTratamentoDependenciaQuimicaRoute
   BlogIndexRoute: typeof BlogIndexRoute
 }
 
@@ -3023,6 +3044,8 @@ const BlogRouteChildren: BlogRouteChildren = {
     BlogHistoria12PassosClinicaReabilitacaoTerapeuticaRoute,
   BlogQuantoCustaClinicaDeRecuperacaoRoute:
     BlogQuantoCustaClinicaDeRecuperacaoRoute,
+  BlogTempoTratamentoDependenciaQuimicaRoute:
+    BlogTempoTratamentoDependenciaQuimicaRoute,
   BlogIndexRoute: BlogIndexRoute,
 }
 
