@@ -31,7 +31,7 @@ export const Route = createFileRoute("/blog/como-internar-dependente-quimico")({
   staticData: { sitemap: true },
   head: () => {
     const head = createArticleHead({ title: metaTitle, description, slug, image, published: "2026-10-19" });
-    const data = JSON.parse(head.scripts[0].children);
+    const data = JSON.parse(head.scripts[0]?.children ?? '{"@graph":[]}');
     data["@graph"].push({ "@type": "FAQPage", mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.question, acceptedAnswer: { "@type": "Answer", text: f.answer } })) });
     return { ...head, scripts: [{ type: "application/ld+json", children: JSON.stringify(data) }] };
   },
