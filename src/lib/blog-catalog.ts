@@ -13,6 +13,7 @@ export const blogTopics = [
   { id: "dependencia-quimica", title: "Dependência Química", description: "Primeiros sinais, impactos, caminhos de cuidado e orientação em Araraquara e São Carlos." },
   { id: "alcoolismo", title: "Alcoolismo", description: "Perda de controle, riscos da abstinência e procura responsável por avaliação." },
   { id: "familia-e-acolhimento", title: "Família e Acolhimento", description: "Quando buscar avaliação e como participar com respeito e limites." },
+  { topic: "familia-e-acolhimento", title: "Internação Voluntária vs. Involuntária: Quais as Diferenças e Quando Indicar?", description: "Tabela comparativa, requisitos da Lei 13.840/2019 e diferença para a internação compulsória.", to: "/blog/diferenca-internacao-voluntaria-involuntaria", image: involuntaryImage, alt: "Família buscando orientação sobre modalidades de internação", detail: "Comparativo legal" },
 ] as const;
 
 export const blogPosts = [
