@@ -1,3 +1,4 @@
+import stagesImage from "@/assets/blog-como-funciona-clinica.webp";
 import involuntaryImage from "@/assets/concept-specialty-involuntary.webp";
 import alcoholImage from "@/assets/blog-alcoolismo-consumo-problema.webp";
 import chooseImage from "@/assets/blog-como-escolher-clinica.webp";
@@ -29,4 +30,5 @@ export const blogPosts = [
   { topic: "familia-e-acolhimento", title: "Como Ajudar um Filho Dependente Químico: Da Negação ao Tratamento Humanizado", description: "Codependência, comunicação sem acusações, sinais de agravamento e o papel da família.", to: "/blog/como-ajudar-filho-dependente-quimico", image: visualAssets.family.src, alt: visualAssets.family.alt, detail: "Para mães e pais" },
   { topic: "clinica-e-tratamento", title: "Quanto Custa uma Clínica de Recuperação? Fatores, Transparência e Planos de Saúde", description: "O que compõe os valores, cobertura pela Lei 9.656/98 e ANS, reembolso e riscos de clínicas clandestinas.", to: "/blog/quanto-custa-clinica-de-recuperacao", image: chooseImage, alt: "Família analisando informações sobre tratamento", detail: "Custos · Planos de saúde" },
   { topic: "familia-e-acolhimento", title: "Internação Voluntária vs. Involuntária: Quais as Diferenças e Quando Indicar?", description: "Tabela comparativa, requisitos da Lei 13.840/2019 e diferença para a internação compulsória.", to: "/blog/diferenca-internacao-voluntaria-involuntaria", image: involuntaryImage, alt: "Família buscando orientação sobre modalidades de internação", detail: "Comparativo legal" },
+  { topic: "clinica-e-tratamento", title: "Quanto Tempo Dura o Tratamento para Dependência Química? Conheça as Etapas", description: "Fases de desintoxicação, conscientização, prevenção de recaída e o cuidado depois do tratamento.", to: "/blog/tempo-tratamento-dependencia-quimica", image: stagesImage, alt: "Imagem ilustrativa sobre as etapas do tratamento", detail: "Etapas · Duração" },
 ] as const;
