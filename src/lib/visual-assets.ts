@@ -178,6 +178,18 @@ export const visualAssets = {
     medication: { src: ribeiraoMedication, alt: "Mulher organizando um caderno, imagem conceitual de acompanhamento cuidadoso" },
     youth: { src: ribeiraoYouth, alt: "Jovem conversando com familiar, imagem conceitual de diálogo e apoio" },
   },
+  francaSpecialties: {
+    alcohol: { src: rioClaroAlcohol, alt: "Dois familiares conversando em um jardim, imagem conceitual de apoio e escuta" },
+    cocaine: { src: rioClaroCocaine, alt: "Adulto organizando mudas, imagem conceitual de construção de novos hábitos" },
+    involuntary: { src: rioClaroInvoluntary, alt: "Duas mulheres lendo documentos, imagem conceitual de orientação familiar" },
+    voluntary: { src: rioClaroVoluntary, alt: "Pessoa organizando um caderno pela manhã, imagem conceitual de escolha e rotina" },
+    transport: { src: rioClaroTransport, alt: "Familiares preparando uma bolsa, imagem conceitual de viagem planejada" },
+    women: { src: ribeiraoWomen, alt: "Duas mulheres conversando, imagem conceitual de escuta e privacidade" },
+    gambling: { src: gamblingSupport, alt: "Adulto com celular conversando com familiar, imagem conceitual de apoio diante das apostas" },
+    insurance: { src: araraquaraEvaluation, alt: "Documentos organizados sobre a mesa, imagem conceitual da consulta ao plano de saúde" },
+    medication: { src: ribeiraoMedication, alt: "Mulher organizando um caderno, imagem conceitual de acompanhamento cuidadoso" },
+    youth: { src: ribeiraoYouth, alt: "Jovem conversando com familiar, imagem conceitual de diálogo e apoio" },
+  },
   saoCarlosSpecialties: {
     alcohol: { src: saoCarlosAlcohol, alt: "Dois adultos conversando à mesa, imagem conceitual de reconstrução de vínculos" },
     cocaine: { src: saoCarlosCocaine, alt: "Pessoa com caderno junto a uma janela, imagem conceitual de reorganização da rotina" },
