@@ -1,3 +1,4 @@
+import involuntaryImage from "@/assets/concept-specialty-involuntary.webp";
 import alcoholImage from "@/assets/blog-alcoolismo-consumo-problema.webp";
 import chooseImage from "@/assets/blog-como-escolher-clinica.webp";
 import needsImage from "@/assets/blog-como-saber-clinica-reabilitacao.webp";
@@ -12,6 +13,7 @@ export const blogTopics = [
   { id: "dependencia-quimica", title: "Dependência Química", description: "Primeiros sinais, impactos, caminhos de cuidado e orientação em Araraquara e São Carlos." },
   { id: "alcoolismo", title: "Alcoolismo", description: "Perda de controle, riscos da abstinência e procura responsável por avaliação." },
   { id: "familia-e-acolhimento", title: "Família e Acolhimento", description: "Quando buscar avaliação e como participar com respeito e limites." },
+  { topic: "familia-e-acolhimento", title: "Como Internar uma Pessoa Dependente Química: Passo a Passo, Direitos e Legislação", description: "Modalidades da Lei 13.840/2019, requisitos médicos e passo a passo seguro para a família.", to: "/blog/como-internar-dependente-quimico", image: involuntaryImage, alt: "Familiares buscando orientação sobre internação", detail: "Guia jurídico · Passo a passo" },
 ] as const;
 
 export const blogPosts = [
@@ -24,4 +26,5 @@ export const blogPosts = [
   { topic: "dependencia-quimica", title: "Dependência Química em São Carlos: acolhimento, tratamento e onde buscar ajuda", description: "Informações sobre a rede pública e caminhos de orientação para pessoas e famílias de São Carlos.", to: "/blog/dependencia-quimica-sao-carlos", image: saoCarlosImage, alt: "Adultos conversam em um ambiente de escuta", detail: "Orientação local · São Carlos" },
   { topic: "alcoolismo", title: "Alcoolismo: quando o consumo de álcool se torna um problema?", description: "Sinais específicos do consumo de álcool, riscos e prejuízos que merecem avaliação profissional.", to: "/blog/alcoolismo-quando-o-consumo-se-torna-um-problema", image: alcoholImage, alt: "Adultos conversam sobre dificuldades relacionadas ao álcool", detail: "Riscos e busca por avaliação" },
   { topic: "familia-e-acolhimento", title: "Como saber se uma pessoa precisa de uma clínica de reabilitação?", description: "Quando procurar avaliação, quais prejuízos considerar e como a família pode ajudar sem fazer diagnóstico remoto.", to: "/blog/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao", image: needsImage, alt: "Familiares reunidos em uma conversa de apoio", detail: "Decisão sobre busca de ajuda" },
+  { topic: "familia-e-acolhimento", title: "Como Internar uma Pessoa Dependente Química: Passo a Passo, Direitos e Legislação", description: "Modalidades da Lei 13.840/2019, requisitos médicos e passo a passo seguro para a família.", to: "/blog/como-internar-dependente-quimico", image: involuntaryImage, alt: "Familiares buscando orientação sobre internação", detail: "Guia jurídico · Passo a passo" },
 ] as const;
