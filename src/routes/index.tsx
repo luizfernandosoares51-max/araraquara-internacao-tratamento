@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, FileCheck2, HeartHandshake, MapPin, MessageCircle, ShieldCheck, Truck, Compass, Check, Users, ClipboardCheck } from "lucide-react";
+import { ArrowRight, FileCheck2, HeartHandshake, MapPin, MessageCircle, ShieldCheck, Truck, Compass, Check, Users, ClipboardCheck, Building2, Flame, UserCheck } from "lucide-react";
 import voluntaryWelcomeImage from "@/assets/home-voluntary-welcome.webp";
 import transportSupportImage from "@/assets/home-transport-support.webp";
 import clinicalEvaluationImage from "@/assets/home-clinical-evaluation.jpg";
@@ -119,6 +119,21 @@ function HomePage() {
             ].map(({ label, title, text, icon: Icon }) => <article key={label} className="rounded-lg border border-border bg-card p-5 text-card-foreground"><div className="flex items-center gap-3 text-secondary"><Icon className="size-6" aria-hidden="true" /><p className="text-xs font-semibold uppercase">{label}</p></div><h3 className="mt-4 font-display text-xl font-semibold">{title}</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">{text}</p></article>)}
           </div>
         </section>
+
+        <section aria-labelledby="conformidade-titulo" className="border-t border-border py-10 sm:py-12">
+          <h2 id="conformidade-titulo" className="font-display text-2xl font-semibold text-primary sm:text-3xl">Conformidade Legal, Sanitária e Responsabilidade Técnica</h2>
+          <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">A Central de Acolhimento e Reabilitação atua em articulação com unidade física de acolhimento e internação devidamente licenciada e fiscalizada pelos órgãos competentes do Estado de São Paulo.</p>
+          <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
+            {[
+              { label: "Registro Empresarial", value: `CNPJ ${institutionalIdentity.cnpj}`, text: "Inscrição Matriz com atividade principal em Assistência Psicossocial e Saúde a portadores de dependência química e distúrbios psíquicos (CNAE 87.20-4-99).", icon: Building2 },
+              { label: "Vigilância Sanitária", value: "CEVS 350320802-872-00014-1-4", text: "Licença de Funcionamento Sanitário deferida pelo Sistema Estadual de Vigilância Sanitária (Prefeitura Municipal de Araraquara/SP).", icon: ShieldCheck },
+              { label: "Corpo de Bombeiros SP", value: "AVCB Nº 723305", text: "Auto de Vistoria do Corpo de Bombeiros da Polícia Militar do Estado de São Paulo aprovado para 1.275,09 m² de área estruturada.", icon: Flame },
+              { label: "Responsabilidade Técnica", value: `Psicologia Clínica - ${institutionalIdentity.psychologyResponsible.registration}`, text: "Supervisão técnica terapêutica sob direção clínica profissional, em rigoroso cumprimento das diretrizes de acolhimento e direitos do paciente.", icon: UserCheck },
+            ].map(({ label, value, text, icon: Icon }) => <article key={label} className="rounded-lg border border-border bg-card p-5 text-card-foreground"><div className="flex items-center gap-3 text-secondary"><Icon className="size-6 shrink-0" aria-hidden="true" /><p className="text-xs font-semibold uppercase">{label}</p></div><p className="mt-4 font-display text-lg font-semibold text-primary">{value}</p><p className="mt-3 text-sm leading-relaxed text-muted-foreground">{text}</p></article>)}
+          </div>
+          <p className="mt-4 text-xs leading-relaxed text-muted-foreground">Dados de registro informados pela instituição.</p>
+        </section>
+
 
 
         <section id="servicos" aria-label="Serviços de acolhimento e encaminhamento" className="border-t border-border py-10 sm:py-12">
