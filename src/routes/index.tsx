@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, FileCheck2, HeartHandshake, MapPin, MessageCircle, ShieldCheck, Truck, Compass, Check } from "lucide-react";
+import { ArrowRight, FileCheck2, HeartHandshake, MapPin, MessageCircle, ShieldCheck, Truck, Compass, Check, Users, ClipboardCheck } from "lucide-react";
 import voluntaryWelcomeImage from "@/assets/home-voluntary-welcome.webp";
 import transportSupportImage from "@/assets/home-transport-support.webp";
+import clinicalEvaluationImage from "@/assets/home-clinical-evaluation.jpg";
 import networkImage from "@/assets/acolhimento-rede-estadual.png.asset.json";
 import { InteractiveTriage } from "@/components/interactive-triage";
 import { Button } from "@/components/ui/button";
@@ -109,11 +110,12 @@ function HomePage() {
         <section aria-labelledby="pilares-titulo" className="py-10 sm:py-12">
           <p className="text-xs font-semibold uppercase text-secondary">Missão, visão e valores</p>
           <h2 id="pilares-titulo" className="mt-3 font-display text-2xl font-semibold sm:text-3xl">Dignidade em cada etapa do cuidado</h2>
-          <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
+          <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4">
             {[
               { label: "Missão", title: "Resgate e Dignidade Humana", text: "Acolher famílias com escuta respeitosa e facilitar o acesso ao cuidado adequado, preservando a dignidade, os direitos e a participação da pessoa em cada etapa.", icon: HeartHandshake },
               { label: "Visão", title: "Referência Estadual em Orientação", text: "Construir uma relação de confiança com famílias de todo o Estado de São Paulo, articulando encaminhamentos privados e valorizando práticas humanizadas e responsáveis.", icon: Compass },
               { label: "Valores", title: "Ética, Legalidade e Transparência", text: "Respeito aos direitos do paciente, clareza documental e orientação familiar 24 horas. Cada encaminhamento considera avaliação, requisitos legais e disponibilidade.", icon: ShieldCheck },
+              { label: "Compromisso", title: "Apoio Integral à Família", text: "Compreendemos que a dependência afeta todo o núcleo familiar. Oferecemos orientação contínua, acolhimento humanizado e suporte emocional para quem cuida, restaurando vínculos e proporcionando segurança em cada decisão.", icon: Users },
             ].map(({ label, title, text, icon: Icon }) => <article key={label} className="rounded-lg border border-border bg-card p-5 text-card-foreground"><div className="flex items-center gap-3 text-secondary"><Icon className="size-6" aria-hidden="true" /><p className="text-xs font-semibold uppercase">{label}</p></div><h3 className="mt-4 font-display text-xl font-semibold">{title}</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">{text}</p></article>)}
           </div>
         </section>
@@ -121,7 +123,7 @@ function HomePage() {
 
         <section id="servicos" aria-label="Serviços de acolhimento e encaminhamento" className="border-t border-border py-10 sm:py-12">
           <h2 className="mb-6 font-display text-2xl font-semibold sm:text-3xl">Acolhimento, encaminhamento e transporte</h2>
-          <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4">
             <article className="overflow-hidden rounded-lg border border-border bg-card text-card-foreground shadow-sm">
               <img src={voluntaryWelcomeImage} alt="Representação de escuta acolhedora de um adulto e sua familiar" width={640} height={360} loading="lazy" decoding="async" className="aspect-video w-full object-cover" />
               <div className="p-5"><HeartHandshake className="size-6 text-secondary" aria-hidden="true" /><h3 className="mt-3 font-display text-xl font-semibold">Internação Voluntária Humanizada em São Paulo</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Acolhimento humanizado e suporte psicossocial na sede de Araraquara, com adesão da pessoa. Quando indicada, a internação médica com consentimento ocorre por encaminhamento à unidade habilitada, conforme avaliação e disponibilidade.</p></div>
@@ -133,6 +135,10 @@ function HomePage() {
             <article className="overflow-hidden rounded-lg border border-border bg-card text-card-foreground shadow-sm">
               <img src={transportSupportImage} alt="Representação de profissionais de apoio junto a uma van executiva discreta" width={640} height={360} loading="lazy" decoding="async" className="aspect-video w-full object-cover" />
               <div className="p-5"><Truck className="size-6 text-secondary" aria-hidden="true" /><h3 className="mt-3 font-display text-xl font-semibold">Remoção Especializada em SP: Orientação 24h</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Plantão para organizar transporte especializado com a rede, com atenção à privacidade. Equipe, veículo e trajeto dependem de avaliação, agendamento e disponibilidade, sem resgate imediato. Em risco à vida, procure o SAMU 192.</p></div>
+            </article>
+            <article className="overflow-hidden rounded-lg border border-border bg-card text-card-foreground shadow-sm">
+              <img src={clinicalEvaluationImage} alt="Representação de profissional de saúde em atendimento humanizado com um adulto" width={1088} height={608} loading="lazy" decoding="async" className="aspect-video w-full object-cover" />
+              <div className="p-5"><div className="flex items-center gap-3 text-secondary"><ClipboardCheck className="size-6" aria-hidden="true" /><p className="text-xs font-semibold uppercase">Avaliação clínica</p></div><h3 className="mt-3 font-display text-xl font-semibold">Triagem Médica e Avaliação Diagnóstica</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">Encaminhamento para diagnóstico especializado com psiquiatria e psicologia clínica. Identificação precoce de comorbidades (diagnóstico duplo), avaliação do grau de dependência e direcionamento para a unidade mais adequada ao perfil de cada paciente. A avaliação é feita por profissionais habilitados da rede de saúde.</p></div>
             </article>
           </div>
         </section>
