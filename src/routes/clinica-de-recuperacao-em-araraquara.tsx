@@ -12,8 +12,12 @@ import {
   ArrowRight,
   Building2,
   ExternalLink,
+  FileCheck,
+  Flame,
   HeartHandshake,
   Info,
+  Landmark,
+  Siren,
   Mail,
   MapPin,
   MessageCircle,
@@ -50,65 +54,34 @@ const cityCapsInformationUrl =
 const ministryRapsUrl = "https://www.gov.br/saude/pt-br/composicao/saes/desmad/raps";
 
 const careSteps = [
-  {
-    title: "Buscar informação",
-    text: "A pessoa ou a família pode começar esclarecendo dúvidas, relatando a situação e conhecendo caminhos possíveis, sem assumir um diagnóstico.",
-  },
-  {
-    title: "Receber orientação",
-    text: "A conversa inicial ajuda a organizar as informações e a entender quais serviços podem ser considerados para aquela realidade.",
-  },
-  {
-    title: "Avaliar o cuidado",
-    text: "Qualquer acolhimento ou tratamento deve partir de uma avaliação individual, com participação de profissionais habilitados.",
-  },
+  { title: "Primeiro Contato", text: "Escuta sigilosa e triagem pelo plantão de orientação 24h." },
+  { title: "Avaliação de Perfil", text: "Voluntária, involuntária ou comorbidades, com encaminhamento adequado a cada caso." },
+  { title: "Logística e Remoção", text: "Suporte de transporte seguro em Araraquara e região, mediante agendamento." },
+  { title: "Início do Cuidado", text: "Acolhimento na unidade e Plano Terapêutico individual." },
+];
+
+const networkCards = [
+  { icon: Building2, title: "CAPS Álcool e Drogas", text: "Apoio municipal e rede pública de Araraquara.", href: cityCapsInformationUrl },
+  { icon: HeartHandshake, title: "Unidades Básicas e UPA", text: "Atendimento médico de urgência prévio.", href: cityHealthNetworkUrl },
+  { icon: Siren, title: "SAMU 192 e Bombeiros 193", text: "Encaminhamento de emergência e crises agudas.", href: "tel:192" },
+  { icon: Info, title: "Central Privada 24h", text: "Orientação complementar para acolhimento contínuo.", href: whatsappHref },
+];
+
+const transparencyCards = [
+  { icon: Landmark, label: "Registro CNPJ", value: "40.241.645/0001-30", text: "Unidade Matriz em Araraquara (CNAE 87.20-4-99)" },
+  { icon: FileCheck, label: "Vigilância Sanitária", value: "CEVS 350320802-872-00014-1-4", text: "Licença Sanitária deferida em Araraquara/SP" },
+  { icon: Flame, label: "Corpo de Bombeiros", value: "AVCB Nº 723305", text: "Vistoria aprovada para 1.275 m² seguros" },
+  { icon: Users, label: "Responsabilidade Técnica", value: "CRP 06/130268", text: "Coordenação em Psicologia Clínica (Margareth C. V. Moraes)" },
 ];
 
 const faqs = [
-  ...cityEditorialFaqs("araraquara"),
-  ...araraquaraOrientationFaqs,
-  {
-    question: "Como procurar ajuda para dependência química em Araraquara?",
-    answer:
-      "É possível começar por uma unidade da rede pública de saúde, pelo CAPS AD do município ou por uma conversa de orientação com a Central. Em situações de risco imediato, procure um serviço de urgência. O primeiro passo é apresentar a situação com clareza para que as possibilidades sejam avaliadas de forma responsável.",
-  },
-  {
-    question: "Quando a família deve procurar orientação?",
-    answer:
-      "A família pode buscar orientação quando percebe mudanças persistentes no comportamento, conflitos, prejuízos na saúde, no trabalho ou nas relações associados ao uso de álcool e outras drogas. Não é necessário esperar a situação se agravar para pedir informação, mas somente uma avaliação profissional pode indicar o cuidado adequado.",
-  },
-  {
-    question: "Existe tratamento para alcoolismo em Araraquara?",
-    answer:
-      "Araraquara conta com serviços da rede pública de atenção psicossocial, e a Central também oferece informações sobre possibilidades de acolhimento e tratamento. A escolha do caminho depende das necessidades da pessoa, da avaliação individual e das condições de cada serviço.",
-  },
-  {
-    question: "Como funciona o acolhimento para dependência química?",
-    answer:
-      "O acolhimento começa com escuta e levantamento das necessidades. A pessoa e a família recebem explicações sobre o cuidado, a rotina e os próximos passos. As condições e a modalidade apropriada precisam ser analisadas antes de qualquer decisão.",
-  },
-  {
-    question: "A internação é indicada para todos os casos?",
-    answer:
-      "Não. A internação é apenas uma das possibilidades e não deve ser tratada como resposta automática. Sua indicação depende de avaliação individual e profissional, das condições de saúde, dos riscos envolvidos e dos critérios legais aplicáveis.",
-  },
-  {
-    question: "Como conversar com uma pessoa que precisa de tratamento?",
-    answer:
-      "Procure um momento seguro, fale com respeito, descreva fatos concretos e evite ameaças ou acusações. Ouvir também é importante. Quando o diálogo estiver difícil, a família pode buscar orientação profissional para planejar uma abordagem mais cuidadosa.",
-  },
+  { question: "Como funcionam as visitas da família?", answer: "As visitas acontecem em dias e horários agendados com a equipe, conforme o cronograma terapêutico, para preservar a rotina de cuidado e o vínculo familiar." },
+  { question: "Como funciona a internação involuntária?", answer: "É uma medida excepcional prevista na Lei 13.840/2019. Exige avaliação e autorização médica e acontece somente em unidade de saúde habilitada, que comunica o Ministério Público em até 72 horas. A Central orienta a família no encaminhamento." },
+  { question: "Como funciona o acolhimento voluntário?", answer: "Com a adesão da própria pessoa, o acolhimento ocorre na sede própria em Araraquara, com suporte psicossocial, 12 Passos, laborterapia, convivência terapêutica e prevenção à recaída, após avaliação individual e conforme disponibilidade de vaga." },
+  { question: "Aceita convênio ou reembolso do plano de saúde?", answer: "O atendimento é particular. A Central orienta a família sobre como solicitar reembolso à operadora, mas a cobertura depende do contrato e da análise do plano, sem garantia de aprovação." },
+  { question: "Onde fica a unidade em Araraquara?", answer: `A sede própria fica na ${institutionalIdentity.fullAddress}. Visitas e chegada são combinadas antes pelo WhatsApp (16) 99765-4579.` },
 ];
 
-const localLinks = [
-  { label: "Voltar para a Home", to: "/" as const },
-  { label: "Guia sobre clínica de reabilitação", to: "/clinica-de-reabilitacao" as const },
-  { label: "Orientações para a família", to: "/familia" as const },
-  { label: "Entender o tratamento", to: "/tratamento" as const },
-  { label: "Conhecer o acolhimento", to: "/acolhimento" as const },
-  { label: "Ler o Blog", to: "/blog" as const },
-  { label: "Entrar em contato", to: "/contato" as const },
-  { label: "Ver todas as cidades", to: "/cidades" as const },
-];
 
 export const Route = createFileRoute("/clinica-de-recuperacao-em-araraquara")({
   staticData: { sitemap: true },
@@ -275,7 +248,8 @@ function AraraquaraPage() {
                 <p>A proposta confirmada da Central inclui conscientização em 12 Passos, suporte psicológico com Margarete Vasques (CRP 06/130268), laborterapia, convivência terapêutica e prevenção à recaída. Cada situação precisa ser analisada individualmente; o articulação médica e psiquiátrica com serviços parceiros credenciados e a equipe multidisciplinar participam do cuidado na unidade, com encaminhamento a estabelecimentos habilitados quando há necessidade hospitalar.</p>
               </div>
             </div>
-            <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
+            <h3 className="mt-10 font-display text-xl font-semibold sm:text-2xl">Etapas do atendimento</h3>
+            <div className="mt-5 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
               {careSteps.map((step, index) => (
                 <article key={step.title} className="rounded-lg border border-deep/10 bg-card p-5 text-deep shadow-sm sm:p-6">
                   <span className="grid size-9 place-items-center rounded-full bg-primary text-xs font-bold text-primary-foreground">0{index + 1}</span>
@@ -289,7 +263,10 @@ function AraraquaraPage() {
 
         <section id="acolhimento" className="scroll-mt-6 border-y border-deep/10 bg-ice">
           <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
-            <TherapeuticRoutine />
+            <details className="group rounded-lg border border-deep/10 bg-card p-4 sm:p-5">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-display text-lg font-semibold marker:content-none">Um dia de acolhimento em Araraquara (07h às 22h)<span className="grid size-8 shrink-0 place-items-center rounded-full bg-primary/10 text-primary transition-transform group-open:rotate-45" aria-hidden="true">+</span></summary>
+              <TherapeuticRoutine />
+            </details>
             <FinancialGuidance />
             <div className="grid gap-8 lg:grid-cols-[1fr_.8fr] lg:items-center lg:gap-14">
               <div>
@@ -315,10 +292,12 @@ function AraraquaraPage() {
             <SectionLabel>Cuidado em rede</SectionLabel>
             <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Rede de apoio e serviços públicos em Araraquara</h2>
             <p className="mt-5 max-w-4xl text-[15px] leading-relaxed text-deep/75 sm:text-base">A rede pública faz parte dos caminhos de cuidado disponíveis no município. A Prefeitura de Araraquara informa que o CAPS Álcool e Drogas atende questões relacionadas ao uso abusivo de substâncias e que as Unidades Básicas de Saúde e Unidades de Saúde da Família também podem orientar o acesso à rede. A Central oferece informação sobre possibilidades de acolhimento e tratamento, mas não substitui o SUS nem os serviços de urgência.</p>
-            <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
-              <a href={cityCapsInformationUrl} target="_blank" rel="noopener noreferrer" className="group rounded-lg border border-deep/10 bg-card p-5 text-deep shadow-sm transition-transform hover:-translate-y-0.5"><Building2 className="size-6 text-primary" aria-hidden="true" /><h3 className="mt-4 font-display text-lg font-semibold">CAPS Álcool e Drogas</h3><p className="mt-3 text-sm leading-relaxed text-deep/70">Consulte a explicação oficial da Prefeitura sobre o atendimento psicossocial e o acesso à rede.</p><span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">Fonte oficial <ExternalLink className="size-4" aria-hidden="true" /></span></a>
-              <a href={cityHealthNetworkUrl} target="_blank" rel="noopener noreferrer" className="group rounded-lg border border-deep/10 bg-card p-5 text-deep shadow-sm transition-transform hover:-translate-y-0.5"><HeartHandshake className="size-6 text-primary" aria-hidden="true" /><h3 className="mt-4 font-display text-lg font-semibold">Saúde especializada municipal</h3><p className="mt-3 text-sm leading-relaxed text-deep/70">Veja os canais oficiais da atenção especializada e da saúde mental do município.</p><span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">Prefeitura de Araraquara <ExternalLink className="size-4" aria-hidden="true" /></span></a>
-              <a href={ministryRapsUrl} target="_blank" rel="noopener noreferrer" className="group rounded-lg border border-deep/10 bg-card p-5 text-deep shadow-sm transition-transform hover:-translate-y-0.5"><Info className="size-6 text-primary" aria-hidden="true" /><h3 className="mt-4 font-display text-lg font-semibold">Rede de Atenção Psicossocial</h3><p className="mt-3 text-sm leading-relaxed text-deep/70">Conheça a organização nacional da rede de cuidados em saúde mental pelo Ministério da Saúde.</p><span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">Ministério da Saúde <ExternalLink className="size-4" aria-hidden="true" /></span></a>
+            <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+              {networkCards.map(({ icon: Icon, title, text, href }) => {
+                const body = <><Icon className="size-6 text-primary" aria-hidden="true" /><h3 className="mt-3 font-display text-base font-semibold sm:text-lg">{title}</h3><p className="mt-2 text-xs leading-snug text-deep/70 sm:text-sm">{text}</p></>;
+                const cls = "flex h-full flex-col rounded-lg border border-deep/10 bg-card p-4 text-deep shadow-sm sm:p-5";
+                return href ? <a key={title} href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined} className={`${cls} transition-transform hover:-translate-y-0.5`}>{body}</a> : <div key={title} className={cls}>{body}</div>;
+              })}
             </div>
           </div>
         </section>
@@ -347,14 +326,24 @@ function AraraquaraPage() {
           </div>
         </section>
 
-        <section className="bg-ice">
+        <section aria-labelledby="transparencia-araraquara" className="bg-ice">
           <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
-            <div className="grid gap-9 lg:grid-cols-[.85fr_1.15fr] lg:gap-16">
-              <div><SectionLabel>Informação direcionada</SectionLabel><h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Por que esta página é específica para Araraquara?</h2></div>
-              <div><p className="text-[15px] leading-relaxed text-deep/75 sm:text-base">Esta página reúne informações para quem pesquisa acolhimento, tratamento para dependência química, tratamento para alcoolismo ou ajuda relacionada ao uso de álcool e outras drogas em Araraquara e região. O objetivo é facilitar o acesso a informações locais, caminhos públicos e contato com a Central, sem transformar uma busca por ajuda em promessa de resultado.</p><nav aria-label="Links úteis da página de Araraquara" className="mt-7 grid gap-2 sm:grid-cols-2">{localLinks.map((item) => <Link key={item.label} to={item.to} className="flex min-h-12 items-center justify-between gap-3 rounded-lg border border-deep/10 bg-card px-4 py-3 text-sm font-semibold text-deep transition-colors hover:border-primary/40">{item.label}<ArrowRight className="size-4 shrink-0 text-primary" aria-hidden="true" /></Link>)}<a href="#galeria-araraquara" className="flex min-h-12 items-center justify-between gap-3 rounded-lg border border-deep/10 bg-card px-4 py-3 text-sm font-semibold text-deep transition-colors hover:border-primary/40">Galeria de Araraquara<ArrowRight className="size-4 shrink-0 text-primary" aria-hidden="true" /></a></nav></div>
+            <SectionLabel>Transparência</SectionLabel>
+            <h2 id="transparencia-araraquara" className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Transparência, Registro e Responsabilidade Técnica</h2>
+            <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+              {transparencyCards.map(({ icon: Icon, label, value, text }) => (
+                <article key={label} className="flex h-full flex-col rounded-lg border border-deep/10 bg-card p-4 text-deep shadow-sm sm:p-5">
+                  <span className="grid size-9 place-items-center rounded-full bg-primary/10 text-primary"><Icon className="size-4" aria-hidden="true" /></span>
+                  <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-secondary">{label}</p>
+                  <p className="mt-1 break-words font-display text-sm font-semibold sm:text-base">{value}</p>
+                  <p className="mt-2 text-xs leading-snug text-deep/70">{text}</p>
+                </article>
+              ))}
             </div>
+            <p className="mt-4 text-xs text-deep/60">Dados de registro informados pela instituição. <Link to="/transparencia" className="font-semibold text-primary underline underline-offset-4">Ver transparência completa</Link></p>
           </div>
         </section>
+
 
         <section id="perguntas" className="border-y border-deep/10 bg-ice">
           <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
@@ -371,7 +360,7 @@ function AraraquaraPage() {
             <div className="max-w-4xl"><p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">Orientação em Araraquara</p><h2 className="mt-3 font-display text-3xl font-bold leading-tight sm:text-5xl">Precisa conversar sobre uma situação de dependência química ou alcoolismo?</h2><p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-primary-foreground/70">A equipe pode ouvir sua dúvida e explicar possibilidades de acolhimento e tratamento. Cada caso é analisado individualmente, sem garantia de resultado e sem afirmar que internação seja sempre necessária.</p><div className="mt-7 flex flex-col gap-3 sm:flex-row"><WhatsAppLink className="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg bg-whatsapp px-6 py-4 text-sm font-semibold text-whatsapp-foreground"><MessageCircle className="size-5" aria-hidden="true" /> {cityContactLabel("Araraquara")}</WhatsAppLink><a href={phoneHref} className="inline-flex min-h-14 items-center justify-center gap-2 rounded-lg border border-primary-foreground/30 px-6 py-4 text-sm font-semibold"><Phone className="size-4" aria-hidden="true" /> Ligar agora · {phoneDisplay}</a></div><a href={emailHref} className="mt-5 inline-flex items-center gap-2 break-all text-sm font-semibold text-secondary hover:underline"><Mail className="size-4 shrink-0" aria-hidden="true" /> {emailDisplay}</a></div>
           </div>
         </section>
-      <CityStandardBlocks cityName="Araraquara" />
+      <CityStandardBlocks cityName="Araraquara" hideTransparency />
       </main>
 
 

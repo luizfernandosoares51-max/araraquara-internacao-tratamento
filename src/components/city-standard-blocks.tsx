@@ -5,7 +5,7 @@ import { institutionalIdentity } from "@/lib/institutional";
 const linkClass = "inline-flex min-h-11 items-center font-semibold text-primary underline underline-offset-4";
 
 /** Blocos padronizados das páginas de cidade: modalidades, transparência e malha de links. */
-export function CityStandardBlocks({ cityName }: { cityName: string }) {
+export function CityStandardBlocks({ cityName, hideTransparency = false }: { cityName: string; hideTransparency?: boolean }) {
   const { cnpj, fullAddress, ownership, psychologyResponsible, generalCoordination } = institutionalIdentity;
   return (
     <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
@@ -18,7 +18,7 @@ export function CityStandardBlocks({ cityName }: { cityName: string }) {
         <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">O CAPS de {cityName} segue como porta pública de cuidado em saúde mental. Em risco imediato à vida, ligue para o SAMU 192 antes de qualquer contato com a Central.</p>
       </section>
 
-      <section aria-labelledby="transparencia-cidade" className="border-b border-border py-10 sm:py-12">
+      <section hidden={hideTransparency} aria-labelledby="transparencia-cidade" className="border-b border-border py-10 sm:py-12">
         <div className="flex items-center gap-2 text-secondary"><ShieldCheck className="size-5" aria-hidden="true" /><p className="text-xs font-semibold uppercase">Transparência e responsabilidade</p></div>
         <h2 id="transparencia-cidade" className="mt-3 font-display text-2xl font-semibold sm:text-3xl">Quem orienta as famílias de {cityName}</h2>
         <dl className="mt-5 grid gap-4 text-sm sm:grid-cols-2">
