@@ -134,6 +134,26 @@ function HomePage() {
           <p className="mt-4 text-xs leading-relaxed text-muted-foreground">Dados de registro informados pela instituição.</p>
         </section>
 
+        <section aria-labelledby="equipe-titulo" className="border-t border-border py-8 sm:py-10">
+          <h2 id="equipe-titulo" className="font-display text-2xl font-semibold sm:text-3xl">Equipe Técnica e Médica</h2>
+          <ul className="mt-5 grid grid-cols-2 gap-3 lg:grid-cols-4">
+            {[
+              { area: "Psicologia", name: "Margareth C. V. Moraes", reg: "CRP 06/130268", role: "Psicoterapia individual, em grupo e suporte familiar.", icon: HeartHandshake },
+              { area: "Enfermagem", name: "Isabelly Leticia Rosa", reg: "COREN-SP 788016", role: "Supervisão 24h, triagem e controle medicamentoso.", icon: ShieldCheck },
+              { area: "Psiquiatria", name: "Dr. Mayrton Mascaro Jr.", reg: "CRM-SP 119.473", role: "Avaliação diagnóstica e estabilização clínica.", icon: ClipboardCheck },
+              { area: "Terapia", name: "Darlan Jorge da Silva", reg: "CRT-SP 299/17", role: "Metodologia dos 12 Passos e prevenção de recaída.", icon: Users },
+            ].map(({ area, name, reg, role, icon: Icon }) => (
+              <li key={area} className="flex h-full flex-col items-center rounded-lg border border-border bg-card p-3 text-center text-card-foreground">
+                <span className="flex size-16 items-center justify-center rounded-full bg-secondary/15 text-secondary"><Icon className="size-7" aria-hidden="true" /></span>
+                <p className="mt-2 text-xs font-semibold uppercase text-secondary">{area}</p>
+                <h3 className="mt-1 text-sm font-semibold leading-tight">{name}</h3>
+                <span className="mt-1 rounded-full bg-muted px-2 py-0.5 text-xs font-medium">{reg}</span>
+                <p className="mt-2 text-xs leading-snug text-muted-foreground">{role}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+
 
 
         <section id="servicos" aria-label="Serviços de acolhimento e encaminhamento" className="border-t border-border py-10 sm:py-12">
