@@ -123,13 +123,13 @@ function HomePage() {
         <section aria-labelledby="conformidade-titulo" className="border-t border-border py-10 sm:py-12">
           <h2 id="conformidade-titulo" className="font-display text-2xl font-semibold text-primary sm:text-3xl">Conformidade Legal, Sanitária e Responsabilidade Técnica</h2>
           <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">A Central de Acolhimento e Reabilitação atua em articulação com unidade física de acolhimento e internação devidamente licenciada e fiscalizada pelos órgãos competentes do Estado de São Paulo.</p>
-          <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
+          <div className="mt-5 grid grid-cols-2 gap-3 lg:grid-cols-4">
             {[
-              { label: "Registro Empresarial", value: `CNPJ ${institutionalIdentity.cnpj}`, text: "Inscrição Matriz com atividade principal em Assistência Psicossocial e Saúde a portadores de dependência química e distúrbios psíquicos (CNAE 87.20-4-99).", icon: Building2 },
-              { label: "Vigilância Sanitária", value: "CEVS 350320802-872-00014-1-4", text: "Licença de Funcionamento Sanitário deferida pelo Sistema Estadual de Vigilância Sanitária (Prefeitura Municipal de Araraquara/SP).", icon: ShieldCheck },
-              { label: "Corpo de Bombeiros SP", value: "AVCB Nº 723305", text: "Auto de Vistoria do Corpo de Bombeiros da Polícia Militar do Estado de São Paulo aprovado para 1.275,09 m² de área estruturada.", icon: Flame },
-              { label: "Responsabilidade Técnica", value: `Psicologia Clínica - ${institutionalIdentity.psychologyResponsible.registration}`, text: "Supervisão técnica terapêutica sob direção clínica profissional, em rigoroso cumprimento das diretrizes de acolhimento e direitos do paciente.", icon: UserCheck },
-            ].map(({ label, value, text, icon: Icon }) => <article key={label} className="rounded-lg border border-border bg-card p-5 text-card-foreground"><div className="flex items-center gap-3 text-secondary"><Icon className="size-6 shrink-0" aria-hidden="true" /><p className="text-xs font-semibold uppercase">{label}</p></div><p className="mt-4 font-display text-lg font-semibold text-primary">{value}</p><p className="mt-3 text-sm leading-relaxed text-muted-foreground">{text}</p></article>)}
+              { label: "Registro CNPJ", value: institutionalIdentity.cnpj, text: "Matriz ativa em Saúde e Assistência Psicossocial (CNAE 87.20-4).", icon: Building2 },
+              { label: "Vigilância Sanitária", value: "CEVS 350320802", text: "Licença de Funcionamento Sanitário deferida em Araraquara/SP.", icon: ShieldCheck },
+              { label: "Bombeiros SP", value: "AVCB Nº 723305", text: "Vistoria aprovada para 1.275 m² de infraestrutura segura.", icon: Flame },
+              { label: "Direção Clínica", value: "CRP 06/130268", text: "Supervisão técnica terapêutica em psicologia clínica.", icon: UserCheck },
+            ].map(({ label, value, text, icon: Icon }) => <article key={label} className="flex h-full flex-col items-center rounded-lg border border-border bg-card p-3 text-center text-card-foreground"><span className="flex size-12 items-center justify-center rounded-full bg-secondary/15 text-secondary"><Icon className="size-6" aria-hidden="true" /></span><p className="mt-2 text-xs font-semibold uppercase text-secondary">{label}</p><p className="mt-1 break-words text-sm font-semibold text-primary">{value}</p><p className="mt-2 text-xs leading-snug text-muted-foreground">{text}</p></article>)}
           </div>
           <p className="mt-4 text-xs leading-relaxed text-muted-foreground">Dados de registro informados pela instituição.</p>
         </section>
