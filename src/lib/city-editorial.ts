@@ -239,9 +239,22 @@ export const cityEditorial: Record<string, CityEditorial> = {
   },
 };
 
+const cityMetadataOverrides: Record<string, { title: string; description: string }> = {
+  "itapolis-sp": {
+    title: "Clínica de Recuperação para Itápolis - SP | Atendimento 24h (Unidade Araraquara)",
+    description: "Tratamento especializado em dependência química, alcoolismo e saúde mental para famílias de Itápolis - SP. Unidade física estruturada na vizinha Araraquara com suporte e resgate 24h.",
+  },
+  "jaboticabal-sp": {
+    title: "Clínica de Recuperação para Jaboticabal - SP | Triagem e Suporte 24h",
+    description: "Acolhimento humanizado e equipe multidisciplinar para moradores de Jaboticabal - SP. Acolhimento voluntário na sede em Araraquara e orientação sobre internação involuntária. Plantão 24h.",
+  },
+};
+
 export function cityEditorialMetadata(slug: string) {
   const editorial = cityEditorial[slug];
   if (!editorial) throw new Error("City editorial not registered");
+  const override = cityMetadataOverrides[slug];
+  if (override) return override;
   return {
     title: slug === "araraquara"
       ? "Clínica de Recuperação em Araraquara - SP | Acolhimento e Vagas 24h"

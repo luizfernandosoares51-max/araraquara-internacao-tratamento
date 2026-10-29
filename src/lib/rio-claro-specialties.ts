@@ -81,8 +81,8 @@ export const rioClaroSpecialties: Record<SpecialtyKey, Specialty> = {
   },
   involuntary: {
     key: 'involuntary', path: '/internacao-involuntaria-rio-claro', label: 'Internação Involuntária', summary: 'Pedido, avaliação médica e fiscalização.',
-    title: 'Internação Involuntária em Rio Claro - SP | Orientação e Direitos',
-    description: 'Informação para famílias de Rio Claro sobre pedido, avaliação e fiscalização da internação involuntária. Leis 10.216/2001 e 13.840/2019; cuidado médico externo.',
+    title: 'Internação Involuntária em Rio Claro - SP | Plantão 24h e Amparo Legal',
+    description: 'Precisa de ajuda urgente em Rio Claro? Orientação familiar 24h sobre internação involuntária com respaldo médico e legal (Lei 13.840). Resgate seguro e acolhimento humanizado.',
     heading: 'Internação involuntária em Rio Claro: orientação à família',
     intro: 'Quando a família está diante de uma crise, precisa de informação e avaliação, não de uma promessa de internação. A Central orienta famílias de Rio Claro sobre trâmites e encaminhamentos médicos externos; a sede própria em Araraquara recebe acolhimento voluntário psicossocial e não interna sem consentimento.',
     notice: 'Não se presume que internação seja o único recurso. A decisão exige avaliação médica e critérios legais; risco imediato pede urgência ou SAMU 192, não remoção coercitiva informal.',
