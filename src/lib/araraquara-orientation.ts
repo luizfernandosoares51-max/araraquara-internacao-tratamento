@@ -16,7 +16,7 @@ export const araraquaraOrientationFaqs = [
   },
   {
     question: "Como funciona o período de permanência e acolhimento?",
-    answer: "O plano de cuidado é individualizado e considera a avaliação psicológica e o suporte psicossocial com Margarete Vasques (CRP 06/130268). O período de permanência é acompanhado e reavaliado conforme as necessidades de cada pessoa, sem prazo fixo ou garantia de resultado. Cuidados médicos, quando indicados, são encaminhados a estabelecimentos habilitados; o acolhimento voluntário na Central não equivale a internação hospitalar.",
+    answer: "O plano de cuidado é individualizado e considera a avaliação psicológica e o suporte psicossocial com Margareth C. V. Moraes (CRP 06/130268). O período de permanência é acompanhado e reavaliado conforme as necessidades de cada pessoa, sem prazo fixo ou garantia de resultado. Cuidados médicos, quando indicados, são encaminhados a estabelecimentos habilitados; o acolhimento voluntário na Central não equivale a internação hospitalar.",
   },
   {
     question: "Como é o contato direto com a sede física em Araraquara?",

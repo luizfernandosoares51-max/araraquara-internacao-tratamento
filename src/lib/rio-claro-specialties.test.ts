@@ -11,7 +11,7 @@ test('own seat does not provide involuntary clinical hospitalization', () => ass
 test('regional removal requires appointment', () => assert.equal(specialtyScope.transport.byAppointment, true));
 test('regional removal is not advertised as 24 hours', () => assert.equal(specialtyScope.transport.roundTheClock, false));
 test('psychology remains attributed to Margarete and her confirmed CRP', () => {
-  assert.equal(specialtyScope.psychology.name, 'Margarete Vasques');
+  assert.equal(specialtyScope.psychology.name, 'Margareth C. V. Moraes');
   assert.equal(specialtyScope.psychology.registration, 'CRP 06/130268');
 });
 test('operational coordination remains Luiz Fernando Soares', () => assert.equal(specialtyScope.coordination.name, 'Luiz Fernando Soares'));

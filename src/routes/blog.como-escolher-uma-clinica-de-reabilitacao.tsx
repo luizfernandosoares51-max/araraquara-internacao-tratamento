@@ -57,7 +57,7 @@ function Page() {
     ]}
     related={[
       { to: "/clinica-de-reabilitacao", label: "Entenda a clínica de reabilitação", description: "Conheça finalidades e modalidades antes de comparar opções." },
-      { to: "/familia", label: "Orientação para familiares", description: "Organize a busca de ajuda com informação e limites." },
+      { to: "/clinica-de-recuperacao-em-araraquara", label: "Orientação para familiares", description: "Organize a busca de ajuda com informação e limites." },
       { to: "/cidades", label: "Orientação por cidade", description: "Encontre conteúdos regionais e caminhos para contato." },
       { to: "/blog/como-funciona-uma-clinica-de-reabilitacao", label: "Como funciona uma clínica", description: "Entenda etapas e rotina para fazer perguntas melhores." },
       { to: "/blog/dependencia-quimica-em-araraquara-tratamento", label: "Critérios de segurança", description: "Veja orientações detalhadas sobre verificação e documentação." },

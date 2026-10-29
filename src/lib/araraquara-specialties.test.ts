@@ -8,7 +8,7 @@ test("transport requires appointment", () => assert.equal(specialtyScope.transpo
 test("transport does not acquire 24-hour availability", () => assert.equal(specialtyScope.transport.roundTheClock, false));
 test("transport scope remains Araraquara and neighboring cities", () => assert.equal(specialtyScope.transport.area, "Araraquara e municípios vizinhos"));
 test("psychology registration remains linked to Margarete", () => {
-  assert.equal(specialtyScope.psychology.name, "Margarete Vasques");
+  assert.equal(specialtyScope.psychology.name, "Margareth C. V. Moraes");
   assert.equal(specialtyScope.psychology.registration, "CRP 06/130268");
 });
 test("regional transport retains Luiz Fernando Soares as coordinator", () => assert.equal(specialtyScope.coordination.name, "Luiz Fernando Soares"));

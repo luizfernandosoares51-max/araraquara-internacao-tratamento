@@ -31,7 +31,7 @@ export const rioClaroSpecialties: Record<SpecialtyKey, Specialty> = {
         'A necessidade de monitoramento, tratamento e local de atendimento é definida pela equipe médica. Alguns casos exigem cuidados hospitalares, mas não se pode afirmar que todos sigam o mesmo protocolo ou prazo. A Central oferece articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar com supervisão diária e cuidados contínuos na sede. Desintoxicação médica e necessidades hospitalares seguem encaminhamento ao serviço habilitado adequado.'
       ] },
       { title: 'Cuidar dos vínculos além da interrupção do consumo', paragraphs: [
-        'Uma etapa médica, quando necessária, não encerra todas as questões associadas ao álcool. Comunicação, hábitos e formas de pedir apoio podem ser trabalhados no plano psicossocial. A proposta informada pela Central inclui suporte psicológico de Margarete Vasques, CRP 06/130268, 12 Passos, laborterapia, convivência e prevenção à recaída.',
+        'Uma etapa médica, quando necessária, não encerra todas as questões associadas ao álcool. Comunicação, hábitos e formas de pedir apoio podem ser trabalhados no plano psicossocial. A proposta informada pela Central inclui suporte psicológico de Margareth C. V. Moraes, CRP 06/130268, 12 Passos, laborterapia, convivência e prevenção à recaída.',
         'A família pode apoiar sem controlar cada decisão ou assumir sozinha o resultado. Na preparação de visitas de Rio Claro à sede em Araraquara, converse sobre objetivos e horários agendados. Organizar o deslocamento deve vir depois da avaliação da segurança e da confirmação das condições de acolhimento, não como resposta improvisada à abstinência.'
       ] },
       { title: 'Planejar a continuidade perto da família', paragraphs: [
@@ -61,7 +61,7 @@ export const rioClaroSpecialties: Record<SpecialtyKey, Specialty> = {
       ] },
       { title: 'Fissura não tem um relógio igual para todos', paragraphs: [
         'O desejo intenso de consumir pode reaparecer em diferentes momentos. Emoções, lugares e relações podem estar associados ao uso; reconhecer esses contextos com profissionais permite discutir respostas possíveis. Não há tempo fixo de estabilização nem garantia de eliminar a fissura ao mudar de município.',
-        'O apoio psicológico informado pela Central é de Margarete Vasques, CRP 06/130268. A proposta reúne 12 Passos, convivência, laborterapia e prevenção à recaída. Psicoterapia cognitiva e reabilitação neuropsicológica específicas não são anunciadas como serviços próprios porque não foram confirmadas. O articulação médica e psiquiátrica com serviços parceiros credenciados participa da avaliação clínica e do manejo de comorbidades; prescrições e condutas cabem aos profissionais responsáveis.'
+        'O apoio psicológico informado pela Central é de Margareth C. V. Moraes, CRP 06/130268. A proposta reúne 12 Passos, convivência, laborterapia e prevenção à recaída. Psicoterapia cognitiva e reabilitação neuropsicológica específicas não são anunciadas como serviços próprios porque não foram confirmadas. O articulação médica e psiquiátrica com serviços parceiros credenciados participa da avaliação clínica e do manejo de comorbidades; prescrições e condutas cabem aos profissionais responsáveis.'
       ] },
       { title: 'Afastamento temporário com consentimento e propósito', paragraphs: [
         'Um período de acolhimento em Araraquara pode permitir que a pessoa discuta hábitos e relações em outro contexto, quando indicado e aceito. Isso não é isolamento forçado nem solução automática para gatilhos que também poderão existir no retorno a Rio Claro. A decisão precisa considerar saúde, direitos e necessidades individuais.',
@@ -75,7 +75,7 @@ export const rioClaroSpecialties: Record<SpecialtyKey, Specialty> = {
     steps: [ { title: 'Identificar necessidades', text: 'Considere saúde e comportamento sem diagnóstico remoto.' }, { title: 'Discutir estratégias', text: 'Fissura e situações associadas ao uso entram no plano profissional.' }, { title: 'Planejar convivência', text: 'Construa apoios para continuidade em Rio Claro.' } ],
     faqs: [
       { question: 'Em quanto tempo a fissura por cocaína ou crack se estabiliza?', answer: 'Não há prazo fixo. Frequência e intensidade variam conforme a pessoa e seu contexto; acompanhamento e reavaliação orientam o plano. A mudança de ambiente não garante interrupção da fissura.' },
-      { question: 'Qual apoio psicológico é informado pela Central?', answer: 'A instituição informa suporte psicológico com Margarete Vasques, CRP 06/130268, integrado ao acolhimento voluntário em Araraquara. Não anuncia psicoterapia cognitiva específica ou reabilitação neuropsicológica não confirmadas.' },
+      { question: 'Qual apoio psicológico é informado pela Central?', answer: 'A instituição informa suporte psicológico com Margareth C. V. Moraes, CRP 06/130268, integrado ao acolhimento voluntário em Araraquara. Não anuncia psicoterapia cognitiva específica ou reabilitação neuropsicológica não confirmadas.' },
       { question: 'Como a família de Rio Claro pode ajudar sem aumentar o conflito?', answer: 'Procure diálogo respeitoso e apoios previstos no plano profissional. Evite ameaças, punições, sedação e contenção improvisadas. Em risco imediato ou sintomas graves, busque urgência ou SAMU 192.' }
     ]
   },
@@ -124,7 +124,7 @@ export const rioClaroSpecialties: Record<SpecialtyKey, Specialty> = {
         'Para moradores de Rio Claro, a preparação também envolve organizar responsabilidades, vínculos e deslocamento. Converse com a coordenação antes de viajar. A admissão depende da avaliação, da compatibilidade com o suporte e da disponibilidade; um contato inicial não confirma permanência ou reserva de vaga.'
       ] },
       { title: 'Construir metas que façam sentido para a pessoa', paragraphs: [
-        'O plano individual pode discutir hábitos, situações relacionadas ao consumo e maneiras de pedir apoio. Metas precisam considerar recursos e dificuldades reais, não uma lista de conquistas igual para todos. O suporte psicológico informado é de Margarete Vasques, CRP 06/130268, em conjunto com articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar com supervisão diária e cuidados contínuos.',
+        'O plano individual pode discutir hábitos, situações relacionadas ao consumo e maneiras de pedir apoio. Metas precisam considerar recursos e dificuldades reais, não uma lista de conquistas igual para todos. O suporte psicológico informado é de Margareth C. V. Moraes, CRP 06/130268, em conjunto com articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar com supervisão diária e cuidados contínuos.',
         '12 Passos, laborterapia, convivência terapêutica e prevenção à recaída integram a proposta institucional. Trabalhar emoções e relações não equivale a garantir inteligência emocional ou eliminar conflitos. A evolução pede acompanhamento e revisão das prioridades, sem prazo universal de recuperação.'
       ] },
       { title: 'Rotina e comunicação com quem ficou em Rio Claro', paragraphs: [
@@ -188,7 +188,7 @@ export const rioClaroSpecialties: Record<SpecialtyKey, Specialty> = {
         'Questões como saúde reprodutiva, gestação, ansiedade, depressão e histórico de violência pedem avaliação por profissionais habilitados. A Central não realiza atendimento médico próprio; essas necessidades são encaminhadas a serviços parceiros credenciados ou à rede pública conforme cada caso.'
       ] },
       { title: 'Privacidade e escuta qualificada', paragraphs: [
-        'Compartilhe no contato oficial somente as informações necessárias. A conversa inicial serve para entender a situação e as condições do acolhimento, sem exposição pública. O suporte psicológico informado pela instituição é de Margarete Vasques, CRP 06/130268, integrado à equipe multidisciplinar.',
+        'Compartilhe no contato oficial somente as informações necessárias. A conversa inicial serve para entender a situação e as condições do acolhimento, sem exposição pública. O suporte psicológico informado pela instituição é de Margareth C. V. Moraes, CRP 06/130268, integrado à equipe multidisciplinar.',
         'Pergunte diretamente como são organizados os espaços, a convivência e a rotina. Não se anunciam alas, estruturas ou equipes exclusivas não confirmadas; a coordenação esclarece o que é compatível antes de qualquer decisão.'
       ] },
       { title: 'Filhos, trabalho e vínculos durante o cuidado', paragraphs: [
@@ -302,7 +302,7 @@ export const rioClaroSpecialties: Record<SpecialtyKey, Specialty> = {
         'Procure um momento tranquilo, ouça mais do que fale e evite ameaças. O vínculo com o jovem é um dos recursos mais importantes da família.'
       ] },
       { title: 'Acolhimento da família e suporte psicossocial', paragraphs: [
-        'Pais e responsáveis também precisam de orientação para combinar limites, cuidar de si e evitar culpa excessiva. O suporte psicológico informado pela instituição é de Margarete Vasques, CRP 06/130268.',
+        'Pais e responsáveis também precisam de orientação para combinar limites, cuidar de si e evitar culpa excessiva. O suporte psicológico informado pela instituição é de Margareth C. V. Moraes, CRP 06/130268.',
         'Quando houver sintomas de ansiedade, depressão ou outras condições, a avaliação é feita por profissionais habilitados parceiros ou pela rede pública de Rio Claro.'
       ] },
       { title: 'Prevenção à recaída, estudos e reinserção', paragraphs: [

@@ -17,7 +17,7 @@ export const institutionalIdentity = {
   generalCoordination: { name: "Luiz Fernando Soares", role: "Coordenação Geral / Operacional" },
   medicalResponsible: null,
   psychologyResponsible: {
-    name: "Margarete Vasques",
+    name: "Margareth C. V. Moraes",
     registration: "CRP 06/130268",
     role: "Responsável Técnica Psicóloga",
   },

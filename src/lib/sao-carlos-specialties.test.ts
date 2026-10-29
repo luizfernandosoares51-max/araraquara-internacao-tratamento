@@ -14,8 +14,8 @@ test('medical detox remains outside the own unit', () => assert.equal(specialtyS
 test('involuntary clinical admission remains outside the own unit', () => assert.equal(specialtyScope.ownUnitInvoluntaryHospitalization, false));
 test('regional transport still requires appointment', () => assert.equal(specialtyScope.transport.byAppointment, true));
 test('regional transport does not imply 24-hour service', () => assert.equal(specialtyScope.transport.roundTheClock, false));
-test('psychology registration remains attributed to Margarete Vasques', () => {
-  assert.equal(specialtyScope.psychology.name, 'Margarete Vasques');
+test('psychology registration remains attributed to Margareth C. V. Moraes', () => {
+  assert.equal(specialtyScope.psychology.name, 'Margareth C. V. Moraes');
   assert.equal(specialtyScope.psychology.registration, 'CRP 06/130268');
 });
 test('transport coordination remains Luiz Fernando Soares', () => assert.equal(specialtyScope.coordination.name, 'Luiz Fernando Soares'));

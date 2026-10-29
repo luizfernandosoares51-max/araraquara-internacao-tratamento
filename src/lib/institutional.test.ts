@@ -13,7 +13,7 @@ test("network declaration does not verify individual sanitary licenses", () => a
 test("network declaration does not establish physicians available 24h", () => assert.equal(institutionalNetwork.roundTheClockPhysiciansVerified, false));
 
 test("preserves the psychologist and exact CRP confirmed by the institution", () => {
-  assert.equal(institutionalIdentity.psychologyResponsible.name, "Margarete Vasques");
+  assert.equal(institutionalIdentity.psychologyResponsible.name, "Margareth C. V. Moraes");
   assert.equal(institutionalIdentity.psychologyResponsible.registration, "CRP 06/130268");
   assert.equal(institutionalIdentity.psychologyResponsible.role, "Responsável Técnica Psicóloga");
 });
