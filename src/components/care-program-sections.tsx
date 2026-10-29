@@ -23,7 +23,7 @@ export function CareSpecialties() {
       <article className="min-w-0 rounded-lg border border-border bg-card p-3 sm:p-6">
         <Sprout className="size-6 text-secondary" aria-hidden="true" />
         <h3 className="mt-3 font-display text-sm font-semibold leading-snug sm:text-xl">Reabilitação psicossocial na unidade</h3>
-        <p className="mt-2 text-xs leading-snug text-muted-foreground sm:text-sm sm:leading-relaxed">Suporte psicológico com Margarete Vasques (CRP 06/130268), conscientização em 12 Passos, laborterapia, convivência terapêutica e plano de prevenção à recaída integram a proposta confirmada pela instituição.</p>
+        <p className="mt-2 text-xs leading-snug text-muted-foreground sm:text-sm sm:leading-relaxed">Suporte psicológico com Margareth C. V. Moraes (CRP 06/130268), conscientização em 12 Passos, laborterapia, convivência terapêutica e plano de prevenção à recaída integram a proposta confirmada pela instituição.</p>
         <Button asChild variant="link" className="mt-2 h-auto min-h-12 whitespace-normal px-0 text-left text-xs sm:text-sm"><Link to="/transparencia">Conhecer a responsabilidade técnica <ArrowRight aria-hidden="true" /></Link></Button>
       </article>
       <article className="min-w-0 rounded-lg border border-border bg-card p-3 sm:p-6">
@@ -58,7 +58,7 @@ function CareMethodology() {
     </div>
     <div className="mt-7 border-l-2 border-accent pl-5">
       <h3 className="font-display text-lg font-semibold">Estrutura de acolhimento multidisciplinar</h3>
-      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">O suporte psicológico especializado é conduzido por Margarete Vasques (CRP 06/130268), com foco em suporte emocional, manejo comportamental e acolhimento. Luiz Fernando Soares lidera a coordenação operacional, a organização da rotina terapêutica e o apoio às famílias. O articulação médica e psiquiátrica com serviços parceiros credenciados contempla avaliação clínica, estabilização e manejo de comorbidades. A equipe multidisciplinar na unidade realiza supervisão diária e cuidados contínuos dos acolhidos. Conscientização em 12 Passos, PPR, laborterapia e convivência terapêutica integram o planejamento de autonomia e reinserção social.</p>
+      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">O suporte psicológico especializado é conduzido por Margareth C. V. Moraes (CRP 06/130268), com foco em suporte emocional, manejo comportamental e acolhimento. Luiz Fernando Soares lidera a coordenação operacional, a organização da rotina terapêutica e o apoio às famílias. O articulação médica e psiquiátrica com serviços parceiros credenciados contempla avaliação clínica, estabilização e manejo de comorbidades. A equipe multidisciplinar na unidade realiza supervisão diária e cuidados contínuos dos acolhidos. Conscientização em 12 Passos, PPR, laborterapia e convivência terapêutica integram o planejamento de autonomia e reinserção social.</p>
     </div>
     <Button asChild variant="link" className="mt-5 h-auto min-h-12 max-w-full whitespace-normal px-0 text-left"><Link to="/transparencia">Conhecer a equipe e a responsabilidade pelo cuidado <ArrowRight aria-hidden="true" /></Link></Button>
   </section>;

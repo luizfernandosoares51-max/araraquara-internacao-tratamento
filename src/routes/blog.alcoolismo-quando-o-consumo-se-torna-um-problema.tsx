@@ -52,8 +52,8 @@ function Page() {
     ]}
     related={[
       { to: "/clinica-de-reabilitacao", label: "Clínica de reabilitação", description: "Entenda quando um cuidado mais estruturado pode ser considerado." },
-      { to: "/tratamento", label: "Caminhos de tratamento", description: "Veja princípios do acompanhamento individualizado." },
-      { to: "/familia", label: "Orientação familiar", description: "Saiba como procurar ajuda e estabelecer limites." },
+      { to: "/clinica-de-recuperacao-em-araraquara", label: "Caminhos de tratamento", description: "Veja princípios do acompanhamento individualizado." },
+      { to: "/clinica-de-recuperacao-em-araraquara", label: "Orientação familiar", description: "Saiba como procurar ajuda e estabelecer limites." },
       { to: "/blog/como-saber-se-uma-pessoa-precisa-de-uma-clinica-de-reabilitacao", label: "Quando considerar uma clínica", description: "Observe prejuízos e critérios para buscar avaliação." },
     ]}
   />;

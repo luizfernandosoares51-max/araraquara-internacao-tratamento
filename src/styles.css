@@ -497,3 +497,10 @@ body:has(.campaign-page) { --central-vlibras-bottom: calc(11rem + env(safe-area-
   content-visibility: auto;
   contain-intrinsic-size: auto 900px;
 }
+
+/* Mobile: a leftover odd card in a 2-column grid spans the full row instead of sitting alone. */
+@media (max-width: 639px) {
+  main .grid-cols-2 > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}

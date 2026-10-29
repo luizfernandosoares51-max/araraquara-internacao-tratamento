@@ -312,8 +312,8 @@ function RehabilitationClinicPage() {
               ))}
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/tratamento" className="inline-flex items-center gap-2 font-semibold text-primary hover:underline">Entenda mais sobre tratamento <ArrowRight className="size-4" aria-hidden="true" /></Link>
-              <Link to="/acolhimento" className="inline-flex items-center gap-2 font-semibold text-primary hover:underline">Conheça o processo de acolhimento <ArrowRight className="size-4" aria-hidden="true" /></Link>
+              <Link to="/clinica-de-recuperacao-em-araraquara" hash="tratamento" className="inline-flex items-center gap-2 font-semibold text-primary hover:underline">Entenda mais sobre tratamento <ArrowRight className="size-4" aria-hidden="true" /></Link>
+              <Link to="/clinica-de-recuperacao-em-araraquara" hash="acolhimento" className="inline-flex items-center gap-2 font-semibold text-primary hover:underline">Conheça o processo de acolhimento <ArrowRight className="size-4" aria-hidden="true" /></Link>
             </div>
           </div>
         </section>
@@ -356,7 +356,7 @@ function RehabilitationClinicPage() {
               <Users className="size-7 text-secondary" aria-hidden="true" />
               <h2 className="mt-5 font-display text-3xl font-bold leading-tight">O papel da família no processo de recuperação</h2>
               <p className="mt-5 text-base leading-7 text-muted-foreground">A família não causa nem resolve sozinha a dependência. Ainda assim, pode ter participação importante ao buscar orientação, reconhecer limites, apoiar o tratamento e cuidar da própria saúde emocional. Conversas respeitosas e baseadas em fatos tendem a ser mais úteis do que acusações, ameaças ou promessas que não poderão ser mantidas.</p>
-              <Link to="/familia" className="mt-6 inline-flex items-center gap-2 font-semibold text-secondary hover:text-foreground">Ver orientações para famílias <ArrowRight className="size-4" aria-hidden="true" /></Link>
+              <Link to="/clinica-de-recuperacao-em-araraquara" hash="familia" className="mt-6 inline-flex items-center gap-2 font-semibold text-secondary hover:text-foreground">Ver orientações para famílias <ArrowRight className="size-4" aria-hidden="true" /></Link>
             </article>
             <article>
               <ShieldCheck className="size-7 text-secondary" aria-hidden="true" />

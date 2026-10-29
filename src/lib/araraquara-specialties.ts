@@ -48,7 +48,7 @@ export const araraquaraSpecialties: Record<AraraquaraSpecialtyKey, Specialty> = 
         "A segurança dessa etapa depende de avaliação médica, que define necessidade de monitoramento, local de atendimento e condutas. A Central reúne articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar com supervisão diária e cuidados contínuos. Quando há indicação de desintoxicação médica ou assistência hospitalar, orienta o encaminhamento ao estabelecimento habilitado adequado. Protocolos de desintoxicação, prescrições e alta são responsabilidade da equipe do serviço externo, não da unidade de acolhimento psicossocial.",
       ] },
       { title: "Reconstrução emocional e continuidade do cuidado", paragraphs: [
-        "Depois de avaliadas as necessidades médicas, o cuidado psicossocial pode ajudar a reconhecer situações associadas ao consumo, reorganizar hábitos e trabalhar relações. Na proposta informada pela Central, suporte psicológico com Margarete Vasques (CRP 06/130268), conscientização em 12 Passos, laborterapia e convivência terapêutica compõem o acolhimento voluntário.",
+        "Depois de avaliadas as necessidades médicas, o cuidado psicossocial pode ajudar a reconhecer situações associadas ao consumo, reorganizar hábitos e trabalhar relações. Na proposta informada pela Central, suporte psicológico com Margareth C. V. Moraes (CRP 06/130268), conscientização em 12 Passos, laborterapia e convivência terapêutica compõem o acolhimento voluntário.",
         "O plano de prevenção à recaída considera sinais de alerta, recursos de apoio e continuidade após o acolhimento. Uma recaída não define o valor da pessoa: exige reavaliação do cuidado e atenção à segurança. Não há prazo universal, promessa de cura ou garantia de que uma única passagem por acolhimento resolverá todas as necessidades.",
       ] },
       { title: "A família participa sem assumir o papel da equipe", paragraphs: [
@@ -157,7 +157,7 @@ export const araraquaraSpecialties: Record<AraraquaraSpecialtyKey, Specialty> = 
       ] },
       { title: "Construir metas com participação da pessoa", paragraphs: [
         "O plano individual considera a história, as dificuldades e os recursos da pessoa. Reconhecer padrões de consumo, organizar hábitos e trabalhar vínculos podem ser objetivos, mas não são metas idênticas para todos. A avaliação psicológica e a evolução do acompanhamento ajudam a discutir prioridades sem estabelecer prazo de cura.",
-        "Na proposta confirmada pela instituição, Margarete Vasques (CRP 06/130268) atua no suporte psicológico. Conscientização em 12 Passos, laborterapia, convivência terapêutica e prevenção à recaída integram a rotina. O articulação médica e psiquiátrica com serviços parceiros credenciados e a equipe multidisciplinar complementam essa rotina. Medicamentos e condutas seguem orientação dos profissionais responsáveis; técnicas específicas devem ser discutidas na avaliação individual.",
+        "Na proposta confirmada pela instituição, Margareth C. V. Moraes (CRP 06/130268) atua no suporte psicológico. Conscientização em 12 Passos, laborterapia, convivência terapêutica e prevenção à recaída integram a rotina. O articulação médica e psiquiátrica com serviços parceiros credenciados e a equipe multidisciplinar complementam essa rotina. Medicamentos e condutas seguem orientação dos profissionais responsáveis; técnicas específicas devem ser discutidas na avaliação individual.",
       ] },
       { title: "Rotina, autoestima e convivência", paragraphs: [
         "A rotina informada vai das 07h às 22h em períodos definidos para organização pessoal, alimentação, conscientização, apoio psicológico, atividades ao ar livre, partilha e repouso. A participação considera o plano e a avaliação da equipe. Não se trata de impor um desempenho igual a todos ou de associar uma atividade a um resultado garantido.",
@@ -230,7 +230,7 @@ export const araraquaraSpecialties: Record<AraraquaraSpecialtyKey, Specialty> = 
         "Situações de violência doméstica, ameaça ou risco à integridade são tratadas como prioridade de proteção, com orientação para a rede pública especializada, como o Disque 180 e a Delegacia de Defesa da Mulher.",
       ] },
       { title: "Suporte multidisciplinar e emocional", paragraphs: [
-        "O acolhimento conta com equipe multidisciplinar e suporte psicológico com Margarete Vasques (CRP 06/130268). Temas como maternidade, culpa, luto e experiências traumáticas podem ser acolhidos em escuta respeitosa; quando há necessidade de tratamento médico ou psiquiátrico, a Central articula o encaminhamento a profissionais e serviços parceiros credenciados.",
+        "O acolhimento conta com equipe multidisciplinar e suporte psicológico com Margareth C. V. Moraes (CRP 06/130268). Temas como maternidade, culpa, luto e experiências traumáticas podem ser acolhidos em escuta respeitosa; quando há necessidade de tratamento médico ou psiquiátrico, a Central articula o encaminhamento a profissionais e serviços parceiros credenciados.",
         "Rotinas estruturadas, conscientização em 12 Passos, laborterapia, convivência terapêutica e um plano de prevenção à recaída compõem a proposta informada pela Central. Abordagens inspiradas em princípios cognitivo-comportamentais são apresentadas com caráter educativo, sem substituir psicoterapia individual com profissional habilitado.",
       ] },
       { title: "Família, filhos e reinserção", paragraphs: [
@@ -263,7 +263,7 @@ export const araraquaraSpecialties: Record<AraraquaraSpecialtyKey, Specialty> = 
         "Somente avaliação profissional define diagnóstico e gravidade. Quando há indicação, a Central articula avaliação médica ou psiquiátrica com profissionais e serviços parceiros credenciados; o CAPS também é porta pública de cuidado.",
       ] },
       { title: "Pilares do cuidado", paragraphs: [
-        "Avaliação inicial das necessidades por profissionais habilitados; suporte psicológico com Margarete Vasques (CRP 06/130268), com conteúdos educativos inspirados na abordagem cognitivo-comportamental sobre crenças de sorte, controle e recuperação de perdas; e redução do acesso digital, com bloqueio de aplicativos, sites e meios de pagamento.",
+        "Avaliação inicial das necessidades por profissionais habilitados; suporte psicológico com Margareth C. V. Moraes (CRP 06/130268), com conteúdos educativos inspirados na abordagem cognitivo-comportamental sobre crenças de sorte, controle e recuperação de perdas; e redução do acesso digital, com bloqueio de aplicativos, sites e meios de pagamento.",
         "Acolhimento familiar com reorganização financeira: controle compartilhado de cartões, renegociação de dívidas com orientação adequada e acordos de transparência. Quando há uso associado de álcool ou outras drogas, o acolhimento voluntário na sede de Araraquara pode ser avaliado.",
       ] },
     ],

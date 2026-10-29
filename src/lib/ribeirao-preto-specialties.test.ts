@@ -13,8 +13,8 @@ test('female unit is not confirmed', () => assert.equal(ribeiraoSpecialtyScope.f
 test('adolescent program is not confirmed', () => assert.equal(ribeiraoSpecialtyScope.adolescentProgramConfirmed, false));
 test('own psychiatric accompaniment is confirmed', () => assert.equal(ribeiraoSpecialtyScope.ownPsychiatryConfirmed, true));
 test('own medication detox is unavailable', () => assert.equal(ribeiraoSpecialtyScope.ownMedicationDetox, false));
-test('confirmed psychology remains Margarete Vasques CRP 06/130268', () => {
-  assert.equal(specialtyScope.psychology.name, 'Margarete Vasques');
+test('confirmed psychology remains Margareth C. V. Moraes CRP 06/130268', () => {
+  assert.equal(specialtyScope.psychology.name, 'Margareth C. V. Moraes');
   assert.equal(specialtyScope.psychology.registration, 'CRP 06/130268');
 });
 test('operational coordination remains Luiz Fernando Soares', () => assert.equal(specialtyScope.coordination.name, 'Luiz Fernando Soares'));

@@ -35,7 +35,7 @@ export const ribeiraoSpecialtyList = [
       {
         "title": "Reconstrução de vínculos e continuidade",
         "paragraphs": [
-          "O cuidado psicossocial pode discutir confiança, limites e formas de pedir apoio. A proposta institucional inclui suporte psicológico de Margarete Vasques, CRP 06/130268, 12 Passos, laborterapia, convivência e prevenção à recaída. Isso não representa promessa de cura ou de restauração imediata das relações.",
+          "O cuidado psicossocial pode discutir confiança, limites e formas de pedir apoio. A proposta institucional inclui suporte psicológico de Margareth C. V. Moraes, CRP 06/130268, 12 Passos, laborterapia, convivência e prevenção à recaída. Isso não representa promessa de cura ou de restauração imediata das relações.",
           "Planeje a participação da família de Ribeirão Preto e as visitas agendadas à sede. Antes do retorno, discuta acompanhamento indicado e apoios acessíveis perto de casa. Permanência, custos e condições precisam ser esclarecidos individualmente; não existe duração universal nem garantia de cobertura por plano."
         ]
       }
@@ -124,7 +124,7 @@ export const ribeiraoSpecialtyList = [
       },
       {
         "question": "Qual suporte psicológico a Central informa?",
-        "answer": "Suporte psicológico com Margarete Vasques, CRP 06/130268, no acolhimento voluntário em Araraquara, integrado à convivência, 12 Passos e prevenção à recaída."
+        "answer": "Suporte psicológico com Margareth C. V. Moraes, CRP 06/130268, no acolhimento voluntário em Araraquara, integrado à convivência, 12 Passos e prevenção à recaída."
       },
       {
         "question": "Mudar de Ribeirão Preto para acolhimento elimina os gatilhos?",
@@ -216,7 +216,7 @@ export const ribeiraoSpecialtyList = [
         "title": "Rotina com objetivos possíveis",
         "paragraphs": [
           "O cronograma informado vai das 07h às 22h e combina organização, alimentação, apoio psicológico, 12 Passos, laborterapia, atividades ao ar livre, convivência e repouso. A participação considera as necessidades individuais, sem exigir que todos alcancem metas idênticas no mesmo tempo.",
-          "O suporte psicológico confirmado é de Margarete Vasques, CRP 06/130268. Metas podem envolver hábitos, relações e estratégias de prevenção à recaída. A sede reúne articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar com supervisão diária e cuidados contínuos. A desintoxicação médica e as necessidades hospitalares recebem encaminhamento conforme avaliação."
+          "O suporte psicológico confirmado é de Margareth C. V. Moraes, CRP 06/130268. Metas podem envolver hábitos, relações e estratégias de prevenção à recaída. A sede reúne articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar com supervisão diária e cuidados contínuos. A desintoxicação médica e as necessidades hospitalares recebem encaminhamento conforme avaliação."
         ]
       },
       {
@@ -403,7 +403,7 @@ export const ribeiraoSpecialtyList = [
         "title": "Equipe multidisciplinar e coordenação do cuidado",
         "paragraphs": [
           "Quando existem necessidades clínicas, os profissionais responsáveis podem discutir acompanhamento integrado e continuidade. O manejo de medicamentos pertence ao médico prescritor; familiares não devem aumentar, suspender ou combinar remédios por iniciativa própria.",
-          "A Central informa suporte psicológico com Margarete Vasques, CRP 06/130268, em acolhimento voluntário psicossocial. A equipe inclui articulação médica e psiquiátrica com serviços parceiros credenciados para avaliação clínica, estabilização e manejo de comorbidades, além de equipe multidisciplinar com supervisão diária e cuidados contínuos. Necessidades hospitalares recebem encaminhamento adequado, conforme avaliação."
+          "A Central informa suporte psicológico com Margareth C. V. Moraes, CRP 06/130268, em acolhimento voluntário psicossocial. A equipe inclui articulação médica e psiquiátrica com serviços parceiros credenciados para avaliação clínica, estabilização e manejo de comorbidades, além de equipe multidisciplinar com supervisão diária e cuidados contínuos. Necessidades hospitalares recebem encaminhamento adequado, conforme avaliação."
         ]
       },
       {
@@ -589,7 +589,7 @@ export const ribeiraoSpecialtyList = [
     {
       "title": "Cuidado psicossocial e apoio médico",
       "paragraphs": [
-        "A rotina proposta na sede inclui suporte psicológico com Margarete Vasques, CRP 06/130268, convivência, 12 Passos e prevenção à recaída. Quando há indicação de avaliação psiquiátrica, ela é articulada com profissionais parceiros credenciados.",
+        "A rotina proposta na sede inclui suporte psicológico com Margareth C. V. Moraes, CRP 06/130268, convivência, 12 Passos e prevenção à recaída. Quando há indicação de avaliação psiquiátrica, ela é articulada com profissionais parceiros credenciados.",
         "Não há promessa de cura; o plano depende de avaliação individual."
       ]
     },

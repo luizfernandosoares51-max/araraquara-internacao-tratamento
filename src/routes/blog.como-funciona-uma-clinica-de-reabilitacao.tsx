@@ -132,8 +132,8 @@ function RehabilitationArticle() {
         <ul className="mt-5 space-y-4 leading-7 text-muted-foreground">
           <li><Link to="/clinica-de-reabilitacao" className="font-semibold text-secondary underline underline-offset-4">Guia central sobre clínica de reabilitação</Link> — visão integrada das possibilidades de cuidado.</li>
           <li><Link to="/blog/como-escolher-uma-clinica-de-reabilitacao" className="font-semibold text-secondary underline underline-offset-4">Como escolher uma clínica para um familiar</Link> — perguntas práticas sobre visita, equipe e contrato.</li>
-          <li><Link to="/acolhimento" className="font-semibold text-secondary underline underline-offset-4">Acolhimento e orientação inicial</Link> — informações para organizar o primeiro contato.</li>
-          <li><Link to="/familia" className="font-semibold text-secondary underline underline-offset-4">Orientação para familiares</Link> — apoio responsável e participação no cuidado.</li>
+          <li><Link to="/clinica-de-recuperacao-em-araraquara" hash="acolhimento" className="font-semibold text-secondary underline underline-offset-4">Acolhimento e orientação inicial</Link> — informações para organizar o primeiro contato.</li>
+          <li><Link to="/clinica-de-recuperacao-em-araraquara" hash="familia" className="font-semibold text-secondary underline underline-offset-4">Orientação para familiares</Link> — apoio responsável e participação no cuidado.</li>
           <li><Link to="/blog/alcoolismo-quando-o-consumo-se-torna-um-problema" className="font-semibold text-secondary underline underline-offset-4">Quando o consumo de álcool se torna um problema</Link> — sinais e riscos que merecem avaliação.</li>
           <li><Link to="/blog/dependencia-quimica-sinais-consequencias-tratamento" className="font-semibold text-secondary underline underline-offset-4">Dependência química: sinais, consequências e tratamento</Link> — aprofundamento dos impactos e caminhos de cuidado.</li>
         </ul>

@@ -76,7 +76,7 @@ function GamblingOrientationPage() {
           </section>
           <section className="py-10">
             <h2 className="font-display text-2xl font-semibold">Continue buscando informação segura</h2>
-            <div className="mt-5 flex flex-wrap gap-3"><Button asChild variant="outline" className="min-h-12"><Link to="/familia">Orientação para a família</Link></Button><Button asChild variant="outline" className="min-h-12"><Link to="/transparencia">Transparência e limites do atendimento</Link></Button></div>
+            <div className="mt-5 flex flex-wrap gap-3"><Button asChild variant="outline" className="min-h-12"><Link to="/clinica-de-recuperacao-em-araraquara" hash="familia">Orientação para a família</Link></Button><Button asChild variant="outline" className="min-h-12"><Link to="/transparencia">Transparência e limites do atendimento</Link></Button></div>
             <p className="mt-6 text-sm leading-relaxed text-muted-foreground">Referências públicas: <a href="https://www.gov.br/saude/pt-br/composicao/saes/desmad/raps" target="_blank" rel="noopener noreferrer" className="font-medium text-primary underline">Rede de Atenção Psicossocial — Ministério da Saúde</a> e <a href="https://www.gov.br/saude/pt-br/composicao/saes/samu-192/samu-192" target="_blank" rel="noopener noreferrer" className="font-medium text-primary underline">SAMU 192 — Ministério da Saúde</a>. Confirme o acesso aos serviços com a rede municipal.</p>
           </section>
         </div>
