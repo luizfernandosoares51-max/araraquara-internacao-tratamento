@@ -7,7 +7,7 @@ test("own unit cannot provide involuntary hospitalization", () => assert.equal(s
 test("transport requires appointment", () => assert.equal(specialtyScope.transport.byAppointment, true));
 test("transport does not acquire 24-hour availability", () => assert.equal(specialtyScope.transport.roundTheClock, false));
 test("transport scope remains Araraquara and neighboring cities", () => assert.equal(specialtyScope.transport.area, "Araraquara e municípios vizinhos"));
-test("psychology registration remains linked to Margarete", () => {
+test("psychology registration remains linked to Margareth", () => {
   assert.equal(specialtyScope.psychology.name, "Margareth C. V. Moraes");
   assert.equal(specialtyScope.psychology.registration, "CRP 06/130268");
 });

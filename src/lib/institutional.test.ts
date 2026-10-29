@@ -18,7 +18,7 @@ test("preserves the psychologist and exact CRP confirmed by the institution", ()
   assert.equal(institutionalIdentity.psychologyResponsible.role, "Responsável Técnica Psicóloga");
 });
 
-test("preserves Adelmo's ownership without attributing Margarete's CRP to him", () => {
+test("preserves Adelmo's ownership without attributing Margareth's CRP to him", () => {
   assert.equal(institutionalIdentity.ownership.name, "Adelmo João Antunes");
   assert.equal(institutionalIdentity.ownership.role, "Proprietário / Direção");
   assert.equal("registration" in institutionalIdentity.ownership, false);
