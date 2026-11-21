@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Aplicar metadados regionais dentro dos limites, links diretos na Home/Cidades, FAQ responsável sobre CAPS e contatos visíveis no celular; 281 testes aprovados, sete páginas-alvo e Araraquara conferidas no celular, FAQ/schema iguais nas 14 cidades e compilação OK. Sem publicação; dados do Search Console indisponíveis para comprovar posições e CTR.
+
 - [x] Cancelar painel de vagas conforme solicitado; não criar contas, autenticação ou armazenamento de disponibilidade.
 - [x] Manter consulta de vagas exclusivamente via WhatsApp oficial e triagem educativa; links com mensagem preparados, sem painel, login ou armazenamento; prévia validada e publicação autorizada solicitada.
 - [x] Otimizar SEO da Home com título até 60 caracteres, descrição até 155, canonical, links canônicos regionais e FAQ consistente no HTML inicial; 29 testes aprovados, computador/celular sem rolagem horizontal e compilação OK. Preservar Organization, sem tipos médicos/emergenciais ou imagens sociais fictícias.

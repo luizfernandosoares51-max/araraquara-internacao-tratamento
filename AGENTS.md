@@ -10,6 +10,7 @@
 <!-- LOVABLE:END -->
 
 - Keep city pages explicit with shared rendering and city-specific data to preserve stable, original URLs.
+- Share priority regional destinations, bounded search metadata and CAPS FAQ facts in a typed catalog; render contact actions before supporting copy so mobile visitors can contact the orientation service without delaying urgent public care.
 - Keep retired public city URLs as redirect-only routes excluded from the city catalog and sitemap, so legacy visits receive a permanent redirect without restoring retired content.
 - Use shared blog shells with route-specific metadata; keep Twelve Steps FAQs, regional links and contacts in a typed catalog so visible answers and schema agree.
 - Keep the blog's existing article inventory in one typed editorial catalog and render topic navigation with all article links in initial HTML, so categories improve discovery without empty archives or interaction-only indexing.

@@ -182,8 +182,8 @@ export const araraquaraSpecialties: Record<AraraquaraSpecialtyKey, Specialty> = 
   transport: {
     key: "transport", path: "/resgate-remocao-araraquara", label: "Resgate e Remoção Agendada",
     summary: "Translado regional com consulta prévia à coordenação.",
-    title: "Remoção e Translado Agendado em Araraquara | Orientação Familiar",
-    description: "Orientação sobre remoção e translado especializado agendado em Araraquara e municípios vizinhos. Orientação e suporte para agendamento 24h; execução conforme agenda e disponibilidade.",
+    title: "Resgate e Remoção em Araraquara | Orientação 24h",
+    description: "Orientação 24h para agendar resgate e remoção em Araraquara, com atenção à privacidade. Transporte conforme avaliação e agenda. Emergência: SAMU 192.",
     heading: "Remoção e translado agendado em Araraquara",
     intro: "Planejar um deslocamento para cuidado exige informação, avaliação e respeito à pessoa. A instituição informa suporte de remoção e translado especializado para Araraquara e municípios vizinhos, mediante agendamento com a coordenação operacional de Luiz Fernando Soares.",
     notice: "O plantão de orientação e o suporte para agendamento de resgate/remoção funcionam 24 horas; a execução do transporte depende da confirmação de agenda e condições. Em surto com risco imediato, alteração de consciência ou outra urgência, procure a rede de urgência ou ligue para o SAMU 192.",

@@ -1,3 +1,5 @@
+import { municipalCapsFaq } from "@/lib/regional-ctr";
+import { RegionalContactActions } from "@/components/regional-contact-actions";
 import { CityStandardBlocks } from "@/components/city-standard-blocks";
 import { cityContactLabel, cityWhatsappHref, regionalCityAccess } from "@/lib/regional-city-access";
 import { cityEditorialFaqs, cityEditorialMetadata } from "@/lib/city-editorial";
@@ -75,6 +77,7 @@ const transparencyCards = [
 ];
 
 const faqs = [
+  municipalCapsFaq("Araraquara"),
   { question: "Como funcionam as visitas da família?", answer: "As visitas acontecem em dias e horários agendados com a equipe, conforme o cronograma terapêutico, para preservar a rotina de cuidado e o vínculo familiar." },
   { question: "Como funciona a internação involuntária?", answer: "É uma medida excepcional prevista na Lei 13.840/2019. Exige avaliação e autorização médica e acontece somente em unidade de saúde habilitada, que comunica o Ministério Público em até 72 horas. A Central orienta a família no encaminhamento." },
   { question: "Como funciona o acolhimento voluntário?", answer: "Com a adesão da própria pessoa, o acolhimento ocorre na sede própria em Araraquara, com suporte psicossocial, 12 Passos, laborterapia, convivência terapêutica e prevenção à recaída, após avaliação individual e conforme disponibilidade de vaga." },
@@ -193,11 +196,12 @@ function AraraquaraPage() {
               <nav aria-label="Navegação estrutural" className="mb-7 text-xs text-muted-foreground">
                 <ol className="flex flex-wrap items-center gap-2"><li><Link to="/" className="hover:text-secondary">Início</Link></li><li aria-hidden="true">/</li><li><Link to="/cidades" className="hover:text-secondary">Cidades</Link></li><li aria-hidden="true">/</li><li aria-current="page" className="text-foreground">Araraquara</li></ol>
               </nav>
-              <Link to="/" className="mb-7 inline-flex min-h-11 items-center gap-2 rounded-lg border border-border bg-glass px-4 py-3 text-sm font-semibold transition-colors hover:bg-glass-strong hover:text-secondary">
+              <Link to="/" className="mb-7 hidden min-h-11 sm:inline-flex items-center gap-2 rounded-lg border border-border bg-glass px-4 py-3 text-sm font-semibold transition-colors hover:bg-glass-strong hover:text-secondary">
                 <ArrowLeft className="size-4" aria-hidden="true" /> Voltar para a página inicial
               </Link>
               <div className="inline-flex items-center gap-2 rounded-full border border-border bg-glass px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-secondary"><span className="size-1.5 rounded-full bg-accent" /> Informação local e orientação</div>
-              <h1 className="mt-5 max-w-3xl font-display text-[2.25rem] font-bold leading-[1.05] sm:text-5xl lg:text-[3.75rem]">Clínica de Recuperação e Reabilitação em Araraquara - SP | Acolhimento e Consulta de Vagas 24h</h1>
+              <h1 className="mt-5 max-w-3xl font-display text-2xl font-bold leading-tight sm:text-5xl lg:text-[3.75rem]">Clínica de Recuperação e Reabilitação em Araraquara - SP | Acolhimento e Consulta de Vagas 24h</h1>
+              <RegionalContactActions cityName="Araraquara" />
               <p className="mt-5 max-w-2xl text-[16px] leading-relaxed text-muted-foreground sm:text-lg">{regionalCityAccess.araraquara.welcome}</p>
               <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">O plantão de orientação 24h acolhe famílias dos bairros de Araraquara e da região, com apoio para organizar avaliação, recepção e visitas à sede local.</p>
               <div className="mt-7 grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-2">

@@ -1,3 +1,4 @@
+import { municipalCapsFaq, regionalCtrMetadata } from "./regional-ctr";
 import { regionalAccessFaqs, regionalCityAccess } from "./regional-city-access";
 
 export type EditorialFaq = { question: string; answer: string };
@@ -253,7 +254,7 @@ const cityMetadataOverrides: Record<string, { title: string; description: string
 export function cityEditorialMetadata(slug: string) {
   const editorial = cityEditorial[slug];
   if (!editorial) throw new Error("City editorial not registered");
-  const override = cityMetadataOverrides[slug];
+  const override = regionalCtrMetadata[slug] ?? cityMetadataOverrides[slug];
   if (override) return override;
   return {
     title: slug === "araraquara"
@@ -264,5 +265,6 @@ export function cityEditorialMetadata(slug: string) {
 }
 
 export function cityEditorialFaqs(slug: string): EditorialFaq[] {
-  return [...regionalAccessFaqs(slug), ...(cityEditorial[slug]?.faqs ?? [])];
+  const editorial = cityEditorial[slug];
+  return [...regionalAccessFaqs(slug), ...(editorial?.faqs ?? []), ...(editorial ? [municipalCapsFaq(editorial.name)] : [])];
 }

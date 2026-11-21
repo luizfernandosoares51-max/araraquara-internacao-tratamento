@@ -1,3 +1,4 @@
+import { RegionalPriorityLinks } from "@/components/regional-priority-links";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, MessageCircle, Phone } from "lucide-react";
 
@@ -54,6 +55,7 @@ function CidadesPage() {
           cidades da região também podem receber orientação, conforme a avaliação feita no primeiro
           contato.
         </p>
+        <RegionalPriorityLinks />
         <figure className="mt-8 overflow-hidden rounded-lg border border-border bg-glass shadow-xl shadow-background/20">
           <img src={visualAssets.cities.src} alt={visualAssets.cities.alt} width={1600} height={1067} fetchPriority="high" decoding="async" className="aspect-[16/8] w-full object-cover" />
 

@@ -1,3 +1,4 @@
+import { RegionalContactActions } from "@/components/regional-contact-actions";
 import { Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, ExternalLink, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
 
@@ -28,19 +29,16 @@ export function LocalCityPageView({ city, beforeFaq }: { city: LocalCityPage; be
                 <li aria-current="page" className="text-foreground">{city.name}</li>
               </ol>
             </nav>
-            <Button asChild variant="outline" className="mt-6 min-h-11 border-border bg-glass text-foreground hover:bg-glass-strong hover:text-foreground">
+            <Button asChild variant="outline" className="mt-6 hidden min-h-11 sm:inline-flex border-border bg-glass text-foreground hover:bg-glass-strong hover:text-foreground">
               <Link to="/"><ArrowLeft aria-hidden="true" /> Voltar para a página inicial</Link>
             </Button>
 
-            <div className="mt-10 grid gap-10 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:gap-16">
+            <div className="mt-5 grid gap-10 sm:mt-10 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:gap-16">
               <div>
                 <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">Orientação local · {city.name}/SP</p>
-                <h1 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">Clínica de Recuperação e Reabilitação em {city.name} - SP | Acolhimento e Consulta de Vagas 24h</h1>
+                <h1 className="mt-3 max-w-3xl font-display text-2xl font-bold leading-tight sm:mt-4 sm:text-5xl lg:text-6xl">Clínica de Recuperação e Reabilitação em {city.name} - SP | Acolhimento e Consulta de Vagas 24h</h1>
+                <RegionalContactActions cityName={city.name} />
                 <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">{city.lead}</p>
-                <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                  <Button asChild size="lg" className="h-auto min-h-14 whitespace-normal py-4 bg-whatsapp text-whatsapp-foreground hover:bg-whatsapp/90"><a href={cityWhatsappHref(city.name)} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />{cityContactLabel(city.name)}</a></Button>
-                  <Button asChild size="lg" variant="outline" className="min-h-14 border-border bg-glass text-foreground hover:bg-glass-strong hover:text-foreground"><a href={phoneHref}><Phone aria-hidden="true" /> {phoneDisplay}</a></Button>
-                </div>
                 <p className="mt-6 flex max-w-2xl items-start gap-3 text-sm leading-relaxed text-muted-foreground"><ShieldCheck className="mt-0.5 size-4 shrink-0 text-secondary" aria-hidden="true" />{city.transparency}</p>
               </div>
               <figure>

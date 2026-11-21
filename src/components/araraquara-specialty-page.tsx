@@ -1,3 +1,4 @@
+import { RegionalContactActions } from "@/components/regional-contact-actions";
 import { Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
 import { TreatmentStandardBlocks, treatmentHeading } from '@/components/treatment-standard-blocks';
@@ -27,12 +28,15 @@ export function AraraquaraSpecialtyPage({ specialty }: { specialty: AraraquaraSp
         <div className="mx-auto max-w-6xl px-5 pb-10 pt-6 sm:px-8 sm:pt-10">
           <div className="flex items-center gap-3"><SpecialtyIcon name={page.key} /><p className="text-xs font-semibold uppercase text-secondary">Araraquara · Orientação e acolhimento</p></div>
           <h1 className="mt-5 max-w-4xl font-display text-3xl font-semibold leading-tight sm:text-5xl">{treatmentHeading(page.label, "Araraquara")}</h1>
+          {specialty === "transport" ? <RegionalContactActions cityName="Araraquara" /> : null}
 <p className="mt-4 max-w-3xl font-display text-xl font-semibold leading-snug sm:text-2xl">{page.heading}</p>
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg">{page.intro}</p>
+          {specialty !== "transport" ? <>
           <div className="mt-7 flex flex-wrap gap-3">
             <Button asChild className="h-auto min-h-12 max-w-full whitespace-normal bg-whatsapp py-3 text-whatsapp-foreground hover:bg-whatsapp/90"><a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />Falar com Plantão de Atendimento 24h via WhatsApp</a></Button>
             <Button asChild variant="outline" className="h-auto min-h-12 whitespace-normal py-3"><a href={phoneHref}><Phone aria-hidden="true" />{phoneDisplay}</a></Button>
           </div>
+          </> : null}
         </div>
         <figure className="mx-auto max-w-6xl px-5 pb-10 sm:px-8">
           <img src={image.src} alt={image.alt} width={1440} height={960} decoding="async" fetchPriority="high" className="aspect-[3/2] w-full rounded-lg object-cover sm:aspect-[16/7]" />

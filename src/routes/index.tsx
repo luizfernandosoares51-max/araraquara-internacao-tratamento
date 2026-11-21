@@ -1,3 +1,4 @@
+import { RegionalPriorityLinks } from "@/components/regional-priority-links";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, FileCheck2, HeartHandshake, MapPin, MessageCircle, ShieldCheck, Truck, Compass, Check, Users, ClipboardCheck, Building2, Flame, UserCheck } from "lucide-react";
 import voluntaryWelcomeImage from "@/assets/home-voluntary-welcome.webp";
@@ -106,6 +107,7 @@ function HomePage() {
         </section>
 
         <InteractiveTriage className="py-10 sm:py-12" />
+        <RegionalPriorityLinks />
 
         <section aria-labelledby="pilares-titulo" className="py-10 sm:py-12">
           <p className="text-xs font-semibold uppercase text-secondary">Missão, visão e valores</p>
