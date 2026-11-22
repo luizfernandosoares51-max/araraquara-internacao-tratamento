@@ -178,7 +178,7 @@ function SaoCarlosPage() {
             </p>
             <div className="mt-6 flex items-start gap-3 border-l-2 border-secondary pl-4 text-sm leading-relaxed text-deep/65">
               <ShieldCheck className="mt-0.5 size-5 shrink-0 text-brand" aria-hidden="true" />
-              <p>A Central, vinculada ao Centro de Reabilitação Terapêutico Morada do Sol, informa unidades em Araraquara e em São Carlos; o endereço da unidade de São Carlos é passado pelo WhatsApp oficial. Sua família conta com orientação 24h para organizar acolhimento, visitas e acompanhamento.</p>
+              <p>A Central, vinculada ao Centro de Reabilitação Terapêutico Morada do Sol, conta com unidade feminina em São Carlos e unidade masculina em Araraquara; o endereço da unidade de São Carlos é passado pelo WhatsApp oficial. Sua família conta com orientação 24h para organizar acolhimento, visitas e acompanhamento.</p>
             </div>
           </div>
           <figure className="overflow-hidden border border-deep/10 bg-foreground shadow-xl">

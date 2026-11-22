@@ -46,9 +46,9 @@ export const institutionalIdentity = {
 export const institutionalAffiliation = {
   parentName: "Centro de Reabilitação Terapêutico Morada do Sol",
   parentCnpj: "40.241.645/0001-30",
-  unitCities: ["Araraquara/SP", "São Carlos/SP"],
+  unitCities: ["unidade masculina em Araraquara/SP", "unidade feminina em São Carlos/SP"],
   saoCarlosAddressSupplied: false,
-  statement: "A Central de Acolhimento e Reabilitação é o portal oficial de triagem, acolhimento e orientação vinculado ao Centro de Reabilitação Terapêutico Morada do Sol (CNPJ 40.241.645/0001-30), com unidades especializadas em Araraquara/SP e São Carlos/SP, conforme declaração institucional.",
+  statement: "A Central de Acolhimento e Reabilitação é o portal oficial de triagem, acolhimento e orientação vinculado ao Centro de Reabilitação Terapêutico Morada do Sol (CNPJ 40.241.645/0001-30), com unidade masculina em Araraquara/SP e unidade feminina em São Carlos/SP, conforme declaração institucional.",
 } as const;
 
 export const institutionalLocalBusiness = {

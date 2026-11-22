@@ -14,7 +14,7 @@ test("resumo rápido tem entre 45 e 55 palavras em todas as cidades", () => {
 test("resumo rápido cita a Lei 13.840/2019 e as unidades de Araraquara e São Carlos", () => {
   const text = quickAnswerText("São Carlos");
   assert.ok(text.includes("Lei 13.840/2019"));
-  assert.ok(text.includes("Araraquara e São Carlos"));
+  assert.ok(text.includes("unidade masculina em Araraquara") && text.includes("unidade feminina em São Carlos"));
   assert.ok(!/unidades próprias/.test(text));
 });
 
