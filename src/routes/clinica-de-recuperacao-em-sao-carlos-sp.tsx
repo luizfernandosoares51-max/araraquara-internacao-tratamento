@@ -1,4 +1,6 @@
 import { CityStandardBlocks } from "@/components/city-standard-blocks";
+import { RegionalContactActions } from "@/components/regional-contact-actions";
+import { municipalCapsFaq, saoCarlosSearchFaqs } from "@/lib/regional-ctr";
 import { cityContactLabel, cityWhatsappHref, regionalCityAccess } from "@/lib/regional-city-access";
 import { cityEditorialFaqs, cityEditorialMetadata } from "@/lib/city-editorial";
 import { createFileRoute, Link } from "@tanstack/react-router";
@@ -38,7 +40,8 @@ const { title, description } = cityEditorialMetadata("sao-carlos-sp");
 const saoCarlosFacebookHref = "https://www.facebook.com/share/19LjvZp41r/";
 
 const faqs = [
-  ...cityEditorialFaqs("sao-carlos-sp"),
+  ...saoCarlosSearchFaqs,
+  ...cityEditorialFaqs("sao-carlos-sp").filter(faq => faq.question !== municipalCapsFaq("São Carlos").question),
   {
     question: "Onde procurar ajuda para dependência química em São Carlos?",
     answer:
@@ -153,7 +156,7 @@ function SaoCarlosPage() {
               <li aria-current="page" className="font-semibold text-deep">São Carlos</li>
             </ol>
           </nav>
-          <Link to="/" className="mt-5 inline-flex min-h-11 items-center gap-2 border border-deep/15 bg-foreground px-4 py-3 text-sm font-semibold shadow-sm transition-colors hover:border-brand hover:text-brand">
+          <Link to="/" className="mt-5 hidden min-h-11 items-center gap-2 border border-deep/15 bg-foreground px-4 py-3 text-sm font-semibold shadow-sm transition-colors hover:border-brand hover:text-brand sm:inline-flex">
             <ArrowLeft className="size-4" aria-hidden="true" /> Voltar para a página inicial
           </Link>
         </div>
@@ -163,20 +166,16 @@ function SaoCarlosPage() {
             <p className="inline-flex items-center gap-2 border-l-4 border-brand pl-3 text-xs font-semibold uppercase text-brand">
               Orientação local para São Carlos
             </p>
-            <h1 className="mt-5 max-w-3xl font-display text-[2.35rem] font-bold leading-[1.06] sm:text-5xl lg:text-[3.6rem]">
-              Clínica de Recuperação e Reabilitação em São Carlos - SP | Acolhimento e Consulta de Vagas 24h
+            <h1 className="mt-4 max-w-3xl font-display text-2xl font-bold leading-tight sm:text-5xl lg:text-[3.6rem]">
+              Clínica de Recuperação em São Carlos SP
             </h1>
+            <div className="mt-4 rounded-lg border border-deep/15 bg-card p-3 text-card-foreground">
+              <p className="text-sm font-semibold">Plantão de orientação familiar 24h</p>
+              <RegionalContactActions cityName="São Carlos" />
+            </div>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-deep/70 sm:text-lg">
               {regionalCityAccess["sao-carlos-sp"].welcome}
             </p>
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row h-auto whitespace-normal py-4">
-              <a href={cityWhatsappHref("São Carlos")} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center gap-2 bg-whatsapp px-6 py-4 text-sm font-semibold text-whatsapp-foreground shadow-lg whitespace-normal text-center">
-                <MessageCircle className="size-5" aria-hidden="true" /> {cityContactLabel("São Carlos")}
-              </a>
-              <a href={phoneHref} className="inline-flex min-h-14 items-center justify-center gap-2 border border-deep/20 bg-foreground px-6 py-4 text-sm font-semibold">
-                <Phone className="size-4" aria-hidden="true" /> Ligar agora · {phoneDisplay}
-              </a>
-            </div>
             <div className="mt-6 flex items-start gap-3 border-l-2 border-secondary pl-4 text-sm leading-relaxed text-deep/65">
               <ShieldCheck className="mt-0.5 size-5 shrink-0 text-brand" aria-hidden="true" />
               <p>A sede terapêutica da Central fica em Araraquara, conectada a São Carlos pela Washington Luís. Sua família conta com orientação 24h para organizar acolhimento, visitas e acompanhamento.</p>

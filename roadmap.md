@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Otimizar São Carlos: metadados limitados, links na Home/Cidades/Araraquara, FAQs com schema correspondente e contatos no primeiro quadro do celular; 14 testes aprovados, navegação e 13 respostas/schema conferidos na prévia, sem erros de runtime. Comando informado ausente no código; sem publicar nem garantir posições no Google. Preservados sede em Araraquara e limites médicos/operacionais.
+
 - [x] Aplicar metadados regionais dentro dos limites, links diretos na Home/Cidades, FAQ responsável sobre CAPS e contatos visíveis no celular; 281 testes aprovados, sete páginas-alvo e Araraquara conferidas no celular, FAQ/schema iguais nas 14 cidades e compilação OK. Sem publicação; dados do Search Console indisponíveis para comprovar posições e CTR.
 
 - [x] Cancelar painel de vagas conforme solicitado; não criar contas, autenticação ou armazenamento de disponibilidade.
