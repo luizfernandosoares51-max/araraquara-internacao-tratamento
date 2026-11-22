@@ -46,7 +46,9 @@ import { araraquaraOrientationFaqs } from "@/lib/araraquara-orientation";
 import { institutionalIdentity } from "@/lib/institutional";
 import { Button } from "@/components/ui/button";
 
-const { title, description } = cityEditorialMetadata("araraquara");
+void cityEditorialMetadata;
+const title = "Clínica de Recuperação em Araraquara SP | Atendimento 24h";
+const description = "Acolhimento voluntário em Araraquara SP e orientação sobre internação. Apoio em dependência química, álcool e apostas, orientação 24h e sigilo. Fale agora.";
 
 const pageUrl = `${siteUrl}/clinica-de-recuperacao-em-araraquara`;
 const cityHealthNetworkUrl =
@@ -77,6 +79,9 @@ const transparencyCards = [
 ];
 
 const faqs = [
+  { question: "Como funciona a internação voluntária e involuntária em Araraquara?", answer: "A internação voluntária, com adesão da pessoa, corresponde ao acolhimento na sede própria da Central em Araraquara, após avaliação e conforme vaga. A internação involuntária segue a Lei 13.840/2019: exige avaliação e autorização médica e ocorre somente em unidade de saúde habilitada; a Central orienta a família nesse encaminhamento." },
+  { question: "Como acionar resgate e remoção discreta 24h em Araraquara e região?", answer: "Pelo plantão de orientação 24h no WhatsApp ou telefone (16) 99765-4579, a família recebe orientação sobre o resgate humanizado e a remoção, que dependem de avaliação e agendamento com estabelecimentos credenciados. Em risco imediato, ligue para o SAMU 192." },
+  { question: "Quais tratamentos são oferecidos em Araraquara?", answer: "O acolhimento voluntário atende questões ligadas a álcool, crack, cocaína, uso indevido de medicamentos e jogos/apostas, com suporte psicossocial, 12 Passos, laborterapia, convivência terapêutica e prevenção à recaída. A retirada de medicamentos é sempre acompanhada por médico." },
   municipalCapsFaq("Araraquara"),
   { question: "Como funcionam as visitas da família?", answer: "As visitas acontecem em dias e horários agendados com a equipe, conforme o cronograma terapêutico, para preservar a rotina de cuidado e o vínculo familiar." },
   { question: "Como funciona a internação involuntária?", answer: "É uma medida excepcional prevista na Lei 13.840/2019. Exige avaliação e autorização médica e acontece somente em unidade de saúde habilitada, que comunica o Ministério Público em até 72 horas. A Central orienta a família no encaminhamento." },
@@ -200,10 +205,10 @@ function AraraquaraPage() {
                 <ArrowLeft className="size-4" aria-hidden="true" /> Voltar para a página inicial
               </Link>
               <div className="inline-flex items-center gap-2 rounded-full border border-border bg-glass px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-secondary"><span className="size-1.5 rounded-full bg-accent" /> Informação local e orientação</div>
-              <h1 className="mt-5 max-w-3xl font-display text-2xl font-bold leading-tight sm:text-5xl lg:text-[3.75rem]">Clínica de Recuperação e Reabilitação em Araraquara - SP | Acolhimento e Consulta de Vagas 24h</h1>
+              <h1 className="mt-5 max-w-3xl font-display text-2xl font-bold leading-tight sm:text-5xl lg:text-[3.75rem]">Clínica de Recuperação e Reabilitação em Araraquara SP</h1>
               <RegionalContactActions cityName="Araraquara" />
               <p className="mt-5 max-w-2xl text-[16px] leading-relaxed text-muted-foreground sm:text-lg">{regionalCityAccess.araraquara.welcome}</p>
-              <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">O plantão de orientação 24h acolhe famílias dos bairros de Araraquara e da região, com apoio para organizar avaliação, recepção e visitas à sede local.</p>
+              <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">Como clínica de reabilitação em Araraquara e centro de reabilitação Araraquara, a Central orienta sobre internação voluntária e involuntária (Lei 13.840/2019) e sobre resgate humanizado 24 horas. O plantão de orientação 24h acolhe famílias dos bairros de Araraquara e da região, com apoio para organizar avaliação, recepção e visitas à sede local.</p>
               <Link to="/clinica-de-recuperacao-em-sao-carlos-sp" className="mt-4 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-secondary underline underline-offset-4">Clínica de Recuperação em São Carlos SP<ArrowRight className="size-4 shrink-0" aria-hidden="true" /></Link>
               <div className="mt-7 grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-2">
                 <WhatsAppLink className="flex min-h-14 items-center justify-center gap-2 rounded-lg bg-whatsapp px-5 py-4 text-center text-sm font-semibold text-whatsapp-foreground shadow-lg transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"><MessageCircle className="size-5" aria-hidden="true" /> {cityContactLabel("Araraquara")}</WhatsAppLink>

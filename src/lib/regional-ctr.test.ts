@@ -10,7 +10,7 @@ test("regional search descriptions are at most 155 characters", () => {
   for (const metadata of Object.values(regionalCtrMetadata)) assert.ok(metadata.description.length <= 155);
 });
 test("regional priority links preserve existing destinations and add São Carlos", () => {
-  assert.deepEqual(priorityRegionalLinks.map(link => link.to), ["/clinica-de-recuperacao-em-sao-carlos-sp", "/clinica-de-recuperacao-em-itapolis-sp", "/clinica-de-recuperacao-em-ibate-sp", "/clinica-de-recuperacao-em-ibitinga-sp", "/clinica-de-recuperacao-em-americo-brasiliense-sp", "/clinica-de-recuperacao-em-matao-sp", "/resgate-remocao-araraquara", "/resgate-remocao-ribeirao-preto"]);
+  assert.deepEqual(priorityRegionalLinks.map(link => link.to), ["/clinica-de-recuperacao-em-araraquara", "/clinica-de-recuperacao-em-sao-carlos-sp", "/clinica-de-recuperacao-em-itapolis-sp", "/clinica-de-recuperacao-em-ibate-sp", "/clinica-de-recuperacao-em-ibitinga-sp", "/clinica-de-recuperacao-em-americo-brasiliense-sp", "/clinica-de-recuperacao-em-matao-sp", "/resgate-remocao-araraquara", "/resgate-remocao-ribeirao-preto"]);
 });
 test("CAPS hours vary and continuous-care modalities are retained", () => {
   assert.equal(capsCareScope.uniformBusinessHours, false);

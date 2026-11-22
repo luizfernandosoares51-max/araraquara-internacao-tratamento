@@ -8,7 +8,7 @@ const featuredCityLinks = [
   { to: "/clinica-de-recuperacao-em-itapolis-sp", label: "Clínica de Recuperação em Itápolis - SP" },
   { to: "/clinica-de-recuperacao-em-ibate-sp", label: "Clínica de Recuperação em Ibaté - SP" },
   { to: "/clinica-de-recuperacao-em-matao-sp", label: "Clínica de Recuperação em Matão - SP" },
-  { to: "/clinica-de-recuperacao-em-araraquara", label: "Clínica de Recuperação em Araraquara" },
+  { to: "/clinica-de-recuperacao-em-araraquara", label: "Clínica de Recuperação em Araraquara SP" },
 ] as const;
 
 export function RegionalSeoGrid() {

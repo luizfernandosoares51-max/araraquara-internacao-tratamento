@@ -26,6 +26,7 @@ export const regionalCtrMetadata: Record<string, { title: string; description: s
 };
 
 export const priorityRegionalLinks = [
+  { to: "/clinica-de-recuperacao-em-araraquara", label: "Clínica de Recuperação em Araraquara SP" },
   { to: "/clinica-de-recuperacao-em-sao-carlos-sp", label: "Clínica de Recuperação em São Carlos SP" },
   { to: "/clinica-de-recuperacao-em-itapolis-sp", label: "Clínica de Recuperação em Itápolis SP" },
   { to: "/clinica-de-recuperacao-em-ibate-sp", label: "Clínica de Recuperação em Ibaté SP" },
