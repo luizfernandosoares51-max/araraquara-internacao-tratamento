@@ -10,7 +10,7 @@ export function quickAnswerTitle(cityName: string) {
 }
 
 export function quickAnswerText(cityName: string) {
-  return `Em ${cityName}, a Central orienta a família pelo WhatsApp e telefone 24h. O acolhimento voluntário acontece na unidade masculina em Araraquara e na unidade feminina em São Carlos, com equipe multidisciplinar e acompanhamento médico e psiquiátrico integrado. A internação involuntária segue a Lei 13.840/2019 e ocorre somente em unidade médica habilitada. O deslocamento discreto é combinado por agendamento.`;
+  return `Em ${cityName}, a Central orienta a família pelo WhatsApp e telefone 24h. O acolhimento voluntário acontece na unidade masculina em Araraquara e na unidade feminina em São Carlos, com equipe multidisciplinar. A internação involuntária segue a Lei 13.840/2019 e ocorre somente em unidade médica habilitada. O deslocamento discreto é combinado por agendamento.`;
 }
 
 export function wordCount(text: string) {
