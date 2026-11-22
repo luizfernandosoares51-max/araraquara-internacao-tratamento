@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { CircleCheck, ShieldCheck } from "lucide-react";
 import { institutionalIdentity } from "@/lib/institutional";
+import { EthicsProtocolBlock } from "@/components/regional-authority-blocks";
 
 const linkClass = "inline-flex min-h-11 items-center font-semibold text-primary underline underline-offset-4";
 
@@ -46,6 +47,7 @@ export function TreatmentStandardBlocks({ cityName, cityPath }: { cityName: stri
           <li><a href={cityPath} className={linkClass}>Clínica de recuperação em {cityName}</a></li>
         </ul>
       </nav>
+      <EthicsProtocolBlock />
     </div>
   );
 }

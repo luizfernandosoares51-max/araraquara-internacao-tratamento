@@ -1,3 +1,4 @@
+import { RegionalContactActions } from "@/components/regional-contact-actions";
 import { CityStandardBlocks } from "@/components/city-standard-blocks";
 import { cityContactLabel, cityWhatsappHref, regionalCityAccess } from "@/lib/regional-city-access";
 import { cityEditorialFaqs, cityEditorialMetadata } from "@/lib/city-editorial";
@@ -196,29 +197,23 @@ function RioClaroPage() {
               </ol>
             </nav>
 
-            <Button asChild variant="outline" className="mt-6 min-h-11 border-border bg-glass text-foreground hover:bg-glass-strong hover:text-foreground">
+            <Button asChild variant="outline" className="mt-6 hidden min-h-11 sm:inline-flex border-border bg-glass text-foreground hover:bg-glass-strong hover:text-foreground">
               <Link to="/"><ArrowLeft aria-hidden="true" /> Voltar para a página inicial</Link>
             </Button>
 
-             <div className="mt-12 grid gap-12 lg:grid-cols-[1.12fr_.88fr] lg:items-end">
+             <div className="mt-5 grid gap-12 sm:mt-12 lg:grid-cols-[1.12fr_.88fr] lg:items-end">
               <div>
                 <div className="flex items-center gap-2 text-xs font-semibold uppercase text-secondary">
                   <MapPin className="size-4" aria-hidden="true" /> Rio Claro, São Paulo
                 </div>
-                <h1 className="mt-5 max-w-4xl font-display text-4xl font-bold leading-[1.08] sm:text-5xl lg:text-6xl">
+                <h1 className="mt-5 max-w-4xl font-display text-2xl font-bold leading-[1.08] sm:text-5xl lg:text-6xl">
                   Clínica de Recuperação e Reabilitação em Rio Claro - SP | Acolhimento e Consulta de Vagas 24h
                 </h1>
+                <RegionalContactActions cityName="Rio Claro" />
                 <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg">
                   {regionalCityAccess["rio-claro-sp"].welcome}
                 </p>
-                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                  <Button asChild size="lg" className="min-h-14 bg-whatsapp px-6 text-whatsapp-foreground hover:bg-whatsapp/90 h-auto whitespace-normal py-4">
-                    <a href={cityWhatsappHref("Rio Claro")} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" /> {cityContactLabel("Rio Claro")}</a>
-                  </Button>
-                  <Button asChild variant="outline" size="lg" className="min-h-14 border-border bg-glass px-6 text-foreground hover:bg-glass-strong hover:text-foreground">
-                    <a href={phoneHref}><Phone aria-hidden="true" /> Ligar agora · {phoneDisplay}</a>
-                  </Button>
-                </div>
+                
               </div>
                <div>
                <figure className="overflow-hidden border border-border bg-glass shadow-xl shadow-background/20">

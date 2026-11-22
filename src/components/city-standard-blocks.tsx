@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { ShieldCheck } from "lucide-react";
 import { institutionalIdentity } from "@/lib/institutional";
+import { EthicsProtocolBlock, RegionalLogisticsSection } from "@/components/regional-authority-blocks";
 
 const linkClass = "inline-flex min-h-11 items-center font-semibold text-primary underline underline-offset-4";
 
@@ -9,6 +10,7 @@ export function CityStandardBlocks({ cityName, hideTransparency = false }: { cit
   const { cnpj, fullAddress, ownership, psychologyResponsible, generalCoordination } = institutionalIdentity;
   return (
     <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+      <RegionalLogisticsSection cityName={cityName} />
       <section aria-labelledby="modalidades-titulo" className="border-b border-border py-10 sm:py-12">
         <h2 id="modalidades-titulo" className="font-display text-2xl font-semibold leading-tight sm:text-3xl">Internação Voluntária e Involuntária (Lei 13.840) para {cityName} e Região</h2>
         <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground">O acolhimento voluntário ocorre com adesão da pessoa na sede própria em Araraquara. A internação involuntária é excepcional, exige avaliação e autorização médica e acontece somente em unidade médica habilitada; a Central orienta a família de {cityName} sobre a internação involuntária e voluntária, dentro das normas da Lei 13.840/2019.</p>
@@ -46,6 +48,7 @@ export function CityStandardBlocks({ cityName, hideTransparency = false }: { cit
           <li><Link to="/clinica-de-reabilitacao" className={linkClass}>Clínica de reabilitação: como funciona</Link></li>
         </ul>
       </nav>
+      <EthicsProtocolBlock />
     </div>
   );
 }

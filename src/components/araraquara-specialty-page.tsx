@@ -1,3 +1,4 @@
+import { SatelliteBreadcrumb } from "@/components/regional-authority-blocks";
 import { RegionalContactActions } from "@/components/regional-contact-actions";
 import { Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
@@ -16,27 +17,17 @@ export function AraraquaraSpecialtyPage({ specialty }: { specialty: AraraquaraSp
   return <div className="home-serene site-editorial min-h-screen bg-background font-body text-foreground">
 
     <main>
-      <div className="mx-auto max-w-6xl px-5 py-6 sm:px-8">
-        <nav aria-label="Navegação estrutural" className="text-xs leading-relaxed text-muted-foreground"><ol className="flex flex-wrap items-center gap-2">
-          <li><Link to="/" className="hover:text-primary">Início</Link></li><li aria-hidden="true">/</li>
-          <li><Link to="/cidades" className="hover:text-primary">Cidades</Link></li><li aria-hidden="true">/</li>
-          <li><Link to="/clinica-de-recuperacao-em-araraquara" className="hover:text-primary">Araraquara</Link></li><li aria-hidden="true">/</li>
-          <li aria-current="page" className="text-foreground">{page.label}</li>
-        </ol></nav>
+      <div className="mx-auto max-w-6xl px-5 pt-4 sm:px-8 sm:py-6">
+        <SatelliteBreadcrumb cityName="Araraquara" cityPath="/clinica-de-recuperacao-em-araraquara" label={page.label} />
       </div>
       <section className="border-b border-border">
-        <div className="mx-auto max-w-6xl px-5 pb-10 pt-6 sm:px-8 sm:pt-10">
-          <div className="flex items-center gap-3"><SpecialtyIcon name={page.key} /><p className="text-xs font-semibold uppercase text-secondary">Araraquara · Orientação e acolhimento</p></div>
-          <h1 className="mt-5 max-w-4xl font-display text-3xl font-semibold leading-tight sm:text-5xl">{treatmentHeading(page.label, "Araraquara")}</h1>
-          {specialty === "transport" ? <RegionalContactActions cityName="Araraquara" /> : null}
+        <div className="mx-auto max-w-6xl px-5 pb-10 pt-4 sm:px-8 sm:pt-10">
+          <div className="hidden items-center gap-3 sm:flex"><SpecialtyIcon name={page.key} /><p className="text-xs font-semibold uppercase text-secondary">Araraquara · Orientação e acolhimento</p></div>
+          <h1 className="mt-5 max-w-4xl font-display text-2xl font-semibold leading-tight sm:text-5xl">{treatmentHeading(page.label, "Araraquara")}</h1>
+          <RegionalContactActions cityName="Araraquara" />
 <p className="mt-4 max-w-3xl font-display text-xl font-semibold leading-snug sm:text-2xl">{page.heading}</p>
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg">{page.intro}</p>
-          {specialty !== "transport" ? <>
-          <div className="mt-7 flex flex-wrap gap-3">
-            <Button asChild className="h-auto min-h-12 max-w-full whitespace-normal bg-whatsapp py-3 text-whatsapp-foreground hover:bg-whatsapp/90"><a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />Falar com Plantão de Atendimento 24h via WhatsApp</a></Button>
-            <Button asChild variant="outline" className="h-auto min-h-12 whitespace-normal py-3"><a href={phoneHref}><Phone aria-hidden="true" />{phoneDisplay}</a></Button>
-          </div>
-          </> : null}
+          
         </div>
         <figure className="mx-auto max-w-6xl px-5 pb-10 sm:px-8">
           <img src={image.src} alt={image.alt} width={1440} height={960} decoding="async" fetchPriority="high" className="aspect-[3/2] w-full rounded-lg object-cover sm:aspect-[16/7]" />
