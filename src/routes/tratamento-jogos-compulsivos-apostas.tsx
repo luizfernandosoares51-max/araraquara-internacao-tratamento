@@ -1,3 +1,5 @@
+import { SatelliteBreadcrumb } from "@/components/regional-authority-blocks";
+import { RegionalContactActions } from "@/components/regional-contact-actions";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, MessageCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -43,17 +45,15 @@ function GamblingOrientationPage() {
     <div className="home-serene site-editorial min-h-screen bg-background text-foreground">
 
       <main>
+        <div className="mx-auto max-w-6xl px-5 pt-4 pb-4 sm:px-8 sm:py-6"><SatelliteBreadcrumb cityName="Araraquara" cityPath="/clinica-de-recuperacao-em-araraquara" label="Jogos e Apostas" /></div>
         <section className="relative isolate overflow-hidden">
           <img src={visualAssets.gambling.src} alt={visualAssets.gambling.alt} width={1440} height={960} fetchPriority="high" className="absolute inset-0 -z-20 h-full w-full object-cover" />
           <div className="absolute inset-0 -z-10 bg-foreground/80" />
-          <div className="mx-auto max-w-6xl px-5 py-16 text-background sm:px-8 sm:py-20">
-            <p className="text-sm font-semibold">Informação, escuta e orientação</p>
-            <h1 className="mt-5 max-w-3xl font-display text-3xl font-semibold leading-tight sm:text-5xl">{heading}</h1>
+          <div className="mx-auto max-w-6xl px-5 pb-8 pt-5 text-background sm:px-8 sm:py-20">
+            <p className="hidden text-sm font-semibold sm:block">Informação, escuta e orientação</p>
+            <h1 className="max-w-3xl font-display text-2xl sm:mt-3 font-semibold leading-tight sm:text-5xl">{heading}</h1>
+            <div className="mt-3 max-w-3xl rounded-lg bg-background px-3 pb-3 pt-1 text-foreground"><RegionalContactActions cityName="Araraquara" /></div>
             <p className="mt-6 max-w-2xl text-base leading-relaxed">Quando as apostas passam a afetar a rotina, as relações ou o orçamento, pedir ajuda é um passo possível. Conheça caminhos educativos e possibilidades de avaliação, sem julgamentos ou promessas de resultado.</p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild className="h-auto min-h-12 whitespace-normal"><a href={whatsappHref} target="_blank" rel="noopener noreferrer"><MessageCircle className="size-4 shrink-0" aria-hidden="true" />Falar com Plantão de Atendimento 24h via WhatsApp</a></Button>
-              <Button asChild variant="secondary" className="min-h-12"><a href={phoneHref}><Phone className="size-4" aria-hidden="true" />{phoneDisplay}</a></Button>
-            </div>
 
           </div>
         </section>
