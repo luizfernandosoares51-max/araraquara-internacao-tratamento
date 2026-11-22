@@ -18,7 +18,7 @@ export const rioClaroSpecialties: Record<SpecialtyKey, Specialty> = {
     title: 'Tratamento do Alcoolismo para Rio Claro - SP | Acolhimento em Araraquara',
     description: 'Orientação sobre álcool e abstinência para famílias de Rio Claro. Acolhimento voluntário em Araraquara; desintoxicação médica por encaminhamento externo.',
     heading: 'Tratamento do alcoolismo para famílias de Rio Claro',
-    intro: 'Quando beber passa a comprometer relações, saúde e responsabilidades, a família pode precisar de orientação antes de decidir o próximo passo. A Central atende essa busca de Rio Claro com escuta e acolhimento voluntário psicossocial na única sede própria em Araraquara, sem unidade em Rio Claro.',
+    intro: 'Quando beber passa a comprometer relações, saúde e responsabilidades, a família pode precisar de orientação antes de decidir o próximo passo. A Central atende essa busca de Rio Claro com escuta e acolhimento voluntário psicossocial na sede própria em Araraquara, sem unidade em Rio Claro.',
     notice: 'A Central não realiza desintoxicação médica. Convulsões, confusão intensa ou alteração de consciência exigem urgência ou SAMU 192; não aguarde uma viagem para acolhimento.',
     condition: 'Dependência de álcool',
     sections: [
@@ -116,7 +116,7 @@ export const rioClaroSpecialties: Record<SpecialtyKey, Specialty> = {
     title: 'Tratamento Voluntário para Rio Claro - SP | Acolhimento em Araraquara',
     description: 'Acolhimento voluntário para famílias de Rio Claro na sede em Araraquara. Metas individuais, suporte psicológico, 12 Passos e convivência, sem garantia de resultados.',
     heading: 'Acolhimento voluntário para famílias de Rio Claro',
-    intro: 'Aceitar ajuda pode começar com uma pergunta sobre o que mudará na rotina e como manter vínculos. Pessoas e famílias de Rio Claro podem conhecer a proposta da Central antes de decidir: acolhimento voluntário psicossocial na única sede em Araraquara, com avaliação e participação da pessoa.',
+    intro: 'Aceitar ajuda pode começar com uma pergunta sobre o que mudará na rotina e como manter vínculos. Pessoas e famílias de Rio Claro podem conhecer a proposta da Central antes de decidir: acolhimento voluntário psicossocial na sede em Araraquara, com avaliação e participação da pessoa.',
     notice: 'Consentimento e avaliação individual orientam o acolhimento. Internação médica e desintoxicação não são realizadas na sede; necessidades clínicas recebem encaminhamento externo.',
     sections: [
       { title: 'Uma escolha informada, sem pressão por uma resposta imediata', paragraphs: [
@@ -148,7 +148,7 @@ export const rioClaroSpecialties: Record<SpecialtyKey, Specialty> = {
     title: 'Remoção Agendada para Rio Claro - SP | Orientação Regional',
     description: 'Consulta sobre remoção e translado regional agendado para famílias de Rio Claro. Orientação e suporte para agendamento 24h; confirme condições e destino com a Central em Araraquara.',
     heading: 'Remoção e translado agendado para Rio Claro',
-    intro: 'Quem procura resgate em Rio Claro precisa primeiro distinguir uma emergência de um deslocamento planejado. A Central informa remoção e translado regional por agendamento com a coordenação operacional de Luiz Fernando Soares; atende a partir da única sede em Araraquara, com orientação e suporte para agendamento 24 horas. A execução da remoção segue agenda, condições e disponibilidade.',
+    intro: 'Quem procura resgate em Rio Claro precisa primeiro distinguir uma emergência de um deslocamento planejado. A Central informa remoção e translado regional por agendamento com a coordenação operacional de Luiz Fernando Soares; atende a partir da sede em Araraquara, com orientação e suporte para agendamento 24 horas. A execução da remoção segue agenda, condições e disponibilidade.',
     notice: 'Surto com risco imediato, convulsões, dor no peito ou alteração de consciência exigem urgência ou SAMU 192. Não aguarde agenda particular ou confirmação de acolhimento.',
     sections: [
       { title: 'O contato institucional não aciona uma equipe de emergência', paragraphs: [
@@ -157,7 +157,7 @@ export const rioClaroSpecialties: Record<SpecialtyKey, Specialty> = {
       ] },
       { title: 'Confirmar o trajeto depois de definir o cuidado necessário', paragraphs: [
         'O deslocamento de Rio Claro à sede em Araraquara deve ser planejado conforme origem, destino, condições da viagem e disponibilidade. O trajeto regional e os acessos rodoviários precisam ser conferidos antes da saída. Não há estimativa publicada de chegada ou garantia de traslado rápido.',
-        'O endereço da única sede própria é R. Alfredo Micelli, 70, em Araraquara. Esse destino é voltado ao acolhimento voluntário psicossocial. Quando há necessidade de hospitalização ou internação involuntária clínica, o destino deve ser estabelecimento médico habilitado externo, conforme avaliação e critérios legais.'
+        'O endereço da sede própria é R. Alfredo Micelli, 70, em Araraquara. Esse destino é voltado ao acolhimento voluntário psicossocial. Quando há necessidade de hospitalização ou internação involuntária clínica, o destino deve ser estabelecimento médico habilitado externo, conforme avaliação e critérios legais.'
       ] },
       { title: 'Recusa e embarque não autorizam coerção informal', paragraphs: [
         'Uma pessoa recusar ajuda não permite à família aplicar força, sedação ou contenção improvisadas para embarcá-la. A indicação médica e os requisitos legais de internação involuntária não são substituídos por contratação de transporte. Em crise com risco imediato, a prioridade continua sendo a rede de urgência.',
@@ -180,7 +180,7 @@ export const rioClaroSpecialties: Record<SpecialtyKey, Specialty> = {
     title: 'Clínica de Recuperação Feminina em Rio Claro - SP | Orientação 24h',
     description: 'Orientação para mulheres de Rio Claro e suas famílias: escuta qualificada, privacidade, suporte psicossocial e articulação com serviços médicos parceiros, a partir da sede em Araraquara.',
     heading: 'Acolhimento com escuta e privacidade para mulheres de Rio Claro',
-    intro: 'Mulheres que enfrentam dependência química costumam carregar culpa, medo de julgamento e responsabilidades com filhos e trabalho. A Central orienta mulheres de Rio Claro e suas famílias a partir da única sede própria em Araraquara, com escuta qualificada, suporte psicossocial e articulação com serviços médicos parceiros quando necessário.',
+    intro: 'Mulheres que enfrentam dependência química costumam carregar culpa, medo de julgamento e responsabilidades com filhos e trabalho. A Central orienta mulheres de Rio Claro e suas famílias a partir da sede própria em Araraquara, com escuta qualificada, suporte psicossocial e articulação com serviços médicos parceiros quando necessário.',
     notice: 'A compatibilidade do acolhimento com cada mulher é avaliada individualmente. Gestação, violência doméstica ou sintomas clínicos graves exigem atendimento de saúde ou proteção específico; em risco imediato, ligue 190 ou SAMU 192.',
     sections: [
       { title: 'Particularidades que merecem atenção desde o primeiro contato', paragraphs: [

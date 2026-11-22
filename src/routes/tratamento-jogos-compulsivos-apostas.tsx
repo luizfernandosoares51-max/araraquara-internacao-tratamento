@@ -61,7 +61,7 @@ function GamblingOrientationPage() {
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <section className="border-b border-border py-10">
             <h2 className="font-display text-2xl font-semibold">O que esta orientação significa</h2>
-            <p className="mt-4 max-w-3xl leading-relaxed text-muted-foreground">A Central oferece acolhimento voluntário e suporte psicossocial na única sede, em {gamblingCareScope.ownUnitCity}. Não há confirmação de programa especializado para compulsão em apostas. O contato serve para esclarecer o escopo do atendimento e orientar a busca de avaliação adequada, sem confirmar vagas ou admissão.</p>
+            <p className="mt-4 max-w-3xl leading-relaxed text-muted-foreground">A Central oferece acolhimento voluntário e suporte psicossocial na sede, em {gamblingCareScope.ownUnitCity}. Não há confirmação de programa especializado para compulsão em apostas. O contato serve para esclarecer o escopo do atendimento e orientar a busca de avaliação adequada, sem confirmar vagas ou admissão.</p>
           </section>
           {gamblingOrientationSections.map((section, index) => (
             <section key={section.title} className="grid gap-5 border-b border-border py-10 md:grid-cols-[.75fr_1.25fr] md:gap-12">

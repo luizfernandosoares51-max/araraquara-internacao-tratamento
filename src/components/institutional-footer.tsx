@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { RegionalSeoGrid } from "@/components/regional-seo-grid";
 import { Mail, Phone } from "lucide-react";
-import { institutionalIdentity, institutionalLinks } from "@/lib/institutional";
+import { institutionalAffiliation, institutionalIdentity, institutionalLinks } from "@/lib/institutional";
 import { TechnicalResponsibility } from "@/components/technical-responsibility";
 import { InstitutionalLocation } from "@/components/institutional-location";
 import { emailDisplay, emailHref, phoneDisplay, phoneHref, instagramHref, facebookHref } from "@/lib/site";
@@ -18,7 +18,7 @@ export function InstitutionalFooter() {
               <div><dt className="font-semibold">CNPJ</dt><dd className="text-muted-foreground">{institutionalIdentity.cnpj}</dd></div>
             </dl>
             <p className="mb-3 mt-5 text-sm font-semibold">Sede administrativa e acolhimento às famílias em Araraquara/SP</p>
-            <p className="mb-3 text-sm leading-relaxed text-muted-foreground">A unidade própria mantém acolhimento voluntário. A articulação da rede parceira não representa filiais próprias nas demais cidades.</p>
+            <p className="mb-3 text-sm leading-relaxed text-muted-foreground">{institutionalAffiliation.statement} O endereço da unidade de São Carlos é informado pelo contato oficial; as demais cidades recebem orientação regional.</p>
             <InstitutionalLocation compact />
           </section>
           <section className="min-w-0">

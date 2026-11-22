@@ -24,7 +24,7 @@ test('regional schema identifies only the nonmedical physical seat in Araraquara
     const script = saoCarlosSpecialtyHead(page.key).scripts[0];
     assert.ok(script);
     const business = JSON.parse(script.children)['@graph'][0];
-    assert.equal(business['@type'], 'LocalBusiness');
+    assert.deepEqual(business['@type'], ['LocalBusiness', 'MedicalOrganization']); assert.equal(business.parentOrganization.taxID, '40.241.645/0001-30');
     assert.equal(business.address.addressLocality, 'Araraquara');
     assert.equal(business.address.streetAddress, 'R. Alfredo Micelli, 70 - Condomínio Satélite');
     assert.equal(business.telephone, '(16) 99765-4579');

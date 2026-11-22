@@ -14,7 +14,7 @@ export const ribeiraoSpecialtyList = [
     "title": "Tratamento do Alcoolismo para Ribeirão Preto - SP | Acolhimento",
     "description": "Orientação sobre alcoolismo para Ribeirão Preto. Acolhimento voluntário em Araraquara; equipe multidisciplinar, avaliação médica e orientação à família 24h.",
     "heading": "Tratamento do alcoolismo para famílias de Ribeirão Preto",
-    "intro": "O álcool pode ocupar cada vez mais espaço na rotina sem que a família perceba uma ruptura imediata. Para quem procura ajuda em Ribeirão Preto, a Central oferece escuta e orientação sobre acolhimento voluntário psicossocial em Araraquara, na única sede em Araraquara, com suporte psicológico, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar com supervisão diária e cuidados contínuos.",
+    "intro": "O álcool pode ocupar cada vez mais espaço na rotina sem que a família perceba uma ruptura imediata. Para quem procura ajuda em Ribeirão Preto, a Central oferece escuta e orientação sobre acolhimento voluntário psicossocial em Araraquara, na sede em Araraquara, com suporte psicológico, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar com supervisão diária e cuidados contínuos.",
     "notice": "Tremores após reduzir o álcool merecem avaliação médica. Convulsões, confusão intensa ou alteração de consciência exigem urgência ou SAMU 192.",
     "condition": "Dependência de álcool",
     "sections": [
@@ -77,7 +77,7 @@ export const ribeiraoSpecialtyList = [
     "title": "Crack e Cocaína para Ribeirão Preto - SP | Orientação",
     "description": "Orientação sobre crack, cocaína e fissura para famílias de Ribeirão Preto. Suporte psicossocial em Araraquara e encaminhamento médico quando necessário.",
     "heading": "Crack e cocaína: orientação para Ribeirão Preto",
-    "intro": "Uma família pode perceber mudanças no sono, no dinheiro ou na convivência antes de conseguir conversar sobre cocaína ou crack. A Central ajuda a organizar essa busca em Ribeirão Preto, distinguindo avaliação médica de acolhimento voluntário psicossocial na única sede em Araraquara.",
+    "intro": "Uma família pode perceber mudanças no sono, no dinheiro ou na convivência antes de conseguir conversar sobre cocaína ou crack. A Central ajuda a organizar essa busca em Ribeirão Preto, distinguindo avaliação médica de acolhimento voluntário psicossocial na sede em Araraquara.",
     "notice": "Dor no peito, convulsões, alteração de consciência ou risco imediato exigem urgência. Acione o SAMU 192; não aguarde transporte agendado.",
     "condition": "Dependência de cocaína",
     "sections": [
@@ -202,7 +202,7 @@ export const ribeiraoSpecialtyList = [
     "title": "Tratamento Voluntário para Ribeirão Preto - SP | Acolhimento",
     "description": "Conheça o acolhimento voluntário em Araraquara para famílias de Ribeirão Preto: suporte psicológico, 12 Passos, convivência e visitas agendadas.",
     "heading": "Acolhimento voluntário para famílias de Ribeirão Preto",
-    "intro": "Aceitar ajuda não exige que todas as dúvidas estejam resolvidas. Pessoas de Ribeirão Preto podem conhecer a proposta de acolhimento psicossocial da Central antes de decidir, com consentimento, avaliação e esclarecimento das condições da única sede em Araraquara.",
+    "intro": "Aceitar ajuda não exige que todas as dúvidas estejam resolvidas. Pessoas de Ribeirão Preto podem conhecer a proposta de acolhimento psicossocial da Central antes de decidir, com consentimento, avaliação e esclarecimento das condições da sede em Araraquara.",
     "notice": "Acolhimento voluntário não é internação médica. Necessidades clínicas e desintoxicação recebem encaminhamento externo; ingresso depende de avaliação e disponibilidade.",
     "sections": [
       {
@@ -264,7 +264,7 @@ export const ribeiraoSpecialtyList = [
     "title": "Resgate e Remoção em Ribeirão Preto | Orientação 24h",
     "description": "Orientação 24h para agendar remoção em Ribeirão Preto, com privacidade. Transporte conforme avaliação e disponibilidade. Emergência: SAMU 192.",
     "heading": "Remoção e translado agendado para Ribeirão Preto",
-    "intro": "A busca por resgate pode surgir em uma crise, mas transporte planejado e emergência são situações diferentes. A Central informa remoção regional por agendamento com Luiz Fernando Soares, coordenação operacional, a partir da única sede em Araraquara, com plantão de orientação e suporte para agendamento 24 horas. A execução do transporte depende de agenda, condições e disponibilidade.",
+    "intro": "A busca por resgate pode surgir em uma crise, mas transporte planejado e emergência são situações diferentes. A Central informa remoção regional por agendamento com Luiz Fernando Soares, coordenação operacional, a partir da sede em Araraquara, com plantão de orientação e suporte para agendamento 24 horas. A execução do transporte depende de agenda, condições e disponibilidade.",
     "notice": "Urgência não deve aguardar agendamento particular. Convulsões, alteração de consciência, dor no peito ou risco imediato exigem rede de urgência ou SAMU 192.",
     "sections": [
       {
@@ -278,7 +278,7 @@ export const ribeiraoSpecialtyList = [
         "title": "Origem, disponibilidade e destino",
         "paragraphs": [
           "A possibilidade de deslocamento a partir de Ribeirão Preto deve ser consultada diretamente. Não há raio fixo de cobertura confirmado; a existência desta página não garante transporte disponível. Confirme agenda, custos, documentação e acompanhamento antes de qualquer saída.",
-          "A única sede própria fica na R. Alfredo Micelli, 70, em Araraquara, para acolhimento voluntário psicossocial. Se a avaliação indicar cuidados hospitalares ou internação involuntária clínica, o destino será estabelecimento médico habilitado externo, não a sede da Central. Não há tempo de chegada garantido."
+          "A sede própria fica na R. Alfredo Micelli, 70, em Araraquara, para acolhimento voluntário psicossocial. Se a avaliação indicar cuidados hospitalares ou internação involuntária clínica, o destino será estabelecimento médico habilitado externo, não a sede da Central. Não há tempo de chegada garantido."
         ]
       },
       {
@@ -326,7 +326,7 @@ export const ribeiraoSpecialtyList = [
     "title": "Acolhimento Feminino para Ribeirão Preto - SP | Orientação",
     "description": "Orientação a mulheres e famílias de Ribeirão Preto sobre dependência, privacidade e busca de cuidado. Consulte compatibilidade; não há ala feminina confirmada.",
     "heading": "Mulheres e dependência: orientação para Ribeirão Preto",
-    "intro": "Mulheres podem enfrentar receio de julgamento, responsabilidades de cuidado e dificuldades para pedir ajuda. Esta página orienta famílias de Ribeirão Preto sem anunciar clínica feminina, ala exclusiva ou vagas para mulheres não confirmadas. A única sede da Central fica em Araraquara.",
+    "intro": "Mulheres podem enfrentar receio de julgamento, responsabilidades de cuidado e dificuldades para pedir ajuda. Esta página orienta famílias de Ribeirão Preto sem anunciar clínica feminina, ala exclusiva ou vagas para mulheres não confirmadas. A sede da Central fica em Araraquara.",
     "notice": "Atendimento feminino e ambientes separados não foram confirmados. Consulte compatibilidade e disponibilidade; gestação, abstinência e necessidades clínicas exigem avaliação médica.",
     "sections": [
       {
@@ -528,7 +528,7 @@ export const ribeiraoSpecialtyList = [
         "title": "Faixa etária e serviço apropriado",
         "paragraphs": [
           "Jovens adultos e adolescentes não têm necessariamente as mesmas necessidades ou condições legais de atendimento. Para menores, a família deve procurar serviços habilitados e adequados à idade, respeitando direitos e participação do adolescente. Não foi confirmado programa de acolhimento de menores na Central.",
-          "A única sede própria da instituição fica em Araraquara e oferece acolhimento voluntário psicossocial conforme compatibilidade e disponibilidade. Uma página sobre jovens é informação educativa, não confirmação de admissão para qualquer idade. O articulação médica e psiquiátrica com serviços parceiros credenciados e a equipe multidisciplinar complementam o cuidado; necessidades hospitalares recebem encaminhamento adequado."
+          "A sede própria da instituição fica em Araraquara e oferece acolhimento voluntário psicossocial conforme compatibilidade e disponibilidade. Uma página sobre jovens é informação educativa, não confirmação de admissão para qualquer idade. O articulação médica e psiquiátrica com serviços parceiros credenciados e a equipe multidisciplinar complementam o cuidado; necessidades hospitalares recebem encaminhamento adequado."
         ]
       },
       {
@@ -576,7 +576,7 @@ export const ribeiraoSpecialtyList = [
   "title": "Tratamento de Jogos Compulsivos e Apostas em Ribeirão Preto - SP | Acolhimento",
   "description": "Orientação sobre apostas esportivas e jogos online para Ribeirão Preto. Triagem sigilosa, apoio familiar e acolhimento voluntário em Araraquara; consulta de vagas 24h.",
   "heading": "Quando as apostas online passam a controlar a rotina",
-  "intro": "Apostas esportivas, cassinos digitais e jogos no celular podem gerar dívidas, segredos e conflitos antes que a família perceba a dimensão do problema. A Central oferece escuta e orientação a famílias de Ribeirão Preto sobre acolhimento voluntário psicossocial na única sede própria, em Araraquara, com suporte psicológico, equipe multidisciplinar e articulação médica e psiquiátrica com serviços parceiros credenciados.",
+  "intro": "Apostas esportivas, cassinos digitais e jogos no celular podem gerar dívidas, segredos e conflitos antes que a família perceba a dimensão do problema. A Central oferece escuta e orientação a famílias de Ribeirão Preto sobre acolhimento voluntário psicossocial na sede própria, em Araraquara, com suporte psicológico, equipe multidisciplinar e articulação médica e psiquiátrica com serviços parceiros credenciados.",
   "notice": "Pensamentos de morte ligados a dívidas exigem ajuda imediata: CVV 188 ou SAMU 192. A Central não negocia dívidas nem oferece orientação jurídica ou financeira.",
   "sections": [
     {
@@ -637,7 +637,7 @@ export const ribeiraoSpecialtyList = [
   "title": "Clínica de Recuperação por Convênio em Ribeirão Preto - SP | Acolhimento",
   "description": "Atendimento particular para famílias de Ribeirão Preto, com orientação sobre reembolso ou autorização do plano mediante laudo médico externo, sem garantia de cobertura.",
   "heading": "Atendimento particular com orientação clara sobre o plano de saúde",
-  "intro": "Muitas famílias perguntam se o plano de saúde pode participar do custo. A Central oferece escuta e orientação a famílias de Ribeirão Preto sobre acolhimento voluntário psicossocial na única sede própria, em Araraquara, com suporte psicológico, equipe multidisciplinar e articulação médica e psiquiátrica com serviços parceiros credenciados. O atendimento é particular; a Central não é credenciada como prestadora de convênios.",
+  "intro": "Muitas famílias perguntam se o plano de saúde pode participar do custo. A Central oferece escuta e orientação a famílias de Ribeirão Preto sobre acolhimento voluntário psicossocial na sede própria, em Araraquara, com suporte psicológico, equipe multidisciplinar e articulação médica e psiquiátrica com serviços parceiros credenciados. O atendimento é particular; a Central não é credenciada como prestadora de convênios.",
   "notice": "A cobertura ou o reembolso dependem exclusivamente da operadora e do contrato. A Central não garante autorização nem emite laudo médico próprio.",
   "sections": [
     {
@@ -691,7 +691,7 @@ export const ribeiraoSpecialtyList = [
   "title": "Clínica de Recuperação para Idosos em Ribeirão Preto - SP | Acolhimento",
   "description": "Orientação para famílias de Ribeirão Preto sobre dependência na terceira idade: ambiente seguro, rotina multidisciplinar e suporte médico via rede credenciada.",
   "heading": "Dependência na terceira idade exige atenção redobrada",
-  "intro": "Na pessoa idosa, álcool e medicamentos interagem com doenças crônicas e aumentam o risco de quedas e confusão. A Central oferece escuta e orientação a famílias de Ribeirão Preto sobre acolhimento voluntário psicossocial na única sede própria, em Araraquara, com suporte psicológico, equipe multidisciplinar e articulação médica e psiquiátrica com serviços parceiros credenciados.",
+  "intro": "Na pessoa idosa, álcool e medicamentos interagem com doenças crônicas e aumentam o risco de quedas e confusão. A Central oferece escuta e orientação a famílias de Ribeirão Preto sobre acolhimento voluntário psicossocial na sede própria, em Araraquara, com suporte psicológico, equipe multidisciplinar e articulação médica e psiquiátrica com serviços parceiros credenciados.",
   "notice": "Confusão súbita, quedas, falta de ar ou dor no peito exigem SAMU 192. A compatibilidade com o acolhimento depende de avaliação clínica e de autonomia; a sede não substitui instituição de longa permanência nem hospital.",
   "sections": [
     {
@@ -744,7 +744,7 @@ export const ribeiraoSpecialtyList = [
   "title": "Comunidade Terapêutica Masculina em Ribeirão Preto - SP | Acolhimento",
   "description": "Orientação para homens de Ribeirão Preto sobre recuperação voluntária: convivência entre pares, rotina terapêutica, 12 Passos e reinserção social na sede de Araraquara.",
   "heading": "Convivência, rotina e recuperação voluntária entre pares",
-  "intro": "O modelo de convivência terapêutica valoriza rotina, responsabilidade e apoio mútuo. A Central oferece escuta e orientação a famílias de Ribeirão Preto sobre acolhimento voluntário psicossocial na única sede própria, em Araraquara, com suporte psicológico, equipe multidisciplinar e articulação médica e psiquiátrica com serviços parceiros credenciados.",
+  "intro": "O modelo de convivência terapêutica valoriza rotina, responsabilidade e apoio mútuo. A Central oferece escuta e orientação a famílias de Ribeirão Preto sobre acolhimento voluntário psicossocial na sede própria, em Araraquara, com suporte psicológico, equipe multidisciplinar e articulação médica e psiquiátrica com serviços parceiros credenciados.",
   "notice": "O acolhimento é voluntário: ninguém deve ser levado contra a vontade para a sede. Consulte o perfil de admissão antes de qualquer decisão.",
   "sections": [
     {
@@ -797,7 +797,7 @@ export const ribeiraoSpecialtyList = [
   "title": "Tratamento de Dependência para Trabalhadores e Executivos em Ribeirão Preto - SP | Acolhimento",
   "description": "Acolhimento confidencial para profissionais de Ribeirão Preto: estresse laboral, burnout associado ao consumo de substâncias e preservação da trajetória profissional.",
   "heading": "Cuidado confidencial para quem não pode parar a vida",
-  "intro": "Pressão por resultados, jornadas longas e esgotamento podem se misturar ao uso de álcool e outras substâncias. A Central oferece escuta e orientação a famílias de Ribeirão Preto sobre acolhimento voluntário psicossocial na única sede própria, em Araraquara, com suporte psicológico, equipe multidisciplinar e articulação médica e psiquiátrica com serviços parceiros credenciados.",
+  "intro": "Pressão por resultados, jornadas longas e esgotamento podem se misturar ao uso de álcool e outras substâncias. A Central oferece escuta e orientação a famílias de Ribeirão Preto sobre acolhimento voluntário psicossocial na sede própria, em Araraquara, com suporte psicológico, equipe multidisciplinar e articulação médica e psiquiátrica com serviços parceiros credenciados.",
   "notice": "Burnout e depressão exigem avaliação profissional. Pensamentos suicidas: CVV 188 ou SAMU 192. A Central não emite atestados nem laudos trabalhistas.",
   "sections": [
     {

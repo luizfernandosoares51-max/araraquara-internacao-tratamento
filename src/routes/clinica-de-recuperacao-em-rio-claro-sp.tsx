@@ -117,7 +117,7 @@ const faqs = [
   {
     question: "A Central possui unidade em Rio Claro?",
     answer:
-      "A única sede física da Central fica em Araraquara, na R. Alfredo Micelli, 70. Esta página orienta famílias de Rio Claro; acolhimento voluntário depende de avaliação e disponibilidade. A equipe na sede reúne psicologia, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar, com encaminhamento hospitalar quando indicado.",
+      "A sede física da Central fica em Araraquara, na R. Alfredo Micelli, 70. Esta página orienta famílias de Rio Claro; acolhimento voluntário depende de avaliação e disponibilidade. A equipe na sede reúne psicologia, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar, com encaminhamento hospitalar quando indicado.",
   },
   {
     question: "Como saber qual tipo de tratamento é adequado?",
@@ -362,7 +362,7 @@ function RioClaroPage() {
               <h2 className="mt-3 font-display text-3xl font-bold leading-tight sm:text-4xl">Atendimento para Rio Claro e região</h2>
             </div>
             <div className="text-[15px] leading-relaxed text-deep/70">
-              <p>Famílias de Rio Claro e região podem contar com escuta e apoio para planejar o acolhimento na única sede da Central, em Araraquara. A equipe ajuda a organizar a recepção e a participação familiar, com avaliação individual e condições esclarecidas desde o primeiro contato.</p>
+              <p>Famílias de Rio Claro e região podem contar com escuta e apoio para planejar o acolhimento na sede da Central, em Araraquara. A equipe ajuda a organizar a recepção e a participação familiar, com avaliação individual e condições esclarecidas desde o primeiro contato.</p>
               <p className="mt-5">Para consultar outras localidades com conteúdo disponível, <Link to="/cidades" className="font-semibold text-brand underline underline-offset-4">conheça nossas cidades de atendimento</Link>. Para conteúdos educativos, leia o artigo sobre os <Link to="/blog/dependencia-quimica-sinais-tratamento" className="font-semibold text-brand underline underline-offset-4">sinais da dependência química e a importância do tratamento</Link>.</p>
             </div>
           </div>

@@ -43,9 +43,17 @@ export const institutionalIdentity = {
   referralStatement: "Quando a avaliação indica desintoxicação médica, cuidado hospitalar ou internação involuntária clínica, a Central apoia a família na triagem, organização dos trâmites e encaminhamento para estabelecimentos médicos habilitados. A decisão clínica, a admissão hospitalar e as comunicações legais são conduzidas pelos profissionais e estabelecimentos responsáveis. A sede própria mantém acolhimento voluntário; remoções são organizadas mediante agendamento e confirmação das condições.",
 } as const;
 
+export const institutionalAffiliation = {
+  parentName: "Centro de Reabilitação Terapêutico Morada do Sol",
+  parentCnpj: "40.241.645/0001-30",
+  unitCities: ["Araraquara/SP", "São Carlos/SP"],
+  saoCarlosAddressSupplied: false,
+  statement: "A Central de Acolhimento e Reabilitação é o portal oficial de triagem, acolhimento e orientação vinculado ao Centro de Reabilitação Terapêutico Morada do Sol (CNPJ 40.241.645/0001-30), com unidades especializadas em Araraquara/SP e São Carlos/SP, conforme declaração institucional.",
+} as const;
+
 export const institutionalLocalBusiness = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["LocalBusiness", "MedicalOrganization"],
   "@id": `${siteUrl}/#organization`,
   name: institutionalIdentity.publicName,
   legalName: institutionalIdentity.legalName,
@@ -55,6 +63,13 @@ export const institutionalLocalBusiness = {
   taxID: institutionalIdentity.cnpj,
   address: institutionalIdentity.postalAddress,
   hasMap: institutionalIdentity.mapsHref,
+  areaServed: ["Araraquara, SP", "São Carlos, SP"],
+  parentOrganization: {
+    "@type": "MedicalOrganization",
+    name: "Centro de Reabilitação Terapêutico Morada do Sol",
+    taxID: "40.241.645/0001-30",
+    telephone: phoneDisplay,
+  },
 };
 
 export const institutionalLinks = [

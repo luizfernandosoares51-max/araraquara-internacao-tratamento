@@ -22,7 +22,7 @@ export const americoElderlyOrientation = {
     },
     {
       title: 'Orientação 24 horas, com o destino do cuidado esclarecido',
-      paragraphs: ['O telefone e WhatsApp (16) 99765-4579 oferecem orientação e suporte para agendamento 24h. A única unidade física da Central fica em Araraquara; não existe filial em Américo Brasiliense. Transporte depende de avaliação, disponibilidade e agendamento.', 'Em confusão súbita, convulsão, alteração de consciência ou risco imediato à vida, procure atendimento de urgência ou ligue SAMU 192. O WhatsApp da Central não substitui um serviço de emergência.'],
+      paragraphs: ['O telefone e WhatsApp (16) 99765-4579 oferecem orientação e suporte para agendamento 24h. A unidade física da Central fica em Araraquara; não existe filial em Américo Brasiliense. Transporte depende de avaliação, disponibilidade e agendamento.', 'Em confusão súbita, convulsão, alteração de consciência ou risco imediato à vida, procure atendimento de urgência ou ligue SAMU 192. O WhatsApp da Central não substitui um serviço de emergência.'],
     },
   ],
 } satisfies SpecialtyContent;

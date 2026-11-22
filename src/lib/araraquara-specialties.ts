@@ -35,7 +35,7 @@ export const araraquaraSpecialties: Record<AraraquaraSpecialtyKey, Specialty> = 
     title: "Clínica para Tratamento do Alcoolismo em Araraquara - SP | Acolhimento",
     description: "Orientação sobre alcoolismo em Araraquara, acolhimento voluntário e apoio psicossocial. Desintoxicação médica por encaminhamento a serviços habilitados.",
     heading: "Tratamento do alcoolismo em Araraquara",
-    intro: "Quando o álcool começa a comprometer a saúde, a rotina ou os vínculos, a busca por ajuda pode começar com uma conversa. A Central oferece acolhimento voluntário e suporte psicossocial na única sede própria em Araraquara, com orientação à família e avaliação das necessidades de cada pessoa.",
+    intro: "Quando o álcool começa a comprometer a saúde, a rotina ou os vínculos, a busca por ajuda pode começar com uma conversa. A Central oferece acolhimento voluntário e suporte psicossocial na sede própria em Araraquara, com orientação à família e avaliação das necessidades de cada pessoa.",
     notice: "A desintoxicação médica não é realizada na Central. Abstinência com convulsões, confusão intensa ou alteração de consciência exige atendimento de urgência: SAMU 192.",
     condition: "Dependência de álcool",
     sections: [
@@ -91,7 +91,7 @@ export const araraquaraSpecialties: Record<AraraquaraSpecialtyKey, Specialty> = 
       ] },
       { title: "Novas rotinas e apoio familiar em Araraquara", paragraphs: [
         "Reconstruir hábitos de sono, alimentação, convivência e atividades significativas pode fazer parte do plano psicossocial. O retorno às responsabilidades deve ser discutido de forma gradual e realista, conforme as necessidades da pessoa. Metas pequenas e possíveis são diferentes de promessas de recuperação rápida ou de resultado permanente.",
-        "Famílias podem procurar orientação no contato regional (16) 99765-4579, organizar dúvidas e planejar visitas agendadas à única sede em Araraquara. A continuidade do cuidado precisa considerar recursos fora do acolhimento e a rede de apoio da pessoa. As informações desta página são educativas e não substituem acompanhamento individual.",
+        "Famílias podem procurar orientação no contato regional (16) 99765-4579, organizar dúvidas e planejar visitas agendadas à sede em Araraquara. A continuidade do cuidado precisa considerar recursos fora do acolhimento e a rede de apoio da pessoa. As informações desta página são educativas e não substituem acompanhamento individual.",
       ] },
     ],
     steps: [
@@ -193,7 +193,7 @@ export const araraquaraSpecialties: Record<AraraquaraSpecialtyKey, Specialty> = 
         "A expressão resgate é frequentemente usada pela família na busca por ajuda, mas não significa que a instituição disponibilize serviço de emergência. Horários, destino, condições e disponibilidade precisam ser consultados antes do deslocamento. A orientação e o suporte para agendamento estão disponíveis 24h. A execução do transporte depende de agenda, condições e disponibilidade, sem prazo de chegada garantido.",
       ] },
       { title: "Organização do acesso e definição do destino", paragraphs: [
-        "A conversa com a coordenação operacional ajuda a organizar origem, necessidades informadas, condições de deslocamento e destino adequado. A única sede própria da Central fica em Araraquara. Receber famílias da região não significa possuir bases, filiais ou equipes permanentemente disponíveis em cada município.",
+        "A conversa com a coordenação operacional ajuda a organizar origem, necessidades informadas, condições de deslocamento e destino adequado. A sede própria da Central fica em Araraquara. Receber famílias da região não significa possuir bases, filiais ou equipes permanentemente disponíveis em cada município.",
         "Quando há necessidade de intervenção médica ou internação involuntária clínica, o destino deve ser um estabelecimento habilitado, conforme avaliação e critérios legais. Transporte não determina a indicação médica nem assegura vaga. A família deve confirmar o planejamento com a coordenação e o serviço de destino antes de sair.",
       ] },
       { title: "Recusa, crise e respeito aos direitos", paragraphs: [

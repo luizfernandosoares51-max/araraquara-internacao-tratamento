@@ -187,7 +187,7 @@ const faqs = [
   {
     question: "A Central possui unidade em Ribeirão Preto?",
     answer:
-      "Famílias de Ribeirão Preto são orientadas pela Central a partir da única sede própria em Araraquara, na R. Alfredo Micelli, 70, com acolhimento voluntário conforme avaliação e disponibilidade. O acolhimento reúne suporte psicológico, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar. Necessidades hospitalares recebem encaminhamento ao serviço habilitado adequado.",
+      "Famílias de Ribeirão Preto são orientadas pela Central a partir da sede própria em Araraquara, na R. Alfredo Micelli, 70, com acolhimento voluntário conforme avaliação e disponibilidade. O acolhimento reúne suporte psicológico, articulação médica e psiquiátrica com serviços parceiros credenciados e equipe multidisciplinar. Necessidades hospitalares recebem encaminhamento ao serviço habilitado adequado.",
   },
   {
     question: "Como entrar em contato com a Central de Acolhimento e Reabilitação?",

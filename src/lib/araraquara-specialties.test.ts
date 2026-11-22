@@ -21,7 +21,7 @@ test("structured business identity does not imply an own-unit medical business",
     const script = specialtyHead(page.key).scripts[0];
     assert.ok(script);
     const graph = JSON.parse(script.children)["@graph"];
-    assert.equal(graph[0]["@type"], "LocalBusiness");
+    assert.deepEqual(graph[0]["@type"], ["LocalBusiness", "MedicalOrganization"]); assert.equal(graph[0].parentOrganization.taxID, "40.241.645/0001-30");
     assert.equal(graph[0].address.streetAddress, "R. Alfredo Micelli, 70 - Condomínio Satélite");
     assert.equal(graph[0].telephone, "(16) 99765-4579");
   }

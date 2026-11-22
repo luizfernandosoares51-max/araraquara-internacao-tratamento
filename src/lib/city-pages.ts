@@ -268,7 +268,7 @@ export const cityPages: CityPageData[] = [
       sourceUrl: "https://www.itapolis.sp.gov.br/portal/secretarias/17/secretaria-municipal-de-saude/",
     },
     faqs: [
-      { question: "Existe uma filial da Central em Itápolis?", answer: "Não. A única unidade física informada fica em Araraquara. Famílias de Itápolis podem entrar em contato para conhecer essa estrutura." },
+      { question: "Existe uma filial da Central em Itápolis?", answer: "Não. A unidade física informada fica em Araraquara. Famílias de Itápolis podem entrar em contato para conhecer essa estrutura." },
       { question: "Quais informações ajudam na conversa inicial?", answer: "Histórico conhecido, situação atual, impactos na rotina e dúvidas da família ajudam a equipe a compreender o contexto." },
       { question: "A internação involuntária é uma solução automática?", answer: "Não. Ela exige avaliação responsável, indicação profissional e cumprimento da legislação aplicável. Cada situação é individual." },
       { question: "O primeiro contato tem compromisso?", answer: "Não. A conversa inicial serve para orientação e esclarecimento das possibilidades." },

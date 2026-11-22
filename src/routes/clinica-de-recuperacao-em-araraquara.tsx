@@ -325,7 +325,7 @@ function AraraquaraPage() {
           <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">
              <SectionLabel>Representações institucionais</SectionLabel>
             <h2 className="mt-3 font-display text-2xl font-semibold leading-tight sm:text-4xl">Estrutura Terapêutica Local com Sede Própria em Araraquara</h2>
-             <p className="mt-5 max-w-3xl text-[15px] leading-relaxed text-deep/75">A única sede física da Central fica na R. Alfredo Micelli, 70, Condomínio Satélite, Araraquara - SP, CEP 14808-579. A família pode organizar visitas agendadas e contato direto com a coordenação local.</p>
+             <p className="mt-5 max-w-3xl text-[15px] leading-relaxed text-deep/75">A sede física da Central fica na R. Alfredo Micelli, 70, Condomínio Satélite, Araraquara - SP, CEP 14808-579. A família pode organizar visitas agendadas e contato direto com a coordenação local.</p>
             <div className="mt-8">
               <AraraquaraPhotoGallery light />
             </div>

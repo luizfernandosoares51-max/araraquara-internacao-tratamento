@@ -12,7 +12,7 @@ export const regionalFamilyOrientation = {
 export const araraquaraOrientationFaqs = [
   {
     question: "A unidade de Araraquara atende famílias de cidades vizinhas?",
-    answer: `Sim. A única unidade física da Central fica em ${institutionalIdentity.fullAddress}. Recebemos e orientamos famílias de toda a região, incluindo ${regionalFamilyOrientation.neighboringCities.slice(0, -1).join(", ")} e Boa Esperança do Sul. As páginas de outros municípios são informativas e não representam filiais. Consulte condições de acolhimento e disponibilidade com a equipe.`,
+    answer: `Sim. A unidade física da Central fica em ${institutionalIdentity.fullAddress}. Recebemos e orientamos famílias de toda a região, incluindo ${regionalFamilyOrientation.neighboringCities.slice(0, -1).join(", ")} e Boa Esperança do Sul. As páginas de outros municípios são informativas e não representam filiais. Consulte condições de acolhimento e disponibilidade com a equipe.`,
   },
   {
     question: "Como funciona o período de permanência e acolhimento?",

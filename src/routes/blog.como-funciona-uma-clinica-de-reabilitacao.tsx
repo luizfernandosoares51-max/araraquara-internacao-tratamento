@@ -123,7 +123,7 @@ function RehabilitationArticle() {
       </section>
       <section className="mt-10 border-t border-border pt-10">
         <h2 className="font-display text-2xl font-bold">Cada situação merece orientação individual</h2>
-        <p className="mt-5 max-w-3xl leading-8 text-muted-foreground">Compreender diferenças entre acolhimento, tratamento e acompanhamento ajuda a fazer perguntas melhores e evitar decisões baseadas em promessas. Converse com a Central de Acolhimento e Reabilitação para receber orientação sobre possibilidades de cuidado. A única unidade física da Central fica em Araraquara.</p>
+        <p className="mt-5 max-w-3xl leading-8 text-muted-foreground">Compreender diferenças entre acolhimento, tratamento e acompanhamento ajuda a fazer perguntas melhores e evitar decisões baseadas em promessas. Converse com a Central de Acolhimento e Reabilitação para receber orientação sobre possibilidades de cuidado. A unidade física da Central fica em Araraquara.</p>
         <a href={whatsappHref} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex min-h-12 items-center gap-3 rounded-lg bg-whatsapp px-5 py-3 font-semibold text-whatsapp-foreground"><MessageCircle className="size-5" aria-hidden="true" /> Conversar pelo WhatsApp</a>
         <p className="mt-3 text-sm text-muted-foreground">Contato oficial: {phoneDisplay}. Em emergência, SAMU 192.</p>
       </section>

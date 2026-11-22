@@ -31,7 +31,7 @@ export const americoSpecialtyList = [
     "title": "Cocaína e Crack para Américo Brasiliense SP | Central",
     "description": "Escuta familiar e avaliação para reorganizar hábitos e vínculos. Orientação 24h para famílias de Américo Brasiliense pela Central, com avaliação e condições de cuidado esclarecidas.",
     "intro": "No Centro ou no Jardim Planalto, mudanças de sono, gastos e convivência podem motivar uma conversa cuidadosa. A Central orienta famílias de Américo Brasiliense a organizar avaliação e conhecer o acolhimento voluntário em Araraquara, sem diagnóstico remoto.",
-    "notice": "Orientação regional a partir da única sede em Araraquara. Acolhimento voluntário depende de consentimento e compatibilidade; cuidado hospitalar e desintoxicação médica seguem encaminhamento. Em risco imediato, SAMU 192.",
+    "notice": "Orientação regional a partir da sede em Araraquara. Acolhimento voluntário depende de consentimento e compatibilidade; cuidado hospitalar e desintoxicação médica seguem encaminhamento. Em risco imediato, SAMU 192.",
     "sections": [
       {
         "title": "Relatos concretos ajudam a avaliação",
@@ -76,7 +76,7 @@ export const americoSpecialtyList = [
     "title": "Alcoolismo para Américo Brasiliense SP | Central",
     "description": "Apoio diante do uso de álcool, com atenção à saúde e à família. Orientação 24h para famílias de Américo Brasiliense pela Central, com avaliação e condições de cuidado esclarecidas.",
     "intro": "Mesmo com trabalho e responsabilidades preservados, o consumo pode prejudicar saúde e relações. Famílias de Luiz Ometto e de outros bairros de Américo Brasiliense podem buscar orientação sem esperar que todas as atividades sejam interrompidas.",
-    "notice": "Orientação regional a partir da única sede em Araraquara. Acolhimento voluntário depende de consentimento e compatibilidade; cuidado hospitalar e desintoxicação médica seguem encaminhamento. Em risco imediato, SAMU 192.",
+    "notice": "Orientação regional a partir da sede em Araraquara. Acolhimento voluntário depende de consentimento e compatibilidade; cuidado hospitalar e desintoxicação médica seguem encaminhamento. Em risco imediato, SAMU 192.",
     "sections": [
       {
         "title": "Além do rótulo de alcoolismo funcional",
@@ -121,7 +121,7 @@ export const americoSpecialtyList = [
     "title": "Internação Involuntária: Orientação para Américo Brasiliense SP | Central",
     "description": "Esclarecimento legal para decisões familiares responsáveis. Orientação 24h para famílias de Américo Brasiliense pela Central, com avaliação e condições de cuidado esclarecidas.",
     "intro": "Recusa de ajuda não autoriza uma decisão automática de internação. A Central orienta famílias de Américo Brasiliense sobre os requisitos das Leis 10.216/2001 e 13.840/2019 e sobre encaminhamento médico adequado.",
-    "notice": "Orientação regional a partir da única sede em Araraquara. Acolhimento voluntário depende de consentimento e compatibilidade; cuidado hospitalar e desintoxicação médica seguem encaminhamento. Em risco imediato, SAMU 192.",
+    "notice": "Orientação regional a partir da sede em Araraquara. Acolhimento voluntário depende de consentimento e compatibilidade; cuidado hospitalar e desintoxicação médica seguem encaminhamento. Em risco imediato, SAMU 192.",
     "sections": [
       {
         "title": "Avaliação médica antes da decisão",
@@ -165,8 +165,8 @@ export const americoSpecialtyList = [
     "summary": "Consentimento, rotina terapêutica e participação dos familiares.",
     "title": "Acolhimento Voluntário para Américo Brasiliense SP | Central",
     "description": "Consentimento, rotina terapêutica e participação dos familiares. Orientação 24h para famílias de Américo Brasiliense pela Central, com avaliação e condições de cuidado esclarecidas.",
-    "intro": "Pedir ajuda pode começar com perguntas sobre convivência, contatos e permanência. Para quem vive no Jardim Vista Alegre ou em outras áreas de Américo, a Central apresenta o acolhimento voluntário na única sede em Araraquara.",
-    "notice": "Orientação regional a partir da única sede em Araraquara. Acolhimento voluntário depende de consentimento e compatibilidade; cuidado hospitalar e desintoxicação médica seguem encaminhamento. Em risco imediato, SAMU 192.",
+    "intro": "Pedir ajuda pode começar com perguntas sobre convivência, contatos e permanência. Para quem vive no Jardim Vista Alegre ou em outras áreas de Américo, a Central apresenta o acolhimento voluntário na sede em Araraquara.",
+    "notice": "Orientação regional a partir da sede em Araraquara. Acolhimento voluntário depende de consentimento e compatibilidade; cuidado hospitalar e desintoxicação médica seguem encaminhamento. Em risco imediato, SAMU 192.",
     "sections": [
       {
         "title": "Escolha informada e consentimento",
@@ -211,7 +211,7 @@ export const americoSpecialtyList = [
     "title": "Resgate e Remoção: Agendamento para Américo Brasiliense SP | Central",
     "description": "Organização do deslocamento conforme avaliação e agendamento. Orientação 24h para famílias de Américo Brasiliense pela Central, com avaliação e condições de cuidado esclarecidas.",
     "intro": "Uma viagem em momento delicado precisa considerar riscos, consentimento e destino. O plantão conversa com famílias de Américo Brasiliense para organizar o agendamento e confirmar condições operacionais, sem prometer saída imediata.",
-    "notice": "Orientação regional a partir da única sede em Araraquara. Acolhimento voluntário depende de consentimento e compatibilidade; cuidado hospitalar e desintoxicação médica seguem encaminhamento. Em risco imediato, SAMU 192.",
+    "notice": "Orientação regional a partir da sede em Araraquara. Acolhimento voluntário depende de consentimento e compatibilidade; cuidado hospitalar e desintoxicação médica seguem encaminhamento. Em risco imediato, SAMU 192.",
     "sections": [
       {
         "title": "Origem e necessidade orientam o planejamento",
@@ -256,7 +256,7 @@ export const americoSpecialtyList = [
     "title": "Orientação para Mulheres para Américo Brasiliense SP | Central",
     "description": "Escuta com respeito à privacidade e às necessidades familiares. Orientação 24h para famílias de Américo Brasiliense pela Central, com avaliação e condições de cuidado esclarecidas.",
     "intro": "Mulheres de Américo Brasiliense podem ter dúvidas sobre responsabilidades familiares, privacidade e escolhas de cuidado. A Central acolhe essas perguntas sem pressupor um único perfil ou anunciar unidade feminina exclusiva.",
-    "notice": "Orientação regional a partir da única sede em Araraquara. Acolhimento voluntário depende de consentimento e compatibilidade; cuidado hospitalar e desintoxicação médica seguem encaminhamento. Em risco imediato, SAMU 192.",
+    "notice": "Orientação regional a partir da sede em Araraquara. Acolhimento voluntário depende de consentimento e compatibilidade; cuidado hospitalar e desintoxicação médica seguem encaminhamento. Em risco imediato, SAMU 192.",
     "sections": [
       {
         "title": "Considerar prioridades e vínculos",
@@ -280,7 +280,7 @@ export const americoSpecialtyList = [
     "faqs": [
       {
         "question": "Existe unidade feminina da Central em Américo?",
-        "answer": "Não. A única sede fica em Araraquara e não há confirmação de ala feminina exclusiva. Esta página oferece orientação."
+        "answer": "Não. A sede fica em Araraquara e não há confirmação de ala feminina exclusiva. Esta página oferece orientação."
       },
       {
         "question": "A privacidade é absoluta?",
@@ -301,7 +301,7 @@ export const americoSpecialtyList = [
     "title": "Medicamentos Controlados para Américo Brasiliense SP | Central",
     "description": "Dúvidas sobre prescrições e cuidado sem interrupções por conta própria. Orientação 24h para famílias de Américo Brasiliense pela Central, com avaliação e condições de cuidado esclarecidas.",
     "intro": "Medo de parar um remédio ou mudanças de dose merecem conversa com o prescritor. Famílias de Luiz Ometto e de toda Américo Brasiliense podem organizar dúvidas sobre sono, ansiedade e uso de medicamentos sem concluir diagnóstico pela tarja.",
-    "notice": "Orientação regional a partir da única sede em Araraquara. Acolhimento voluntário depende de consentimento e compatibilidade; cuidado hospitalar e desintoxicação médica seguem encaminhamento. Em risco imediato, SAMU 192.",
+    "notice": "Orientação regional a partir da sede em Araraquara. Acolhimento voluntário depende de consentimento e compatibilidade; cuidado hospitalar e desintoxicação médica seguem encaminhamento. Em risco imediato, SAMU 192.",
     "sections": [
       {
         "title": "Prescrição não equivale a uso problemático",
@@ -346,7 +346,7 @@ export const americoSpecialtyList = [
     "title": "Pessoas Idosas e Família para Américo Brasiliense SP | Central",
     "description": "Autonomia e atenção às necessidades clínicas na idade avançada. Orientação 24h para famílias de Américo Brasiliense pela Central, com avaliação e condições de cuidado esclarecidas.",
     "intro": "Mudanças de equilíbrio, memória e rotina não devem ser atribuídas apenas à idade. Pessoas idosas e famílias de Américo Brasiliense podem buscar avaliação e orientação sobre compatibilidade do cuidado, sem programa geriátrico próprio anunciado.",
-    "notice": "Orientação regional a partir da única sede em Araraquara. Acolhimento voluntário depende de consentimento e compatibilidade; cuidado hospitalar e desintoxicação médica seguem encaminhamento. Em risco imediato, SAMU 192.",
+    "notice": "Orientação regional a partir da sede em Araraquara. Acolhimento voluntário depende de consentimento e compatibilidade; cuidado hospitalar e desintoxicação médica seguem encaminhamento. Em risco imediato, SAMU 192.",
     "sections": [
       {
         "title": "Avaliar mudanças recentes",
@@ -391,7 +391,7 @@ export const americoSpecialtyList = [
     "title": "Jovens e Apoio Familiar para Américo Brasiliense SP | Central",
     "description": "Diálogo, avaliação por idade e preservação de vínculos e estudos. Orientação 24h para famílias de Américo Brasiliense pela Central, com avaliação e condições de cuidado esclarecidas.",
     "intro": "Conflitos familiares e mudanças na escola não confirmam dependência. A Central orienta famílias de Américo Brasiliense a escutar o jovem e procurar avaliação adequada à idade, sem transformar cuidado em punição.",
-    "notice": "Orientação regional a partir da única sede em Araraquara. Acolhimento voluntário depende de consentimento e compatibilidade; cuidado hospitalar e desintoxicação médica seguem encaminhamento. Em risco imediato, SAMU 192.",
+    "notice": "Orientação regional a partir da sede em Araraquara. Acolhimento voluntário depende de consentimento e compatibilidade; cuidado hospitalar e desintoxicação médica seguem encaminhamento. Em risco imediato, SAMU 192.",
     "sections": [
       {
         "title": "Escutar sem antecipar diagnóstico",
@@ -436,7 +436,7 @@ export const americoSpecialtyList = [
     "title": "Jogos e Apostas para Américo Brasiliense SP | Central",
     "description": "Apoio sem julgamento diante de dívidas e impactos nos vínculos. Orientação 24h para famílias de Américo Brasiliense pela Central, com avaliação e condições de cuidado esclarecidas.",
     "intro": "Quando apostas ocupam tempo e recursos, a família pode sentir medo e desgaste. A Central orienta pessoas de Américo Brasiliense sobre avaliação e próximos passos, sem anunciar programa especializado para ludopatia.",
-    "notice": "Orientação regional a partir da única sede em Araraquara. Acolhimento voluntário depende de consentimento e compatibilidade; cuidado hospitalar e desintoxicação médica seguem encaminhamento. Em risco imediato, SAMU 192.",
+    "notice": "Orientação regional a partir da sede em Araraquara. Acolhimento voluntário depende de consentimento e compatibilidade; cuidado hospitalar e desintoxicação médica seguem encaminhamento. Em risco imediato, SAMU 192.",
     "sections": [
       {
         "title": "Observar impactos além do valor perdido",
