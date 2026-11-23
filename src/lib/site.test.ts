@@ -6,6 +6,6 @@ test("institutional floating contact opens the official WhatsApp number", () => 
   assert.equal(`https://wa.me/${whatsappNumber}`, "https://wa.me/5516997654579");
 });
 
-test("institutional Facebook points to the official Araraquara page", () => {
-  assert.equal(facebookHref, "https://m.facebook.com/CentraldeAcolhimentoparareabilitacaoararaquara/");
+test("institutional Facebook points to the requested Morada do Sol page", () => {
+  assert.equal(facebookHref, "https://www.facebook.com/centrodereabilitacaomoradadosol/");
 });
