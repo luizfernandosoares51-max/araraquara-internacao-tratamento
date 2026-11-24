@@ -1,5 +1,6 @@
 # Roadmap
 
+- [ ] Integrar a galeria de estrutura física de Araraquara na Home e nas páginas regionais existentes, com legendas, ampliação, contatos e dados estruturados responsáveis — aguarda as fotos reais mencionadas em prompt-22.txt; não criar rotas ausentes nem usar retratos da equipe como fotos dos ambientes.
 - [x] Reutilizar a equipe da Home antes do FAQ em Américo Brasiliense, São Carlos, Ibaté e Matão; seis fotos e textos iguais à Home conferidos em 390/1280, três testes aprovados, sem erros ou publicação.
 - [ ] Inserir a equipe na página de Jaú — página não encontrada no site atual; aguarda endereço informado pelo usuário.
 
