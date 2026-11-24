@@ -11,7 +11,11 @@ export function MultidisciplinaryTeam() {
           const Icon = teamIcons[index] ?? Users;
           return (
             <article key={member.id} className="flex h-full min-w-0 flex-col items-center rounded-lg border border-border bg-card p-3 text-center text-card-foreground sm:p-4">
-              <span className="flex size-16 shrink-0 items-center justify-center rounded-full bg-secondary/15 text-secondary"><Icon className="size-7" aria-hidden="true" /></span>
+              {member.portrait ? (
+                <img src={member.portrait.url} alt={member.portrait.alt} width={96} height={96} loading="lazy" decoding="async" className="size-24 shrink-0 rounded-full object-cover ring-2 ring-secondary/30" />
+              ) : (
+                <span className="flex size-24 shrink-0 items-center justify-center rounded-full bg-secondary/15 text-secondary"><Icon className="size-9" aria-hidden="true" /></span>
+              )}
               <h3 className="mt-3 w-full break-words text-sm font-semibold leading-snug">{member.name}</h3>
               <p className="mt-2 text-xs font-semibold leading-relaxed text-secondary">{member.role}</p>
               {member.registration && <span className="mt-2 max-w-full rounded-md bg-muted px-2 py-1 text-xs font-medium leading-relaxed">{member.registration}</span>}

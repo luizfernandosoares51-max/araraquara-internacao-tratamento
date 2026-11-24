@@ -15,3 +15,7 @@ test("does not invent a professional registration for the administrative manager
   assert.equal(administrator.name, "Vinicius Rafael Moreira da Silva");
   assert.equal(administrator.registration, undefined);
 });
+test("attaches portraits only to professionals the institution mapped to a photo", () => {
+  const withPortrait = multidisciplinaryTeam.filter(member => member.portrait).map(member => member.id).sort();
+  assert.deepEqual(withPortrait, ["nursing", "psychiatry", "psychology"]);
+});
