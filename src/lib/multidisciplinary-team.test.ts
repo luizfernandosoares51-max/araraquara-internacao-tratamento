@@ -17,5 +17,5 @@ test("does not invent a professional registration for the administrative manager
 });
 test("attaches portraits only to professionals the institution mapped to a photo", () => {
   const withPortrait = multidisciplinaryTeam.filter(member => member.portrait).map(member => member.id).sort();
-  assert.deepEqual(withPortrait, ["nursing", "psychiatry", "psychology"]);
+  assert.deepEqual(withPortrait, ["administration", "coordination", "nursing", "psychiatry", "psychology", "therapy"]);
 });

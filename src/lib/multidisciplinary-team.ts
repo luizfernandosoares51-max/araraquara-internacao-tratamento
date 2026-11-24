@@ -1,5 +1,8 @@
 import mayrtonPortrait from "@/assets/team/mayrton.jpg.asset.json";
 import isabellyPortrait from "@/assets/team/isabelly.jpg.asset.json";
+import darlanPortrait from "@/assets/team/darlan.jpg.asset.json";
+import luizPortrait from "@/assets/team/luiz.jpg.asset.json";
+import viniciusPortrait from "@/assets/team/vinicius.jpg.asset.json";
 import margarethPortrait from "@/assets/team/margareth.jpg.asset.json";
 
 export type TeamMember = {
@@ -42,18 +45,21 @@ export const multidisciplinaryTeam: readonly TeamMember[] = [
     name: "Darlan Jorge da Silva",
     role: "Terapeuta Especializado",
     registration: "CRT-SP 299/17",
+    portrait: { url: darlanPortrait.url, alt: "Foto de Darlan Jorge da Silva, terapeuta especializado" },
     description: "Condução de terapias especializadas, prevenção à recaída e desenvolvimento de habilidades comportamentais na reabilitação.",
   },
   {
     id: "coordination",
     name: "Luiz Fernando Soares",
     role: "Coordenador Geral e Acolhimento",
+    portrait: { url: luizPortrait.url, alt: "Foto de Luiz Fernando Soares, coordenador geral" },
     description: "Coordenação operacional das unidades, triagem humanizada e orientação direta às famílias desde o primeiro contato.",
   },
   {
     id: "administration",
     name: "Vinicius Rafael Moreira da Silva",
     role: "Gestor Administrativo",
+    portrait: { url: viniciusPortrait.url, alt: "Foto de Vinicius Rafael Moreira da Silva, gestor administrativo" },
     description: "Gestão administrativa, transparência documental e suporte aos familiares na organização de documentos e encaminhamentos junto ao INSS. Laudos clínicos cabem aos profissionais habilitados; a concessão de benefícios depende da análise do INSS.",
   },
 ];
