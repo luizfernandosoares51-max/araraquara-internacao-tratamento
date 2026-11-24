@@ -38,3 +38,4 @@
 - Render institutional and opt-in city teams from one typed catalog and shared grid, using the local pre-FAQ slot or a pre-FAQ section; keep footer identity and city copy isolated and attach only user-mapped portrait asset pointers to avoid misidentifying professionals.
 
 - Render the real Araraquara facility photos from one typed gallery catalog through a shared section placed before the team or FAQ, with opt-in hero anchor links; exclude or blur identifiable people, plates and documents to protect privacy under LGPD.
+- Keep public card legibility in shared CSS tokens with framed-item selectors and a distinct team surface; preserve page bands, media, content and accessibility theme overrides.

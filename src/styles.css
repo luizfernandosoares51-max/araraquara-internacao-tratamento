@@ -40,10 +40,23 @@
   --color-glass-strong: var(--glass-strong);
   --color-whatsapp: var(--whatsapp);
   --color-whatsapp-foreground: var(--whatsapp-foreground);
+  --color-readable-surface: var(--readable-surface);
+  --color-readable-heading: var(--readable-heading);
+  --color-readable-copy: var(--readable-copy);
+  --color-readable-border: var(--readable-border);
+  --color-team-surface: var(--team-surface);
+  --color-team-copy: var(--team-copy);
 }
 
 :root {
   --radius: 0.75rem;
+  --readable-surface: #FFFFFF;
+  --readable-heading: #0F172A;
+  --readable-copy: #334155;
+  --readable-border: #CBD5E1;
+  --readable-shadow: 0 2px 8px rgb(15 23 42 / 0.08);
+  --team-surface: #0F2942;
+  --team-copy: #FFFFFF;
   --background: oklch(0.18 0.07 271);
   --foreground: oklch(0.98 0.01 250);
   --card: oklch(0.29 0.07 266 / 0.65);
@@ -503,4 +516,121 @@ body:has(.campaign-page) { --central-vlibras-bottom: calc(11rem + env(safe-area-
   main .grid-cols-2 > :last-child:nth-child(odd) {
     grid-column: 1 / -1;
   }
+}
+
+/* Public editorial cards share an opaque, readable surface in every page theme.
+   Restrict surface overrides to framed items, not page bands, media or actions. */
+:is(main, #conteudo-principal) :is(article, aside, div, li, a):is(
+  .glass-panel, .glass-panel-strong,
+  [class~="bg-card"], [class*="bg-card/"],
+  [class~="bg-muted"], [class*="bg-muted/"],
+  [class~="bg-glass"], [class*="bg-glass/"],
+  [class~="bg-glass-strong"], [class*="bg-glass-strong/"]
+):is([class*="rounded"], [class~="border"]) {
+  --background: var(--readable-surface);
+  --foreground: var(--readable-heading);
+  --card-foreground: var(--readable-heading);
+  --muted-foreground: var(--readable-copy);
+  --primary: var(--readable-heading);
+  --secondary: var(--readable-heading);
+  --accent: var(--readable-copy);
+  --border: var(--readable-border);
+  background: var(--readable-surface);
+  border-color: var(--readable-border);
+  color: var(--readable-heading);
+  box-shadow: var(--readable-shadow);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+:is(main, #conteudo-principal) :is(p, li, dd, figcaption, label, summary, a, span, div, time):is(.text-xs, [class~="text-[10px]"], [class~="text-[11px]"], [class~="text-[12px]"]) {
+  font-size: 0.875rem;
+  line-height: 1.625;
+}
+:is(main, #conteudo-principal) :is(p, dd, figcaption).text-sm {
+  line-height: 1.625;
+}
+:is(main, #conteudo-principal) :is(h3, h4):is(.text-sm, .text-xs),
+:is(main, #conteudo-principal) dt {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+:is(main, #conteudo-principal) :is(article, aside, .glass-panel, .glass-panel-strong) [class*="text-muted-foreground/"] {
+  color: var(--muted-foreground);
+}
+
+:is(main, #conteudo-principal) :is(article, aside, div, li):is(
+  [class~="bg-ice"], [class*="bg-ice/"], [class~="bg-background"]
+):is([class*="rounded"], [class~="border"]),
+:is(main, #conteudo-principal) :is(article, li)[class~="bg-foreground"] {
+  --foreground: var(--readable-heading);
+  --muted-foreground: var(--readable-copy);
+  --secondary: var(--readable-heading);
+  background: var(--readable-surface);
+  border-color: var(--readable-border);
+  color: var(--readable-copy);
+  box-shadow: var(--readable-shadow);
+}
+:is(main, #conteudo-principal) :is(article, li)[class~="bg-foreground"] :is(h2, h3, h4),
+:is(main, #conteudo-principal) :is(article, li)[class~="bg-ice"] :is(h2, h3, h4) {
+  color: var(--readable-heading);
+}
+:is(main, #conteudo-principal) :is(article, li):is([class~="bg-foreground"], [class~="bg-ice"]) [class*="text-deep/"] {
+  color: var(--readable-copy);
+}
+
+/* Light editorial shells must not inherit the dark site's pale link palette. */
+#conteudo-principal .site-editorial.min-h-screen.text-deep:not(.araraquara-editorial) {
+  --muted-foreground: var(--readable-copy);
+  --primary: var(--readable-heading);
+  --secondary: var(--readable-heading);
+  --brand: var(--readable-heading);
+  --card-foreground: var(--readable-heading);
+}
+#conteudo-principal .min-h-screen.text-deep [class*="text-deep/"] {
+  color: var(--readable-copy);
+}
+#conteudo-principal section.bg-ice .text-primary,
+#conteudo-principal section.bg-ice .text-brand,
+#conteudo-principal section.bg-foreground .text-primary {
+  color: var(--readable-heading);
+}
+#conteudo-principal .site-editorial.min-h-screen.text-deep:not(.araraquara-editorial) :is(.bg-deep, .bg-background.text-foreground) {
+  --muted-foreground: var(--team-copy);
+  --primary: var(--team-copy);
+  --secondary: var(--team-copy);
+}
+
+/* The team keeps its distinct dark treatment, including register badges. */
+:is(main, #conteudo-principal) [data-team-catalog] article[class~="bg-card"] {
+  --foreground: var(--team-copy);
+  --card-foreground: var(--team-copy);
+  --muted-foreground: var(--team-copy);
+  --secondary: var(--team-copy);
+  --muted: var(--team-surface);
+  background: var(--team-surface);
+  color: var(--team-copy);
+}
+:is(main, #conteudo-principal) [data-team-catalog] article :is(p, span) {
+  font-size: 0.875rem;
+  line-height: 1.625;
+  color: var(--team-copy);
+}
+
+nav:is([aria-labelledby="servicos-conectados"], [aria-labelledby="servicos-conectados-tratamento"]) a {
+  min-height: 2.75rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+html.high-contrast {
+  --readable-surface: var(--a11y-black);
+  --readable-heading: var(--a11y-white);
+  --readable-copy: var(--a11y-white);
+  --readable-border: var(--a11y-yellow);
+  --readable-shadow: none;
+  --team-surface: var(--a11y-black);
+  --team-copy: var(--a11y-white);
 }
