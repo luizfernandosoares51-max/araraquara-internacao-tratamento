@@ -8,7 +8,7 @@ export const emailHref = `mailto:${emailDisplay}`;
 
 export const whatsappNumber = "5516997654579";
 export const whatsappMessage =
-  "Olá, gostaria de receber informações sobre o acolhimento e tratamento.";
+  "Olá, vim pelo site da Central de Acolhimento e Reabilitação e preciso de orientação.";
 export const whatsappHref = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
 export const instagramHref =

@@ -114,7 +114,7 @@ export function cityContactLabel(name: string) {
 }
 
 export function cityWhatsappHref(name: string) {
-  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Olá, sou de ${name} e gostaria de orientação sobre acolhimento e apoio à minha família.`)}`;
+  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Olá, vim pelo site (página de ${name}) e preciso de orientação sobre acolhimento.`)}`;
 }
 
 export function regionalAccessFaqs(slug: string) {

@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { whatsappNumber } from "@/lib/site";
+import { contextualWhatsappHref } from "@/lib/contextual-whatsapp";
+import { useLocation } from "@tanstack/react-router";
 
 export function FloatingWhatsApp() {
+  const pathname = useLocation({ select: location => location.pathname });
   return (
     <Button asChild size="icon" className="floating-whatsapp rounded-full bg-whatsapp text-whatsapp-foreground shadow-lg hover:bg-whatsapp/90 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background [&_svg]:size-6">
       <a
-        href={`https://wa.me/${whatsappNumber}`}
+        href={contextualWhatsappHref(pathname)}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Falar com o plantão de atendimento no WhatsApp 24h"

@@ -5,6 +5,7 @@ import {
   createRootRouteWithContext,
   useRouter,
   useMatches,
+  useLocation,
   HeadContent,
   Scripts,
   type ErrorComponentProps,
@@ -23,6 +24,9 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { AccessibilityMenu } from "../components/AccessibilityMenu";
 import { VLibrasWidget } from "../components/vlibras-widget";
 import { ScrollToTop } from "../components/scroll-to-top";
+import { ConversionFaq } from "../components/conversion-faq";
+import { ContextualWhatsApp } from "../components/contextual-whatsapp";
+import { showConversionFaq } from "../lib/contextual-whatsapp";
 
 function NotFoundComponent() {
   return (
@@ -140,17 +144,20 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const pathname = useLocation({ select: location => location.pathname });
   const campaignPage = useMatches({ select: (matches) => matches.some(match => match.staticData.campaignPage === true) });
 
   return (
     <QueryClientProvider client={queryClient}>
       <ScrollToTop />
+      <ContextualWhatsApp pathname={pathname} />
       <a href="#conteudo-principal" className="skip-to-content">Ir para o conteúdo principal</a>
       {campaignPage ? <div id="conteudo-principal" tabIndex={-1}><Outlet /></div> : <>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <div className="public-page-content">
         <GlobalSiteHeader />
         <div id="conteudo-principal" tabIndex={-1}><Outlet /></div>
+        {pathname !== "/" && showConversionFaq(pathname) && <ConversionFaq pathname={pathname} />}
         <InstitutionalFooter />
         <div className="floating-contact-spacer" aria-hidden="true" />
       </div>

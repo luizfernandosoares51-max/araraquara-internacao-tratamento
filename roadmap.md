@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Aplicar abrangência da Home no Interior de São Paulo, WhatsApp contextual e cinco FAQs responsáveis antes do rodapé; 297 testes aprovados, 113 páginas conferidas com metadados e FAQ/schema, oito páginas e sete especialidades verificadas no celular, respostas da triagem preservadas, última resposta acima do dock e compilação OK; sem publicação. Respostas não prometem vagas para menores, remoção imediata ou aprovação pelo INSS.
+
 - [x] Otimizar São Carlos: metadados limitados, links na Home/Cidades/Araraquara, FAQs com schema correspondente e contatos no primeiro quadro do celular; 14 testes aprovados, navegação e 13 respostas/schema conferidos na prévia, sem erros de runtime. Comando informado ausente no código; sem publicar nem garantir posições no Google. Preservados sede em Araraquara e limites médicos/operacionais.
 
 - [x] Aplicar metadados regionais dentro dos limites, links diretos na Home/Cidades, FAQ responsável sobre CAPS e contatos visíveis no celular; 281 testes aprovados, sete páginas-alvo e Araraquara conferidas no celular, FAQ/schema iguais nas 14 cidades e compilação OK. Sem publicação; dados do Search Console indisponíveis para comprovar posições e CTR.

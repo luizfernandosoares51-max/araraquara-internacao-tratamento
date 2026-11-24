@@ -24,6 +24,6 @@ test("city WhatsApp contacts use the official number and preserve the chosen cit
     const url = new URL(cityWhatsappHref(city.name));
     assert.equal(url.origin, "https://wa.me");
     assert.equal(url.pathname, "/5516997654579");
-    assert.equal(url.searchParams.get("text"), `Olá, sou de ${city.name} e gostaria de orientação sobre acolhimento e apoio à minha família.`);
+    assert.equal(url.searchParams.get("text"), `Olá, vim pelo site (página de ${city.name}) e preciso de orientação sobre acolhimento.`);
   }
 });
