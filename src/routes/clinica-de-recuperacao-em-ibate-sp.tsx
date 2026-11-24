@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+import { FacilityGallerySection } from "@/components/facility-gallery";
 import { LocalCityPageView } from "@/components/local-city-page";
 import { MultidisciplinaryTeamSection } from "@/components/multidisciplinary-team";
 import { localCityHead } from "@/lib/local-city-head";
@@ -14,5 +15,5 @@ export const Route = createFileRoute("/clinica-de-recuperacao-em-ibate-sp")({
 });
 
 function IbatePage() {
-  return <LocalCityPageView city={city} beforeFaq={<MultidisciplinaryTeamSection />} />;
+  return <LocalCityPageView city={city} facilityLink beforeFaq={<><FacilityGallerySection cityName={city.name} /><MultidisciplinaryTeamSection /></>} />;
 }

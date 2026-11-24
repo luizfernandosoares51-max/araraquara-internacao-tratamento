@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+import { FacilityGallerySection } from "@/components/facility-gallery";
 import { LocalCityPageView } from "@/components/local-city-page";
 import { MataoSpecialties } from "@/components/matao-specialties";
 import { MultidisciplinaryTeamSection } from "@/components/multidisciplinary-team";
@@ -15,5 +16,5 @@ export const Route = createFileRoute("/clinica-de-recuperacao-em-matao-sp")({
 });
 
 function MataoPage() {
-  return <LocalCityPageView city={city} beforeFaq={<><MataoSpecialties /><MultidisciplinaryTeamSection /></>} />;
+  return <LocalCityPageView city={city} facilityLink beforeFaq={<><MataoSpecialties /><FacilityGallerySection cityName={city.name} /><MultidisciplinaryTeamSection /></>} />;
 }

@@ -1,5 +1,6 @@
 import { RegionalPriorityLinks } from "@/components/regional-priority-links";
 import { MultidisciplinaryTeam } from "@/components/multidisciplinary-team";
+import { FacilityGalleryLink, FacilityGallerySection } from "@/components/facility-gallery";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, FileCheck2, HeartHandshake, MapPin, MessageCircle, ShieldCheck, Truck, Compass, Check, Users, ClipboardCheck, Building2, Flame, UserCheck } from "lucide-react";
 import voluntaryWelcomeImage from "@/assets/home-voluntary-welcome.webp";
@@ -103,6 +104,7 @@ function HomePage() {
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Button asChild size="lg" className="h-auto min-h-12 whitespace-normal bg-whatsapp px-6 py-3 text-whatsapp-foreground hover:bg-whatsapp/90"><a href={vacancyConsultationHref} target="_blank" rel="noopener noreferrer"><MessageCircle aria-hidden="true" />Consultar Vagas no WhatsApp 24h</a></Button>
               <Button asChild variant="outline" size="lg" className="h-auto min-h-12 whitespace-normal px-6 py-3 text-foreground"><a href="#triagem-familiar" onClick={(event) => { event.preventDefault(); const target = document.getElementById("triagem-familiar"); target?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "start" }); target?.querySelector<HTMLElement>("h2")?.focus({ preventScroll: true }); }}>Iniciar Triagem Online<ArrowRight aria-hidden="true" /></a></Button>
+              <FacilityGalleryLink className="text-foreground" />
             </div>
           </div>
         </section>
@@ -136,6 +138,8 @@ function HomePage() {
           </div>
           <p className="mt-4 text-xs leading-relaxed text-muted-foreground">Dados de registro informados pela instituição.</p>
         </section>
+
+        <FacilityGallerySection />
 
         <section aria-labelledby="equipe-titulo" className="border-t border-border py-8 sm:py-10">
           <h2 id="equipe-titulo" className="font-display text-2xl font-semibold sm:text-3xl">Nossa Equipe Multidisciplinar</h2>

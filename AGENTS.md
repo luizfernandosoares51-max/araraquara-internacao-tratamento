@@ -36,3 +36,5 @@
 - Mount accessibility once outside page shells; hydrate display preferences and load official VLibras asynchronously. Keep native speech in a shared hook, extracting ordered main text in short utterances and cancelling on navigation/exit without persistence; filters preserve dock placement.
 - Render quick answers, city logistics and the ethics protocol from the tested regional-authority catalog through shared contact actions and standard blocks, and give every specialty page a shared parent-city breadcrumb, so authority content stays consistent without implying unconfirmed units.
 - Render institutional and opt-in city teams from one typed catalog and shared grid, using the local pre-FAQ slot or a pre-FAQ section; keep footer identity and city copy isolated and attach only user-mapped portrait asset pointers to avoid misidentifying professionals.
+
+- Render the real Araraquara facility photos from one typed gallery catalog through a shared section placed before the team or FAQ, with opt-in hero anchor links; exclude or blur identifiable people, plates and documents to protect privacy under LGPD.

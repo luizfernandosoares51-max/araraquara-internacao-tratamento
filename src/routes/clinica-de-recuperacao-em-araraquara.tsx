@@ -30,6 +30,7 @@ import {
 import type { ReactNode } from "react";
 
 import logoAsset from "@/assets/logo-central-optimized.webp.asset.json";
+import { FacilityGalleryLink, FacilityGallerySection } from "@/components/facility-gallery";
 import { AraraquaraPhotoGallery, araraquaraPhotos } from "@/components/araraquara-photo-gallery";
 import { CareSpecialties, FinancialGuidance, TherapeuticRoutine } from "@/components/care-program-sections";
 import {
@@ -207,6 +208,7 @@ function AraraquaraPage() {
               <div className="inline-flex items-center gap-2 rounded-full border border-border bg-glass px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-secondary"><span className="size-1.5 rounded-full bg-accent" /> Informação local e orientação</div>
               <h1 className="mt-5 max-w-3xl font-display text-2xl font-bold leading-tight sm:text-5xl lg:text-[3.75rem]">Clínica de Recuperação e Reabilitação em Araraquara SP</h1>
               <RegionalContactActions cityName="Araraquara" />
+              <FacilityGalleryLink className="mt-2 w-full sm:w-auto" />
               <p className="mt-5 max-w-2xl text-[16px] leading-relaxed text-muted-foreground sm:text-lg">{regionalCityAccess.araraquara.welcome}</p>
               <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground">Como clínica de reabilitação em Araraquara e centro de reabilitação Araraquara, a Central orienta sobre internação voluntária e involuntária (Lei 13.840/2019) e sobre resgate humanizado 24 horas. O plantão de orientação 24h acolhe famílias dos bairros de Araraquara e da região, com apoio para organizar avaliação, recepção e visitas à sede local.</p>
               <Link to="/clinica-de-recuperacao-em-sao-carlos-sp" className="mt-4 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-secondary underline underline-offset-4">Clínica de Recuperação em São Carlos SP<ArrowRight className="size-4 shrink-0" aria-hidden="true" /></Link>
@@ -354,6 +356,8 @@ function AraraquaraPage() {
           </div>
         </section>
 
+
+        <div className="bg-background px-5 text-foreground sm:px-8 lg:px-12"><div className="mx-auto max-w-7xl"><FacilityGallerySection cityName="Araraquara" /></div></div>
 
         <section id="perguntas" className="border-y border-deep/10 bg-ice">
           <div className="mx-auto max-w-6xl px-5 py-14 sm:px-8 lg:px-12 lg:py-20">

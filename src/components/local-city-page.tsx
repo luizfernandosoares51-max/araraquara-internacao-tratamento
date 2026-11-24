@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, ExternalLink, MapPin, MessageCircle, Phone, Shie
 import logoAsset from "@/assets/logo-central-optimized.webp.asset.json";
 import { Button } from "@/components/ui/button";
 import { CityEditorialSection } from "@/components/city-editorial-section";
+import { FacilityGalleryLink } from "@/components/facility-gallery";
 import { CityStandardBlocks } from "@/components/city-standard-blocks";
 import { InteractiveTriage } from "@/components/interactive-triage";
 import { cityEditorialFaqs } from "@/lib/city-editorial";
@@ -13,7 +14,7 @@ import type { LocalCityPage } from "@/lib/local-city-pages";
 import type { ReactNode } from "react";
 import { phoneDisplay, phoneHref, whatsappHref } from "@/lib/site";
 
-export function LocalCityPageView({ city, beforeFaq }: { city: LocalCityPage; beforeFaq?: ReactNode }) {
+export function LocalCityPageView({ city, beforeFaq, facilityLink = false }: { city: LocalCityPage; beforeFaq?: ReactNode; facilityLink?: boolean }) {
   const faqs = [...cityEditorialFaqs(city.slug), ...city.faqs];
   return (
     <div className="site-editorial min-h-screen bg-deep font-body text-foreground">
@@ -38,6 +39,7 @@ export function LocalCityPageView({ city, beforeFaq }: { city: LocalCityPage; be
                 <p className="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-secondary">Orientação local · {city.name}/SP</p>
                 <h1 className="mt-3 max-w-3xl font-display text-2xl font-bold leading-tight sm:mt-4 sm:text-5xl lg:text-6xl">Clínica de Recuperação e Reabilitação em {city.name} - SP | Acolhimento e Consulta de Vagas 24h</h1>
                 <RegionalContactActions cityName={city.name} />
+                {facilityLink ? <FacilityGalleryLink className="mt-2 w-full sm:w-auto" /> : null}
                 <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">{city.lead}</p>
                 <p className="mt-6 flex max-w-2xl items-start gap-3 text-sm leading-relaxed text-muted-foreground"><ShieldCheck className="mt-0.5 size-4 shrink-0 text-secondary" aria-hidden="true" />{city.transparency}</p>
               </div>

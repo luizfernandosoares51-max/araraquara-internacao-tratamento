@@ -1,6 +1,7 @@
 import { CityStandardBlocks } from "@/components/city-standard-blocks";
 import { MultidisciplinaryTeamSection } from "@/components/multidisciplinary-team";
 import { RegionalContactActions } from "@/components/regional-contact-actions";
+import { FacilityGalleryLink, FacilityGallerySection } from "@/components/facility-gallery";
 import { municipalCapsFaq, saoCarlosSearchFaqs } from "@/lib/regional-ctr";
 import { cityContactLabel, cityWhatsappHref, regionalCityAccess } from "@/lib/regional-city-access";
 import { cityEditorialFaqs, cityEditorialMetadata } from "@/lib/city-editorial";
@@ -173,6 +174,7 @@ function SaoCarlosPage() {
             <div className="mt-4 rounded-lg border border-deep/15 bg-card p-3 text-card-foreground">
               <p className="text-sm font-semibold">Plantão de orientação familiar 24h</p>
               <RegionalContactActions cityName="São Carlos" />
+              <FacilityGalleryLink className="mt-2 w-full sm:w-auto" />
             </div>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-deep/70 sm:text-lg">
               {regionalCityAccess["sao-carlos-sp"].welcome}
@@ -298,7 +300,7 @@ function SaoCarlosPage() {
           </div>
         </section>
 
-        <div className="bg-background px-5 sm:px-8 lg:px-12"><div className="mx-auto max-w-7xl"><MultidisciplinaryTeamSection /></div></div>
+        <div className="bg-background px-5 sm:px-8 lg:px-12"><div className="mx-auto max-w-7xl"><FacilityGallerySection cityName="São Carlos" /><MultidisciplinaryTeamSection /></div></div>
 
         <section id="perguntas" className="py-16 lg:py-24">
           <div className="mx-auto max-w-4xl px-5 sm:px-8">

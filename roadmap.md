@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Integrar a galeria de estrutura física de Araraquara na Home e nas páginas regionais existentes, com legendas, ampliação, contatos e dados estruturados responsáveis — aguarda as fotos reais mencionadas em prompt-22.txt; não criar rotas ausentes nem usar retratos da equipe como fotos dos ambientes.
+- [x] Integrar a galeria de estrutura física de Araraquara na Home e nas páginas regionais existentes, com legendas, ampliação, contatos e dados estruturados responsáveis — aguarda as fotos reais mencionadas em prompt-22.txt; não criar rotas ausentes nem usar retratos da equipe como fotos dos ambientes.
 - [x] Reutilizar a equipe da Home antes do FAQ em Américo Brasiliense, São Carlos, Ibaté e Matão; seis fotos e textos iguais à Home conferidos em 390/1280, três testes aprovados, sem erros ou publicação.
 - [ ] Inserir a equipe na página de Jaú — página não encontrada no site atual; aguarda endereço informado pelo usuário.
 
@@ -232,3 +232,5 @@
 - [x] prompt-12: caminhos de navegação e retorno à cidade nas especialidades, resumo rápido, logística por cidade, bloco ético e botões no topo do celular
 - [ ] prompt-12: vínculo com a Morada do Sol no rodapé, transparência e dados do Google — aguarda resposta do usuário
 - [ ] prompt-12: unidade feminina em São Carlos e masculina em Araraquara — aguarda resposta do usuário
+
+- [ ] Galeria de estrutura física em Rincão, Santa Lúcia, Boa Esperança do Sul e Jaú — essas páginas não existem; aguarda decisão do usuário.

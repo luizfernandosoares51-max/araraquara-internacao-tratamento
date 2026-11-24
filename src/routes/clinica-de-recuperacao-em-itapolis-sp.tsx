@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+import { FacilityGallerySection } from "@/components/facility-gallery";
 import { LocalCityPageView } from "@/components/local-city-page";
 import { PublicNetworkGuidance } from "@/components/public-network-guidance";
 import { localCityHead } from "@/lib/local-city-head";
@@ -14,5 +15,5 @@ export const Route = createFileRoute("/clinica-de-recuperacao-em-itapolis-sp")({
 });
 
 function ItapolisPage() {
-  return <LocalCityPageView city={city} beforeFaq={<PublicNetworkGuidance />} />;
+  return <LocalCityPageView city={city} facilityLink beforeFaq={<><PublicNetworkGuidance /><FacilityGallerySection cityName={city.name} /></>} />;
 }
