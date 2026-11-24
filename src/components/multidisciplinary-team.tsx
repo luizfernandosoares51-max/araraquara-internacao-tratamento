@@ -1,0 +1,26 @@
+import { ClipboardCheck, HeartHandshake, ShieldCheck, Users, Compass, FileCheck2 } from "lucide-react";
+import { multidisciplinaryTeam } from "@/lib/multidisciplinary-team";
+
+const teamIcons = [ClipboardCheck, HeartHandshake, ShieldCheck, Users, Compass, FileCheck2];
+
+export function MultidisciplinaryTeam() {
+  return (
+    <div data-team-catalog>
+      <div className="mt-5 grid grid-cols-2 gap-3 lg:grid-cols-3">
+        {multidisciplinaryTeam.map((member, index) => {
+          const Icon = teamIcons[index] ?? Users;
+          return (
+            <article key={member.id} className="flex h-full min-w-0 flex-col items-center rounded-lg border border-border bg-card p-3 text-center text-card-foreground sm:p-4">
+              <span className="flex size-16 shrink-0 items-center justify-center rounded-full bg-secondary/15 text-secondary"><Icon className="size-7" aria-hidden="true" /></span>
+              <h3 className="mt-3 w-full break-words text-sm font-semibold leading-snug">{member.name}</h3>
+              <p className="mt-2 text-xs font-semibold leading-relaxed text-secondary">{member.role}</p>
+              {member.registration && <span className="mt-2 max-w-full rounded-md bg-muted px-2 py-1 text-xs font-medium leading-relaxed">{member.registration}</span>}
+              <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{member.description}</p>
+            </article>
+          );
+        })}
+      </div>
+      <p className="mt-4 text-xs leading-relaxed text-muted-foreground">Equipe, funções e registros informados pela instituição; não representam verificação independente das credenciais.</p>
+    </div>
+  );
+}
