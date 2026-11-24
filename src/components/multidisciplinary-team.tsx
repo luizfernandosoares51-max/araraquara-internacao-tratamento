@@ -3,6 +3,15 @@ import { multidisciplinaryTeam } from "@/lib/multidisciplinary-team";
 
 const teamIcons = [ClipboardCheck, HeartHandshake, ShieldCheck, Users, Compass, FileCheck2];
 
+export function MultidisciplinaryTeamSection() {
+  return (
+    <section aria-labelledby="equipe-titulo" className="border-t border-border py-8 sm:py-10 text-foreground">
+      <h2 id="equipe-titulo" className="font-display text-2xl font-semibold sm:text-3xl">Nossa Equipe Multidisciplinar</h2>
+      <MultidisciplinaryTeam />
+    </section>
+  );
+}
+
 export function MultidisciplinaryTeam() {
   return (
     <div data-team-catalog>

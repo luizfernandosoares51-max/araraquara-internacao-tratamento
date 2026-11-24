@@ -1,7 +1,10 @@
 # Roadmap
 
+- [x] Reutilizar a equipe da Home antes do FAQ em Américo Brasiliense, São Carlos, Ibaté e Matão; seis fotos e textos iguais à Home conferidos em 390/1280, três testes aprovados, sem erros ou publicação.
+- [ ] Inserir a equipe na página de Jaú — página não encontrada no site atual; aguarda endereço informado pelo usuário.
+
 - [x] Atualizar somente a equipe da Home e Transparência com os seis profissionais na ordem fornecida; 28 testes aprovados, páginas conferidas em 1280/390/320 sem erros ou rolagem horizontal, demais seções e contatos preservados; sem publicação.
-- [ ] Inserir e enquadrar as seis fotos reais da equipe — aguarda envio das fotos nesta conversa; recebido somente prompt-18.txt.
+- [x] Inserir e enquadrar as seis fotos reais da equipe — fotos associadas conforme respostas do usuário e carregadas na conferência atual.
 
 - [x] Aplicar abrangência da Home no Interior de São Paulo, WhatsApp contextual e cinco FAQs responsáveis antes do rodapé; 297 testes aprovados, 113 páginas conferidas com metadados e FAQ/schema, oito páginas e sete especialidades verificadas no celular, respostas da triagem preservadas, última resposta acima do dock e compilação OK; sem publicação. Respostas não prometem vagas para menores, remoção imediata ou aprovação pelo INSS.
 

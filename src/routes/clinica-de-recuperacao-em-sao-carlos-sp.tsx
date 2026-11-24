@@ -1,4 +1,5 @@
 import { CityStandardBlocks } from "@/components/city-standard-blocks";
+import { MultidisciplinaryTeamSection } from "@/components/multidisciplinary-team";
 import { RegionalContactActions } from "@/components/regional-contact-actions";
 import { municipalCapsFaq, saoCarlosSearchFaqs } from "@/lib/regional-ctr";
 import { cityContactLabel, cityWhatsappHref, regionalCityAccess } from "@/lib/regional-city-access";
@@ -296,6 +297,8 @@ function SaoCarlosPage() {
             </div>
           </div>
         </section>
+
+        <div className="bg-background px-5 sm:px-8 lg:px-12"><div className="mx-auto max-w-7xl"><MultidisciplinaryTeamSection /></div></div>
 
         <section id="perguntas" className="py-16 lg:py-24">
           <div className="mx-auto max-w-4xl px-5 sm:px-8">
