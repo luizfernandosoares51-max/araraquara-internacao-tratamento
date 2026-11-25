@@ -596,7 +596,7 @@ body:has(.campaign-page) { --central-vlibras-bottom: calc(11rem + env(safe-area-
 #conteudo-principal section.bg-foreground .text-primary {
   color: var(--readable-heading);
 }
-#conteudo-principal .site-editorial.min-h-screen.text-deep:not(.araraquara-editorial) :is(.bg-deep, .bg-background.text-foreground) {
+#conteudo-principal .site-editorial.min-h-screen.text-deep:not(.araraquara-editorial) :is(.bg-deep, .bg-background.text-foreground):not(.home-serene) {
   --muted-foreground: var(--team-copy);
   --primary: var(--team-copy);
   --secondary: var(--team-copy);

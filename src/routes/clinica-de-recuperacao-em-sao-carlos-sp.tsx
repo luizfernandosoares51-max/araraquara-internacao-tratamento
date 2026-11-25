@@ -300,7 +300,7 @@ function SaoCarlosPage() {
           </div>
         </section>
 
-        <div className="bg-background px-5 sm:px-8 lg:px-12"><div className="mx-auto max-w-7xl"><FacilityGallerySection cityName="São Carlos" /><MultidisciplinaryTeamSection /></div></div>
+        <div className="bg-background px-5 text-foreground sm:px-8 lg:px-12"><div className="mx-auto max-w-7xl"><FacilityGallerySection cityName="São Carlos" /><MultidisciplinaryTeamSection /></div></div>
 
         <section id="perguntas" className="py-16 lg:py-24">
           <div className="mx-auto max-w-4xl px-5 sm:px-8">
