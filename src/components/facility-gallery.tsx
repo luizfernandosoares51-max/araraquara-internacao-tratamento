@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight, Expand, MessageCircle, Phone } from "lucide-
 import { Building2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
-import { facilityGalleryId, facilityGallerySchema, facilityPhotos } from "@/lib/facility-gallery";
+import { facilityGalleryId, facilityGallerySchema, facilityPhotos, femaleGalleryId, femaleGallerySchema, femalePhotos, maleGalleryId, type FacilityPhoto } from "@/lib/facility-gallery";
 import { cityWhatsappHref } from "@/lib/regional-city-access";
 import { phoneDisplay, phoneHref, whatsappHref } from "@/lib/site";
 
@@ -24,7 +24,25 @@ export function FacilityGalleryLink({ className = "" }: { className?: string }) 
   );
 }
 
+const units = {
+  male: { id: maleGalleryId, photos: facilityPhotos, schema: facilityGallerySchema, title: "Unidade Masculina – Araraquara/SP", intro: "Fotos reais da unidade masculina em Araraquara SP, vinculada ao Centro de Reabilitação Terapêutico Morada do Sol, onde acontece o acolhimento voluntário para dependência química, alcoolismo e saúde mental. Casos de internação involuntária seguem avaliação médica e encaminhamento a unidades habilitadas (Lei 13.840/2019)." },
+  female: { id: femaleGalleryId, photos: femalePhotos, schema: femaleGallerySchema, title: "Unidade Feminina – São Carlos/SP", intro: "Fotos reais da unidade feminina em São Carlos SP, vinculada ao Centro de Reabilitação Terapêutico Morada do Sol: um ambiente acolhedor, seguro e em meio à natureza para o acolhimento voluntário de mulheres." },
+} as const;
+
 export function FacilityGallerySection({ cityName }: { cityName?: string }) {
+  const order: Array<keyof typeof units> = cityName === "São Carlos" ? ["female", "male"] : ["male", "female"];
+  return (
+    <div id={facilityGalleryId} className="scroll-mt-24 border-t border-border py-8 text-foreground sm:py-10">
+      <h2 tabIndex={-1} className="font-display text-2xl font-semibold outline-none sm:text-3xl">Nossa Estrutura Física</h2>
+      <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">Duas unidades separadas: feminina em São Carlos/SP e masculina em Araraquara/SP.</p>
+      {order.map((key) => <UnitGallery key={key} unit={key} cityName={cityName} />)}
+    </div>
+  );
+}
+
+function UnitGallery({ unit, cityName }: { unit: keyof typeof units; cityName?: string | undefined }) {
+  const meta = units[unit];
+  const facilityPhotos: readonly FacilityPhoto[] = meta.photos;
   const [open, setOpen] = useState<number | null>(null);
   const [active, setActive] = useState(0);
   const track = useRef<HTMLDivElement>(null);
@@ -44,10 +62,10 @@ export function FacilityGallerySection({ cityName }: { cityName?: string }) {
   };
 
   return (
-    <section id={facilityGalleryId} aria-labelledby="estrutura-fisica-titulo" className="scroll-mt-24 border-t border-border py-8 text-foreground sm:py-10">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(facilityGallerySchema()) }} />
-      <h2 id="estrutura-fisica-titulo" tabIndex={-1} className="font-display text-2xl font-semibold outline-none sm:text-3xl">Nossa Estrutura Física – Unidade Masculina Araraquara (SP)</h2>
-      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">Fotos reais da unidade masculina em Araraquara SP, vinculada ao Centro de Reabilitação Terapêutico Morada do Sol, onde acontece o acolhimento voluntário para dependência química, alcoolismo e saúde mental. Casos de internação involuntária seguem avaliação médica e encaminhamento a unidades habilitadas (Lei 13.840/2019).</p>
+    <section id={meta.id} aria-labelledby={`${meta.id}-titulo`} className="mt-8 scroll-mt-24">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(meta.schema()) }} />
+      <h3 id={`${meta.id}-titulo`} className="font-display text-xl font-semibold sm:text-2xl">{meta.title}</h3>
+      <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">{meta.intro}</p>
 
       <div className="relative mt-5">
         <div ref={track} onScroll={onScroll} className="-mx-1 flex snap-x snap-mandatory gap-3 overflow-x-auto px-1 pb-2 [scrollbar-width:none] sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-4 sm:overflow-visible sm:px-0 lg:grid-cols-3">
@@ -58,8 +76,8 @@ export function FacilityGallerySection({ cityName }: { cityName?: string }) {
                 <span className="absolute right-2 top-2 grid size-8 place-items-center rounded-full bg-background/85 text-foreground" aria-hidden="true"><Expand className="size-4" /></span>
               </button>
               <figcaption className="p-3 sm:p-4">
-                <h3 className="font-display text-sm font-semibold sm:text-base">{item.title}</h3>
-                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{item.caption}</p>
+                <h4 className="font-display text-sm font-semibold sm:text-base">{item.title}</h4>
+                <p className="mt-1 text-sm leading-relaxed text-foreground/85">{item.caption}</p>
               </figcaption>
             </figure>
           ))}

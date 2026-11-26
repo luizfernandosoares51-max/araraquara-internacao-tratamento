@@ -5,6 +5,13 @@ import beliches from "@/assets/facility/araraquara-quarto-beliches.webp.asset.js
 import banheiro from "@/assets/facility/araraquara-quarto-banheiro.webp.asset.json";
 import placa from "@/assets/facility/araraquara-identificacao-morada-do-sol.webp.asset.json";
 import horta from "@/assets/facility/araraquara-horta-hidroponica.webp.asset.json";
+import scCozinha from "@/assets/facility/sao-carlos-cozinha.webp.asset.json";
+import scPiscina from "@/assets/facility/sao-carlos-area-piscina.webp.asset.json";
+import scBanheiro from "@/assets/facility/sao-carlos-banheiro.webp.asset.json";
+import scColetivo from "@/assets/facility/sao-carlos-quarto-coletivo.webp.asset.json";
+import scIndividual from "@/assets/facility/sao-carlos-quarto-individual.webp.asset.json";
+import scSala from "@/assets/facility/sao-carlos-sala-estar.webp.asset.json";
+import scQuadra from "@/assets/facility/sao-carlos-quadra-areia.webp.asset.json";
 import { institutionalIdentity } from "./institutional";
 import { siteUrl } from "./site";
 
@@ -40,6 +47,34 @@ export const facilityPhotos: FacilityPhoto[] = [
 ];
 
 export const facilityGalleryId = "estrutura-fisica";
+export const maleGalleryId = "estrutura-fisica-araraquara";
+export const femaleGalleryId = "estrutura-fisica-sao-carlos";
+
+/** Fotos reais da unidade feminina de São Carlos enviadas pela instituição (sem pessoas identificáveis). Endereço não informado. */
+function fem(id: string, title: string, caption: string, alt: string, src: string): FacilityPhoto {
+  return { id: `sc-${id}`, title, caption, alt, src, width: 1080, height: 802 };
+}
+
+export const femalePhotos: FacilityPhoto[] = [
+  fem("area-piscina", "Área de Lazer com Piscina", "Espaço ao ar livre, cercado de verde, com mesas e sombra para momentos de descanso e convivência tranquila.", "Clínica de recuperação feminina em São Carlos SP - área de lazer com piscina e área verde", scPiscina.url),
+  fem("quadra-areia", "Quadra de Areia em Meio à Natureza", "Atividades físicas ao ar livre, entre palmeiras e árvores, ajudam a construir uma rotina mais leve e saudável.", "Acolhimento feminino em São Carlos SP - quadra de areia e área verde arborizada", scQuadra.url),
+  fem("sala-estar", "Sala de Estar Acolhedora", "Ambiente amplo e iluminado, com sofás e janelas abertas para a natureza, pensado para conversas e acolhimento.", "Clínica de recuperação feminina em São Carlos SP - sala de estar acolhedora", scSala.url),
+  fem("quarto-coletivo", "Quarto Compartilhado", "Acomodação organizada, com camas arrumadas e ventilação, oferecendo descanso em um ambiente seguro.", "Acolhimento feminino especializado em São Carlos SP - quarto compartilhado e ambiente seguro", scColetivo.url),
+  fem("quarto-individual", "Acomodação com Armário", "Quarto com cama, armário e climatização, apoiando privacidade e cuidado pessoal durante o acolhimento.", "Clínica de recuperação feminina em São Carlos SP - acomodação com armário e climatização", scIndividual.url),
+  fem("banheiro", "Banheiro Limpo e Organizado", "Banheiro revestido e bem cuidado, favorecendo higiene e conforto na rotina diária.", "Unidade feminina de acolhimento em São Carlos SP - banheiro limpo e organizado", scBanheiro.url),
+  fem("cozinha", "Cozinha Ampla", "Cozinha revestida e equipada, onde a alimentação do dia a dia é preparada com cuidado.", "Clínica de recuperação feminina em São Carlos SP - cozinha ampla e equipada", scCozinha.url),
+];
+
+export function femaleGallerySchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    name: "Estrutura física da unidade feminina em São Carlos (SP)",
+    about: { "@id": `${siteUrl}/#organization` },
+    contentLocation: { "@type": "Place", name: "Unidade feminina em São Carlos - SP", address: { "@type": "PostalAddress", addressLocality: "São Carlos", addressRegion: "SP", addressCountry: "BR" } },
+    associatedMedia: femalePhotos.map((item) => ({ "@type": "ImageObject", contentUrl: new URL(item.src, siteUrl).toString(), name: item.title, caption: item.caption, description: item.alt, width: item.width, height: item.height })),
+  };
+}
 
 export function facilityGallerySchema() {
   return {
