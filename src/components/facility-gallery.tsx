@@ -76,7 +76,7 @@ function UnitGallery({ unit, cityName }: { unit: keyof typeof units; cityName?: 
                 <span className="absolute right-2 top-2 grid size-8 place-items-center rounded-full bg-background/85 text-foreground" aria-hidden="true"><Expand className="size-4" /></span>
               </button>
               <figcaption className="p-3 sm:p-4">
-                <h4 className="font-display text-sm font-semibold sm:text-base">{item.title}</h4>
+                <h4 className="font-display text-base font-semibold text-foreground">{item.title}</h4>
                 <p className="mt-1 text-sm leading-relaxed text-foreground/85">{item.caption}</p>
               </figcaption>
             </figure>
